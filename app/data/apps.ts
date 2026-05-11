@@ -22,7 +22,8 @@ export type AppData = {
   screenshots: { src: string; srcDark?: string; alt: string; caption: string }[];
   features: AppFeature[];
   roadmap: RoadmapItem[];
-  /** Product in development—detail page uses a lighter layout */
+  demoUrl?: string;
+  sourceUrl?: string;
   comingSoon?: boolean;
 };
 
@@ -34,6 +35,8 @@ export const apps: AppData[] = [
     icon: "/meal-coach-icon.png",
     iconDark: "/meal-coach-icon-dark.png",
     favicon: "/favicon-meal-coach.png",
+    demoUrl: "https://meal-ai-decision-projects.vercel.app/",
+    sourceUrl: "https://uwspstar.gumroad.com/l/ai-meal-planner-nextjs-fastapi",
     description:
       "AI-powered meal coaching\u2014personalized suggestions, dietary awareness, and clarity without analysis paralysis. Built with local AI where privacy matters.",
     category: "Health AI",

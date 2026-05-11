@@ -68,6 +68,16 @@ export default function AppDetailPage() {
           <h1 className="page-heading">{app.name}</h1>
         </div>
         <p className="page-lead">{app.description}</p>
+        {app.demoUrl && (
+          <a
+            href={app.demoUrl}
+            className="cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("appDemo")} &rarr;
+          </a>
+        )}
       </section>
 
       {app.comingSoon && (
@@ -144,7 +154,7 @@ export default function AppDetailPage() {
                 })}
               </ul>
               <a
-                href={i === 2 ? "/contact" : "mailto:xing@xingai.app"}
+                href={i === 0 ? "mailto:xing@xingai.app" : "/contact"}
                 className={`cta${i === 1 ? "" : " cta--outline"}`}
               >
                 {t(cta)}
@@ -153,6 +163,22 @@ export default function AppDetailPage() {
           ))}
         </div>
       </section>
+      )}
+
+      {/* Source code */}
+      {app.sourceUrl && (
+        <section className="detail-section source-section">
+          <h2 className="detail-heading">{t("appSourceCode")}</h2>
+          <p className="section-lead">{t("appSourceText")}</p>
+          <a
+            href={app.sourceUrl}
+            className="cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("appGetSource")} &rarr;
+          </a>
+        </section>
       )}
 
       {/* Custom version */}
