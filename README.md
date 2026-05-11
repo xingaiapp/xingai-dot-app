@@ -1,28 +1,44 @@
 # xingai-dot-app
 
-Static landing page for **[xingai.app](https://xingai.app)** — AI lifestyle decision systems (Next.js, FastAPI, local AI, and decision intelligence on the product side; this repo is the marketing shell only).
+Next.js landing page for **[xingai.app](https://xingai.app)** — AI lifestyle decision systems (this repo is the marketing site; product work may use Next.js, FastAPI, and local AI elsewhere).
 
-## Contents
+## Stack
 
-| File | Purpose |
+- [Next.js 15](https://nextjs.org/) (App Router)
+- TypeScript
+- [Inter](https://fonts.google.com/specimen/Inter) via `next/font`
+
+## Project layout
+
+| Path | Purpose |
 |------|---------|
-| `index.html` | Single-page site (hero logo, profile image, copy, social links, contact) |
-| `xingai-logo.png` | Brand logo and favicon |
-| `xing1.png` | Profile image |
+| `app/page.tsx` | Home page |
+| `app/layout.tsx` | Root layout, metadata (Open Graph, Twitter) |
+| `app/globals.css` | Styles |
+| `public/xingai-logo.png` | Logo and favicon |
+| `public/xing1.png` | Profile image |
 
 ## Run locally
 
-From this directory:
-
 ```bash
-python3 -m http.server 8080
+npm install
+npm run dev
 ```
 
-Open [http://localhost:8080](http://localhost:8080).
+Open [http://localhost:3000](http://localhost:3000).
+
+## Build
+
+```bash
+npm run build
+npm start
+```
 
 ## Deploy
 
-Designed for **[Vercel](https://vercel.com)** (or any static host): root `index.html`, no build step. Connect the GitHub repo and set the production domain to `xingai.app` if you use Cloudflare DNS, point records per Vercel’s domain instructions.
+**[Vercel](https://vercel.com)** (recommended): import the GitHub repo; Vercel detects Next.js and runs `next build`. Set **Environment variable** `NEXT_PUBLIC_SITE_URL` to `https://xingai.app` (no trailing slash) so Open Graph image URLs stay correct in previews.
+
+Custom domain + Cloudflare: point DNS per Vercel’s domain panel (A/CNAME), same as before.
 
 ## Links
 
