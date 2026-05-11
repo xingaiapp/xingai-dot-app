@@ -19,7 +19,7 @@ export type AppData = {
   icon: string;
   iconDark: string;
   favicon: string;
-  screenshots: { src: string; alt: string; caption: string }[];
+  screenshots: { src: string; srcDark?: string; alt: string; caption: string }[];
   features: AppFeature[];
   roadmap: RoadmapItem[];
   /** Product in development—detail page uses a lighter layout */
@@ -40,13 +40,9 @@ export const apps: AppData[] = [
     screenshots: [
       {
         src: "/food-demo-light.jpg",
-        alt: "XingAI Meal Coach light theme",
-        caption: "Meal coaching flow \u2014 light theme",
-      },
-      {
-        src: "/food-demo-dark.jpg",
-        alt: "XingAI Meal Coach dark theme",
-        caption: "Same flow \u2014 dark theme",
+        srcDark: "/food-demo-dark.jpg",
+        alt: "XingAI Meal Coach",
+        caption: "Meal coaching flow",
       },
     ],
     features: [
@@ -79,8 +75,7 @@ export const apps: AppData[] = [
       "Step-by-step cooking guidance powered by AI\u2014recipes, substitutions, timing, and technique tips so every dish turns out right.",
     category: "Cooking AI",
     screenshots: [
-      { src: "/cook-demo-light.jpg", alt: "Cook AI light theme", caption: "Cooking guidance flow \u2014 light theme" },
-      { src: "/cook-demo-dark.jpg", alt: "Cook AI dark theme", caption: "Same flow \u2014 dark theme" },
+      { src: "/cook-demo-light.jpg", srcDark: "/cook-demo-dark.jpg", alt: "XingAI Cook AI", caption: "Cooking guidance flow" },
     ],
     features: [],
     comingSoon: true,
@@ -101,8 +96,7 @@ export const apps: AppData[] = [
       "Style and outfit decisions with structured AI guidance\u2014fewer tabs, clearer choices, and confidence before you walk out the door.",
     category: "Outfit AI",
     screenshots: [
-      { src: "/outfit-demo-light.jpg", alt: "Outfit AI light theme", caption: "Style decision flow \u2014 light theme" },
-      { src: "/outfit-demo-dark.jpg", alt: "Outfit AI dark theme", caption: "Same flow \u2014 dark theme" },
+      { src: "/outfit-demo-light.jpg", srcDark: "/outfit-demo-dark.jpg", alt: "XingAI Outfit AI", caption: "Style decision flow" },
     ],
     features: [],
     comingSoon: true,
@@ -123,8 +117,7 @@ export const apps: AppData[] = [
       "Habit and routine decisions that stick\u2014gentle nudges, realistic schedules, and feedback tuned for everyday life.",
     category: "Routine AI",
     screenshots: [
-      { src: "/routine-demo-light.jpg", alt: "Routine AI light theme", caption: "Daily routine flow \u2014 light theme" },
-      { src: "/routine-demo-dark.jpg", alt: "Routine AI dark theme", caption: "Same flow \u2014 dark theme" },
+      { src: "/routine-demo-light.jpg", srcDark: "/routine-demo-dark.jpg", alt: "XingAI Routine AI", caption: "Daily routine flow" },
     ],
     features: [],
     comingSoon: true,
@@ -145,8 +138,7 @@ export const apps: AppData[] = [
       "Parenting decision support\u2014schedules, milestones, and gentle guidance so you feel prepared instead of overwhelmed.",
     category: "Parenting AI",
     screenshots: [
-      { src: "/parent-demo-light.jpg", alt: "Parent AI light theme", caption: "Parenting guidance flow \u2014 light theme" },
-      { src: "/parent-demo-dark.jpg", alt: "Parent AI dark theme", caption: "Same flow \u2014 dark theme" },
+      { src: "/parent-demo-light.jpg", srcDark: "/parent-demo-dark.jpg", alt: "XingAI Parent AI", caption: "Parenting guidance flow" },
     ],
     features: [],
     comingSoon: true,
@@ -167,8 +159,7 @@ export const apps: AppData[] = [
       "Travel decision intelligence\u2014destination options, itinerary trade-offs, and local insights without tab overload.",
     category: "Travel AI",
     screenshots: [
-      { src: "/travel-demo-light.jpg", alt: "Travel AI light theme", caption: "Travel planning flow \u2014 light theme" },
-      { src: "/travel-demo-dark.jpg", alt: "Travel AI dark theme", caption: "Same flow \u2014 dark theme" },
+      { src: "/travel-demo-light.jpg", srcDark: "/travel-demo-dark.jpg", alt: "XingAI Travel AI", caption: "Travel planning flow" },
     ],
     features: [],
     comingSoon: true,
@@ -189,8 +180,7 @@ export const apps: AppData[] = [
       "Investing decision support\u2014structure, context, and risk-aware framing so you can think in systems, not headlines.",
     category: "Finance AI",
     screenshots: [
-      { src: "/invest-demo-light.jpg", alt: "Investment Assistant light theme", caption: "Investment decision flow \u2014 light theme" },
-      { src: "/invest-demo-dark.jpg", alt: "Investment Assistant dark theme", caption: "Same flow \u2014 dark theme" },
+      { src: "/invest-demo-light.jpg", srcDark: "/invest-demo-dark.jpg", alt: "XingAI Investment Assistant", caption: "Investment decision flow" },
     ],
     features: [],
     comingSoon: true,

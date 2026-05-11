@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslation } from "../i18n/LanguageContext";
 import { apps } from "../data/apps";
 import AppIcon from "../components/AppIcon";
+import ThemedImage from "../components/ThemedImage";
 
 export default function AppsPage() {
   const { t } = useTranslation();
@@ -22,8 +23,9 @@ export default function AppsPage() {
             <Link href={`/apps/${app.slug}`} className="app-card-link">
               <div className="app-card-thumb">
                 {app.screenshots[0] ? (
-                  <Image
+                  <ThemedImage
                     src={app.screenshots[0].src}
+                    srcDark={app.screenshots[0].srcDark}
                     alt={app.screenshots[0].alt}
                     fill
                     sizes="(max-width: 36rem) 90vw, 17rem"

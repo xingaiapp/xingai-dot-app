@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useTranslation } from "../../i18n/LanguageContext";
 import { getAppBySlug } from "../../data/apps";
 import AppIcon from "../../components/AppIcon";
+import ThemedImage from "../../components/ThemedImage";
 
 const statusLabel: Record<string, string> = {
   shipped: "Shipped",
@@ -93,8 +94,9 @@ export default function AppDetailPage() {
           {app.screenshots.map((shot, i) => (
             <figure key={i} className="screenshot-card">
               <div className="screenshot-wrap">
-                <Image
+                <ThemedImage
                   src={shot.src}
+                  srcDark={shot.srcDark}
                   alt={shot.alt}
                   fill
                   sizes="(max-width: 36rem) 90vw, 17rem"
