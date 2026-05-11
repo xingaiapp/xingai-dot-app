@@ -183,40 +183,87 @@ body {
   margin-left: 0.25rem;
 }
 
-/* ── Language selector ── */
-.lang-selector {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--panel-bg);
-  overflow: hidden;
+/* ── Language dropdown ── */
+.lang-dropdown {
+  position: relative;
 }
 
-.lang-btn {
+.lang-trigger {
   all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   padding: 0.3rem 0.5rem;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-bg);
   cursor: pointer;
-  transition: color 0.15s ease, background 0.15s ease;
   line-height: 1;
   white-space: nowrap;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
-.lang-btn:hover {
+.lang-trigger:hover {
   color: var(--ink);
   background: var(--line);
 }
 
-.lang-btn--active {
+.lang-trigger:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.lang-chevron {
+  font-size: 0.6rem;
+  opacity: 0.6;
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  margin: 0;
+  padding: 0.25rem;
+  list-style: none;
+  min-width: 5.5rem;
+  background: var(--page-bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 200;
+}
+
+[data-theme="dark"] .lang-menu {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.lang-option {
+  all: unset;
+  display: block;
+  width: 100%;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.12s ease, background 0.12s ease;
+}
+
+.lang-option:hover {
   color: var(--ink-strong);
   background: var(--line);
+}
+
+.lang-option--active {
+  color: var(--ink-strong);
   font-weight: 600;
 }
 
-.lang-btn:focus-visible {
+.lang-option:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: -2px;
 }
