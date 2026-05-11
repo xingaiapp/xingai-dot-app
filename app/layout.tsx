@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -11,10 +11,17 @@ const inter = Inter({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#ffffff",
+};
+
 export const metadata: Metadata = {
   title: "xingai.app",
   description:
-    "xingai.app — AI lifestyle decision systems. Next.js, FastAPI, local AI, and decision intelligence.",
+    "xingai.app — AI lifestyle decision systems. Co-founded by Xing and Allen, AI architects. Next.js, FastAPI, local AI, and decision intelligence.",
   icons: {
     icon: "/xingai-logo.png",
     apple: "/xingai-logo.png",
@@ -22,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "xingai.app",
     description:
-      "Building AI lifestyle decision systems — thoughtful tools on the web.",
+      "Building AI lifestyle decision systems — co-founded by Xing and Allen, AI architects.",
     type: "website",
     url: siteUrl,
     siteName: "xingai.app",

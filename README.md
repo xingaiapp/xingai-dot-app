@@ -16,7 +16,12 @@ Next.js landing page for **[xingai.app](https://xingai.app)** — AI lifestyle d
 | `app/layout.tsx` | Root layout, metadata (Open Graph, Twitter) |
 | `app/globals.css` | Styles |
 | `public/xingai-logo.png` | Logo and favicon |
-| `public/xing1.png` | Profile image |
+| `public/xing1.png` | Xing (co-founder) |
+| `public/allen1.png` | Allen (co-founder) |
+| `public/food-demo-light.jpg` | Food app demo screenshot (light) |
+| `public/food-demo-dark.jpg` | Food app demo screenshot (dark) |
+
+The page background is **white** (`#ffffff`) so it lines up with the logo’s white artboard. For a softer edge on non-white PNGs, replace `public/xingai-logo.png` with a **transparent** export from your design tool.
 
 ## Run locally
 

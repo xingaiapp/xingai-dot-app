@@ -4,6 +4,9 @@
   --line: rgba(10, 12, 27, 0.08);
   --blue: #2675ff;
   --purple: #8a2be2;
+  /* Match logo artboard (white) */
+  --page-bg: #ffffff;
+  --panel-bg: #fafbfd;
 }
 
 *,
@@ -14,40 +17,47 @@
 
 html {
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   color: var(--ink);
-  background: #fafbfd;
+  background-color: var(--page-bg);
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
+  /* Very light brand wash so the page still feels “xingai” on white */
   background-image: radial-gradient(
-      ellipse 80% 50% at 50% -20%,
-      rgba(38, 117, 255, 0.12),
-      transparent
+      ellipse 120% 80% at 50% -30%,
+      rgba(38, 117, 255, 0.045),
+      transparent 55%
     ),
     radial-gradient(
-      ellipse 60% 40% at 100% 0%,
-      rgba(138, 43, 226, 0.08),
-      transparent
+      ellipse 70% 50% at 100% 0%,
+      rgba(138, 43, 226, 0.035),
+      transparent 50%
     );
 }
 
 .wrap {
-  max-width: 560px;
+  max-width: 36rem;
+  width: 100%;
   margin: 0 auto;
-  padding: clamp(1.25rem, 4vw, 2rem) 1.5rem 3rem;
+  padding: clamp(1.25rem, 4vw, 2rem) clamp(1.125rem, 5vw, 1.5rem)
+    max(2rem, env(safe-area-inset-bottom, 0));
 }
 
 .title-hero {
-  min-height: min(88vh, 36rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  margin: 0 0 2.5rem;
-  padding: clamp(1rem, 4vw, 2.5rem) 0;
+  margin: 0 0 1rem;
+  padding: clamp(0.25rem, 2vw, 0.75rem) 0 clamp(0.35rem, 1.5vw, 0.5rem);
 }
 
 .page-title {
@@ -77,42 +87,179 @@ body {
   margin: 0 auto;
 }
 
-.profile-row {
-  margin: 0 0 1.75rem;
+.cofounders {
+  margin: 0 0 1.5rem;
 }
 
-.profile-row img {
-  display: block;
-  width: min(11rem, 42vw);
-  max-width: 100%;
-  height: auto;
+.cofounders-heading {
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cofounders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 36rem) {
+  .cofounders-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    max-width: none;
+  }
+}
+
+.cofounder figure {
+  margin: 0;
+}
+
+/* Same width × height for both portraits (crop with cover) */
+.cofounder-photo {
+  position: relative;
+  width: 100%;
+  max-width: 11rem;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
   border-radius: 14px;
+  overflow: hidden;
   border: 1px solid var(--line);
   box-shadow: 0 8px 28px rgba(10, 12, 27, 0.08);
 }
 
+@media (max-width: 36rem) {
+  .cofounder-photo {
+    max-width: min(17.5rem, 86vw);
+  }
+}
+
+.cofounder-photo-img {
+  object-fit: cover;
+}
+
+.cofounder figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-align: center;
+}
+
+.cofounder .role {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.cofounder .role-sub {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.cofounder-bio {
+  margin: 0.75rem auto 0;
+  max-width: 22rem;
+  font-size: 0.9375rem;
+  line-height: 1.62;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 36rem) {
+  .cofounder-bio {
+    max-width: none;
+    font-size: 1rem;
+    line-height: 1.65;
+    text-align: left;
+  }
+
+  .cofounder figcaption {
+    text-align: left;
+  }
+}
+
+.cofounders-contact-note {
+  margin: 1.1rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.62;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 36rem) {
+  .cofounders-contact-note {
+    font-size: 1rem;
+    line-height: 1.65;
+    text-align: left;
+  }
+}
+
+.cofounders-contact-note a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-decoration-color: rgba(10, 12, 27, 0.25);
+  text-underline-offset: 0.2em;
+}
+
+.cofounders-contact-note a:hover {
+  color: var(--blue);
+  text-decoration-color: rgba(38, 117, 255, 0.45);
+}
+
 .tagline {
-  font-size: clamp(1.35rem, 4vw, 1.6rem);
+  font-size: clamp(1.28rem, 4.2vw + 0.4rem, 1.6rem);
   font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.25;
-  margin: 0 0 0.75rem;
+  line-height: 1.28;
+  margin: 0 0 0.85rem;
+}
+
+@media (max-width: 36rem) {
+  .tagline {
+    line-height: 1.32;
+  }
 }
 
 .lead {
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-size: clamp(1.03rem, 0.4vw + 1rem, 1.0625rem);
+  line-height: 1.68;
   color: var(--muted);
   margin: 0 0 1.75rem;
+}
+
+@media (max-width: 36rem) {
+  .lead {
+    line-height: 1.72;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .panel {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 1.25rem 1.35rem;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
+  background: var(--panel-bg);
   margin-bottom: 2rem;
+}
+
+@media (max-width: 36rem) {
+  .panel {
+    padding: 1.2rem 1.1rem;
+    border-radius: 14px;
+  }
 }
 
 .panel p {
@@ -122,8 +269,21 @@ body {
   color: var(--muted);
 }
 
+@media (max-width: 36rem) {
+  .panel p {
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+}
+
 .panel p + p {
   margin-top: 0.85rem;
+}
+
+@media (max-width: 36rem) {
+  .panel p + p {
+    margin-top: 1rem;
+  }
 }
 
 .panel a {
@@ -148,16 +308,28 @@ body {
 .cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.65rem 1.15rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 1.25rem;
   border-radius: 999px;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
   color: #fff;
   background: linear-gradient(135deg, var(--blue), var(--purple));
   box-shadow: 0 2px 12px rgba(38, 117, 255, 0.28);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+@media (max-width: 36rem) {
+  .cta {
+    min-height: 3rem;
+    width: 100%;
+    max-width: 22rem;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
 }
 
 .cta:hover {
@@ -170,6 +342,131 @@ body {
   outline-offset: 3px;
 }
 
+.demos-section {
+  margin: 2rem 0 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.demos-heading {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.demos-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.demos-lead {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.62;
+  color: var(--muted);
+}
+
+@media (max-width: 36rem) {
+  .demos-lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+}
+
+.app-roadmap {
+  margin: 0 0 1.25rem;
+  padding: 0 0 0 1.1rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.app-roadmap li + li {
+  margin-top: 0.45rem;
+}
+
+.roadmap-name {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.demos-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 36rem) {
+  .demos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.demo-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--panel-bg);
+}
+
+.demo-card figure {
+  margin: 0;
+}
+
+.demo-shot-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 707 / 1536;
+  max-height: min(52vh, 22rem);
+  margin: 0 auto;
+  background: rgba(10, 12, 27, 0.04);
+}
+
+.demo-shot-img {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.demo-card-body {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.demo-card-title {
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.demo-card-meta {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.demo-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(38, 117, 255, 0.1);
+  border-radius: 6px;
+}
+
 .socials {
   display: flex;
   flex-wrap: wrap;
@@ -177,6 +474,14 @@ body {
   gap: 0.5rem 1rem;
   margin: 0 0 2rem;
   font-size: 0.9375rem;
+}
+
+@media (max-width: 36rem) {
+  .socials {
+    font-size: 1rem;
+    gap: 0.35rem 0.85rem;
+    row-gap: 0.5rem;
+  }
 }
 
 .socials-label {
@@ -193,7 +498,11 @@ body {
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(10, 12, 27, 0.2);
-  padding-bottom: 1px;
+  padding: 0.4rem 0.15rem 0.35rem;
+  margin: -0.4rem -0.15rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 
@@ -215,11 +524,35 @@ body {
 
 .site-footer {
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
   font-size: 0.8125rem;
   color: var(--muted);
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+.footer-main {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-build {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 32rem;
+}
+
+@media (max-width: 36rem) {
+  .footer-build {
+    font-size: 0.875rem;
+  }
 }
 
 .footer-logo {
@@ -228,4 +561,41 @@ body {
   width: auto;
   flex-shrink: 0;
   opacity: 0.92;
+}
+
+@media (max-width: 36rem) {
+  .title-hero {
+    margin-bottom: 0.75rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .page-title {
+    max-width: min(100%, 22rem);
+  }
+
+  .cofounders {
+    margin-bottom: 1.5rem;
+  }
+
+  .cofounder {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cofounder figure {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cofounder-photo {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .site-footer {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
 }
