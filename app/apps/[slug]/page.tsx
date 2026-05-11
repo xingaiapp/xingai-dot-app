@@ -3,8 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useEffect } from "react";
 import { useTranslation } from "../../i18n/LanguageContext";
-import { getAppBySlug, apps } from "../../data/apps";
+import { getAppBySlug } from "../../data/apps";
+import AppIcon from "../../components/AppIcon";
 
 const statusLabel: Record<string, string> = {
   shipped: "Shipped",
@@ -16,6 +18,18 @@ export default function AppDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
   const app = getAppBySlug(slug);
+
+  useEffect(() => {
+    if (!app) return;
+    let link = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.head.appendChild(link);
+    }
+    link.href = app.favicon;
+    return () => { link.href = "/favicon.ico"; };
+  }, [app]);
 
   if (!app) {
     return (
@@ -42,11 +56,35 @@ export default function AppDetailPage() {
         <Link href="/apps" className="breadcrumb">
           &larr; {t("appsHeading")}
         </Link>
-        <h1 className="page-heading">{app.name}</h1>
+        <div className="page-heading-row">
+          <AppIcon
+            light={app.icon}
+            dark={app.iconDark}
+            alt=""
+            size={40}
+            className="page-heading-icon"
+          />
+          <h1 className="page-heading">{app.name}</h1>
+        </div>
         <p className="page-lead">{app.description}</p>
       </section>
 
+      {app.comingSoon && (
+        <section
+          className="detail-section detail-coming-soon"
+          aria-label={t("appComingSoonBadge")}
+        >
+          <p className="section-lead detail-coming-soon__text">
+            {t("appComingSoonBanner")}
+          </p>
+          <Link href="/contact" className="cta">
+            {t("appEarlyAccessCta")}
+          </Link>
+        </section>
+      )}
+
       {/* Screenshots */}
+      {app.screenshots.length > 0 && (
       <section className="detail-section" aria-labelledby="screenshots-heading">
         <h2 id="screenshots-heading" className="detail-heading">
           {t("appScreenshots")}
@@ -70,8 +108,10 @@ export default function AppDetailPage() {
           ))}
         </div>
       </section>
+      )}
 
       {/* Versions & Pricing */}
+      {!app.comingSoon && (
       <section className="detail-section" aria-labelledby="versions-heading">
         <h2 id="versions-heading" className="detail-heading">
           {t("appVersions")}
@@ -111,6 +151,7 @@ export default function AppDetailPage() {
           ))}
         </div>
       </section>
+      )}
 
       {/* Custom version */}
       <section className="detail-section custom-section">

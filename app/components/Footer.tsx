@@ -11,7 +11,7 @@ export default function Footer() {
     mounted && theme === "dark" ? "/xingai-logo-dark.png" : "/xingai-logo.png";
 
   return (
-    <footer className="site-footer">
+    <footer className="site-footer" role="contentinfo">
       <nav className="socials" aria-label="Social and code">
         <span className="socials-label">{t("elsewhere")}</span>
         <a href="https://github.com/xingaiapp" rel="noopener noreferrer" target="_blank">GitHub</a>
