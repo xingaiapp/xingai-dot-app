@@ -1,58 +1,90 @@
-# xingai-dot-app
+# XingAI — AI Decision Systems for Everyday Life
 
-Next.js landing page for **[xingai.app](https://xingai.app)** — AI lifestyle decision systems (this repo is the marketing site; product work may use Next.js, FastAPI, and local AI elsewhere).
+> Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-## Stack
+**Live at [xingai.app](https://xingai.app)**
 
-- [Next.js 15](https://nextjs.org/) (App Router)
-- TypeScript
-- [Inter](https://fonts.google.com/specimen/Inter) via `next/font`
+---
 
-## Project layout
+## What is XingAI?
 
-| Path | Purpose |
-|------|---------|
-| `app/page.tsx` | Home page |
-| `app/layout.tsx` | Root layout, metadata (Open Graph, Twitter) |
-| `app/globals.css` | Styles |
-| `public/xingai-logo.png` | Logo and favicon |
-| `public/xing1.png` | Xing (co-founder) |
-| `public/allen1.png` | Allen (co-founder) |
-| `public/food-demo-light.jpg` | Food app demo screenshot (light) |
-| `public/food-demo-dark.jpg` | Food app demo screenshot (dark) |
+XingAI builds focused AI decision systems for everyday life. Each product solves one real decision — with structure, clarity, and privacy in mind.
 
-The page background is **white** (`#ffffff`) so it lines up with the logo’s white artboard. For a softer edge on non-white PNGs, replace `public/xingai-logo.png` with a **transparent** export from your design tool.
+| Product | Domain | Tagline |
+|---------|--------|---------|
+| **Meal Coach** | Health AI | Eat Better |
+| **Cook AI** | Cooking AI | Cook Smarter |
+| **Outfit AI** | Style AI | Dress Smarter |
+| **Routine AI** | Habits AI | Live Better |
+| **Parent AI** | Parenting AI | Family Support |
+| **Travel AI** | Travel AI | Explore Better |
+| **Investment Assistant** | Finance AI | Invest Smarter |
 
-## Run locally
+Meal Coach is live. Other products are in development with UX demos on the site.
+
+## Features
+
+- **7 AI decision systems** — each focused on one life domain
+- **Mobile-first design** — optimized for phones, works great on desktop
+- **Light + dark themes** — icons, screenshots, and UI all adapt
+- **3 languages** — English, Chinese (中文), Korean (한국어)
+- **SEO optimized** — sitemap, JSON-LD structured data, per-page metadata
+- **Custom AI builds** — we also build AI products for teams and founders
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Hosting:** Vercel
+- **DNS:** Cloudflare
+- **Styling:** Mobile-first CSS with CSS variables for theming
+- **Fonts:** Inter (Google Fonts)
+- **Images:** next/image with responsive sizing
+- **i18n:** Custom React Context with localStorage persistence
+
+## Getting Started
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000)
 
-## Build
+## Project Structure
 
-```bash
-npm run build
-npm start
+```
+app/
+├── components/     # AppIcon, ThemedImage, ThemeContext, Header, Footer
+├── data/           # Product catalog (apps.ts)
+├── i18n/           # Translations & language context
+├── apps/           # Product listing & detail pages
+├── about/          # About page
+├── contact/        # Contact page
+├── robots.ts       # Search engine crawling rules
+├── sitemap.ts      # Auto-generated sitemap
+├── layout.tsx      # Root layout with JSON-LD & SEO metadata
+└── page.tsx        # Homepage
+public/             # Logos, icons, favicons, demo screenshots
 ```
 
-## Deploy
+## Co-founders
 
-**[Vercel](https://vercel.com)** (recommended): import the GitHub repo; Vercel detects Next.js and runs `next build`. Set **Environment variable** `NEXT_PUBLIC_SITE_URL` to `https://xingai.app` (no trailing slash) so Open Graph image URLs stay correct in previews.
+- **Xing** — Co-founder & AI Architect
+- **Allen** — Co-founder & AI Architect
 
-Custom domain + Cloudflare: point DNS per Vercel’s domain panel (A/CNAME), same as before.
+## Contact
 
-## Links
+- **Email:** xing@xingai.app
+- **Web:** [xingai.app](https://xingai.app)
+- **LinkedIn:** [xingaiapp](https://www.linkedin.com/in/xingaiapp/)
+- **X/Twitter:** [@XingAIApp](https://x.com/XingAIApp)
 
-- Website: [https://xingai.app](https://xingai.app)
-- GitHub org: [https://github.com/xingaiapp](https://github.com/xingaiapp)
-- LinkedIn: [https://www.linkedin.com/in/xingaiapp/](https://www.linkedin.com/in/xingaiapp/)
-- X: [https://x.com/XingAIApp](https://x.com/XingAIApp)
-- Contact: [xing@xingai.app](mailto:xing@xingai.app)
+## Have an idea?
 
-## License
+We also build custom AI products for teams and founders. Share your idea — we'll design, build, and ship it with you.
 
-All rights reserved unless otherwise noted.
+[Tell us your idea →](https://xingai.app/contact)
+
+---
+
+© xingai.app
