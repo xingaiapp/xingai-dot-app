@@ -35,7 +35,7 @@ export const apps: AppData[] = [
     icon: "/meal-coach-icon.png",
     iconDark: "/meal-coach-icon-dark.png",
     favicon: "/favicon-meal-coach.png",
-    demoUrl: "https://meal-ai-decision-projects.vercel.app/",
+    demoUrl: "https://xingai-meal-coach-ai.vercel.app/",
     sourceUrl: "https://uwspstar.gumroad.com/l/ai-meal-planner-nextjs-fastapi",
     description:
       "AI-powered meal coaching\u2014personalized suggestions, dietary awareness, and clarity without analysis paralysis. Built with local AI where privacy matters.",
