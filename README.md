@@ -2,7 +2,7 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Live at [xingai.app](https://xingai.app)**
+**Live at [xingai-dot-app.vercel.app](https://xingai-dot-app.vercel.app/)**
 
 ---
 
@@ -50,6 +50,12 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
+## Deployment Notes
+
+Use `https://xingai-dot-app.vercel.app/` as the stable public URL for this website. Do not use one-off Vercel deployment URLs in docs or product links.
+
+See [docs/domain-and-deployment-notes.md](./docs/domain-and-deployment-notes.md) for alias history and deployment commands.
+
 ## Project Structure
 
 ```
@@ -75,7 +81,7 @@ public/             # Logos, icons, favicons, demo screenshots
 ## Contact
 
 - **Email:** xing@xingai.app
-- **Web:** [xingai.app](https://xingai.app)
+- **Web:** [xingai-dot-app.vercel.app](https://xingai-dot-app.vercel.app/)
 - **LinkedIn:** [xingaiapp](https://www.linkedin.com/in/xingaiapp/)
 - **X/Twitter:** [@XingAIApp](https://x.com/XingAIApp)
 
@@ -83,7 +89,7 @@ public/             # Logos, icons, favicons, demo screenshots
 
 We also build custom AI products for teams and founders. Share your idea — we'll design, build, and ship it with you.
 
-[Tell us your idea →](https://xingai.app/contact)
+[Tell us your idea →](https://xingai-dot-app.vercel.app/contact)
 
 ---
 
