@@ -95,18 +95,23 @@ export const apps: AppData[] = [
     icon: "/outfit-ai-icon.png",
     iconDark: "/outfit-ai-icon-dark.png",
     favicon: "/favicon-outfit-ai.png",
+    demoUrl: "https://wear.xingai.app/",
     description:
       "Style and outfit decisions with structured AI guidance\u2014fewer tabs, clearer choices, and confidence before you walk out the door.",
     category: "Outfit AI",
     screenshots: [
-      { src: "/outfit-demo-light.jpg", srcDark: "/outfit-demo-dark.jpg", alt: "XingAI Outfit AI", caption: "Style decision flow" },
+      { src: "/wear-ai-demo-light.png", srcDark: "/wear-ai-demo-dark.png", alt: "XingAI Outfit AI Wear AI demo", caption: "AI outfit recommendation flow" },
     ],
-    features: [],
-    comingSoon: true,
+    features: [
+      { name: "AI outfit recommendation", free: true, pro: true, enterprise: true },
+      { name: "Weather and occasion context", free: true, pro: true, enterprise: true },
+      { name: "Demo model look preview", free: true, pro: true, enterprise: true },
+      { name: "Local profile and saved looks", free: true, pro: true, enterprise: true },
+    ],
     roadmap: [
+      { title: "AI outfit recommendation", status: "shipped" },
+      { title: "Confidence-first decision flow", status: "shipped" },
       { title: "Wardrobe-aware outfit suggestions", status: "planned" },
-      { title: "Confidence-first decision flow", status: "planned" },
-      { title: "Public preview", status: "planned" },
     ],
   },
   {
