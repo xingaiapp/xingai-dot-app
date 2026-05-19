@@ -20,7 +20,7 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **Travel AI** | Travel AI | Explore Better |
 | **Investment Assistant** | Finance AI | Invest Smarter |
 
-Meal Coach is live. Other products are in development with UX demos on the site.
+**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), and **Outfit AI** are live. Other products are in development with UX demos on the site.
 
 ## Features
 

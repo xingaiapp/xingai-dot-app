@@ -24,6 +24,8 @@ export type AppData = {
   roadmap: RoadmapItem[];
   demoUrl?: string;
   sourceUrl?: string;
+  /** `gumroad` = paid template CTA; `github` = open repo CTA (default gumroad when sourceUrl set). */
+  sourceKind?: "gumroad" | "github";
   comingSoon?: boolean;
 };
 
@@ -37,6 +39,7 @@ export const apps: AppData[] = [
     favicon: "/favicon-meal-coach.png",
     demoUrl: "https://xingai-meal-coach-ai.vercel.app/",
     sourceUrl: "https://uwspstar.gumroad.com/l/ai-meal-planner-nextjs-fastapi",
+    sourceKind: "gumroad",
     description:
       "AI-powered meal coaching\u2014personalized suggestions, dietary awareness, and clarity without analysis paralysis. Built with local AI where privacy matters.",
     category: "Health AI",
@@ -76,8 +79,9 @@ export const apps: AppData[] = [
     favicon: "/favicon-cook-ai.png",
     demoUrl: "https://cook.xingai.app/",
     sourceUrl: "https://github.com/xingaiapp/xingai-cook-ai",
+    sourceKind: "github",
     description:
-      "Decide what to cook from what you already have\u2014scan your fridge or list ingredients, pick a meal slot, get one dish with an optional buy list and step-by-step cooking.",
+      "Decide what to cook from what you already have\u2014scan your fridge or list ingredients, pick a meal slot, get one dish with an optional buy list and step-by-step cooking. OpenAI-powered V1 demo.",
     category: "Cooking AI",
     screenshots: [
       {
@@ -94,16 +98,19 @@ export const apps: AppData[] = [
       { name: "Optional buy list", free: true, pro: true, enterprise: true },
       { name: "Step-by-step cooking", free: true, pro: true, enterprise: true },
       { name: "Speed mode constraints", free: true, pro: true, enterprise: true },
-      { name: "Saved pantry (coming)", free: false, pro: true, enterprise: true },
+      { name: "Ingredient substitutions", free: true, pro: true, enterprise: true },
+      { name: "Saved pantry & meals", free: false, pro: true, enterprise: true },
       { name: "API access", free: false, pro: false, enterprise: true },
+      { name: "Custom branding", free: false, pro: false, enterprise: true },
     ],
     roadmap: [
       { title: "Inventory \u2192 meal \u2192 cook flow", status: "shipped" },
       { title: "Light & dark theme UI", status: "shipped" },
       { title: "OpenAI meal recommendations", status: "shipped" },
-      { title: "Public preview at cook.xingai.app", status: "shipped" },
-      { title: "Pantry & saved meals", status: "planned" },
+      { title: "Live demo at cook.xingai.app", status: "shipped" },
+      { title: "Pantry & saved meals", status: "in-progress" },
       { title: "Real step timers", status: "planned" },
+      { title: "Weekly meal planning", status: "planned" },
     ],
   },
   {
