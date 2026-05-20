@@ -230,18 +230,24 @@ export const apps: AppData[] = [
     icon: "/investment-ai-icon.png",
     iconDark: "/investment-ai-icon-dark.png",
     favicon: "/favicon-investment-ai.png",
+    demoUrl: "https://invest.xingai.app/",
     description:
       "Investing decision support\u2014structure, context, and risk-aware framing so you can think in systems, not headlines.",
     category: "Finance AI",
     screenshots: [
       { src: "/invest-demo-light.jpg", srcDark: "/invest-demo-dark.jpg", alt: "XingAI Investment Assistant", caption: "Investment decision flow" },
     ],
-    features: [],
-    comingSoon: true,
+    features: [
+      { name: "Macro consensus dashboard", free: true, pro: true, enterprise: true },
+      { name: "Multi-engine voting view", free: true, pro: true, enterprise: true },
+      { name: "AI decision feed", free: true, pro: true, enterprise: true },
+      { name: "Legal disclaimers & terms", free: true, pro: true, enterprise: true },
+    ],
     roadmap: [
-      { title: "Signal framing & scenario views", status: "planned" },
-      { title: "Risk-first guardrails", status: "planned" },
-      { title: "Public preview", status: "planned" },
+      { title: "V2 worker cache dashboard", status: "shipped" },
+      { title: "Live at invest.xingai.app", status: "shipped" },
+      { title: "Voluntary support (Stripe tips)", status: "shipped" },
+      { title: "Paid plans & subscriptions", status: "planned" },
     ],
   },
 ];
