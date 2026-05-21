@@ -4,6 +4,8 @@ import "./globals.css";
 import Providers from "./components/Providers";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import MobileBottomNav from "./components/MobileBottomNav";
+import { apps } from "./data/apps";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -86,7 +88,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const initScript = `(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);var l=localStorage.getItem("locale");if(l)document.documentElement.lang=l}catch(e){}})()`;
+  const initScript = `(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);localStorage.removeItem("locale");var l=localStorage.getItem("xingai.locale");document.documentElement.lang=l||"en"}catch(e){document.documentElement.lang="en"}})()`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -122,6 +124,71 @@ export default function RootLayout({
         publisher: { "@id": `${siteUrl}/#org` },
         inLanguage: ["en", "zh", "ko"],
       },
+      {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/#webpage`,
+        url: siteUrl,
+        name: "XingAI — AI Decision Systems for Everyday Life",
+        description:
+          "XingAI is a platform of focused AI decision systems for everyday life, including meal coaching, cooking, style, routines, parenting, travel, and investing.",
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        about: { "@id": `${siteUrl}/#org` },
+        primaryImageOfPage: `${siteUrl}/xingai-logo.png`,
+        inLanguage: "en",
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${siteUrl}/#products`,
+        name: "XingAI AI decision systems",
+        description:
+          "A product collection of focused AI tools for everyday decisions.",
+        numberOfItems: apps.length,
+        itemListElement: apps.map((app, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${siteUrl}/apps/${app.slug}`,
+          name: app.name,
+          description: app.description,
+        })),
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${siteUrl}/#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What is XingAI?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "XingAI is a platform of focused AI decision systems for everyday life, including food, cooking, style, routines, parenting, travel, and investing.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How is XingAI different from a chatbot?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "XingAI products are built around structured decisions and clear next actions instead of open-ended generic chat.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What can I use XingAI for today?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "You can explore live AI tools for meal coaching, cooking from available ingredients, routine planning, and other everyday decision workflows.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can XingAI build a custom AI product?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. XingAI helps founders and teams design, build, and deploy focused AI products from idea to launch.",
+            },
+          },
+        ],
+      },
     ],
   };
 
@@ -134,11 +201,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} site-body`}>
         <Providers>
           <Header />
           <div className="page-wrap">{children}</div>
           <Footer />
+          <MobileBottomNav />
         </Providers>
       </body>
     </html>

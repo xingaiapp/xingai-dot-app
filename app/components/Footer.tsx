@@ -1,24 +1,62 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTranslation } from "../i18n/LanguageContext";
+import { isNavActive, primaryNavLinks } from "../lib/nav-links";
 import { useTheme } from "./ThemeContext";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const pathname = usePathname();
   const { theme, mounted } = useTheme();
   const logoSrc =
     mounted && theme === "dark" ? "/xingai-logo-dark.png" : "/xingai-logo.png";
 
   return (
     <footer className="site-footer" role="contentinfo">
+      <nav className="footer-nav" aria-label={t("footerNav")}>
+        <span className="footer-nav__label">{t("footerNav")}</span>
+        <ul className="footer-nav__list">
+          {primaryNavLinks.map(({ href, key }) => {
+            const active = isNavActive(pathname, href);
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`footer-nav__link${active ? " footer-nav__link--active" : ""}`}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {t(key)}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+
       <nav className="socials" aria-label="Social and code">
         <span className="socials-label">{t("elsewhere")}</span>
-        <a href="https://github.com/xingaiapp" rel="noopener noreferrer" target="_blank">GitHub</a>
-        <span className="socials-sep" aria-hidden="true">&middot;</span>
-        <a href="https://www.linkedin.com/in/xingaiapp/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-        <span className="socials-sep" aria-hidden="true">&middot;</span>
-        <a href="https://x.com/XingAIApp" rel="noopener noreferrer" target="_blank">X</a>
+        <a href="https://github.com/xingaiapp" rel="noopener noreferrer" target="_blank">
+          GitHub
+        </a>
+        <span className="socials-sep" aria-hidden="true">
+          &middot;
+        </span>
+        <a
+          href="https://www.linkedin.com/in/xingaiapp/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+        <span className="socials-sep" aria-hidden="true">
+          &middot;
+        </span>
+        <a href="https://x.com/XingAIApp" rel="noopener noreferrer" target="_blank">
+          X
+        </a>
       </nav>
 
       <div className="footer-main">

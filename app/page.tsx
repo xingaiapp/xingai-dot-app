@@ -3,12 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "./i18n/LanguageContext";
-import { apps } from "./data/apps";
+import { getLocalizedApps } from "./data/apps";
 import AppIcon from "./components/AppIcon";
 import ThemedImage from "./components/ThemedImage";
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
+  const apps = getLocalizedApps(locale);
+  const answerItems = [
+    { question: t("answerQ1"), answer: t("answerA1") },
+    { question: t("answerQ2"), answer: t("answerA2") },
+    { question: t("answerQ3"), answer: t("answerA3") },
+    { question: t("answerQ4"), answer: t("answerA4") },
+  ];
 
   return (
     <main className="wrap">
@@ -92,6 +99,21 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="home-answers" aria-labelledby="home-answers-heading">
+        <h2 id="home-answers-heading" className="section-title">
+          {t("answerHeading")}
+        </h2>
+        <p className="section-lead">{t("answerLead")}</p>
+        <dl className="answer-list">
+          {answerItems.map((item) => (
+            <div key={item.question} className="answer-item">
+              <dt>{item.question}</dt>
+              <dd>{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section className="home-build" aria-labelledby="home-build-heading">

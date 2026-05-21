@@ -31,6 +31,13 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 - **SEO optimized** — sitemap, JSON-LD structured data, per-page metadata
 - **Custom AI builds** — we also build AI products for teams and founders
 
+## Internal Product Wiki
+
+- Repo document: [docs/product-wiki.md](./docs/product-wiki.md)
+- Global upgrade rule: `不是重做新产品，而是在前一版上升级。`
+
+Use the internal wiki as the central product/project map for all XingAI apps. It is repo documentation for team and agent use, not a public website route. Individual product repos keep implementation details, while this repo owns portfolio-level rules.
+
 ## Tech Stack
 
 - **Framework:** Next.js 15 (App Router)

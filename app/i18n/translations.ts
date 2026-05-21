@@ -9,9 +9,14 @@ export const localeLabels: Record<Locale, string> = {
 const translations = {
   en: {
     // Nav
+    navHome: "Home",
     navApps: "Apps",
     navAbout: "About",
     navContact: "Contact",
+    navMenu: "Menu",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
+    footerNav: "Site",
 
     // Home
     heroBrand: "XingAI",
@@ -24,6 +29,21 @@ const translations = {
       "Each product is a focused decision system\u2014not a generic chatbot. We ship publicly as the platform grows.",
     viewAllApps: "Explore products",
     homeCta: "Get in touch",
+    answerHeading: "Quick answers",
+    answerLead:
+      "Short answers for people and AI search systems trying to understand what XingAI does.",
+    answerQ1: "What is XingAI?",
+    answerA1:
+      "XingAI is a platform of focused AI decision systems for everyday life, including food, cooking, style, routines, parenting, travel, and investing.",
+    answerQ2: "How is XingAI different from a chatbot?",
+    answerA2:
+      "XingAI products are built around structured decisions and clear next actions instead of open-ended generic chat.",
+    answerQ3: "What can I use XingAI for today?",
+    answerA3:
+      "You can explore live AI tools for meal coaching, cooking from available ingredients, routine planning, and other everyday decision workflows.",
+    answerQ4: "Can XingAI build a custom AI product?",
+    answerA4:
+      "Yes. XingAI helps founders and teams design, build, and deploy focused AI products from idea to launch.",
 
     // Build With Us
     buildHeading: "Have an idea? We\u2019ll build it with you.",
@@ -109,9 +129,14 @@ const translations = {
     backToHome: "Back to home",
   },
   zh: {
+    navHome: "\u9996\u9875",
     navApps: "\u5e94\u7528",
     navAbout: "\u5173\u4e8e",
     navContact: "\u8054\u7cfb",
+    navMenu: "\u83dc\u5355",
+    menuOpen: "\u6253\u5f00\u83dc\u5355",
+    menuClose: "\u5173\u95ed\u83dc\u5355",
+    footerNav: "\u7f51\u7ad9\u5bfc\u822a",
 
     heroBrand: "XingAI",
     tagline: "\u9762\u5411\u65e5\u5e38\u751f\u6d3b\u7684 AI \u51b3\u7b56\u7cfb\u7edf",
@@ -123,12 +148,26 @@ const translations = {
       "\u6bcf\u4e00\u6b3e\u4ea7\u54c1\u90fd\u662f\u4e13\u6ce8\u7684\u51b3\u7b56\u7cfb\u7edf\uff0c\u4e0d\u662f\u6cdb\u6cdb\u7684\u804a\u5929\u673a\u5668\u4eba\u3002\u6211\u4eec\u5728\u516c\u5f00\u8fed\u4ee3\u4e2d\u6301\u7eed\u53d1\u5e03\u3002",
     viewAllApps: "\u63a2\u7d22\u4ea7\u54c1",
     homeCta: "\u8054\u7cfb\u6211\u4eec",
+    answerHeading: "快速了解",
+    answerLead: "给用户和 AI 搜索系统的简短答案，帮助快速理解 XingAI 是什么。",
+    answerQ1: "XingAI 是什么？",
+    answerA1:
+      "XingAI 是一个面向日常生活的 AI 决策系统平台，覆盖饮食、做饭、穿搭、习惯、育儿、旅行和投资等场景。",
+    answerQ2: "XingAI 和普通聊天机器人有什么不同？",
+    answerA2:
+      "XingAI 产品围绕结构化决策和明确下一步行动设计，而不是开放式泛聊天。",
+    answerQ3: "现在可以用 XingAI 做什么？",
+    answerA3:
+      "你可以体验饮食建议、根据已有食材做饭、习惯节奏规划，以及其他日常决策流程。",
+    answerQ4: "XingAI 可以定制 AI 产品吗？",
+    answerA4:
+      "可以。XingAI 帮助创始人和团队从想法到上线，设计、开发并部署专注的 AI 产品。",
 
     buildHeading: "\u6709\u60f3\u6cd5\uff1f\u6211\u4eec\u5e2e\u4f60\u5b9e\u73b0",
     buildLead:
       "\u6211\u4eec\u4e0d\u4ec5\u5f00\u53d1\u81ea\u5df1\u7684 AI \u4ea7\u54c1\u2014\u2014\u6211\u4eec\u4e5f\u5e2e\u52a9\u56e2\u961f\u548c\u521b\u59cb\u4eba\u5c06\u60f3\u6cd5\u53d8\u4e3a\u73b0\u5b9e\u3002\u4ece\u6982\u5ff5\u5230\u53d1\u5e03\uff0c\u6211\u4eec\u4f5c\u4e3a\u4f60\u7684 AI \u56e2\u961f\uff1a\u67b6\u6784\u3001\u8bbe\u8ba1\u3001\u5f00\u53d1\u548c\u90e8\u7f72\u3002",
     buildPoint1: "\u5206\u4eab\u4f60\u7684\u60f3\u6cd5 \u2014 \u6211\u4eec\u5c06\u5176\u8f6c\u5316\u4e3a\u4e13\u6ce8\u7684 AI \u4ea7\u54c1",
-    buildPoint2: "\u6211\u4eec\u8bbe\u8ba1\u3001\u5f00\u53d1\u3001\u4ea4\u4ed8 \u2014 \u4f60\u638c\u63e7\u65b9\u5411",
+    buildPoint2: "\u6211\u4eec\u8bbe\u8ba1\u3001\u5f00\u53d1\u3001\u4ea4\u4ed8 \u2014 \u4f60\u638c\u63a7\u65b9\u5411",
     buildPoint3: "\u5728\u6211\u4eec\u81ea\u5df1\u4f7f\u7528\u7684\u540c\u4e00\u5e73\u53f0\u4e0a\u5b9a\u5236 AI \u89e3\u51b3\u65b9\u6848",
     buildCta: "\u544a\u8bc9\u6211\u4eec\u4f60\u7684\u60f3\u6cd5",
 
@@ -199,9 +238,14 @@ const translations = {
     backToHome: "\u8fd4\u56de\u9996\u9875",
   },
   ko: {
+    navHome: "\ud648",
     navApps: "\uc571",
     navAbout: "\uc18c\uac1c",
     navContact: "\uc5f0\ub77d",
+    navMenu: "\uba54\ub274",
+    menuOpen: "\uba54\ub274 \uc5f4\uae30",
+    menuClose: "\uba54\ub274 \ub2eb\uae30",
+    footerNav: "\uc0ac\uc774\ud2b8",
 
     heroBrand: "XingAI",
     tagline: "\uc77c\uc0c1\uc744 \uc704\ud55c AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
@@ -213,6 +257,20 @@ const translations = {
       "\uac01 \uc81c\ud488\uc740 \ubc94\uc6a9 \ucc57\ubd07\uc774 \uc544\ub2c8\ub77c \ucd08\uc810 \ub9de\ucda4 \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c\uc785\ub2c8\ub2e4. \uacf5\uac1c\uc801\uc73c\ub85c \uacc4\uc18d \ucd9c\uc2dc\ud569\ub2c8\ub2e4.",
     viewAllApps: "\uc81c\ud488 \ub458\ub7ec\ubcf4\uae30",
     homeCta: "\uc5f0\ub77d\ud558\uae30",
+    answerHeading: "빠른 답변",
+    answerLead: "사용자와 AI 검색 시스템이 XingAI를 빠르게 이해할 수 있도록 정리한 짧은 답변입니다.",
+    answerQ1: "XingAI는 무엇인가요?",
+    answerA1:
+      "XingAI는 음식, 요리, 스타일, 루틴, 육아, 여행, 투자 등 일상 결정을 돕는 AI 의사결정 시스템 플랫폼입니다.",
+    answerQ2: "XingAI는 일반 챗봇과 어떻게 다른가요?",
+    answerA2:
+      "XingAI 제품은 개방형 대화가 아니라 구조화된 결정과 명확한 다음 행동을 중심으로 설계됩니다.",
+    answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
+    answerA3:
+      "식사 코칭, 가진 재료로 요리 결정, 루틴 계획 등 일상 의사결정 흐름을 체험할 수 있습니다.",
+    answerQ4: "XingAI가 맞춤 AI 제품도 만들 수 있나요?",
+    answerA4:
+      "네. XingAI는 창업자와 팀이 아이디어부터 출시까지 집중된 AI 제품을 설계, 개발, 배포하도록 돕습니다.",
 
     buildHeading: "\uc544\uc774\ub514\uc5b4\uac00 \uc788\uc73c\uc2e0\uac00\uc694? \ud568\uaed8 \ub9cc\ub4e4\uc5b4 \ub4dc\ub9bd\ub2c8\ub2e4.",
     buildLead:

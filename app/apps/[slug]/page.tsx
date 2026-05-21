@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import { useTranslation } from "../../i18n/LanguageContext";
-import { getAppBySlug } from "../../data/apps";
+import { getLocalizedAppBySlug } from "../../data/apps";
 import AppIcon from "../../components/AppIcon";
 import ThemedImage from "../../components/ThemedImage";
 
@@ -17,8 +17,8 @@ const statusLabel: Record<string, string> = {
 
 export default function AppDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useTranslation();
-  const app = getAppBySlug(slug);
+  const { locale, t } = useTranslation();
+  const app = getLocalizedAppBySlug(slug, locale);
 
   useEffect(() => {
     if (!app) return;

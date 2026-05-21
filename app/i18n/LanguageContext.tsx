@@ -10,6 +10,10 @@ import {
 } from "react";
 import translations, { type Locale, type TranslationKey } from "./translations";
 
+const DEFAULT_LOCALE: Locale = "en";
+const LOCALE_STORAGE_KEY = "xingai.locale";
+const LEGACY_LOCALE_STORAGE_KEY = "locale";
+
 type LanguageContextValue = {
   locale: Locale;
   setLocale: (l: Locale) => void;
@@ -19,24 +23,27 @@ type LanguageContextValue = {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("en");
+  const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
 
   useEffect(() => {
-    const stored = localStorage.getItem("locale") as Locale | null;
+    localStorage.removeItem(LEGACY_LOCALE_STORAGE_KEY);
+    const stored = localStorage.getItem(LOCALE_STORAGE_KEY) as Locale | null;
     if (stored && stored in translations) {
       setLocaleState(stored);
       document.documentElement.setAttribute("lang", stored);
+      return;
     }
+    document.documentElement.setAttribute("lang", DEFAULT_LOCALE);
   }, []);
 
   const setLocale = useCallback((l: Locale) => {
     setLocaleState(l);
-    localStorage.setItem("locale", l);
+    localStorage.setItem(LOCALE_STORAGE_KEY, l);
     document.documentElement.setAttribute("lang", l);
   }, []);
 
   const t = useCallback(
-    (key: TranslationKey) => translations[locale][key],
+    (key: TranslationKey) => translations[locale][key] ?? translations.en[key],
     [locale]
   );
 

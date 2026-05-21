@@ -3,12 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "../i18n/LanguageContext";
-import { apps } from "../data/apps";
+import { getLocalizedApps } from "../data/apps";
 import AppIcon from "../components/AppIcon";
 import ThemedImage from "../components/ThemedImage";
 
 export default function AppsPage() {
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
+  const apps = getLocalizedApps(locale);
 
   return (
     <main className="wrap">
