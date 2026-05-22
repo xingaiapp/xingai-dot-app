@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { isNavActive, primaryNavLinks } from "../lib/nav-links";
+import NavIcon from "./NavIcon";
 
 type MobileNavDrawerProps = {
   open: boolean;
@@ -75,7 +76,10 @@ export default function MobileNavDrawer({
                     aria-current={active ? "page" : undefined}
                     onClick={close}
                   >
-                    {t(key)}
+                    <span className="mobile-drawer__link-icon">
+                      <NavIcon name={key} />
+                    </span>
+                    <span>{t(key)}</span>
                   </Link>
                 </li>
               );

@@ -7,6 +7,57 @@ import { getLocalizedApps } from "./data/apps";
 import AppIcon from "./components/AppIcon";
 import ThemedImage from "./components/ThemedImage";
 
+function AnswerIcon({ index }: { index: number }) {
+  const common = {
+    width: 22,
+    height: 22,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.8,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    "aria-hidden": true,
+  };
+
+  if (index === 0) {
+    return (
+      <svg {...common}>
+        <path d="M12 3 4.5 7v5.4c0 4.2 3.1 7.2 7.5 8.6 4.4-1.4 7.5-4.4 7.5-8.6V7z" />
+        <path d="M9 12h6" />
+        <path d="M12 9v6" />
+      </svg>
+    );
+  }
+  if (index === 1) {
+    return (
+      <svg {...common}>
+        <path d="M5 5h14v5H5z" />
+        <path d="M5 14h14v5H5z" />
+        <path d="M8 10v4" />
+        <path d="M16 10v4" />
+      </svg>
+    );
+  }
+  if (index === 2) {
+    return (
+      <svg {...common}>
+        <path d="M4 12h12" />
+        <path d="m12 7 5 5-5 5" />
+        <path d="M5 5h14" />
+        <path d="M5 19h14" />
+      </svg>
+    );
+  }
+  return (
+    <svg {...common}>
+      <path d="M4 7.5 12 3l8 4.5-8 4.5z" />
+      <path d="M4 12.5 12 17l8-4.5" />
+      <path d="M4 17.5 12 22l8-4.5" />
+    </svg>
+  );
+}
+
 export default function Home() {
   const { locale, t } = useTranslation();
   const apps = getLocalizedApps(locale);
@@ -107,9 +158,14 @@ export default function Home() {
         </h2>
         <p className="section-lead">{t("answerLead")}</p>
         <dl className="answer-list">
-          {answerItems.map((item) => (
+          {answerItems.map((item, index) => (
             <div key={item.question} className="answer-item">
-              <dt>{item.question}</dt>
+              <dt>
+                <span className="answer-icon">
+                  <AnswerIcon index={index} />
+                </span>
+                <span>{item.question}</span>
+              </dt>
               <dd>{item.answer}</dd>
             </div>
           ))}

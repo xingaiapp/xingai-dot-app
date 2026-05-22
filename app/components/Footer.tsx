@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTranslation } from "../i18n/LanguageContext";
 import { isNavActive, primaryNavLinks } from "../lib/nav-links";
 import { useTheme } from "./ThemeContext";
+import NavIcon from "./NavIcon";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -28,7 +29,10 @@ export default function Footer() {
                   className={`footer-nav__link${active ? " footer-nav__link--active" : ""}`}
                   aria-current={active ? "page" : undefined}
                 >
-                  {t(key)}
+                  <span className="footer-nav__icon">
+                    <NavIcon name={key} />
+                  </span>
+                  <span>{t(key)}</span>
                 </Link>
               </li>
             );
