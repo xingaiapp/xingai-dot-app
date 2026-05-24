@@ -889,8 +889,14 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 707 / 1536;
-  max-height: min(40vh, 18rem);
+  max-height: min(34vh, 13rem);
   background: var(--shot-bg);
+}
+
+@media (min-width: 36rem) {
+  .app-card-thumb {
+    max-height: min(40vh, 18rem);
+  }
 }
 
 .app-card-thumb-img {
@@ -1003,6 +1009,20 @@ body {
 
 .app-card-fit div {
   min-width: 0;
+}
+
+@media (max-width: 35.99rem) {
+  .app-card-fit {
+    gap: 0.36rem;
+    margin-top: 0.6rem;
+  }
+
+  .app-card-fit div {
+    display: grid;
+    grid-template-columns: 5.6rem minmax(0, 1fr);
+    gap: 0.45rem;
+    align-items: start;
+  }
 }
 
 .app-card-fit dt {
@@ -1847,6 +1867,11 @@ body {
   border-bottom-color: var(--blue);
   border-color: var(--blue);
   background: var(--badge-bg);
+}
+
+.footer-nav__link--secondary {
+  color: var(--muted);
+  background: transparent;
 }
 
 .footer-nav__icon {

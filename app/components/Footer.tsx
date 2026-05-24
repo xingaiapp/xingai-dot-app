@@ -37,6 +37,11 @@ export default function Footer() {
               </li>
             );
           })}
+          <li>
+            <Link href="/contact" className="footer-nav__link footer-nav__link--secondary">
+              {t("footerCustomAi")}
+            </Link>
+          </li>
         </ul>
       </nav>
 

@@ -17,6 +17,7 @@ const translations = {
     menuOpen: "Open menu",
     menuClose: "Close menu",
     footerNav: "Site",
+    footerCustomAi: "Custom AI",
 
     // Home
     heroBrand: "XingAI",
@@ -144,6 +145,7 @@ const translations = {
     menuOpen: "\u6253\u5f00\u83dc\u5355",
     menuClose: "\u5173\u95ed\u83dc\u5355",
     footerNav: "\u7f51\u7ad9\u5bfc\u822a",
+    footerCustomAi: "\u5b9a\u5236 AI",
 
     heroBrand: "XingAI",
     tagline: "\u9762\u5411\u65e5\u5e38\u751f\u6d3b\u7684 AI \u51b3\u7b56\u7cfb\u7edf",
@@ -260,6 +262,7 @@ const translations = {
     menuOpen: "\uba54\ub274 \uc5f4\uae30",
     menuClose: "\uba54\ub274 \ub2eb\uae30",
     footerNav: "\uc0ac\uc774\ud2b8",
+    footerCustomAi: "\ub9de\ucda4 AI",
 
     heroBrand: "XingAI",
     tagline: "\uc77c\uc0c1\uc744 \uc704\ud55c AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
