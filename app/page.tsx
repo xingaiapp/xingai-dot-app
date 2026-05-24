@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useTranslation } from "./i18n/LanguageContext";
 import { getLocalizedApps, type AppLaunchStatus } from "./data/apps";
 import AppIcon from "./components/AppIcon";
@@ -63,12 +64,34 @@ function AnswerIcon({ index }: { index: number }) {
 
 export default function Home() {
   const { locale, t } = useTranslation();
+  const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const apps = getLocalizedApps(locale);
+  const heroPreviewApps = ["meal-coach", "cook-ai", "investment-assistant"].flatMap(
+    (slug) => {
+      const app = apps.find((item) => item.slug === slug);
+      return app ? [app] : [];
+    },
+  );
+  const heroPrimaryApp =
+    heroPreviewApps[activeHeroIndex] ?? heroPreviewApps[0] ?? apps[0];
   const appStatusLabels: Record<AppLaunchStatus, string> = {
     live: t("appStatusLive"),
     demo: t("appStatusDemo"),
     "coming-soon": t("appStatusComingSoon"),
   };
+
+  useEffect(() => {
+    setActiveHeroIndex(0);
+  }, [locale]);
+
+  useEffect(() => {
+    if (heroPreviewApps.length < 2) return;
+    const id = window.setInterval(() => {
+      setActiveHeroIndex((index) => (index + 1) % heroPreviewApps.length);
+    }, 4800);
+    return () => window.clearInterval(id);
+  }, [heroPreviewApps.length]);
+
   const answerItems = [
     { question: t("answerQ1"), answer: t("answerA1") },
     { question: t("answerQ2"), answer: t("answerA2") },
@@ -96,41 +119,123 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="hero-section">
-        <p className="hero-brand">{t("heroBrand")}</p>
-        <h1 className="tagline">{t("tagline")}</h1>
-        <p className="hero-sub">{t("heroSub")}</p>
-
-        <ul className="hero-grid" aria-label={t("heroGridLabel")}>
-          {apps.map((app) => (
-            <li key={app.slug} className="hero-grid-item">
-              <Link
-                href={`/apps/${app.slug}`}
-                className="hero-grid-link"
-                data-tooltip={app.description}
-              >
-                <AppIcon
-                  light={app.icon}
-                  dark={app.iconDark}
-                  alt=""
-                  size={36}
-                  className="hero-grid-icon"
-                />
-                <span className="hero-grid-name">{app.name}</span>
-                <span className="hero-grid-pos">{app.tagline}</span>
+      <section className="hero-section hero-section--platform">
+        <div className="hero-layout">
+          <div className="hero-copy">
+            <p className="hero-brand">{t("heroBrand")}</p>
+            <p className="hero-value-pill">{t("heroValuePill")}</p>
+            <h1 className="tagline">{t("tagline")}</h1>
+            <p className="hero-sub">{t("heroSub")}</p>
+            <div className="hero-actions">
+              <Link href="/apps" className="cta">
+                {t("viewAllApps")}
               </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="hero-actions">
-          <Link href="/apps" className="cta">
-            {t("viewAllApps")}
-          </Link>
-          <Link href="/contact" className="cta cta--outline">
-            {t("homeCta")}
-          </Link>
+              <Link href="/contact" className="cta cta--outline">
+                {t("homeCta")}
+              </Link>
+            </div>
+            <p className="hero-beta-note">{t("publicBetaNote")}</p>
+          </div>
+
+          {heroPrimaryApp ? (
+            <div className="hero-preview" aria-label={t("heroPreviewLabel")}>
+              <Link
+                key={heroPrimaryApp.slug}
+                href={`/apps/${heroPrimaryApp.slug}`}
+                className="hero-preview-card"
+              >
+                <div className="hero-preview-media">
+                  {heroPrimaryApp.screenshots[0] ? (
+                    <ThemedImage
+                      src={heroPrimaryApp.screenshots[0].src}
+                      srcDark={heroPrimaryApp.screenshots[0].srcDark}
+                      alt={heroPrimaryApp.screenshots[0].alt}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 36rem) 90vw, 30rem"
+                      className="hero-preview-img"
+                    />
+                  ) : (
+                    <span className="app-card-thumb-placeholder">
+                      {t("appComingSoonBadge")}
+                    </span>
+                  )}
+                  <span
+                    className={`app-status-badge app-status-badge--${heroPrimaryApp.launchStatus}`}
+                  >
+                    {appStatusLabels[heroPrimaryApp.launchStatus]}
+                  </span>
+                </div>
+                <div className="hero-preview-body">
+                  <span className="app-card-category">{heroPrimaryApp.category}</span>
+                  <h2>{heroPrimaryApp.name}</h2>
+                  <p>{heroPrimaryApp.canDo}</p>
+                  <dl className="hero-preview-fit">
+                    <div>
+                      <dt>{t("appCardBestFor")}</dt>
+                      <dd>{heroPrimaryApp.bestFor}</dd>
+                    </div>
+                    <div>
+                      <dt>{t("appCardClickTarget")}</dt>
+                      <dd>{heroPrimaryApp.clickTarget}</dd>
+                    </div>
+                  </dl>
+                </div>
+              </Link>
+
+              {heroPreviewApps.length > 1 ? (
+                <div className="hero-slide-controls" aria-label={t("heroPreviewLabel")}>
+                  {heroPreviewApps.map((app, index) => (
+                    <button
+                      key={app.slug}
+                      type="button"
+                      className={`hero-slide-dot${
+                        app.slug === heroPrimaryApp.slug ? " hero-slide-dot--active" : ""
+                      }`}
+                      aria-label={app.name}
+                      aria-current={app.slug === heroPrimaryApp.slug ? "true" : undefined}
+                      onClick={() => setActiveHeroIndex(index)}
+                    >
+                      <span>{app.name}</span>
+                    </button>
+                  ))}
+                </div>
+              ) : null}
+
+              <div className="hero-core">
+                <div className="hero-core-head">
+                  <h2>{t("heroCoreSystems")}</h2>
+                  <Link href="/apps">
+                    {t("footerSeeSystems")}
+                    <span aria-hidden="true"> →</span>
+                  </Link>
+                </div>
+                <ul className="hero-core-grid" aria-label={t("heroGridLabel")}>
+                  {heroPreviewApps.map((app) => (
+                    <li key={app.slug}>
+                      <Link
+                        href={`/apps/${app.slug}`}
+                        className={`hero-core-card${
+                          app.slug === heroPrimaryApp.slug ? " hero-core-card--active" : ""
+                        }`}
+                      >
+                        <AppIcon
+                          light={app.icon}
+                          dark={app.iconDark}
+                          alt=""
+                          size={34}
+                          className="hero-core-icon"
+                        />
+                        <span>{app.name}</span>
+                        <small>{app.tagline}</small>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ) : null}
         </div>
-        <p className="hero-beta-note">{t("publicBetaNote")}</p>
       </section>
 
       <section className="home-apps" aria-labelledby="home-apps-heading">

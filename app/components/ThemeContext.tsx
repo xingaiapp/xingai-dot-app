@@ -14,6 +14,7 @@ type Theme = "light" | "dark";
 type ThemeContextValue = {
   theme: Theme;
   toggle: () => void;
+  setTheme: (theme: Theme) => void;
   mounted: boolean;
 };
 
@@ -31,6 +32,16 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setMounted(true);
   }, []);
 
+  const applyTheme = useCallback((next: Theme) => {
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.setAttribute("content", next === "dark" ? "#0c0e14" : "#ffffff");
+    }
+    setTheme(next);
+  }, []);
+
   const toggle = useCallback(() => {
     setTheme((prev) => {
       const next: Theme = prev === "light" ? "dark" : "light";
@@ -45,7 +56,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggle, mounted }}>
+    <ThemeContext.Provider value={{ theme, toggle, setTheme: applyTheme, mounted }}>
       {children}
     </ThemeContext.Provider>
   );
