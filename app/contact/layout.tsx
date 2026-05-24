@@ -6,7 +6,7 @@ const siteUrl =
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with XingAI — inquiries, custom AI projects, partnerships, and early access requests. Email xing@xingai.app.",
+    "Get in touch with XingAI — inquiries, custom AI projects, partnerships, and early access requests. Email contact@xingai.app.",
   alternates: { canonical: `${siteUrl}/contact` },
   openGraph: {
     title: "Contact XingAI",

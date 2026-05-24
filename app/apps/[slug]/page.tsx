@@ -158,7 +158,7 @@ export default function AppDetailPage() {
                   i === 0 && app.demoUrl
                     ? app.demoUrl
                     : i === 0
-                      ? "mailto:xing@xingai.app"
+                      ? "mailto:contact@xingai.app"
                       : "/contact"
                 }
                 className={`cta${i === 1 ? "" : " cta--outline"}`}

@@ -622,6 +622,13 @@ body {
   margin-top: 1.25rem;
 }
 
+.hero-beta-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 @media (min-width: 36rem) {
   .hero-actions {
     flex-direction: row;
@@ -912,6 +919,42 @@ body {
   );
 }
 
+.app-status-badge {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  z-index: 1;
+  max-width: calc(100% - 1.3rem);
+  min-height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 6px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px var(--photo-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.app-status-badge--live {
+  color: #14532d;
+  background: rgba(220, 252, 231, 0.9);
+}
+
+.app-status-badge--demo {
+  color: #713f12;
+  background: rgba(254, 249, 195, 0.92);
+}
+
+.app-status-badge--coming-soon {
+  color: var(--ink-strong);
+  background: rgba(248, 250, 252, 0.92);
+}
+
 .app-card-icon {
   width: 2rem;
   height: 2rem;
@@ -948,6 +991,33 @@ body {
   margin: 0;
   font-size: 0.8125rem;
   line-height: 1.45;
+  color: var(--muted);
+}
+
+.app-card-fit {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.7rem 0 0;
+  padding: 0;
+}
+
+.app-card-fit div {
+  min-width: 0;
+}
+
+.app-card-fit dt {
+  margin: 0 0 0.12rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.app-card-fit dd {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.42;
   color: var(--muted);
 }
 
@@ -1038,6 +1108,19 @@ body {
   .cofounder figcaption {
     text-align: center;
   }
+}
+
+.cofounder-name-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 0.18em;
+}
+
+.cofounder-name-link:hover {
+  color: var(--blue);
+  text-decoration-color: var(--blue);
 }
 
 .cofounder .role {

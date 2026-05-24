@@ -12,12 +12,18 @@ export type RoadmapItem = {
   status: "shipped" | "in-progress" | "planned";
 };
 
+export type AppLaunchStatus = "live" | "demo" | "coming-soon";
+
 export type AppData = {
   slug: string;
   name: string;
   tagline: string;
   description: string;
   category: string;
+  canDo: string;
+  bestFor: string;
+  clickTarget: string;
+  launchStatus: AppLaunchStatus;
   icon: string;
   iconDark: string;
   favicon: string;
@@ -32,7 +38,7 @@ export type AppData = {
 };
 
 type LocalizedAppCopy = Partial<
-  Pick<AppData, "tagline" | "description" | "category">
+  Pick<AppData, "tagline" | "description" | "category" | "canDo" | "bestFor" | "clickTarget">
 > & {
   features?: string[];
   roadmap?: string[];
@@ -53,6 +59,10 @@ export const apps: AppData[] = [
     description:
       "AI-powered meal coaching\u2014personalized suggestions, dietary awareness, and clarity without analysis paralysis. Built with local AI where privacy matters.",
     category: "Health AI",
+    canDo: "Suggest meals around preferences, dietary context, and weekly planning.",
+    bestFor: "People who want healthier food decisions without tracking everything.",
+    clickTarget: "Product details, free demo, and source-code option.",
+    launchStatus: "demo",
     screenshots: [
       {
         src: "/food-demo-light.jpg",
@@ -93,6 +103,10 @@ export const apps: AppData[] = [
     description:
       "Decide what to cook from what you already have\u2014scan your fridge or list ingredients, pick a meal slot, get one dish with an optional buy list and step-by-step cooking. OpenAI-powered live demo.",
     category: "Cooking AI",
+    canDo: "Turn fridge or pantry ingredients into one practical dish and cooking steps.",
+    bestFor: "Busy home cooks deciding what to make right now.",
+    clickTarget: "Product details, live demo, and GitHub source.",
+    launchStatus: "live",
     screenshots: [
       {
         src: "/cook-demo-light.jpg",
@@ -134,6 +148,10 @@ export const apps: AppData[] = [
     description:
       "Style and outfit decisions with structured AI guidance\u2014fewer tabs, clearer choices, and confidence before you walk out the door.",
     category: "Outfit AI",
+    canDo: "Recommend an outfit using occasion, weather, and style context.",
+    bestFor: "People who want faster, more confident daily outfit choices.",
+    clickTarget: "Product details and live demo.",
+    launchStatus: "live",
     screenshots: [
       { src: "/wear-ai-demo-light.png", srcDark: "/wear-ai-demo-dark.png", alt: "XingAI Outfit AI Wear AI demo", caption: "AI outfit recommendation flow" },
     ],
@@ -162,6 +180,10 @@ export const apps: AppData[] = [
     description:
       "Decide a weekly rhythm that sticks\u2014describe your habit context, pick focus and cadence, get one realistic plan with next actions and a gentle nudge. OpenAI-powered live demo.",
     category: "Routine AI",
+    canDo: "Create a realistic habit rhythm with next actions and gentle nudges.",
+    bestFor: "People rebuilding routines without rigid productivity systems.",
+    clickTarget: "Product details, free demo, and GitHub source.",
+    launchStatus: "demo",
     screenshots: [
       {
         src: "/routine-demo-light.jpg",
@@ -201,6 +223,10 @@ export const apps: AppData[] = [
     description:
       "Parenting decision support\u2014schedules, milestones, and gentle guidance so you feel prepared instead of overwhelmed.",
     category: "Parenting AI",
+    canDo: "Organize parenting decisions around routines, milestones, and next steps.",
+    bestFor: "Parents who want calm guidance without information overload.",
+    clickTarget: "Roadmap details and early-access contact.",
+    launchStatus: "coming-soon",
     screenshots: [
       { src: "/parent-demo-light.jpg", srcDark: "/parent-demo-dark.jpg", alt: "XingAI Parent AI", caption: "Parenting guidance flow" },
     ],
@@ -222,6 +248,10 @@ export const apps: AppData[] = [
     description:
       "Travel decision intelligence\u2014destination options, itinerary trade-offs, and local insights without tab overload.",
     category: "Travel AI",
+    canDo: "Compare destinations, itinerary trade-offs, and local context.",
+    bestFor: "Travelers planning faster without juggling too many tabs.",
+    clickTarget: "Roadmap details and early-access contact.",
+    launchStatus: "coming-soon",
     screenshots: [
       { src: "/travel-demo-light.jpg", srcDark: "/travel-demo-dark.jpg", alt: "XingAI Travel AI", caption: "Travel planning flow" },
     ],
@@ -244,6 +274,10 @@ export const apps: AppData[] = [
     description:
       "Investing decision support\u2014structure, context, and risk-aware framing so you can think in systems, not headlines.",
     category: "Finance AI",
+    canDo: "Summarize market context, macro signals, and risk-aware decision framing.",
+    bestFor: "Self-directed investors who want structure before making decisions.",
+    clickTarget: "Product details and live decision dashboard.",
+    launchStatus: "live",
     screenshots: [
       { src: "/invest-demo-light.jpg", srcDark: "/invest-demo-dark.jpg", alt: "XingAI Investment Assistant", caption: "Investment decision flow" },
     ],
@@ -275,6 +309,9 @@ const localizedAppCopy: Partial<
       category: "健康 AI",
       description:
         "AI 饮食决策助手，帮助你快速判断现在吃什么、怎么吃更好，并在需要时加入饮食偏好和健康语境。",
+      canDo: "结合偏好、饮食语境和每周计划，给出餐食建议。",
+      bestFor: "想吃得更健康，但不想每天精细记录的人。",
+      clickTarget: "产品详情、免费 Demo 和源码选项。",
       features: [
         "餐食建议",
         "饮食偏好筛选",
@@ -299,6 +336,9 @@ const localizedAppCopy: Partial<
       category: "烹饪 AI",
       description:
         "根据你已有的食材决定做什么菜：扫描冰箱或输入食材，选择用餐场景，获得一道菜、可选购买清单和分步烹饪指导。",
+      canDo: "把冰箱或储物柜里的食材变成一道可执行的菜和烹饪步骤。",
+      bestFor: "想立刻决定今天做什么的忙碌家庭厨师。",
+      clickTarget: "产品详情、在线 Demo 和 GitHub 源码。",
       features: [
         "冰箱与储物柜扫描",
         "食材列表输入",
@@ -326,6 +366,9 @@ const localizedAppCopy: Partial<
       category: "穿搭 AI",
       description:
         "结构化 AI 穿搭决策，减少来回纠结，在出门前获得更清晰、更有信心的选择。",
+      canDo: "根据场景、天气和风格语境推荐穿搭。",
+      bestFor: "想更快、更有信心完成日常穿搭选择的人。",
+      clickTarget: "产品详情和在线 Demo。",
       features: ["AI 穿搭推荐", "天气与场景语境", "模特效果预览", "本地档案与已保存造型"],
       roadmap: ["AI 穿搭推荐", "信心优先的决策流程", "结合衣橱的穿搭建议"],
     },
@@ -334,6 +377,9 @@ const localizedAppCopy: Partial<
       category: "习惯 AI",
       description:
         "决定一个能坚持的每周节奏：描述习惯语境，选择重点与频率，获得一个现实计划、下一步行动和温和提醒。",
+      canDo: "生成现实可坚持的习惯节奏、下一步行动和温和提醒。",
+      bestFor: "想重建生活节奏，但不想被复杂效率系统压住的人。",
+      clickTarget: "产品详情、免费 Demo 和 GitHub 源码。",
       features: [
         "习惯语境输入",
         "重点与频率预设",
@@ -360,6 +406,9 @@ const localizedAppCopy: Partial<
       category: "育儿 AI",
       description:
         "育儿决策支持，围绕作息、成长节点和温和建议，让你更有准备，而不是更焦虑。",
+      canDo: "围绕作息、成长节点和下一步行动整理育儿决策。",
+      bestFor: "想获得温和指导、减少信息过载的父母。",
+      clickTarget: "路线图详情和 Early Access 联系入口。",
       roadmap: ["年龄相关成长节点追踪", "作息与日程建议", "公开预览"],
     },
     "travel-ai": {
@@ -367,6 +416,9 @@ const localizedAppCopy: Partial<
       category: "旅行 AI",
       description:
         "旅行决策智能，帮助你比较目的地、行程取舍和本地信息，减少打开无数标签页的负担。",
+      canDo: "比较目的地、行程取舍和本地语境。",
+      bestFor: "想更快规划旅行、少开一堆网页的人。",
+      clickTarget: "路线图详情和 Early Access 联系入口。",
       roadmap: ["目的地比较引擎", "行程决策流程", "公开预览"],
     },
     "investment-assistant": {
@@ -374,6 +426,9 @@ const localizedAppCopy: Partial<
       category: "金融 AI",
       description:
         "投资决策支持，用结构、语境和风险优先的框架帮助你按系统思考，而不是被新闻标题牵着走。",
+      canDo: "整理市场语境、宏观信号和风险优先的决策框架。",
+      bestFor: "想在做投资决定前先获得结构化视角的自主投资者。",
+      clickTarget: "产品详情和在线决策仪表盘。",
       features: ["宏观共识仪表盘", "多引擎投票视图", "AI 决策流", "法律免责声明与条款"],
       roadmap: [
         "Worker 缓存仪表盘",
@@ -389,6 +444,9 @@ const localizedAppCopy: Partial<
       category: "건강 AI",
       description:
         "AI 식사 결정 도우미입니다. 지금 무엇을 먹을지, 어떤 순서로 먹을지 빠르게 정하고 필요할 때 건강 맥락을 더합니다.",
+      canDo: "선호, 식단 맥락, 주간 계획에 맞춰 식사를 제안합니다.",
+      bestFor: "모든 것을 기록하지 않고 더 건강하게 먹고 싶은 사람.",
+      clickTarget: "제품 상세, 무료 데모, 소스 코드 옵션.",
       features: [
         "식사 제안",
         "식단 필터",
@@ -413,6 +471,9 @@ const localizedAppCopy: Partial<
       category: "요리 AI",
       description:
         "이미 가진 재료로 무엇을 요리할지 결정합니다. 냉장고를 스캔하거나 재료를 입력하고, 식사 상황에 맞는 한 가지 요리와 구매 목록, 조리 단계를 받습니다.",
+      canDo: "냉장고나 팬트리 재료를 실행 가능한 요리와 조리 단계로 바꿉니다.",
+      bestFor: "지금 무엇을 만들지 빠르게 정해야 하는 바쁜 홈쿡.",
+      clickTarget: "제품 상세, 라이브 데모, GitHub 소스.",
       features: [
         "냉장고와 팬트리 스캔",
         "재료 목록 입력",
@@ -440,6 +501,9 @@ const localizedAppCopy: Partial<
       category: "스타일 AI",
       description:
         "구조화된 AI 스타일 결정으로 탭을 줄이고, 외출 전 더 자신 있는 선택을 돕습니다.",
+      canDo: "상황, 날씨, 스타일 맥락에 맞춰 의상을 추천합니다.",
+      bestFor: "매일 더 빠르고 자신 있게 옷을 고르고 싶은 사람.",
+      clickTarget: "제품 상세와 라이브 데모.",
       features: ["AI 의상 추천", "날씨와 상황 맥락", "데모 모델 미리보기", "로컬 프로필과 저장된 룩"],
       roadmap: ["AI 의상 추천", "확신 우선 결정 흐름", "옷장 기반 의상 제안"],
     },
@@ -448,6 +512,9 @@ const localizedAppCopy: Partial<
       category: "습관 AI",
       description:
         "지속 가능한 주간 리듬을 결정합니다. 습관 맥락, 초점, 빈도를 정하면 현실적인 계획과 다음 행동, 부드러운 알림을 제공합니다.",
+      canDo: "현실적인 습관 리듬, 다음 행동, 부드러운 알림을 만듭니다.",
+      bestFor: "복잡한 생산성 시스템 없이 루틴을 다시 세우고 싶은 사람.",
+      clickTarget: "제품 상세, 무료 데모, GitHub 소스.",
       features: [
         "습관 맥락 입력",
         "초점과 빈도 프리셋",
@@ -474,6 +541,9 @@ const localizedAppCopy: Partial<
       category: "육아 AI",
       description:
         "일정, 성장 단계, 부드러운 가이드를 통해 부담보다 준비감을 주는 육아 결정 지원입니다.",
+      canDo: "루틴, 성장 단계, 다음 행동을 중심으로 육아 결정을 정리합니다.",
+      bestFor: "정보 과부하 없이 차분한 안내를 원하는 부모.",
+      clickTarget: "로드맵 상세와 얼리 액세스 문의.",
       roadmap: ["나이별 성장 단계 추적", "일정과 루틴 제안", "공개 프리뷰"],
     },
     "travel-ai": {
@@ -481,6 +551,9 @@ const localizedAppCopy: Partial<
       category: "여행 AI",
       description:
         "목적지 선택, 일정의 장단점, 현지 맥락을 정리해 탭 과부하 없이 더 나은 여행 결정을 돕습니다.",
+      canDo: "목적지, 일정의 장단점, 현지 맥락을 비교합니다.",
+      bestFor: "여러 탭을 오가지 않고 더 빠르게 여행을 계획하고 싶은 사람.",
+      clickTarget: "로드맵 상세와 얼리 액세스 문의.",
       roadmap: ["목적지 비교 엔진", "일정 결정 흐름", "공개 프리뷰"],
     },
     "investment-assistant": {
@@ -488,6 +561,9 @@ const localizedAppCopy: Partial<
       category: "금융 AI",
       description:
         "뉴스 헤드라인이 아니라 구조, 맥락, 위험 우선 프레임으로 투자 결정을 생각하도록 돕습니다.",
+      canDo: "시장 맥락, 매크로 신호, 위험 우선 결정 프레임을 정리합니다.",
+      bestFor: "결정 전에 구조화된 관점을 원하는 자기주도 투자자.",
+      clickTarget: "제품 상세와 라이브 결정 대시보드.",
       features: ["매크로 컨센서스 대시보드", "다중 엔진 투표 보기", "AI 결정 피드", "법적 고지와 약관"],
       roadmap: [
         "Worker 캐시 대시보드",
@@ -508,6 +584,9 @@ export function localizeApp(app: AppData, locale: Locale): AppData {
     tagline: copy.tagline ?? app.tagline,
     description: copy.description ?? app.description,
     category: copy.category ?? app.category,
+    canDo: copy.canDo ?? app.canDo,
+    bestFor: copy.bestFor ?? app.bestFor,
+    clickTarget: copy.clickTarget ?? app.clickTarget,
     features: app.features.map((feature, index) => ({
       ...feature,
       name: copy.features?.[index] ?? feature.name,

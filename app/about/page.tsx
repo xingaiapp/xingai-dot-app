@@ -30,7 +30,14 @@ export default function AboutPage() {
                 />
               </div>
               <figcaption>
-                Xing
+                <a
+                  href="https://www.linkedin.com/in/xingaiapp/"
+                  className="cofounder-name-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Xing
+                </a>
                 <span className="role">
                   {t("cofounder")}
                   <span className="role-sub">{t("aiArchitect")}</span>
@@ -80,7 +87,7 @@ export default function AboutPage() {
 
       <p className="cofounders-contact-note">
         {t("contactNote")}{" "}
-        <a href="mailto:xing@xingai.app">xing@xingai.app</a>{" "}
+        <a href="mailto:contact@xingai.app">contact@xingai.app</a>{" "}
         {t("contactTail")}
       </p>
     </main>

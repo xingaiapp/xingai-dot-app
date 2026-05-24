@@ -87,7 +87,7 @@ public/             # Logos, icons, favicons, demo screenshots
 
 ## Contact
 
-- **Email:** xing@xingai.app
+- **Email:** contact@xingai.app
 - **Web:** [xingai-dot-app.vercel.app](https://xingai-dot-app.vercel.app/)
 - **LinkedIn:** [xingaiapp](https://www.linkedin.com/in/xingaiapp/)
 - **X/Twitter:** [@XingAIApp](https://x.com/XingAIApp)

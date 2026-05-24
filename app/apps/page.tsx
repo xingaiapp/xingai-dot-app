@@ -1,15 +1,19 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "../i18n/LanguageContext";
-import { getLocalizedApps } from "../data/apps";
+import { getLocalizedApps, type AppLaunchStatus } from "../data/apps";
 import AppIcon from "../components/AppIcon";
 import ThemedImage from "../components/ThemedImage";
 
 export default function AppsPage() {
   const { locale, t } = useTranslation();
   const apps = getLocalizedApps(locale);
+  const appStatusLabels: Record<AppLaunchStatus, string> = {
+    live: t("appStatusLive"),
+    demo: t("appStatusDemo"),
+    "coming-soon": t("appStatusComingSoon"),
+  };
 
   return (
     <main className="wrap">
@@ -37,6 +41,11 @@ export default function AppsPage() {
                     {t("appComingSoonBadge")}
                   </span>
                 )}
+                <span
+                  className={`app-status-badge app-status-badge--${app.launchStatus}`}
+                >
+                  {appStatusLabels[app.launchStatus]}
+                </span>
               </div>
               <div className="app-card-info">
                 <AppIcon
@@ -46,11 +55,23 @@ export default function AppsPage() {
                   size={32}
                   className="app-card-icon"
                 />
-                <span className="app-card-category">
-                  {app.comingSoon ? t("appComingSoonBadge") : app.category}
-                </span>
+                <span className="app-card-category">{app.category}</span>
                 <h2 className="app-card-name">{app.name}</h2>
                 <p className="app-card-tagline">{app.tagline}</p>
+                <dl className="app-card-fit">
+                  <div>
+                    <dt>{t("appCardCanDo")}</dt>
+                    <dd>{app.canDo}</dd>
+                  </div>
+                  <div>
+                    <dt>{t("appCardBestFor")}</dt>
+                    <dd>{app.bestFor}</dd>
+                  </div>
+                  <div>
+                    <dt>{t("appCardClickTarget")}</dt>
+                    <dd>{app.clickTarget}</dd>
+                  </div>
+                </dl>
                 <p className="app-card-desc">{app.description}</p>
                 <span className="app-card-action">{t("appViewDetails")} &rarr;</span>
               </div>

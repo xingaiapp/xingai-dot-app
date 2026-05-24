@@ -110,7 +110,7 @@ export default function RootLayout({
         ],
         contactPoint: {
           "@type": "ContactPoint",
-          email: "xing@xingai.app",
+          email: "contact@xingai.app",
           contactType: "customer support",
         },
       },
@@ -150,44 +150,6 @@ export default function RootLayout({
           name: app.name,
           description: app.description,
         })),
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${siteUrl}/#faq`,
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "What is XingAI?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "XingAI is a platform of focused AI decision systems for everyday life, including food, cooking, style, routines, parenting, travel, and investing.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How is XingAI different from a chatbot?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "XingAI products are built around structured decisions and clear next actions instead of open-ended generic chat.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What can I use XingAI for today?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "You can explore live AI tools for meal coaching, cooking from available ingredients, routine planning, and other everyday decision workflows.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can XingAI build a custom AI product?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. XingAI helps founders and teams design, build, and deploy focused AI products from idea to launch.",
-            },
-          },
-        ],
       },
     ],
   };

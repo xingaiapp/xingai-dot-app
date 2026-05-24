@@ -17,16 +17,16 @@ export default function ContactPage() {
         <div className="panel contact-card">
           <h2 className="panel-heading">{t("contactEmailLabel")}</h2>
           <p>{t("contactEmailDesc")}</p>
-          <a className="cta" href="mailto:xing@xingai.app">
-            xing@xingai.app
+          <a className="cta" href="mailto:contact@xingai.app">
+            contact@xingai.app
           </a>
         </div>
 
         <div className="panel contact-card">
           <h2 className="panel-heading">{t("contactCustomLabel")}</h2>
           <p>{t("contactCustomDesc")}</p>
-          <a className="cta cta--outline" href="mailto:xing@xingai.app">
-            xing@xingai.app
+          <a className="cta cta--outline" href="mailto:contact@xingai.app">
+            contact@xingai.app
           </a>
         </div>
 

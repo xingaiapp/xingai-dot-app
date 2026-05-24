@@ -3,9 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "./i18n/LanguageContext";
-import { getLocalizedApps } from "./data/apps";
+import { getLocalizedApps, type AppLaunchStatus } from "./data/apps";
 import AppIcon from "./components/AppIcon";
 import ThemedImage from "./components/ThemedImage";
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
 
 function AnswerIcon({ index }: { index: number }) {
   const common = {
@@ -61,15 +64,38 @@ function AnswerIcon({ index }: { index: number }) {
 export default function Home() {
   const { locale, t } = useTranslation();
   const apps = getLocalizedApps(locale);
+  const appStatusLabels: Record<AppLaunchStatus, string> = {
+    live: t("appStatusLive"),
+    demo: t("appStatusDemo"),
+    "coming-soon": t("appStatusComingSoon"),
+  };
   const answerItems = [
     { question: t("answerQ1"), answer: t("answerA1") },
     { question: t("answerQ2"), answer: t("answerA2") },
     { question: t("answerQ3"), answer: t("answerA3") },
     { question: t("answerQ4"), answer: t("answerA4") },
   ];
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${siteUrl}/#faq`,
+    url: siteUrl,
+    mainEntity: answerItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
 
   return (
     <main className="wrap">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="hero-section">
         <p className="hero-brand">{t("heroBrand")}</p>
         <h1 className="tagline">{t("tagline")}</h1>
@@ -104,6 +130,7 @@ export default function Home() {
             {t("homeCta")}
           </Link>
         </div>
+        <p className="hero-beta-note">{t("publicBetaNote")}</p>
       </section>
 
       <section className="home-apps" aria-labelledby="home-apps-heading">
@@ -131,6 +158,11 @@ export default function Home() {
                       {t("appComingSoonBadge")}
                     </span>
                   )}
+                  <span
+                    className={`app-status-badge app-status-badge--${app.launchStatus}`}
+                  >
+                    {appStatusLabels[app.launchStatus]}
+                  </span>
                 </div>
                 <div className="app-card-info">
                   <AppIcon
@@ -140,11 +172,23 @@ export default function Home() {
                     size={32}
                     className="app-card-icon"
                   />
-                  <span className="app-card-category">
-                    {app.comingSoon ? t("appComingSoonBadge") : app.category}
-                  </span>
+                  <span className="app-card-category">{app.category}</span>
                   <h3 className="app-card-name">{app.name}</h3>
                   <p className="app-card-tagline">{app.tagline}</p>
+                  <dl className="app-card-fit">
+                    <div>
+                      <dt>{t("appCardCanDo")}</dt>
+                      <dd>{app.canDo}</dd>
+                    </div>
+                    <div>
+                      <dt>{t("appCardBestFor")}</dt>
+                      <dd>{app.bestFor}</dd>
+                    </div>
+                    <div>
+                      <dt>{t("appCardClickTarget")}</dt>
+                      <dd>{app.clickTarget}</dd>
+                    </div>
+                  </dl>
                 </div>
               </Link>
             </li>
@@ -204,7 +248,14 @@ export default function Home() {
                 />
               </div>
               <figcaption>
-                Xing
+                <a
+                  href="https://www.linkedin.com/in/xingaiapp/"
+                  className="cofounder-name-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Xing
+                </a>
                 <span className="role">
                   {t("cofounder")}
                   <span className="role-sub">{t("aiArchitect")}</span>
@@ -237,7 +288,7 @@ export default function Home() {
         </div>
         <p className="cofounders-contact-note">
           {t("contactNote")}{" "}
-          <a href="mailto:xing@xingai.app">xing@xingai.app</a>{" "}
+          <a href="mailto:contact@xingai.app">contact@xingai.app</a>{" "}
           {t("contactTail")}
         </p>
       </section>
