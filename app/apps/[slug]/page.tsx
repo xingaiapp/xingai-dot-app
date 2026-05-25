@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useTranslation } from "../../i18n/LanguageContext";
 import { getLocalizedAppBySlug } from "../../data/apps";
 import AppIcon from "../../components/AppIcon";
-import ThemedImage from "../../components/ThemedImage";
+import AppDemoScreenshot from "../../components/AppDemoScreenshot";
 
 const statusLabel: Record<string, string> = {
   shipped: "Shipped",
@@ -103,16 +103,12 @@ export default function AppDetailPage() {
         <div className="screenshots-grid">
           {app.screenshots.map((shot, i) => (
             <figure key={i} className="screenshot-card">
-              <div className="screenshot-wrap">
-                <ThemedImage
-                  src={shot.src}
-                  srcDark={shot.srcDark}
-                  alt={shot.alt}
-                  fill
-                  sizes="(max-width: 36rem) 90vw, 17rem"
-                  className="screenshot-img"
-                />
-              </div>
+              <AppDemoScreenshot
+                shot={shot}
+                sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 24rem"
+                wrapClassName="screenshot-wrap"
+                imageClassName="screenshot-img app-demo-shot"
+              />
               <figcaption className="screenshot-caption">
                 {shot.caption}
               </figcaption>

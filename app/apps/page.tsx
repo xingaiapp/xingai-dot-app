@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTranslation } from "../i18n/LanguageContext";
 import { getLocalizedApps, type AppLaunchStatus } from "../data/apps";
 import AppIcon from "../components/AppIcon";
-import ThemedImage from "../components/ThemedImage";
+import AppDemoScreenshot from "../components/AppDemoScreenshot";
 
 export default function AppsPage() {
   const { locale, t } = useTranslation();
@@ -26,27 +26,20 @@ export default function AppsPage() {
         {apps.map((app) => (
           <li key={app.slug} className="app-card">
             <Link href={`/apps/${app.slug}`} className="app-card-link">
-              <div className="app-card-thumb">
-                {app.screenshots[0] ? (
-                  <ThemedImage
-                    src={app.screenshots[0].src}
-                    srcDark={app.screenshots[0].srcDark}
-                    alt={app.screenshots[0].alt}
-                    fill
-                    sizes="(max-width: 36rem) 90vw, 17rem"
-                    className="app-card-thumb-img"
-                  />
-                ) : (
+              {app.screenshots[0] ? (
+                <AppDemoScreenshot
+                  shot={app.screenshots[0]}
+                  sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
+                  wrapClassName="app-card-thumb"
+                  imageClassName="app-card-thumb-img app-demo-shot"
+                />
+              ) : (
+                <div className="app-card-thumb">
                   <span className="app-card-thumb-placeholder">
                     {t("appComingSoonBadge")}
                   </span>
-                )}
-                <span
-                  className={`app-status-badge app-status-badge--${app.launchStatus}`}
-                >
-                  {appStatusLabels[app.launchStatus]}
-                </span>
-              </div>
+                </div>
+              )}
               <div className="app-card-info">
                 <AppIcon
                   light={app.icon}
@@ -56,7 +49,14 @@ export default function AppsPage() {
                   className="app-card-icon"
                 />
                 <span className="app-card-category">{app.category}</span>
-                <h2 className="app-card-name">{app.name}</h2>
+                <div className="app-card-title-row">
+                  <h2 className="app-card-name">{app.name}</h2>
+                  <span
+                    className={`app-status-badge app-status-badge--${app.launchStatus}`}
+                  >
+                    {appStatusLabels[app.launchStatus]}
+                  </span>
+                </div>
                 <p className="app-card-tagline">{app.tagline}</p>
                 <dl className="app-card-fit">
                   <div>

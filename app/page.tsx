@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "./i18n/LanguageContext";
 import { getLocalizedApps, type AppLaunchStatus } from "./data/apps";
 import AppIcon from "./components/AppIcon";
-import ThemedImage from "./components/ThemedImage";
+import AppDemoScreenshot from "./components/AppDemoScreenshot";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
@@ -74,6 +74,9 @@ export default function Home() {
   );
   const heroPrimaryApp =
     heroPreviewApps[activeHeroIndex] ?? heroPreviewApps[0] ?? apps[0];
+  const heroQuickDemos = heroPreviewApps.filter(
+    (app) => app.demoUrl && app.launchStatus !== "coming-soon",
+  );
   const appStatusLabels: Record<AppLaunchStatus, string> = {
     live: t("appStatusLive"),
     demo: t("appStatusDemo"),
@@ -135,6 +138,42 @@ export default function Home() {
               </Link>
             </div>
             <p className="hero-beta-note">{t("publicBetaNote")}</p>
+            {heroQuickDemos.length > 0 ? (
+              <div className="hero-quick-demos">
+                <p className="hero-quick-demos__label">{t("heroQuickDemosLabel")}</p>
+                <ul className="hero-quick-demos__list">
+                  {heroQuickDemos.map((app) => (
+                    <li key={app.slug}>
+                      <a
+                        href={app.demoUrl}
+                        className="hero-quick-demo-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <AppIcon
+                          light={app.icon}
+                          dark={app.iconDark}
+                          alt=""
+                          size={22}
+                          className="hero-quick-demo-link__icon"
+                        />
+                        <span className="hero-quick-demo-link__text">
+                          <span className="hero-quick-demo-link__name">{app.name}</span>
+                          <span className="hero-quick-demo-link__hint">
+                            {t("heroQuickDemoHint")}
+                          </span>
+                        </span>
+                        <span
+                          className={`app-status-badge app-status-badge--${app.launchStatus}`}
+                        >
+                          {appStatusLabels[app.launchStatus]}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </div>
 
           {heroPrimaryApp ? (
@@ -144,31 +183,31 @@ export default function Home() {
                 href={`/apps/${heroPrimaryApp.slug}`}
                 className="hero-preview-card"
               >
-                <div className="hero-preview-media">
-                  {heroPrimaryApp.screenshots[0] ? (
-                    <ThemedImage
-                      src={heroPrimaryApp.screenshots[0].src}
-                      srcDark={heroPrimaryApp.screenshots[0].srcDark}
-                      alt={heroPrimaryApp.screenshots[0].alt}
-                      fill
-                      unoptimized
-                      sizes="(max-width: 36rem) 90vw, 30rem"
-                      className="hero-preview-img"
-                    />
-                  ) : (
+                {heroPrimaryApp.screenshots[0] ? (
+                  <AppDemoScreenshot
+                    shot={heroPrimaryApp.screenshots[0]}
+                    unoptimized
+                    sizes="(max-width: 36rem) 90vw, 30rem"
+                    wrapClassName="hero-preview-media"
+                    imageClassName="hero-preview-img app-demo-shot"
+                  />
+                ) : (
+                  <div className="hero-preview-media">
                     <span className="app-card-thumb-placeholder">
                       {t("appComingSoonBadge")}
                     </span>
-                  )}
-                  <span
-                    className={`app-status-badge app-status-badge--${heroPrimaryApp.launchStatus}`}
-                  >
-                    {appStatusLabels[heroPrimaryApp.launchStatus]}
-                  </span>
-                </div>
+                  </div>
+                )}
                 <div className="hero-preview-body">
                   <span className="app-card-category">{heroPrimaryApp.category}</span>
-                  <h2>{heroPrimaryApp.name}</h2>
+                  <div className="app-card-title-row">
+                    <h2 className="app-card-name">{heroPrimaryApp.name}</h2>
+                    <span
+                      className={`app-status-badge app-status-badge--${heroPrimaryApp.launchStatus}`}
+                    >
+                      {appStatusLabels[heroPrimaryApp.launchStatus]}
+                    </span>
+                  </div>
                   <p>{heroPrimaryApp.canDo}</p>
                   <dl className="hero-preview-fit">
                     <div>
@@ -248,27 +287,20 @@ export default function Home() {
           {apps.map((app) => (
             <li key={app.slug} className="app-card">
               <Link href={`/apps/${app.slug}`} className="app-card-link">
-                <div className="app-card-thumb">
-                  {app.screenshots[0] ? (
-                    <ThemedImage
-                      src={app.screenshots[0].src}
-                      srcDark={app.screenshots[0].srcDark}
-                      alt={app.screenshots[0].alt}
-                      fill
-                      sizes="(max-width: 36rem) 90vw, 17rem"
-                      className="app-card-thumb-img"
-                    />
-                  ) : (
+                {app.screenshots[0] ? (
+                  <AppDemoScreenshot
+                    shot={app.screenshots[0]}
+                    sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
+                    wrapClassName="app-card-thumb"
+                    imageClassName="app-card-thumb-img app-demo-shot"
+                  />
+                ) : (
+                  <div className="app-card-thumb">
                     <span className="app-card-thumb-placeholder">
                       {t("appComingSoonBadge")}
                     </span>
-                  )}
-                  <span
-                    className={`app-status-badge app-status-badge--${app.launchStatus}`}
-                  >
-                    {appStatusLabels[app.launchStatus]}
-                  </span>
-                </div>
+                  </div>
+                )}
                 <div className="app-card-info">
                   <AppIcon
                     light={app.icon}
@@ -278,7 +310,14 @@ export default function Home() {
                     className="app-card-icon"
                   />
                   <span className="app-card-category">{app.category}</span>
-                  <h3 className="app-card-name">{app.name}</h3>
+                  <div className="app-card-title-row">
+                    <h3 className="app-card-name">{app.name}</h3>
+                    <span
+                      className={`app-status-badge app-status-badge--${app.launchStatus}`}
+                    >
+                      {appStatusLabels[app.launchStatus]}
+                    </span>
+                  </div>
                   <p className="app-card-tagline">{app.tagline}</p>
                   <dl className="app-card-fit">
                     <div>

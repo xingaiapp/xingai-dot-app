@@ -88,7 +88,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const initScript = `(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);localStorage.removeItem("locale");var l=localStorage.getItem("xingai.locale");document.documentElement.lang=l||"en"}catch(e){document.documentElement.lang="en"}})()`;
+  const initScript = `(function(){try{var t=localStorage.getItem("theme")||localStorage.getItem("xingai-theme");if(t!=="light"&&t!=="dark")t="light";document.documentElement.setAttribute("data-theme",t);localStorage.setItem("theme",t);localStorage.removeItem("xingai-theme");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="dark"?"#0c0e14":"#ffffff");localStorage.removeItem("locale");var l=localStorage.getItem("xingai.locale");if(l==="en"||l==="zh"||l==="ko"){document.documentElement.lang=l;document.cookie="xingai.locale="+l+";path=/;max-age=31536000;SameSite=Lax"}else{document.documentElement.lang="en"}}catch(e){document.documentElement.setAttribute("data-theme","light");document.documentElement.lang="en"}})()`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -157,6 +157,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="color-scheme" content="light dark" />
         <script dangerouslySetInnerHTML={{ __html: initScript }} />
         <script
           type="application/ld+json"

@@ -12,6 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/apps`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteUrl}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${siteUrl}/legal/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${siteUrl}/legal/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
+    { url: `${siteUrl}/legal/disclaimer`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
   ];
 
   const appPages: MetadataRoute.Sitemap = apps.map((app) => ({

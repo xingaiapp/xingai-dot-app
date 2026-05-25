@@ -7,9 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { isNavActive, type NavKey } from "../lib/nav-links";
 import { useTheme } from "./ThemeContext";
-import LanguageSelector from "./LanguageSelector";
 import NavIcon from "./NavIcon";
-import ThemeToggle from "./ThemeToggle";
 
 type MobileNavDrawerProps = {
   open: boolean;
@@ -115,17 +113,6 @@ export default function MobileNavDrawer({
             })}
           </ul>
         </nav>
-        <div className="mobile-drawer__settings">
-          <span className="mobile-drawer__section-label">{t("drawerSettings")}</span>
-          <div className="mobile-drawer__setting-row">
-            <span>{t("drawerLanguage")}</span>
-            <LanguageSelector />
-          </div>
-          <div className="mobile-drawer__setting-row">
-            <span>{t("drawerDarkMode")}</span>
-            <ThemeToggle />
-          </div>
-        </div>
       </aside>
     </>
   );

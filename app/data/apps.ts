@@ -27,7 +27,14 @@ export type AppData = {
   icon: string;
   iconDark: string;
   favicon: string;
-  screenshots: { src: string; srcDark?: string; alt: string; caption: string }[];
+  screenshots: {
+    src: string;
+    srcDark?: string;
+    alt: string;
+    caption: string;
+    /** Zoom crop for captures where UI overlaps the hero circle. */
+    framing?: "hero-focus";
+  }[];
   features: AppFeature[];
   roadmap: RoadmapItem[];
   demoUrl?: string;
@@ -153,7 +160,12 @@ export const apps: AppData[] = [
     clickTarget: "Product details and live demo.",
     launchStatus: "live",
     screenshots: [
-      { src: "/wear-ai-demo-light.png", srcDark: "/wear-ai-demo-dark.png", alt: "XingAI Outfit AI Wear AI demo", caption: "AI outfit recommendation flow" },
+      {
+        src: "/outfit-demo-light.jpg",
+        srcDark: "/outfit-demo-dark.jpg",
+        alt: "XingAI Outfit AI",
+        caption: "Occasion \u2192 outfit recommendation \u2192 decide",
+      },
     ],
     features: [
       { name: "AI outfit recommendation", free: true, pro: true, enterprise: true },
@@ -253,7 +265,13 @@ export const apps: AppData[] = [
     clickTarget: "Roadmap details and early-access contact.",
     launchStatus: "coming-soon",
     screenshots: [
-      { src: "/travel-demo-light.jpg", srcDark: "/travel-demo-dark.jpg", alt: "XingAI Travel AI", caption: "Travel planning flow" },
+      {
+        src: "/travel-demo-light.jpg",
+        srcDark: "/travel-demo-dark.jpg",
+        alt: "XingAI Travel AI",
+        caption: "Travel planning flow",
+        framing: "hero-focus",
+      },
     ],
     features: [],
     comingSoon: true,

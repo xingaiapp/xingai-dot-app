@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useTheme } from "./ThemeContext";
-import LanguageSelector from "./LanguageSelector";
-
 type ResourceIconName = "github" | "linkedin" | "x";
 type FooterIconName =
   | ResourceIconName
@@ -13,7 +11,8 @@ type FooterIconName =
   | "demo"
   | "custom"
   | "about"
-  | "contact";
+  | "contact"
+  | "legal";
 
 function FooterLinkIcon({ name }: { name: FooterIconName }) {
   if (name === "github") {
@@ -96,6 +95,17 @@ function FooterLinkIcon({ name }: { name: FooterIconName }) {
     );
   }
 
+  if (name === "legal") {
+    return (
+      <svg {...common}>
+        <path d="M9 4h6v16H9z" />
+        <path d="M11 8h4" />
+        <path d="M11 11.5h4" />
+        <path d="M11 15h2.5" />
+      </svg>
+    );
+  }
+
   return (
     <svg {...common}>
       <rect x="4" y="6" width="16" height="12" rx="2" />
@@ -171,6 +181,24 @@ export default function Footer() {
           </div>
         </nav>
 
+        <nav className="footer-column" aria-label={t("footerLegal")}>
+          <span className="footer-column__label">{t("footerLegal")}</span>
+          <div className="footer-column__links">
+            <Link href="/legal/privacy" className="footer-icon-link">
+              <FooterLinkIcon name="legal" />
+              <span>{t("footerPrivacy")}</span>
+            </Link>
+            <Link href="/legal/terms" className="footer-icon-link">
+              <FooterLinkIcon name="legal" />
+              <span>{t("footerTerms")}</span>
+            </Link>
+            <Link href="/legal/disclaimer" className="footer-icon-link">
+              <FooterLinkIcon name="legal" />
+              <span>{t("footerDisclaimer")}</span>
+            </Link>
+          </div>
+        </nav>
+
         <nav className="footer-column" aria-label={t("footerResources")}>
           <span className="footer-column__label">{t("footerResources")}</span>
           <div className="footer-column__links">
@@ -206,10 +234,13 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>&copy; xingai.app</span>
-        <div className="footer-language">
-          <span>{t("drawerLanguage")}</span>
-          <LanguageSelector />
+        <div className="footer-bottom__meta">
+          <span>&copy; {new Date().getFullYear()} xingai.app</span>
+          <nav className="footer-legal-inline" aria-label={t("footerLegal")}>
+            <Link href="/legal/privacy">{t("footerPrivacy")}</Link>
+            <Link href="/legal/terms">{t("footerTerms")}</Link>
+            <Link href="/legal/disclaimer">{t("footerDisclaimer")}</Link>
+          </nav>
         </div>
       </div>
     </footer>
