@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "./i18n/LanguageContext";
 import { getLocalizedApps, type AppLaunchStatus } from "./data/apps";
 import AppIcon from "./components/AppIcon";
+import { APP_ICON_SIZE } from "./lib/app-icon";
 import AppDemoScreenshot from "./components/AppDemoScreenshot";
 
 const siteUrl =
@@ -66,7 +67,7 @@ export default function Home() {
   const { locale, t } = useTranslation();
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const apps = getLocalizedApps(locale);
-  const heroPreviewApps = ["meal-coach", "cook-ai", "investment-assistant"].flatMap(
+  const heroPreviewApps = ["meal-coach", "cook-ai", "sat-ai", "investment-assistant"].flatMap(
     (slug) => {
       const app = apps.find((item) => item.slug === slug);
       return app ? [app] : [];
@@ -154,7 +155,7 @@ export default function Home() {
                           light={app.icon}
                           dark={app.iconDark}
                           alt=""
-                          size={22}
+                          size={APP_ICON_SIZE}
                           className="hero-quick-demo-link__icon"
                         />
                         <span className="hero-quick-demo-link__text">
@@ -178,8 +179,8 @@ export default function Home() {
 
           {heroPrimaryApp ? (
             <div className="hero-preview" aria-label={t("heroPreviewLabel")}>
+              <div className="hero-preview-stage">
               <Link
-                key={heroPrimaryApp.slug}
                 href={`/apps/${heroPrimaryApp.slug}`}
                 className="hero-preview-card"
               >
@@ -192,7 +193,7 @@ export default function Home() {
                     imageClassName="hero-preview-img app-demo-shot"
                   />
                 ) : (
-                  <div className="hero-preview-media">
+                  <div className="hero-preview-media hero-preview--crop">
                     <span className="app-card-thumb-placeholder">
                       {t("appComingSoonBadge")}
                     </span>
@@ -221,6 +222,7 @@ export default function Home() {
                   </dl>
                 </div>
               </Link>
+              </div>
 
               {heroPreviewApps.length > 1 ? (
                 <div className="hero-slide-controls" aria-label={t("heroPreviewLabel")}>
@@ -262,7 +264,7 @@ export default function Home() {
                           light={app.icon}
                           dark={app.iconDark}
                           alt=""
-                          size={34}
+                          size={APP_ICON_SIZE}
                           className="hero-core-icon"
                         />
                         <span>{app.name}</span>
@@ -306,7 +308,6 @@ export default function Home() {
                     light={app.icon}
                     dark={app.iconDark}
                     alt=""
-                    size={32}
                     className="app-card-icon"
                   />
                   <span className="app-card-category">{app.category}</span>

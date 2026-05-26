@@ -184,6 +184,12 @@ const en: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
+        heading: "Education and test prep (SAT AI)",
+        paragraphs: [
+          "SAT mistake analysis is study support, not an official College Board score prediction or guaranteed outcome. Verify explanations, practice independently, and follow official test guidance.",
+        ],
+      },
+      {
         heading: "Investing (Investment Assistant)",
         paragraphs: [
           "XingAI is not a registered investment advisor, broker-dealer, or fiduciary. AI outputs are not investment advice or recommendations to buy or sell any security.",
@@ -359,6 +365,12 @@ const zh: Record<LegalDocId, LegalDoc> = {
         heading: "烹饪（Cook AI）",
         paragraphs: [
           "食谱与步骤不能替代食品安全判断。请自行确认食材、过敏原与安全烹饪温度。",
+        ],
+      },
+      {
+        heading: "教育与备考（SAT AI）",
+        paragraphs: [
+          "SAT 错题分析仅作为学习辅助，不代表 College Board 官方评分预测，也不保证考试结果。请自行核实解释、独立练习，并遵循官方考试说明。",
         ],
       },
       {
@@ -538,6 +550,12 @@ const ko: Record<LegalDocId, LegalDoc> = {
         heading: "요리(Cook AI)",
         paragraphs: [
           "레시피·조리 단계는 식품 안전 판단을 대체하지 않습니다. 재료·알레르기·안전 조리 온도를 직접 확인하세요.",
+        ],
+      },
+      {
+        heading: "교육 및 시험 준비(SAT AI)",
+        paragraphs: [
+          "SAT 오답 분석은 학습 지원이며 College Board의 공식 점수 예측이나 결과 보장이 아닙니다. 설명을 직접 확인하고, 독립적으로 연습하며, 공식 시험 안내를 따르세요.",
         ],
       },
       {

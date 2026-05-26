@@ -16,15 +16,16 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **Cook AI** | Cooking AI | Cook Smarter |
 | **Outfit AI** | Style AI | Dress Smarter |
 | **Routine AI** | Habits AI | Live Better |
+| **SAT AI** | Education AI | Prep Smarter |
 | **Parent AI** | Parenting AI | Family Support |
 | **Travel AI** | Travel AI | Explore Better |
 | **Investment Assistant** | Finance AI | Invest Smarter |
 
-**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), and **Outfit AI** are live. Other products are in development with UX demos on the site.
+**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). Other products are in development with UX demos on the site.
 
 ## Features
 
-- **7 AI decision systems** — each focused on one life domain
+- **8 AI decision systems** — each focused on one life domain
 - **Mobile-first design** — optimized for phones, works great on desktop
 - **Light + dark themes** — icons, screenshots, and UI all adapt
 - **3 languages** — English, Chinese (中文), Korean (한국어)

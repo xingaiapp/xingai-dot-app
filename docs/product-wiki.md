@@ -48,4 +48,5 @@ V4 = visual alignment with V1 + functional inheritance from V3 + V4 additions
 | Invest AI | `invest.xingai.app` | `xingai-invest-ai` | Risk-first decision board | More engines + MCP integrations |
 | Outfit AI | `wear.xingai.app` | `xingai-outfit-ai` | Outfit decision flow | Wardrobe-aware recommendations |
 | Routine AI | `routine.xingai.app` | `xingai-routine-ai` | Weekly rhythm decision flow | Saved routines + accountability |
+| SAT AI | `sat.xingai.app` | `xingai-sat-ai` | SAT mistake review flow | OCR confirmation + study plan |
 | Travel AI | `travel.xingai.app` | `xingai-travel-ai` | Trip decision support | Itinerary trade-offs + local context |

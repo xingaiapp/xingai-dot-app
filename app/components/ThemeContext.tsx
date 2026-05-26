@@ -56,9 +56,8 @@ type ThemeContextValue = {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(() =>
-    typeof window === "undefined" ? "light" : readTheme()
-  );
+  /* Match SSR default; sync from localStorage in useLayoutEffect */
+  const [theme, setThemeState] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
   useLayoutEffect(() => {

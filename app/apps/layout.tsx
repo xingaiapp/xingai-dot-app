@@ -6,12 +6,12 @@ const siteUrl =
 export const metadata: Metadata = {
   title: "AI Products",
   description:
-    "Explore XingAI's AI decision systems — Meal Coach, Cook AI, Outfit AI, Routine AI, Parent AI, Travel AI, and Investment Assistant.",
+    "Explore XingAI's AI decision systems — Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Parent AI, Travel AI, and Investment Assistant.",
   alternates: { canonical: `${siteUrl}/apps` },
   openGraph: {
     title: "XingAI Products — AI Decision Systems",
     description:
-      "7 focused AI products for everyday decisions: eating, cooking, style, habits, parenting, travel, and investing.",
+      "8 focused AI products for everyday decisions: eating, cooking, style, habits, SAT prep, parenting, travel, and investing.",
     url: `${siteUrl}/apps`,
   },
 };

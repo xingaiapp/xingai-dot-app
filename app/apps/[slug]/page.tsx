@@ -62,7 +62,6 @@ export default function AppDetailPage() {
             light={app.icon}
             dark={app.iconDark}
             alt=""
-            size={40}
             className="page-heading-icon"
           />
           <h1 className="page-heading">{app.name}</h1>

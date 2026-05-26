@@ -24,17 +24,20 @@ export default function AppDemoScreenshot({
   unoptimized,
 }: Props) {
   const heroFocus = shot.framing === "hero-focus";
+  const cardThumb = wrapClassName.includes("app-card-thumb");
+  const heroPreview = wrapClassName.includes("hero-preview-media");
+  const useFill = heroFocus || cardThumb || heroPreview;
 
   return (
     <div
-      className={`${wrapClassName}${heroFocus ? " demo-shot-wrap--hero-focus" : ""}`.trim()}
+      className={`${wrapClassName}${heroFocus ? " demo-shot-wrap--hero-focus" : ""}${cardThumb ? " app-card-thumb--crop" : ""}${heroPreview ? " hero-preview--crop" : ""}`.trim()}
     >
       <ThemedImage
         src={shot.src}
         srcDark={shot.srcDark}
         alt={shot.alt}
-        fill={heroFocus}
-        {...(heroFocus
+        fill={useFill}
+        {...(useFill
           ? {}
           : { width: DEMO_SCREENSHOT_WIDTH, height: DEMO_SCREENSHOT_HEIGHT })}
         sizes={sizes}

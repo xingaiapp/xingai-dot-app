@@ -53,7 +53,12 @@ export default function ThemeToggle() {
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         aria-haspopup="listbox"
-        aria-label={`${t("themeLabel")}: ${t(themeLabelKeys[theme])}`}
+        aria-label={
+          mounted
+            ? `${t("themeLabel")}: ${t(themeLabelKeys[theme])}`
+            : t("themeLabel")
+        }
+        suppressHydrationWarning
       >
         <span className="theme-dropdown__icon" aria-hidden="true">
           {mounted ? themeIcons[theme] : "◐"}

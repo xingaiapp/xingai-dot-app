@@ -45,7 +45,6 @@ export default function AppsPage() {
                   light={app.icon}
                   dark={app.iconDark}
                   alt=""
-                  size={32}
                   className="app-card-icon"
                 />
                 <span className="app-card-category">{app.category}</span>

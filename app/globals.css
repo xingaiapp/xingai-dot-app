@@ -512,8 +512,6 @@ html[data-theme="dark"] .lang-menu {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 10px;
-  object-fit: contain;
-  flex-shrink: 0;
 }
 
 .page-heading-row .page-heading {
@@ -612,8 +610,17 @@ html[data-theme="dark"] .lang-menu {
   min-width: 0;
 }
 
+.hero-preview-stage {
+  display: grid;
+  gap: 0;
+  min-width: 0;
+  /* Locks carousel card height so slides 1–4 never shift layout */
+  --hero-slide-body-h: 14.5rem;
+}
+
 .hero-preview-card {
   display: grid;
+  grid-template-rows: auto var(--hero-slide-body-h);
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -621,7 +628,7 @@ html[data-theme="dark"] .lang-menu {
   background: var(--panel-bg);
   color: inherit;
   text-decoration: none;
-  animation: hero-slide-in 0.45s ease both;
+  animation: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
@@ -644,15 +651,46 @@ html[data-theme="dark"] .lang-menu {
   background: var(--shot-bg);
 }
 
-.hero-preview-img:not(.app-demo-shot--hero-focus) {
-  display: block;
+/* Hero carousel: fixed 3:2 frame so every slide image matches height */
+.hero-preview-media.hero-preview--crop {
+  position: relative;
   width: 100%;
+  aspect-ratio: 3 / 2;
   height: auto;
+  flex-shrink: 0;
+  overflow: hidden;
+  contain: layout style paint;
+  background: var(--shot-bg);
+}
+
+.hero-preview-media.hero-preview--crop.demo-shot-wrap--hero-focus {
+  aspect-ratio: 3 / 2;
+}
+
+.hero-preview-media.hero-preview--crop img,
+.hero-preview-media.hero-preview--crop .hero-preview-img,
+.hero-preview-media.hero-preview--crop .app-demo-shot {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center top;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none;
+}
+
+.hero-preview-media.hero-preview--crop .app-demo-shot--hero-focus {
+  object-position: center 26%;
 }
 
 .hero-preview-body {
   display: grid;
   gap: 0.45rem;
+  align-content: start;
+  height: var(--hero-slide-body-h);
+  min-height: var(--hero-slide-body-h);
+  max-height: var(--hero-slide-body-h);
+  overflow: hidden;
   padding: 0.9rem;
   background: var(--panel-bg);
 }
@@ -664,11 +702,15 @@ html[data-theme="dark"] .lang-menu {
   color: var(--ink-strong);
 }
 
-.hero-preview-body p {
+.hero-preview-body > p {
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.55;
   color: var(--muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .hero-preview-fit {
@@ -698,6 +740,10 @@ html[data-theme="dark"] .lang-menu {
   font-size: 0.78rem;
   line-height: 1.45;
   color: var(--muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .hero-slide-controls {
@@ -792,11 +838,28 @@ html[data-theme="dark"] .lang-menu {
   background: var(--badge-bg);
 }
 
-.hero-core-icon {
-  width: 2.125rem;
-  height: 2.125rem;
-  border-radius: 8px;
+/* App logos — fixed frame; artwork scaled inside for optical consistency */
+.app-icon-frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.app-icon-frame__img {
+  width: 88% !important;
+  height: 88% !important;
+  max-width: 88%;
+  max-height: 88%;
   object-fit: contain;
+  object-position: center;
+}
+
+.hero-core-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
 }
 
 .hero-core-card span {
@@ -875,11 +938,9 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .hero-quick-demo-link__icon {
-  flex-shrink: 0;
-  width: 1.375rem;
-  height: 1.375rem;
-  border-radius: 6px;
-  object-fit: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
 }
 
 .hero-quick-demo-link__text {
@@ -938,8 +999,12 @@ html[data-theme="dark"] .lang-menu {
     padding-top: 1.25rem;
   }
 
+  .hero-preview-stage {
+    --hero-slide-body-h: 12.75rem;
+  }
+
   .hero-preview-card {
-    grid-template-rows: auto auto;
+    grid-template-rows: auto var(--hero-slide-body-h);
     min-height: 0;
   }
 
@@ -951,6 +1016,9 @@ html[data-theme="dark"] .lang-menu {
     position: static;
     width: auto;
     margin: 0;
+    height: var(--hero-slide-body-h);
+    min-height: var(--hero-slide-body-h);
+    max-height: var(--hero-slide-body-h);
     padding: 0.75rem 0.85rem;
     border: 0;
     border-top: 1px solid var(--line);
@@ -1284,14 +1352,38 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .app-card-thumb {
+  position: relative;
   display: block;
   width: 100%;
+  aspect-ratio: 3 / 2;
   line-height: 0;
+  overflow: hidden;
   background: var(--shot-bg);
 }
 
-.app-card-thumb-img,
-.app-demo-shot:not(.app-demo-shot--hero-focus) {
+/* App cards: uniform 3:2 crop (overrides travel hero-focus aspect in grids) */
+.app-card-thumb--crop.demo-shot-wrap--hero-focus {
+  aspect-ratio: 3 / 2;
+}
+
+.app-card-thumb--crop img,
+.app-card-thumb--crop .app-demo-shot {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.app-card-thumb--crop.demo-shot-wrap--hero-focus .app-demo-shot--hero-focus {
+  object-position: center 26%;
+}
+
+.app-card-thumb--crop img,
+.app-card-thumb--crop .app-demo-shot--hero-focus {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none;
+}
+
+.screenshot-img:not(.app-demo-shot--hero-focus) {
   display: block;
   width: 100%;
   height: auto;
@@ -1320,10 +1412,12 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .app-card-thumb-placeholder {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 8rem;
+  min-height: 0;
   text-align: center;
   padding: 0.75rem;
   font-size: 0.6875rem;
@@ -1395,11 +1489,10 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .app-card-icon {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 6px;
-  object-fit: contain;
-  margin-bottom: 0.35rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
 }
 
 .app-card-info {
