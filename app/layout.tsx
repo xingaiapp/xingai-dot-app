@@ -20,10 +20,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0c0e14" },
-  ],
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
@@ -33,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | XingAI",
   },
   description:
-    "XingAI builds focused AI decision systems for everyday life — meal coaching, cooking, style, routines, parenting, travel, and investing. Not generic chat. Co-founded by Xing and Allen, AI architects.",
+    "XingAI builds focused AI decision systems for everyday life — meal coaching, cooking, style, routines, SAT prep, parenting, travel, and investing. Not generic chat. Co-founded by Xing and Allen, AI architects.",
   keywords: [
     "AI decision systems",
     "XingAI",
@@ -41,6 +38,7 @@ export const metadata: Metadata = {
     "AI cooking assistant",
     "AI outfit advisor",
     "AI routine planner",
+    "AI SAT prep",
     "AI parenting support",
     "AI travel planner",
     "AI investment assistant",
@@ -58,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "XingAI — AI Decision Systems for Everyday Life",
     description:
-      "7 focused AI products for everyday decisions: eating, cooking, style, habits, parenting, travel, and investing. Not generic chat.",
+      "8 focused AI products for everyday decisions: eating, cooking, style, habits, SAT prep, parenting, travel, and investing. Not generic chat.",
     type: "website",
     url: siteUrl,
     siteName: "XingAI",
@@ -88,7 +86,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const initScript = `(function(){try{var t=localStorage.getItem("theme")||localStorage.getItem("xingai-theme");if(t!=="light"&&t!=="dark")t="light";document.documentElement.setAttribute("data-theme",t);localStorage.setItem("theme",t);localStorage.removeItem("xingai-theme");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="dark"?"#0c0e14":"#ffffff");localStorage.removeItem("locale");var l=localStorage.getItem("xingai.locale");if(l==="en"||l==="zh"||l==="ko"){document.documentElement.lang=l;document.cookie="xingai.locale="+l+";path=/;max-age=31536000;SameSite=Lax"}else{document.documentElement.lang="en"}}catch(e){document.documentElement.setAttribute("data-theme","light");document.documentElement.lang="en"}})()`;
+  const initScript = `(function(){try{var t=localStorage.getItem("theme")||localStorage.getItem("xingai-theme");if(t!=="light"&&t!=="dark")t="light";var r=document.documentElement;r.setAttribute("data-theme",t);r.style.colorScheme=t;localStorage.setItem("theme",t);localStorage.removeItem("xingai-theme");document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute("content",t==="dark"?"#0c0e14":"#ffffff")});localStorage.removeItem("locale");var l=localStorage.getItem("xingai.locale");if(l==="en"||l==="zh"||l==="ko"){r.lang=l;document.cookie="xingai.locale="+l+";path=/;max-age=31536000;SameSite=Lax"}else{r.lang="en"}}catch(e){document.documentElement.setAttribute("data-theme","light");document.documentElement.style.colorScheme="light";document.documentElement.lang="en"}})()`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -120,7 +118,7 @@ export default function RootLayout({
         url: siteUrl,
         name: "XingAI",
         description:
-          "AI decision systems for everyday life — food, cooking, style, routines, parenting, travel, and investing.",
+          "AI decision systems for everyday life — food, cooking, style, routines, SAT prep, parenting, travel, and investing.",
         publisher: { "@id": `${siteUrl}/#org` },
         inLanguage: ["en", "zh", "ko"],
       },
@@ -130,7 +128,7 @@ export default function RootLayout({
         url: siteUrl,
         name: "XingAI — AI Decision Systems for Everyday Life",
         description:
-          "XingAI is a platform of focused AI decision systems for everyday life, including meal coaching, cooking, style, routines, parenting, travel, and investing.",
+          "XingAI is a platform of focused AI decision systems for everyday life, including meal coaching, cooking, style, routines, SAT prep, parenting, travel, and investing.",
         isPartOf: { "@id": `${siteUrl}/#website` },
         about: { "@id": `${siteUrl}/#org` },
         primaryImageOfPage: `${siteUrl}/xingai-logo.png`,

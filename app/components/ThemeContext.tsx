@@ -36,11 +36,14 @@ function readTheme(): Theme {
 }
 
 function syncThemeToDocument(next: Theme) {
-  document.documentElement.setAttribute("data-theme", next);
+  const root = document.documentElement;
+  root.setAttribute("data-theme", next);
+  root.style.colorScheme = next;
   localStorage.setItem(STORAGE_KEY, next);
   localStorage.removeItem(LEGACY_STORAGE_KEY);
-  const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.setAttribute("content", THEME_COLORS[next]);
+  document
+    .querySelectorAll('meta[name="theme-color"]')
+    .forEach((meta) => meta.setAttribute("content", THEME_COLORS[next]));
 }
 
 type ThemeContextValue = {

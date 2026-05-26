@@ -21,6 +21,7 @@
   --link-underline: rgba(10, 12, 27, 0.2);
   --link-underline-panel: rgba(10, 12, 27, 0.28);
   --badge-bg: rgba(38, 117, 255, 0.1);
+  --soft-bg: rgba(38, 117, 255, 0.06);
   --shot-bg: rgba(10, 12, 27, 0.04);
   --cta-shadow: rgba(38, 117, 255, 0.28);
   --cta-shadow-hover: rgba(38, 117, 255, 0.35);
@@ -52,6 +53,7 @@ html[data-theme="dark"] {
   --link-underline: rgba(255, 255, 255, 0.15);
   --link-underline-panel: rgba(255, 255, 255, 0.2);
   --badge-bg: rgba(77, 148, 255, 0.12);
+  --soft-bg: rgba(77, 148, 255, 0.1);
   --shot-bg: rgba(255, 255, 255, 0.02);
   --cta-shadow: rgba(77, 148, 255, 0.2);
   --cta-shadow-hover: rgba(77, 148, 255, 0.3);
@@ -113,6 +115,7 @@ html[data-theme="light"] {
   --link-underline: rgba(10, 12, 27, 0.2);
   --link-underline-panel: rgba(10, 12, 27, 0.28);
   --badge-bg: rgba(38, 117, 255, 0.1);
+  --soft-bg: rgba(38, 117, 255, 0.06);
   --shot-bg: rgba(10, 12, 27, 0.04);
   --cta-shadow: rgba(38, 117, 255, 0.28);
   --cta-shadow-hover: rgba(38, 117, 255, 0.35);
@@ -641,7 +644,7 @@ html[data-theme="dark"] .lang-menu {
   background: var(--shot-bg);
 }
 
-.hero-preview-img {
+.hero-preview-img:not(.app-demo-shot--hero-focus) {
   display: block;
   width: 100%;
   height: auto;
@@ -1288,7 +1291,7 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .app-card-thumb-img,
-.app-demo-shot {
+.app-demo-shot:not(.app-demo-shot--hero-focus) {
   display: block;
   width: 100%;
   height: auto;
@@ -1306,6 +1309,14 @@ html[data-theme="dark"] .lang-menu {
 .demo-shot-wrap--hero-focus .app-demo-shot--hero-focus {
   object-fit: cover;
   object-position: center 26%;
+}
+
+/* Next/Image fill must fill the crop frame (overrides height: auto above) */
+.demo-shot-wrap--hero-focus .app-demo-shot--hero-focus,
+.demo-shot-wrap--hero-focus img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none;
 }
 
 .app-card-thumb-placeholder {
@@ -1762,7 +1773,7 @@ html[data-theme="dark"] .lang-menu {
   line-height: 0;
 }
 
-.screenshot-img {
+.screenshot-img:not(.app-demo-shot--hero-focus) {
   display: block;
   width: 100%;
   height: auto;
