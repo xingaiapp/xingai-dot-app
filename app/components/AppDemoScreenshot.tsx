@@ -34,8 +34,9 @@ export default function AppDemoScreenshot({
         srcDark={shot.srcDark}
         alt={shot.alt}
         fill={heroFocus}
-        width={DEMO_SCREENSHOT_WIDTH}
-        height={DEMO_SCREENSHOT_HEIGHT}
+        {...(heroFocus
+          ? {}
+          : { width: DEMO_SCREENSHOT_WIDTH, height: DEMO_SCREENSHOT_HEIGHT })}
         sizes={sizes}
         unoptimized={unoptimized}
         className={`${imageClassName}${heroFocus ? " app-demo-shot--hero-focus" : ""}`.trim()}
