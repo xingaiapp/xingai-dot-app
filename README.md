@@ -23,7 +23,7 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **Performance Sim** | Finance AI | Simulate Rules |
 | **T Today** | Finance AI | Plan Today |
 
-**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** runs as a private beta at [t.xingai.app](https://t.xingai.app/) (allowlist login). Other products are in development with UX demos on the site.
+**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Other products are in development with UX demos on the site.
 
 ## Features
 

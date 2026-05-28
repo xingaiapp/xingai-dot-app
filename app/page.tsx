@@ -324,12 +324,7 @@ export default function Home() {
           </li>
 
           <li className="app-card">
-            <a
-              href="https://t.xingai.app"
-              className="app-card-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/contact" className="app-card-link">
               <div className="app-card-thumb app-card-thumb--crop demo-thumb-wrap">
                 <AppDemoScreenshot
                   shot={{
@@ -347,15 +342,15 @@ export default function Home() {
                 <div className="app-card-title-row">
                   <h3 className="app-card-name">{t("homeDemoTTodayName")}</h3>
                   <span className="app-status-badge app-status-badge--soon">
-                    {t("homeDemoBadgePrivate")}
+                    {t("homeDemoBadgeEarlyAccess")}
                   </span>
                 </div>
                 <p className="app-card-tagline">{t("homeDemoTTodayLead")}</p>
                 <span className="app-card-action">
-                  {t("homeDemoOpen")} &rarr;
+                  {t("homeDemoRequestEarlyAccess")} &rarr;
                 </span>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
 

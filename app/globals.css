@@ -518,6 +518,13 @@ html[data-theme="dark"] .lang-menu {
   margin: 0;
 }
 
+.page-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
 .page-heading {
   font-size: clamp(1.4rem, 4.2vw + 0.4rem, 1.75rem);
   font-weight: 600;

@@ -42,6 +42,8 @@ export type AppData = {
   /** `gumroad` = paid template CTA; `github` = open repo CTA (default gumroad when sourceUrl set). */
   sourceKind?: "gumroad" | "github";
   comingSoon?: boolean;
+  /** Invite-only product: free to request access via contact. */
+  earlyAccess?: boolean;
 };
 
 type LocalizedAppCopy = Partial<
@@ -389,12 +391,13 @@ export const apps: AppData[] = [
     iconDark: "/investment-ai-icon-dark.png",
     favicon: "/favicon-investment-ai.png",
     demoUrl: "https://t.xingai.app/",
+    earlyAccess: true,
     description:
-      "Daily trading plan helper\u2014turn your holdings screenshot into structured rules + an AI plan for today. Login is allowlist-based.",
+      "Daily trading plan helper\u2014turn your holdings screenshot into structured rules + an AI plan for today. Early access is free: email us to join the allowlist.",
     category: "Finance AI",
     canDo: "Convert a holdings screenshot into a structured plan for the day.",
     bestFor: "Active traders who want a repeatable pre-market checklist and plan.",
-    clickTarget: "Opens the private beta at t.xingai.app (allowlist login).",
+    clickTarget: "Request free early access, then sign in at t.xingai.app.",
     launchStatus: "demo",
     screenshots: [
       {
@@ -404,7 +407,7 @@ export const apps: AppData[] = [
       },
     ],
     features: [{ name: "Holdings \u2192 plan workflow", free: true, pro: true, enterprise: true }],
-    roadmap: [{ title: "Private beta at t.xingai.app", status: "in-progress" }],
+    roadmap: [{ title: "Early access at t.xingai.app", status: "in-progress" }],
   },
 ];
 
@@ -591,10 +594,10 @@ const localizedAppCopy: Partial<
       tagline: "\u4eca\u65e5\u8ba1\u5212",
       category: "\u91d1\u878d AI",
       description:
-        "\u4ea4\u6613\u65e5\u8ba1\u5212\u52a9\u624b\uff1a\u628a\u6301\u4ed3\u622a\u56fe\u53d8\u6210\u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002\u76ee\u524d\u662f\u767d\u540d\u5355\u767b\u5f55\u7684\u5185\u6d4b\u3002",
+        "\u4ea4\u6613\u65e5\u8ba1\u5212\u52a9\u624b\uff1a\u628a\u6301\u4ed3\u622a\u56fe\u53d8\u6210\u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002\u5185\u6d4b\u514d\u8d39\u7533\u8bf7\uff0c\u8054\u7cfb\u6211\u4eec\u5373\u53ef\u52a0\u5165\u767d\u540d\u5355\u3002",
       canDo: "\u4ece\u6301\u4ed3\u622a\u56fe\u751f\u6210\u7ed3\u6784\u5316\u7684\u5f53\u65e5\u8ba1\u5212\u3002",
       bestFor: "\u60f3\u8981\u53ef\u91cd\u590d\u7684\u5f00\u76d8\u524d\u68c0\u67e5\u6e05\u5355\u548c\u7b56\u7565\u8ba1\u5212\u7684\u6d3b\u8dc3\u4ea4\u6613\u8005\u3002",
-      clickTarget: "\u6253\u5f00 t.xingai.app \u5185\u6d4b\uff08\u767d\u540d\u5355\u767b\u5f55\uff09\u3002",
+      clickTarget: "\u514d\u8d39\u7533\u8bf7\u5185\u6d4b\uff0c\u901a\u8fc7\u540e\u767b\u5f55 t.xingai.app\u3002",
     },
   },
   ko: {
@@ -773,10 +776,10 @@ const localizedAppCopy: Partial<
       tagline: "\uc624\ub298 \uacc4\ud68d",
       category: "\uae08\uc735 AI",
       description:
-        "\ub9e4\uc77c \uac70\ub798 \uacc4\ud68d \ub3c4\uc6b0\ubbf8\u2014\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7\uc744 \uaddc\uce59 + AI \uc624\ub298 \uacc4\ud68d\uc73c\ub85c \ubc14\uafb8\uc5b4 \uc90d\ub2c8\ub2e4. \ud5c8\uc6a9 \ubaa9\ub85d \ub85c\uadf8\uc778\uc785\ub2c8\ub2e4.",
+        "\ub9e4\uc77c \uac70\ub798 \uacc4\ud68d \ub3c4\uc6b0\ubbf8\u2014\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7\uc744 \uaddc\uce59 + AI \uc624\ub298 \uacc4\ud68d\uc73c\ub85c \ubc14\uafb8\uc5b4 \uc90d\ub2c8\ub2e4. \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5\ud569\ub2c8\ub2e4.",
       canDo: "\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7\uc744 \uad6c\uc870\ud654\ud558\uc5ec \uc624\ub298 \uacc4\ud68d\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
       bestFor: "\uc7a5 \uc2dc\uc791 \uc804 \uccb4\ud06c\ub9ac\uc2a4\ud2b8\uc640 \uacc4\ud68d\uc744 \uc2b5\uad00\ud654\ud558\uace0 \uc2f6\uc740 \ud2b8\ub808\uc774\ub354\uc5d0\uac8c \uc801\ud569\ud569\ub2c8\ub2e4.",
-      clickTarget: "t.xingai.app \ube44\uacf5\uac1c \ubca0\ud0c0\ub97c \uc5f4\uc5b4\uc694 (\ud5c8\uc6a9 \ubaa9\ub85d \ub85c\uadf8\uc778).",
+      clickTarget: "\ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \ud6c4 t.xingai.app\uc5d0 \ub85c\uadf8\uc778.",
     },
   },
 };

@@ -67,17 +67,38 @@ export default function AppDetailPage() {
           <h1 className="page-heading">{app.name}</h1>
         </div>
         <p className="page-lead">{app.description}</p>
-        {app.demoUrl && (
-          <a
-            href={app.demoUrl}
-            className="cta"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("appDemo")} &rarr;
-          </a>
-        )}
+        <div className="page-cta-row">
+          {app.earlyAccess ? (
+            <Link href="/contact" className="cta">
+              {t("appEarlyAccessCta")} &rarr;
+            </Link>
+          ) : null}
+          {app.demoUrl && (
+            <a
+              href={app.demoUrl}
+              className={app.earlyAccess ? "cta cta--outline" : "cta"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("appDemo")} &rarr;
+            </a>
+          )}
+        </div>
       </section>
+
+      {app.earlyAccess && (
+        <section
+          className="detail-section detail-coming-soon"
+          aria-label={t("homeDemoBadgeEarlyAccess")}
+        >
+          <p className="section-lead detail-coming-soon__text">
+            {t("appTTodayEarlyAccessBanner")}
+          </p>
+          <Link href="/contact" className="cta">
+            {t("appEarlyAccessCta")} &rarr;
+          </Link>
+        </section>
+      )}
 
       {app.comingSoon && (
         <section
