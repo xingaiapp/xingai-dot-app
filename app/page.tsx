@@ -296,7 +296,7 @@ export default function Home() {
               <div className="app-card-thumb app-card-thumb--crop demo-thumb-wrap">
                 <AppDemoScreenshot
                   shot={{
-                    src: "/demo-lab.xingai.app.svg",
+                    src: "/demo-lab.xingai.app.png",
                     alt: "Performance Sim demo",
                   }}
                   sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
@@ -333,7 +333,7 @@ export default function Home() {
               <div className="app-card-thumb app-card-thumb--crop demo-thumb-wrap">
                 <AppDemoScreenshot
                   shot={{
-                    src: "/demo-t.xingai.app.svg",
+                    src: "/demo-t.xingai.app.png",
                     alt: "T Today demo",
                   }}
                   sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
