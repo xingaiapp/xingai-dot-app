@@ -356,6 +356,58 @@ export const apps: AppData[] = [
       { title: "Paid plans & subscriptions", status: "planned" },
     ],
   },
+  {
+    slug: "performance-sim",
+    name: "Performance Sim",
+    tagline: "Simulate Rules",
+    icon: "/investment-ai-icon.png",
+    iconDark: "/investment-ai-icon-dark.png",
+    favicon: "/favicon-investment-ai.png",
+    demoUrl: "https://lab.xingai.app/",
+    description:
+      "Performance simulation lab\u2014compare different trading rules and see paper outcomes without touching a broker.",
+    category: "Finance AI",
+    canDo: "Run a paper-style performance simulation under different rule sets.",
+    bestFor: "People who want to sanity-check a rule before they treat it as real.",
+    clickTarget: "Opens the live demo at lab.xingai.app.",
+    launchStatus: "demo",
+    screenshots: [
+      {
+        src: "/invest-demo-light.jpg",
+        srcDark: "/invest-demo-dark.jpg",
+        alt: "Performance Sim demo",
+        caption: "Performance simulation overview",
+      },
+    ],
+    features: [{ name: "Rule-based simulation", free: true, pro: true, enterprise: true }],
+    roadmap: [{ title: "Public demo at lab.xingai.app", status: "shipped" }],
+  },
+  {
+    slug: "t-today",
+    name: "T Today",
+    tagline: "Plan Today",
+    icon: "/investment-ai-icon.png",
+    iconDark: "/investment-ai-icon-dark.png",
+    favicon: "/favicon-investment-ai.png",
+    demoUrl: "https://t.xingai.app/",
+    description:
+      "Daily trading plan helper\u2014turn your holdings screenshot into structured rules + an AI plan for today. Login is allowlist-based.",
+    category: "Finance AI",
+    canDo: "Convert a holdings screenshot into a structured plan for the day.",
+    bestFor: "Active traders who want a repeatable pre-market checklist and plan.",
+    clickTarget: "Opens the private beta at t.xingai.app (allowlist login).",
+    launchStatus: "demo",
+    screenshots: [
+      {
+        src: "/invest-demo-light.jpg",
+        srcDark: "/invest-demo-dark.jpg",
+        alt: "T Today demo",
+        caption: "Daily plan flow",
+      },
+    ],
+    features: [{ name: "Holdings \u2192 plan workflow", free: true, pro: true, enterprise: true }],
+    roadmap: [{ title: "Private beta at t.xingai.app", status: "in-progress" }],
+  },
 ];
 
 export function getAppBySlug(slug: string): AppData | undefined {
@@ -528,6 +580,24 @@ const localizedAppCopy: Partial<
         "付费计划与订阅",
       ],
     },
+    "performance-sim": {
+      tagline: "\u6a21\u62df\u7b56\u7565",
+      category: "\u91d1\u878d AI",
+      description:
+        "\u7ee9\u6548\u6a21\u62df\u5b9e\u9a8c\u5ba4\uff1a\u5bf9\u6bd4\u4e0d\u540c\u4ea4\u6613\u89c4\u5219\uff0c\u4f7f\u7528\u7eb8\u9762\u8d26\u672c\u67e5\u770b\u7ed3\u679c\uff0c\u4e0d\u6d89\u53ca\u5b9e\u9645\u5238\u5546\u4e0b\u5355\u3002",
+      canDo: "\u7528\u4e0d\u540c\u89c4\u5219\u8dd1\u4e00\u6b21\u7eb8\u9762\u7ee9\u6548\u6a21\u62df\u3002",
+      bestFor: "\u60f3\u5148\u9a8c\u8bc1\u89c4\u5219\uff0c\u518d\u51b3\u5b9a\u8981\u4e0d\u8981\u5f53\u6210\u771f\u7684\u8def\u7ebf\u7684\u4eba\u3002",
+      clickTarget: "\u6253\u5f00 lab.xingai.app \u7684\u5728\u7ebf Demo\u3002",
+    },
+    "t-today": {
+      tagline: "\u4eca\u65e5\u8ba1\u5212",
+      category: "\u91d1\u878d AI",
+      description:
+        "\u4ea4\u6613\u65e5\u8ba1\u5212\u52a9\u624b\uff1a\u628a\u6301\u4ed3\u622a\u56fe\u53d8\u6210\u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002\u76ee\u524d\u662f\u767d\u540d\u5355\u767b\u5f55\u7684\u5185\u6d4b\u3002",
+      canDo: "\u4ece\u6301\u4ed3\u622a\u56fe\u751f\u6210\u7ed3\u6784\u5316\u7684\u5f53\u65e5\u8ba1\u5212\u3002",
+      bestFor: "\u60f3\u8981\u53ef\u91cd\u590d\u7684\u5f00\u76d8\u524d\u68c0\u67e5\u6e05\u5355\u548c\u7b56\u7565\u8ba1\u5212\u7684\u6d3b\u8dc3\u4ea4\u6613\u8005\u3002",
+      clickTarget: "\u6253\u5f00 t.xingai.app \u5185\u6d4b\uff08\u767d\u540d\u5355\u767b\u5f55\uff09\u3002",
+    },
   },
   ko: {
     "meal-coach": {
@@ -691,6 +761,24 @@ const localizedAppCopy: Partial<
         "자발적 후원 Stripe tips",
         "유료 플랜과 구독",
       ],
+    },
+    "performance-sim": {
+      tagline: "\uaddc\uce59 \uc2dc\ubbac\ub808\uc774\uc158",
+      category: "\uae08\uc735 AI",
+      description:
+        "\uc131\uacfc \uc2dc\ubbac\ub808\uc774\uc158 \ub7a9\u2014\ub2e4\uc591\ud55c \uac70\ub798 \uaddc\uce59\uc744 \ube44\uad50\ud558\uace0 \ube0c\ub85c\ucee4 \uc5c6\uc774 \uc885\uc774 \uacb0\uacfc\ub97c \ud655\uc778\ud569\ub2c8\ub2e4.",
+      canDo: "\ub2e4\ub978 \uaddc\uce59 \uc138\ud2b8\ub85c \uc885\uc774 \uc131\uacfc\ub97c \uc2dc\ubbac\ub808\uc774\uc158\ud569\ub2c8\ub2e4.",
+      bestFor: "\uc2e4\uc804 \uc804\uc5d0 \uaddc\uce59\uc744 \uac80\uc99d\ud558\uace0 \uc2f6\uc740 \uc0ac\ub78c\uc5d0\uac8c \uc801\ud569\ud569\ub2c8\ub2e4.",
+      clickTarget: "lab.xingai.app \ub77c\uc774\ube0c \ub370\ubaa8\ub97c \uc5f4\uc5b4\uc694.",
+    },
+    "t-today": {
+      tagline: "\uc624\ub298 \uacc4\ud68d",
+      category: "\uae08\uc735 AI",
+      description:
+        "\ub9e4\uc77c \uac70\ub798 \uacc4\ud68d \ub3c4\uc6b0\ubbf8\u2014\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7\uc744 \uaddc\uce59 + AI \uc624\ub298 \uacc4\ud68d\uc73c\ub85c \ubc14\uafb8\uc5b4 \uc90d\ub2c8\ub2e4. \ud5c8\uc6a9 \ubaa9\ub85d \ub85c\uadf8\uc778\uc785\ub2c8\ub2e4.",
+      canDo: "\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7\uc744 \uad6c\uc870\ud654\ud558\uc5ec \uc624\ub298 \uacc4\ud68d\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
+      bestFor: "\uc7a5 \uc2dc\uc791 \uc804 \uccb4\ud06c\ub9ac\uc2a4\ud2b8\uc640 \uacc4\ud68d\uc744 \uc2b5\uad00\ud654\ud558\uace0 \uc2f6\uc740 \ud2b8\ub808\uc774\ub354\uc5d0\uac8c \uc801\ud569\ud569\ub2c8\ub2e4.",
+      clickTarget: "t.xingai.app \ube44\uacf5\uac1c \ubca0\ud0c0\ub97c \uc5f4\uc5b4\uc694 (\ud5c8\uc6a9 \ubaa9\ub85d \ub85c\uadf8\uc778).",
     },
   },
 };

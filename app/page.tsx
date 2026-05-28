@@ -279,6 +279,69 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-demos" aria-labelledby="home-demos-heading">
+        <h2 id="home-demos-heading" className="section-title">
+          {t("homeDemosHeading")}
+        </h2>
+        <p className="section-lead">{t("homeDemosLead")}</p>
+
+        <ul className="app-cards demo-cards">
+          <li className="app-card">
+            <a
+              href="https://lab.xingai.app"
+              className="app-card-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="app-card-thumb app-card-thumb--demo">
+                <span className="demo-card-domain">lab.xingai.app</span>
+              </div>
+              <div className="app-card-info">
+                <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
+                <div className="app-card-title-row">
+                  <h3 className="app-card-name">{t("homeDemoPerfName")}</h3>
+                  <span className="app-status-badge app-status-badge--demo">
+                    {t("homeDemoBadgeDemo")}
+                  </span>
+                </div>
+                <p className="app-card-tagline">{t("homeDemoPerfLead")}</p>
+                <span className="app-card-action">
+                  {t("homeDemoOpen")} &rarr;
+                </span>
+              </div>
+            </a>
+          </li>
+
+          <li className="app-card">
+            <a
+              href="https://t.xingai.app"
+              className="app-card-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="app-card-thumb app-card-thumb--demo">
+                <span className="demo-card-domain">t.xingai.app</span>
+              </div>
+              <div className="app-card-info">
+                <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
+                <div className="app-card-title-row">
+                  <h3 className="app-card-name">{t("homeDemoTTodayName")}</h3>
+                  <span className="app-status-badge app-status-badge--soon">
+                    {t("homeDemoBadgePrivate")}
+                  </span>
+                </div>
+                <p className="app-card-tagline">{t("homeDemoTTodayLead")}</p>
+                <span className="app-card-action">
+                  {t("homeDemoOpen")} &rarr;
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <p className="demo-disclaimer">{t("homeDemoDisclaimer")}</p>
+      </section>
+
       <section className="home-apps" aria-labelledby="home-apps-heading">
         <h2 id="home-apps-heading" className="section-title">
           {t("homeAppsHeading")}
