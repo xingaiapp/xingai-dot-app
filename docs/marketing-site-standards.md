@@ -18,7 +18,7 @@ Applies to `xingai-dot-app` (xingai.app).
 
 - `data-theme` on `<html>`; init script avoids flash; `theme-color` meta updates with theme.
 - Demo images: `*-demo-light.jpg` + `*-demo-dark.jpg`; `ThemedImage` / `AppDemoScreenshot` swap by site theme.
-- Invest demos (`performance-sim`, `t-today`): regenerate with `npm run capture:demos` — portrait capture is **center-fit** on 1536×1024 (never stretched). Requires `lab.xingai.app` and local `invest-t-advisor` on `:3001` (`T_AUTH_MODE=off`).
+- Invest demos (`performance-sim`, `t-today`): regenerate with `npm run capture:demos` — same as meal/cook: **390×585** capture, **cover crop** to 1536×1024 (full-bleed UI, not a centered phone mockup). Requires `lab.xingai.app` and local `invest-t-advisor` on `:3001` (`T_AUTH_MODE=off`).
 
 ## SEO
 

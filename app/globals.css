@@ -32,6 +32,8 @@
   --status-demo-bg: rgba(254, 249, 195, 0.92);
   --status-soon-fg: #1e293b;
   --status-soon-bg: rgba(248, 250, 252, 0.92);
+  --status-early-fg: #1e3a8a;
+  --status-early-bg: rgba(219, 234, 254, 0.92);
   color-scheme: light;
 }
 
@@ -64,6 +66,8 @@ html[data-theme="dark"] {
   --status-demo-bg: rgba(113, 63, 18, 0.9);
   --status-soon-fg: #e8ecf4;
   --status-soon-bg: rgba(24, 30, 46, 0.94);
+  --status-early-fg: #bfdbfe;
+  --status-early-bg: rgba(30, 58, 138, 0.85);
   color-scheme: dark;
 }
 
@@ -126,6 +130,8 @@ html[data-theme="light"] {
   --status-demo-bg: rgba(254, 249, 195, 0.92);
   --status-soon-fg: #1e293b;
   --status-soon-bg: rgba(248, 250, 252, 0.92);
+  --status-early-fg: #1e3a8a;
+  --status-early-bg: rgba(219, 234, 254, 0.92);
   color-scheme: light;
 }
 
@@ -605,10 +611,17 @@ html[data-theme="dark"] .lang-menu {
 
 .hero-sub {
   margin: 0 0 1.15rem;
-  font-size: 0.9375rem;
-  line-height: 1.62;
+  font-size: 1.0625rem;
+  line-height: 1.65;
   color: var(--muted);
   text-wrap: balance;
+}
+
+@media (min-width: 48rem) {
+  .hero-sub {
+    font-size: 1.125rem;
+    line-height: 1.68;
+  }
 }
 
 .hero-preview {
@@ -1535,6 +1548,23 @@ html[data-theme="dark"] .lang-menu {
 .app-status-badge--live {
   color: var(--status-live-fg);
   background: var(--status-live-bg);
+  gap: 0.3rem;
+}
+
+.app-status-badge--live::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
 }
 
 .app-status-badge--demo {
@@ -1545,6 +1575,11 @@ html[data-theme="dark"] .lang-menu {
 .app-status-badge--coming-soon {
   color: var(--status-soon-fg);
   background: var(--status-soon-bg);
+}
+
+.app-status-badge--early-access {
+  color: var(--status-early-fg);
+  background: var(--status-early-bg);
 }
 
 .app-card-icon {

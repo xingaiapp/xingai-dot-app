@@ -284,18 +284,16 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="app-card-thumb app-card-thumb--crop demo-thumb-wrap">
-                <AppDemoScreenshot
-                  shot={{
-                    src: "/performance-sim-demo-light.jpg",
-                    srcDark: "/performance-sim-demo-dark.jpg",
-                    alt: "Performance Sim demo",
-                  }}
-                  sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
-                  wrapClassName="app-card-thumb app-card-thumb--crop"
-                  imageClassName="app-card-thumb-img app-demo-shot"
-                />
-              </div>
+              <AppDemoScreenshot
+                shot={{
+                  src: "/performance-sim-demo-light.jpg",
+                  srcDark: "/performance-sim-demo-dark.jpg",
+                  alt: "Performance Sim demo",
+                }}
+                sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
+                wrapClassName="app-card-thumb"
+                imageClassName="app-card-thumb-img app-demo-shot"
+              />
               <div className="app-card-info">
                 <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
                 <div className="app-card-title-row">
@@ -314,23 +312,21 @@ export default function Home() {
 
           <li className="app-card">
             <Link href="/contact" className="app-card-link">
-              <div className="app-card-thumb app-card-thumb--crop demo-thumb-wrap">
-                <AppDemoScreenshot
-                  shot={{
-                    src: "/t-today-demo-light.jpg",
-                    srcDark: "/t-today-demo-dark.jpg",
-                    alt: "T Today demo",
-                  }}
-                  sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
-                  wrapClassName="app-card-thumb app-card-thumb--crop"
-                  imageClassName="app-card-thumb-img app-demo-shot"
-                />
-              </div>
+              <AppDemoScreenshot
+                shot={{
+                  src: "/t-today-demo-light.jpg",
+                  srcDark: "/t-today-demo-dark.jpg",
+                  alt: "T Today demo",
+                }}
+                sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
+                wrapClassName="app-card-thumb"
+                imageClassName="app-card-thumb-img app-demo-shot"
+              />
               <div className="app-card-info">
                 <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
                 <div className="app-card-title-row">
                   <h3 className="app-card-name">{t("homeDemoTTodayName")}</h3>
-                  <span className="app-status-badge app-status-badge--soon">
+                  <span className="app-status-badge app-status-badge--early-access">
                     {t("homeDemoBadgeEarlyAccess")}
                   </span>
                 </div>
