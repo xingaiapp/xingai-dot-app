@@ -60,6 +60,13 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
+Regenerate Performance Sim / T Today marketing screenshots (mobile 3:2, light + dark):
+
+```bash
+# lab.xingai.app + invest-t-advisor on :3001 (T_AUTH_MODE=off)
+npm run capture:demos
+```
+
 ## Deployment Notes
 
 Use `https://xingai-dot-app.vercel.app/` as the stable public URL for this website. Do not use one-off Vercel deployment URLs in docs or product links.

@@ -7,7 +7,8 @@
     "dev:clean": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "capture:demos": "node scripts/capture-invest-demos.mjs"
   },
   "dependencies": {
     "next": "^15.3.2",
@@ -20,6 +21,7 @@
     "@types/react-dom": "^19.1.0",
     "eslint": "^9.27.0",
     "eslint-config-next": "^15.3.2",
-    "typescript": "^5.8.0"
+    "typescript": "^5.8.0",
+    "playwright": "^1.49.1"
   }
 }
