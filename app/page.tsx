@@ -293,8 +293,19 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="app-card-thumb app-card-thumb--demo">
-                <span className="demo-card-domain">lab.xingai.app</span>
+              <div className="app-card-thumb app-card-thumb--crop demo-thumb-wrap">
+                <AppDemoScreenshot
+                  shot={{
+                    src: "/demo-lab.xingai.app.svg",
+                    alt: "Performance Sim demo",
+                  }}
+                  sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
+                  wrapClassName="app-card-thumb app-card-thumb--crop"
+                  imageClassName="app-card-thumb-img app-demo-shot"
+                />
+                <span className="demo-card-domain demo-card-domain--overlay">
+                  lab.xingai.app
+                </span>
               </div>
               <div className="app-card-info">
                 <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
@@ -319,8 +330,17 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="app-card-thumb app-card-thumb--demo">
-                <span className="demo-card-domain">t.xingai.app</span>
+              <div className="app-card-thumb app-card-thumb--crop demo-thumb-wrap">
+                <AppDemoScreenshot
+                  shot={{
+                    src: "/demo-t.xingai.app.svg",
+                    alt: "T Today demo",
+                  }}
+                  sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
+                  wrapClassName="app-card-thumb app-card-thumb--crop"
+                  imageClassName="app-card-thumb-img app-demo-shot"
+                />
+                <span className="demo-card-domain demo-card-domain--overlay">t.xingai.app</span>
               </div>
               <div className="app-card-info">
                 <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>

@@ -1,0 +1,52 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c0e14" />
+      <stop offset="1" stop-color="#111827" />
+    </linearGradient>
+    <radialGradient id="glow" cx="25%" cy="25%" r="70%">
+      <stop offset="0" stop-color="#4d94ff" stop-opacity="0.22" />
+      <stop offset="55%" stop-color="#4d94ff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#4d94ff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="10%" r="65%">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.18" />
+      <stop offset="55%" stop-color="#a855f7" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.28" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect width="1200" height="800" fill="url(#glow)" />
+  <rect width="1200" height="800" fill="url(#glow2)" />
+
+  <g filter="url(#softShadow)">
+    <rect x="80" y="92" width="1040" height="616" rx="28" fill="#0b1220" fill-opacity="0.72" stroke="#ffffff" stroke-opacity="0.08" />
+  </g>
+
+  <text x="120" y="165" fill="#e5e7eb" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="26" font-weight="700" letter-spacing="0.02em">
+    lab.xingai.app
+  </text>
+
+  <text x="120" y="250" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'" font-size="54" font-weight="750">
+    Performance Sim
+  </text>
+  <text x="120" y="305" fill="#9ca3af" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="24" font-weight="540">
+    Rule performance sandbox · paper outcomes · no broker integration
+  </text>
+
+  <g opacity="0.9">
+    <rect x="120" y="360" width="220" height="44" rx="22" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" />
+    <text x="140" y="390" fill="#fef08a" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="18" font-weight="700">
+      Demo
+    </text>
+  </g>
+
+  <g opacity="0.75">
+    <path d="M160 560 C 300 470, 430 520, 560 450 S 820 430, 980 360" fill="none" stroke="#4d94ff" stroke-opacity="0.35" stroke-width="10" stroke-linecap="round"/>
+    <path d="M160 610 C 300 560, 430 600, 560 520 S 820 520, 980 460" fill="none" stroke="#a855f7" stroke-opacity="0.28" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

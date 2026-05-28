@@ -373,8 +373,7 @@ export const apps: AppData[] = [
     launchStatus: "demo",
     screenshots: [
       {
-        src: "/invest-demo-light.jpg",
-        srcDark: "/invest-demo-dark.jpg",
+        src: "/demo-lab.xingai.app.svg",
         alt: "Performance Sim demo",
         caption: "Performance simulation overview",
       },
@@ -399,8 +398,7 @@ export const apps: AppData[] = [
     launchStatus: "demo",
     screenshots: [
       {
-        src: "/invest-demo-light.jpg",
-        srcDark: "/invest-demo-dark.jpg",
+        src: "/demo-t.xingai.app.svg",
         alt: "T Today demo",
         caption: "Daily plan flow",
       },
