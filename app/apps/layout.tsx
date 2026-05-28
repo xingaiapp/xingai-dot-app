@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
+import { defaultDescription, productCount, siteUrl } from "../lib/site-seo";
 
 export const metadata: Metadata = {
   title: "AI Products",
-  description:
-    "Explore XingAI's AI decision systems — Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Parent AI, Travel AI, and Investment Assistant.",
+  description: `Explore ${productCount} XingAI decision systems — meal, cook, outfit, routine, SAT, travel, invest, Performance Sim (lab.xingai.app), and T Today (t.xingai.app). Mobile-first · EN/中文/한국어 · light/dark.`,
   alternates: { canonical: `${siteUrl}/apps` },
   openGraph: {
     title: "XingAI Products — AI Decision Systems",
-    description:
-      "8 focused AI products for everyday decisions: eating, cooking, style, habits, SAT prep, parenting, travel, and investing.",
+    description: defaultDescription,
     url: `${siteUrl}/apps`,
   },
 };

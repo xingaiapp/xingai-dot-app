@@ -47,7 +47,7 @@ const translations = {
     heroValuePill: "AI decision systems, not just chat",
     tagline: "Get the right decision, every time.",
     heroSub:
-      "Focused AI tools that help you decide faster: what to cook, what to wear, how to plan routines, how to review SAT mistakes, and how to think about investing.",
+      "Mobile-first AI tools for everyday decisions — meals, cooking, style, routines, SAT, and investing (including Performance Sim at lab.xingai.app and T Today at t.xingai.app). Light/dark themes · EN / 中文 / 한국어.",
     heroGridLabel: "Our AI decision systems",
     heroPreviewLabel: "System preview",
     heroCoreSystems: "Explore core systems",
@@ -55,7 +55,8 @@ const translations = {
     homeAppsLead:
       "Each product is a focused decision system\u2014not a generic chatbot. We ship publicly as the platform grows.",
     homeDemosHeading: "Demos",
-    homeDemosLead: "Try real products \u2014 public demos open in a new tab.",
+    homeDemosLead:
+      "Mobile product previews — open live demos in a new tab. T Today early access is free to request.",
     homeDemoCategoryInvest: "Invest",
     homeDemoOpen: "Open demo",
     homeDemoBadgeDemo: "Demo",
@@ -79,16 +80,19 @@ const translations = {
       "Short answers for people and AI search systems trying to understand what XingAI does.",
     answerQ1: "What is XingAI?",
     answerA1:
-      "XingAI is a platform of focused AI decision systems for everyday life, including food, cooking, style, routines, SAT prep, parenting, travel, and investing.",
+      "XingAI is a platform of focused AI decision systems for everyday life — meal coaching, cooking, style, routines, SAT prep, travel, investing (invest.xingai.app), Performance Sim paper trading (lab.xingai.app), and T Today trading plans (t.xingai.app).",
     answerQ2: "How is XingAI different from a chatbot?",
     answerA2:
       "XingAI products are built around structured decisions and clear next actions instead of open-ended generic chat.",
     answerQ3: "What can I use XingAI for today?",
     answerA3:
-      "You can explore live AI tools for meal coaching, cooking from available ingredients, routine planning, SAT mistake review, and other everyday decision workflows.",
+      "You can try public demos for meal coaching, cooking, outfit, routines, SAT review, invest.xingai.app, lab.xingai.app (Performance Sim), and request free early access for t.xingai.app (T Today). All web apps are mobile-first with light/dark themes.",
     answerQ4: "Can XingAI build a custom AI product?",
     answerA4:
       "Yes. XingAI helps founders and teams design, build, and deploy focused AI products from idea to launch.",
+    answerQ5: "How do I get access to T Today (t.xingai.app)?",
+    answerA5:
+      "T Today is in early access. It is free to ask — email contact@xingai.app or use the Contact page. We add your Google account to the allowlist, then you sign in at t.xingai.app.",
 
     // Build With Us
     buildHeading: "Have an idea? We\u2019ll build it with you.",
@@ -217,7 +221,7 @@ const translations = {
     heroValuePill: "AI \u51b3\u7b56\u7cfb\u7edf\uff0c\u4e0d\u53ea\u662f\u804a\u5929",
     tagline: "\u6bcf\u4e00\u6b21\uff0c\u90fd\u66f4\u6e05\u695a\u5730\u505a\u51b3\u5b9a\u3002",
     heroSub:
-      "\u4e13\u6ce8\u7684 AI \u5de5\u5177\uff0c\u5e2e\u4f60\u66f4\u5feb\u51b3\u5b9a\uff1a\u505a\u4ec0\u4e48\u83dc\u3001\u600e\u4e48\u7a7f\u3001\u5982\u4f55\u89c4\u5212\u4e60\u60ef\u3001\u5982\u4f55\u590d\u76d8 SAT \u9519\u9898\uff0c\u4ee5\u53ca\u5982\u4f55\u66f4\u7cfb\u7edf\u5730\u601d\u8003\u6295\u8d44\u3002",
+      "\u79fb\u52a8\u7aef\u4f18\u5148\u7684 AI \u65e5\u5e38\u51b3\u7b56\u5de5\u5177\u2014\u996e\u98df\u3001\u70f9\u996a\u3001\u7a7f\u642d\u3001\u4e60\u60ef\u3001SAT\u3001\u6295\u8d44\uff08\u542b lab.xingai.app \u7b56\u7565\u6a21\u62df\u4e0e t.xingai.app \u4eca\u65e5\u505aT\uff09\u3002\u6d45\u8272/\u6df1\u8272\u4e3b\u9898 \u00b7 \u4e2d\u82f1\u97e9\u4e09\u8bed\u3002",
     heroGridLabel: "\u6211\u4eec\u7684 AI \u51b3\u7b56\u7cfb\u7edf",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
     heroCoreSystems: "\u63a2\u7d22\u6838\u5fc3\u7cfb\u7edf",
@@ -225,7 +229,8 @@ const translations = {
     homeAppsLead:
       "\u6bcf\u4e00\u6b3e\u4ea7\u54c1\u90fd\u662f\u4e13\u6ce8\u7684\u51b3\u7b56\u7cfb\u7edf\uff0c\u4e0d\u662f\u6cdb\u6cdb\u7684\u804a\u5929\u673a\u5668\u4eba\u3002\u6211\u4eec\u5728\u516c\u5f00\u8fed\u4ee3\u4e2d\u6301\u7eed\u53d1\u5e03\u3002",
     homeDemosHeading: "\u5728\u7ebf\u6f14\u793a",
-    homeDemosLead: "\u76f4\u63a5\u4f53\u9a8c\uff1a\u516c\u5f00 Demo \u4f1a\u5728\u65b0\u6807\u7b7e\u9875\u6253\u5f00\u3002",
+    homeDemosLead:
+      "\u79fb\u52a8\u7aef\u4ea7\u54c1\u9884\u89c8\u2014\u516c\u5f00 Demo \u65b0\u6807\u7b7e\u6253\u5f00\u3002T Today \u5185\u6d4b\u514d\u8d39\u7533\u8bf7\u3002",
     homeDemoCategoryInvest: "\u6295\u8d44",
     homeDemoOpen: "\u6253\u5f00\u6f14\u793a",
     homeDemoBadgeDemo: "Demo",
@@ -248,16 +253,19 @@ const translations = {
     answerLead: "给用户和 AI 搜索系统的简短答案，帮助快速理解 XingAI 是什么。",
     answerQ1: "XingAI 是什么？",
     answerA1:
-      "XingAI 是一个面向日常生活的 AI 决策系统平台，覆盖饮食、做饭、穿搭、习惯、SAT 备考、育儿、旅行和投资等场景。",
+      "XingAI 是面向日常生活的 AI 决策系统平台，覆盖饮食、做饭、穿搭、习惯、SAT、旅行、投资（invest.xingai.app）、策略模拟（lab.xingai.app）与今日做T（t.xingai.app）。",
     answerQ2: "XingAI 和普通聊天机器人有什么不同？",
     answerA2:
       "XingAI 产品围绕结构化决策和明确下一步行动设计，而不是开放式泛聊天。",
     answerQ3: "现在可以用 XingAI 做什么？",
     answerA3:
-      "你可以体验饮食建议、根据已有食材做饭、习惯节奏规划、SAT 错题复盘，以及其他日常决策流程。",
+      "可体验饮食、做饭、穿搭、习惯、SAT、invest.xingai.app、lab.xingai.app（策略模拟），并免费申请 t.xingai.app（今日做T）内测。均为移动优先，支持浅色/深色主题。",
     answerQ4: "XingAI 可以定制 AI 产品吗？",
     answerA4:
       "可以。XingAI 帮助创始人和团队从想法到上线，设计、开发并部署专注的 AI 产品。",
+    answerQ5: "如何申请 t.xingai.app（今日做T）内测？",
+    answerA5:
+      "目前为邀请制内测，可免费申请：发邮件至 contact@xingai.app 或使用联系页面。我们把你加入白名单后，即可用 Google 登录 t.xingai.app。",
 
     buildHeading: "\u6709\u60f3\u6cd5\uff1f\u6211\u4eec\u5e2e\u4f60\u5b9e\u73b0",
     buildLead:
@@ -377,7 +385,7 @@ const translations = {
     heroValuePill: "\ucc57\uc774 \uc544\ub2cc AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     tagline: "\ub9e4\ubc88 \ub354 \uba85\ud655\ud55c \uacb0\uc815\uc744.",
     heroSub:
-      "\ubb34\uc5c7\uc744 \uc694\ub9ac\ud560\uc9c0, \ubb34\uc5c7\uc744 \uc785\uc744\uc9c0, \ub8e8\ud2f4\uc744 \uc5b4\ub5bb\uac8c \uc138\uc6b8\uc9c0, SAT \uc624\ub2f5\uc744 \uc5b4\ub5bb\uac8c \ubcf5\uc2b5\ud560\uc9c0, \ud22c\uc790\ub97c \uc5b4\ub5bb\uac8c \uc0dd\uac01\ud560\uc9c0 \ub354 \ube60\ub974\uac8c \uacb0\uc815\ud558\ub3c4\ub85d \ub3d5\ub294 AI \ub3c4\uad6c\uc785\ub2c8\ub2e4.",
+      "\uc77c\uc0c1 \uacb0\uc815\uc744 \uc704\ud55c \ubaa8\ubc14\uc6b0\uc804 AI \ub3c4\uad6c\u2014\uc2dd\uc0ac, \uc694\ub9ac, \uc2a4\ud0c0\uc77c, \ub8e8\ud2f4, SAT, \ud22c\uc790(lab.xingai.app \uc2dc\ubbac, t.xingai.app T Today). \ub77c\uc774\ud2b8/\ub2e4\ud06c \u00b7 EN/\uc911\ubb38/\ud55c\uad6d\uc5b4.",
     heroGridLabel: "\uc6b0\ub9ac\uc758 AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
     heroCoreSystems: "\ud575\uc2ec \uc2dc\uc2a4\ud15c \ub458\ub7ec\ubcf4\uae30",
@@ -385,7 +393,8 @@ const translations = {
     homeAppsLead:
       "\uac01 \uc81c\ud488\uc740 \ubc94\uc6a9 \ucc57\ubd07\uc774 \uc544\ub2c8\ub77c \ucd08\uc810 \ub9de\ucda4 \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c\uc785\ub2c8\ub2e4. \uacf5\uac1c\uc801\uc73c\ub85c \uacc4\uc18d \ucd9c\uc2dc\ud569\ub2c8\ub2e4.",
     homeDemosHeading: "\ub370\ubaa8",
-    homeDemosLead: "\uc2e4\uc81c \uc81c\ud488\uc744 \ubc14\ub85c \uccb4\ud5d8\ud574\ubcf4\uc138\uc694. \uacf5\uac1c \ub370\ubaa8\ub294 \uc0c8 \ud0ed\uc5d0\uc11c \uc5f4\ub9bd\ub2c8\ub2e4.",
+    homeDemosLead:
+      "\ubaa8\ubc14\uc6b0\uc804 \uc81c\ud488 \ubbf8\ub9ac\ubcf4\uae30\u2014\uacf5\uac1c \ub370\ubaa8\ub294 \uc0c8 \ud0ed. T Today\ub294 \ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5.",
     homeDemoCategoryInvest: "\ud22c\uc790",
     homeDemoOpen: "\ub370\ubaa8 \uc5f4\uae30",
     homeDemoBadgeDemo: "Demo",
@@ -408,16 +417,19 @@ const translations = {
     answerLead: "사용자와 AI 검색 시스템이 XingAI를 빠르게 이해할 수 있도록 정리한 짧은 답변입니다.",
     answerQ1: "XingAI는 무엇인가요?",
     answerA1:
-      "XingAI는 음식, 요리, 스타일, 루틴, SAT 준비, 육아, 여행, 투자 등 일상 결정을 돕는 AI 의사결정 시스템 플랫폼입니다.",
+      "XingAI는 식사, 요리, 스타일, 루틴, SAT, 여행, 투자(invest.xingai.app), Performance Sim(lab.xingai.app), T Today(t.xingai.app) 등 일상 결정 AI 플랫폼입니다.",
     answerQ2: "XingAI는 일반 챗봇과 어떻게 다른가요?",
     answerA2:
       "XingAI 제품은 개방형 대화가 아니라 구조화된 결정과 명확한 다음 행동을 중심으로 설계됩니다.",
     answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
     answerA3:
-      "식사 코칭, 가진 재료로 요리 결정, 루틴 계획, SAT 오답 복습 등 일상 의사결정 흐름을 체험할 수 있습니다.",
+      "식사, 요리, 스타일, 루틴, SAT, invest.xingai.app, lab.xingai.app(Performance Sim)을 체험하고 t.xingai.app(T Today) 얼리 액세스를 무료로 요청할 수 있습니다. 모바일 우선, 라이트/다크 테마 지원.",
     answerQ4: "XingAI가 맞춤 AI 제품도 만들 수 있나요?",
     answerA4:
       "네. XingAI는 창업자와 팀이 아이디어부터 출시까지 집중된 AI 제품을 설계, 개발, 배포하도록 돕습니다.",
+    answerQ5: "t.xingai.app(T Today) 얼리 액세스는 어떻게 받나요?",
+    answerA5:
+      "초청제 얼리 액세스이며 무료로 요청 가능합니다. contact@xingai.app 또는 문의 페이지로 연락해 주시면 허용 목록에 추가한 뒤 t.xingai.app에서 Google 로그인하세요.",
 
     buildHeading: "\uc544\uc774\ub514\uc5b4\uac00 \uc788\uc73c\uc2e0\uac00\uc694? \ud568\uaed8 \ub9cc\ub4e4\uc5b4 \ub4dc\ub9bd\ub2c8\ub2e4.",
     buildLead:

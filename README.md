@@ -34,6 +34,10 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 - **SEO optimized** — sitemap, JSON-LD structured data, per-page metadata
 - **Custom AI builds** — we also build AI products for teams and founders
 
+## Marketing site standards (mobile, i18n, theme, SEO/AEO)
+
+See [docs/marketing-site-standards.md](./docs/marketing-site-standards.md).
+
 ## Internal Product Wiki
 
 - Repo document: [docs/product-wiki.md](./docs/product-wiki.md)

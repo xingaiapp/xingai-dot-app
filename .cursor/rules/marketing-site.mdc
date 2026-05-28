@@ -1,0 +1,24 @@
+---
+description: xingai-dot-app marketing site — mobile-first, i18n, theme, SEO/AEO
+globs:
+  - "**/*"
+---
+
+# xingai-dot-app
+
+Read `docs/marketing-site-standards.md` before changing pages, copy, or demo assets.
+
+## Must keep
+
+1. **Mobile-first** — phone layout default; demo captures at mobile 3:2 (`npm run capture:demos`).
+2. **i18n** — new user-facing strings in `app/i18n/translations.ts` (en, zh, ko).
+3. **Theme** — light/dark demo pairs (`*-light.jpg`, `*-dark.jpg`) + `ThemedImage`.
+4. **SEO** — `generateMetadata` / canonical / OG on new routes; add apps to `apps.ts` + sitemap via static params.
+5. **AEO** — update English FAQ in `home-faq-schema.ts` when adding products users might ask about; keep answers factual with real URLs.
+
+## Invest demos
+
+- **Performance Sim**: `https://lab.xingai.app/` — public demo.
+- **T Today**: `https://t.xingai.app/` — early access; free to request via `/contact`.
+
+Do not expose internal version labels (V1/V2) in UI.

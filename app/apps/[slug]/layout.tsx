@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { getAppBySlug, apps } from "../../data/apps";
+import { siteUrl } from "../../lib/site-seo";
 
 type Props = { params: Promise<{ slug: string }> };
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -85,9 +83,17 @@ export default async function AppSlugLayout({
           priceCurrency: "USD",
           availability: app.comingSoon
             ? "https://schema.org/PreOrder"
-            : "https://schema.org/InStock",
-          url: app.demoUrl ?? appUrl,
+            : app.earlyAccess
+              ? "https://schema.org/LimitedAvailability"
+              : "https://schema.org/InStock",
+          url: app.earlyAccess ? `${siteUrl}/contact` : (app.demoUrl ?? appUrl),
         },
+        ...(app.demoUrl
+          ? {
+              downloadUrl: app.demoUrl,
+              installUrl: app.demoUrl,
+            }
+          : {}),
         featureList: app.features.map((feature) => feature.name),
       },
       {

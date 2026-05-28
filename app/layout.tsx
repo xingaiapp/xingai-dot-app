@@ -6,6 +6,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MobileBottomNav from "./components/MobileBottomNav";
 import { apps } from "./data/apps";
+import { buildHomeFaqJsonLd } from "./lib/home-faq-schema";
+import {
+  defaultDescription,
+  defaultKeywords,
+  productCount,
+  siteUrl,
+} from "./lib/site-seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,14 +20,14 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#ffffff",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0e14" },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -29,22 +36,8 @@ export const metadata: Metadata = {
     default: "XingAI — AI Decision Systems for Everyday Life",
     template: "%s | XingAI",
   },
-  description:
-    "XingAI builds focused AI decision systems for everyday life — meal coaching, cooking, style, routines, SAT prep, parenting, travel, and investing. Not generic chat. Co-founded by Xing and Allen, AI architects.",
-  keywords: [
-    "AI decision systems",
-    "XingAI",
-    "AI meal coach",
-    "AI cooking assistant",
-    "AI outfit advisor",
-    "AI routine planner",
-    "AI SAT prep",
-    "AI parenting support",
-    "AI travel planner",
-    "AI investment assistant",
-    "everyday AI",
-    "personal AI",
-  ],
+  description: defaultDescription,
+  keywords: [...defaultKeywords],
   authors: [{ name: "Xing", url: siteUrl }, { name: "Allen" }],
   creator: "XingAI",
   publisher: "XingAI",
@@ -52,11 +45,18 @@ export const metadata: Metadata = {
     icon: "/xingai-logo.png",
     apple: "/xingai-logo.png",
   },
-  alternates: { canonical: siteUrl },
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      en: siteUrl,
+      zh: siteUrl,
+      ko: siteUrl,
+      "x-default": siteUrl,
+    },
+  },
   openGraph: {
     title: "XingAI — AI Decision Systems for Everyday Life",
-    description:
-      "8 focused AI products for everyday decisions: eating, cooking, style, habits, SAT prep, parenting, travel, and investing. Not generic chat.",
+    description: defaultDescription,
     type: "website",
     url: siteUrl,
     siteName: "XingAI",
@@ -117,8 +117,7 @@ export default function RootLayout({
         "@id": `${siteUrl}/#website`,
         url: siteUrl,
         name: "XingAI",
-        description:
-          "AI decision systems for everyday life — food, cooking, style, routines, SAT prep, parenting, travel, and investing.",
+        description: defaultDescription,
         publisher: { "@id": `${siteUrl}/#org` },
         inLanguage: ["en", "zh", "ko"],
       },
@@ -127,8 +126,7 @@ export default function RootLayout({
         "@id": `${siteUrl}/#webpage`,
         url: siteUrl,
         name: "XingAI — AI Decision Systems for Everyday Life",
-        description:
-          "XingAI is a platform of focused AI decision systems for everyday life, including meal coaching, cooking, style, routines, SAT prep, parenting, travel, and investing.",
+        description: defaultDescription,
         isPartOf: { "@id": `${siteUrl}/#website` },
         about: { "@id": `${siteUrl}/#org` },
         primaryImageOfPage: `${siteUrl}/xingai-logo.png`,
@@ -140,7 +138,7 @@ export default function RootLayout({
         name: "XingAI AI decision systems",
         description:
           "A product collection of focused AI tools for everyday decisions.",
-        numberOfItems: apps.length,
+        numberOfItems: productCount,
         itemListElement: apps.map((app, index) => ({
           "@type": "ListItem",
           position: index + 1,
@@ -152,6 +150,8 @@ export default function RootLayout({
     ],
   };
 
+  const faqJsonLd = buildHomeFaqJsonLd();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -160,6 +160,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className={`${inter.className} site-body`}>

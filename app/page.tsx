@@ -9,9 +9,6 @@ import AppIcon from "./components/AppIcon";
 import { APP_ICON_SIZE } from "./lib/app-icon";
 import AppDemoScreenshot from "./components/AppDemoScreenshot";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
-
 function AnswerIcon({ index }: { index: number }) {
   const common = {
     width: 22,
@@ -54,11 +51,19 @@ function AnswerIcon({ index }: { index: number }) {
       </svg>
     );
   }
+  if (index === 3) {
+    return (
+      <svg {...common}>
+        <path d="M4 7.5 12 3l8 4.5-8 4.5z" />
+        <path d="M4 12.5 12 17l8-4.5" />
+        <path d="M4 17.5 12 22l8-4.5" />
+      </svg>
+    );
+  }
   return (
     <svg {...common}>
-      <path d="M4 7.5 12 3l8 4.5-8 4.5z" />
-      <path d="M4 12.5 12 17l8-4.5" />
-      <path d="M4 17.5 12 22l8-4.5" />
+      <path d="M4 6h16v12H4z" />
+      <path d="m4 7 8 6 8-6" />
     </svg>
   );
 }
@@ -101,28 +106,11 @@ export default function Home() {
     { question: t("answerQ2"), answer: t("answerA2") },
     { question: t("answerQ3"), answer: t("answerA3") },
     { question: t("answerQ4"), answer: t("answerA4") },
+    { question: t("answerQ5"), answer: t("answerA5") },
   ];
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": `${siteUrl}/#faq`,
-    url: siteUrl,
-    mainEntity: answerItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
 
   return (
     <main className="wrap">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
       <section className="hero-section hero-section--platform">
         <div className="hero-layout">
           <div className="hero-copy">
