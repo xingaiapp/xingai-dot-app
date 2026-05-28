@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { isNavActive, type NavKey } from "../lib/nav-links";
+import { useLocalePath } from "../lib/use-locale-path";
 import { useTheme } from "./ThemeContext";
 import NavIcon from "./NavIcon";
 
@@ -20,16 +21,17 @@ export default function MobileNavDrawer({
 }: MobileNavDrawerProps) {
   const pathname = usePathname();
   const { t } = useTranslation();
+  const localePath = useLocalePath();
   const { theme, mounted } = useTheme();
   const logoSrc =
     mounted && theme === "dark" ? "/xingai-logo-dark.png" : "/xingai-logo.png";
   const mainLinks: { href: string; label: string; icon: NavKey }[] = [
-    { href: "/", label: t("navHome"), icon: "navHome" },
-    { href: "/apps", label: t("drawerAiSystems"), icon: "navApps" },
-    { href: "/apps", label: t("drawerFreeDemo"), icon: "navApps" },
-    { href: "/story", label: t("navStory"), icon: "navStory" },
-    { href: "/about", label: t("navAbout"), icon: "navAbout" },
-    { href: "/contact", label: t("navContact"), icon: "navContact" },
+    { href: localePath("/"), label: t("navHome"), icon: "navHome" },
+    { href: localePath("/apps"), label: t("drawerAiSystems"), icon: "navApps" },
+    { href: localePath("/apps"), label: t("drawerFreeDemo"), icon: "navApps" },
+    { href: localePath("/story"), label: t("navStory"), icon: "navStory" },
+    { href: localePath("/about"), label: t("navAbout"), icon: "navAbout" },
+    { href: localePath("/contact"), label: t("navContact"), icon: "navContact" },
   ];
 
   const close = useCallback(() => onOpenChange(false), [onOpenChange]);
@@ -68,9 +70,9 @@ export default function MobileNavDrawer({
       >
         <div className="mobile-drawer__head">
           <Link
-            href="/"
+            href={localePath("/")}
             className="mobile-drawer__logo-link"
-            aria-label="xingai.app home"
+            aria-label="XingAI home"
             onClick={close}
           >
             <Image

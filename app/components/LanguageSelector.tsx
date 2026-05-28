@@ -1,13 +1,17 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { localeLabels, type Locale } from "../i18n/translations";
+import { switchLocalePath } from "../lib/locale-routing";
 
 const locales: Locale[] = ["en", "zh", "ko"];
 
 export default function LanguageSelector() {
   const { locale, setLocale } = useTranslation();
+  const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -31,6 +35,7 @@ export default function LanguageSelector() {
   const handleSelect = (l: Locale) => {
     setLocale(l);
     setOpen(false);
+    router.push(switchLocalePath(pathname, l));
   };
 
   return (
@@ -44,7 +49,9 @@ export default function LanguageSelector() {
         aria-label="Language"
       >
         {localeLabels[locale]}
-        <span className="lang-chevron" aria-hidden="true">▾</span>
+        <span className="lang-chevron" aria-hidden="true">
+          ▾
+        </span>
       </button>
       {open && (
         <ul className="lang-menu" role="listbox" aria-label="Select language">

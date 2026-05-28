@@ -8,7 +8,8 @@ import NavIcon from "./NavIcon";
 
 export default function MobileBottomNav() {
   const pathname = usePathname();
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
+  const navLinks = primaryNavLinks(locale);
 
   return (
     <nav
@@ -16,7 +17,7 @@ export default function MobileBottomNav() {
       aria-label={t("footerNav")}
     >
       <ul className="mobile-bottom-nav__list">
-        {primaryNavLinks.map(({ href, key }) => {
+        {navLinks.map(({ href, key }) => {
           const active = isNavActive(pathname, href);
           return (
             <li key={href} className="mobile-bottom-nav__item">

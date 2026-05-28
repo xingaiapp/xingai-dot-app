@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "../i18n/LanguageContext";
+import { useLocalePath } from "../lib/use-locale-path";
 import { useTheme } from "./ThemeContext";
 type ResourceIconName = "github" | "linkedin" | "x";
 type FooterIconName =
@@ -116,6 +117,7 @@ function FooterLinkIcon({ name }: { name: FooterIconName }) {
 
 export default function Footer() {
   const { t } = useTranslation();
+  const p = useLocalePath();
   const { theme, mounted } = useTheme();
   const logoSrc =
     mounted && theme === "dark" ? "/xingai-logo-dark.png" : "/xingai-logo.png";
@@ -128,10 +130,10 @@ export default function Footer() {
           <p>{t("footerCtaLead")}</p>
         </div>
         <div className="footer-cta__actions">
-          <Link href="/apps" className="cta">
+          <Link href={p("/apps")} className="cta">
             {t("footerTryDemo")} <span aria-hidden="true">→</span>
           </Link>
-          <Link href="/apps" className="cta cta--outline">
+          <Link href={p("/apps")} className="cta cta--outline">
             {t("footerSeeSystems")} <span aria-hidden="true">→</span>
           </Link>
         </div>
@@ -152,19 +154,19 @@ export default function Footer() {
         <nav className="footer-column" aria-label={t("footerProduct")}>
           <span className="footer-column__label">{t("footerProduct")}</span>
           <div className="footer-column__links">
-            <Link href="/apps" className="footer-icon-link">
+            <Link href={p("/apps")} className="footer-icon-link">
               <FooterLinkIcon name="systems" />
               <span>{t("drawerAiSystems")}</span>
             </Link>
-            <Link href="/apps" className="footer-icon-link">
+            <Link href={p("/apps")} className="footer-icon-link">
               <FooterLinkIcon name="demo" />
               <span>{t("drawerFreeDemo")}</span>
             </Link>
-            <Link href="/story" className="footer-icon-link">
+            <Link href={p("/story")} className="footer-icon-link">
               <FooterLinkIcon name="systems" />
               <span>{t("navStory")}</span>
             </Link>
-            <Link href="/contact" className="footer-icon-link">
+            <Link href={p("/contact")} className="footer-icon-link">
               <FooterLinkIcon name="custom" />
               <span>{t("footerCustomAi")}</span>
             </Link>
@@ -174,11 +176,11 @@ export default function Footer() {
         <nav className="footer-column" aria-label={t("footerCompany")}>
           <span className="footer-column__label">{t("footerCompany")}</span>
           <div className="footer-column__links">
-            <Link href="/about" className="footer-icon-link">
+            <Link href={p("/about")} className="footer-icon-link">
               <FooterLinkIcon name="about" />
               <span>{t("navAbout")}</span>
             </Link>
-            <Link href="/contact" className="footer-icon-link">
+            <Link href={p("/contact")} className="footer-icon-link">
               <FooterLinkIcon name="contact" />
               <span>{t("navContact")}</span>
             </Link>
@@ -188,15 +190,15 @@ export default function Footer() {
         <nav className="footer-column" aria-label={t("footerLegal")}>
           <span className="footer-column__label">{t("footerLegal")}</span>
           <div className="footer-column__links">
-            <Link href="/legal/privacy" className="footer-icon-link">
+            <Link href={p("/legal/privacy")} className="footer-icon-link">
               <FooterLinkIcon name="legal" />
               <span>{t("footerPrivacy")}</span>
             </Link>
-            <Link href="/legal/terms" className="footer-icon-link">
+            <Link href={p("/legal/terms")} className="footer-icon-link">
               <FooterLinkIcon name="legal" />
               <span>{t("footerTerms")}</span>
             </Link>
-            <Link href="/legal/disclaimer" className="footer-icon-link">
+            <Link href={p("/legal/disclaimer")} className="footer-icon-link">
               <FooterLinkIcon name="legal" />
               <span>{t("footerDisclaimer")}</span>
             </Link>
@@ -241,9 +243,9 @@ export default function Footer() {
         <div className="footer-bottom__meta">
           <span>&copy; {new Date().getFullYear()} xingai.app</span>
           <nav className="footer-legal-inline" aria-label={t("footerLegal")}>
-            <Link href="/legal/privacy">{t("footerPrivacy")}</Link>
-            <Link href="/legal/terms">{t("footerTerms")}</Link>
-            <Link href="/legal/disclaimer">{t("footerDisclaimer")}</Link>
+            <Link href={p("/legal/privacy")}>{t("footerPrivacy")}</Link>
+            <Link href={p("/legal/terms")}>{t("footerTerms")}</Link>
+            <Link href={p("/legal/disclaimer")}>{t("footerDisclaimer")}</Link>
           </nav>
         </div>
       </div>

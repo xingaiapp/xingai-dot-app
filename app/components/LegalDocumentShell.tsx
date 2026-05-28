@@ -4,6 +4,7 @@ import {
   legalDocIds,
   type LegalDocId,
 } from "../i18n/legal-content";
+import { localizePath } from "../lib/locale-routing";
 import { getServerLocale } from "../lib/locale";
 import translations, { type TranslationKey } from "../i18n/translations";
 
@@ -15,6 +16,7 @@ export default async function LegalDocumentShell({ docId }: Props) {
   const locale = await getServerLocale();
   const labels = translations[locale];
   const doc = getLegalDoc(locale, docId);
+  const path = (p: string) => localizePath(locale, p);
   const otherDocs = legalDocIds.filter((id) => id !== docId);
 
   const relatedLabelKeys: Record<LegalDocId, TranslationKey> = {
@@ -26,7 +28,7 @@ export default async function LegalDocumentShell({ docId }: Props) {
   return (
     <main className="wrap legal-wrap">
       <section className="page-header">
-        <Link href="/" className="breadcrumb">
+        <Link href={path("/")} className="breadcrumb">
           &larr; {labels.navHome}
         </Link>
         <h1 className="page-heading">{doc.title}</h1>
@@ -52,11 +54,11 @@ export default async function LegalDocumentShell({ docId }: Props) {
         <ul>
           {otherDocs.map((id) => (
             <li key={id}>
-              <Link href={`/legal/${id}`}>{labels[relatedLabelKeys[id]]}</Link>
+              <Link href={path(`/legal/${id}`)}>{labels[relatedLabelKeys[id]]}</Link>
             </li>
           ))}
           <li>
-            <Link href="/contact">{labels.navContact}</Link>
+            <Link href={path("/contact")}>{labels.navContact}</Link>
           </li>
         </ul>
       </nav>

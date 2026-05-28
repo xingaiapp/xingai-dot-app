@@ -1,7 +1,5 @@
-import translations from "../i18n/translations";
-import { siteUrl } from "./site-seo";
+import translations, { type Locale } from "../i18n/translations";
 
-/** English FAQ for crawlers / AEO (visible UI still follows user locale). */
 const FAQ_KEYS: { q: keyof (typeof translations)["en"]; a: keyof (typeof translations)["en"] }[] =
   [
     { q: "answerQ1", a: "answerA1" },
@@ -11,20 +9,25 @@ const FAQ_KEYS: { q: keyof (typeof translations)["en"]; a: keyof (typeof transla
     { q: "answerQ5", a: "answerA5" },
   ];
 
-export function buildHomeFaqJsonLd() {
-  const en = translations.en;
+function faqLanguageTag(locale: Locale): string {
+  if (locale === "zh") return "zh-CN";
+  if (locale === "ko") return "ko";
+  return "en";
+}
+
+export function buildHomeFaqJsonLd(locale: Locale, pageUrl: string) {
+  const copy = translations[locale];
   return {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": `${siteUrl}/#faq`,
-    url: siteUrl,
-    inLanguage: "en",
+    "@id": `${pageUrl}#faq`,
+    url: pageUrl,
+    inLanguage: faqLanguageTag(locale),
     mainEntity: FAQ_KEYS.map(({ q, a }) => ({
       "@type": "Question",
-      name: en[q],
+      name: copy[q],
       acceptedAnswer: {
         "@type": "Answer",
-        text: en[a],
+        text: copy[a],
       },
     })),
   };

@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import LocaleLink from "../components/LocaleLink";
 import { useEffect, useState } from "react";
-import { useTranslation } from "./i18n/LanguageContext";
-import { getLocalizedApps, type AppLaunchStatus } from "./data/apps";
-import AppIcon from "./components/AppIcon";
-import { APP_ICON_SIZE } from "./lib/app-icon";
-import AppDemoScreenshot from "./components/AppDemoScreenshot";
+import { useTranslation } from "../i18n/LanguageContext";
+import { getLocalizedApps, type AppLaunchStatus } from "../data/apps";
+import AppIcon from "../components/AppIcon";
+import { APP_ICON_SIZE } from "../lib/app-icon";
+import AppDemoScreenshot from "../components/AppDemoScreenshot";
 
 function AnswerIcon({ index }: { index: number }) {
   const common = {
@@ -119,15 +120,15 @@ export default function Home() {
             <h1 className="tagline">{t("tagline")}</h1>
             <p className="hero-sub">{t("heroSub")}</p>
             <p className="hero-story-link">
-              <Link href="/story">{t("heroStoryLink")} &rarr;</Link>
+              <LocaleLink href="/story">{t("heroStoryLink")} &rarr;</LocaleLink>
             </p>
             <div className="hero-actions">
-              <Link href="/apps" className="cta">
+              <LocaleLink href="/apps" className="cta">
                 {t("viewAllApps")}
-              </Link>
-              <Link href="/contact" className="cta cta--outline">
+              </LocaleLink>
+              <LocaleLink href="/contact" className="cta cta--outline">
                 {t("homeCta")}
-              </Link>
+              </LocaleLink>
             </div>
             <p className="hero-beta-note">{t("publicBetaNote")}</p>
             {heroQuickDemos.length > 0 ? (
@@ -171,7 +172,7 @@ export default function Home() {
           {heroPrimaryApp ? (
             <div className="hero-preview" aria-label={t("heroPreviewLabel")}>
               <div className="hero-preview-stage">
-              <Link
+              <LocaleLink
                 href={`/apps/${heroPrimaryApp.slug}`}
                 className="hero-preview-card"
               >
@@ -212,7 +213,7 @@ export default function Home() {
                     </div>
                   </dl>
                 </div>
-              </Link>
+              </LocaleLink>
               </div>
 
               {heroPreviewApps.length > 1 ? (
@@ -237,15 +238,15 @@ export default function Home() {
               <div className="hero-core">
                 <div className="hero-core-head">
                   <h2>{t("heroCoreSystems")}</h2>
-                  <Link href="/apps">
+                  <LocaleLink href="/apps">
                     {t("footerSeeSystems")}
                     <span aria-hidden="true"> →</span>
-                  </Link>
+                  </LocaleLink>
                 </div>
                 <ul className="hero-core-grid" aria-label={t("heroGridLabel")}>
                   {heroPreviewApps.map((app) => (
                     <li key={app.slug}>
-                      <Link
+                      <LocaleLink
                         href={`/apps/${app.slug}`}
                         className={`hero-core-card${
                           app.slug === heroPrimaryApp.slug ? " hero-core-card--active" : ""
@@ -260,7 +261,7 @@ export default function Home() {
                         />
                         <span>{app.name}</span>
                         <small>{app.tagline}</small>
-                      </Link>
+                      </LocaleLink>
                     </li>
                   ))}
                 </ul>
@@ -311,7 +312,7 @@ export default function Home() {
           </li>
 
           <li className="app-card">
-            <Link href="/contact" className="app-card-link">
+            <LocaleLink href="/contact" className="app-card-link">
               <AppDemoScreenshot
                 shot={{
                   src: "/t-today-demo-light.jpg",
@@ -335,7 +336,7 @@ export default function Home() {
                   {t("homeDemoRequestEarlyAccess")} &rarr;
                 </span>
               </div>
-            </Link>
+            </LocaleLink>
           </li>
         </ul>
 
@@ -351,7 +352,7 @@ export default function Home() {
         <ul className="app-cards">
           {apps.map((app) => (
             <li key={app.slug} className="app-card">
-              <Link href={`/apps/${app.slug}`} className="app-card-link">
+              <LocaleLink href={`/apps/${app.slug}`} className="app-card-link">
                 {app.screenshots[0] ? (
                   <AppDemoScreenshot
                     shot={app.screenshots[0]}
@@ -398,7 +399,7 @@ export default function Home() {
                     </div>
                   </dl>
                 </div>
-              </Link>
+              </LocaleLink>
             </li>
           ))}
         </ul>
@@ -434,9 +435,9 @@ export default function Home() {
           <li>{t("buildPoint2")}</li>
           <li>{t("buildPoint3")}</li>
         </ul>
-        <Link href="/contact" className="cta">
+        <LocaleLink href="/contact" className="cta">
           {t("buildCta")}
-        </Link>
+        </LocaleLink>
       </section>
 
       <section className="home-cofounders" aria-labelledby="home-cofounders-heading">

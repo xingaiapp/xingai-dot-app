@@ -5,15 +5,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "../i18n/LanguageContext";
 import { isNavActive, primaryNavLinks } from "../lib/nav-links";
+import { useLocalePath } from "../lib/use-locale-path";
 import { useTheme } from "./ThemeContext";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
 import MobileNavDrawer, { useMobileNavDrawer } from "./MobileNavDrawer";
 
 export default function Header() {
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
   const { theme, mounted } = useTheme();
   const pathname = usePathname();
+  const localePath = useLocalePath();
+  const navLinks = primaryNavLinks(locale);
   const { open, setOpen, toggle } = useMobileNavDrawer();
   const logoSrc =
     mounted && theme === "dark" ? "/xingai-logo-dark.png" : "/xingai-logo.png";
@@ -35,7 +38,7 @@ export default function Header() {
             <span className="header-menu-btn__bar" aria-hidden />
           </button>
 
-          <Link href="/" className="header-logo-link" aria-label="xingai.app home">
+          <Link href={localePath("/")} className="header-logo-link" aria-label="XingAI home">
             <Image
               src={logoSrc}
               alt="xingai.app"
@@ -50,7 +53,7 @@ export default function Header() {
             className="header-nav header-nav--desktop"
             aria-label="Main navigation"
           >
-            {primaryNavLinks.map(({ href, key }) => (
+            {navLinks.map(({ href, key }) => (
               <Link
                 key={href}
                 href={href}

@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslation } from "../i18n/LanguageContext";
-import { getLocalizedApps, type AppLaunchStatus } from "../data/apps";
+import LocaleLink from "../../components/LocaleLink";
+import { useTranslation } from "../../i18n/LanguageContext";
+import { getLocalizedApps, type AppLaunchStatus } from "../../data/apps";
 import {
   ecosystemClusters,
   investFlowSteps,
-} from "../data/ecosystem";
-import AppIcon from "../components/AppIcon";
-import { APP_ICON_SIZE } from "../lib/app-icon";
+} from "../../data/ecosystem";
+import AppIcon from "../../components/AppIcon";
+import { APP_ICON_SIZE } from "../../lib/app-icon";
 
 export default function StoryPage() {
   const { locale, t } = useTranslation();
@@ -62,7 +63,7 @@ export default function StoryPage() {
                   if (!app) return null;
                   return (
                     <li key={slug}>
-                      <Link href={`/apps/${slug}`} className="story-product-link">
+                      <LocaleLink href={`/apps/${slug}`} className="story-product-link">
                         <AppIcon
                           light={app.icon}
                           dark={app.iconDark}
@@ -79,7 +80,7 @@ export default function StoryPage() {
                         >
                           {statusLabels[app.launchStatus]}
                         </span>
-                      </Link>
+                      </LocaleLink>
                     </li>
                   );
                 })}
@@ -108,9 +109,9 @@ export default function StoryPage() {
                   <h3 className="story-invest-flow__name">{app.name}</h3>
                   <p className="story-invest-flow__role">{t(step.roleKey)}</p>
                   <div className="story-invest-flow__actions">
-                    <Link href={`/apps/${step.slug}`} className="story-inline-link">
+                    <LocaleLink href={`/apps/${step.slug}`} className="story-inline-link">
                       {t("appViewDetails")} &rarr;
-                    </Link>
+                    </LocaleLink>
                     {app.demoUrl && !app.earlyAccess ? (
                       <a
                         href={app.demoUrl}
@@ -122,9 +123,9 @@ export default function StoryPage() {
                       </a>
                     ) : null}
                     {app.earlyAccess ? (
-                      <Link href="/contact" className="story-inline-link">
+                      <LocaleLink href="/contact" className="story-inline-link">
                         {t("homeDemoRequestEarlyAccess")} &rarr;
-                      </Link>
+                      </LocaleLink>
                     ) : null}
                   </div>
                 </div>
@@ -141,21 +142,21 @@ export default function StoryPage() {
         </h2>
         <p>{t("storyTryLead")}</p>
         <div className="story-try-actions">
-          <Link href="/apps" className="cta">
+          <LocaleLink href="/apps" className="cta">
             {t("viewAllApps")} &rarr;
-          </Link>
-          <Link href="/contact" className="cta cta--outline">
+          </LocaleLink>
+          <LocaleLink href="/contact" className="cta cta--outline">
             {t("homeCta")} &rarr;
-          </Link>
+          </LocaleLink>
         </div>
       </section>
 
       <section className="story-section story-about-link">
         <p>
           {t("storyAboutTeaser")}{" "}
-          <Link href="/about" className="story-inline-link">
+          <LocaleLink href="/about" className="story-inline-link">
             {t("navAbout")} &rarr;
-          </Link>
+          </LocaleLink>
         </p>
       </section>
     </main>

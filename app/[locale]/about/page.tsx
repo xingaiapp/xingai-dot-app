@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "../i18n/LanguageContext";
+import LocaleLink from "../../components/LocaleLink";
+import { useTranslation } from "../../i18n/LanguageContext";
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export default function AboutPage() {
         <h1 className="page-heading">{t("aboutHeading")}</h1>
         <p className="page-lead">{t("aboutLead")}</p>
         <p className="about-story-link">
-          <Link href="/story">{t("aboutStoryLink")} &rarr;</Link>
+          <LocaleLink href="/story">{t("aboutStoryLink")} &rarr;</LocaleLink>
         </p>
       </section>
 

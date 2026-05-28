@@ -8,7 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "capture:demos": "node scripts/capture-invest-demos.mjs"
+    "capture:demos": "node scripts/capture-invest-demos.mjs",
+    "generate:icons": "node scripts/generate-invest-product-icons.mjs && node scripts/generate-story-og.mjs",
+    "generate:seo-og": "node scripts/generate-seo-og.mjs",
+    "generate:assets": "npm run generate:icons && npm run generate:seo-og"
   },
   "dependencies": {
     "next": "^15.3.2",

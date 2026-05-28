@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Performance Sim">
+  <circle cx="256" cy="256" r="228" fill="none" stroke="currentColor" stroke-width="28"/>
+  <rect x="132" y="118" width="248" height="292" rx="18" fill="none" stroke="currentColor" stroke-width="20" stroke-dasharray="32 20"/>
+  <rect x="172" y="292" width="44" height="88" rx="8" fill="currentColor"/>
+  <rect x="234" y="248" width="44" height="132" rx="8" fill="currentColor"/>
+  <rect x="296" y="204" width="44" height="176" rx="8" fill="currentColor"/>
+  <path d="M 168 168 H 344" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round"/>
+  <path d="M 168 208 H 300" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="352" cy="156" r="20" fill="#22c55e"/>
+</svg>

@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslation } from "../i18n/LanguageContext";
-import { getLocalizedApps, type AppLaunchStatus } from "../data/apps";
-import AppIcon from "../components/AppIcon";
-import AppDemoScreenshot from "../components/AppDemoScreenshot";
+import LocaleLink from "../../components/LocaleLink";
+import { useTranslation } from "../../i18n/LanguageContext";
+import { getLocalizedApps, type AppLaunchStatus } from "../../data/apps";
+import AppIcon from "../../components/AppIcon";
+import AppDemoScreenshot from "../../components/AppDemoScreenshot";
 
 export default function AppsPage() {
   const { locale, t } = useTranslation();
@@ -25,7 +26,7 @@ export default function AppsPage() {
       <ul className="app-cards app-cards--full">
         {apps.map((app) => (
           <li key={app.slug} className="app-card">
-            <Link href={`/apps/${app.slug}`} className="app-card-link">
+            <LocaleLink href={`/apps/${app.slug}`} className="app-card-link">
               {app.screenshots[0] ? (
                 <AppDemoScreenshot
                   shot={app.screenshots[0]}
@@ -74,7 +75,7 @@ export default function AppsPage() {
                 <p className="app-card-desc">{app.description}</p>
                 <span className="app-card-action">{t("appViewDetails")} &rarr;</span>
               </div>
-            </Link>
+            </LocaleLink>
           </li>
         ))}
       </ul>

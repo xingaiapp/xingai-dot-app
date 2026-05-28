@@ -28,20 +28,24 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
+export function LanguageProvider({
+  children,
+  initialLocale = DEFAULT_LOCALE,
+}: {
+  children: ReactNode;
+  initialLocale?: Locale;
+}) {
+  const [locale, setLocaleState] = useState<Locale>(initialLocale);
+
+  useEffect(() => {
+    setLocaleState(initialLocale);
+    document.documentElement.setAttribute("lang", initialLocale);
+    persistLocaleCookie(initialLocale);
+    localStorage.setItem(LOCALE_STORAGE_KEY, initialLocale);
+  }, [initialLocale]);
 
   useEffect(() => {
     localStorage.removeItem(LEGACY_LOCALE_STORAGE_KEY);
-    const stored = localStorage.getItem(LOCALE_STORAGE_KEY) as Locale | null;
-    if (stored && stored in translations) {
-      setLocaleState(stored);
-      document.documentElement.setAttribute("lang", stored);
-      persistLocaleCookie(stored);
-      return;
-    }
-    document.documentElement.setAttribute("lang", DEFAULT_LOCALE);
-    persistLocaleCookie(DEFAULT_LOCALE);
   }, []);
 
   const setLocale = useCallback((l: Locale) => {

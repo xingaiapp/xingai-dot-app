@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import LocaleLink from "../../../components/LocaleLink";
 import { useParams } from "next/navigation";
 import { useEffect } from "react";
-import { useTranslation } from "../../i18n/LanguageContext";
-import { getLocalizedAppBySlug } from "../../data/apps";
-import AppIcon from "../../components/AppIcon";
-import AppDemoScreenshot from "../../components/AppDemoScreenshot";
+import { useTranslation } from "../../../i18n/LanguageContext";
+import { getLocalizedAppBySlug } from "../../../data/apps";
+import AppIcon from "../../../components/AppIcon";
+import AppDemoScreenshot from "../../../components/AppDemoScreenshot";
 
 const statusLabel: Record<string, string> = {
   shipped: "Shipped",
@@ -38,7 +39,7 @@ export default function AppDetailPage() {
         <section className="page-header">
           <h1 className="page-heading">App not found</h1>
           <p className="page-lead">
-            <Link href="/apps">&larr; {t("backToHome")}</Link>
+            <LocaleLink href="/apps">&larr; {t("backToHome")}</LocaleLink>
           </p>
         </section>
       </main>
@@ -54,9 +55,9 @@ export default function AppDetailPage() {
   return (
     <main className="wrap">
       <section className="page-header">
-        <Link href="/apps" className="breadcrumb">
+        <LocaleLink href="/apps" className="breadcrumb">
           &larr; {t("appsHeading")}
-        </Link>
+        </LocaleLink>
         <div className="page-heading-row">
           <AppIcon
             light={app.icon}
@@ -69,9 +70,9 @@ export default function AppDetailPage() {
         <p className="page-lead">{app.description}</p>
         <div className="page-cta-row">
           {app.earlyAccess ? (
-            <Link href="/contact" className="cta">
+            <LocaleLink href="/contact" className="cta">
               {t("appEarlyAccessCta")} &rarr;
-            </Link>
+            </LocaleLink>
           ) : null}
           {app.demoUrl && (
             <a
@@ -94,9 +95,9 @@ export default function AppDetailPage() {
           <p className="section-lead detail-coming-soon__text">
             {t("appTTodayEarlyAccessBanner")}
           </p>
-          <Link href="/contact" className="cta">
+          <LocaleLink href="/contact" className="cta">
             {t("appEarlyAccessCta")} &rarr;
-          </Link>
+          </LocaleLink>
         </section>
       )}
 
@@ -108,9 +109,9 @@ export default function AppDetailPage() {
           <p className="section-lead detail-coming-soon__text">
             {t("appComingSoonBanner")}
           </p>
-          <Link href="/contact" className="cta">
+          <LocaleLink href="/contact" className="cta">
             {t("appEarlyAccessCta")}
-          </Link>
+          </LocaleLink>
         </section>
       )}
 
@@ -212,9 +213,9 @@ export default function AppDetailPage() {
       <section className="detail-section custom-section">
         <h2 className="detail-heading">{t("appCustom")}</h2>
         <p className="section-lead">{t("appCustomText")}</p>
-        <Link href="/contact" className="cta">
+        <LocaleLink href="/contact" className="cta">
           {t("contactHeading")}
-        </Link>
+        </LocaleLink>
       </section>
 
       {/* Roadmap */}

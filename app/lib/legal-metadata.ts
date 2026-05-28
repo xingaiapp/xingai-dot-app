@@ -1,19 +1,30 @@
 import type { Metadata } from "next";
-import { legalDocsByLocale, type LegalDocId } from "../i18n/legal-content";
+import { getLegalDoc, type LegalDocId } from "../i18n/legal-content";
+import type { Locale } from "../i18n/translations";
+import { pageAlternates, localizedOpenGraph } from "./localized-seo";
+import { publicUrl } from "./locale-routing";
+import { formatPageTitle } from "./site-seo";
+import { ogImageMeta, defaultOgImage } from "./site-seo";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
+const legalOg = ogImageMeta(defaultOgImage, "XingAI legal information");
 
-export function legalPageMetadata(docId: LegalDocId): Metadata {
-  const doc = legalDocsByLocale.en[docId];
+export function legalPageMetadata(locale: Locale, docId: LegalDocId): Metadata {
+  const doc = getLegalDoc(locale, docId);
+  const path = `/legal/${docId}`;
+  const url = publicUrl(locale, path);
+
   return {
     title: doc.title,
     description: doc.metaDescription,
-    alternates: { canonical: `${siteUrl}/legal/${docId}` },
+    alternates: pageAlternates(locale, path),
     openGraph: {
-      title: `${doc.title} | XingAI`,
+      ...localizedOpenGraph(locale, path, doc.title, doc.metaDescription, legalOg),
+      url,
+    },
+    twitter: {
+      card: "summary",
+      title: formatPageTitle(doc.title),
       description: doc.metaDescription,
-      url: `${siteUrl}/legal/${docId}`,
     },
   };
 }

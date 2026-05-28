@@ -11,8 +11,10 @@ Applies to `xingai-dot-app` (xingai.app).
 ## Language (EN / 中文 / 한국어)
 
 - UI: `LanguageProvider` + `translations.ts`; persist `xingai.locale` cookie + `localStorage`.
-- SEO: page `<html lang>` set from cookie in root init script; JSON-LD FAQ uses **English** for stable crawler/AEO text (`app/lib/home-faq-schema.ts`).
-- Visible FAQ and copy follow the user’s selected locale.
+- SEO URLs: English at `/…`; 中文 at `/zh/…`; 한국어 at `/ko/…` (`middleware.ts` + `app/lib/locale-routing.ts`). Language switcher navigates paths, not cookie-only.
+- `hreflang` + canonical per locale (`app/lib/localized-seo.ts`).
+- JSON-LD FAQ uses **locale-matched** copy (`app/lib/home-faq-schema.ts`).
+- **Checklist before deploy:** [`docs/seo-aeo-checklist.md`](./seo-aeo-checklist.md).
 
 ## Theme (light / dark)
 
@@ -22,15 +24,22 @@ Applies to `xingai-dot-app` (xingai.app).
 
 ## SEO
 
-- `metadataBase`, canonical URLs, Open Graph + Twitter per route.
-- `sitemap.xml`, `robots.txt`, per-app `SoftwareApplication` + `BreadcrumbList` JSON-LD.
-- App pages use product screenshot for `og:image` when available.
+- `metadataBase`, canonical URLs, Open Graph + Twitter per route (under `app/[locale]/…`).
+- Marketing OG: `home-og.jpg`, `apps-og.jpg`, `story-og.jpg` — regenerate `npm run generate:assets`.
+- `sitemap.xml` (EN + zh + ko + alternates), `robots.txt`.
+- Per-app `SoftwareApplication` + `BreadcrumbList` JSON-LD; catalog pages use `CollectionPage` + `ItemList`.
+- App detail `og:image` = first screenshot when available.
 
 ## AEO (AI search / answer engines)
 
-- Homepage **FAQ** block + `FAQPage` schema (5+ concrete Q&A).
-- Root `Organization`, `WebSite`, `ItemList` of products in `layout.tsx`.
+- Homepage **FAQ** block + **`FAQPage`** in JSON-LD `@graph` (5 Q&A; en/zh/ko per URL).
+- **`Organization`**, **`WebSite`**, **`WebPage`**, **`ItemList`**, **10× `SoftwareApplication`** on home (`app/lib/seo-json-ld.ts`).
 - Short, factual answers; name real domains (`lab.xingai.app`, `t.xingai.app`, `invest.xingai.app`).
+
+## Invest product icons & Story OG
+
+- **Performance Sim** / **T Today**: distinct icons in `public/*-icon.png` (source SVG in `scripts/brand/`). Regenerate: `npm run generate:icons`
+- **Story page** share image: `public/story-og.jpg` (1200×630), wired in `app/[locale]/story/layout.tsx`
 
 ## Regenerating invest demo shots
 

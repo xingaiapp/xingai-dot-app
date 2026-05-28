@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="T Today">
+  <circle cx="256" cy="256" r="228" fill="none" stroke="currentColor" stroke-width="28"/>
+  <path
+    d="M 128 340 L 200 280 L 268 308 L 384 168"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="26"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.45"
+  />
+  <path fill="currentColor" d="M 156 148 H 356 V 208 H 286 V 380 H 226 V 208 H 156 Z" />
+  <circle cx="384" cy="148" r="20" fill="currentColor" opacity="0.75" />
+</svg>
