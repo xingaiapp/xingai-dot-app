@@ -160,6 +160,10 @@ export default function Footer() {
               <FooterLinkIcon name="demo" />
               <span>{t("drawerFreeDemo")}</span>
             </Link>
+            <Link href="/story" className="footer-icon-link">
+              <FooterLinkIcon name="systems" />
+              <span>{t("navStory")}</span>
+            </Link>
             <Link href="/contact" className="footer-icon-link">
               <FooterLinkIcon name="custom" />
               <span>{t("footerCustomAi")}</span>

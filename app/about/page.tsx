@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation } from "../i18n/LanguageContext";
 
 export default function AboutPage() {
@@ -11,6 +12,9 @@ export default function AboutPage() {
       <section className="page-header">
         <h1 className="page-heading">{t("aboutHeading")}</h1>
         <p className="page-lead">{t("aboutLead")}</p>
+        <p className="about-story-link">
+          <Link href="/story">{t("aboutStoryLink")} &rarr;</Link>
+        </p>
       </section>
 
       <section className="about-cofounders" aria-labelledby="about-cofounders-heading">

@@ -118,6 +118,9 @@ export default function Home() {
             <p className="hero-value-pill">{t("heroValuePill")}</p>
             <h1 className="tagline">{t("tagline")}</h1>
             <p className="hero-sub">{t("heroSub")}</p>
+            <p className="hero-story-link">
+              <Link href="/story">{t("heroStoryLink")} &rarr;</Link>
+            </p>
             <div className="hero-actions">
               <Link href="/apps" className="cta">
                 {t("viewAllApps")}

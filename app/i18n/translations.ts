@@ -11,6 +11,7 @@ const translations = {
     // Nav
     navHome: "Home",
     navApps: "Apps",
+    navStory: "Story",
     navAbout: "About",
     navContact: "Contact",
     navMenu: "Menu",
@@ -48,6 +49,7 @@ const translations = {
     tagline: "Get the right decision, every time.",
     heroSub:
       "Mobile-first AI tools for everyday decisions — meals, cooking, style, routines, SAT, and investing (including Performance Sim at lab.xingai.app and T Today at t.xingai.app). Light/dark themes · EN / 中文 / 한국어.",
+    heroStoryLink: "How it fits together",
     heroGridLabel: "Our AI decision systems",
     heroPreviewLabel: "System preview",
     heroCoreSystems: "Explore core systems",
@@ -122,6 +124,46 @@ const translations = {
     aboutStackText: "Next.js for the frontend. FastAPI for the backend. Local AI models where privacy matters. Vercel for deployment. Everything open where possible.",
     aboutBuilding: "Building in public",
     aboutBuildingText: "Experiments, refinements, and releases\u2014we share the process on GitHub, LinkedIn, and X. We favor shipping and iterating over perfecting in silence.",
+    aboutStoryLink: "How our products fit together",
+
+    // Story / ecosystem
+    storyEyebrow: "Product map",
+    storyHeading: "How XingAI fits together",
+    storyLead:
+      "One platform of focused decision systems\u2014not a pile of chatbots. Everyday tools and an invest cluster that share mobile-first web apps, light/dark themes, and EN / \u4e2d\u6587 / \ud55c\uad6d\uc5b4 where supported.",
+    storyPrincipleTitle: "What we build",
+    storyPrincipleLead:
+      "Each app answers one decision with structured output and a clear next step.",
+    storyPrinciplePoint1:
+      "Everyday: what to eat, cook, wear, practice, plan travel, or coordinate family tasks.",
+    storyPrinciplePoint2:
+      "Same UX habits across products: mobile web, theme toggle, localized UI on the marketing site and in apps that ship i18n.",
+    storyPrinciplePoint3:
+      "Invest: dashboard context on invest.xingai.app, paper rule tests on lab.xingai.app, daily T plans on t.xingai.app (early access).",
+    storyClustersTitle: "Two clusters",
+    storyClustersLead:
+      "Apps work standalone. Invest tools are meant to reinforce each other without one forced login.",
+    storyClusterEverydayTitle: "Everyday decisions",
+    storyClusterEverydayLead:
+      "Food, style, habits, SAT, family, and travel\u2014each product owns a single job.",
+    storyClusterInvestTitle: "Invest & trading tools",
+    storyClusterInvestLead:
+      "Portfolio context, Performance Sim on the lab, and T Today for screenshot \u2192 rules \u2192 plan.",
+    storyInvestFlowTitle: "Invest cluster flow",
+    storyInvestFlowLead:
+      "Read macro and symbol context first, stress-test rules on the lab, then request free early access for T Today when you want a daily plan.",
+    storyInvestRoleCore:
+      "invest.xingai.app \u2014 decision dashboard: macro radar, allocations, and symbol context from precomputed cache.",
+    storyInvestRoleLab:
+      "lab.xingai.app \u2014 Performance Sim: same signals, different rule sets; paper ledger outcomes.",
+    storyInvestRoleT:
+      "t.xingai.app \u2014 T Today: holdings screenshot \u2192 rules + AI plan for today. Early access is free to request.",
+    storyInvestDisclaimer:
+      "Paper/simulation only \u00b7 Not investment advice \u00b7 No broker integration.",
+    storyTryTitle: "Try it",
+    storyTryLead:
+      "Open public demos from Apps. For T Today, use Contact\u2014we add you to the allowlist at no cost during early access.",
+    storyAboutTeaser: "Team, mission, and stack:",
 
     // Apps listing
     appsHeading: "Our AI systems",
@@ -186,6 +228,7 @@ const translations = {
   zh: {
     navHome: "\u9996\u9875",
     navApps: "\u5e94\u7528",
+    navStory: "\u751f\u6001",
     navAbout: "\u5173\u4e8e",
     navContact: "\u8054\u7cfb",
     navMenu: "\u83dc\u5355",
@@ -222,6 +265,7 @@ const translations = {
     tagline: "\u6bcf\u4e00\u6b21\uff0c\u90fd\u66f4\u6e05\u695a\u5730\u505a\u51b3\u5b9a\u3002",
     heroSub:
       "\u79fb\u52a8\u7aef\u4f18\u5148\u7684 AI \u65e5\u5e38\u51b3\u7b56\u5de5\u5177\u2014\u996e\u98df\u3001\u70f9\u996a\u3001\u7a7f\u642d\u3001\u4e60\u60ef\u3001SAT\u3001\u6295\u8d44\uff08\u542b lab.xingai.app \u7b56\u7565\u6a21\u62df\u4e0e t.xingai.app \u4eca\u65e5\u505aT\uff09\u3002\u6d45\u8272/\u6df1\u8272\u4e3b\u9898 \u00b7 \u4e2d\u82f1\u97e9\u4e09\u8bed\u3002",
+    heroStoryLink: "\u4ea7\u54c1\u5982\u4f55\u7ec4\u6210\u751f\u6001",
     heroGridLabel: "\u6211\u4eec\u7684 AI \u51b3\u7b56\u7cfb\u7edf",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
     heroCoreSystems: "\u63a2\u7d22\u6838\u5fc3\u7cfb\u7edf",
@@ -292,6 +336,44 @@ const translations = {
     aboutStackText: "\u524d\u7aef Next.js\u3002\u540e\u7aef FastAPI\u3002\u9690\u79c1\u4f18\u5148\u65f6\u4f7f\u7528\u672c\u5730 AI \u6a21\u578b\u3002Vercel \u90e8\u7f72\u3002\u5c3d\u53ef\u80fd\u5f00\u6e90\u3002",
     aboutBuilding: "\u516c\u5f00\u6784\u5efa",
     aboutBuildingText: "\u5b9e\u9a8c\u3001\u4f18\u5316\u548c\u53d1\u5e03\u2014\u2014\u6211\u4eec\u5728 GitHub\u3001LinkedIn \u548c X \u4e0a\u5206\u4eab\u8fc7\u7a0b\u3002\u6211\u4eec\u504f\u597d\u53d1\u5e03\u548c\u8fed\u4ee3\uff0c\u800c\u975e\u65e0\u58f0\u5b8c\u5584\u3002",
+    aboutStoryLink: "\u4ea7\u54c1\u5982\u4f55\u7ec4\u6210\u751f\u6001",
+
+    storyEyebrow: "\u4ea7\u54c1\u5730\u56fe",
+    storyHeading: "XingAI \u4ea7\u54c1\u751f\u6001\u600e\u4e48\u7ec4\u5408",
+    storyLead:
+      "\u4e00\u4e2a\u5e73\u53f0\u3001\u591a\u4e2a\u51b3\u7b56\u7cfb\u7edf\u2014\u2014\u4e0d\u662f\u4e00\u5806\u804a\u5929\u673a\u5668\u4eba\u3002\u65e5\u5e38\u5de5\u5177\u4e0e\u6295\u8d44\u96c6\u7fa4\u5171\u4eab\u79fb\u52a8\u7aef\u3001\u6d45/\u6df1\u8272\u4e3b\u9898\uff0c\u652f\u6301\u82f1\u6587 / \u4e2d\u6587 / \u97e9\u6587\uff08\u5404\u4ea7\u54c1\u6309\u5b9e\u9645\u652f\u6301\u60c5\u51b5\u3002",
+    storyPrincipleTitle: "\u6211\u4eec\u505a\u4ec0\u4e48",
+    storyPrincipleLead: "\u6bcf\u4e2a\u5e94\u7528\u56de\u7b54\u4e00\u4e2a\u51b3\u7b56\uff0c\u8f93\u51fa\u7ed3\u6784\u5316\u7684\u7ed3\u679c\u548c\u660e\u786e\u7684\u4e0b\u4e00\u6b65\u3002",
+    storyPrinciplePoint1:
+      "\u65e5\u5e38\uff1a\u5403\u4ec0\u4e48\u3001\u600e\u4e48\u70f9\u3001\u7a7f\u4ec0\u4e48\u3001\u4e60\u60ef\u3001SAT\u3001\u51fa\u884c\u3001\u5bb6\u5ead\u534f\u4f5c\u3002",
+    storyPrinciplePoint2:
+      "\u4ea7\u54c1\u4e4b\u95f4\u4e60\u60ef\u4e00\u81f4\uff1a\u79fb\u52a8\u7f51\u9875\u3001\u4e3b\u9898\u5207\u6362\u3001\u8425\u9500\u7ad9\u4e0e\u5df2\u4e0a\u7ebf\u5e94\u7528\u7684\u591a\u8bed\u8a00\u3002",
+    storyPrinciplePoint3:
+      "\u6295\u8d44\uff1ainvest.xingai.app \u770b\u677f\u5757\u4e0e\u7b26\u53f7\u4e0a\u4e0b\u6587\uff0clab.xingai.app \u6d4b\u89c4\u5219\uff0ct.xingai.app \u6bcf\u65e5 T \u8ba1\u5212\uff08\u5185\u6d4b\u7533\u8bf7\u514d\u8d39\u3002",
+    storyClustersTitle: "\u4e24\u5927\u96c6\u7fa4",
+    storyClustersLead:
+      "\u5404\u5e94\u7528\u53ef\u72ec\u7acb\u4f7f\u7528\u3002\u6295\u8d44\u7ebf\u8bbe\u8ba1\u4e3a\u4e92\u76f8\u8865\u5145\uff0c\u4e0d\u5f3a\u5236\u5355\u4e00\u767b\u5f55\u3002",
+    storyClusterEverydayTitle: "\u65e5\u5e38\u51b3\u7b56",
+    storyClusterEverydayLead:
+      "\u996e\u98df\u3001\u7a7f\u642d\u3001\u4e60\u60ef\u3001SAT\u3001\u5bb6\u5ead\u4e0e\u51fa\u884c\u2014\u2014\u6bcf\u4e2a\u4ea7\u54c1\u53ea\u505a\u4e00\u4ef6\u4e8b\u3002",
+    storyClusterInvestTitle: "\u6295\u8d44\u4e0e\u4ea4\u6613\u5de5\u5177",
+    storyClusterInvestLead:
+      "\u6295\u8d44\u770b\u677f\u3001Performance Sim \u6a21\u62df\u76d8\u3001T Today \u622a\u56fe\u6301\u4ed3 \u2192 \u89c4\u5219 \u2192 \u8ba1\u5212\u3002",
+    storyInvestFlowTitle: "\u6295\u8d44\u96c6\u7fa4\u94fe\u8def",
+    storyInvestFlowLead:
+      "\u5148\u770b\u5b8f\u89c2\u4e0e\u6807\u7684\u4e0a\u4e0b\u6587\uff0c\u518d\u5728 lab \u4e0a\u6d4b\u89c4\u5219\uff0c\u9700\u8981\u6bcf\u65e5\u8ba1\u5212\u65f6\u514d\u8d39\u7533\u8bf7 T Today \u5185\u6d4b\u3002",
+    storyInvestRoleCore:
+      "invest.xingai.app \u2014 \u51b3\u7b56\u770b\u677f\uff1a\u5b8f\u89c2\u96f7\u8fbe\u3001\u914d\u7f6e\u4e0e\u7b26\u53f7\u4e0a\u4e0b\u6587\uff08\u7f13\u5b58\u9884\u8ba1\u7b97\uff09\u3002",
+    storyInvestRoleLab:
+      "lab.xingai.app \u2014 Performance Sim\uff1a\u76f8\u540c\u4fe1\u53f7\u3001\u4e0d\u540c\u89c4\u5219\uff1b\u6a21\u62df\u76d8\u7ed3\u679c\u3002",
+    storyInvestRoleT:
+      "t.xingai.app \u2014 T Today\uff1a\u6301\u4ed3\u622a\u56fe \u2192 \u89c4\u5219 + \u4eca\u65e5 AI \u8ba1\u5212\u3002\u5185\u6d4b\u514d\u8d39\u7533\u8bf7\u3002",
+    storyInvestDisclaimer:
+      "\u4ec5\u6a21\u62df / \u7eb8\u9762 \u00b7 \u975e\u6295\u8d44\u5efa\u8bae \u00b7 \u65e0\u5238\u5546\u5bf9\u63a5\u3002",
+    storyTryTitle: "\u5982\u4f55\u8bd5\u7528",
+    storyTryLead:
+      "\u5728\u5e94\u7528\u76ee\u5f55\u6253\u5f00\u516c\u5f00 Demo\u3002T Today \u8d70\u8054\u7cfb\u9875\u7533\u8bf7\u5185\u6d4b\uff0c\u6211\u4eec\u514d\u8d39\u52a0\u5165\u767d\u540d\u5355\u3002",
+    storyAboutTeaser: "\u56e2\u961f\u3001\u4f7f\u547d\u4e0e\u6280\u672f\u6808\u89c1",
 
     appsHeading: "\u6211\u4eec\u7684 AI \u7cfb\u7edf",
     appsLead:
@@ -350,6 +432,7 @@ const translations = {
   ko: {
     navHome: "\ud648",
     navApps: "\uc571",
+    navStory: "\uc0dd\ud0dc\uacc4",
     navAbout: "\uc18c\uac1c",
     navContact: "\uc5f0\ub77d",
     navMenu: "\uba54\ub274",
@@ -386,6 +469,7 @@ const translations = {
     tagline: "\ub9e4\ubc88 \ub354 \uba85\ud655\ud55c \uacb0\uc815\uc744.",
     heroSub:
       "\uc77c\uc0c1 \uacb0\uc815\uc744 \uc704\ud55c \ubaa8\ubc14\uc6b0\uc804 AI \ub3c4\uad6c\u2014\uc2dd\uc0ac, \uc694\ub9ac, \uc2a4\ud0c0\uc77c, \ub8e8\ud2f4, SAT, \ud22c\uc790(lab.xingai.app \uc2dc\ubbac, t.xingai.app T Today). \ub77c\uc774\ud2b8/\ub2e4\ud06c \u00b7 EN/\uc911\ubb38/\ud55c\uad6d\uc5b4.",
+    heroStoryLink: "\uc81c\ud488\uc774 \uc5b4\ub5bb\uac8c \ub9de\ub294\uc9c0",
     heroGridLabel: "\uc6b0\ub9ac\uc758 AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
     heroCoreSystems: "\ud575\uc2ec \uc2dc\uc2a4\ud15c \ub458\ub7ec\ubcf4\uae30",
@@ -456,6 +540,45 @@ const translations = {
     aboutStackText: "\ud504\ub860\ud2b8\uc5d4\ub4dc Next.js. \ubc31\uc5d4\ub4dc FastAPI. \uac1c\uc778\uc815\ubcf4 \ubcf4\ud638\uac00 \uc911\uc694\ud55c \uacf3\uc5d0\ub294 \ub85c\uceec AI. Vercel \ubc30\ud3ec. \uac00\ub2a5\ud55c \ud55c \uc624\ud508\uc18c\uc2a4.",
     aboutBuilding: "\uacf5\uac1c \uac1c\ubc1c",
     aboutBuildingText: "\uc2e4\ud5d8, \uac1c\uc120, \ubc30\ud3ec\u2014GitHub, LinkedIn, X\uc5d0\uc11c \uacfc\uc815\uc744 \uacf5\uc720\ud569\ub2c8\ub2e4. \uc870\uc6a9\ud788 \uc644\ubcbd\ud558\uac8c \ub9cc\ub4dc\ub294 \uac83\ubcf4\ub2e4 \ubc30\ud3ec\ud558\uace0 \ubc18\ubcf5\ud558\ub294 \uac83\uc744 \uc120\ud638\ud569\ub2c8\ub2e4.",
+    aboutStoryLink: "\uc81c\ud488\uc774 \uc5b4\ub5bb\uac8c \ub9de\ub294\uc9c0",
+
+    storyEyebrow: "\uc81c\ud488 \ub9f5",
+    storyHeading: "XingAI \uc81c\ud488 \uc0dd\ud0dc\uacc4",
+    storyLead:
+      "\ud558\ub098\uc758 \ud50c\ub7ab\ud3fc, \uc5ec\ub7ec \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c\u2014 \ubc94\uc6a9 \ucc57\uc774 \uc544\ub2d9\ub2c8\ub2e4. \uc77c\uc0c1 \ub3c4\uad6c\uc640 \ud22c\uc790 \ud074\ub7ec\uc2a4\ud130\uac00 \ubaa8\ubc14\uc77c \uc6f9, \ub77c\uc774\ud2b8\u00b7\ub2e4\ud06c \ud14c\ub9c8, EN\u00b7\u4e2d\u00b7\ud55c\uc744 \uacf5\uc720\ud569\ub2c8\ub2e4(\uc81c\ud488\ubcc4 \uc9c0\uc6d0 \ubc94\uc704).",
+    storyPrincipleTitle: "\ubb34\uc5c7\uc744 \ub9cc\ub4e4\uc9c0",
+    storyPrincipleLead:
+      "\uac01 \uc571\uc740 \ud558\ub098\uc758 \uacb0\uc815\uc5d0 \ub2f5\ud558\uace0, \uad6c\uc870\ud654\ub41c \uacb0\uacfc\uc640 \ub2e4\uc74c \ud589\ub3d9\uc744 \uc81c\uc2dc\ud569\ub2c8\ub2e4.",
+    storyPrinciplePoint1:
+      "\uc77c\uc0c1: \ubb34\uc5c7\uc744 \uba39\uace0, \uc694\ub9ac\ud558\uace0, \uc785\uace0, \uc2b5\uad00, SAT, \uc5ec\ud589, \uac00\uc871 \uc5c5\ubb34.",
+    storyPrinciplePoint2:
+      "\uc81c\ud488 \uac04 \ub3d9\uc77c\ud55c UX: \ubaa8\ubc14\uc77c \uc6f9, \ud14c\ub9c8 \uc804\ud658, \ub9c8\ucf00\ud305 \uc0ac\uc774\ud2b8 \ubc0f i18n \uc9c0\uc6d0 \uc571.",
+    storyPrinciplePoint3:
+      "invest.xingai.app \ub9e5\ub77d \u2192 lab.xingai.app \uaddc\uce59 \ud14c\uc2a4\ud2b8 \u2192 t.xingai.app \uc77c\uc77c T \uacc4\ud68d(\uc5bc\ub9ac \uc561\uc138\uc2a4).",
+    storyClustersTitle: "\ub450 \uac70\uc758 \ud074\ub7ec\uc2a4\ud130",
+    storyClustersLead:
+      "\uc571\uc740 \ub3c5\ub9bd\uc801\uc73c\ub85c \uc791\ub3d9\ud569\ub2c8\ub2e4. \ud22c\uc790 \ub77c\uc778\uc740 \uc11c\ub85c \ubcf4\uc644\ud558\ub3c4\ub85d \uc124\uacc4\ub418\uc5c8\uc2b5\ub2c8\ub2e4.",
+    storyClusterEverydayTitle: "\uc77c\uc0c1 \uc758\uc0ac\uacb0\uc815",
+    storyClusterEverydayLead:
+      "\uc2dd\uc0ac, \uc2a4\ud0c0\uc77c, \uc2b5\uad00, SAT, \uac00\uc871, \uc5ec\ud589\u2014 \uac01 \uc81c\ud488\uc740 \ud55c \uac00\uc9c0 \uc5ed\ud560\ub9cc \ub2f4\uc2b5\ub2c8\ub2e4.",
+    storyClusterInvestTitle: "\ud22c\uc790 \u00b7 \ud2b8\ub808\uc774\ub529 \ub3c4\uad6c",
+    storyClusterInvestLead:
+      "\ud22c\uc790 \ub300\uc2dc\ubcf4\ub4dc, lab \uc131\uacfc \uc2dc\ubbac\ub808\uc774\uc158, T Today(\uc2a4\ud06c\ub9b0\uc0f7 \u2192 \uaddc\uce59 \u2192 \uacc4\ud68d).",
+    storyInvestFlowTitle: "\ud22c\uc790 \ud074\ub7ec\uc2a4\ud130 \ud750\ub984",
+    storyInvestFlowLead:
+      "\uba3d\ub85c \ub9e5\ub85c\u00b7\uc2ec\ubcfc \ub9e5\ub77d\uc744 \ubcf4\uace0, lab\uc5d0\uc11c \uaddc\uce59\uc744 \uc2dc\ud5d8\ud55c \ub4a4, \uc77c\uc77c \uacc4\ud68d\uc774 \ud544\uc694\ud558\uba74 T Today \uc5bc\ub9ac \uc561\uc138\uc2a4\ub97c \uc694\uccad\ud558\uc138\uc694.",
+    storyInvestRoleCore:
+      "invest.xingai.app \u2014 \uc758\uc0ac\uacb0\uc815 \ub300\uc2dc\ubcf4\ub4dc: \ub9e5\ub85c \ub808\uc774\ub354, \uBC84\uBD84, \uc2ec\ubcfc \ub9e5\ub77d(\uc0ac\uc804 \uacc4\uc0b0 \uce90\uc2dc).",
+    storyInvestRoleLab:
+      "lab.xingai.app \u2014 Performance Sim: \ub3d9\uc77c \uc2e0\ud638, \ub2e4\ub978 \uaddc\uce59; \ubaa8\uc758 \uac70\ub798 \uacb0\uacfc.",
+    storyInvestRoleT:
+      "t.xingai.app \u2014 T Today: \ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7 \u2192 \uaddc\uce59 + \uc624\ub298\uc758 AI \uacc4\ud68d. \uc5bc\ub9ac \uc561\uc138\uc2a4\ub294 \ubb34\ub8cc \uc694\uccad.",
+    storyInvestDisclaimer:
+      "\ubaa8\uc758/\uc2dc\ubbac\ub808\uc774\uc158 \uc804\uc6a9 \u00b7 \ud22c\uc790 \uc870\uc5b8 \uc544\ub2d8 \u00b7 \uc99d\uad8c\uc0ac \uc5f0\ub3d9 \uc5c6\uc74c.",
+    storyTryTitle: "\uc0ac\uc6a9\ud574 \ubcf4\uae30",
+    storyTryLead:
+      "Apps\uc5d0\uc11c \uacf5\uac1c \ub370\ubaa8\ub97c \uc5f4\uc5b4\ubcf4\uc138\uc694. T Today\ub294 Contact\ub85c \ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4\ub97c \uc694\uccad\ud558\uba74 \ud5c8\uc6a9 \ubaa9\ub85d\uc5d0 \ucd94\uac00\ud569\ub2c8\ub2e4.",
+    storyAboutTeaser: "\ud300, \ubbf8\uc158, \uc2a4\ud0dd:",
 
     appsHeading: "\uc6b0\ub9ac\uc758 AI \uc2dc\uc2a4\ud15c",
     appsLead:

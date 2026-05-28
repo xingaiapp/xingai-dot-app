@@ -27,6 +27,7 @@ export default function MobileNavDrawer({
     { href: "/", label: t("navHome"), icon: "navHome" },
     { href: "/apps", label: t("drawerAiSystems"), icon: "navApps" },
     { href: "/apps", label: t("drawerFreeDemo"), icon: "navApps" },
+    { href: "/story", label: t("navStory"), icon: "navStory" },
     { href: "/about", label: t("navAbout"), icon: "navAbout" },
     { href: "/contact", label: t("navContact"), icon: "navContact" },
   ];

@@ -1,8 +1,14 @@
-export type NavKey = "navHome" | "navApps" | "navAbout" | "navContact";
+export type NavKey =
+  | "navHome"
+  | "navApps"
+  | "navStory"
+  | "navAbout"
+  | "navContact";
 
 export const primaryNavLinks: { href: string; key: NavKey }[] = [
   { href: "/", key: "navHome" },
   { href: "/apps", key: "navApps" },
+  { href: "/story", key: "navStory" },
   { href: "/about", key: "navAbout" },
   { href: "/contact", key: "navContact" },
 ];
