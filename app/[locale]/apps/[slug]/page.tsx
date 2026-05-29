@@ -74,10 +74,10 @@ export default function AppDetailPage() {
               {t("appEarlyAccessCta")} &rarr;
             </LocaleLink>
           ) : null}
-          {app.demoUrl && (
+          {app.demoUrl && !app.earlyAccess && (
             <a
               href={app.demoUrl}
-              className={app.earlyAccess ? "cta cta--outline" : "cta"}
+              className="cta"
               target="_blank"
               rel="noopener noreferrer"
             >

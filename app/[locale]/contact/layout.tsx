@@ -4,7 +4,7 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us | XingAI",
   description:
     "Get in touch with XingAI — inquiries, custom AI projects, partnerships, and early access requests. Email contact@xingai.app.",
   alternates: { canonical: `${siteUrl}/contact` },

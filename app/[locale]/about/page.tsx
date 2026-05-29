@@ -63,7 +63,14 @@ export default function AboutPage() {
                 />
               </div>
               <figcaption>
-                Allen
+                <a
+                  href="https://www.linkedin.com/in/uwspstar/"
+                  className="cofounder-name-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Allen
+                </a>
                 <span className="role">
                   {t("cofounder")}
                   <span className="role-sub">{t("aiArchitect")}</span>

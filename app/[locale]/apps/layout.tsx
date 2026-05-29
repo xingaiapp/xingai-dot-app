@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const og = appsOg(locale);
 
   return {
-    title: APPS_PAGE_TITLE,
+    title: formatPageTitle(APPS_PAGE_TITLE),
     description,
     alternates: pageAlternates(locale, path),
     openGraph: localizedOpenGraph(locale, path, APPS_PAGE_TITLE, description, og),

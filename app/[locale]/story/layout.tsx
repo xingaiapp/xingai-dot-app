@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const og = storyOg(locale);
 
   return {
-    title,
+    title: formatPageTitle(title),
     description,
     alternates: pageAlternates(locale, path),
     openGraph: localizedOpenGraph(locale, path, title, description, og),

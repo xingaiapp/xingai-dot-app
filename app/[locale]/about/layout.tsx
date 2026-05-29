@@ -4,7 +4,7 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us | XingAI",
   description:
     "Meet Xing and Allen — co-founders and AI architects building focused AI decision systems for everyday life at XingAI.",
   alternates: { canonical: `${siteUrl}/about` },
