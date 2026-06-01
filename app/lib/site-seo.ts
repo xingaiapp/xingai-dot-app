@@ -69,6 +69,7 @@ export const defaultKeywords = [
   "AI SAT prep",
   "AI parent assistant",
   "AI travel planner",
+  "travel.xingai.app",
   "AI investment assistant",
   "Performance Sim",
   "lab.xingai.app",

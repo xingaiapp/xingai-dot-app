@@ -2,7 +2,7 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Live at [xingai-dot-app.vercel.app](https://xingai-dot-app.vercel.app/)**
+**Live at [xingai.app](https://xingai.app/)**
 
 ---
 
@@ -23,11 +23,11 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **Performance Sim** | Finance AI | Simulate Rules |
 | **T Today** | Finance AI | Plan Today |
 
-**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Other products are in development with UX demos on the site.
+**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
 
 ## Features
 
-- **8 AI decision systems** — each focused on one life domain
+- **10 AI decision systems** — each focused on one life domain
 - **Mobile-first design** — optimized for phones, works great on desktop
 - **Light + dark themes** — icons, screenshots, and UI all adapt
 - **3 languages** — English, Chinese (中文), Korean (한국어)
@@ -69,6 +69,12 @@ Regenerate Performance Sim / T Today marketing screenshots (mobile 3:2, light + 
 ```bash
 # lab.xingai.app + invest-t-advisor on :3001 (T_AUTH_MODE=off)
 npm run capture:demos
+```
+
+Regenerate Travel AI marketing images from the Travel app hero artwork:
+
+```bash
+npm run capture:travel
 ```
 
 ## Deployment Notes

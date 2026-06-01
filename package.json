@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "capture:demos": "node scripts/capture-invest-demos.mjs",
+    "capture:travel": "node scripts/capture-travel-demo.mjs",
     "generate:icons": "node scripts/generate-invest-product-icons.mjs && node scripts/generate-story-og.mjs",
     "generate:seo-og": "node scripts/generate-seo-og.mjs",
     "generate:assets": "npm run generate:icons && npm run generate:seo-og"
