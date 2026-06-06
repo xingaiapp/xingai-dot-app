@@ -53,12 +53,13 @@ export function pageAlternates(locale: Locale, path: string): Metadata["alternat
 }
 
 export function homeOg(locale: Locale) {
+  const count = getLocalizedApps(locale).length;
   const alt =
     locale === "zh"
-      ? "XingAI — 10 款 AI 决策系统"
+      ? `XingAI — ${count} 款 AI 决策系统`
       : locale === "ko"
-        ? "XingAI — 10가지 AI 의사결정 시스템"
-        : "XingAI — 10 AI decision systems for everyday life";
+        ? `XingAI — ${count}가지 AI 의사결정 시스템`
+        : `XingAI — ${count} AI decision systems for everyday life`;
   return ogImageMeta(defaultOgImage, alt);
 }
 
