@@ -2355,6 +2355,104 @@ html[data-theme="dark"] .roadmap-status--shipped {
   color: var(--ink);
 }
 
+/* At a glance */
+.detail-glance {
+  padding-top: 1.25rem;
+}
+
+.glance-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 36rem) {
+  .glance-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.glance-item {
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+}
+
+.glance-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.glance-value {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* Features list */
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 36rem) {
+  .features-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.features-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.875rem;
+  color: var(--ink);
+}
+
+.features-item:last-child {
+  border-bottom: none;
+}
+
+.features-check {
+  flex-shrink: 0;
+  width: 1rem;
+  font-size: 0.75rem;
+  color: var(--blue);
+}
+
+.features-item--pro .features-check,
+.features-item--enterprise .features-check {
+  color: var(--muted);
+}
+
+.features-name {
+  flex: 1;
+}
+
+.features-tier {
+  flex-shrink: 0;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: var(--badge-bg);
+  color: var(--blue);
+}
+
 /* ── Wiki ── */
 .wiki-wrap {
   max-width: 64rem;

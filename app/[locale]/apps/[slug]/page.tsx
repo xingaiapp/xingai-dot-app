@@ -115,6 +115,26 @@ export default function AppDetailPage() {
         </section>
       )}
 
+      {/* At a glance */}
+      {(app.canDo || app.bestFor) && (
+        <section className="detail-section detail-glance">
+          <div className="glance-row">
+            {app.canDo && (
+              <div className="glance-item">
+                <h3 className="glance-label">{t("appCardCanDo")}</h3>
+                <p className="glance-value">{app.canDo}</p>
+              </div>
+            )}
+            {app.bestFor && (
+              <div className="glance-item">
+                <h3 className="glance-label">{t("appCardBestFor")}</h3>
+                <p className="glance-value">{app.bestFor}</p>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* Screenshots */}
       {app.screenshots.length > 0 && (
       <section className="detail-section" aria-labelledby="screenshots-heading">
@@ -137,6 +157,31 @@ export default function AppDetailPage() {
           ))}
         </div>
       </section>
+      )}
+
+      {/* Features */}
+      {!app.comingSoon && app.features.length > 0 && (
+        <section className="detail-section" aria-labelledby="features-heading">
+          <h2 id="features-heading" className="detail-heading">
+            {t("appFeatures")}
+          </h2>
+          <ul className="features-list">
+            {app.features.map((f, i) => {
+              const tier = f.free ? "free" : f.pro ? "pro" : "enterprise";
+              return (
+                <li key={i} className={`features-item features-item--${tier}`}>
+                  <span className="features-check">{f.free ? "✓" : "+"}</span>
+                  <span className="features-name">{f.name}</span>
+                  {!f.free && (
+                    <span className="features-tier">
+                      {f.pro ? t("appPro") : t("appEnterprise")}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
       )}
 
       {/* Versions & Pricing */}
