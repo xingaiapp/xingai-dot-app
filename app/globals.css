@@ -2390,8 +2390,8 @@ html[data-theme="dark"] .roadmap-status--shipped {
 
 .glance-value {
   margin: 0;
-  font-size: 0.9375rem;
-  line-height: 1.5;
+  font-size: 0.8125rem;
+  line-height: 1.55;
   color: var(--ink);
 }
 
