@@ -2385,7 +2385,7 @@ html[data-theme="dark"] .roadmap-status--shipped {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--blue);
 }
 
 .glance-value {
