@@ -288,7 +288,14 @@ export const apps: AppData[] = [
     bestFor: "Engineers, PMs, and learners who need a go/no-go call before diving into a new topic.",
     clickTarget: "Product details, live demo, and GitHub source.",
     launchStatus: "demo",
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/research-demo-light.jpg",
+        srcDark: "/research-demo-dark.jpg",
+        alt: "XingAI Research AI",
+        caption: "Hero visual — learning decision system",
+      },
+    ],
     features: [
       { name: "Topic + background context input", free: true, pro: true, enterprise: true },
       { name: "Decision card with verdict & scores", free: true, pro: true, enterprise: true },
@@ -640,6 +647,7 @@ const localizedAppCopy: Partial<
       canDo: "结合你的背景评估学习 ROI，并给出清晰的下一步路线。",
       bestFor: "需要在深入新主题前先做出 go/no-go 判断的工程师、产品经理和学习者。",
       clickTarget: "产品详情、在线 Demo 和 GitHub 源码。",
+      screenshots: ["学习决策系统主视觉"],
       features: [
         "主题与背景输入",
         "结论卡片与评分",
@@ -868,6 +876,7 @@ const localizedAppCopy: Partial<
       canDo: "배경에 맞춰 학습 ROI를 점수화하고 다음 단계 루트를 제공합니다.",
       bestFor: "새 주제에 뛰어들기 전 go/no-go가 필요한 엔지니어, PM, 학습자.",
       clickTarget: "제품 상세, 라이브 데모, GitHub 소스.",
+      screenshots: ["학습 의사결정 히어로 비주얼"],
       features: [
         "주제 + 배경 입력",
         "판단 카드와 점수",
