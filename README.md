@@ -2,6 +2,8 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
+**Version:** 2026.06.06
+
 **Live at [xingai.app](https://xingai.app/)**
 
 ---
