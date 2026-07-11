@@ -2,9 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.06.06
+**Version:** 2026.07.11
 
 **Live at [xingai.app](https://xingai.app/)**
+
+### Current version notes
+
+`2026.07.11` adds **Growth Monitor** to the product catalog (early-access demo at [growth.xingai.app](https://growth.xingai.app/)) with icon + OG assets.
 
 ---
 
@@ -25,12 +29,13 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **Investment Assistant** | Finance AI | Invest Smarter |
 | **Performance Sim** | Finance AI | Simulate Rules |
 | **T Today** | Finance AI | Plan Today |
+| **Growth Monitor** | Operations AI | Fix Pages First |
 
-**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
+**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Growth Monitor** is early access at [growth.xingai.app](https://growth.xingai.app/). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
 
 ## Features
 
-- **11 AI decision systems** — each focused on one life domain
+- **12 AI products** — life domains plus Growth Monitor for SEO/AEO ops
 - **Mobile-first design** — optimized for phones, works great on desktop
 - **Light + dark themes** — icons, screenshots, and UI all adapt
 - **3 languages** — English, Chinese (中文), Korean (한국어)

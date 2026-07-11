@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Growth Monitor">
+  <defs>
+    <linearGradient id="gm-bg" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0c4a6e"/>
+      <stop offset="0.55" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#gm-bg)"/>
+  <rect x="7" y="18" width="4" height="7" rx="1.2" fill="#fff" opacity="0.95"/>
+  <rect x="14" y="13" width="4" height="12" rx="1.2" fill="#fff"/>
+  <rect x="21" y="9" width="4" height="16" rx="1.2" fill="#fff"/>
+  <path d="M6 25.5h20" stroke="#bae6fd" stroke-width="1.25" stroke-linecap="round"/>
+  <circle cx="24" cy="8" r="4.5" fill="#34d399"/>
+  <path d="M22.2 8 23.6 9.6 26.1 6.4" fill="none" stroke="#064e3b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
