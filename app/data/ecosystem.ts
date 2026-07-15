@@ -21,6 +21,7 @@ export const ecosystemClusters: EcosystemCluster[] = [
       "routine-ai",
       "sat-ai",
       "research-ai",
+      "learn-ai",
       "parent-ai",
       "travel-ai",
     ],

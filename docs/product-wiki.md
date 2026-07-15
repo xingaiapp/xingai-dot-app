@@ -50,4 +50,5 @@ V4 = visual alignment with V1 + functional inheritance from V3 + V4 additions
 | Routine AI | `routine.xingai.app` | `xingai-routine-ai` | Weekly rhythm decision flow | Saved routines + accountability |
 | SAT AI | `sat.xingai.app` | `xingai-sat-ai` | SAT mistake review flow | OCR confirmation + study plan |
 | Research AI | `research.xingai.app` | `xingai-research-ai` | Learning go/no-go decision | Worker cache + hot discussions |
+| Learn AI | `learn.xingai.app` | `xingai-learn-ai` | Guided learning session | Saved progress + spaced review |
 | Travel AI | `travel.xingai.app` | `xingai-travel-ai` | Trip decision system | Region/city comparison + book-first itinerary |

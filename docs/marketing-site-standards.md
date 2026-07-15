@@ -34,7 +34,7 @@ Applies to `xingai-dot-app` (xingai.app).
 ## AEO (AI search / answer engines)
 
 - Homepage **FAQ** block + **`FAQPage`** in JSON-LD `@graph` (5 Q&A; en/zh/ko per URL).
-- **`Organization`**, **`WebSite`**, **`WebPage`**, **`ItemList`**, **10× `SoftwareApplication`** on home (`app/lib/seo-json-ld.ts`).
+- **`Organization`**, **`WebSite`**, **`WebPage`**, **`ItemList`**, and one `SoftwareApplication` per catalog product on home (`app/lib/seo-json-ld.ts`).
 - Short, factual answers; name real domains (`lab.xingai.app`, `t.xingai.app`, `invest.xingai.app`).
 
 ## Invest product icons & Story OG

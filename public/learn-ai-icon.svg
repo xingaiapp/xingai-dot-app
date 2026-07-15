@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">XingAI Learn AI icon</title>
+  <desc id="desc">A green learning path mark inside a rounded square.</desc>
+  <defs>
+    <linearGradient id="learn-bg" x1="18" y1="16" x2="110" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eafff2"/>
+      <stop offset="1" stop-color="#c8f7dc"/>
+    </linearGradient>
+    <linearGradient id="learn-mark" x1="32" y1="92" x2="96" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#15803d"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#learn-bg)"/>
+  <path d="M34 36c0-5 4-9 9-9h42c5 0 9 4 9 9v56c0 5-4 9-9 9H43c-5 0-9-4-9-9V36Z" fill="#ffffff" opacity=".92"/>
+  <path d="M46 44h35M46 58h26M46 72h18" stroke="#14532d" stroke-width="7" stroke-linecap="round"/>
+  <path d="M48 93c9-25 26-41 50-47" fill="none" stroke="url(#learn-mark)" stroke-width="10" stroke-linecap="round"/>
+  <path d="m91 43 10 2-6 8" fill="none" stroke="#22c55e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="48" cy="93" r="6" fill="#15803d"/>
+</svg>

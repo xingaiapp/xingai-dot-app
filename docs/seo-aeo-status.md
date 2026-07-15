@@ -10,8 +10,8 @@ Each locale URL ships server-rendered `application/ld+json` in `<head>`:
 
 | Page | Schemas |
 |------|---------|
-| `/`, `/zh`, `/ko` | `Organization`, `WebSite`, `WebPage`, **`FAQPage`** (locale copy), `ItemList`, **10× `SoftwareApplication`** |
-| `/apps`, `/zh/apps`, … | `CollectionPage`, `ItemList`, **10× `SoftwareApplication`** |
+| `/`, `/zh`, `/ko` | `Organization`, `WebSite`, `WebPage`, **`FAQPage`** (locale copy), `ItemList`, one **`SoftwareApplication`** per catalog product |
+| `/apps`, `/zh/apps`, … | `CollectionPage`, `ItemList`, one **`SoftwareApplication`** per catalog product |
 | `/apps/[slug]` | **`SoftwareApplication`**, `BreadcrumbList` |
 | `/story` | `WebPage` + product `ItemList` |
 
