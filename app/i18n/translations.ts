@@ -48,7 +48,7 @@ const translations = {
     heroValuePill: "AI decision systems, not just chat",
     tagline: "Get the right decision, every time.",
     heroSub:
-      "AI answers for the questions you face every day\u2014what to eat, what to wear, how to study, what to learn next, and where to invest. Thirteen focused systems span meal planning, cooking, outfits, habits, SAT prep, learning decisions, guided learning, parenting, travel, investing, Growth Monitor, Performance Sim backtests, and T Today plans. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
+      "AI answers for the questions you face every day\u2014what to eat, what to wear, how to study, what to learn next, and where to invest. Fifteen focused systems span meal planning, cooking, outfits, habits, SAT prep, learning decisions, guided learning, engineering communication, parenting, travel, investing, Growth Monitor, Ops Status, Performance Sim backtests, and T Today plans. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
     heroStoryLink: "How it fits together",
     heroGridLabel: "Our AI decision systems",
     heroPreviewLabel: "System preview",
@@ -82,13 +82,13 @@ const translations = {
       "Short answers for people and AI search systems trying to understand what XingAI does.",
     answerQ1: "What is XingAI?",
     answerA1:
-      "XingAI is a platform of 13 focused AI decision systems: Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Parent AI, Travel AI, Invest AI, Performance Sim, and T Today.",
+      "XingAI is a platform of 15 focused AI decision systems: Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Engineering Communication Coach, Growth Monitor, Ops Status, Parent AI, Travel AI, Invest AI, Performance Sim, and T Today.",
     answerQ2: "How is XingAI different from a chatbot?",
     answerA2:
       "XingAI products are built around structured decisions and clear next actions instead of open-ended generic chat.",
     answerQ3: "What can I use XingAI for today?",
     answerA3:
-      "You can try public demos for Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Travel AI, Invest AI, and Performance Sim. Parent AI is on the roadmap. T Today is in free early access via the Contact page. All apps are mobile-first with light/dark themes.",
+      "You can try public demos for Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Ops Status, Travel AI, Invest AI, and Performance Sim. Engineering Communication Coach and Parent AI are on the roadmap. T Today is in free early access via the Contact page. All apps are mobile-first with light/dark themes.",
     answerQ4: "Can XingAI build a custom AI product?",
     answerA4:
       "Yes. XingAI helps founders and teams design, build, and deploy focused AI products from idea to launch.",
@@ -275,7 +275,7 @@ const translations = {
     heroValuePill: "AI \u51b3\u7b56\u7cfb\u7edf\uff0c\u4e0d\u53ea\u662f\u804a\u5929",
     tagline: "\u6bcf\u4e00\u6b21\uff0c\u90fd\u66f4\u6e05\u695a\u5730\u505a\u51b3\u5b9a\u3002",
     heroSub:
-      "\u6bcf\u5929\u90fd\u5728\u95ee\u7684\u95ee\u9898\uff0cAI \u6765\u66ff\u4f60\u56de\u7b54\u2014\u2014\u5403\u4ec0\u4e48\u3001\u7a7f\u4ec0\u4e48\u3001\u600e\u4e48\u5b66\u3001\u4e0b\u4e00\u4e2a\u8be5\u5b66\u4ec0\u4e48\u3001\u5f80\u54ea\u6295\u3002\u5341\u4e09\u4e2a\u4e13\u6ce8\u7cfb\u7edf\u8986\u76d6\u996e\u98df\u3001\u70f9\u996a\u3001\u7a7f\u642d\u3001\u4e60\u60ef\u3001SAT\u3001\u5b66\u4e60\u51b3\u7b56\u3001\u5f15\u5bfc\u5b66\u4e60\u3001\u5bb6\u957f\u3001\u65c5\u884c\u3001\u6295\u8d44\u3001Growth Monitor\u3001Performance Sim \u56de\u6d4b\u4e0e T Today \u65e5\u5185\u8ba1\u5212\u3002English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4\u3002",
+      "\u6bcf\u5929\u90fd\u5728\u95ee\u7684\u95ee\u9898\uff0cAI \u6765\u66ff\u4f60\u56de\u7b54\u2014\u2014\u5403\u4ec0\u4e48\u3001\u7a7f\u4ec0\u4e48\u3001\u600e\u4e48\u5b66\u3001\u4e0b\u4e00\u4e2a\u8be5\u5b66\u4ec0\u4e48\u3001\u5f80\u54ea\u6295\u3002\u5341\u4e94\u4e2a\u4e13\u6ce8\u7cfb\u7edf\u8986\u76d6\u996e\u98df\u3001\u70f9\u996a\u3001\u7a7f\u642d\u3001\u4e60\u60ef\u3001SAT\u3001\u5b66\u4e60\u51b3\u7b56\u3001\u5f15\u5bfc\u5b66\u4e60\u3001\u5de5\u7a0b\u6c9f\u901a\u3001\u5bb6\u957f\u3001\u65c5\u884c\u3001\u6295\u8d44\u3001Growth Monitor\u3001Ops Status\u3001Performance Sim \u56de\u6d4b\u4e0e T Today \u65e5\u5185\u8ba1\u5212\u3002English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4\u3002",
     heroStoryLink: "\u4ea7\u54c1\u5982\u4f55\u7ec4\u6210\u751f\u6001",
     heroGridLabel: "\u6211\u4eec\u7684 AI \u51b3\u7b56\u7cfb\u7edf",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
@@ -308,13 +308,13 @@ const translations = {
     answerLead: "给用户和 AI 搜索系统的简短答案，帮助快速理解 XingAI 是什么。",
     answerQ1: "XingAI 是什么？",
     answerA1:
-      "XingAI 是 13 个专注 AI 决策系统的平台：Meal Coach、Cook AI、Outfit AI、Routine AI、SAT AI、Research AI、Learn AI、Growth Monitor、Parent AI、Travel AI、Invest AI、Performance Sim 与 T Today。",
+      "XingAI 是 15 个专注 AI 决策系统的平台：Meal Coach、Cook AI、Outfit AI、Routine AI、SAT AI、Research AI、Learn AI、Engineering Communication Coach、Growth Monitor、Ops Status、Parent AI、Travel AI、Invest AI、Performance Sim 与 T Today。",
     answerQ2: "XingAI 和普通聊天机器人有什么不同？",
     answerA2:
       "XingAI 产品围绕结构化决策和明确下一步行动设计，而不是开放式泛聊天。",
     answerQ3: "现在可以用 XingAI 做什么？",
     answerA3:
-      "可公开体验 Meal Coach、Cook AI、Outfit AI、Routine AI、SAT AI、Research AI、Learn AI、Growth Monitor、Travel AI、Invest AI 与 Performance Sim。Parent AI 在路线图中。T Today 可通过联系页免费申请内测。均为移动优先，支持浅色/深色主题。",
+      "可公开体验 Meal Coach、Cook AI、Outfit AI、Routine AI、SAT AI、Research AI、Learn AI、Growth Monitor、Ops Status、Travel AI、Invest AI 与 Performance Sim。Engineering Communication Coach 与 Parent AI 在路线图中。T Today 可通过联系页免费申请内测。均为移动优先，支持浅色/深色主题。",
     answerQ4: "XingAI 可以定制 AI 产品吗？",
     answerA4:
       "可以。XingAI 帮助创始人和团队从想法到上线，设计、开发并部署专注的 AI 产品。",
@@ -490,7 +490,7 @@ const translations = {
     heroValuePill: "\ucc57\uc774 \uc544\ub2cc AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     tagline: "\ub9e4\ubc88 \ub354 \uba85\ud655\ud55c \uacb0\uc815\uc744.",
     heroSub:
-      "\ub9e4\uc77c \ub9de\ub2e5\ub730\ub9ac\ub294 \uc9c8\ubb38\uc5d0 AI\uac00 \ub2f5\ud569\ub2c8\ub2e4\u2014\ubb34\uc5c7\uc744 \uba39\uc744\uc9c0, \ubb34\uc5c7\uc744 \uc785\uc744\uc9c0, \uc5b4\ub5bb\uac8c \uacf5\ubd80\ud560\uc9c0, \ub2e4\uc74c\uc5d0 \ubb34\uc5c7\uc744 \ubc30\uc6b8\uc9c0, \uc5b4\ub514\uc5d0 \ud22c\uc790\ud560\uc9c0. \uc2dd\ub2e8\u00b7\uc694\ub9ac\u00b7\ucf54\ub514\u00b7\uc2b5\uad00\u00b7SAT\u00b7\ud559\uc2b5 \uc758\uc0ac\uacb0\uc815\u00b7\uad6c\uc870\ud654\ub41c \ud559\uc2b5\u00b7\uc721\uc544\u00b7\uc5ec\ud589\u00b7\ud22c\uc790\u00b7Growth Monitor\u00b7Performance Sim\u00b7T Today \uc5f4\uc138 \uac00\uc9c0 \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
+      "\ub9e4\uc77c \ub9de\ub2e5\ub730\ub9ac\ub294 \uc9c8\ubb38\uc5d0 AI\uac00 \ub2f5\ud569\ub2c8\ub2e4\u2014\ubb34\uc5c7\uc744 \uba39\uc744\uc9c0, \ubb34\uc5c7\uc744 \uc785\uc744\uc9c0, \uc5b4\ub5bb\uac8c \uacf5\ubd80\ud560\uc9c0, \ub2e4\uc74c\uc5d0 \ubb34\uc5c7\uc744 \ubc30\uc6b8\uc9c0, \uc5b4\ub514\uc5d0 \ud22c\uc790\ud560\uc9c0. \uc2dd\ub2e8\u00b7\uc694\ub9ac\u00b7\ucf54\ub514\u00b7\uc2b5\uad00\u00b7SAT\u00b7\ud559\uc2b5 \uc758\uc0ac\uacb0\uc815\u00b7\uad6c\uc870\ud654\ub41c \ud559\uc2b5\u00b7\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 \ucee4\ubba4\ub2c8\ucf00\uc774\uc158\u00b7\uc721\uc544\u00b7\uc5ec\ud589\u00b7\ud22c\uc790\u00b7Growth Monitor\u00b7Ops Status\u00b7Performance Sim\u00b7T Today \uc5f4\ub2e4\uc12f \uac1c \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
     heroStoryLink: "\uc81c\ud488\uc774 \uc5b4\ub5bb\uac8c \ub9de\ub294\uc9c0",
     heroGridLabel: "\uc6b0\ub9ac\uc758 AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
@@ -523,13 +523,13 @@ const translations = {
     answerLead: "사용자와 AI 검색 시스템이 XingAI를 빠르게 이해할 수 있도록 정리한 짧은 답변입니다.",
     answerQ1: "XingAI는 무엇인가요?",
     answerA1:
-      "XingAI는 13개의 집중형 AI 의사결정 시스템 플랫폼입니다: Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Parent AI, Travel AI, Invest AI, Performance Sim, T Today.",
+      "XingAI는 15개의 집중형 AI 의사결정 시스템 플랫폼입니다: Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Engineering Communication Coach, Growth Monitor, Ops Status, Parent AI, Travel AI, Invest AI, Performance Sim, T Today.",
     answerQ2: "XingAI는 일반 챗봇과 어떻게 다른가요?",
     answerA2:
       "XingAI 제품은 개방형 대화가 아니라 구조화된 결정과 명확한 다음 행동을 중심으로 설계됩니다.",
     answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
     answerA3:
-      "Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Travel AI, Invest AI, Performance Sim 데모를 이용할 수 있습니다. Parent AI는 로드맵에 있습니다. T Today는 문의 페이지에서 무료 얼리 액세스를 요청할 수 있습니다. 모바일 우선, 라이트/다크 테마 지원.",
+      "Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Ops Status, Travel AI, Invest AI, Performance Sim 데모를 이용할 수 있습니다. Engineering Communication Coach와 Parent AI는 로드맵에 있습니다. T Today는 문의 페이지에서 무료 얼리 액세스를 요청할 수 있습니다. 모바일 우선, 라이트/다크 테마 지원.",
     answerQ4: "XingAI가 맞춤 AI 제품도 만들 수 있나요?",
     answerA4:
       "네. XingAI는 창업자와 팀이 아이디어부터 출시까지 집중된 AI 제품을 설계, 개발, 배포하도록 돕습니다.",

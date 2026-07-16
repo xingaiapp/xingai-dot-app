@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Ops Status">
+  <defs>
+    <linearGradient id="os-bg" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14532d"/>
+      <stop offset="0.55" stop-color="#15803d"/>
+      <stop offset="1" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#os-bg)"/>
+  <rect x="6" y="8" width="20" height="16" rx="3" fill="#052e16" opacity="0.35"/>
+  <circle cx="11" cy="13.5" r="2" fill="#bbf7d0"/>
+  <rect x="15" y="12.2" width="9" height="2.4" rx="1.2" fill="#ecfdf5" opacity="0.95"/>
+  <circle cx="11" cy="18.5" r="2" fill="#86efac"/>
+  <rect x="15" y="17.2" width="9" height="2.4" rx="1.2" fill="#ecfdf5" opacity="0.85"/>
+  <circle cx="11" cy="23.5" r="2" fill="#4ade80"/>
+  <path d="M7 25.5h18" stroke="#bbf7d0" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+</svg>
