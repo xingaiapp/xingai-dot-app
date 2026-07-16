@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.07.14
+**Version:** 2026.07.16
 
 **Live at [xingai.app](https://xingai.app/)**
 
 ### Current version notes
+
+`2026.07.16` adds **Engineering English Coach** to the product catalog as coming soon (`engineering-coach`), with light/dark demo screenshots.
 
 `2026.07.14` adds **Learn AI** to the product catalog as a separate demo product from Research AI.
 
@@ -25,6 +27,7 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **SAT AI** | Education AI | Prep Smarter |
 | **Research AI** | Learning AI | Decide What to Learn |
 | **Learn AI** | Learning AI | Learn With Structure |
+| **Engineering English Coach** | Learning AI | Speak Like a Senior |
 | **Parent AI** | Parenting AI | Family Support |
 | **Travel AI** | Travel AI | Explore Better |
 | **Investment Assistant** | Finance AI | Invest Smarter |
@@ -32,11 +35,11 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **T Today** | Finance AI | Plan Today |
 | **Growth Monitor** | Operations AI | Fix Pages First |
 
-**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Learn AI** is available as a demo at [learn.xingai.app](https://learn.xingai.app/). **Growth Monitor** is early access at [growth.xingai.app](https://growth.xingai.app/). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
+**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Outfit AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Investment Assistant** are live. **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Learn AI** is available as a demo at [learn.xingai.app](https://learn.xingai.app/). **Engineering English Coach** is coming soon ([GitHub](https://github.com/xingaiapp/xingai-engineering-coach-ai)). **Growth Monitor** is early access at [growth.xingai.app](https://growth.xingai.app/). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
 
 ## Features
 
-- **13 AI products** — life domains plus Growth Monitor for SEO/AEO ops
+- **14 AI products** — life domains plus Growth Monitor for SEO/AEO ops
 - **Mobile-first design** — optimized for phones, works great on desktop
 - **Light + dark themes** — icons, screenshots, and UI all adapt
 - **3 languages** — English, Chinese (中文), Korean (한국어)
