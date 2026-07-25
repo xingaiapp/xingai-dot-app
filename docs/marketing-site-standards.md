@@ -22,6 +22,7 @@ Applies to `xingai-dot-app` (xingai.app).
 - Demo images: `*-demo-light.jpg` + `*-demo-dark.jpg`; `ThemedImage` / `AppDemoScreenshot` swap by site theme.
 - Invest demos (`performance-sim`, `t-today`): regenerate with `npm run capture:demos` — same as meal/cook: **390×585** capture, **cover crop** to 1536×1024 (full-bleed UI, not a centered phone mockup). Requires `lab.xingai.app` and local `invest-t-advisor` on `:3001` (`T_AUTH_MODE=off`).
 - **Research AI**: `npm run capture:research` — exports hero artwork from `xingai-research-ai/public/brand/hero-bg-*-visual.png`.
+- **Learn AI**: `npm run capture:learn` — desktop 3:2 capture from local Learn AI (`:3002` + API `:8002`). Light theme injects CSS vars (product is dark-first today).
 
 ## SEO
 

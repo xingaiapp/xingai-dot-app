@@ -333,7 +333,14 @@ export const apps: AppData[] = [
     bestFor: "Learners who already know what they want to study and need a structured path to make progress.",
     clickTarget: "Product details and demo at learn.xingai.app.",
     launchStatus: "demo",
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/learn-ai-demo-light.jpg",
+        srcDark: "/learn-ai-demo-dark.jpg",
+        alt: "XingAI Learn AI",
+        caption: "Today decision — what to practice next",
+      },
+    ],
     features: [
       { name: "Topic or goal input", free: true, pro: true, enterprise: true },
       { name: "Structured lesson path", free: true, pro: true, enterprise: true },
@@ -838,6 +845,7 @@ const localizedAppCopy: Partial<
       canDo: "生成聚焦的一次学习 session，包含解释、练习和复盘检查点。",
       bestFor: "已经知道想学什么、需要一条清晰路径持续推进的学习者。",
       clickTarget: "产品详情和 learn.xingai.app Demo。",
+      screenshots: ["今日决策 — 下一步该练什么"],
       features: [
         "主题或目标输入",
         "结构化学习路径",
@@ -1172,6 +1180,7 @@ const localizedAppCopy: Partial<
       canDo: "설명, 연습, 복습 체크포인트가 있는 집중 학습 세션을 만듭니다.",
       bestFor: "무엇을 배울지 이미 알고 있고 진행할 구조가 필요한 학습자.",
       clickTarget: "제품 상세와 learn.xingai.app 데모.",
+      screenshots: ["오늘의 결정 — 다음에 무엇을 연습할지"],
       features: [
         "주제 또는 목표 입력",
         "구조화된 학습 경로",

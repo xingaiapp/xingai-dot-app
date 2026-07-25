@@ -92,6 +92,13 @@ Regenerate Travel AI marketing images from the Travel app hero artwork:
 npm run capture:travel
 ```
 
+Regenerate Learn AI marketing screenshots (desktop 3:2, light + dark):
+
+```bash
+# Learn AI API :8002 + web :3002 (see xingai-learn README)
+npm run capture:learn
+```
+
 ## Deployment Notes
 
 Use `https://xingai-dot-app.vercel.app/` as the stable public URL for this website. Do not use one-off Vercel deployment URLs in docs or product links.
