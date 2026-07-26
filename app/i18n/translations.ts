@@ -235,6 +235,26 @@ const translations = {
 
     // Shared
     backToHome: "Back to home",
+
+    // Services — Agent Security Assessment
+    secHeading: "Agent Security Assessment",
+    secLead:
+      "A fixed-scope security review of your AI agents, MCP servers, and tool permissions — built for .NET and Azure teams shipping agents to production.",
+    secWhatHeading: "What we assess",
+    secWhatItems:
+      "MCP server inventory and permission manifest review,Tool-call authorization and approval gates,Prompt injection exposure across agent inputs,Credential and secret handling in agent runtimes,Audit trail and kill-switch readiness",
+    secDeliverHeading: "What you get",
+    secDeliverItems:
+      "A written findings report ranked by risk,A permission manifest for every agent and MCP server,A 90-minute walkthrough call with remediation priorities",
+    secProcessHeading: "How it works",
+    secProcessItems:
+      "30-minute scoping call — we map your agent surface,1–2 week assessment on read-only access,Findings report and walkthrough",
+    secWhoHeading: "Who it's for",
+    secWhoBody:
+      "Teams running AI agents against internal systems — especially .NET / Azure shops adopting MCP — who need to know what their agents can actually reach before an auditor or an incident finds out first.",
+    secCtaButton: "Request a scoping call",
+    secNote:
+      "Fixed scope, fixed fee, no retainer. We assess and advise — we don't sell you a platform.",
   },
   zh: {
     navHome: "\u9996\u9875",
@@ -450,6 +470,26 @@ const translations = {
     footerBuild:
       "\u9762\u5411\u65e5\u5e38\u751f\u6d3b\u7684 AI \u51b3\u7b56\u7cfb\u7edf\u2014\u2014\u65b0\u6f14\u793a\u4e0e\u53d1\u5e03\u5c06\u9996\u5148\u51fa\u73b0\u5728\u8fd9\u91cc\u3002",
     backToHome: "\u8fd4\u56de\u9996\u9875",
+
+    // Services \u2014 Agent Security Assessment
+    secHeading: "Agent \u5b89\u5168\u8bc4\u4f30",
+    secLead:
+      "\u9488\u5bf9 AI Agent\u3001MCP \u670d\u52a1\u5668\u4e0e\u5de5\u5177\u6743\u9650\u7684\u56fa\u5b9a\u8303\u56f4\u5b89\u5168\u8bc4\u5ba1\u2014\u2014\u9762\u5411\u4f7f\u7528 .NET \u548c Azure\u3001\u6b63\u5728\u5c06 Agent \u6295\u5165\u751f\u4ea7\u7684\u56e2\u961f\u3002",
+    secWhatHeading: "\u8bc4\u4f30\u5185\u5bb9",
+    secWhatItems:
+      "MCP \u670d\u52a1\u5668\u6e05\u5355\u4e0e\u6743\u9650\u6e05\u5355\u8bc4\u5ba1,\u5de5\u5177\u8c03\u7528\u6388\u6743\u4e0e\u5ba1\u6279\u5173\u5361,Agent \u8f93\u5165\u9762\u4e0a\u7684\u63d0\u793a\u6ce8\u5165\u66b4\u9732,Agent \u8fd0\u884c\u65f6\u7684\u51ed\u8bc1\u4e0e\u5bc6\u94a5\u5904\u7406,\u5ba1\u8ba1\u65e5\u5fd7\u4e0e\u7d27\u6025\u505c\u6b62\u80fd\u529b",
+    secDeliverHeading: "\u4ea4\u4ed8\u7269",
+    secDeliverItems:
+      "\u6309\u98ce\u9669\u6392\u5e8f\u7684\u4e66\u9762\u8bc4\u4f30\u62a5\u544a,\u6bcf\u4e2a Agent \u4e0e MCP \u670d\u52a1\u5668\u7684\u6743\u9650\u6e05\u5355,90 \u5206\u949f\u8bb2\u89e3\u4f1a\u8bae\u4e0e\u6574\u6539\u4f18\u5148\u7ea7",
+    secProcessHeading: "\u6d41\u7a0b",
+    secProcessItems:
+      "30 \u5206\u949f\u8303\u56f4\u6c9f\u901a\u2014\u2014\u68b3\u7406\u60a8\u7684 Agent \u4f7f\u7528\u9762,1\u20132 \u5468\u53ea\u8bfb\u6743\u9650\u8bc4\u4f30,\u4ea4\u4ed8\u62a5\u544a\u5e76\u8bb2\u89e3",
+    secWhoHeading: "\u9002\u5408\u8c01",
+    secWhoBody:
+      "\u5728\u5185\u90e8\u7cfb\u7edf\u4e0a\u8fd0\u884c AI Agent \u7684\u56e2\u961f\u2014\u2014\u5c24\u5176\u662f\u6b63\u5728\u91c7\u7528 MCP \u7684 .NET / Azure \u56e2\u961f\u2014\u2014\u9700\u8981\u5728\u5ba1\u8ba1\u6216\u5b89\u5168\u4e8b\u4ef6\u53d1\u751f\u4e4b\u524d\uff0c\u5148\u5f04\u6e05\u695a\u81ea\u5df1\u7684 Agent \u5230\u5e95\u80fd\u89e6\u8fbe\u4ec0\u4e48\u3002",
+    secCtaButton: "\u9884\u7ea6\u8303\u56f4\u6c9f\u901a",
+    secNote:
+      "\u56fa\u5b9a\u8303\u56f4\u3001\u56fa\u5b9a\u62a5\u4ef7\u3001\u65e0\u957f\u671f\u5408\u7ea6\u3002\u6211\u4eec\u53ea\u505a\u8bc4\u4f30\u4e0e\u5efa\u8bae\u2014\u2014\u4e0d\u5411\u60a8\u63a8\u9500\u5e73\u53f0\u3002",
   },
   ko: {
     navHome: "\ud648",
@@ -666,6 +706,26 @@ const translations = {
     footerBuild:
       "\uc77c\uc0c1\uc744 \uc704\ud55c AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c\u2014\uc0c8 \ub370\ubaa8\uc640 \ub9b4\ub9ac\uc2a4\uac00 \uba3c\uc800 \uc774\uacf3\uc5d0 \uc62c\ub77c\uc635\ub2c8\ub2e4.",
     backToHome: "\ud648\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
+
+    // Services \u2014 Agent Security Assessment
+    secHeading: "\uc5d0\uc774\uc804\ud2b8 \ubcf4\uc548 \ud3c9\uac00",
+    secLead:
+      "AI \uc5d0\uc774\uc804\ud2b8, MCP \uc11c\ubc84, \ub3c4\uad6c \uad8c\ud55c\uc5d0 \ub300\ud55c \uace0\uc815 \ubc94\uc704 \ubcf4\uc548 \ub9ac\ubdf0 \u2014 \uc5d0\uc774\uc804\ud2b8\ub97c \ud504\ub85c\ub355\uc158\uc5d0 \ubc30\ud3ec\ud558\ub294 .NET / Azure \ud300\uc744 \uc704\ud574 \uc124\uacc4\ub418\uc5c8\uc2b5\ub2c8\ub2e4.",
+    secWhatHeading: "\ud3c9\uac00 \ud56d\ubaa9",
+    secWhatItems:
+      "MCP \uc11c\ubc84 \uc778\ubca4\ud1a0\ub9ac \ubc0f \uad8c\ud55c \ub9e4\ub2c8\ud398\uc2a4\ud2b8 \ub9ac\ubdf0,\ub3c4\uad6c \ud638\ucd9c \uc2b9\uc778 \ubc0f \uc2b9\uc778 \uac8c\uc774\ud2b8,\uc5d0\uc774\uc804\ud2b8 \uc785\ub825 \uc804\ubc18\uc758 \ud504\ub86c\ud504\ud2b8 \uc778\uc81d\uc158 \ub178\ucd9c,\uc5d0\uc774\uc804\ud2b8 \ub7f0\ud0c0\uc784\uc758 \uc790\uaca9 \uc99d\uba85 \ubc0f \uc2dc\ud06c\ub9bf \ucc98\ub9ac,\uac10\uc0ac \ub85c\uadf8\uc640 \uae34\uae09 \uc911\uc9c0 \uc900\ube44 \uc0c1\ud0dc",
+    secDeliverHeading: "\uc81c\uacf5 \uacb0\uacfc\ubb3c",
+    secDeliverItems:
+      "\uc704\ud5d8\ub3c4 \uc21c\uc73c\ub85c \uc815\ub9ac\ub41c \ud3c9\uac00 \ubcf4\uace0\uc11c,\ubaa8\ub4e0 \uc5d0\uc774\uc804\ud2b8\uc640 MCP \uc11c\ubc84\uc758 \uad8c\ud55c \ub9e4\ub2c8\ud398\uc2a4\ud2b8,90\ubd84 \ub9ac\ubdf0 \ubbf8\ud305\uacfc \uac1c\uc120 \uc6b0\uc120\uc21c\uc704",
+    secProcessHeading: "\uc9c4\ud589 \ubc29\uc2dd",
+    secProcessItems:
+      "30\ubd84 \ubc94\uc704 \ud611\uc758 \u2014 \uc5d0\uc774\uc804\ud2b8 \ud45c\uba74\uc744 \ud568\uaed8 \uc815\ub9ac,\uc77d\uae30 \uc804\uc6a9 \uc811\uadfc\uc73c\ub85c 1\u20132\uc8fc \ud3c9\uac00,\ubcf4\uace0\uc11c \uc804\ub2ec \ubc0f \ub9ac\ubdf0",
+    secWhoHeading: "\uc774\ub7f0 \ud300\uc744 \uc704\ud574",
+    secWhoBody:
+      "\ub0b4\ubd80 \uc2dc\uc2a4\ud15c\uc5d0 AI \uc5d0\uc774\uc804\ud2b8\ub97c \uc6b4\uc601\ud558\ub294 \ud300 \u2014 \ud2b9\ud788 MCP\ub97c \ub3c4\uc785 \uc911\uc778 .NET / Azure \ud300 \u2014 \uac10\uc0ac\ub098 \ubcf4\uc548 \uc0ac\uace0\ubcf4\ub2e4 \uba3c\uc800, \uc5d0\uc774\uc804\ud2b8\uac00 \uc2e4\uc81c\ub85c \ubb34\uc5c7\uc5d0 \uc811\uadfc\ud560 \uc218 \uc788\ub294\uc9c0 \ud30c\uc545\ud574\uc57c \ud558\ub294 \ud300\uc744 \uc704\ud55c \uc11c\ube44\uc2a4\uc785\ub2c8\ub2e4.",
+    secCtaButton: "\ubc94\uc704 \ud611\uc758 \uc694\uccad",
+    secNote:
+      "\uace0\uc815 \ubc94\uc704, \uace0\uc815 \ube44\uc6a9, \uc7a5\uae30 \uacc4\uc57d \uc5c6\uc74c. \ud3c9\uac00\uc640 \uc870\uc5b8\ub9cc \uc81c\uacf5\ud558\uba70 \ud50c\ub7ab\ud3fc\uc744 \ud310\ub9e4\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.",
   },
 } as const;
 
