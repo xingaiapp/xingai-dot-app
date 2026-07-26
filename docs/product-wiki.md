@@ -52,3 +52,5 @@ V4 = visual alignment with V1 + functional inheritance from V3 + V4 additions
 | Research AI | `research.xingai.app` | `xingai-research-ai` | Learning go/no-go decision | Worker cache + hot discussions |
 | Learn AI | `learn.xingai.app` | `xingai-learn-ai` | Guided learning session | Saved progress + spaced review |
 | Travel AI | `travel.xingai.app` | `xingai-travel-ai` | Trip decision system | Region/city comparison + book-first itinerary |
+| Evidence Engine | demo card only (no subdomain yet) | `xingai-evidence-engine` (private) | Claim → evidence → citation verification | Atomic claim splitting + counter-evidence; public UI ships as Research AI Evidence Workspace |
+| Eval Registry | demo card only (open source) | `xingai-eval-registry` (public) | EEE-shaped eval records + regression-gate diff | CI gates in consumer repos + evaluation card export |
