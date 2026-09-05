@@ -3475,3 +3475,28 @@ html[data-theme="dark"] .mobile-drawer {
     text-align: center;
   }
 }
+
+/* Verbatim ADR excerpts on the engineering page. Quotes carry the weight of
+   that page, so they read as source material rather than pull-quote decoration. */
+.adr-quote {
+  margin: 0.9rem 0;
+  padding: 0.75rem 0 0.75rem 1rem;
+  border-left: 3px solid var(--line);
+  color: var(--ink);
+  font-style: normal;
+}
+
+.adr-quote p {
+  margin: 0 0 0.5rem;
+}
+
+.adr-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.adr-cite {
+  display: block;
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}

@@ -236,6 +236,47 @@ const translations = {
     // Shared
     backToHome: "Back to home",
 
+    // Engineering practice
+    engHeading: "Engineering practice",
+    engLead:
+      "Demos show what a system does on a good day. This page shows how the decisions behind it were made \u2014 and what they admit they do not cover.",
+    engRecordHeading: "Decisions are written down",
+    engRecordBody:
+      "337 architecture decision records across 25 repositories, each written in English and Chinese, each stating the context, the decision, the consequences, and the tradeoffs accepted. Every product carries them. When you ask why a system behaves the way it does, the answer is dated and written, not reconstructed from memory.",
+    engRecordNote:
+      "Most live in private product repositories. The three excerpts below are quoted verbatim rather than linked.",
+    engEx1Heading: "One answer, computed in one place",
+    engEx1Quote:
+      "The worker can generate one recommendation, the request path can recompute a slightly different one, and the frontend can infer a third from raw fields. If that happens, the product becomes hard to debug and easy to mistrust.",
+    engEx1Cite: "ADR-012, Decision Cache Boundary \u2014 Invest AI, 2026-05-20",
+    engEx1Body:
+      "The rule that followed: decision calculations happen only in the worker. The API may expose a cached decision and report it as stale, but may not create, alter, or repair one on the request path. A financial recommendation that changes depending on which screen you opened is not a display bug.",
+    engEx2Heading: "Enforcement that states its own limits",
+    engEx2Quote:
+      "An agent firewall is only as good as its interception point. If the agent can reach the shell, filesystem, or network without passing through the policy layer, the firewall is decoration.",
+    engEx2Cite: "ADR-001, Interception Point \u2014 Agent Firewall, 2026-07-05",
+    engEx2Body:
+      "Three architectures were compared against real constraints, one was chosen, and the gap was documented rather than left for a customer to find: v1 protects against a tricked agent, not a malicious local user. That sentence is in the README, not only in the ADR.",
+    engEx3Heading: "Saying what a green check does not mean",
+    engEx3Quote:
+      "It cannot tell you that the metric is the right one, that the dataset is representative, or that the sample is large enough for the difference to be real.",
+    engEx3Cite: "Eval Registry \u2014 on its own regression gate",
+    engEx3Body:
+      "An evaluation gate that blocks a release is only as trustworthy as the metric behind it. Stating that plainly, next to the feature itself, is the difference between a benchmark and a number that gets quoted back at you in a procurement review.",
+    engOpenHeading: "What you can read in full",
+    engOpenBody:
+      "Product repositories are private, but the engineering surface that matters for evaluating us is open:",
+    engOpenEvalRegistry:
+      "the evaluation registry and its regression gate, including the limits quoted above",
+    engOpenPocs:
+      "enterprise proof-of-concepts \u2014 MCP gateways, guardrail monitoring, claims workflow redesign",
+    engOpenDesign:
+      "18 written articles on agent governance, MCP in production, and loop engineering",
+    engTalkHeading: "If this is the level you need",
+    engTalkBody:
+      "The useful conversation is usually a specific one: an agent you are about to put in front of customers, an MCP surface nobody has audited, a decision path that gives different answers on different screens. Bring that, not a brief.",
+    engTalkCta: "Start a technical conversation",
+
     // Services — Agent Security Assessment
     secHeading: "Agent Security Assessment",
     secLead:
@@ -472,6 +513,46 @@ const translations = {
     backToHome: "\u8fd4\u56de\u9996\u9875",
 
     // Services \u2014 Agent Security Assessment
+
+    // Engineering practice
+    engHeading: "工程实践",
+    engLead:
+      "Demo 展示的是系统在顺利时的样子。这一页展示背后的决策是怎么做的——以及它们主动承认自己覆盖不到什么。",
+    engRecordHeading: "决策是写下来的",
+    engRecordBody:
+      "25 个仓库、337 篇架构决策记录，每篇中英双语，写清背景、决策、后果，以及接受了哪些取舍。每个产品都有。当你问某个系统为什么是这样，答案是有日期、有原文的，不是事后回忆拼出来的。",
+    engRecordNote:
+      "其中多数在私有产品仓库里。下面三段是原文照录，不是链接。",
+    engEx1Heading: "一个答案，只在一处计算",
+    engEx1Quote:
+      "worker 会生成一个建议，请求路径可能重算出一个略有出入的，前端还能从原始字段推出第三个。真发生了，这个产品就变得难以调试、也容易失去信任。",
+    engEx1Cite: "ADR-012《决策缓存边界》— Invest AI，2026-05-20",
+    engEx1Body:
+      "由此定下的规则：决策计算只发生在 worker。API 可以暴露缓存里的决策、可以报告它已过期，但不得在请求路径上创建、修改或修补它。一个随你打开哪个页面而变化的投资建议，不是显示 bug。",
+    engEx2Heading: "会说出自己边界的防护",
+    engEx2Quote:
+      "Agent 防火墙的上限就是它的拦截点。如果 agent 不经过策略层就能碰到 shell、文件系统或网络，那这道防火墙只是装饰。",
+    engEx2Cite: "ADR-001《拦截点》— Agent Firewall，2026-07-05",
+    engEx2Body:
+      "三种架构对着真实约束比过，选定一种，并把缺口写进文档而不是留给客户去撞：v1 防的是被骗的 agent，不是恶意的本地用户。这句话写在 README 里，不只在 ADR 里。",
+    engEx3Heading: "说清楚一个绿灯不代表什么",
+    engEx3Quote:
+      "它无法判断这个指标是否合适、数据集是否有代表性、样本量是否足以让差异成立。",
+    engEx3Cite: "Eval Registry — 关于它自己的回归门禁",
+    engEx3Body:
+      "一道能拦下发布的评测门禁，可信度不会超过它背后的指标。把这一点直接写在功能旁边，是「一个基准」和「一个会在采购评审上被反过来引用的数字」之间的区别。",
+    engOpenHeading: "可以完整读到的部分",
+    engOpenBody:
+      "产品仓库是私有的，但真正用于评估我们的那部分工程面是公开的：",
+    engOpenEvalRegistry: "评测登记与回归门禁，包含上面引用的那段边界声明",
+    engOpenPocs: "企业级 PoC——MCP 网关、护栏监控、理赔流程重设计",
+    engOpenDesign: "18 篇文章，覆盖 agent 治理、MCP 上生产、loop engineering",
+    engTalkHeading: "如果你需要的是这个层面",
+    engTalkBody:
+      "有价值的对话通常很具体：一个即将放到客户面前的 agent、一片没人审过的 MCP 暴露面、一条在不同页面给出不同答案的决策链路。带这个来，不用带需求文档。",
+    engTalkCta: "开始一次技术对话",
+
+    // Services — Agent Security Assessment
     secHeading: "Agent \u5b89\u5168\u8bc4\u4f30",
     secLead:
       "\u9488\u5bf9 AI Agent\u3001MCP \u670d\u52a1\u5668\u4e0e\u5de5\u5177\u6743\u9650\u7684\u56fa\u5b9a\u8303\u56f4\u5b89\u5168\u8bc4\u5ba1\u2014\u2014\u9762\u5411\u4f7f\u7528 .NET \u548c Azure\u3001\u6b63\u5728\u5c06 Agent \u6295\u5165\u751f\u4ea7\u7684\u56e2\u961f\u3002",
@@ -708,6 +789,46 @@ const translations = {
     backToHome: "\ud648\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
 
     // Services \u2014 Agent Security Assessment
+
+    // Engineering practice
+    engHeading: "엔지니어링 실천",
+    engLead:
+      "데모는 시스템이 잘 돌아갈 때의 모습을 보여줍니다. 이 페이지는 그 뒤의 결정이 어떻게 내려졌는지 — 그리고 무엇을 다루지 못하는지 스스로 밝힌 부분을 보여줍니다.",
+    engRecordHeading: "결정은 기록으로 남습니다",
+    engRecordBody:
+      "25개 저장소에 걸친 337건의 아키텍처 결정 기록. 각각 영어와 중국어로 작성되며 맥락, 결정, 결과, 그리고 받아들인 트레이드오프를 명시합니다. 모든 제품이 이를 갖추고 있습니다. 어떤 시스템이 왜 그렇게 동작하는지 물으면, 답은 날짜가 찍힌 문서로 존재합니다.",
+    engRecordNote:
+      "대부분은 비공개 제품 저장소에 있습니다. 아래 세 인용은 링크가 아니라 원문 그대로입니다.",
+    engEx1Heading: "하나의 답, 한 곳에서만 계산",
+    engEx1Quote:
+      "워커가 하나의 추천을 만들고, 요청 경로가 조금 다른 것을 다시 계산하고, 프런트엔드가 원시 필드에서 세 번째를 추론할 수 있습니다. 그렇게 되면 제품은 디버깅하기 어렵고 신뢰하기 쉽지 않습니다.",
+    engEx1Cite: "ADR-012 결정 캐시 경계 — Invest AI, 2026-05-20",
+    engEx1Body:
+      "그래서 정한 규칙: 결정 계산은 워커에서만 일어납니다. API는 캐시된 결정을 노출하고 오래됐다고 알릴 수 있지만, 요청 경로에서 만들거나 바꾸거나 고칠 수 없습니다. 어느 화면을 열었느냐에 따라 달라지는 투자 추천은 표시 버그가 아닙니다.",
+    engEx2Heading: "스스로 한계를 밝히는 방어",
+    engEx2Quote:
+      "에이전트 방화벽의 성능은 가로채기 지점이 결정합니다. 에이전트가 정책 계층을 거치지 않고 셸, 파일시스템, 네트워크에 닿을 수 있다면 그 방화벽은 장식입니다.",
+    engEx2Cite: "ADR-001 가로채기 지점 — Agent Firewall, 2026-07-05",
+    engEx2Body:
+      "세 가지 아키텍처를 실제 제약과 견주어 비교하고 하나를 선택한 뒤, 빈틈은 고객이 발견하도록 두지 않고 문서에 적었습니다. v1은 속은 에이전트를 막지, 악의적인 로컬 사용자를 막지 않습니다. 이 문장은 ADR뿐 아니라 README에도 있습니다.",
+    engEx3Heading: "초록불이 뜻하지 않는 것을 밝히기",
+    engEx3Quote:
+      "그 지표가 적절한지, 데이터셋이 대표성이 있는지, 표본이 차이를 성립시킬 만큼 큰지는 알려주지 못합니다.",
+    engEx3Cite: "Eval Registry — 자체 회귀 게이트에 대하여",
+    engEx3Body:
+      "릴리스를 막을 수 있는 평가 게이트의 신뢰도는 그 뒤의 지표를 넘지 못합니다. 이를 기능 바로 옆에 분명히 적는 것이, 벤치마크와 구매 심사에서 되돌아와 인용될 숫자 사이의 차이입니다.",
+    engOpenHeading: "전문을 읽을 수 있는 것",
+    engOpenBody:
+      "제품 저장소는 비공개지만, 우리를 평가하는 데 중요한 엔지니어링 표면은 공개되어 있습니다:",
+    engOpenEvalRegistry: "평가 레지스트리와 회귀 게이트, 위에 인용한 한계 설명 포함",
+    engOpenPocs: "엔터프라이즈 PoC — MCP 게이트웨이, 가드레일 모니터링, 클레임 워크플로 재설계",
+    engOpenDesign: "에이전트 거버넌스, 프로덕션 MCP, 루프 엔지니어링에 대한 18편의 글",
+    engTalkHeading: "이 수준이 필요하다면",
+    engTalkBody:
+      "유용한 대화는 대개 구체적입니다. 곧 고객 앞에 내놓을 에이전트, 아무도 감사하지 않은 MCP 표면, 화면마다 다른 답을 주는 결정 경로. 요구사항 문서 말고 그것을 가져오세요.",
+    engTalkCta: "기술 대화 시작하기",
+
+    // Services — Agent Security Assessment
     secHeading: "\uc5d0\uc774\uc804\ud2b8 \ubcf4\uc548 \ud3c9\uac00",
     secLead:
       "AI \uc5d0\uc774\uc804\ud2b8, MCP \uc11c\ubc84, \ub3c4\uad6c \uad8c\ud55c\uc5d0 \ub300\ud55c \uace0\uc815 \ubc94\uc704 \ubcf4\uc548 \ub9ac\ubdf0 \u2014 \uc5d0\uc774\uc804\ud2b8\ub97c \ud504\ub85c\ub355\uc158\uc5d0 \ubc30\ud3ec\ud558\ub294 .NET / Azure \ud300\uc744 \uc704\ud574 \uc124\uacc4\ub418\uc5c8\uc2b5\ub2c8\ub2e4.",
