@@ -312,7 +312,7 @@ export const apps: AppData[] = [
       { title: "Decision-first result page", status: "shipped" },
       { title: "OpenAI synthesis + demo fallback", status: "shipped" },
       { title: "Mobile chrome + en/zh/ko", status: "shipped" },
-      { title: "research.xingai.app deploy", status: "in-progress" },
+      { title: "research.xingai.app deploy", status: "shipped" },
       { title: "Worker cache + Brave search pipeline", status: "planned" },
       { title: "Hot discussions (HN / Reddit / X)", status: "planned" },
       { title: "Personal library & accounts", status: "planned" },
@@ -355,7 +355,7 @@ export const apps: AppData[] = [
     roadmap: [
       { title: "Guided learning session demo", status: "shipped" },
       { title: "Mobile-first learning flow", status: "shipped" },
-      { title: "learn.xingai.app demo", status: "in-progress" },
+      { title: "learn.xingai.app demo", status: "shipped" },
       { title: "Saved progress and review history", status: "planned" },
       { title: "Personalized spaced review", status: "planned" },
     ],
@@ -474,7 +474,7 @@ export const apps: AppData[] = [
     roadmap: [
       { title: "Claim → evidence → citation pipeline", status: "shipped" },
       { title: "Local verification dashboard (EN/中文/한국어)", status: "shipped" },
-      { title: "Atomic claim splitting", status: "in-progress" },
+      { title: "Atomic claim splitting", status: "shipped" },
       { title: "Counter-evidence retrieval", status: "planned" },
       { title: "PDF ingest", status: "planned" },
       { title: "Research AI Evidence Workspace (public UI)", status: "planned" },
@@ -781,7 +781,7 @@ export const apps: AppData[] = [
       { name: "API access", free: false, pro: false, enterprise: true },
     ],
     roadmap: [
-      { title: "Early access at t.xingai.app", status: "in-progress" },
+      { title: "Early access at t.xingai.app", status: "shipped" },
       { title: "Pre-market checklist export", status: "planned" },
       { title: "Trade journal & end-of-day review", status: "planned" },
       { title: "Public launch", status: "planned" },
