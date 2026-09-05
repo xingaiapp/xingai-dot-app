@@ -559,6 +559,31 @@ export const apps: AppData[] = [
     ],
   },
   {
+    slug: "founder-ai",
+    name: "XingAI Founder AI",
+    tagline: "From Signal to Startup Decision",
+    icon: "/founder-icon.svg",
+    iconDark: "/founder-icon.svg",
+    favicon: "/founder-icon.svg",
+    description:
+      "AI co-founder for solo founders—turns real signals from GitHub, Product Hunt, and research blogs into scored opportunities, a product plan, and a daily founder brief.",
+    category: "Founder AI",
+    canDo: "Extract trends from primary sources, score them as opportunities, and draft a PRD you can act on.",
+    bestFor: "Solo founders who want a decision each morning instead of another feed to read.",
+    clickTarget: "Roadmap details and early-access contact.",
+    launchStatus: "coming-soon",
+    comingSoon: true,
+    screenshots: [],
+    features: [],
+    roadmap: [
+      { title: "Signal ingestion + trend extraction", status: "shipped" },
+      { title: "Opportunity scoring + PRD generation", status: "shipped" },
+      { title: "Idea tracker + entity graph + daily brief", status: "shipped" },
+      { title: "founder.xingai.app deploy", status: "planned" },
+      { title: "Public preview", status: "planned" },
+    ],
+  },
+  {
     slug: "parent-ai",
     name: "XingAI Parent AI",
     tagline: "Family Support",
@@ -1107,6 +1132,22 @@ const localizedAppCopy: Partial<
       ],
       screenshots: ["带结转待办与收件箱分拣的每日简报"],
     },
+    "founder-ai": {
+      tagline: "从信号到创业决策",
+      category: "创始人 AI",
+      description:
+        "面向独立创始人的 AI 合伙人——把 GitHub、Product Hunt 和研究博客上的真实信号，变成打过分的机会、一份产品计划和每日创始人简报。",
+      canDo: "从一手信源提取趋势，按机会打分，并起草一份可执行的 PRD。",
+      bestFor: "希望每天早上拿到一个决策、而不是又一条信息流的独立创始人。",
+      clickTarget: "路线图详情和 Early Access 联系入口。",
+      roadmap: [
+        "信号采集 + 趋势提取",
+        "机会打分 + PRD 生成",
+        "想法追踪 + 实体图谱 + 每日简报",
+        "部署 founder.xingai.app",
+        "公开预览",
+      ],
+    },
     "parent-ai": {
       tagline: "家庭支持",
       category: "育儿 AI",
@@ -1516,6 +1557,22 @@ const localizedAppCopy: Partial<
         "영속 할 일 저장소",
       ],
       screenshots: ["이월 할 일과 받은편지함 분류가 있는 일일 브리프"],
+    },
+    "founder-ai": {
+      tagline: "신호에서 창업 결정까지",
+      category: "파운더 AI",
+      description:
+        "1인 창업자를 위한 AI 코파운더 — GitHub, Product Hunt, 리서치 블로그의 실제 신호를 점수화된 기회와 제품 계획, 매일의 파운더 브리프로 바꿉니다.",
+      canDo: "1차 출처에서 트렌드를 추출하고 기회로 점수화한 뒤 실행 가능한 PRD를 작성합니다.",
+      bestFor: "또 하나의 피드가 아니라 매일 아침 하나의 결정을 원하는 1인 창업자.",
+      clickTarget: "로드맵 상세와 얼리 액세스 문의.",
+      roadmap: [
+        "신호 수집 + 트렌드 추출",
+        "기회 점수화 + PRD 생성",
+        "아이디어 트래커 + 엔티티 그래프 + 일일 브리프",
+        "founder.xingai.app 배포",
+        "공개 프리뷰",
+      ],
     },
     "parent-ai": {
       tagline: "가족 지원",
