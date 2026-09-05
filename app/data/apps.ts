@@ -527,14 +527,14 @@ export const apps: AppData[] = [
     icon: "/daily-assistant-icon.svg",
     iconDark: "/daily-assistant-icon.svg",
     favicon: "/daily-assistant-icon.svg",
+    demoUrl: "https://daily.xingai.app/",
     description:
       "Personal daily ops agent\u2014carry-over todos, inbox triage, and one short focus plan. Human approves anything that leaves the machine.",
     category: "Productivity AI",
     canDo: "Surface leftover work and mail that needs you, then suggest a short daily focus order.",
     bestFor: "People drowning in unfinished tasks and email who want a morning brief, not another habit app.",
-    clickTarget: "Roadmap details and early-access contact.",
-    launchStatus: "coming-soon",
-    comingSoon: true,
+    clickTarget: "Product details and free demo at daily.xingai.app.",
+    launchStatus: "demo",
     screenshots: [
       {
         src: "/daily-assistant-demo-light.svg",
@@ -554,7 +554,7 @@ export const apps: AppData[] = [
       { title: "Product scaffold + chrome + legal/SEO", status: "shipped" },
       { title: "Mock inbox + local todos + brief", status: "shipped" },
       { title: "Gmail OAuth read + draft (no auto-send)", status: "planned" },
-      { title: "daily.xingai.app deploy", status: "planned" },
+      { title: "daily.xingai.app deploy", status: "shipped" },
       { title: "Persisted todo store", status: "planned" },
     ],
   },
@@ -1090,7 +1090,7 @@ const localizedAppCopy: Partial<
         "个人每日运营助手：结转待办、收件箱分拣、一份短焦点计划。离开机器的动作一律需人工批准。",
       canDo: "把未完成工作与需要你的邮件摆上台面，并建议今日短焦点顺序。",
       bestFor: "被未完成待办和邮件淹没、想要晨间简报而不是又一个习惯 App 的人。",
-      clickTarget: "路线图详情和 Early Access 联系入口。",
+      clickTarget: "产品详情与 daily.xingai.app 免费体验。",
       features: [
         "每日简报（结转 + 重点邮件）",
         "应用内待办与结转",
@@ -1500,7 +1500,7 @@ const localizedAppCopy: Partial<
         "개인 일일 운영 에이전트 — 이월 할 일, 받은편지함 분류, 짧은 초점 계획. 머신 밖으로 나가는 행동은 사람 승인 필요.",
       canDo: "미완 업무와 확인이 필요한 메일을 보여주고 하루의 짧은 초점 순서를 제안합니다.",
       bestFor: "미완 할 일과 메일에 치여 습관 앱이 아니라 아침 브리프가 필요한 사람.",
-      clickTarget: "로드맵 상세와 얼리 액세스 문의.",
+      clickTarget: "제품 상세와 daily.xingai.app 무료 체험.",
       features: [
         "일일 브리프(이월 + 중요 메일)",
         "앱 소유 할 일과 이월",
