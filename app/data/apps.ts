@@ -565,7 +565,7 @@ export const apps: AppData[] = [
     icon: "/passive-income-icon.svg",
     iconDark: "/passive-income-icon.svg",
     favicon: "/passive-income-icon.svg",
-    sourceUrl: "https://github.com/xingaiapp/xingai-passive-income-zhibao",
+    sourceUrl: "https://github.com/xingaiapp/xingai-passive-income-ideas",
     sourceKind: "github",
     description:
       "Daily one-Idea passive income research for a defined operator profile\u2014email Summary + A4 PDF. Informational only; not financial advice.",
