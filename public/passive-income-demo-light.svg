@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+  <rect width="960" height="640" fill="#f6f8f5"/>
+  <rect x="48" y="48" width="864" height="120" rx="16" fill="#1a3d2a" opacity="0.12"/>
+  <text x="72" y="110" font-family="Georgia, serif" font-size="36" fill="#1a3d2a">Today's only Idea</text>
+  <text x="72" y="220" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1a3d2a">Mock fit · income band · 30-min action</text>
+  <rect x="48" y="280" width="400" height="280" rx="16" fill="#1a3d2a" opacity="0.08"/>
+  <rect x="480" y="280" width="400" height="280" rx="16" fill="#1a3d2a" opacity="0.08"/>
+  <text x="72" y="340" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1a3d2a">Why it fits</text>
+  <text x="504" y="340" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1a3d2a">Do / Don't today</text>
+</svg>
