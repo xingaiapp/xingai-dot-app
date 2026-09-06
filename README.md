@@ -8,7 +8,9 @@
 
 ### Current version notes
 
-`2026.09.06` adds **Passive Income Idea** as coming soon (`passive-income`) — daily one-Idea 智报 shell targeting [passive.xingai.app](https://passive.xingai.app/), light/dark demo shots, private repo [xingai-passive-income-ideas](https://github.com/xingaiapp/xingai-passive-income-ideas).
+`2026.09.06` marks **Passive Income Idea** live (`passive-income`) at [passive.xingai.app](https://passive.xingai.app/) — private repo [xingai-passive-income-ideas](https://github.com/xingaiapp/xingai-passive-income-ideas).
+
+`2026.09.06` earlier registered Passive Income Idea as coming soon; deploy is now up.
 
 `2026.07.26` adds two new demo products to the catalog: **Evidence Engine** (`evidence-engine`) — claim → evidence → citation verification with a light/dark dashboard — and **Eval Registry** (`eval-registry`) — an Every-Eval-Ever-compatible evaluation registry with a fail-on-regression CI gate ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)).
 
