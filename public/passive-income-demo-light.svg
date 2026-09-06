@@ -1,49 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" fill="none" role="img" aria-label="Daily Idea report mock — light">
   <defs>
     <linearGradient id="skyL" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#e8f3ea"/>
-      <stop offset="100%" stop-color="#f7faf6"/>
+      <stop offset="0%" stop-color="#ebe4f4"/>
+      <stop offset="100%" stop-color="#f5f1fa"/>
     </linearGradient>
     <linearGradient id="sheetL" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f7f2"/>
+      <stop offset="0%" stop-color="#fffcff"/>
+      <stop offset="100%" stop-color="#f3eef8"/>
     </linearGradient>
     <linearGradient id="execL" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FFF4CC"/>
-      <stop offset="100%" stop-color="#FFE8A3"/>
+      <stop offset="0%" stop-color="#ffe8c2"/>
+      <stop offset="100%" stop-color="#ffd6a0"/>
     </linearGradient>
   </defs>
   <rect width="720" height="400" rx="28" fill="url(#skyL)"/>
-  <circle cx="620" cy="64" r="88" fill="#cfe4d3" opacity="0.5"/>
-  <circle cx="90" cy="330" r="100" fill="#d9eadc" opacity="0.4"/>
-  <!-- PDF sheet -->
-  <rect x="52" y="42" width="380" height="316" rx="18" fill="url(#sheetL)" stroke="#b9d0be" stroke-width="2"/>
-  <rect x="76" y="68" width="168" height="12" rx="6" fill="#1a3d2a"/>
-  <rect x="76" y="92" width="220" height="8" rx="4" fill="#8fad96"/>
-  <rect x="76" y="120" width="332" height="72" rx="12" fill="url(#execL)" stroke="#E07000" stroke-width="2"/>
-  <rect x="92" y="138" width="200" height="8" rx="4" fill="#1a3d2a"/>
-  <rect x="92" y="156" width="260" height="7" rx="3.5" fill="#5c4a1a"/>
-  <rect x="92" y="172" width="180" height="7" rx="3.5" fill="#5c4a1a"/>
-  <rect x="76" y="214" width="120" height="8" rx="4" fill="#2f6b3a"/>
-  <rect x="76" y="234" width="300" height="7" rx="3.5" fill="#a8c5af"/>
-  <rect x="76" y="252" width="280" height="7" rx="3.5" fill="#a8c5af"/>
-  <rect x="76" y="270" width="260" height="7" rx="3.5" fill="#a8c5af"/>
-  <rect x="76" y="300" width="90" height="28" rx="10" fill="#2f6b3a"/>
-  <!-- Email card -->
-  <rect x="460" y="78" width="220" height="210" rx="18" fill="#ffffff" stroke="#b9d0be" stroke-width="2"/>
-  <rect x="482" y="102" width="100" height="9" rx="4.5" fill="#2f6b3a"/>
-  <rect x="482" y="124" width="176" height="7" rx="3.5" fill="#9bbda4"/>
-  <rect x="482" y="148" width="176" height="48" rx="10" fill="#e8f3ea"/>
-  <circle cx="506" cy="172" r="10" fill="#2f6b3a"/>
-  <rect x="524" y="165" width="110" height="7" rx="3.5" fill="#3d5c44"/>
-  <rect x="524" y="178" width="80" height="6" rx="3" fill="#8fad96"/>
-  <rect x="482" y="214" width="140" height="7" rx="3.5" fill="#a8c5af"/>
-  <rect x="482" y="232" width="120" height="7" rx="3.5" fill="#a8c5af"/>
-  <rect x="482" y="256" width="88" height="22" rx="8" fill="#E07000"/>
-  <!-- One Idea badge -->
+  <circle cx="620" cy="64" r="88" fill="#c9b8e0" opacity="0.45"/>
+  <circle cx="90" cy="330" r="100" fill="#e8c49a" opacity="0.35"/>
+  <rect x="52" y="42" width="380" height="316" rx="18" fill="url(#sheetL)" stroke="#cfc4de" stroke-width="2"/>
+  <rect x="76" y="68" width="168" height="12" rx="6" fill="#2a2f55"/>
+  <rect x="76" y="92" width="220" height="8" rx="4" fill="#8a7f9a"/>
+  <rect x="76" y="120" width="332" height="72" rx="12" fill="url(#execL)" stroke="#e07a2f" stroke-width="2"/>
+  <rect x="92" y="138" width="200" height="8" rx="4" fill="#2a2f55"/>
+  <rect x="92" y="156" width="260" height="7" rx="3.5" fill="#6b4e2e"/>
+  <rect x="92" y="172" width="180" height="7" rx="3.5" fill="#6b4e2e"/>
+  <rect x="76" y="214" width="120" height="8" rx="4" fill="#e07a2f"/>
+  <rect x="76" y="234" width="300" height="7" rx="3.5" fill="#b0a4c0"/>
+  <rect x="76" y="252" width="280" height="7" rx="3.5" fill="#b0a4c0"/>
+  <rect x="76" y="270" width="260" height="7" rx="3.5" fill="#b0a4c0"/>
+  <rect x="76" y="300" width="90" height="28" rx="10" fill="#2a2f55"/>
+  <rect x="460" y="78" width="220" height="210" rx="18" fill="#fffcff" stroke="#cfc4de" stroke-width="2"/>
+  <rect x="482" y="102" width="100" height="9" rx="4.5" fill="#2a2f55"/>
+  <rect x="482" y="124" width="176" height="7" rx="3.5" fill="#8a7f9a"/>
+  <rect x="482" y="148" width="176" height="48" rx="10" fill="#ebe4f4"/>
+  <circle cx="506" cy="172" r="10" fill="#e07a2f"/>
+  <rect x="524" y="165" width="110" height="7" rx="3.5" fill="#2a2f55"/>
+  <rect x="524" y="178" width="80" height="6" rx="3" fill="#8a7f9a"/>
+  <rect x="482" y="214" width="140" height="7" rx="3.5" fill="#b0a4c0"/>
+  <rect x="482" y="232" width="120" height="7" rx="3.5" fill="#b0a4c0"/>
+  <rect x="482" y="256" width="88" height="22" rx="8" fill="#e07a2f"/>
   <g transform="translate(520 300)">
-    <rect width="140" height="36" rx="18" fill="#1a3d2a"/>
-    <circle cx="22" cy="18" r="8" fill="#FFF4CC"/>
-    <rect x="38" y="12" width="78" height="12" rx="4" fill="#e8f5e9"/>
+    <rect width="140" height="36" rx="18" fill="#2a2f55"/>
+    <circle cx="22" cy="18" r="8" fill="#ffe8c2"/>
+    <rect x="38" y="12" width="78" height="12" rx="4" fill="#f5f1fa"/>
   </g>
 </svg>
