@@ -71,7 +71,7 @@ vercel alias ls
 
 ## Wear AI Cross-Link
 
-The Outfit AI / Wear AI product card in `app/data/apps.ts` should link to:
+The Wear AI product card in `app/data/apps.ts` should link to:
 
 ```text
 https://wear.xingai.app/

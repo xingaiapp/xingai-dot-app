@@ -62,7 +62,7 @@ export const apps: AppData[] = [
     icon: "/meal-coach-icon.png",
     iconDark: "/meal-coach-icon-dark.png",
     favicon: "/favicon-meal-coach.png",
-    demoUrl: "https://xingai-meal-coach-ai.vercel.app/",
+    demoUrl: "https://meal.xingai.app/",
     sourceUrl: "https://uwspstar.gumroad.com/l/ai-meal-planner-nextjs-fastapi",
     sourceKind: "gumroad",
     description:
@@ -148,7 +148,7 @@ export const apps: AppData[] = [
   },
   {
     slug: "outfit-ai",
-    name: "XingAI Outfit AI",
+    name: "XingAI Wear AI",
     tagline: "Dress Smarter",
     icon: "/outfit-ai-icon.png",
     iconDark: "/outfit-ai-icon-dark.png",
@@ -156,7 +156,7 @@ export const apps: AppData[] = [
     demoUrl: "https://wear.xingai.app/",
     description:
       "Style and outfit decisions with structured AI guidance\u2014fewer tabs, clearer choices, and confidence before you walk out the door.",
-    category: "Outfit AI",
+    category: "Wear AI",
     canDo: "Recommend an outfit using occasion, weather, and style context.",
     bestFor: "People who want faster, more confident daily outfit choices.",
     clickTarget: "Product details and live demo.",
@@ -165,7 +165,7 @@ export const apps: AppData[] = [
       {
         src: "/outfit-demo-light.jpg",
         srcDark: "/outfit-demo-dark.jpg",
-        alt: "XingAI Outfit AI",
+        alt: "XingAI Wear AI",
         caption: "Occasion \u2192 outfit recommendation \u2192 decide",
       },
     ],
@@ -188,7 +188,7 @@ export const apps: AppData[] = [
     icon: "/routine-ai-icon.png",
     iconDark: "/routine-ai-icon-dark.png",
     favicon: "/favicon-routine-ai.png",
-    demoUrl: "https://xingai-routine-ai.vercel.app/",
+    demoUrl: "https://routine.xingai.app/",
     sourceUrl: "https://github.com/xingaiapp/xingai-routine-ai",
     sourceKind: "github",
     description:

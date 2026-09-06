@@ -82,13 +82,13 @@ const translations = {
       "Short answers for people and AI search systems trying to understand what XingAI does.",
     answerQ1: "What is XingAI?",
     answerA1:
-      "XingAI is a platform of 15 focused AI decision systems: Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Engineering Communication Coach, Growth Monitor, Ops Status, Parent AI, Travel AI, Invest AI, Performance Sim, and T Today.",
+      "XingAI is a platform of 15 focused AI decision systems: Meal Coach, Cook AI, Wear AI, Routine AI, SAT AI, Research AI, Learn AI, Engineering Communication Coach, Growth Monitor, Ops Status, Parent AI, Travel AI, Invest AI, Performance Sim, and T Today.",
     answerQ2: "How is XingAI different from a chatbot?",
     answerA2:
       "XingAI products are built around structured decisions and clear next actions instead of open-ended generic chat.",
     answerQ3: "What can I use XingAI for today?",
     answerA3:
-      "You can try public demos for Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Ops Status, Travel AI, Invest AI, and Performance Sim. Engineering Communication Coach and Parent AI are on the roadmap. T Today is in free early access via the Contact page. All apps are mobile-first with light/dark themes.",
+      "You can try public demos for Meal Coach, Cook AI, Wear AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Ops Status, Travel AI, Invest AI, and Performance Sim. Engineering Communication Coach and Parent AI are on the roadmap. T Today is in free early access via the Contact page. All apps are mobile-first with light/dark themes.",
     answerQ4: "Can XingAI build a custom AI product?",
     answerA4:
       "Yes. XingAI helps founders and teams design, build, and deploy focused AI products from idea to launch.",
@@ -369,13 +369,13 @@ const translations = {
     answerLead: "给用户和 AI 搜索系统的简短答案，帮助快速理解 XingAI 是什么。",
     answerQ1: "XingAI 是什么？",
     answerA1:
-      "XingAI 是 15 个专注 AI 决策系统的平台：Meal Coach、Cook AI、Outfit AI、Routine AI、SAT AI、Research AI、Learn AI、Engineering Communication Coach、Growth Monitor、Ops Status、Parent AI、Travel AI、Invest AI、Performance Sim 与 T Today。",
+      "XingAI 是 15 个专注 AI 决策系统的平台：Meal Coach、Cook AI、Wear AI、Routine AI、SAT AI、Research AI、Learn AI、Engineering Communication Coach、Growth Monitor、Ops Status、Parent AI、Travel AI、Invest AI、Performance Sim 与 T Today。",
     answerQ2: "XingAI 和普通聊天机器人有什么不同？",
     answerA2:
       "XingAI 产品围绕结构化决策和明确下一步行动设计，而不是开放式泛聊天。",
     answerQ3: "现在可以用 XingAI 做什么？",
     answerA3:
-      "可公开体验 Meal Coach、Cook AI、Outfit AI、Routine AI、SAT AI、Research AI、Learn AI、Growth Monitor、Ops Status、Travel AI、Invest AI 与 Performance Sim。Engineering Communication Coach 与 Parent AI 在路线图中。T Today 可通过联系页免费申请内测。均为移动优先，支持浅色/深色主题。",
+      "可公开体验 Meal Coach、Cook AI、Wear AI、Routine AI、SAT AI、Research AI、Learn AI、Growth Monitor、Ops Status、Travel AI、Invest AI 与 Performance Sim。Engineering Communication Coach 与 Parent AI 在路线图中。T Today 可通过联系页免费申请内测。均为移动优先，支持浅色/深色主题。",
     answerQ4: "XingAI 可以定制 AI 产品吗？",
     answerA4:
       "可以。XingAI 帮助创始人和团队从想法到上线，设计、开发并部署专注的 AI 产品。",
@@ -644,13 +644,13 @@ const translations = {
     answerLead: "사용자와 AI 검색 시스템이 XingAI를 빠르게 이해할 수 있도록 정리한 짧은 답변입니다.",
     answerQ1: "XingAI는 무엇인가요?",
     answerA1:
-      "XingAI는 15개의 집중형 AI 의사결정 시스템 플랫폼입니다: Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Engineering Communication Coach, Growth Monitor, Ops Status, Parent AI, Travel AI, Invest AI, Performance Sim, T Today.",
+      "XingAI는 15개의 집중형 AI 의사결정 시스템 플랫폼입니다: Meal Coach, Cook AI, Wear AI, Routine AI, SAT AI, Research AI, Learn AI, Engineering Communication Coach, Growth Monitor, Ops Status, Parent AI, Travel AI, Invest AI, Performance Sim, T Today.",
     answerQ2: "XingAI는 일반 챗봇과 어떻게 다른가요?",
     answerA2:
       "XingAI 제품은 개방형 대화가 아니라 구조화된 결정과 명확한 다음 행동을 중심으로 설계됩니다.",
     answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
     answerA3:
-      "Meal Coach, Cook AI, Outfit AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Ops Status, Travel AI, Invest AI, Performance Sim 데모를 이용할 수 있습니다. Engineering Communication Coach와 Parent AI는 로드맵에 있습니다. T Today는 문의 페이지에서 무료 얼리 액세스를 요청할 수 있습니다. 모바일 우선, 라이트/다크 테마 지원.",
+      "Meal Coach, Cook AI, Wear AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Ops Status, Travel AI, Invest AI, Performance Sim 데모를 이용할 수 있습니다. Engineering Communication Coach와 Parent AI는 로드맵에 있습니다. T Today는 문의 페이지에서 무료 얼리 액세스를 요청할 수 있습니다. 모바일 우선, 라이트/다크 테마 지원.",
     answerQ4: "XingAI가 맞춤 AI 제품도 만들 수 있나요?",
     answerA4:
       "네. XingAI는 창업자와 팀이 아이디어부터 출시까지 집중된 AI 제품을 설계, 개발, 배포하도록 돕습니다.",
