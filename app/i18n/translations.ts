@@ -271,7 +271,9 @@ const translations = {
     engOpenPocs:
       "enterprise proof-of-concepts \u2014 MCP gateways, guardrail monitoring, claims workflow redesign",
     engOpenDesign:
-      "18 written articles on agent governance, MCP in production, and loop engineering",
+      "longer design essays on agent governance, MCP in production, and loop engineering",
+    engOpenBlog:
+      "89 bilingual engineering posts (English + 中文) in the public GitHub repo; blog.xingai.app is not live yet",
     engTalkHeading: "If this is the level you need",
     engTalkBody:
       "The useful conversation is usually a specific one: an agent you are about to put in front of customers, an MCP surface nobody has audited, a decision path that gives different answers on different screens. Bring that, not a brief.",
@@ -546,7 +548,8 @@ const translations = {
       "产品仓库是私有的，但真正用于评估我们的那部分工程面是公开的：",
     engOpenEvalRegistry: "评测登记与回归门禁，包含上面引用的那段边界声明",
     engOpenPocs: "企业级 PoC——MCP 网关、护栏监控、理赔流程重设计",
-    engOpenDesign: "18 篇文章，覆盖 agent 治理、MCP 上生产、loop engineering",
+    engOpenDesign: "更长的设计文章，覆盖 agent 治理、MCP 上生产、loop engineering",
+    engOpenBlog: "公开 GitHub 仓库里的 89 篇中英双语工程文章；blog.xingai.app 尚未上线",
     engTalkHeading: "如果你需要的是这个层面",
     engTalkBody:
       "有价值的对话通常很具体：一个即将放到客户面前的 agent、一片没人审过的 MCP 暴露面、一条在不同页面给出不同答案的决策链路。带这个来，不用带需求文档。",
@@ -822,7 +825,8 @@ const translations = {
       "제품 저장소는 비공개지만, 우리를 평가하는 데 중요한 엔지니어링 표면은 공개되어 있습니다:",
     engOpenEvalRegistry: "평가 레지스트리와 회귀 게이트, 위에 인용한 한계 설명 포함",
     engOpenPocs: "엔터프라이즈 PoC — MCP 게이트웨이, 가드레일 모니터링, 클레임 워크플로 재설계",
-    engOpenDesign: "에이전트 거버넌스, 프로덕션 MCP, 루프 엔지니어링에 대한 18편의 글",
+    engOpenDesign: "에이전트 거버넌스, 프로덕션 MCP, 루프 엔지니어링에 대한 긴 디자인 에세이",
+    engOpenBlog: "공개 GitHub 저장소의 이중 언어 엔지니어링 글 89편 (영어 + 중국어). blog.xingai.app은 아직 없음",
     engTalkHeading: "이 수준이 필요하다면",
     engTalkBody:
       "유용한 대화는 대개 구체적입니다. 곧 고객 앞에 내놓을 에이전트, 아무도 감사하지 않은 MCP 표면, 화면마다 다른 답을 주는 결정 경로. 요구사항 문서 말고 그것을 가져오세요.",

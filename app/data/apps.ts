@@ -687,6 +687,44 @@ export const apps: AppData[] = [
     ],
   },
   {
+    slug: "tech-blog",
+    name: "XingAI Tech Blog",
+    tagline: "How We Ship",
+    icon: "/tech-blog-icon.svg",
+    iconDark: "/tech-blog-icon.svg",
+    favicon: "/tech-blog-icon.svg",
+    sourceUrl: "https://github.com/xingaiapp/xingai-tech-blog",
+    sourceKind: "github",
+    description:
+      "Public engineering archive for XingAI decision systems — architecture, cache boundaries, MCP gates, and production notes. English and 中文. Not an investing blog.",
+    category: "Engineering",
+    canDo: "Read bilingual posts on how XingAI products are built, filter by tag, and open the Markdown source on GitHub.",
+    bestFor: "Builders who want the architecture notes behind XingAI products, not a marketing funnel.",
+    clickTarget: "Product details and GitHub Markdown until blog.xingai.app DNS is live.",
+    launchStatus: "coming-soon",
+    comingSoon: true,
+    screenshots: [
+      {
+        src: "/tech-blog-demo-light.jpg",
+        srcDark: "/tech-blog-demo-dark.jpg",
+        alt: "XingAI Tech Blog",
+        caption: "Latest posts \u2192 bilingual article",
+      },
+    ],
+    features: [
+      { name: "English + 中文 posts", free: true, pro: true, enterprise: true },
+      { name: "EN / 中文 / 한국어 UI", free: true, pro: true, enterprise: true },
+      { name: "Tag archive + sitemap", free: true, pro: true, enterprise: true },
+      { name: "Public Markdown source", free: true, pro: true, enterprise: true },
+      { name: "Light / dark theme", free: true, pro: true, enterprise: true },
+    ],
+    roadmap: [
+      { title: "Static site from existing Markdown", status: "shipped" },
+      { title: "blog.xingai.app Vercel + DNS", status: "in-progress" },
+      { title: "Korean article translations", status: "planned" },
+    ],
+  },
+  {
     slug: "travel-ai",
     name: "XingAI Travel AI",
     tagline: "Explore Better",
@@ -1237,6 +1275,28 @@ const localizedAppCopy: Partial<
         "邮件 / 推送投递",
       ],
     },
+    "tech-blog": {
+      tagline: "我们怎么上线",
+      category: "工程",
+      description:
+        "XingAI 决策系统的公开工程归档——架构、缓存边界、MCP 闸门与生产笔记。中英双语。不是投资博客。",
+      canDo: "阅读产品怎么建的双语文章，按标签过滤，并打开 GitHub 上的 Markdown 源文件。",
+      bestFor: "想看 XingAI 产品背后架构笔记、而不是营销漏斗的 builder。",
+      clickTarget: "产品详情和 GitHub Markdown。blog.xingai.app 域名还未上线。",
+      screenshots: ["最新文章 \u2192 双语正文"],
+      features: [
+        "英文 + 中文文章",
+        "EN / 中文 / 한국어 界面",
+        "标签归档 + sitemap",
+        "公开 Markdown 源",
+        "浅色 / 深色主题",
+      ],
+      roadmap: [
+        "用现有 Markdown 生成静态站",
+        "blog.xingai.app 的 Vercel + DNS",
+        "韩文正文翻译",
+      ],
+    },
     "travel-ai": {
       tagline: "旅行更好选",
       category: "旅行 AI",
@@ -1678,6 +1738,28 @@ const localizedAppCopy: Partial<
         "engineering-coach.xingai.app 배포",
         "영구 기록과 주간 리포트",
         "이메일 / 푸시 전달",
+      ],
+    },
+    "tech-blog": {
+      tagline: "이렇게 출시합니다",
+      category: "엔지니어링",
+      description:
+        "XingAI 의사결정 시스템의 공개 엔지니어링 아카이브 — 아키텍처, 캐시 경계, MCP 게이트, 운영 노트. 영어와 중국어. 투자 블로그가 아닙니다.",
+      canDo: "제품이 어떻게 만들어졌는지 이중 언어 글을 읽고, 태그로 거르고, GitHub Markdown 소스를 엽니다.",
+      bestFor: "마케팅 퍼널이 아니라 XingAI 제품 뒤의 아키텍처 노트를 원하는 빌더.",
+      clickTarget: "제품 상세와 GitHub Markdown. blog.xingai.app DNS는 아직 없습니다.",
+      screenshots: ["최신 글 \u2192 이중 언어 본문"],
+      features: [
+        "영어 + 중국어 글",
+        "EN / 中文 / 한국어 UI",
+        "태그 아카이브 + 사이트맵",
+        "공개 Markdown 소스",
+        "라이트 / 다크 테마",
+      ],
+      roadmap: [
+        "기존 Markdown으로 정적 사이트",
+        "blog.xingai.app Vercel + DNS",
+        "한국어 본문 번역",
       ],
     },
     "travel-ai": {

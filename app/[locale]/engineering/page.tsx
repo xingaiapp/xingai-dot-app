@@ -82,6 +82,12 @@ export default function EngineeringPage() {
             </a>{" "}
             — {t("engOpenDesign")}
           </li>
+          <li>
+            <a href="https://github.com/xingaiapp/xingai-tech-blog">
+              xingai-tech-blog
+            </a>{" "}
+            — {t("engOpenBlog")}
+          </li>
         </ul>
       </div>
 
