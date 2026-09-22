@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslation } from "../../i18n/LanguageContext";
+import { useLocalePath } from "../../lib/use-locale-path";
 
 /**
  * Engineering practice — the client-facing case that the products are backed by
@@ -10,6 +12,7 @@ import { useTranslation } from "../../i18n/LanguageContext";
  */
 export default function EngineeringPage() {
   const { t } = useTranslation();
+  const p = useLocalePath();
 
   const mailto = `mailto:contact@xingai.app?subject=${encodeURIComponent(
     "[xingai.app] Engineering practice — technical conversation"
@@ -92,6 +95,9 @@ export default function EngineeringPage() {
           <a className="cta" href={mailto}>
             {t("engTalkCta")}
           </a>
+        </p>
+        <p>
+          <Link href={p("/services")}>{t("engServicesLink")} →</Link>
         </p>
       </div>
     </main>
