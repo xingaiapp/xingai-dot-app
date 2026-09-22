@@ -139,7 +139,7 @@ const translations = {
     storyPrinciplePoint2:
       "Same UX habits across products: mobile web, theme toggle, localized UI on the marketing site and in apps that ship i18n.",
     storyPrinciplePoint3:
-      "Invest: dashboard context on invest.xingai.app, paper rule tests on lab.xingai.app, daily T plans on t.xingai.app (early access).",
+      "Invest: AI Industry Map on invest.xingai.app, paper rule tests on lab.xingai.app, daily T plans on t.xingai.app (early access).",
     storyClustersTitle: "Two clusters",
     storyClustersLead:
       "Apps work standalone. Invest tools are meant to reinforce each other without one forced login.",
@@ -148,12 +148,12 @@ const translations = {
       "Food, style, habits, SAT, family, and travel\u2014each product owns a single job.",
     storyClusterInvestTitle: "Invest & trading tools",
     storyClusterInvestLead:
-      "Portfolio context, Performance Sim on the lab, and T Today for screenshot \u2192 rules \u2192 plan.",
+      "AI Industry Map, Performance Sim on the lab, and T Today for screenshot → rules → plan.",
     storyInvestFlowTitle: "Invest cluster flow",
     storyInvestFlowLead:
-      "Read macro and symbol context first, stress-test rules on the lab, then request free early access for T Today when you want a daily plan.",
+      "Read the AI Industry Map first, stress-test rules on the lab, then request free early access for T Today when you want a daily plan.",
     storyInvestRoleCore:
-      "invest.xingai.app \u2014 decision dashboard: macro radar, allocations, and symbol context from precomputed cache.",
+      "invest.xingai.app — AI Industry Map and cached research (filings, layers). Not a buy list.",
     storyInvestRoleLab:
       "lab.xingai.app \u2014 Performance Sim: same signals, different rule sets; paper ledger outcomes.",
     storyInvestRoleT:
@@ -421,7 +421,7 @@ const translations = {
     storyPrinciplePoint2:
       "\u4ea7\u54c1\u4e4b\u95f4\u4e60\u60ef\u4e00\u81f4\uff1a\u79fb\u52a8\u7f51\u9875\u3001\u4e3b\u9898\u5207\u6362\u3001\u8425\u9500\u7ad9\u4e0e\u5df2\u4e0a\u7ebf\u5e94\u7528\u7684\u591a\u8bed\u8a00\u3002",
     storyPrinciplePoint3:
-      "\u6295\u8d44\uff1ainvest.xingai.app \u770b\u677f\u5757\u4e0e\u7b26\u53f7\u4e0a\u4e0b\u6587\uff0clab.xingai.app \u6d4b\u89c4\u5219\uff0ct.xingai.app \u6bcf\u65e5 T \u8ba1\u5212\uff08\u5185\u6d4b\u7533\u8bf7\u514d\u8d39\u3002",
+      "投资：invest.xingai.app 的 AI 产业链地图，lab.xingai.app 测规则，t.xingai.app 每日 T 计划（内测申请免费）。",
     storyClustersTitle: "\u4e24\u5927\u96c6\u7fa4",
     storyClustersLead:
       "\u5404\u5e94\u7528\u53ef\u72ec\u7acb\u4f7f\u7528\u3002\u6295\u8d44\u7ebf\u8bbe\u8ba1\u4e3a\u4e92\u76f8\u8865\u5145\uff0c\u4e0d\u5f3a\u5236\u5355\u4e00\u767b\u5f55\u3002",
@@ -430,12 +430,12 @@ const translations = {
       "\u996e\u98df\u3001\u7a7f\u642d\u3001\u4e60\u60ef\u3001SAT\u3001\u5bb6\u5ead\u4e0e\u51fa\u884c\u2014\u2014\u6bcf\u4e2a\u4ea7\u54c1\u53ea\u505a\u4e00\u4ef6\u4e8b\u3002",
     storyClusterInvestTitle: "\u6295\u8d44\u4e0e\u4ea4\u6613\u5de5\u5177",
     storyClusterInvestLead:
-      "\u6295\u8d44\u770b\u677f\u3001Performance Sim \u6a21\u62df\u76d8\u3001T Today \u622a\u56fe\u6301\u4ed3 \u2192 \u89c4\u5219 \u2192 \u8ba1\u5212\u3002",
+      "AI 产业链地图、lab 上的 Performance Sim、T Today 截图持仓 → 规则 → 计划。",
     storyInvestFlowTitle: "\u6295\u8d44\u96c6\u7fa4\u94fe\u8def",
     storyInvestFlowLead:
-      "\u5148\u770b\u5b8f\u89c2\u4e0e\u6807\u7684\u4e0a\u4e0b\u6587\uff0c\u518d\u5728 lab \u4e0a\u6d4b\u89c4\u5219\uff0c\u9700\u8981\u6bcf\u65e5\u8ba1\u5212\u65f6\u514d\u8d39\u7533\u8bf7 T Today \u5185\u6d4b\u3002",
+      "先看 AI 产业链地图，再在 lab 上测规则，需要每日计划时免费申请 T Today 内测。",
     storyInvestRoleCore:
-      "invest.xingai.app \u2014 \u51b3\u7b56\u770b\u677f\uff1a\u5b8f\u89c2\u96f7\u8fbe\u3001\u914d\u7f6e\u4e0e\u7b26\u53f7\u4e0a\u4e0b\u6587\uff08\u7f13\u5b58\u9884\u8ba1\u7b97\uff09\u3002",
+      "invest.xingai.app — AI 产业链地图与缓存研究（备案、图层）。不是买股清单。",
     storyInvestRoleLab:
       "lab.xingai.app \u2014 Performance Sim\uff1a\u76f8\u540c\u4fe1\u53f7\u3001\u4e0d\u540c\u89c4\u5219\uff1b\u6a21\u62df\u76d8\u7ed3\u679c\u3002",
     storyInvestRoleT:
@@ -697,7 +697,7 @@ const translations = {
     storyPrinciplePoint2:
       "\uc81c\ud488 \uac04 \ub3d9\uc77c\ud55c UX: \ubaa8\ubc14\uc77c \uc6f9, \ud14c\ub9c8 \uc804\ud658, \ub9c8\ucf00\ud305 \uc0ac\uc774\ud2b8 \ubc0f i18n \uc9c0\uc6d0 \uc571.",
     storyPrinciplePoint3:
-      "invest.xingai.app \ub9e5\ub77d \u2192 lab.xingai.app \uaddc\uce59 \ud14c\uc2a4\ud2b8 \u2192 t.xingai.app \uc77c\uc77c T \uacc4\ud68d(\uc5bc\ub9ac \uc561\uc138\uc2a4).",
+      "invest.xingai.app 산업 지도 → lab.xingai.app 규칙 테스트 → t.xingai.app 일일 T 계획(얼리 액세스).",
     storyClustersTitle: "\ub450 \uac70\uc758 \ud074\ub7ec\uc2a4\ud130",
     storyClustersLead:
       "\uc571\uc740 \ub3c5\ub9bd\uc801\uc73c\ub85c \uc791\ub3d9\ud569\ub2c8\ub2e4. \ud22c\uc790 \ub77c\uc778\uc740 \uc11c\ub85c \ubcf4\uc644\ud558\ub3c4\ub85d \uc124\uacc4\ub418\uc5c8\uc2b5\ub2c8\ub2e4.",
@@ -706,12 +706,12 @@ const translations = {
       "\uc2dd\uc0ac, \uc2a4\ud0c0\uc77c, \uc2b5\uad00, SAT, \uac00\uc871, \uc5ec\ud589\u2014 \uac01 \uc81c\ud488\uc740 \ud55c \uac00\uc9c0 \uc5ed\ud560\ub9cc \ub2f4\uc2b5\ub2c8\ub2e4.",
     storyClusterInvestTitle: "\ud22c\uc790 \u00b7 \ud2b8\ub808\uc774\ub529 \ub3c4\uad6c",
     storyClusterInvestLead:
-      "\ud22c\uc790 \ub300\uc2dc\ubcf4\ub4dc, lab \uc131\uacfc \uc2dc\ubbac\ub808\uc774\uc158, T Today(\uc2a4\ud06c\ub9b0\uc0f7 \u2192 \uaddc\uce59 \u2192 \uacc4\ud68d).",
+      "AI 산업 지도, lab 성과 시뮬레이션, T Today(스크린샷 → 규칙 → 계획).",
     storyInvestFlowTitle: "\ud22c\uc790 \ud074\ub7ec\uc2a4\ud130 \ud750\ub984",
     storyInvestFlowLead:
-      "\uba3d\ub85c \ub9e5\ub85c\u00b7\uc2ec\ubcfc \ub9e5\ub77d\uc744 \ubcf4\uace0, lab\uc5d0\uc11c \uaddc\uce59\uc744 \uc2dc\ud5d8\ud55c \ub4a4, \uc77c\uc77c \uacc4\ud68d\uc774 \ud544\uc694\ud558\uba74 T Today \uc5bc\ub9ac \uc561\uc138\uc2a4\ub97c \uc694\uccad\ud558\uc138\uc694.",
+      "AI 산업 지도를 먼저 보고, lab에서 규칙을 시험한 뒤, 일일 계획이 필요하면 T Today 얼리 액세스를 요청하세요.",
     storyInvestRoleCore:
-      "invest.xingai.app \u2014 \uc758\uc0ac\uacb0\uc815 \ub300\uc2dc\ubcf4\ub4dc: \ub9e5\ub85c \ub808\uc774\ub354, \uBC84\uBD84, \uc2ec\ubcfc \ub9e5\ub77d(\uc0ac\uc804 \uacc4\uc0b0 \uce90\uc2dc).",
+      "invest.xingai.app — AI 산업 지도와 캐시된 리서치(공시, 레이어). 매수 목록이 아닙니다.",
     storyInvestRoleLab:
       "lab.xingai.app \u2014 Performance Sim: \ub3d9\uc77c \uc2e0\ud638, \ub2e4\ub978 \uaddc\uce59; \ubaa8\uc758 \uac70\ub798 \uacb0\uacfc.",
     storyInvestRoleT:
