@@ -180,6 +180,10 @@ export default function Footer() {
               <FooterLinkIcon name="about" />
               <span>{t("navAbout")}</span>
             </Link>
+            <Link href={p("/services")} className="footer-icon-link">
+              <FooterLinkIcon name="custom" />
+              <span>{t("navServices")}</span>
+            </Link>
             <Link href={p("/contact")} className="footer-icon-link">
               <FooterLinkIcon name="contact" />
               <span>{t("navContact")}</span>
