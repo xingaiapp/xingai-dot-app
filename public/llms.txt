@@ -21,15 +21,16 @@ Live or demo products:
 - Performance Sim: https://lab.xingai.app
 - T Today: https://t.xingai.app
 - Growth Monitor: https://growth.xingai.app
+- Decision Agent: https://decision.xingai.app
 
 Decision Agent:
 - Product page: https://xingai.app/apps/decision-agent
 - Official app: https://decision.xingai.app
 - Source: https://github.com/xingaiapp/xingai-decision-ai
-- Purpose: turn an investment outcome into a structured sample decision brief
-  with evidence, risk, alternatives, next actions, and human confirmation.
-- Boundary: informational and educational only; no broker connection or
-  autonomous trading.
+- Purpose: turn an investment outcome into a structured brief projected from
+  Invest AI’s public AI-map worker cache, then stop at human confirmation.
+- Boundary: informational and educational only; the site only renders cache.
+  No invented allocations, broker connection, or autonomous trading.
 
 Legal:
 - https://xingai.app/legal/privacy

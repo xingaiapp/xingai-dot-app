@@ -8,11 +8,10 @@
 
 ### Current version notes
 
-`2026.09.24` adds **XingAI Decision Agent** (`decision-agent`) as coming soon at
-[decision.xingai.app](https://decision.xingai.app/) with localized product copy,
-light/dark previews, open-source link, and finance-cluster registration. The
-concept app is now a Next.js website (`/`, `/system`, `/demo`, `/faq`); custom
-domain DNS is still pending.
+`2026.09.24` lists **XingAI Decision Agent** as a public demo at
+[decision.xingai.app](https://decision.xingai.app/). The catalog card now has a
+live CTA, EN / 中文 / 한국어 copy, and notes that `/demo` only renders Invest AI
+worker cache (ADR-053). Custom-domain DNS is in place.
 
 `2026.09.20` also points **Investment Assistant** live demo at [invest.xingai.app/ai-map](https://invest.xingai.app/ai-map) (the public research map). Copy no longer sends visitors to the signed-in dashboard or describes the product as an allocation board.
 
@@ -53,7 +52,7 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **Evidence Engine** | Research AI | Verify Every Claim |
 | **Eval Registry** | Operations AI | Diff Your Evals |
 
-**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Wear AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Investment Assistant** are live. **Decision Agent** is coming soon at [decision.xingai.app](https://decision.xingai.app/) with source available on [GitHub](https://github.com/xingaiapp/xingai-decision-ai). **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Learn AI** is available as a demo at [learn.xingai.app](https://learn.xingai.app/). **Engineering Communication Coach** is coming soon ([GitHub](https://github.com/xingaiapp/xingai-engineering-coach-ai)). **Growth Monitor** is early access at [growth.xingai.app](https://growth.xingai.app/). **Ops Status** is a demo at [xingai-ops-status.vercel.app](https://xingai-ops-status.vercel.app/). **Evidence Engine** and **Eval Registry** are engineering demos on the site; Eval Registry is open source ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
+**Meal Coach**, **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Wear AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Investment Assistant** are live. **Decision Agent** is a public demo at [decision.xingai.app](https://decision.xingai.app/) ([GitHub](https://github.com/xingaiapp/xingai-decision-ai)). **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Learn AI** is available as a demo at [learn.xingai.app](https://learn.xingai.app/). **Engineering Communication Coach** is coming soon ([GitHub](https://github.com/xingaiapp/xingai-engineering-coach-ai)). **Growth Monitor** is early access at [growth.xingai.app](https://growth.xingai.app/). **Ops Status** is a demo at [xingai-ops-status.vercel.app](https://xingai-ops-status.vercel.app/). **Evidence Engine** and **Eval Registry** are engineering demos on the site; Eval Registry is open source ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
 
 ## Features
 
