@@ -31,7 +31,7 @@ export const ecosystemClusters: EcosystemCluster[] = [
     id: "invest",
     titleKey: "storyClusterInvestTitle",
     leadKey: "storyClusterInvestLead",
-    productSlugs: ["investment-assistant", "performance-sim", "t-today"],
+    productSlugs: ["decision-agent", "investment-assistant", "performance-sim", "t-today"],
   },
 ];
 

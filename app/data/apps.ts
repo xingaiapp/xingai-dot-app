@@ -729,6 +729,40 @@ export const apps: AppData[] = [
     ],
   },
   {
+    slug: "decision-agent",
+    name: "XingAI Decision Agent",
+    tagline: "Outcome In. Decision Out.",
+    icon: "/decision-agent-icon.svg",
+    iconDark: "/decision-agent-icon.svg",
+    favicon: "/decision-agent-icon.svg",
+    sourceUrl: "https://github.com/xingaiapp/xingai-decision-ai",
+    sourceKind: "github",
+    description:
+      "Investment decision-system concept—state an outcome, inspect a structured sample brief with evidence, risk, alternatives, and next actions, then confirm at the human boundary.",
+    category: "Finance AI",
+    canDo: "Turn an investment goal into a structured, inspectable sample decision brief.",
+    bestFor: "People evaluating decision-first investment research workflows without automated trading.",
+    clickTarget: "Product details and open-source concept app. Official domain: decision.xingai.app.",
+    launchStatus: "coming-soon",
+    comingSoon: true,
+    screenshots: [
+      {
+        src: "/decision-agent-demo-light.svg",
+        srcDark: "/decision-agent-demo-dark.svg",
+        alt: "XingAI Decision Agent",
+        caption: "Outcome → research → risk → human-reviewed decision brief",
+      },
+    ],
+    features: [],
+    roadmap: [
+      { title: "Next.js product shell with mobile navigation", status: "shipped" },
+      { title: "EN / 中文 / 한국어 and light/dark themes", status: "shipped" },
+      { title: "Illustrative decision brief demo", status: "shipped" },
+      { title: "decision.xingai.app deployment", status: "in-progress" },
+      { title: "Verified worker-cache integration", status: "planned" },
+    ],
+  },
+  {
     slug: "investment-assistant",
     name: "XingAI Investment Assistant",
     tagline: "Invest Smarter",
@@ -1263,6 +1297,23 @@ const localizedAppCopy: Partial<
         "更深入的天气、入境规则与安全语境",
       ],
     },
+    "decision-agent": {
+      tagline: "输入目标，输出决策",
+      category: "金融 AI",
+      description:
+        "投资决策系统概念：输入目标，查看包含证据、风险、替代方案和下一步的结构化示例简报，最终停在人工确认边界。",
+      canDo: "把投资目标转化成结构化、可检查的示例决策简报。",
+      bestFor: "想了解决策优先投资研究流程、但不需要自动交易的人。",
+      clickTarget: "产品详情和开源概念应用。正式域名：decision.xingai.app。",
+      screenshots: ["目标 → 研究 → 风险 → 人工审核的决策简报"],
+      roadmap: [
+        "带移动导航的 Next.js 产品框架",
+        "EN / 中文 / 한국어 与亮暗主题",
+        "示例决策简报演示",
+        "部署 decision.xingai.app",
+        "接入经过验证的 Worker 缓存",
+      ],
+    },
     "investment-assistant": {
       tagline: "投资更系统",
       category: "金融 AI",
@@ -1717,6 +1768,23 @@ const localizedAppCopy: Partial<
         "우선 예약 일정 미리보기",
         "기기 내 여행 기록 저장",
         "날씨, 입국 규정, 안전 맥락 강화",
+      ],
+    },
+    "decision-agent": {
+      tagline: "목표 입력, 결정 출력",
+      category: "금융 AI",
+      description:
+        "투자 의사결정 시스템 콘셉트입니다. 목표를 입력하고 근거, 위험, 대안, 다음 행동이 담긴 구조화된 샘플 브리프를 검토한 뒤 사람의 확인 경계에서 멈춥니다.",
+      canDo: "투자 목표를 검토 가능한 구조화된 샘플 의사결정 브리프로 바꿉니다.",
+      bestFor: "자동 거래 없이 결정 우선 투자 리서치 흐름을 평가하려는 사람.",
+      clickTarget: "제품 상세와 오픈소스 콘셉트 앱. 공식 도메인: decision.xingai.app.",
+      screenshots: ["목표 → 조사 → 위험 → 사람 검토 의사결정 브리프"],
+      roadmap: [
+        "모바일 내비게이션이 있는 Next.js 제품 셸",
+        "EN / 中文 / 한국어 및 라이트/다크 테마",
+        "설명용 의사결정 브리프 데모",
+        "decision.xingai.app 배포",
+        "검증된 Worker 캐시 연동",
       ],
     },
     "investment-assistant": {

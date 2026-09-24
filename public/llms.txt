@@ -1,0 +1,37 @@
+# XingAI
+
+Primary URL: https://xingai.app
+
+XingAI builds focused AI decision systems for everyday work and life. The
+product catalog is at https://xingai.app/apps. Live and demo products should be
+checked against that catalog. Coming-soon products may have public detail pages
+before their target domains are deployed.
+
+Languages: English, Chinese, Korean.
+
+Live or demo products:
+- Meal Coach: https://meal.xingai.app
+- Cook AI: https://cook.xingai.app
+- Wear AI: https://wear.xingai.app
+- Travel AI: https://travel.xingai.app
+- Invest AI: https://invest.xingai.app/ai-map
+- SAT AI: https://sat.xingai.app
+- Research AI: https://research.xingai.app
+- Learn AI: https://learn.xingai.app
+- Performance Sim: https://lab.xingai.app
+- T Today: https://t.xingai.app
+- Growth Monitor: https://growth.xingai.app
+
+Decision Agent:
+- Product page: https://xingai.app/apps/decision-agent
+- Official app: https://decision.xingai.app
+- Source: https://github.com/xingaiapp/xingai-decision-ai
+- Purpose: turn an investment outcome into a structured sample decision brief
+  with evidence, risk, alternatives, next actions, and human confirmation.
+- Boundary: informational and educational only; no broker connection or
+  autonomous trading.
+
+Legal:
+- https://xingai.app/legal/privacy
+- https://xingai.app/legal/terms
+- https://xingai.app/legal/disclaimer
