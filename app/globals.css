@@ -1275,6 +1275,21 @@ html[data-theme="dark"] .lang-menu {
   transform: none;
 }
 
+/* Browse-all: Live badge palette (green), badge-like radius, CTA touch size */
+.cta--browse {
+  background: var(--status-live-bg);
+  color: var(--status-live-fg);
+  border: 1px solid color-mix(in srgb, var(--status-live-fg) 35%, transparent);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.cta--browse:hover {
+  background: color-mix(in srgb, var(--status-live-bg) 82%, var(--status-live-fg));
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
 .home-apps-more {
   margin-top: 1.25rem;
 }

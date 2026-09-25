@@ -2,11 +2,14 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.25c
+**Version:** 2026.09.25d
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.25d` restyles homepage “See all apps” as a green Live-badge CTA
+(`cta--browse`) — same status-live tokens as the Live pill, larger touch target.
 
 `2026.09.25c` turns the homepage “See all apps” control into an outline CTA
 button (same pattern as hero secondary), instead of a small `section-lead` link.

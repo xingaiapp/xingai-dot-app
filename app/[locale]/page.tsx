@@ -405,7 +405,7 @@ export default function Home() {
           ))}
         </ul>
         <div className="home-apps-more">
-          <LocaleLink href="/apps" className="cta cta--outline">
+          <LocaleLink href="/apps" className="cta cta--browse">
             {t("homeBrowseAll")} <span aria-hidden="true">→</span>
           </LocaleLink>
         </div>
