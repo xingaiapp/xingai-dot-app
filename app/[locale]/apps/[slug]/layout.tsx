@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getAppBySlug, apps, getLocalizedAppBySlug } from "../../../data/apps";
+import { apps, getLocalizedAppBySlug, isIndexableApp } from "../../../data/apps";
 import { buildSoftwareApplicationNode } from "../../../lib/seo-json-ld";
 import { parseRoutingLocale, publicUrl } from "../../../lib/locale-routing";
 import { pageAlternates } from "../../../lib/localized-seo";
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${app.name} — ${app.tagline}`,
     description: app.description,
+    robots: isIndexableApp(app) ? undefined : { index: false, follow: false },
     keywords: [
       app.name,
       app.tagline,

@@ -4,6 +4,14 @@ import type { NextRequest } from "next/server";
 const PREFIXED_LOCALES = new Set(["zh", "ko"]);
 
 export function middleware(request: NextRequest) {
+  const host = request.headers.get("host") ?? "";
+  if (host === "www.xingai.app") {
+    const url = request.nextUrl.clone();
+    url.host = "xingai.app";
+    url.protocol = "https";
+    return NextResponse.redirect(url, 301);
+  }
+
   const { pathname } = request.nextUrl;
 
   if (

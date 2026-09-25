@@ -1,42 +1,26 @@
-import { getLocalizedApps, type AppData } from "../data/apps";
 import type { Locale } from "../i18n/translations";
 import type { Metadata } from "next";
 import { buildHreflangAlternates, openGraphLocale, publicUrl } from "./locale-routing";
-import { formatPageTitle, ogImageMeta, defaultOgImage, appsOgImage, storyOgImage } from "./site-seo";
-
-function shortNames(apps: AppData[]): string[] {
-  return apps.map((app) => app.name.replace(/^XingAI\s+/i, ""));
-}
-
-function oxford(names: string[]): string {
-  if (names.length === 0) return "";
-  if (names.length === 1) return names[0]!;
-  return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
-}
+import { formatPageTitle, ogImageMeta, defaultOgImage, appsOgImage, storyOgImage, siteName } from "./site-seo";
 
 export function homeDescription(locale: Locale): string {
-  const apps = getLocalizedApps(locale);
-  const count = apps.length;
-  const catalog = oxford(shortNames(apps));
   if (locale === "zh") {
-    return `XingAI 提供 ${count} 套专注日常的 AI 决策系统：${catalog}。移动优先，浅色/深色主题，EN/中文/한국어。`;
+    return "XingAI 做面向日常的 AI 决策系统。旗舰是 Invest AI 产业地图：公开研究，不是交易台。";
   }
   if (locale === "ko") {
-    return `XingAI는 일상을 위한 ${count}개의 AI 의사결정 시스템을 제공합니다: ${catalog}. 모바일 우선 · EN/中文/한국어 · 라이트/다크.`;
+    return "XingAI는 일상을 위한 AI 의사결정 시스템입니다. 플래그십은 Invest AI 산업 지도 — 공개 리서치이며 매매 창구가 아닙니다.";
   }
-  return `XingAI builds ${count} focused AI decision systems for everyday life: ${catalog}. Mobile-first, light/dark themes, EN/中文/한국어.`;
+  return "XingAI builds AI decision systems for everyday life. Flagship: the Invest AI Industry Map — public research, not a trading desk.";
 }
 
 export function appsCatalogDescription(locale: Locale): string {
-  const apps = getLocalizedApps(locale);
-  const catalog = oxford(shortNames(apps));
   if (locale === "zh") {
-    return `浏览全部 ${apps.length} 款 XingAI 决策系统：${catalog}。移动优先 · EN/中文/한국어 · 浅色/深色。`;
+    return "浏览 XingAI 已上线与 Demo 工具。旗舰是 Invest AI 产业地图。完整目录含饮食、旅行、SAT 等。";
   }
   if (locale === "ko") {
-    return `XingAI 의사결정 시스템 ${apps.length}종: ${catalog}. 모바일 우선 · EN/中文/한국어 · 라이트/다크.`;
+    return "XingAI 라이브·데모 도구를 둘러보세요. 플래그십은 Invest AI 산업 지도입니다. 식단, 여행, SAT 등이 카탈로그에 있습니다.";
   }
-  return `Browse all ${apps.length} XingAI decision systems: ${catalog}. Mobile-first · EN/中文/한국어 · light/dark.`;
+  return "Browse XingAI live and demo tools. Flagship: Invest AI Industry Map. Catalog also covers meals, travel, SAT, and more.";
 }
 
 export function homeTitle(locale: Locale): string {
@@ -53,23 +37,22 @@ export function pageAlternates(locale: Locale, path: string): Metadata["alternat
 }
 
 export function homeOg(locale: Locale) {
-  const count = getLocalizedApps(locale).length;
   const alt =
     locale === "zh"
-      ? `XingAI — ${count} 款 AI 决策系统`
+      ? "XingAI — AI 决策系统，旗舰为 Invest AI 产业地图"
       : locale === "ko"
-        ? `XingAI — ${count}가지 AI 의사결정 시스템`
-        : `XingAI — ${count} AI decision systems for everyday life`;
+        ? "XingAI — AI 의사결정 시스템, 플래그십은 Invest AI 산업 지도"
+        : "XingAI — AI decision systems; flagship Invest AI Industry Map";
   return ogImageMeta(defaultOgImage, alt);
 }
 
 export function appsOg(locale: Locale) {
   const alt =
     locale === "zh"
-      ? "XingAI 全部产品 — 饮食、投资、Performance Sim、T Today 等"
+      ? "XingAI 产品目录 — 饮食、旅行、Invest AI 地图等"
       : locale === "ko"
-        ? "XingAI 전체 제품 — 식단, 투자, Performance Sim, T Today 등"
-        : "All XingAI AI products — meal, cook, invest, Performance Sim, T Today, and more";
+        ? "XingAI 제품 목록 — 식단, 여행, Invest AI 지도 등"
+        : "XingAI catalog — meal, travel, Invest AI map, and more";
   return ogImageMeta(appsOgImage, alt);
 }
 
@@ -90,8 +73,12 @@ export function localizedOpenGraph(
   description: string,
   image: ReturnType<typeof ogImageMeta>,
 ): Metadata["openGraph"] {
+  const ogTitle =
+    title === siteName || title.startsWith(`${siteName} `) || title.includes(`| ${siteName}`)
+      ? title
+      : formatPageTitle(title);
   return {
-    title: formatPageTitle(title),
+    title: ogTitle,
     description,
     url: publicUrl(locale, path),
     siteName: "XingAI",

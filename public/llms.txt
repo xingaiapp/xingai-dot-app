@@ -2,37 +2,49 @@
 
 Primary URL: https://xingai.app
 
-XingAI builds focused AI decision systems for everyday work and life. The
-product catalog is at https://xingai.app/apps. Live and demo products should be
-checked against that catalog. Coming-soon products may have public detail pages
-before their target domains are deployed.
+XingAI builds focused AI decision systems for everyday life and research.
+It is not a generic chatbot. Each product is built around one decision
+and a clear next action.
+
+Flagship public surface: the Invest AI Industry Map
+https://invest.xingai.app/ai-map
+
+The map is a cache-rendered research view of AI supply-chain layers and
+cited public filings. It is not a broker, allocation board, or trade signal.
+
+Product catalog: https://xingai.app/apps
 
 Languages: English, Chinese, Korean.
 
 Live or demo products:
-- Meal Coach: https://meal.xingai.app
+- Invest AI (Industry Map): https://invest.xingai.app/ai-map
 - Cook AI: https://cook.xingai.app
-- Wear AI: https://wear.xingai.app
 - Travel AI: https://travel.xingai.app
-- Invest AI: https://invest.xingai.app/ai-map
+- Meal Coach: https://meal.xingai.app
+- Wear AI: https://wear.xingai.app
 - SAT AI: https://sat.xingai.app
 - Research AI: https://research.xingai.app
 - Learn AI: https://learn.xingai.app
-- Performance Sim: https://lab.xingai.app
-- T Today: https://t.xingai.app
-- Growth Monitor: https://growth.xingai.app
+- Routine AI: https://routine.xingai.app
 - Decision Agent: https://decision.xingai.app
+- Performance Sim: https://lab.xingai.app
+- Daily Assistant: https://daily.xingai.app
+- T Today (invite-only early access): https://t.xingai.app
 
 Decision Agent:
 - Product page: https://xingai.app/apps/decision-agent
 - Official app: https://decision.xingai.app
-- Source: https://github.com/xingaiapp/xingai-decision-ai
-- Purpose: turn an investment outcome into a structured brief projected from
-  Invest AI’s public AI-map worker cache, then stop at human confirmation.
-- Boundary: informational and educational only; the site only renders cache.
-  No invented allocations, broker connection, or autonomous trading.
+- Purpose: turn an investment outcome into a structured brief projected
+  from Invest AI’s public AI-map worker cache, then stop at human confirmation.
+- Boundary: informational only. No invented allocations, broker connection,
+  or autonomous trading.
+
+Coming-soon and internal ops tools (Growth Monitor, Ops Status, Eval Registry)
+are listed on the catalog for the team. They are not the public flagship.
 
 Legal:
 - https://xingai.app/legal/privacy
 - https://xingai.app/legal/terms
 - https://xingai.app/legal/disclaimer
+
+Outputs are informational. Verify before you book, cook, study, or invest.

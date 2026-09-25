@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { apps } from "./data/apps";
+import { apps, isIndexableApp } from "./data/apps";
 import { buildHreflangAlternates, publicUrl } from "./lib/locale-routing";
 import type { Locale } from "./i18n/translations";
 
@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })),
   );
 
-  const appPages: MetadataRoute.Sitemap = apps.flatMap((app) => {
+  const appPages: MetadataRoute.Sitemap = apps.filter(isIndexableApp).flatMap((app) => {
     const path = `/apps/${app.slug}`;
     return locales.map((locale) => ({
       url: publicUrl(locale, path),

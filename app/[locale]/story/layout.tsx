@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getLocalizedApps } from "../../data/apps";
+import { getIndexableApps } from "../../data/apps";
 import { parseRoutingLocale, publicUrl } from "../../lib/locale-routing";
 import {
   appsCatalogDescription,
@@ -55,7 +55,7 @@ export default async function StoryLayout({ children, params }: Props) {
   const { locale: raw } = await params;
   const locale = parseRoutingLocale(raw);
   const pageUrl = publicUrl(locale, path);
-  const localizedApps = getLocalizedApps(locale);
+  const localizedApps = getIndexableApps(locale);
   const description = storyDescription(locale);
   const og = storyOg(locale);
 

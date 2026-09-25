@@ -8,6 +8,10 @@
 
 ### Current version notes
 
+`2026.09.25` also tightens SEO / AEO / GEO: short home meta, fixed `og:title`,
+FAQ + `llms.txt` aligned on the Industry Map, homepage shelf is Invest / Travel /
+Cook, and coming-soon plus internal ops pages are `noindex` and off the sitemap.
+
 `2026.09.25` points the homepage primary CTA at the Invest AI Industry Map
 (`invest.xingai.app/ai-map`) and hides Growth Monitor from the homepage shelf
 (it stays on `/apps`). The Decision Agent catalog preview is also replaced:

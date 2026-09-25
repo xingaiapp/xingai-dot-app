@@ -5,5 +5,13 @@
   "buildCommand": "npm run build",
   "github": {
     "silent": true
-  }
+  },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.xingai.app" }],
+      "destination": "https://xingai.app/:path*",
+      "permanent": true
+    }
+  ]
 }

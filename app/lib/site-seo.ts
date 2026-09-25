@@ -48,11 +48,11 @@ export function formatProductCatalogOxford(): string {
   return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
 }
 
-const catalogOxford = formatProductCatalogOxford();
+export const defaultDescription =
+  "XingAI builds AI decision systems for everyday life. Flagship: the Invest AI Industry Map — public research, not a trading desk.";
 
-export const defaultDescription = `XingAI builds ${productCount} focused AI decision systems for everyday life: ${catalogOxford}. Mobile-first, light/dark themes, EN/中文/한국어.`;
-
-export const appsPageDescription = `Browse all ${productCount} XingAI decision systems: ${catalogOxford}. Mobile-first · EN/中文/한국어 · light/dark.`;
+export const appsPageDescription =
+  "Browse XingAI live and demo tools. Flagship: Invest AI Industry Map. Catalog also covers meals, travel, SAT, and more.";
 
 export function formatPageTitle(pageTitle: string): string {
   return `${pageTitle} | ${siteName}`;
@@ -70,6 +70,8 @@ export const defaultKeywords = [
   "AI parent assistant",
   "AI travel planner",
   "travel.xingai.app",
+  "AI Industry Map",
+  "invest.xingai.app",
   "AI investment assistant",
   "Performance Sim",
   "lab.xingai.app",

@@ -5,7 +5,7 @@ import Link from "next/link";
 import LocaleLink from "../components/LocaleLink";
 import { useEffect, useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
-import { getLocalizedApps, type AppLaunchStatus } from "../data/apps";
+import { getHomeShelfApps, getLocalizedApps, type AppLaunchStatus } from "../data/apps";
 import AppIcon from "../components/AppIcon";
 import { APP_ICON_SIZE } from "../lib/app-icon";
 import AppDemoScreenshot from "../components/AppDemoScreenshot";
@@ -73,6 +73,7 @@ export default function Home() {
   const { locale, t } = useTranslation();
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const apps = getLocalizedApps(locale);
+  const homeShelfApps = getHomeShelfApps(locale);
   const heroPreviewApps = ["meal-coach", "cook-ai", "sat-ai", "investment-assistant"].flatMap(
     (slug) => {
       const app = apps.find((item) => item.slug === slug);
@@ -350,9 +351,7 @@ export default function Home() {
         <p className="section-lead">{t("homeAppsLead")}</p>
 
         <ul className="app-cards">
-          {apps
-            .filter((app) => !app.hideFromHome)
-            .map((app) => (
+          {homeShelfApps.map((app) => (
             <li key={app.slug} className="app-card">
               <LocaleLink href={`/apps/${app.slug}`} className="app-card-link">
                 {app.screenshots[0] ? (
@@ -405,6 +404,9 @@ export default function Home() {
             </li>
           ))}
         </ul>
+        <p className="section-lead">
+          <LocaleLink href="/apps">{t("homeBrowseAll")} &rarr;</LocaleLink>
+        </p>
       </section>
 
       <section className="home-answers" aria-labelledby="home-answers-heading">

@@ -408,6 +408,7 @@ export const apps: AppData[] = [
   {
     slug: "ops-status",
     name: "XingAI Ops Status",
+    hideFromHome: true,
     tagline: "Uptime at a Glance",
     icon: "/ops-status-icon.svg",
     iconDark: "/ops-status-icon.svg",
@@ -486,6 +487,7 @@ export const apps: AppData[] = [
   {
     slug: "eval-registry",
     name: "XingAI Eval Registry",
+    hideFromHome: true,
     tagline: "Diff Your Evals",
     icon: "/eval-registry-icon.svg",
     iconDark: "/eval-registry-icon.svg",
@@ -776,7 +778,7 @@ export const apps: AppData[] = [
   {
     slug: "investment-assistant",
     name: "XingAI Investment Assistant",
-    tagline: "Invest Smarter",
+    tagline: "AI supply-chain research map",
     icon: "/investment-ai-icon.png",
     iconDark: "/investment-ai-icon-dark.png",
     favicon: "/favicon-investment-ai.png",
@@ -1334,7 +1336,7 @@ const localizedAppCopy: Partial<
       ],
     },
     "investment-assistant": {
-      tagline: "投资更系统",
+      tagline: "AI 供应链研究地图",
       category: "金融 AI",
       description:
         "AI 产业链研究：公开地图、带引用的 13F 行、以及你自己设的提醒。仅供教育，不是买股清单。",
@@ -1815,7 +1817,7 @@ const localizedAppCopy: Partial<
       ],
     },
     "investment-assistant": {
-      tagline: "더 체계적으로 투자하기",
+      tagline: "AI 공급망 연구 지도",
       category: "금융 AI",
       description:
         "AI 공급망 리서치: 공개 지도, 인용된 13F 행, 직접 정한 알림. 교육용이며 매수 목록이 아닙니다.",
@@ -1901,4 +1903,37 @@ export function getLocalizedAppBySlug(
 ): AppData | undefined {
   const app = getAppBySlug(slug);
   return app ? localizeApp(app, locale) : undefined;
+}
+
+/** Internal ops tools: stay on /apps, stay out of homepage + search index. */
+export const INTERNAL_TOOL_SLUGS = new Set([
+  "growth-monitor",
+  "ops-status",
+  "eval-registry",
+]);
+
+export const HOME_SHELF_SLUGS = [
+  "investment-assistant",
+  "travel-ai",
+  "cook-ai",
+] as const;
+
+export function isInternalTool(app: Pick<AppData, "slug">): boolean {
+  return INTERNAL_TOOL_SLUGS.has(app.slug);
+}
+
+export function isIndexableApp(app: Pick<AppData, "slug" | "comingSoon">): boolean {
+  return !app.comingSoon && !isInternalTool(app);
+}
+
+export function getIndexableApps(locale: Locale): AppData[] {
+  return getLocalizedApps(locale).filter(isIndexableApp);
+}
+
+export function getHomeShelfApps(locale: Locale): AppData[] {
+  const localized = getLocalizedApps(locale);
+  return HOME_SHELF_SLUGS.flatMap((slug) => {
+    const app = localized.find((item) => item.slug === slug);
+    return app ? [app] : [];
+  });
 }

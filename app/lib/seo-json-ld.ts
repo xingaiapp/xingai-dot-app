@@ -1,4 +1,4 @@
-import { getLocalizedApps, type AppData } from "../data/apps";
+import { getIndexableApps, type AppData } from "../data/apps";
 import type { Locale } from "../i18n/translations";
 import { buildHomeFaqJsonLd } from "./home-faq-schema";
 import { homeDescription, homeTitle } from "./localized-seo";
@@ -54,7 +54,7 @@ export function buildSoftwareApplicationNode(app: AppData, locale: Locale) {
 
 export function buildSiteGraph(apps: AppData[], locale: Locale, pageUrl: string) {
   const faq = buildHomeFaqJsonLd(locale, pageUrl);
-  const localizedApps = getLocalizedApps(locale);
+  const localizedApps = getIndexableApps(locale);
   const description = homeDescription(locale);
   const title = homeTitle(locale);
 
@@ -122,7 +122,7 @@ export function buildSiteGraph(apps: AppData[], locale: Locale, pageUrl: string)
 
 export function buildAppsCatalogGraph(apps: AppData[], locale: Locale) {
   const appsUrl = publicUrl(locale, "/apps");
-  const localizedApps = getLocalizedApps(locale);
+  const localizedApps = getIndexableApps(locale);
 
   return {
     "@context": "https://schema.org",

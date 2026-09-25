@@ -48,14 +48,14 @@ const translations = {
     heroValuePill: "AI decision systems, not just chat",
     tagline: "Get the right decision, every time.",
     heroSub:
-      "AI answers for the questions you face every day\u2014what to eat, what to wear, how to study, what to learn next, and where to invest. Fifteen focused systems span meal planning, cooking, outfits, habits, SAT prep, learning decisions, guided learning, engineering communication, parenting, travel, investing, Growth Monitor, Ops Status, Performance Sim backtests, and T Today plans. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
+      "Focused AI systems for everyday decisions. The public flagship is the Invest AI Industry Map: supply-chain layers and cited filings, not a trading desk. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
     heroStoryLink: "How it fits together",
     heroGridLabel: "Our AI decision systems",
     heroPreviewLabel: "System preview",
     heroCoreSystems: "Explore core systems",
-    homeAppsHeading: "AI systems, one platform",
+    homeAppsHeading: "Start here",
     homeAppsLead:
-      "Each product is a focused decision system\u2014not a generic chatbot. We ship publicly as the platform grows.",
+      "The Industry Map first. Cook and Travel if you want a live product. Everything else is on the apps page.",
     homeDemosHeading: "Demos",
     homeDemosLead:
       "Mobile product previews — open live demos in a new tab. T Today early access is free to request.",
@@ -74,6 +74,7 @@ const translations = {
     homeDemoDisclaimer: "Paper structure only \u00b7 Not investment advice \u00b7 No broker integration.",
     viewAllApps: "Try free demo",
     heroInvestMapCta: "Explore the AI Industry Map",
+    homeBrowseAll: "See all apps",
     homeCta: "Get in touch",
     publicBetaNote: "All live tools are currently free to try during public beta.",
     heroQuickDemosLabel: "Jump into a free demo",
@@ -83,19 +84,19 @@ const translations = {
       "Short answers for people and AI search systems trying to understand what XingAI does.",
     answerQ1: "What is XingAI?",
     answerA1:
-      "XingAI is a platform of 15 focused AI decision systems: Meal Coach, Cook AI, Wear AI, Routine AI, SAT AI, Research AI, Learn AI, Engineering Communication Coach, Growth Monitor, Ops Status, Parent AI, Travel AI, Invest AI, Performance Sim, and T Today.",
+      "XingAI is a family of focused AI decision systems for everyday life and research. The flagship public surface is the Invest AI Industry Map at invest.xingai.app/ai-map.",
     answerQ2: "How is XingAI different from a chatbot?",
     answerA2:
-      "XingAI products are built around structured decisions and clear next actions instead of open-ended generic chat.",
+      "Each product is built around one decision and a clear next action, not open-ended chat.",
     answerQ3: "What can I use XingAI for today?",
     answerA3:
-      "You can try public demos for Meal Coach, Cook AI, Wear AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Ops Status, Travel AI, Invest AI, Decision Agent, and Performance Sim. Engineering Communication Coach and Parent AI are on the roadmap. T Today is in free early access via the Contact page. All apps are mobile-first with light/dark themes.",
-    answerQ4: "Can XingAI build a custom AI product?",
+      "Public demos include Meal Coach, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, the Invest AI map, Decision Agent, and Performance Sim. The full list is at xingai.app/apps.",
+    answerQ4: "What is the AI Industry Map?",
     answerA4:
-      "Yes. XingAI helps founders and teams design, build, and deploy focused AI products from idea to launch.",
-    answerQ5: "How do I get access to T Today (t.xingai.app)?",
+      "A public, cache-rendered map of AI supply-chain layers and cited SEC filings. It is research structure, not a broker, allocation board, or trade signal.",
+    answerQ5: "Are XingAI outputs professional advice?",
     answerA5:
-      "T Today is in early access. It is free to ask — email contact@xingai.app or use the Contact page. We add your Google account to the allowlist, then you sign in at t.xingai.app.",
+      "No. Outputs are informational. Verify before you book, cook, study, or invest. Privacy, Terms, and Disclaimer are at xingai.app/legal.",
 
     // Build With Us
     buildHeading: "Have an idea? We\u2019ll build it with you.",
@@ -355,14 +356,14 @@ const translations = {
     heroValuePill: "AI \u51b3\u7b56\u7cfb\u7edf\uff0c\u4e0d\u53ea\u662f\u804a\u5929",
     tagline: "\u6bcf\u4e00\u6b21\uff0c\u90fd\u66f4\u6e05\u695a\u5730\u505a\u51b3\u5b9a\u3002",
     heroSub:
-      "\u6bcf\u5929\u90fd\u5728\u95ee\u7684\u95ee\u9898\uff0cAI \u6765\u66ff\u4f60\u56de\u7b54\u2014\u2014\u5403\u4ec0\u4e48\u3001\u7a7f\u4ec0\u4e48\u3001\u600e\u4e48\u5b66\u3001\u4e0b\u4e00\u4e2a\u8be5\u5b66\u4ec0\u4e48\u3001\u5f80\u54ea\u6295\u3002\u5341\u4e94\u4e2a\u4e13\u6ce8\u7cfb\u7edf\u8986\u76d6\u996e\u98df\u3001\u70f9\u996a\u3001\u7a7f\u642d\u3001\u4e60\u60ef\u3001SAT\u3001\u5b66\u4e60\u51b3\u7b56\u3001\u5f15\u5bfc\u5b66\u4e60\u3001\u5de5\u7a0b\u6c9f\u901a\u3001\u5bb6\u957f\u3001\u65c5\u884c\u3001\u6295\u8d44\u3001Growth Monitor\u3001Ops Status\u3001Performance Sim \u56de\u6d4b\u4e0e T Today \u65e5\u5185\u8ba1\u5212\u3002English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4\u3002",
+      "\u9762\u5411\u65e5\u5e38\u51b3\u7b56\u7684\u4e13\u6ce8 AI \u7cfb\u7edf\u3002\u516c\u5f00\u65d7\u8230\u662f Invest AI \u4ea7\u4e1a\u5730\u56fe\uff1a\u4ea7\u4e1a\u94fe\u56fe\u5c42\u548c\u5e26\u5f15\u7528\u7684\u5907\u6848\uff0c\u4e0d\u662f\u4ea4\u6613\u53f0\u3002English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4\u3002",
     heroStoryLink: "\u4ea7\u54c1\u5982\u4f55\u7ec4\u6210\u751f\u6001",
     heroGridLabel: "\u6211\u4eec\u7684 AI \u51b3\u7b56\u7cfb\u7edf",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
     heroCoreSystems: "\u63a2\u7d22\u6838\u5fc3\u7cfb\u7edf",
-    homeAppsHeading: "\u4e00\u4f53\u5e73\u53f0\uff0c\u591a\u4e2a AI \u7cfb\u7edf",
+    homeAppsHeading: "\u4ece\u8fd9\u91cc\u5f00\u59cb",
     homeAppsLead:
-      "\u6bcf\u4e00\u6b3e\u4ea7\u54c1\u90fd\u662f\u4e13\u6ce8\u7684\u51b3\u7b56\u7cfb\u7edf\uff0c\u4e0d\u662f\u6cdb\u6cdb\u7684\u804a\u5929\u673a\u5668\u4eba\u3002\u6211\u4eec\u5728\u516c\u5f00\u8fed\u4ee3\u4e2d\u6301\u7eed\u53d1\u5e03\u3002",
+      "\u5148\u770b\u4ea7\u4e1a\u5730\u56fe\u3002\u60f3\u8981\u5df2\u4e0a\u7ebf\u4ea7\u54c1\u5c31\u770b Cook \u548c Travel\u3002\u5176\u4f59\u5728\u4ea7\u54c1\u76ee\u5f55\u91cc\u3002",
     homeDemosHeading: "\u5728\u7ebf\u6f14\u793a",
     homeDemosLead:
       "\u79fb\u52a8\u7aef\u4ea7\u54c1\u9884\u89c8\u2014\u516c\u5f00 Demo \u65b0\u6807\u7b7e\u6253\u5f00\u3002T Today \u5185\u6d4b\u514d\u8d39\u7533\u8bf7\u3002",
@@ -381,6 +382,7 @@ const translations = {
     homeDemoDisclaimer: "\u4ec5\u7eb8\u9762\u7ed3\u6784 \u00b7 \u975e\u6295\u8d44\u5efa\u8bae \u00b7 \u975e\u5238\u5546 \u00b7 \u4e0d\u5bf9\u63a5\u4e0b\u5355\u3002",
     viewAllApps: "\u7acb\u5373\u4f53\u9a8c\u514d\u8d39 Demo",
     heroInvestMapCta: "\u67e5\u770b AI \u4ea7\u4e1a\u5730\u56fe",
+    homeBrowseAll: "\u67e5\u770b\u5168\u90e8\u4ea7\u54c1",
     homeCta: "\u8054\u7cfb\u6211\u4eec",
     publicBetaNote: "\u516c\u5f00 Beta \u671f\u95f4\uff0c\u6240\u6709\u5df2\u4e0a\u7ebf\u5de5\u5177\u76ee\u524d\u90fd\u53ef\u514d\u8d39\u8bd5\u7528\u3002",
     heroQuickDemosLabel: "\u76f4\u63a5\u8fdb\u5165\u514d\u8d39 Demo",
@@ -389,19 +391,19 @@ const translations = {
     answerLead: "给用户和 AI 搜索系统的简短答案，帮助快速理解 XingAI 是什么。",
     answerQ1: "XingAI 是什么？",
     answerA1:
-      "XingAI 是 15 个专注 AI 决策系统的平台：Meal Coach、Cook AI、Wear AI、Routine AI、SAT AI、Research AI、Learn AI、Engineering Communication Coach、Growth Monitor、Ops Status、Parent AI、Travel AI、Invest AI、Performance Sim 与 T Today。",
+      "XingAI 是一组面向日常和研究的 AI 决策系统。公开旗舰是 Invest AI 产业地图：invest.xingai.app/ai-map。",
     answerQ2: "XingAI 和普通聊天机器人有什么不同？",
     answerA2:
-      "XingAI 产品围绕结构化决策和明确下一步行动设计，而不是开放式泛聊天。",
+      "每个产品围绕一个决策和明确的下一步，而不是开放式闲聊。",
     answerQ3: "现在可以用 XingAI 做什么？",
     answerA3:
-      "可公开体验 Meal Coach、Cook AI、Wear AI、Routine AI、SAT AI、Research AI、Learn AI、Growth Monitor、Ops Status、Travel AI、Invest AI、Decision Agent 与 Performance Sim。Engineering Communication Coach 与 Parent AI 在路线图中。T Today 可通过联系页免费申请内测。均为移动优先，支持浅色/深色主题。",
-    answerQ4: "XingAI 可以定制 AI 产品吗？",
+      "可公开试用 Meal Coach、Cook AI、Wear AI、Travel AI、SAT AI、Research AI、Learn AI、Invest AI 地图、Decision Agent 和 Performance Sim。完整目录在 xingai.app/apps。",
+    answerQ4: "什么是 AI 产业地图？",
     answerA4:
-      "可以。XingAI 帮助创始人和团队从想法到上线，设计、开发并部署专注的 AI 产品。",
-    answerQ5: "如何申请 t.xingai.app（今日做T）内测？",
+      "一张由 worker 缓存渲染的公开地图，展示 AI 产业链图层和带引用的监管备案。这是研究结构，不是券商、配仓面板或买卖信号。",
+    answerQ5: "XingAI 的输出算专业建议吗？",
     answerA5:
-      "目前为邀请制内测，可免费申请：发邮件至 contact@xingai.app 或使用联系页面。我们把你加入白名单后，即可用 Google 登录 t.xingai.app。",
+      "不算。输出仅供参考。预订、做饭、学习或投资前请自行核实。隐私、条款与免责声明在 xingai.app/legal。",
 
     buildHeading: "\u6709\u60f3\u6cd5\uff1f\u6211\u4eec\u5e2e\u4f60\u5b9e\u73b0",
     buildLead:
@@ -649,14 +651,14 @@ const translations = {
     heroValuePill: "\ucc57\uc774 \uc544\ub2cc AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     tagline: "\ub9e4\ubc88 \ub354 \uba85\ud655\ud55c \uacb0\uc815\uc744.",
     heroSub:
-      "\ub9e4\uc77c \ub9de\ub2e5\ub730\ub9ac\ub294 \uc9c8\ubb38\uc5d0 AI\uac00 \ub2f5\ud569\ub2c8\ub2e4\u2014\ubb34\uc5c7\uc744 \uba39\uc744\uc9c0, \ubb34\uc5c7\uc744 \uc785\uc744\uc9c0, \uc5b4\ub5bb\uac8c \uacf5\ubd80\ud560\uc9c0, \ub2e4\uc74c\uc5d0 \ubb34\uc5c7\uc744 \ubc30\uc6b8\uc9c0, \uc5b4\ub514\uc5d0 \ud22c\uc790\ud560\uc9c0. \uc2dd\ub2e8\u00b7\uc694\ub9ac\u00b7\ucf54\ub514\u00b7\uc2b5\uad00\u00b7SAT\u00b7\ud559\uc2b5 \uc758\uc0ac\uacb0\uc815\u00b7\uad6c\uc870\ud654\ub41c \ud559\uc2b5\u00b7\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1 \ucee4\ubba4\ub2c8\ucf00\uc774\uc158\u00b7\uc721\uc544\u00b7\uc5ec\ud589\u00b7\ud22c\uc790\u00b7Growth Monitor\u00b7Ops Status\u00b7Performance Sim\u00b7T Today \uc5f4\ub2e4\uc12f \uac1c \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
+      "\uc77c\uc0c1 \uacb0\uc815\uc744 \uc704\ud55c \uc9d1\uc911\ud615 AI \uc2dc\uc2a4\ud15c\uc785\ub2c8\ub2e4. \uacf5\uac1c \ud50c\ub798\uadf8\uc2ed\uc740 Invest AI \uc0b0\uc5c5 \uc9c0\ub3c4\uc785\ub2c8\ub2e4. \uacf5\uae09\ub9dd \ub808\uc774\uc5b4\uc640 \uc778\uc6a9\ub41c \uacf5\uc2dc\uc774\uba70, \ub9e4\ub9e4 \ucc3d\uad6c\uac00 \uc544\ub2d9\ub2c8\ub2e4. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
     heroStoryLink: "\uc81c\ud488\uc774 \uc5b4\ub5bb\uac8c \ub9de\ub294\uc9c0",
     heroGridLabel: "\uc6b0\ub9ac\uc758 AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
     heroCoreSystems: "\ud575\uc2ec \uc2dc\uc2a4\ud15c \ub458\ub7ec\ubcf4\uae30",
-    homeAppsHeading: "\ud558\ub098\uc758 \ud50c\ub7ab\ud3fc, \uc5ec\ub7ec AI \uc2dc\uc2a4\ud15c",
+    homeAppsHeading: "\uc5ec\uae30\uc11c \uc2dc\uc791",
     homeAppsLead:
-      "\uac01 \uc81c\ud488\uc740 \ubc94\uc6a9 \ucc57\ubd07\uc774 \uc544\ub2c8\ub77c \ucd08\uc810 \ub9de\ucda4 \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c\uc785\ub2c8\ub2e4. \uacf5\uac1c\uc801\uc73c\ub85c \uacc4\uc18d \ucd9c\uc2dc\ud569\ub2c8\ub2e4.",
+      "\uba3c\uc800 \uc0b0\uc5c5 \uc9c0\ub3c4. \ub77c\uc774\ube0c \uc81c\ud488\uc740 Cook\uacfc Travel. \ub098\uba38\uc9c0\ub294 \uc571 \ubaa9\ub85d\uc5d0 \uc788\uc2b5\ub2c8\ub2e4.",
     homeDemosHeading: "\ub370\ubaa8",
     homeDemosLead:
       "\ubaa8\ubc14\uc6b0\uc804 \uc81c\ud488 \ubbf8\ub9ac\ubcf4\uae30\u2014\uacf5\uac1c \ub370\ubaa8\ub294 \uc0c8 \ud0ed. T Today\ub294 \ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5.",
@@ -675,6 +677,7 @@ const translations = {
     homeDemoDisclaimer: "\uc885\uc774 \uad6c\uc870\uc6a9 \u00b7 \ud22c\uc790 \uc870\uc5b8 \uc544\ub2d8 \u00b7 \ube0c\ub85c\ucee4 \uc5f0\ub3d9 \uc5c6\uc74c.",
     viewAllApps: "\ubb34\ub8cc \ub370\ubaa8 \uccb4\ud5d8",
     heroInvestMapCta: "AI \uc0b0\uc5c5 \uc9c0\ub3c4 \ubcf4\uae30",
+    homeBrowseAll: "\uc804\uccb4 \uc571 \ubcf4\uae30",
     homeCta: "\uc5f0\ub77d\ud558\uae30",
     publicBetaNote: "\uacf5\uac1c Beta \uae30\uac04 \ub3d9\uc548 \ubaa8\ub4e0 \ub77c\uc774\ube0c \ub3c4\uad6c\ub97c \ubb34\ub8cc\ub85c \uccb4\ud5d8\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
     heroQuickDemosLabel: "\ubb34\ub8cc \ub370\ubaa8\ub85c \ubc14\ub85c \uc774\ub3d9",
@@ -683,19 +686,19 @@ const translations = {
     answerLead: "사용자와 AI 검색 시스템이 XingAI를 빠르게 이해할 수 있도록 정리한 짧은 답변입니다.",
     answerQ1: "XingAI는 무엇인가요?",
     answerA1:
-      "XingAI는 15개의 집중형 AI 의사결정 시스템 플랫폼입니다: Meal Coach, Cook AI, Wear AI, Routine AI, SAT AI, Research AI, Learn AI, Engineering Communication Coach, Growth Monitor, Ops Status, Parent AI, Travel AI, Invest AI, Performance Sim, T Today.",
+      "XingAI는 일상과 연구를 위한 AI 의사결정 시스템 모음입니다. 공개 플래그십은 invest.xingai.app/ai-map 의 Invest AI 산업 지도입니다.",
     answerQ2: "XingAI는 일반 챗봇과 어떻게 다른가요?",
     answerA2:
-      "XingAI 제품은 개방형 대화가 아니라 구조화된 결정과 명확한 다음 행동을 중심으로 설계됩니다.",
+      "각 제품은 열린 대화가 아니라 하나의 결정과 분명한 다음 행동을 중심으로 만들어집니다.",
     answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
     answerA3:
-      "Meal Coach, Cook AI, Wear AI, Routine AI, SAT AI, Research AI, Learn AI, Growth Monitor, Ops Status, Travel AI, Invest AI, Decision Agent, Performance Sim 데모를 이용할 수 있습니다. Engineering Communication Coach와 Parent AI는 로드맵에 있습니다. T Today는 문의 페이지에서 무료 얼리 액세스를 요청할 수 있습니다. 모바일 우선, 라이트/다크 테마 지원.",
-    answerQ4: "XingAI가 맞춤 AI 제품도 만들 수 있나요?",
+      "Meal Coach, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, Invest AI 지도, Decision Agent, Performance Sim 데모를 쓸 수 있습니다. 전체 목록은 xingai.app/apps 입니다.",
+    answerQ4: "AI 산업 지도는 무엇인가요?",
     answerA4:
-      "네. XingAI는 창업자와 팀이 아이디어부터 출시까지 집중된 AI 제품을 설계, 개발, 배포하도록 돕습니다.",
-    answerQ5: "t.xingai.app(T Today) 얼리 액세스는 어떻게 받나요?",
+      "워커 캐시로 렌더되는 공개 지도로, AI 공급망 레이어와 인용된 공시를 보여 줍니다. 리서치 구조이며 증권사, 배분 보드, 매매 신호가 아닙니다.",
+    answerQ5: "XingAI 결과는 전문 자문인가요?",
     answerA5:
-      "초청제 얼리 액세스이며 무료로 요청 가능합니다. contact@xingai.app 또는 문의 페이지로 연락해 주시면 허용 목록에 추가한 뒤 t.xingai.app에서 Google 로그인하세요.",
+      "아닙니다. 정보는 참고용입니다. 예약, 요리, 공부, 투자 전에 직접 확인하세요. 개인정보, 약관, 면책 고지는 xingai.app/legal 에 있습니다.",
 
     buildHeading: "\uc544\uc774\ub514\uc5b4\uac00 \uc788\uc73c\uc2e0\uac00\uc694? \ud568\uaed8 \ub9cc\ub4e4\uc5b4 \ub4dc\ub9bd\ub2c8\ub2e4.",
     buildLead:
