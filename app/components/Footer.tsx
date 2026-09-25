@@ -13,7 +13,8 @@ type FooterIconName =
   | "custom"
   | "about"
   | "contact"
-  | "legal";
+  | "legal"
+  | "blog";
 
 function FooterLinkIcon({ name }: { name: FooterIconName }) {
   if (name === "github") {
@@ -103,6 +104,18 @@ function FooterLinkIcon({ name }: { name: FooterIconName }) {
         <path d="M11 8h4" />
         <path d="M11 11.5h4" />
         <path d="M11 15h2.5" />
+      </svg>
+    );
+  }
+
+  if (name === "blog") {
+    return (
+      <svg {...common}>
+        <path d="M5 4h11l3 3v13H5z" />
+        <path d="M16 4v3h3" />
+        <path d="M8.5 12h7" />
+        <path d="M8.5 15.5h7" />
+        <path d="M8.5 18.5h4.5" />
       </svg>
     );
   }
@@ -212,6 +225,15 @@ export default function Footer() {
         <nav className="footer-column" aria-label={t("footerResources")}>
           <span className="footer-column__label">{t("footerResources")}</span>
           <div className="footer-column__links">
+            <a
+              href="https://blog.xingai.app"
+              className="footer-resource-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FooterLinkIcon name="blog" />
+              <span>{t("footerBlog")}</span>
+            </a>
             <a
               href="https://github.com/xingaiapp"
               className="footer-resource-link"
