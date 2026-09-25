@@ -2,11 +2,15 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.25d
+**Version:** 2026.09.25e
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.25e` puts **ShopRadar** on the homepage “Start here” shelf with
+Invest / Travel / Cook, and moves the catalog card next to Travel (Commerce AI).
+Waitlist: [shopradar.xingai.app](https://shopradar.xingai.app/).
 
 `2026.09.25d` restyles homepage “See all apps” as a green Live-badge CTA
 (`cta--browse`) — same status-live tokens as the Live pill, larger touch target.
@@ -18,9 +22,8 @@ button (same pattern as hero secondary), instead of a small `section-lead` link.
 and points README contact / deployment notes at **xingai.app** (Vercel alias is
 preview-only, not the product URL).
 
-`2026.09.25` registers **ShopRadar** (`shop-radar`) on the catalog, off the
-homepage shelf. Demo waitlist: [shopradar.xingai.app](https://shopradar.xingai.app/).
-Copper palette (no green). Light/dark SVG card pair.
+`2026.09.25` first registered **ShopRadar** (`shop-radar`) on the catalog only.
+It is now also on the homepage shelf (see `2026.09.25e`).
 
 `2026.09.25` also tightens SEO / AEO / GEO: short home meta, fixed `og:title`,
 FAQ + `llms.txt` aligned on the Industry Map, homepage shelf is Invest / Travel /

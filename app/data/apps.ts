@@ -734,6 +734,48 @@ export const apps: AppData[] = [
     ],
   },
   {
+    slug: "shop-radar",
+    name: "ShopRadar",
+    tagline: "Stop Guessing What To Sell",
+    icon: "/shop-radar-icon.svg",
+    iconDark: "/shop-radar-icon.svg",
+    favicon: "/shop-radar-icon.svg",
+    sourceUrl: "https://github.com/xingaiapp/xingai-shopradar",
+    sourceKind: "github",
+    demoUrl: "https://shopradar.xingai.app/",
+    description:
+      "AI product radar for dropshippers. Scores ideas on trend, competition, margin, video potential, and risk, then aims to return a daily Top 3. Public site is a waitlist plus a labeled sample — live scoring is not running yet.",
+    category: "Commerce AI",
+    canDo: "Read the scoring model, inspect a sample Top 3, and join the waitlist at shopradar.xingai.app.",
+    bestFor: "Dropshippers who want a weighted product score instead of guessing the next SKU.",
+    clickTarget: "Open the waitlist at shopradar.xingai.app.",
+    launchStatus: "demo",
+    comingSoon: false,
+    screenshots: [
+      {
+        src: "/shop-radar-demo-light.svg",
+        srcDark: "/shop-radar-demo-dark.svg",
+        alt: "ShopRadar five-dimension score radar",
+        caption: "Five scores on one radar, then a daily Top 3",
+      },
+    ],
+    features: [
+      { name: "Waitlist site at shopradar.xingai.app", free: true, pro: true, enterprise: true },
+      { name: "EN / 中文 / 한국어 and light/dark themes", free: true, pro: true, enterprise: true },
+      { name: "Trend / competition / margin / video / risk rubric", free: true, pro: true, enterprise: true },
+      { name: "Labeled sample report", free: true, pro: true, enterprise: true },
+      { name: "Legal pages and informational disclaimer", free: true, pro: true, enterprise: true },
+      { name: "Live daily radar scoring", free: false, pro: false, enterprise: false },
+    ],
+    roadmap: [
+      { title: "Product landing with XingAI chrome", status: "shipped" },
+      { title: "EN / 中文 / 한국어, copper chrome, green radar", status: "shipped" },
+      { title: "Waitlist via email", status: "shipped" },
+      { title: "Live daily Top 3 scoring", status: "planned" },
+      { title: "Email delivery of the daily report", status: "planned" },
+    ],
+  },
+  {
     slug: "decision-agent",
     name: "XingAI Decision Agent",
     tagline: "Outcome In. Decision Out.",
@@ -773,49 +815,6 @@ export const apps: AppData[] = [
       { title: "Live at decision.xingai.app", status: "shipped" },
       { title: "Worker-cache projection from Invest AI", status: "in-progress" },
       { title: "Holdings-aware personal brief", status: "planned" },
-    ],
-  },
-  {
-    slug: "shop-radar",
-    name: "ShopRadar",
-    hideFromHome: true,
-    tagline: "Stop Guessing What To Sell",
-    icon: "/shop-radar-icon.svg",
-    iconDark: "/shop-radar-icon.svg",
-    favicon: "/shop-radar-icon.svg",
-    sourceUrl: "https://github.com/xingaiapp/xingai-shopradar",
-    sourceKind: "github",
-    demoUrl: "https://shopradar.xingai.app/",
-    description:
-      "AI product radar for dropshippers. Scores ideas on trend, competition, margin, video potential, and risk, then aims to return a daily Top 3. Public site is a waitlist plus a labeled sample — live scoring is not running yet.",
-    category: "Commerce AI",
-    canDo: "Read the scoring model, inspect a sample Top 3, and join the waitlist at shopradar.xingai.app.",
-    bestFor: "Dropshippers who want a weighted product score instead of guessing the next SKU.",
-    clickTarget: "Open the waitlist at shopradar.xingai.app.",
-    launchStatus: "demo",
-    comingSoon: false,
-    screenshots: [
-      {
-        src: "/shop-radar-demo-light.svg",
-        srcDark: "/shop-radar-demo-dark.svg",
-        alt: "ShopRadar sample score card",
-        caption: "Five weighted scores into one daily Top 3",
-      },
-    ],
-    features: [
-      { name: "Waitlist site at shopradar.xingai.app", free: true, pro: true, enterprise: true },
-      { name: "EN / 中文 / 한국어 and light/dark themes", free: true, pro: true, enterprise: true },
-      { name: "Trend / competition / margin / video / risk rubric", free: true, pro: true, enterprise: true },
-      { name: "Labeled sample report", free: true, pro: true, enterprise: true },
-      { name: "Legal pages and informational disclaimer", free: true, pro: true, enterprise: true },
-      { name: "Live daily radar scoring", free: false, pro: false, enterprise: false },
-    ],
-    roadmap: [
-      { title: "Product landing with XingAI chrome", status: "shipped" },
-      { title: "EN / 中文 / 한국어 and copper light/dark theme", status: "shipped" },
-      { title: "Waitlist via email", status: "shipped" },
-      { title: "Live daily Top 3 scoring", status: "planned" },
-      { title: "Email delivery of the daily report", status: "planned" },
     ],
   },
   {
@@ -1386,7 +1385,7 @@ const localizedAppCopy: Partial<
       canDo: "看打分模型、查看样例 Top 3，并在 shopradar.xingai.app 加入等候名单。",
       bestFor: "不想靠感觉选 SKU、想看加权分数的独立站卖家。",
       clickTarget: "打开 shopradar.xingai.app 等候名单。",
-      screenshots: ["五个加权分数合成每日前三"],
+      screenshots: ["五个分数在一张雷达上，再给出每日前三"],
       features: [
         "等候名单站点 shopradar.xingai.app",
         "EN / 中文 / 한국어 与亮暗主题",
@@ -1397,7 +1396,7 @@ const localizedAppCopy: Partial<
       ],
       roadmap: [
         "带 XingAI 导航的产品落地页",
-        "EN / 中文 / 한국어 与铜色亮暗主题",
+        "EN / 中文 / 한국어、铜色导航、绿色雷达",
         "邮件等候名单",
         "每日 Top 3 实时打分",
         "每日报告邮件投递",
@@ -1892,7 +1891,7 @@ const localizedAppCopy: Partial<
       canDo: "채점 모델을 읽고 샘플 Top 3를 본 뒤 shopradar.xingai.app 대기 목록에 오릅니다.",
       bestFor: "다음 SKU를 감으로 고르기보다 가중 점수를 원하는 드롭십퍼.",
       clickTarget: "shopradar.xingai.app 대기 목록을 엽니다.",
-      screenshots: ["다섯 가중 점수가 하나의 일일 Top 3가 됩니다"],
+      screenshots: ["다섯 점수가 한 레이더에, 그다음 일일 Top 3"],
       features: [
         "대기 목록 사이트 shopradar.xingai.app",
         "EN / 中文 / 한국어 및 라이트/다크 테마",
@@ -2009,6 +2008,7 @@ export const HOME_SHELF_SLUGS = [
   "investment-assistant",
   "travel-ai",
   "cook-ai",
+  "shop-radar",
 ] as const;
 
 export function isInternalTool(app: Pick<AppData, "slug">): boolean {

@@ -56,7 +56,7 @@ const translations = {
     heroCoreSystems: "Explore core systems",
     homeAppsHeading: "Start here",
     homeAppsLead:
-      "The Industry Map first. Cook and Travel if you want a live product. Everything else is on the apps page.",
+      "The Industry Map first. Cook and Travel if you want a live product. ShopRadar if you need a product score. Everything else is on the apps page.",
     homeDemosHeading: "Demos",
     homeDemosLead:
       "Mobile product previews — open live demos in a new tab. T Today early access is free to request.",
@@ -91,7 +91,7 @@ const translations = {
       "Each product is built around one decision and a clear next action, not open-ended chat.",
     answerQ3: "What can I use XingAI for today?",
     answerA3:
-      "Public demos include Meal Coach, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, the Invest AI map, Decision Agent, and Performance Sim. The full list is at xingai.app/apps.",
+      "Public demos include Meal Coach, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, the Invest AI map, Decision Agent, ShopRadar, and Performance Sim. The full list is at xingai.app/apps.",
     answerQ4: "What is the AI Industry Map?",
     answerA4:
       "A public, cache-rendered map of AI supply-chain layers and cited SEC filings. It is research structure, not a broker, allocation board, or trade signal.",
@@ -365,7 +365,7 @@ const translations = {
     heroCoreSystems: "\u63a2\u7d22\u6838\u5fc3\u7cfb\u7edf",
     homeAppsHeading: "\u4ece\u8fd9\u91cc\u5f00\u59cb",
     homeAppsLead:
-      "\u5148\u770b\u4ea7\u4e1a\u5730\u56fe\u3002\u60f3\u8981\u5df2\u4e0a\u7ebf\u4ea7\u54c1\u5c31\u770b Cook \u548c Travel\u3002\u5176\u4f59\u5728\u4ea7\u54c1\u76ee\u5f55\u91cc\u3002",
+      "\u5148\u770b\u4ea7\u4e1a\u5730\u56fe\u3002\u60f3\u8981\u5df2\u4e0a\u7ebf\u4ea7\u54c1\u5c31\u770b Cook \u548c Travel\u3002\u9009\u54c1\u770b ShopRadar\u3002\u5176\u4f59\u5728\u4ea7\u54c1\u76ee\u5f55\u91cc\u3002",
     homeDemosHeading: "\u5728\u7ebf\u6f14\u793a",
     homeDemosLead:
       "\u79fb\u52a8\u7aef\u4ea7\u54c1\u9884\u89c8\u2014\u516c\u5f00 Demo \u65b0\u6807\u7b7e\u6253\u5f00\u3002T Today \u5185\u6d4b\u514d\u8d39\u7533\u8bf7\u3002",
@@ -399,7 +399,7 @@ const translations = {
       "每个产品围绕一个决策和明确的下一步，而不是开放式闲聊。",
     answerQ3: "现在可以用 XingAI 做什么？",
     answerA3:
-      "可公开试用 Meal Coach、Cook AI、Wear AI、Travel AI、SAT AI、Research AI、Learn AI、Invest AI 地图、Decision Agent 和 Performance Sim。完整目录在 xingai.app/apps。",
+      "可公开试用 Meal Coach、Cook AI、Wear AI、Travel AI、SAT AI、Research AI、Learn AI、Invest AI 地图、Decision Agent、ShopRadar 和 Performance Sim。完整目录在 xingai.app/apps。",
     answerQ4: "什么是 AI 产业地图？",
     answerA4:
       "一张由 worker 缓存渲染的公开地图，展示 AI 产业链图层和带引用的监管备案。这是研究结构，不是券商、配仓面板或买卖信号。",
@@ -661,7 +661,7 @@ const translations = {
     heroCoreSystems: "\ud575\uc2ec \uc2dc\uc2a4\ud15c \ub458\ub7ec\ubcf4\uae30",
     homeAppsHeading: "\uc5ec\uae30\uc11c \uc2dc\uc791",
     homeAppsLead:
-      "\uba3c\uc800 \uc0b0\uc5c5 \uc9c0\ub3c4. \ub77c\uc774\ube0c \uc81c\ud488\uc740 Cook\uacfc Travel. \ub098\uba38\uc9c0\ub294 \uc571 \ubaa9\ub85d\uc5d0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "\uba3c\uc800 \uc0b0\uc5c5 \uc9c0\ub3c4. \ub77c\uc774\ube0c \uc81c\ud488\uc740 Cook\uacfc Travel. \ubb58 \ud314\uc9c0 \uace0\ub974\ub824\uba74 ShopRadar. \ub098\uba38\uc9c0\ub294 \uc571 \ubaa9\ub85d\uc5d0 \uc788\uc2b5\ub2c8\ub2e4.",
     homeDemosHeading: "\ub370\ubaa8",
     homeDemosLead:
       "\ubaa8\ubc14\uc6b0\uc804 \uc81c\ud488 \ubbf8\ub9ac\ubcf4\uae30\u2014\uacf5\uac1c \ub370\ubaa8\ub294 \uc0c8 \ud0ed. T Today\ub294 \ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5.",
@@ -695,7 +695,7 @@ const translations = {
       "각 제품은 열린 대화가 아니라 하나의 결정과 분명한 다음 행동을 중심으로 만들어집니다.",
     answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
     answerA3:
-      "Meal Coach, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, Invest AI 지도, Decision Agent, Performance Sim 데모를 쓸 수 있습니다. 전체 목록은 xingai.app/apps 입니다.",
+      "Meal Coach, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, Invest AI 지도, Decision Agent, ShopRadar, Performance Sim 데모를 쓸 수 있습니다. 전체 목록은 xingai.app/apps 입니다.",
     answerQ4: "AI 산업 지도는 무엇인가요?",
     answerA4:
       "워커 캐시로 렌더되는 공개 지도로, AI 공급망 레이어와 인용된 공시를 보여 줍니다. 리서치 구조이며 증권사, 배분 보드, 매매 신호가 아닙니다.",
