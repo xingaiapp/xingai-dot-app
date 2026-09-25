@@ -44,6 +44,8 @@ export type AppData = {
   comingSoon?: boolean;
   /** Invite-only product: free to request access via contact. */
   earlyAccess?: boolean;
+  /** Hide from the homepage shelf (still listed in /apps catalog). */
+  hideFromHome?: boolean;
 };
 
 type LocalizedAppCopy = Partial<
@@ -363,6 +365,7 @@ export const apps: AppData[] = [
   {
     slug: "growth-monitor",
     name: "XingAI Growth Monitor",
+    hideFromHome: true,
     tagline: "Fix Pages First",
     icon: "/growth-monitor-icon.svg",
     iconDark: "/growth-monitor-icon.svg",

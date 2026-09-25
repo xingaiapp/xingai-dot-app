@@ -4,14 +4,16 @@
 
 **Version:** 2026.09.25
 
-**Live at [xingai.app](https://xingai.app/)**
+**Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
 
-`2026.09.25` replaces the Decision Agent catalog preview. The old 760×620 SVG
-went through `next/image` and showed as a black card. The new light/dark pair
-is 1536×1024 (same 3:2 crop as other app cards) and SVG thumbs skip the
-optimizer.
+`2026.09.25` points the homepage primary CTA at the Invest AI Industry Map
+(`invest.xingai.app/ai-map`) and hides Growth Monitor from the homepage shelf
+(it stays on `/apps`). The Decision Agent catalog preview is also replaced:
+the old 760×620 SVG went through `next/image` and showed as a black card. The
+new light/dark pair is 1536×1024 (same 3:2 crop as other app cards) and SVG
+thumbs skip the optimizer.
 
 `2026.09.24` lists **XingAI Decision Agent** as a public demo at
 [decision.xingai.app](https://decision.xingai.app/). The catalog card now has a

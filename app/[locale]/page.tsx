@@ -123,9 +123,9 @@ export default function Home() {
               <LocaleLink href="/story">{t("heroStoryLink")} &rarr;</LocaleLink>
             </p>
             <div className="hero-actions">
-              <LocaleLink href="/apps" className="cta">
-                {t("viewAllApps")}
-              </LocaleLink>
+              <a href="https://invest.xingai.app/ai-map" className="cta">
+                {t("heroInvestMapCta")}
+              </a>
               <LocaleLink href="/contact" className="cta cta--outline">
                 {t("homeCta")}
               </LocaleLink>
@@ -350,7 +350,9 @@ export default function Home() {
         <p className="section-lead">{t("homeAppsLead")}</p>
 
         <ul className="app-cards">
-          {apps.map((app) => (
+          {apps
+            .filter((app) => !app.hideFromHome)
+            .map((app) => (
             <li key={app.slug} className="app-card">
               <LocaleLink href={`/apps/${app.slug}`} className="app-card-link">
                 {app.screenshots[0] ? (
