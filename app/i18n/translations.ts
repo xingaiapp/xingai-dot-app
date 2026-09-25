@@ -46,7 +46,7 @@ const translations = {
     // Home
     heroBrand: "XingAI",
     heroValuePill: "AI decision systems, not just chat",
-    tagline: "Get the right decision, every time.",
+    tagline: "AI Decision Systems, Starting with the AI Industry Map",
     heroSub:
       "Focused AI systems for everyday decisions. The public flagship is the Invest AI Industry Map: supply-chain layers and cited filings, not a trading desk. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
     heroStoryLink: "How it fits together",
@@ -354,7 +354,7 @@ const translations = {
 
     heroBrand: "XingAI",
     heroValuePill: "AI \u51b3\u7b56\u7cfb\u7edf\uff0c\u4e0d\u53ea\u662f\u804a\u5929",
-    tagline: "\u6bcf\u4e00\u6b21\uff0c\u90fd\u66f4\u6e05\u695a\u5730\u505a\u51b3\u5b9a\u3002",
+    tagline: "AI \u51b3\u7b56\u7cfb\u7edf\uff0c\u4ece AI \u4ea7\u4e1a\u5730\u56fe\u5f00\u59cb",
     heroSub:
       "\u9762\u5411\u65e5\u5e38\u51b3\u7b56\u7684\u4e13\u6ce8 AI \u7cfb\u7edf\u3002\u516c\u5f00\u65d7\u8230\u662f Invest AI \u4ea7\u4e1a\u5730\u56fe\uff1a\u4ea7\u4e1a\u94fe\u56fe\u5c42\u548c\u5e26\u5f15\u7528\u7684\u5907\u6848\uff0c\u4e0d\u662f\u4ea4\u6613\u53f0\u3002English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4\u3002",
     heroStoryLink: "\u4ea7\u54c1\u5982\u4f55\u7ec4\u6210\u751f\u6001",
@@ -649,7 +649,7 @@ const translations = {
 
     heroBrand: "XingAI",
     heroValuePill: "\ucc57\uc774 \uc544\ub2cc AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
-    tagline: "\ub9e4\ubc88 \ub354 \uba85\ud655\ud55c \uacb0\uc815\uc744.",
+    tagline: "AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c, AI \uc0b0\uc5c5 \uc9c0\ub3c4\ubd80\ud130",
     heroSub:
       "\uc77c\uc0c1 \uacb0\uc815\uc744 \uc704\ud55c \uc9d1\uc911\ud615 AI \uc2dc\uc2a4\ud15c\uc785\ub2c8\ub2e4. \uacf5\uac1c \ud50c\ub798\uadf8\uc2ed\uc740 Invest AI \uc0b0\uc5c5 \uc9c0\ub3c4\uc785\ub2c8\ub2e4. \uacf5\uae09\ub9dd \ub808\uc774\uc5b4\uc640 \uc778\uc6a9\ub41c \uacf5\uc2dc\uc774\uba70, \ub9e4\ub9e4 \ucc3d\uad6c\uac00 \uc544\ub2d9\ub2c8\ub2e4. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
     heroStoryLink: "\uc81c\ud488\uc774 \uc5b4\ub5bb\uac8c \ub9de\ub294\uc9c0",
