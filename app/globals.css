@@ -1275,6 +1275,10 @@ html[data-theme="dark"] .lang-menu {
   transform: none;
 }
 
+.home-apps-more {
+  margin-top: 1.25rem;
+}
+
 /* ── App cards (mobile base) ── */
 .home-apps,
 .home-answers,

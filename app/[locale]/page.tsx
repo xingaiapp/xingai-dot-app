@@ -404,9 +404,11 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <p className="section-lead">
-          <LocaleLink href="/apps">{t("homeBrowseAll")} &rarr;</LocaleLink>
-        </p>
+        <div className="home-apps-more">
+          <LocaleLink href="/apps" className="cta cta--outline">
+            {t("homeBrowseAll")} <span aria-hidden="true">→</span>
+          </LocaleLink>
+        </div>
       </section>
 
       <section className="home-answers" aria-labelledby="home-answers-heading">
