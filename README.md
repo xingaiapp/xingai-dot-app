@@ -2,11 +2,16 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.24
+**Version:** 2026.09.25
 
 **Live at [xingai.app](https://xingai.app/)**
 
 ### Current version notes
+
+`2026.09.25` replaces the Decision Agent catalog preview. The old 760×620 SVG
+went through `next/image` and showed as a black card. The new light/dark pair
+is 1536×1024 (same 3:2 crop as other app cards) and SVG thumbs skip the
+optimizer.
 
 `2026.09.24` lists **XingAI Decision Agent** as a public demo at
 [decision.xingai.app](https://decision.xingai.app/). The catalog card now has a

@@ -27,6 +27,9 @@ export default function AppDemoScreenshot({
   const cardThumb = wrapClassName.includes("app-card-thumb");
   const heroPreview = wrapClassName.includes("hero-preview-media");
   const useFill = heroFocus || cardThumb || heroPreview;
+  const skipOptimizer =
+    unoptimized ??
+    [shot.src, shot.srcDark].some((src) => src != null && /\.svg(\?|$)/i.test(src));
 
   return (
     <div
@@ -41,7 +44,7 @@ export default function AppDemoScreenshot({
           ? {}
           : { width: DEMO_SCREENSHOT_WIDTH, height: DEMO_SCREENSHOT_HEIGHT })}
         sizes={sizes}
-        unoptimized={unoptimized}
+        unoptimized={skipOptimizer}
         className={`${imageClassName}${heroFocus ? " app-demo-shot--hero-focus" : ""}`.trim()}
       />
     </div>
