@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024" role="img" aria-labelledby="title desc">
+  <title id="title">ShopRadar dark preview</title>
+  <desc id="desc">A dark copper ShopRadar score card with five weighted dimensions.</desc>
+  <rect width="1536" height="1024" fill="#16120e"/>
+  <rect x="72" y="56" width="1392" height="912" rx="36" fill="#221c16" stroke="#3a2e22" stroke-width="3"/>
+  <text x="116" y="140" fill="#e8a04a" font-family="ui-monospace, Menlo, monospace" font-size="24" font-weight="700">SHOPRADAR · DAILY TOP 3 · SAMPLE</text>
+  <text x="116" y="220" fill="#f6efe4" font-family="ui-sans-serif, system-ui, sans-serif" font-size="52" font-weight="800">LumaFold Lantern</text>
+  <text x="1320" y="220" fill="#e8a04a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="800" text-anchor="end">78</text>
+  <text x="1410" y="220" fill="#c4b094" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24">/100</text>
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#d4c4a8">
+    <text x="116" y="330">Trend 30</text><rect x="420" y="306" width="980" height="28" rx="14" fill="#33281c"/><rect x="420" y="306" width="804" height="28" rx="14" fill="#e8a04a"/>
+    <text x="116" y="430">Competition 20</text><rect x="420" y="406" width="980" height="28" rx="14" fill="#33281c"/><rect x="420" y="406" width="627" height="28" rx="14" fill="#c47a2c"/>
+    <text x="116" y="530">Margin 20</text><rect x="420" y="506" width="980" height="28" rx="14" fill="#33281c"/><rect x="420" y="506" width="725" height="28" rx="14" fill="#e8a04a"/>
+    <text x="116" y="630">Video 15</text><rect x="420" y="606" width="980" height="28" rx="14" fill="#33281c"/><rect x="420" y="606" width="862" height="28" rx="14" fill="#f0b45c"/>
+    <text x="116" y="730">Risk 15</text><rect x="420" y="706" width="980" height="28" rx="14" fill="#33281c"/><rect x="420" y="706" width="882" height="28" rx="14" fill="#c47a2c"/>
+  </g>
+  <rect x="116" y="800" width="1280" height="96" rx="18" fill="#16120e" stroke="#3a2e22" stroke-width="2"/>
+  <text x="148" y="860" fill="#c4b094" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26">$15 profit bar cleared · no risk veto · waitlist at shopradar.xingai.app</text>
+</svg>

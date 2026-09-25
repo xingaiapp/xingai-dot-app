@@ -27,6 +27,7 @@ Live or demo products:
 - Learn AI: https://learn.xingai.app
 - Routine AI: https://routine.xingai.app
 - Decision Agent: https://decision.xingai.app
+- ShopRadar (waitlist): https://shopradar.xingai.app
 - Performance Sim: https://lab.xingai.app
 - Daily Assistant: https://daily.xingai.app
 - T Today (invite-only early access): https://t.xingai.app
