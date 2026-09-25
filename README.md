@@ -2,11 +2,15 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.25
+**Version:** 2026.09.25b
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.25b` wires Bing IndexNow (public key file + `scripts/submit-indexnow.py`)
+and points README contact / deployment notes at **xingai.app** (Vercel alias is
+preview-only, not the product URL).
 
 `2026.09.25` also tightens SEO / AEO / GEO: short home meta, fixed `og:title`,
 FAQ + `llms.txt` aligned on the Industry Map, homepage shelf is Invest / Travel /
@@ -126,7 +130,11 @@ npm run capture:learn
 
 ## Deployment Notes
 
-Use `https://xingai-dot-app.vercel.app/` as the stable public URL for this website. Do not use one-off Vercel deployment URLs in docs or product links.
+**Public URL:** [https://xingai.app/](https://xingai.app/). Use that in docs, product cards, and cross-links.
+
+`https://xingai-dot-app.vercel.app/` is the Vercel project alias (preview / fallback only). Do not use one-off deployment URLs.
+
+After a production deploy that includes the IndexNow key file, run `python3 scripts/submit-indexnow.py` to notify Bing.
 
 See [docs/domain-and-deployment-notes.md](./docs/domain-and-deployment-notes.md) for alias history and deployment commands.
 
@@ -155,7 +163,7 @@ public/             # Logos, icons, favicons, demo screenshots
 ## Contact
 
 - **Email:** contact@xingai.app
-- **Web:** [xingai-dot-app.vercel.app](https://xingai-dot-app.vercel.app/)
+- **Web:** [xingai.app](https://xingai.app/)
 - **LinkedIn:** [xingaiapp](https://www.linkedin.com/in/xingaiapp/)
 - **X/Twitter:** [@XingAIApp](https://x.com/XingAIApp)
 
@@ -163,7 +171,7 @@ public/             # Logos, icons, favicons, demo screenshots
 
 We also build custom AI products for teams and founders. Share your idea — we'll design, build, and ship it with you.
 
-[Tell us your idea →](https://xingai-dot-app.vercel.app/contact)
+[Tell us your idea →](https://xingai.app/contact)
 
 ---
 

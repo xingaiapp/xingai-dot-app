@@ -52,3 +52,9 @@ curl -sL https://xingai.app/sitemap.xml | head -40
 ## Out of scope (separate repos)
 
 `lab.xingai.app`, `t.xingai.app`, `invest.xingai.app` — per-app SEO audits.
+
+## IndexNow (Bing)
+
+- Public key file at `/{64-hex}.txt` (same portfolio key as Invest AI).
+- Operator submit: `python3 scripts/submit-indexnow.py` after deploy.
+- Helper: `app/lib/indexnow.ts`.
