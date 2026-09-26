@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useLocalePath } from "../lib/use-locale-path";
 import { useTheme } from "./ThemeContext";
-type ResourceIconName = "github" | "linkedin" | "x";
+type ResourceIconName = "github" | "linkedin" | "x" | "youtube";
 type FooterIconName =
   | ResourceIconName
   | "systems"
@@ -37,6 +37,14 @@ function FooterLinkIcon({ name }: { name: FooterIconName }) {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M14.2 10.45 20.95 2.6h-1.6l-5.86 6.82L8.8 2.6H3.4l7.08 10.3-7.08 8.24H5l6.19-7.2 4.94 7.2h5.4l-7.33-10.69Zm-2.19 2.54-.72-1.03L5.58 3.8h2.45l4.61 6.59.72 1.03 5.99 8.56H16.9l-4.89-6.99Z" />
+      </svg>
+    );
+  }
+
+  if (name === "youtube") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z" />
       </svg>
     );
   }
@@ -260,6 +268,15 @@ export default function Footer() {
             >
               <FooterLinkIcon name="x" />
               <span>X</span>
+            </a>
+            <a
+              href="https://www.youtube.com/@xingai_app"
+              className="footer-resource-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FooterLinkIcon name="youtube" />
+              <span>YouTube</span>
             </a>
           </div>
         </nav>
