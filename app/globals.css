@@ -2362,6 +2362,144 @@ html[data-theme="dark"] .lang-menu {
   font-weight: 400;
 }
 
+/* Home: compact system loop, links to /story */
+.home-loop {
+  margin-top: 3rem;
+}
+
+.home-loop__card {
+  display: block;
+  padding: 1.1rem 1.15rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-bg);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-loop__card:hover {
+  border-color: color-mix(in srgb, var(--blue) 45%, transparent);
+  box-shadow: 0 0 0 3px var(--soft-bg);
+}
+
+.home-loop__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.5rem 1.6rem;
+}
+
+.home-loop__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--page-bg);
+}
+
+.home-loop__step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.home-loop__step--idea {
+  justify-content: center;
+  background: var(--badge-bg);
+  border-color: transparent;
+}
+
+.home-loop__name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  white-space: nowrap;
+}
+
+.home-loop__id {
+  margin-right: 0.35rem;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.home-loop__stage {
+  align-self: flex-start;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.home-loop__stage--available {
+  color: var(--status-live-fg);
+  background: var(--status-live-bg);
+}
+
+.home-loop__stage--building {
+  color: var(--status-early-fg);
+  background: var(--status-early-bg);
+}
+
+.home-loop__stage--planned {
+  color: var(--muted);
+  border: 1px dashed var(--muted);
+}
+
+.home-loop__back {
+  margin: 0.85rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.home-loop__cta {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+/* Phones: stack the steps; arrows point down. */
+@media (max-width: 35.99rem) {
+  .home-loop__steps {
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .home-loop__step {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .home-loop__step:not(:last-child)::after {
+    content: "↓";
+    right: auto;
+    left: 1rem;
+    top: auto;
+    bottom: -1.05rem;
+    transform: none;
+  }
+
+  .home-loop__stage {
+    align-self: center;
+  }
+}
+
 /* ── About grid ── */
 .about-grid {
   display: grid;

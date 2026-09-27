@@ -130,6 +130,11 @@ const translations = {
     aboutStoryLink: "How XingAI turns ideas into products",
 
     // Story / ecosystem
+    homeLoopHeading: "How XingAI works",
+    homeLoopLead: "The apps above come out of one system that turns ideas into products and keeps improving them.",
+    homeLoopIdea: "Idea",
+    homeLoopBack: "Results go back to the Vault (planned)",
+    homeLoopCta: "See the whole loop",
     storyEyebrow: "How XingAI works",
     storyHeading: "A system that turns ideas into continuously operating AI products",
     storyLead: "AI should do more than answer questions. It should help turn an idea into something useful that keeps improving. The apps you can try today are what this system produces.",
@@ -461,6 +466,11 @@ const translations = {
     aboutBuildingText: "\u5b9e\u9a8c\u3001\u4f18\u5316\u548c\u53d1\u5e03\u2014\u2014\u6211\u4eec\u5728 GitHub\u3001LinkedIn \u548c X \u4e0a\u5206\u4eab\u8fc7\u7a0b\u3002\u6211\u4eec\u504f\u597d\u53d1\u5e03\u548c\u8fed\u4ee3\uff0c\u800c\u975e\u65e0\u58f0\u5b8c\u5584\u3002",
     aboutStoryLink: "XingAI 如何把想法变成产品",
 
+    homeLoopHeading: "XingAI 如何运转",
+    homeLoopLead: "上面这些应用都出自同一个系统：把想法变成产品，并持续改进。",
+    homeLoopIdea: "想法",
+    homeLoopBack: "结果回到点子库（规划中）",
+    homeLoopCta: "查看完整循环",
     storyEyebrow: "XingAI 如何运转",
     storyHeading: "一个把想法变成持续运转的 AI 产品的系统",
     storyLead: "AI 不该只是回答问题，而应该帮你把一个想法变成有用、并且不断改进的东西。你今天能用到的这些应用，就是这个系统的产出。",
@@ -785,6 +795,11 @@ const translations = {
     aboutBuildingText: "\uc2e4\ud5d8, \uac1c\uc120, \ubc30\ud3ec\u2014GitHub, LinkedIn, X\uc5d0\uc11c \uacfc\uc815\uc744 \uacf5\uc720\ud569\ub2c8\ub2e4. \uc870\uc6a9\ud788 \uc644\ubcbd\ud558\uac8c \ub9cc\ub4dc\ub294 \uac83\ubcf4\ub2e4 \ubc30\ud3ec\ud558\uace0 \ubc18\ubcf5\ud558\ub294 \uac83\uc744 \uc120\ud638\ud569\ub2c8\ub2e4.",
     aboutStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
 
+    homeLoopHeading: "XingAI의 작동 방식",
+    homeLoopLead: "위의 앱들은 아이디어를 제품으로 만들고 계속 개선하는 하나의 시스템에서 나옵니다.",
+    homeLoopIdea: "아이디어",
+    homeLoopBack: "결과는 볼트로 돌아갑니다 (계획됨)",
+    homeLoopCta: "전체 순환 보기",
     storyEyebrow: "XingAI의 작동 방식",
     storyHeading: "아이디어를 계속 운영되는 AI 제품으로 바꾸는 시스템",
     storyLead: "AI는 질문에 답하는 데서 그치지 않고, 아이디어를 쓸모 있고 계속 나아지는 것으로 바꾸도록 도와야 합니다. 오늘 써 볼 수 있는 앱들은 이 시스템이 만든 결과물입니다.",

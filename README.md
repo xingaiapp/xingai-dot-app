@@ -2,11 +2,17 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.26b
+**Version:** 2026.09.26c
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.26c` adds a compact “How XingAI works” loop block on the homepage,
+between the Start here shelf and Quick answers. It reads the same
+`systemLayers` data as /story, so stage tags (Available today / Being built /
+Planned) stay in sync, and the whole card links to /story. Hero and CTAs are
+unchanged.
 
 `2026.09.26b` renames the homepage and About links to /story to “How XingAI
 turns ideas into products” in en / zh / ko. Nothing else on the homepage changes.

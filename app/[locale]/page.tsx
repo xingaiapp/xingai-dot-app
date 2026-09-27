@@ -9,6 +9,7 @@ import { getHomeShelfApps, getLocalizedApps, type AppLaunchStatus } from "../dat
 import AppIcon from "../components/AppIcon";
 import { APP_ICON_SIZE } from "../lib/app-icon";
 import AppDemoScreenshot from "../components/AppDemoScreenshot";
+import HomeSystemLoop from "../components/HomeSystemLoop";
 
 function AnswerIcon({ index }: { index: number }) {
   const common = {
@@ -410,6 +411,8 @@ export default function Home() {
           </LocaleLink>
         </div>
       </section>
+
+      <HomeSystemLoop />
 
       <section className="home-answers" aria-labelledby="home-answers-heading">
         <h2 id="home-answers-heading" className="section-title">
