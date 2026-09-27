@@ -2,11 +2,14 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.26
+**Version:** 2026.09.26b
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.26b` renames the homepage and About links to /story to “How XingAI
+turns ideas into products” in en / zh / ko. Nothing else on the homepage changes.
 
 `2026.09.26` rewrites **/story** as “How XingAI works”: a loop diagram
 (Idea → Idea Vault #001 → Orchestrator #002 → agents → apps → Evidence /

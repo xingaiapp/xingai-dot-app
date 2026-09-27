@@ -50,7 +50,7 @@ const translations = {
     tagline: "AI Decision Systems, Starting with the AI Industry Map",
     heroSub:
       "Focused AI systems for everyday decisions. The public flagship is the Invest AI Industry Map: supply-chain layers and cited filings, not a trading desk. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
-    heroStoryLink: "How it fits together",
+    heroStoryLink: "How XingAI turns ideas into products",
     heroGridLabel: "Our AI decision systems",
     heroPreviewLabel: "System preview",
     heroCoreSystems: "Explore core systems",
@@ -127,7 +127,7 @@ const translations = {
     aboutStackText: "Next.js for the frontend. FastAPI for the backend. Local AI models where privacy matters. Vercel for deployment. Everything open where possible.",
     aboutBuilding: "Building in public",
     aboutBuildingText: "Experiments, refinements, and releases\u2014we share the process on GitHub, LinkedIn, and X. We favor shipping and iterating over perfecting in silence.",
-    aboutStoryLink: "How our products fit together",
+    aboutStoryLink: "How XingAI turns ideas into products",
 
     // Story / ecosystem
     storyEyebrow: "How XingAI works",
@@ -386,7 +386,7 @@ const translations = {
     tagline: "AI \u51b3\u7b56\u7cfb\u7edf\uff0c\u4ece AI \u4ea7\u4e1a\u5730\u56fe\u5f00\u59cb",
     heroSub:
       "\u9762\u5411\u65e5\u5e38\u51b3\u7b56\u7684\u4e13\u6ce8 AI \u7cfb\u7edf\u3002\u516c\u5f00\u65d7\u8230\u662f Invest AI \u4ea7\u4e1a\u5730\u56fe\uff1a\u4ea7\u4e1a\u94fe\u56fe\u5c42\u548c\u5e26\u5f15\u7528\u7684\u5907\u6848\uff0c\u4e0d\u662f\u4ea4\u6613\u53f0\u3002English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4\u3002",
-    heroStoryLink: "\u4ea7\u54c1\u5982\u4f55\u7ec4\u6210\u751f\u6001",
+    heroStoryLink: "XingAI 如何把想法变成产品",
     heroGridLabel: "\u6211\u4eec\u7684 AI \u51b3\u7b56\u7cfb\u7edf",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
     heroCoreSystems: "\u63a2\u7d22\u6838\u5fc3\u7cfb\u7edf",
@@ -459,7 +459,7 @@ const translations = {
     aboutStackText: "\u524d\u7aef Next.js\u3002\u540e\u7aef FastAPI\u3002\u9690\u79c1\u4f18\u5148\u65f6\u4f7f\u7528\u672c\u5730 AI \u6a21\u578b\u3002Vercel \u90e8\u7f72\u3002\u5c3d\u53ef\u80fd\u5f00\u6e90\u3002",
     aboutBuilding: "\u516c\u5f00\u6784\u5efa",
     aboutBuildingText: "\u5b9e\u9a8c\u3001\u4f18\u5316\u548c\u53d1\u5e03\u2014\u2014\u6211\u4eec\u5728 GitHub\u3001LinkedIn \u548c X \u4e0a\u5206\u4eab\u8fc7\u7a0b\u3002\u6211\u4eec\u504f\u597d\u53d1\u5e03\u548c\u8fed\u4ee3\uff0c\u800c\u975e\u65e0\u58f0\u5b8c\u5584\u3002",
-    aboutStoryLink: "\u4ea7\u54c1\u5982\u4f55\u7ec4\u6210\u751f\u6001",
+    aboutStoryLink: "XingAI 如何把想法变成产品",
 
     storyEyebrow: "XingAI 如何运转",
     storyHeading: "一个把想法变成持续运转的 AI 产品的系统",
@@ -710,7 +710,7 @@ const translations = {
     tagline: "AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c, AI \uc0b0\uc5c5 \uc9c0\ub3c4\ubd80\ud130",
     heroSub:
       "\uc77c\uc0c1 \uacb0\uc815\uc744 \uc704\ud55c \uc9d1\uc911\ud615 AI \uc2dc\uc2a4\ud15c\uc785\ub2c8\ub2e4. \uacf5\uac1c \ud50c\ub798\uadf8\uc2ed\uc740 Invest AI \uc0b0\uc5c5 \uc9c0\ub3c4\uc785\ub2c8\ub2e4. \uacf5\uae09\ub9dd \ub808\uc774\uc5b4\uc640 \uc778\uc6a9\ub41c \uacf5\uc2dc\uc774\uba70, \ub9e4\ub9e4 \ucc3d\uad6c\uac00 \uc544\ub2d9\ub2c8\ub2e4. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
-    heroStoryLink: "\uc81c\ud488\uc774 \uc5b4\ub5bb\uac8c \ub9de\ub294\uc9c0",
+    heroStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
     heroGridLabel: "\uc6b0\ub9ac\uc758 AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
     heroCoreSystems: "\ud575\uc2ec \uc2dc\uc2a4\ud15c \ub458\ub7ec\ubcf4\uae30",
@@ -783,7 +783,7 @@ const translations = {
     aboutStackText: "\ud504\ub860\ud2b8\uc5d4\ub4dc Next.js. \ubc31\uc5d4\ub4dc FastAPI. \uac1c\uc778\uc815\ubcf4 \ubcf4\ud638\uac00 \uc911\uc694\ud55c \uacf3\uc5d0\ub294 \ub85c\uceec AI. Vercel \ubc30\ud3ec. \uac00\ub2a5\ud55c \ud55c \uc624\ud508\uc18c\uc2a4.",
     aboutBuilding: "\uacf5\uac1c \uac1c\ubc1c",
     aboutBuildingText: "\uc2e4\ud5d8, \uac1c\uc120, \ubc30\ud3ec\u2014GitHub, LinkedIn, X\uc5d0\uc11c \uacfc\uc815\uc744 \uacf5\uc720\ud569\ub2c8\ub2e4. \uc870\uc6a9\ud788 \uc644\ubcbd\ud558\uac8c \ub9cc\ub4dc\ub294 \uac83\ubcf4\ub2e4 \ubc30\ud3ec\ud558\uace0 \ubc18\ubcf5\ud558\ub294 \uac83\uc744 \uc120\ud638\ud569\ub2c8\ub2e4.",
-    aboutStoryLink: "\uc81c\ud488\uc774 \uc5b4\ub5bb\uac8c \ub9de\ub294\uc9c0",
+    aboutStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
 
     storyEyebrow: "XingAI의 작동 방식",
     storyHeading: "아이디어를 계속 운영되는 AI 제품으로 바꾸는 시스템",
