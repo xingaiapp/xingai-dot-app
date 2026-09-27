@@ -15,7 +15,8 @@ cited public filings. It is not a broker, allocation board, or trade signal.
 How XingAI works: https://xingai.app/story
 - XingAI is a system that turns ideas into continuously operating AI products.
 - Idea Vault (memory): a private, owner-only workspace that gives each idea a
-  permanent number and keeps its research, decisions and history. Being built.
+  permanent number and keeps its research, decisions and history. Available today
+  at https://vault.xingai.app (login required).
 - Orchestrator and specialized agents (execution): planned, not built yet.
 - Apps (products): the catalog below, grouped as Everyday, Learning, Investing,
   and Research & ventures.

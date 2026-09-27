@@ -2,11 +2,14 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.26c
+**Version:** 2026.09.26d
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.26d` marks Idea Vault (#001) as **Available today** on `/story` once
+`vault.xingai.app` is live. `llms.txt` points at the private login URL.
 
 `2026.09.26c` adds a compact “How XingAI works” loop block on the homepage,
 between the Start here shelf and Quick answers. It reads the same

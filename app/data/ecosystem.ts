@@ -26,7 +26,7 @@ export const systemLayers: SystemLayer[] = [
     roleKey: "storyLayerVaultRole",
     nameKey: "storyLayerVaultName",
     textKey: "storyLayerVaultText",
-    stage: "building",
+    stage: "available",
   },
   {
     id: "orchestrator",
