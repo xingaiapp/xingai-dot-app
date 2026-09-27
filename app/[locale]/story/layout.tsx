@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getIndexableApps } from "../../data/apps";
 import { parseRoutingLocale, publicUrl } from "../../lib/locale-routing";
 import {
-  appsCatalogDescription,
   localizedOpenGraph,
   pageAlternates,
   storyOg,
@@ -14,20 +13,19 @@ const path = "/story";
 type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 
 function storyTitle(locale: ReturnType<typeof parseRoutingLocale>) {
-  if (locale === "zh") return "产品生态";
-  if (locale === "ko") return "제품 생태계";
-  return "Product ecosystem";
+  if (locale === "zh") return "XingAI 如何运转";
+  if (locale === "ko") return "XingAI의 작동 방식";
+  return "How XingAI works";
 }
 
 function storyDescription(locale: ReturnType<typeof parseRoutingLocale>) {
-  const base = appsCatalogDescription(locale);
   if (locale === "zh") {
-    return `${base} 了解日常工具与 Invest AI、Performance Sim、T Today 如何协同。`;
+    return "XingAI 是把想法变成持续运转的 AI 产品的系统：点子库保存记忆，编排器与智能体（规划中）推进工作，日常、学习、投资和调研应用是产出，证据、增长和运维工具负责信任与反馈。";
   }
   if (locale === "ko") {
-    return `${base} 일상 도구와 Invest AI, Performance Sim, T Today가 어떻게 맞물리는지 살펴보세요.`;
+    return "XingAI는 아이디어를 계속 운영되는 AI 제품으로 바꾸는 시스템입니다. 아이디어 볼트가 기억을, 오케스트레이터와 에이전트(계획됨)가 실행을 맡고, 일상·학습·투자·리서치 앱이 결과물이며, 근거·성장·운영 도구가 신뢰와 피드백을 담당합니다.";
   }
-  return `How XingAI products fit together: everyday tools plus Invest AI, Performance Sim, and T Today. ${base}`;
+  return "XingAI is a system that turns ideas into continuously operating AI products: an Idea Vault for memory, a planned Orchestrator and agents for execution, apps for everyday life, learning, investing and research, and evidence, growth and ops tools for trust and feedback.";
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

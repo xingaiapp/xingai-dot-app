@@ -2157,6 +2157,211 @@ html[data-theme="dark"] .lang-menu {
   margin: 0;
 }
 
+/* Story: system loop (Idea → Vault → … → back to Vault) */
+.story-principle {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.story-stage-legend {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.story-stage {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.story-stage--available {
+  color: var(--status-live-fg);
+  background: var(--status-live-bg);
+}
+
+.story-stage--building {
+  color: var(--status-early-fg);
+  background: var(--status-early-bg);
+}
+
+.story-stage--planned {
+  color: var(--muted);
+  background: transparent;
+  border: 1px dashed var(--muted);
+}
+
+.story-loop {
+  position: relative;
+  max-width: 44rem;
+  padding-right: 2rem;
+}
+
+.story-loop__start {
+  display: inline-block;
+  margin: 0 0 1.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--ink-strong);
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.story-loop__start::after,
+.story-loop__layer:not(:last-child)::after {
+  content: "↓";
+  position: absolute;
+  left: 1.25rem;
+  bottom: -1.3rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.story-loop__layers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.story-loop__layer {
+  position: relative;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-bg);
+}
+
+.story-loop__layer--vault {
+  border-color: color-mix(in srgb, var(--blue) 45%, transparent);
+  box-shadow: 0 0 0 3px var(--soft-bg);
+}
+
+.story-loop__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.story-loop__role {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.story-loop__name {
+  margin: 0 0 0.3rem;
+  font-size: 1.0625rem;
+  font-weight: 650;
+  color: var(--ink-strong);
+}
+
+.story-loop__id {
+  margin-right: 0.45rem;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.story-loop__text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.story-agent-list {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.story-agent-list li {
+  padding: 0.2rem 0.55rem;
+  border-radius: 8px;
+  border: 1px dashed var(--line);
+  font-size: 0.75rem;
+  color: var(--ink);
+}
+
+/* Return rail: from the Vault card's edge, down the right side, into the return note. */
+.story-loop__rail {
+  position: absolute;
+  top: 4.9rem;
+  bottom: 1.1rem;
+  right: 0.35rem;
+  width: 1.4rem;
+  border: 2px dashed var(--blue);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.story-loop__rail::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -8px;
+  border: 5px solid transparent;
+  border-right: 7px solid var(--blue);
+}
+
+.story-loop__return {
+  margin-top: 1rem;
+  padding-right: 0.25rem;
+}
+
+.story-loop__return p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.story-closing {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+}
+
+.story-closing li:not(:last-child)::after {
+  content: "→";
+  margin-left: 0.9rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
 /* ── About grid ── */
 .about-grid {
   display: grid;

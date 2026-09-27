@@ -2,11 +2,20 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.25e
+**Version:** 2026.09.26
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.26` rewrites **/story** as “How XingAI works”: a loop diagram
+(Idea → Idea Vault #001 → Orchestrator #002 → agents → apps → Evidence /
+Growth / Ops → back to the Vault) with each layer tagged Available today /
+Being built / Planned. All 22 catalog apps are now grouped by domain
+(Everyday, Learning, Investing, Research & ventures), and a separate trust and
+feedback section covers Evidence Engine, Growth Monitor, Ops Status and Eval
+Registry. The Invest flow, Try it and About sections stay as before. `llms.txt`
+gains a matching “How XingAI works” block.
 
 `2026.09.25e` puts **ShopRadar** on the homepage “Start here” shelf with
 Invest / Travel / Cook, and moves the catalog card next to Travel (Commerce AI).

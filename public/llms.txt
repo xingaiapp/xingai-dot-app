@@ -12,6 +12,17 @@ https://invest.xingai.app/ai-map
 The map is a cache-rendered research view of AI supply-chain layers and
 cited public filings. It is not a broker, allocation board, or trade signal.
 
+How XingAI works: https://xingai.app/story
+- XingAI is a system that turns ideas into continuously operating AI products.
+- Idea Vault (memory): a private, owner-only workspace that gives each idea a
+  permanent number and keeps its research, decisions and history. Being built.
+- Orchestrator and specialized agents (execution): planned, not built yet.
+- Apps (products): the catalog below, grouped as Everyday, Learning, Investing,
+  and Research & ventures.
+- Evidence Engine, Growth Monitor, Ops Status (trust and feedback): running as
+  separate demos and internal tools. Feeding their results back into the Vault
+  is planned.
+
 Product catalog: https://xingai.app/apps
 
 Languages: English, Chinese, Korean.

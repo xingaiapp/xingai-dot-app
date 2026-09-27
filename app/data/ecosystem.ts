@@ -1,39 +1,125 @@
-/** Product groupings for the /story ecosystem page. Slugs must match `apps.ts`. */
+/** Structure for the /story page. Product slugs must match `apps.ts`. */
 
-export type EcosystemClusterId = "everyday" | "invest";
+import type { TranslationKey } from "../i18n/translations";
 
-export type EcosystemCluster = {
-  id: EcosystemClusterId;
-  titleKey: "storyClusterEverydayTitle" | "storyClusterInvestTitle";
-  leadKey: "storyClusterEverydayLead" | "storyClusterInvestLead";
+/**
+ * Where each part of the system stands today. Keep this honest: the story
+ * page must not present roadmap pieces as shipped.
+ */
+export type SystemStage = "available" | "building" | "planned";
+
+export type SystemLayer = {
+  id: "vault" | "orchestrator" | "agents" | "apps" | "trust";
+  /** Permanent idea number, shown only for the two core system pieces. */
+  ideaId?: string;
+  roleKey: TranslationKey;
+  nameKey: TranslationKey;
+  textKey: TranslationKey;
+  stage: SystemStage;
+};
+
+/** Top-to-bottom order of the loop diagram. Results return from the last layer to the first. */
+export const systemLayers: SystemLayer[] = [
+  {
+    id: "vault",
+    ideaId: "#001",
+    roleKey: "storyLayerVaultRole",
+    nameKey: "storyLayerVaultName",
+    textKey: "storyLayerVaultText",
+    stage: "building",
+  },
+  {
+    id: "orchestrator",
+    ideaId: "#002",
+    roleKey: "storyLayerOrchRole",
+    nameKey: "storyLayerOrchName",
+    textKey: "storyLayerOrchText",
+    stage: "planned",
+  },
+  {
+    id: "agents",
+    roleKey: "storyLayerAgentsRole",
+    nameKey: "storyLayerAgentsName",
+    textKey: "storyLayerAgentsText",
+    stage: "planned",
+  },
+  {
+    id: "apps",
+    roleKey: "storyLayerAppsRole",
+    nameKey: "storyLayerAppsName",
+    textKey: "storyLayerAppsText",
+    stage: "available",
+  },
+  {
+    id: "trust",
+    roleKey: "storyLayerTrustRole",
+    nameKey: "storyLayerTrustName",
+    textKey: "storyLayerTrustText",
+    stage: "available",
+  },
+];
+
+/** Agent roles the Orchestrator is planned to coordinate. None run as agents yet. */
+export const plannedAgentKeys: TranslationKey[] = [
+  "storyAgentResearch",
+  "storyAgentEvidence",
+  "storyAgentArchitecture",
+  "storyAgentBuild",
+  "storyAgentMonitor",
+  "storyAgentGrowth",
+  "storyAgentReport",
+];
+
+export type ProductDomain = {
+  id: "everyday" | "learning" | "investing" | "research" | "operations";
+  titleKey: TranslationKey;
+  leadKey: TranslationKey;
   productSlugs: string[];
 };
 
-export const ecosystemClusters: EcosystemCluster[] = [
+/** The product layer, grouped by the job each app does. Every catalog app appears once. */
+export const productDomains: ProductDomain[] = [
   {
     id: "everyday",
-    titleKey: "storyClusterEverydayTitle",
-    leadKey: "storyClusterEverydayLead",
+    titleKey: "storyDomainEverydayTitle",
+    leadKey: "storyDomainEverydayLead",
     productSlugs: [
-      "meal-coach",
       "cook-ai",
-      "outfit-ai",
-      "routine-ai",
-      "sat-ai",
-      "research-ai",
-      "learn-ai",
-      "engineering-coach",
-      "parent-ai",
       "travel-ai",
+      "outfit-ai",
+      "meal-coach",
+      "routine-ai",
+      "daily-assistant",
+      "parent-ai",
     ],
   },
   {
-    id: "invest",
-    titleKey: "storyClusterInvestTitle",
-    leadKey: "storyClusterInvestLead",
-    productSlugs: ["decision-agent", "investment-assistant", "performance-sim", "t-today"],
+    id: "learning",
+    titleKey: "storyDomainLearningTitle",
+    leadKey: "storyDomainLearningLead",
+    productSlugs: ["research-ai", "learn-ai", "sat-ai", "engineering-coach"],
+  },
+  {
+    id: "investing",
+    titleKey: "storyDomainInvestingTitle",
+    leadKey: "storyDomainInvestingLead",
+    productSlugs: ["investment-assistant", "decision-agent", "performance-sim", "t-today"],
+  },
+  {
+    id: "research",
+    titleKey: "storyDomainResearchTitle",
+    leadKey: "storyDomainResearchLead",
+    productSlugs: ["shop-radar", "passive-income", "founder-ai"],
   },
 ];
+
+/** Trust + feedback layer: shown in its own section, not with the product domains. */
+export const operationsDomain: ProductDomain = {
+  id: "operations",
+  titleKey: "storyDomainOperationsTitle",
+  leadKey: "storyDomainOperationsLead",
+  productSlugs: ["evidence-engine", "growth-monitor", "ops-status", "eval-registry"],
+};
 
 export type InvestFlowStep = {
   slug: string;
