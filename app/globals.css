@@ -2157,6 +2157,26 @@ html[data-theme="dark"] .lang-menu {
   margin: 0;
 }
 
+/* Story: desktop-only hero illustration (light/dark pair) */
+.story-hero-figure {
+  display: none;
+  margin: 0 0 2.25rem;
+}
+
+.story-hero-figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+@media (min-width: 48rem) {
+  .story-hero-figure {
+    display: block;
+  }
+}
+
 /* Story: system loop (Idea → Vault → … → back to Vault) */
 .story-principle {
   margin: 0.75rem 0 0;

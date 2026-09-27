@@ -59,10 +59,10 @@ export function appsOg(locale: Locale) {
 export function storyOg(locale: Locale) {
   const alt =
     locale === "zh"
-      ? "XingAI 产品生态 — 日常与投资决策系统"
+      ? "XingAI 如何运转 — 把想法变成持续运转的 AI 产品"
       : locale === "ko"
-        ? "XingAI 제품 생태계 — 일상 및 투자 의사결정"
-        : "XingAI product ecosystem — everyday and invest decision systems";
+        ? "XingAI의 작동 방식 — 아이디어를 계속 운영되는 AI 제품으로"
+        : "How XingAI works — turning ideas into continuously operating AI products";
   return ogImageMeta(storyOgImage, alt);
 }
 

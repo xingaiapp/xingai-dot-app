@@ -2,11 +2,17 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.26d
+**Version:** 2026.09.27
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.27` adds the “How XingAI works” illustration to /story as a
+desktop-only hero (light/dark pair: `how-xingai-works-light.webp` /
+`-dark.webp`, hidden under 48rem where the HTML loop carries the content) and
+replaces `story-og.jpg` with a 1200×630 version of the dark illustration.
+Localized alt text and OG alt copy updated.
 
 `2026.09.26d` marks Idea Vault (#001) as **Available today** on `/story` once
 `vault.xingai.app` is live. `llms.txt` points at the private login URL.

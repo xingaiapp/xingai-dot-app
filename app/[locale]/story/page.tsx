@@ -13,6 +13,7 @@ import {
   type SystemStage,
 } from "../../data/ecosystem";
 import AppIcon from "../../components/AppIcon";
+import ThemedImage from "../../components/ThemedImage";
 import { APP_ICON_SIZE } from "../../lib/app-icon";
 
 export default function StoryPage() {
@@ -75,6 +76,21 @@ export default function StoryPage() {
         <p className="page-lead">{t("storyLead")}</p>
         <p className="story-principle">{t("storyPrinciple")}</p>
       </section>
+
+      {/* Desktop-only illustration. Text in the image is English and too small on phones;
+          the HTML loop below stays the real, localized content. */}
+      <figure className="story-hero-figure">
+        <ThemedImage
+          src="/how-xingai-works-light.webp"
+          srcDark="/how-xingai-works-dark.webp"
+          alt={t("storyHeroAlt")}
+          width={1672}
+          height={941}
+          sizes="(min-width: 64rem) 60rem, 90vw"
+          className="story-hero-figure__img"
+          unoptimized
+        />
+      </figure>
 
       <section className="story-section" aria-labelledby="story-loop-heading">
         <h2 id="story-loop-heading" className="section-title">
