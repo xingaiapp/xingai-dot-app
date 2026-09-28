@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-label="XingAI Founder AI">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <circle cx="980" cy="120" r="160" fill="#1d4ed8" opacity="0.35"/>
+  <circle cx="180" cy="520" r="140" fill="#0ea5e9" opacity="0.25"/>
+  <rect x="80" y="90" width="1040" height="450" rx="28" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="120" y="190" font-family="system-ui, sans-serif" font-size="54" font-weight="700" fill="#f8fafc">XingAI Founder AI</text>
+  <text x="120" y="250" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8">Signal to startup decision</text>
+  <rect x="120" y="300" width="220" height="44" rx="12" fill="#1d4ed8"/>
+  <text x="148" y="329" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#eff6ff">Coming soon</text>
+  <text x="120" y="400" font-family="system-ui, sans-serif" font-size="22" fill="#cbd5e1">GitHub · Product Hunt · research blogs ’ scored opportunity + PRD</text>
+  <text x="120" y="450" font-family="system-ui, sans-serif" font-size="20" fill="#64748b">Early access via xingai.app/contact</text>
+</svg>

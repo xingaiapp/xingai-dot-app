@@ -2716,6 +2716,15 @@ html[data-theme="dark"] .roadmap-status--shipped {
   color: #34d399;
 }
 
+.roadmap-status--built {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+}
+
+html[data-theme="dark"] .roadmap-status--built {
+  color: #93c5fd;
+}
+
 .roadmap-status--in-progress {
   background: var(--badge-bg);
   color: var(--blue);

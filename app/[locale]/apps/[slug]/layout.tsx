@@ -68,21 +68,56 @@ export default async function AppSlugLayout({
   if (!app) return children;
 
   const appUrl = publicUrl(locale, `/apps/${app.slug}`);
+  const graph: Record<string, unknown>[] = [
+    { "@id": `${siteUrl}/#org` },
+    buildSoftwareApplicationNode(app, locale),
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${appUrl}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "XingAI", item: publicUrl(locale, "/") },
+        { "@type": "ListItem", position: 2, name: "Apps", item: publicUrl(locale, "/apps") },
+        { "@type": "ListItem", position: 3, name: app.name, item: appUrl },
+      ],
+    },
+  ];
+
+  if (app.comingSoon) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${appUrl}#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: `What is ${app.name}?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: app.description,
+          },
+        },
+        {
+          "@type": "Question",
+          name: `Is ${app.name} available now?`,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Not yet. It is on the public roadmap as Coming soon. Request early access via the contact form on xingai.app.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I get early access?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Use https://xingai.app/contact with the Early access request topic. We share direction early for collaboration.",
+          },
+        },
+      ],
+    });
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      { "@id": `${siteUrl}/#org` },
-      buildSoftwareApplicationNode(app, locale),
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${appUrl}#breadcrumb`,
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "XingAI", item: publicUrl(locale, "/") },
-          { "@type": "ListItem", position: 2, name: "Apps", item: publicUrl(locale, "/apps") },
-          { "@type": "ListItem", position: 3, name: app.name, item: appUrl },
-        ],
-      },
-    ],
+    "@graph": graph,
   };
 
   return (

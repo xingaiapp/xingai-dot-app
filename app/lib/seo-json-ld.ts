@@ -36,7 +36,7 @@ export function buildSoftwareApplicationNode(app: AppData, locale: Locale) {
         : app.earlyAccess
           ? "https://schema.org/LimitedAvailability"
           : "https://schema.org/InStock",
-      url: app.earlyAccess
+      url: app.comingSoon || app.earlyAccess
         ? publicUrl(locale, "/contact")
         : (app.demoUrl ?? appUrl),
     },

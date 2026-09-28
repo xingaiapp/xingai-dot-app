@@ -53,6 +53,10 @@ Decision Agent:
 - Boundary: informational only. No invented allocations, broker connection,
   or autonomous trading.
 
+Coming-soon products (catalog pages; not live domains yet):
+- Founder AI: https://xingai.app/apps/founder-ai (target founder.xingai.app — Planned)
+- Parent AI and other roadmap apps: https://xingai.app/apps
+
 Coming-soon and internal ops tools (Growth Monitor, Ops Status, Eval Registry)
 are listed on the catalog for the team. They are not the public flagship.
 

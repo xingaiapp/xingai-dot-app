@@ -242,6 +242,8 @@ const translations = {
     appCustomText: "We build tailored versions for teams and businesses. Tell us what you need and we\u2019ll scope it together.",
     appRoadmap: "Release roadmap",
     appRoadmapLead: "What\u2019s coming next for this product.",
+    appRoadmapLeadSoon:
+      "Internal build milestones below are not a public release. Deploy and public preview are still planned.",
     appScreenshots: "Screenshots",
     included: "Included",
     notIncluded: "\u2014",
@@ -579,6 +581,8 @@ const translations = {
     appCustomText: "\u6211\u4eec\u4e3a\u56e2\u961f\u548c\u4f01\u4e1a\u6784\u5efa\u5b9a\u5236\u7248\u672c\u3002\u544a\u8bc9\u6211\u4eec\u60a8\u7684\u9700\u6c42\uff0c\u6211\u4eec\u4f1a\u4e00\u8d77\u8ba8\u8bba\u3002",
     appRoadmap: "\u53d1\u5e03\u8def\u7ebf\u56fe",
     appRoadmapLead: "\u8be5\u4ea7\u54c1\u7684\u4e0b\u4e00\u6b65\u8ba1\u5212\u3002",
+    appRoadmapLeadSoon:
+      "\u4ee5\u4e0b\u4e3a\u5185\u90e8\u6784\u5efa\u91cc\u7a0b\u7891\uff0c\u4e0d\u662f\u516c\u5f00\u53d1\u5e03\u3002\u90e8\u7f72\u4e0e\u516c\u5f00\u9884\u89c8\u4ecd\u4e3a\u8ba1\u5212\u4e2d\u3002",
     appScreenshots: "\u622a\u56fe",
     included: "\u5305\u542b",
     notIncluded: "\u2014",
@@ -911,6 +915,8 @@ const translations = {
     appCustomText: "\ud300\uacfc \uae30\uc5c5\uc744 \uc704\ud55c \ub9de\ucda4 \ubc84\uc804\uc744 \ub9cc\ub4ed\ub2c8\ub2e4. \uc694\uad6c\uc0ac\ud56d\uc744 \uc54c\ub824\uc8fc\uc2dc\uba74 \ud568\uaed8 \ubc94\uc704\ub97c \uc815\ud558\uaca0\uc2b5\ub2c8\ub2e4.",
     appRoadmap: "\ubc30\ud3ec \ub85c\ub4dc\ub9f5",
     appRoadmapLead: "\uc774 \uc81c\ud488\uc758 \ub2e4\uc74c \uacc4\ud68d.",
+    appRoadmapLeadSoon:
+      "\uc544\ub798\ub294 \ub0b4\ubd80 \uad6c\ucd95 \ub9c8\uc77c\uc2a4\ud1a4\uc774\uba70 \uacf5\uac1c \ucd9c\uc2dc\uac00 \uc544\ub2d9\ub2c8\ub2e4. \ubc30\ud3ec\uc640 \uacf5\uac1c \ud504\ub9ac\ubdf0\uc740 \uc5ec\uc804\ud788 \uacc4\ud68d\uc911\uc785\ub2c8\ub2e4.",
     appScreenshots: "\uc2a4\ud06c\ub9b0\uc0f7",
     included: "\ud3ec\ud568",
     notIncluded: "\u2014",

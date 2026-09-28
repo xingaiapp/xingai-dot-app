@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28c
+**Version:** 2026.09.28d
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28d` Founder AI honesty: roadmap uses **Built (internal)** instead of Shipped while Coming soon; product OG image; coming-soon FAQ JSON-LD; PreOrder offer points to `/contact`; `llms.txt` lists Founder AI. Catalog stays noindex until founder.xingai.app is live.
 
 `2026.09.28c` Passive Income Idea: catalog **Demo** (not Coming soon) with live [passive.xingai.app](https://passive.xingai.app/), deploy roadmap shipped, public GitHub, sitemap/indexable, and mother-site `llms.txt` product line.
 

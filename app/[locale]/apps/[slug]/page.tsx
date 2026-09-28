@@ -12,6 +12,7 @@ import AppDemoScreenshot from "../../../components/AppDemoScreenshot";
 
 const statusLabel: Record<string, string> = {
   shipped: "Shipped",
+  built: "Built (internal)",
   "in-progress": "In progress",
   planned: "Planned",
 };
@@ -169,7 +170,7 @@ export default function AppDetailPage() {
       )}
 
       {/* Features */}
-      {!app.comingSoon && app.features.length > 0 && (
+      {app.features.length > 0 && (
         <section className="detail-section" aria-labelledby="features-heading">
           <h2 id="features-heading" className="detail-heading">
             {t("appFeatures")}
@@ -285,7 +286,7 @@ export default function AppDetailPage() {
         <h2 id="roadmap-heading" className="detail-heading">
           {t("appRoadmap")}
         </h2>
-        <p className="section-lead">{t("appRoadmapLead")}</p>
+        <p className="section-lead">{t(app.comingSoon ? "appRoadmapLeadSoon" : "appRoadmapLead")}</p>
         <ul className="roadmap-list">
           {app.roadmap.map((item, i) => (
             <li key={i} className="roadmap-item">

@@ -9,7 +9,7 @@ export type AppFeature = {
 
 export type RoadmapItem = {
   title: string;
-  status: "shipped" | "in-progress" | "planned";
+  status: "shipped" | "built" | "in-progress" | "planned";
 };
 
 export type AppLaunchStatus = "live" | "demo" | "coming-soon";
@@ -616,15 +616,27 @@ export const apps: AppData[] = [
     category: "Founder AI",
     canDo: "Extract trends from primary sources, score them as opportunities, and draft a PRD you can act on.",
     bestFor: "Solo founders who want a decision each morning instead of another feed to read.",
-    clickTarget: "Roadmap details and early-access contact.",
+    clickTarget: "Roadmap details and early-access contact. Target: founder.xingai.app (not live yet).",
     launchStatus: "coming-soon",
     comingSoon: true,
-    screenshots: [],
-    features: [],
+    screenshots: [
+      {
+        src: "/founder-og.svg",
+        alt: "XingAI Founder AI",
+        caption: "Signal → scored opportunity → PRD brief (concept)",
+      },
+    ],
+    features: [
+      { name: "Signal ingestion (GitHub / Product Hunt / blogs)", free: true, pro: true, enterprise: true },
+      { name: "Opportunity scoring + PRD draft", free: true, pro: true, enterprise: true },
+      { name: "Daily founder brief", free: true, pro: true, enterprise: true },
+      { name: "Idea tracker + entity graph", free: false, pro: true, enterprise: true },
+      { name: "Team workspace", free: false, pro: false, enterprise: true },
+    ],
     roadmap: [
-      { title: "Signal ingestion + trend extraction", status: "shipped" },
-      { title: "Opportunity scoring + PRD generation", status: "shipped" },
-      { title: "Idea tracker + entity graph + daily brief", status: "shipped" },
+      { title: "Signal ingestion + trend extraction", status: "built" },
+      { title: "Opportunity scoring + PRD generation", status: "built" },
+      { title: "Idea tracker + entity graph + daily brief", status: "built" },
       { title: "founder.xingai.app deploy", status: "planned" },
       { title: "Public preview", status: "planned" },
     ],
@@ -1291,7 +1303,15 @@ const localizedAppCopy: Partial<
         "面向独立创始人的 AI 合伙人——把 GitHub、Product Hunt 和研究博客上的真实信号，变成打过分的机会、一份产品计划和每日创始人简报。",
       canDo: "从一手信源提取趋势，按机会打分，并起草一份可执行的 PRD。",
       bestFor: "希望每天早上拿到一个决策、而不是又一条信息流的独立创始人。",
-      clickTarget: "路线图详情和 Early Access 联系入口。",
+      clickTarget: "路线图详情和 Early Access 联系入口。目标：founder.xingai.app（尚未上线）。",
+      screenshots: ["信号 → 打分机会 → PRD 简报（概念图）"],
+      features: [
+        "信号采集（GitHub / Product Hunt / 博客）",
+        "机会打分 + PRD 草稿",
+        "每日创始人简报",
+        "想法追踪 + 实体图谱",
+        "团队工作区",
+      ],
       roadmap: [
         "信号采集 + 趋势提取",
         "机会打分 + PRD 生成",
@@ -1804,7 +1824,15 @@ const localizedAppCopy: Partial<
         "1인 창업자를 위한 AI 코파운더 — GitHub, Product Hunt, 리서치 블로그의 실제 신호를 점수화된 기회와 제품 계획, 매일의 파운더 브리프로 바꿉니다.",
       canDo: "1차 출처에서 트렌드를 추출하고 기회로 점수화한 뒤 실행 가능한 PRD를 작성합니다.",
       bestFor: "또 하나의 피드가 아니라 매일 아침 하나의 결정을 원하는 1인 창업자.",
-      clickTarget: "로드맵 상세와 얼리 액세스 문의.",
+      clickTarget: "로드맵 상세와 얼리 액세스 문의. 목표: founder.xingai.app (아직 미배포).",
+      screenshots: ["신호 → 점수화 기회 → PRD 브리프 (컨셉)"],
+      features: [
+        "신호 수집 (GitHub / Product Hunt / 블로그)",
+        "기회 점수화 + PRD 초안",
+        "일일 파운더 브리프",
+        "아이디어 트래커 + 엔티티 그래프",
+        "팀 워크스페이스",
+      ],
       roadmap: [
         "신호 수집 + 트렌드 추출",
         "기회 점수화 + PRD 생성",
