@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28f
+**Version:** 2026.09.28g
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28g` ShopRadar catalog alias: `/apps/shopradar` → `/apps/shop-radar` (en / zh / ko) so detail pages stop 404ing on the hyphen-less URL.
 
 `2026.09.28f` Engineering Communication Coach honesty: public GitHub source (was 404 private); deploy roadmap **Planned** (DNS still NXDOMAIN, not In progress); `llms.txt` coming-soon line. Catalog stays noindex until engineering-coach.xingai.app is live. Coming-soon footer CTA / ItemList fixes from 28e still apply.
 
