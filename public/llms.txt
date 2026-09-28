@@ -32,7 +32,7 @@ Live or demo products:
 - Invest AI (Industry Map): https://invest.xingai.app/ai-map
 - Cook AI: https://cook.xingai.app
 - Travel AI: https://travel.xingai.app
-- Meal Coach: https://meal.xingai.app
+- Eating Decision: https://meal.xingai.app
 - Wear AI: https://wear.xingai.app
 - SAT AI: https://sat.xingai.app
 - Research AI: https://research.xingai.app

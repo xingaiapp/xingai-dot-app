@@ -172,7 +172,7 @@ const en: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "Health and nutrition (Meal Coach)",
+        heading: "Health and nutrition (Eating Decision)",
         paragraphs: [
           "Meal suggestions are not medical advice, diagnosis, or treatment. Consult a qualified health professional for medical conditions, allergies, or dietary restrictions.",
         ],
@@ -356,7 +356,7 @@ const zh: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "健康与营养（Meal Coach）",
+        heading: "健康与营养（Eating Decision）",
         paragraphs: [
           "膳食建议不构成医疗诊断或治疗。如有疾病、过敏或饮食限制，请咨询合格医疗专业人员。",
         ],
@@ -541,7 +541,7 @@ const ko: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "건강·영양(Meal Coach)",
+        heading: "건강·영양(Eating Decision)",
         paragraphs: [
           "식단 제안은 의료 진단·치료가 아닙니다. 질환·알레르기·식이 제한은 자격을 갖춘 전문가와 상담하세요.",
         ],

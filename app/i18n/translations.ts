@@ -91,7 +91,7 @@ const translations = {
       "Each product is built around one decision and a clear next action, not open-ended chat.",
     answerQ3: "What can I use XingAI for today?",
     answerA3:
-      "Public demos include Meal Coach, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, the Invest AI map, Decision Agent, ShopRadar, and Performance Sim. The full list is at xingai.app/apps.",
+      "Public demos include Eating Decision, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, the Invest AI map, Decision Agent, ShopRadar, and Performance Sim. The full list is at xingai.app/apps.",
     answerQ4: "What is the AI Industry Map?",
     answerA4:
       "A public, cache-rendered map of AI supply-chain layers and cited SEC filings. It is research structure, not a broker, allocation board, or trade signal.",
@@ -434,7 +434,7 @@ const translations = {
       "每个产品围绕一个决策和明确的下一步，而不是开放式闲聊。",
     answerQ3: "现在可以用 XingAI 做什么？",
     answerA3:
-      "可公开试用 Meal Coach、Cook AI、Wear AI、Travel AI、SAT AI、Research AI、Learn AI、Invest AI 地图、Decision Agent、ShopRadar 和 Performance Sim。完整目录在 xingai.app/apps。",
+      "可公开试用 Eating Decision、Cook AI、Wear AI、Travel AI、SAT AI、Research AI、Learn AI、Invest AI 地图、Decision Agent、ShopRadar 和 Performance Sim。完整目录在 xingai.app/apps。",
     answerQ4: "什么是 AI 产业地图？",
     answerA4:
       "一张由 worker 缓存渲染的公开地图，展示 AI 产业链图层和带引用的监管备案。这是研究结构，不是券商、配仓面板或买卖信号。",
@@ -766,7 +766,7 @@ const translations = {
       "각 제품은 열린 대화가 아니라 하나의 결정과 분명한 다음 행동을 중심으로 만들어집니다.",
     answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
     answerA3:
-      "Meal Coach, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, Invest AI 지도, Decision Agent, ShopRadar, Performance Sim 데모를 쓸 수 있습니다. 전체 목록은 xingai.app/apps 입니다.",
+      "Eating Decision, Cook AI, Wear AI, Travel AI, SAT AI, Research AI, Learn AI, Invest AI 지도, Decision Agent, ShopRadar, Performance Sim 데모를 쓸 수 있습니다. 전체 목록은 xingai.app/apps 입니다.",
     answerQ4: "AI 산업 지도는 무엇인가요?",
     answerA4:
       "워커 캐시로 렌더되는 공개 지도로, AI 공급망 레이어와 인용된 공시를 보여 줍니다. 리서치 구조이며 증권사, 배분 보드, 매매 신호가 아닙니다.",
