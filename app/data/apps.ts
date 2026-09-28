@@ -84,7 +84,7 @@ export const apps: AppData[] = [
     ],
     features: [
       { name: "Quick Decide + Ask Meal AI", free: true, pro: true, enterprise: true },
-      { name: "Scan Plate photo input", free: true, pro: true, enterprise: true },
+      { name: "Scan Plate photo attach (describe foods; vision not live)", free: true, pro: true, enterprise: true },
       { name: "Time / place / budget constraints", free: true, pro: true, enterprise: true },
       { name: "Health Mode meal repair", free: true, pro: true, enterprise: true },
       { name: "Why-not-others explanations", free: true, pro: true, enterprise: true },
@@ -95,7 +95,8 @@ export const apps: AppData[] = [
     roadmap: [
       { title: "Core next-meal decision engine", status: "shipped" },
       { title: "Light & dark theme UI", status: "shipped" },
-      { title: "Scan Plate + constraint fields", status: "shipped" },
+      { title: "Scan Plate photo attach (manual describe)", status: "shipped" },
+      { title: "Plate vision / OCR auto-fill", status: "planned" },
       { title: "Dietary preference filters", status: "in-progress" },
       { title: "Weekly meal planner", status: "planned" },
       { title: "Grocery list generation", status: "planned" },
