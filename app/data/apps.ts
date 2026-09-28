@@ -709,7 +709,7 @@ export const apps: AppData[] = [
       { title: "Mobile chrome + en/zh/ko + SEO/AEO", status: "shipped" },
       { title: "14-day Communication & Charisma curriculum", status: "shipped" },
       { title: "Decision ledger adoption", status: "shipped" },
-      { title: "engineering-coach.xingai.app deploy", status: "in-progress" },
+      { title: "engineering-coach.xingai.app deploy", status: "planned" },
       { title: "Persistent history + weekly report", status: "planned" },
       { title: "Email / push delivery", status: "planned" },
     ],
