@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28b
+**Version:** 2026.09.28c
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28c` Passive Income Idea: catalog **Demo** (not Coming soon) with live [passive.xingai.app](https://passive.xingai.app/), deploy roadmap shipped, public GitHub, sitemap/indexable, and mother-site `llms.txt` product line.
 
 `2026.09.28b` Trust fixes: hero preview no longer clamps value props; `/legal` index lists Privacy / Terms / Disclaimer (was 404); early-access apps (T Today) use “Request early access” instead of a fake Live demo on Free.
 
@@ -74,7 +76,7 @@ worker cache (ADR-053). Custom-domain DNS is in place.
 
 `2026.09.20` also points **Investment Assistant** live demo at [invest.xingai.app/ai-map](https://invest.xingai.app/ai-map) (the public research map). Copy no longer sends visitors to the signed-in dashboard or describes the product as an allocation board.
 
-`2026.09.06` adds **Passive Income Idea** as coming soon (`passive-income`) — daily one-Idea 智报 shell targeting [passive.xingai.app](https://passive.xingai.app/), light/dark demo shots, private repo [xingai-passive-income-ideas](https://github.com/xingaiapp/xingai-passive-income-ideas).
+`2026.09.06` adds **Passive Income Idea** (`passive-income`) — one-Idea research shell at [passive.xingai.app](https://passive.xingai.app/); see `2026.09.28c` for demo status alignment.
 
 `2026.07.26` adds two new demo products to the catalog: **Evidence Engine** (`evidence-engine`) — claim → evidence → citation verification with a light/dark dashboard — and **Eval Registry** (`eval-registry`) — an Every-Eval-Ever-compatible evaluation registry with a fail-on-regression CI gate ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)).
 

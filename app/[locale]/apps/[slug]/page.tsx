@@ -130,13 +130,13 @@ export default function AppDetailPage() {
           <div className="glance-row">
             {app.canDo && (
               <div className="glance-item">
-                <h3 className="glance-label">{t("appCardCanDo")}</h3>
+                <h2 className="glance-label">{t("appCardCanDo")}</h2>
                 <p className="glance-value">{app.canDo}</p>
               </div>
             )}
             {app.bestFor && (
               <div className="glance-item">
-                <h3 className="glance-label">{t("appCardBestFor")}</h3>
+                <h2 className="glance-label">{t("appCardBestFor")}</h2>
                 <p className="glance-value">{app.bestFor}</p>
               </div>
             )}
