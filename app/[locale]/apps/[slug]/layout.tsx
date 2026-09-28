@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const imageUrl = shot?.src ? absoluteAsset(shot.src) : absoluteAsset("/xingai-logo.png");
 
   return {
-    title: `${app.name} — ${app.tagline}`,
+    title: `${app.name} — ${app.tagline} | XingAI`,
     description: app.description,
     robots: isIndexableApp(app) ? undefined : { index: false, follow: false },
     keywords: [
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${app.name} — ${app.tagline}`,
+      title: `${app.name} — ${app.tagline} | XingAI`,
       description: app.description,
       images: [imageUrl],
     },
