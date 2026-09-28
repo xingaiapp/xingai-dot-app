@@ -10,11 +10,17 @@ export function absoluteAsset(path: string): string {
   return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
+function ogImageForApp(app: AppData): string {
+  const shot = app.screenshots[0];
+  if (shot?.srcDark) return absoluteAsset(shot.srcDark);
+  if (shot?.src) return absoluteAsset(shot.src);
+  return absoluteAsset("/xingai-logo.png");
+}
+
 export function buildSoftwareApplicationNode(app: AppData, locale: Locale) {
   const appPath = `/apps/${app.slug}`;
   const appUrl = publicUrl(locale, appPath);
-  const shot = app.screenshots[0];
-  const imageUrl = shot?.src ? absoluteAsset(shot.src) : absoluteAsset("/xingai-logo.png");
+  const imageUrl = ogImageForApp(app);
 
   return {
     "@type": "SoftwareApplication",
@@ -52,12 +58,8 @@ export function buildSoftwareApplicationNode(app: AppData, locale: Locale) {
   };
 }
 
-export function buildSiteGraph(apps: AppData[], locale: Locale, pageUrl: string) {
-  const faq = buildHomeFaqJsonLd(locale, pageUrl);
-  const localizedApps = getPublicCatalogApps(locale);
-  const description = homeDescription(locale);
-  const title = homeTitle(locale);
-
+/** Sitewide identity only — do not attach homepage WebPage/FAQ to every route. */
+export function buildSiteIdentityGraph() {
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -91,6 +93,21 @@ export function buildSiteGraph(apps: AppData[], locale: Locale, pageUrl: string)
         publisher: { "@id": `${siteUrl}/#org` },
         inLanguage: ["en", "zh-CN", "ko"],
       },
+    ],
+  };
+}
+
+export function buildSiteGraph(apps: AppData[], locale: Locale, pageUrl: string) {
+  const faq = buildHomeFaqJsonLd(locale, pageUrl);
+  const localizedApps = getPublicCatalogApps(locale);
+  const description = homeDescription(locale);
+  const title = homeTitle(locale);
+  const identity = buildSiteIdentityGraph();
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      ...(identity["@graph"] as Record<string, unknown>[]),
       {
         "@type": "WebPage",
         "@id": `${pageUrl}#webpage`,

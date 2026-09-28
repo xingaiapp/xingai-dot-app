@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { apps } from "../data/apps";
-import { buildSiteGraph } from "../lib/seo-json-ld";
-import { parseRoutingLocale, publicUrl, routingLocales } from "../lib/locale-routing";
+import { buildSiteIdentityGraph } from "../lib/seo-json-ld";
+import { parseRoutingLocale, routingLocales } from "../lib/locale-routing";
 import {
   homeDescription,
   homeOg,
@@ -50,8 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale: raw } = await params;
   const locale = parseRoutingLocale(raw);
-  const pageUrl = publicUrl(locale, "/");
-  const jsonLd = buildSiteGraph(apps, locale, pageUrl);
+  const jsonLd = buildSiteIdentityGraph();
 
   return (
     <>

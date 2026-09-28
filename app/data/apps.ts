@@ -714,6 +714,8 @@ export const apps: AppData[] = [
     iconDark: "/travel-ai-icon-dark.png",
     favicon: "/favicon-travel-ai.png",
     demoUrl: "https://travel.xingai.app/decide",
+    sourceUrl: "https://github.com/xingaiapp/xingai-travel-ai",
+    sourceKind: "github",
     description:
       "AI travel decision system\u2014compare destinations, pick one best-fit trip with honest trade-offs, then open partner search links for the key pieces. Compare first, plan second.",
     category: "Travel AI",
