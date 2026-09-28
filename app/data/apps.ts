@@ -109,14 +109,12 @@ export const apps: AppData[] = [
     iconDark: "/cook-ai-icon-dark.png",
     favicon: "/favicon-cook-ai.png",
     demoUrl: "https://cook.xingai.app/",
-    sourceUrl: "https://github.com/xingaiapp/xingai-cook-ai",
-    sourceKind: "github",
     description:
       "Decide what to cook from what you already have\u2014scan your fridge or list ingredients, pick a meal slot, get one dish with an optional buy list and step-by-step cooking. OpenAI-powered live demo.",
     category: "Cooking AI",
     canDo: "Turn fridge or pantry ingredients into one practical dish and cooking steps.",
     bestFor: "Busy home cooks deciding what to make right now.",
-    clickTarget: "Product details, live demo, and GitHub source.",
+    clickTarget: "Product details and live demo.",
     launchStatus: "live",
     screenshots: [
       {
@@ -191,14 +189,12 @@ export const apps: AppData[] = [
     iconDark: "/routine-ai-icon-dark.png",
     favicon: "/favicon-routine-ai.png",
     demoUrl: "https://routine.xingai.app/",
-    sourceUrl: "https://github.com/xingaiapp/xingai-routine-ai",
-    sourceKind: "github",
     description:
       "Decide a weekly rhythm that sticks\u2014describe your habit context, pick focus and cadence, get one realistic plan with next actions and a gentle nudge. Demo works offline; OpenAI when a key is configured.",
     category: "Routine AI",
     canDo: "Create a realistic habit rhythm with next actions and gentle nudges.",
     bestFor: "People rebuilding routines without rigid productivity systems.",
-    clickTarget: "Product details, free demo, and GitHub source.",
+    clickTarget: "Product details and free demo.",
     launchStatus: "demo",
     screenshots: [
       {
@@ -281,14 +277,12 @@ export const apps: AppData[] = [
     iconDark: "/research-ai-icon.svg",
     favicon: "/research-ai-icon.svg",
     demoUrl: "https://research.xingai.app/",
-    sourceUrl: "https://github.com/xingaiapp/xingai-research-ai",
-    sourceKind: "github",
     description:
       "Learning Decision System\u2014enter a topic and optional background, get a verdict (Learn Now / Later / Skip / Delegate), a 30-minute route, takeaways, and ranked sources. Decide if it is worth your time before you commit hours.",
     category: "Learning AI",
     canDo: "Score learning ROI for your background and return a clear next-step route.",
     bestFor: "Engineers, PMs, and learners who need a go/no-go call before diving into a new topic.",
-    clickTarget: "Product details, live demo, and GitHub source.",
+    clickTarget: "Product details and live demo.",
     launchStatus: "demo",
     screenshots: [
       {
@@ -371,8 +365,6 @@ export const apps: AppData[] = [
     iconDark: "/growth-monitor-icon.svg",
     favicon: "/growth-monitor-icon.svg",
     demoUrl: "https://growth.xingai.app/",
-    sourceUrl: "https://github.com/xingaiapp/xingai-growth-monitor",
-    sourceKind: "github",
     description:
       "Internal SEO/AEO action center — Google Search Console + page crawl + AI recommendations ranked into daily page fixes with Cursor-ready prompts.",
     category: "Operations AI",
@@ -761,8 +753,6 @@ export const apps: AppData[] = [
     icon: "/shop-radar-icon.svg",
     iconDark: "/shop-radar-icon.svg",
     favicon: "/shop-radar-icon.svg",
-    sourceUrl: "https://github.com/xingaiapp/xingai-shopradar",
-    sourceKind: "github",
     demoUrl: "https://shopradar.xingai.app/",
     description:
       "AI product radar for dropshippers. Scores ideas on trend, competition, margin, video potential, and risk, then aims to return a daily Top 3. Public site is a waitlist plus a labeled sample — live scoring is not running yet.",
@@ -803,8 +793,6 @@ export const apps: AppData[] = [
     icon: "/decision-agent-icon.svg",
     iconDark: "/decision-agent-icon.svg",
     favicon: "/decision-agent-icon.svg",
-    sourceUrl: "https://github.com/xingaiapp/xingai-decision-ai",
-    sourceKind: "github",
     demoUrl: "https://decision.xingai.app/",
     description:
       "State an investment outcome, then review a structured brief projected from Invest AI’s public AI-map cache. The site only renders worker-written fields. It does not invent allocations or place trades.",
@@ -827,7 +815,7 @@ export const apps: AppData[] = [
       { name: "EN / 中文 / 한국어 and light/dark themes", free: true, pro: true, enterprise: true },
       { name: "Demo reads Invest AI worker cache", free: true, pro: true, enterprise: true },
       { name: "Legal pages and human confirmation gate", free: true, pro: true, enterprise: true },
-      { name: "Open-source Next.js app", free: true, pro: true, enterprise: true },
+      { name: "Empty state instead of an invented brief", free: true, pro: true, enterprise: true },
       { name: "No broker connection or autonomous trades", free: true, pro: true, enterprise: true },
     ],
     roadmap: [
@@ -1024,7 +1012,7 @@ const localizedAppCopy: Partial<
         "根据你已有的食材决定做什么菜：扫描冰箱或输入食材，选择用餐场景，获得一道菜、可选购买清单和分步烹饪指导。",
       canDo: "把冰箱或储物柜里的食材变成一道可执行的菜和烹饪步骤。",
       bestFor: "想立刻决定今天做什么的忙碌家庭厨师。",
-      clickTarget: "产品详情、在线 Demo 和 GitHub 源码。",
+      clickTarget: "产品详情与在线 Demo。",
       features: [
         "冰箱与储物柜扫描",
         "食材列表输入",
@@ -1065,7 +1053,7 @@ const localizedAppCopy: Partial<
         "决定一个能坚持的每周节奏：描述习惯语境，选择重点与频率，获得一个现实计划、下一步行动和温和提醒。演示可离线运行；配置密钥后可用 OpenAI。",
       canDo: "生成现实可坚持的习惯节奏、下一步行动和温和提醒。",
       bestFor: "想重建生活节奏，但不想被复杂效率系统压住的人。",
-      clickTarget: "产品详情、免费 Demo 和 GitHub 源码。",
+      clickTarget: "产品详情与免费 Demo。",
       features: [
         "习惯语境输入",
         "重点与频率预设",
@@ -1123,7 +1111,7 @@ const localizedAppCopy: Partial<
         "学习决策系统：输入主题和可选背景，获得结论（现在学/稍后/跳过/委派）、30 分钟路线、要点和排序来源。在投入大量时间之前先判断是否值得。",
       canDo: "结合你的背景评估学习 ROI，并给出清晰的下一步路线。",
       bestFor: "需要在深入新主题前先做出 go/no-go 判断的工程师、产品经理和学习者。",
-      clickTarget: "产品详情、在线 Demo 和 GitHub 源码。",
+      clickTarget: "产品详情与在线 Demo。",
       screenshots: ["学习决策系统主视觉"],
       features: [
         "主题与背景输入",
@@ -1403,7 +1391,7 @@ const localizedAppCopy: Partial<
         "EN / 中文 / 한국어 与亮暗主题",
         "演示读取 Invest AI worker 缓存",
         "法律页面与人工确认门",
-        "开源 Next.js 应用",
+        "缓存为空时显示空状态，不编造简报",
         "不连接券商、不自动交易",
       ],
       roadmap: [
@@ -1546,7 +1534,7 @@ const localizedAppCopy: Partial<
         "이미 가진 재료로 무엇을 요리할지 결정합니다. 냉장고를 스캔하거나 재료를 입력하고, 식사 상황에 맞는 한 가지 요리와 구매 목록, 조리 단계를 받습니다.",
       canDo: "냉장고나 팬트리 재료를 실행 가능한 요리와 조리 단계로 바꿉니다.",
       bestFor: "지금 무엇을 만들지 빠르게 정해야 하는 바쁜 홈쿡.",
-      clickTarget: "제품 상세, 라이브 데모, GitHub 소스.",
+      clickTarget: "제품 상세, 라이브 데모.",
       features: [
         "냉장고와 팬트리 스캔",
         "재료 목록 입력",
@@ -1587,7 +1575,7 @@ const localizedAppCopy: Partial<
         "지속 가능한 주간 리듬을 결정합니다. 습관 맥락, 초점, 빈도를 정하면 현실적인 계획과 다음 행동, 부드러운 알림을 제공합니다. 오프라인 데모 가능; 키가 있으면 OpenAI.",
       canDo: "현실적인 습관 리듬, 다음 행동, 부드러운 알림을 만듭니다.",
       bestFor: "복잡한 생산성 시스템 없이 루틴을 다시 세우고 싶은 사람.",
-      clickTarget: "제품 상세, 무료 데모, GitHub 소스.",
+      clickTarget: "제품 상세, 무료 데모.",
       features: [
         "습관 맥락 입력",
         "초점과 빈도 프리셋",
@@ -1645,7 +1633,7 @@ const localizedAppCopy: Partial<
         "학습 의사결정 시스템 — 주제와 선택적 배경을 입력하면 판단(지금/나중/건너뛰기/위임), 30분 루트, 요약, 순위별 소스를 받습니다. 많은 시간을 쓰기 전에 가치를 판단합니다.",
       canDo: "배경에 맞춰 학습 ROI를 점수화하고 다음 단계 루트를 제공합니다.",
       bestFor: "새 주제에 뛰어들기 전 go/no-go가 필요한 엔지니어, PM, 학습자.",
-      clickTarget: "제품 상세, 라이브 데모, GitHub 소스.",
+      clickTarget: "제품 상세, 라이브 데모.",
       screenshots: ["학습 의사결정 히어로 비주얼"],
       features: [
         "주제 + 배경 입력",
@@ -1925,7 +1913,7 @@ const localizedAppCopy: Partial<
         "EN / 中文 / 한국어 및 라이트/다크 테마",
         "데모는 Invest AI 워커 캐시를 읽음",
         "법률 페이지와 사람 확인 게이트",
-        "오픈소스 Next.js 앱",
+        "캐시가 비면 빈 상태 표시, 브리프를 지어내지 않음",
         "브로커 연결 없음, 자동 거래 없음",
       ],
       roadmap: [
