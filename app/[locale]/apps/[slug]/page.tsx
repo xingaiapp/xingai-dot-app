@@ -226,18 +226,24 @@ export default function AppDetailPage() {
               </ul>
               <a
                 href={
-                  i === 0 && app.demoUrl
-                    ? app.demoUrl
-                    : i === 0
-                      ? "mailto:contact@xingai.app"
-                      : "/contact"
+                  i === 0 && app.earlyAccess
+                    ? "/contact"
+                    : i === 0 && app.demoUrl
+                      ? app.demoUrl
+                      : i === 0
+                        ? "mailto:contact@xingai.app"
+                        : "/contact"
                 }
                 className={`cta${i === 1 ? "" : " cta--outline"}`}
-                {...(i === 0 && app.demoUrl
+                {...(i === 0 && app.demoUrl && !app.earlyAccess
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
               >
-                {i === 0 && app.demoUrl ? t("appDemo") : t(cta)}
+                {i === 0 && app.earlyAccess
+                  ? t("appEarlyAccessCta")
+                  : i === 0 && app.demoUrl
+                    ? t("appDemo")
+                    : t(cta)}
               </a>
             </div>
           ))}

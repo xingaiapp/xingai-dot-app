@@ -635,7 +635,7 @@ html[data-theme="dark"] .lang-menu {
   gap: 0;
   min-width: 0;
   /* Locks carousel card height so slides 1–4 never shift layout */
-  --hero-slide-body-h: 14.5rem;
+  --hero-slide-body-h: 18rem;
 }
 
 .hero-preview-card {
@@ -710,7 +710,8 @@ html[data-theme="dark"] .lang-menu {
   height: var(--hero-slide-body-h);
   min-height: var(--hero-slide-body-h);
   max-height: var(--hero-slide-body-h);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: 0.9rem;
   background: var(--panel-bg);
 }
@@ -727,10 +728,6 @@ html[data-theme="dark"] .lang-menu {
   font-size: 0.875rem;
   line-height: 1.55;
   color: var(--muted);
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
 }
 
 .hero-preview-fit {
@@ -760,10 +757,6 @@ html[data-theme="dark"] .lang-menu {
   font-size: 0.78rem;
   line-height: 1.45;
   color: var(--muted);
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
 }
 
 .hero-slide-controls {
@@ -1020,7 +1013,7 @@ html[data-theme="dark"] .lang-menu {
   }
 
   .hero-preview-stage {
-    --hero-slide-body-h: 12.75rem;
+    --hero-slide-body-h: 16.5rem;
   }
 
   .hero-preview-card {

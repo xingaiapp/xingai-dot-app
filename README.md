@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28
+**Version:** 2026.09.28b
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28b` Trust fixes: hero preview no longer clamps value props; `/legal` index lists Privacy / Terms / Disclaimer (was 404); early-access apps (T Today) use “Request early access” instead of a fake Live demo on Free.
 
 `2026.09.28` Investment Assistant catalog: research console feature says free with sign-in (en / 中文 / 한국어); app detail `<title>` / Open Graph / Twitter titles share the same `| XingAI` suffix.
 
