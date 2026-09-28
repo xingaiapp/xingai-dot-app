@@ -550,9 +550,9 @@ export const apps: AppData[] = [
     roadmap: [
       { title: "Product scaffold + chrome + legal/SEO", status: "shipped" },
       { title: "Mock inbox + local todos + brief", status: "shipped" },
+      { title: "Persisted todo store (device-local)", status: "shipped" },
       { title: "Gmail OAuth read + draft (no auto-send)", status: "planned" },
       { title: "daily.xingai.app deploy", status: "shipped" },
-      { title: "Persisted todo store", status: "planned" },
     ],
   },
   {
@@ -1284,9 +1284,9 @@ const localizedAppCopy: Partial<
       roadmap: [
         "产品脚手架 + chrome + 法律/SEO",
         "模拟收件箱 + 本地待办 + 简报",
+        "持久化待办（本机）",
         "Gmail OAuth 只读 + 草稿（不自动发送）",
         "部署 daily.xingai.app",
-        "持久化待办存储",
       ],
       screenshots: ["带结转待办与收件箱分拣的每日简报"],
     },
@@ -1806,9 +1806,9 @@ const localizedAppCopy: Partial<
       roadmap: [
         "제품 스캐폴드 + chrome + legal/SEO",
         "목 받은편지함 + 로컬 할 일 + 브리프",
+        "기기 로컬 할 일 영속화",
         "Gmail OAuth 읽기 + 초안(자동 발송 없음)",
         "daily.xingai.app 배포",
-        "영속 할 일 저장소",
       ],
       screenshots: ["이월 할 일과 받은편지함 분류가 있는 일일 브리프"],
     },

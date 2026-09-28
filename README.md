@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28j
+**Version:** 2026.09.28k
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28k` Daily Assistant: roadmap marks device-local persisted todos as shipped (Gmail OAuth still Planned).
 
 `2026.09.28j` Travel AI deep-audit SEO: app detail pages get their own WebPage + product FAQ (no more homepage FAQ bleed); OG prefers dark screenshot when available; Travel GitHub source CTA restored (repo public).
 
