@@ -75,7 +75,7 @@ export default function Home() {
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const apps = getLocalizedApps(locale);
   const homeShelfApps = getHomeShelfApps(locale);
-  const heroPreviewApps = ["meal-coach", "cook-ai", "sat-ai", "investment-assistant"].flatMap(
+  const heroPreviewApps = ["meal-coach", "cook-ai", "sat-ai", "investment-assistant", "travel-ai"].flatMap(
     (slug) => {
       const app = apps.find((item) => item.slug === slug);
       return app ? [app] : [];

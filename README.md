@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28h
+**Version:** 2026.09.28i
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28i` Homepage hero core systems: add Travel AI as the 5th card (carousel + Jump into a free demo).
 
 `2026.09.28h` Routine AI honesty: roadmap demotes OpenAI recommendations to **Planned**; ships Demo rhythm engine + live `routine.xingai.app`; features say demo + optional OpenAI and device-local light check-in.
 
