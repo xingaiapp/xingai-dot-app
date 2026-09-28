@@ -659,9 +659,9 @@ export const apps: AppData[] = [
       { src: "/parent-demo-light.jpg", srcDark: "/parent-demo-dark.jpg", alt: "XingAI Parent AI", caption: "Parenting guidance flow" },
     ],
     features: [
-      { name: "Age-aware milestone tracking", free: true },
-      { name: "Schedule & routine suggestions", free: true },
-      { name: "Gentle next-step guidance", free: true },
+      { name: "Age-aware milestone tracking", free: true, pro: true, enterprise: true },
+      { name: "Schedule & routine suggestions", free: true, pro: true, enterprise: true },
+      { name: "Gentle next-step guidance", free: true, pro: true, enterprise: true },
     ],
     comingSoon: true,
     roadmap: [
