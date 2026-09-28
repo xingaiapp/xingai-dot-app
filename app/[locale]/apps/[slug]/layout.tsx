@@ -22,15 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${app.name} — ${app.tagline} | XingAI`,
     description: app.description,
+    // Coming-soon / internal tools stay noindex until a live demo domain exists.
     robots: isIndexableApp(app) ? undefined : { index: false, follow: false },
-    keywords: [
-      app.name,
-      app.tagline,
-      app.category,
-      "XingAI",
-      "AI decision system",
-      ...app.features.slice(0, 4).map((feature) => feature.name),
-    ],
     alternates: pageAlternates(locale, appPath),
     openGraph: {
       title: `${app.name} — ${app.tagline} | XingAI`,

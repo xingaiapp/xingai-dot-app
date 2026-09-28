@@ -658,7 +658,11 @@ export const apps: AppData[] = [
     screenshots: [
       { src: "/parent-demo-light.jpg", srcDark: "/parent-demo-dark.jpg", alt: "XingAI Parent AI", caption: "Parenting guidance flow" },
     ],
-    features: [],
+    features: [
+      { name: "Age-aware milestone tracking", free: true },
+      { name: "Schedule & routine suggestions", free: true },
+      { name: "Gentle next-step guidance", free: true },
+    ],
     comingSoon: true,
     roadmap: [
       { title: "Age-aware milestone tracking", status: "planned" },
@@ -1328,6 +1332,7 @@ const localizedAppCopy: Partial<
       canDo: "围绕作息、成长节点和下一步行动整理育儿决策。",
       bestFor: "想获得温和指导、减少信息过载的父母。",
       clickTarget: "路线图详情和 Early Access 联系入口。",
+      features: ["年龄相关成长节点追踪", "作息与日程建议", "温和的下一步指引"],
       roadmap: ["年龄相关成长节点追踪", "作息与日程建议", "公开预览"],
     },
     "engineering-coach": {
@@ -1849,6 +1854,7 @@ const localizedAppCopy: Partial<
       canDo: "루틴, 성장 단계, 다음 행동을 중심으로 육아 결정을 정리합니다.",
       bestFor: "정보 과부하 없이 차분한 안내를 원하는 부모.",
       clickTarget: "로드맵 상세와 얼리 액세스 문의.",
+      features: ["나이별 성장 단계 추적", "일정과 루틴 제안", "부드러운 다음 행동 안내"],
       roadmap: ["나이별 성장 단계 추적", "일정과 루틴 제안", "공개 프리뷰"],
     },
     "engineering-coach": {
@@ -2068,6 +2074,11 @@ export function isIndexableApp(app: Pick<AppData, "slug" | "comingSoon">): boole
 
 export function getIndexableApps(locale: Locale): AppData[] {
   return getLocalizedApps(locale).filter(isIndexableApp);
+}
+
+/** Public catalog for ItemList / AEO — includes Coming soon; excludes internal ops tools. */
+export function getPublicCatalogApps(locale: Locale): AppData[] {
+  return getLocalizedApps(locale).filter((app) => !isInternalTool(app));
 }
 
 export function getHomeShelfApps(locale: Locale): AppData[] {

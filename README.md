@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28d
+**Version:** 2026.09.28e
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28e` Parent AI honesty: PreOrder offer → `/contact`; coming-soon footer CTA is early access (not “Try free demo”); drop meta keywords on app pages; public catalog ItemList includes Coming soon (still noindex until live domain); Parent features + `llms.txt` line.
 
 `2026.09.28d` Founder AI honesty: roadmap uses **Built (internal)** instead of Shipped while Coming soon; product OG image; coming-soon FAQ JSON-LD; PreOrder offer points to `/contact`; `llms.txt` lists Founder AI. Catalog stays noindex until founder.xingai.app is live.
 

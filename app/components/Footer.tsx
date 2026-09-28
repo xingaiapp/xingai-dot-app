@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { getAppBySlug } from "../data/apps";
 import { useTranslation } from "../i18n/LanguageContext";
 import { useLocalePath } from "../lib/use-locale-path";
 import { useTheme } from "./ThemeContext";
@@ -136,23 +138,38 @@ function FooterLinkIcon({ name }: { name: FooterIconName }) {
   );
 }
 
+function appSlugFromPath(pathname: string): string | null {
+  const parts = pathname.split("/").filter(Boolean);
+  const appsIdx = parts.indexOf("apps");
+  if (appsIdx === -1) return null;
+  const slug = parts[appsIdx + 1];
+  return slug && slug !== "" ? slug : null;
+}
+
 export default function Footer() {
   const { t } = useTranslation();
   const p = useLocalePath();
+  const pathname = usePathname();
   const { theme, mounted } = useTheme();
   const logoSrc =
     mounted && theme === "dark" ? "/xingai-logo-dark.png" : "/xingai-logo.png";
+  const detailApp = (() => {
+    const slug = appSlugFromPath(pathname);
+    return slug ? getAppBySlug(slug) : undefined;
+  })();
+  const noLiveDemo = Boolean(detailApp?.comingSoon || detailApp?.earlyAccess);
 
   return (
     <footer className="site-footer" role="contentinfo">
       <section className="footer-cta" aria-labelledby="footer-cta-heading">
         <div>
           <h2 id="footer-cta-heading">{t("footerCtaHeading")}</h2>
-          <p>{t("footerCtaLead")}</p>
+          <p>{t(noLiveDemo ? "footerCtaLeadSoon" : "footerCtaLead")}</p>
         </div>
         <div className="footer-cta__actions">
-          <Link href={p("/apps")} className="cta">
-            {t("footerTryDemo")} <span aria-hidden="true">→</span>
+          <Link href={p(noLiveDemo ? "/contact" : "/apps")} className="cta">
+            {t(noLiveDemo ? "appEarlyAccessCta" : "footerTryDemo")}{" "}
+            <span aria-hidden="true">→</span>
           </Link>
           <Link href={p("/apps")} className="cta cta--outline">
             {t("footerSeeSystems")} <span aria-hidden="true">→</span>
