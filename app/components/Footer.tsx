@@ -158,6 +158,7 @@ export default function Footer() {
     return slug ? getAppBySlug(slug) : undefined;
   })();
   const noLiveDemo = Boolean(detailApp?.comingSoon || detailApp?.earlyAccess);
+  const demoHref = noLiveDemo ? undefined : detailApp?.demoUrl;
 
   return (
     <footer className="site-footer" role="contentinfo">
@@ -167,10 +168,16 @@ export default function Footer() {
           <p>{t(noLiveDemo ? "footerCtaLeadSoon" : "footerCtaLead")}</p>
         </div>
         <div className="footer-cta__actions">
-          <Link href={p(noLiveDemo ? "/contact" : "/apps")} className="cta">
-            {t(noLiveDemo ? "appEarlyAccessCta" : "footerTryDemo")}{" "}
-            <span aria-hidden="true">→</span>
-          </Link>
+          {demoHref ? (
+            <a href={demoHref} className="cta">
+              {t("footerTryDemo")} <span aria-hidden="true">→</span>
+            </a>
+          ) : (
+            <Link href={p(noLiveDemo ? "/contact" : "/apps")} className="cta">
+              {t(noLiveDemo ? "appEarlyAccessCta" : "footerTryDemo")}{" "}
+              <span aria-hidden="true">→</span>
+            </Link>
+          )}
           <Link href={p("/apps")} className="cta cta--outline">
             {t("footerSeeSystems")} <span aria-hidden="true">→</span>
           </Link>

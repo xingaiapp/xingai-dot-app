@@ -116,6 +116,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${app.name} — ${app.tagline} | XingAI`,
     description: app.description,
+    keywords: [app.name, app.category, app.tagline, "XingAI", "AI decision systems"],
     robots: isIndexableApp(app) ? undefined : { index: false, follow: false },
     alternates: pageAlternates(locale, appPath),
     openGraph: {
