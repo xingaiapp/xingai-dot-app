@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28g
+**Version:** 2026.09.28h
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28h` Routine AI honesty: roadmap demotes OpenAI recommendations to **Planned**; ships Demo rhythm engine + live `routine.xingai.app`; features say demo + optional OpenAI and device-local light check-in.
 
 `2026.09.28g` ShopRadar catalog alias: `/apps/shopradar` → `/apps/shop-radar` (en / zh / ko) so detail pages stop 404ing on the hyphen-less URL.
 
