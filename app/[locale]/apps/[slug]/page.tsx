@@ -66,6 +66,15 @@ export default function AppDetailPage() {
             className="page-heading-icon"
           />
           <h1 className="page-heading">{app.name}</h1>
+          <span className={`app-status-badge app-status-badge--${app.launchStatus}`}>
+            {t(
+              app.launchStatus === "live"
+                ? "appStatusLive"
+                : app.launchStatus === "demo"
+                  ? "appStatusDemo"
+                  : "appStatusComingSoon",
+            )}
+          </span>
         </div>
         <p className="page-lead">{app.description}</p>
         <div className="page-cta-row">
@@ -241,7 +250,9 @@ export default function AppDetailPage() {
         <section className="detail-section source-section">
           <h2 className="detail-heading">{t("appSourceCode")}</h2>
           <p className="section-lead">
-            {app.sourceKind === "github" ? t("appSourceTextGithub") : t("appSourceText")}
+            {app.sourceKind === "github"
+              ? t(app.slug === "cook-ai" ? "appSourceTextGithubCook" : "appSourceTextGithub")
+              : t("appSourceText")}
           </p>
           <a
             href={app.sourceUrl}

@@ -234,6 +234,8 @@ const translations = {
     appSourceText: "Get the complete source code — Next.js, FastAPI, and OpenAI integration. Build, customize, and deploy your own version.",
     appGetSource: "Get source code on Gumroad",
     appSourceTextGithub:
+      "Fork the open-source Next.js app. Deploy your own instance on Vercel.",
+    appSourceTextGithubCook:
       "Fork the open-source Next.js app — inventory scan, meal recommendations, and cooking steps. Deploy your own instance on Vercel.",
     appGetSourceGithub: "View source on GitHub",
     appCustom: "Need a custom version?",
@@ -569,6 +571,8 @@ const translations = {
     appSourceText: "\u83b7\u53d6\u5b8c\u6574\u6e90\u4ee3\u7801 \u2014 Next.js\u3001FastAPI \u548c OpenAI \u96c6\u6210\u3002\u6784\u5efa\u3001\u81ea\u5b9a\u4e49\u5e76\u90e8\u7f72\u4f60\u81ea\u5df1\u7684\u7248\u672c\u3002",
     appGetSource: "\u5728 Gumroad \u83b7\u53d6\u6e90\u4ee3\u7801",
     appSourceTextGithub:
+      "\u57fa\u4e8e\u5f00\u6e90 Next.js \u5e94\u7528\u3002\u53ef\u5728 Vercel \u90e8\u7f72\u81ea\u5df1\u7684\u5b9e\u4f8b\u3002",
+    appSourceTextGithubCook:
       "\u57fa\u4e8e\u5f00\u6e90 Next.js \u5e94\u7528 \u2014 \u98df\u6750\u626b\u63cf\u3001\u9910\u98df\u63a8\u8350\u4e0e\u70f9\u996a\u6b65\u9aa4\u3002\u53ef\u5728 Vercel \u90e8\u7f72\u81ea\u5df1\u7684\u5b9e\u4f8b\u3002",
     appGetSourceGithub: "\u5728 GitHub \u67e5\u770b\u6e90\u4ee3\u7801",
     appCustom: "\u9700\u8981\u5b9a\u5236\u7248\u672c\uff1f",
@@ -899,6 +903,8 @@ const translations = {
     appSourceText: "\uc804\uccb4 \uc18c\uc2a4 \ucf54\ub4dc\ub97c \ubc1b\uc73c\uc138\uc694 \u2014 Next.js, FastAPI, OpenAI \ud1b5\ud569. \uc9c1\uc811 \uad6c\ucd95, \ucee4\uc2a4\ud130\ub9c8\uc774\uc988, \ubc30\ud3ec\ud558\uc138\uc694.",
     appGetSource: "Gumroad\uc5d0\uc11c \uc18c\uc2a4 \ucf54\ub4dc \ubc1b\uae30",
     appSourceTextGithub:
+      "\uc624\ud508\uc18c\uc2a4 Next.js \uc571. Vercel\uc5d0 \uc9c1\uc811 \ubc30\ud3ec\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+    appSourceTextGithubCook:
       "\uc624\ud508\uc18c\uc2a4 Next.js \uc571 \u2014 \uc7ac\uace0 \uc2a4\uce94, \uc2dd\uc0ac \ucd94\ucc9c, \uc694\ub9ac \ub2e8\uacc4. Vercel\uc5d0 \uc9c1\uc811 \ubc30\ud3ec\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
     appGetSourceGithub: "GitHub\uc5d0\uc11c \uc18c\uc2a4 \ubcf4\uae30",
     appCustom: "\ub9de\ucda4 \ubc84\uc804\uc774 \ud544\uc694\ud558\uc2e0\uac00\uc694?",

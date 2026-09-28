@@ -699,10 +699,8 @@ export const apps: AppData[] = [
     iconDark: "/travel-ai-icon-dark.png",
     favicon: "/favicon-travel-ai.png",
     demoUrl: "https://travel.xingai.app/decide",
-    sourceUrl: "https://github.com/xingaiapp/xingai-travel-ai",
-    sourceKind: "github",
     description:
-      "AI travel decision system\u2014compare destinations, pick one best-fit trip with honest trade-offs, then turn it into a bookable plan. Compare first, plan second.",
+      "AI travel decision system\u2014compare destinations, pick one best-fit trip with honest trade-offs, then open partner search links for the key pieces. Compare first, plan second.",
     category: "Travel AI",
     canDo: "Compare destinations by dates, origin, budget, travelers, style, pace, and constraints. Includes an optional \u201cSurprise me\u201d inspire mode.",
     bestFor: "Travelers who are not sure where to go yet and want one practical recommendation before booking.",
@@ -1330,7 +1328,7 @@ const localizedAppCopy: Partial<
       tagline: "旅行更好选",
       category: "旅行 AI",
       description:
-        "AI 旅行决策系统：先比较目的地，给出一个最适合的选择与诚实取舍，再生成可执行的预订优先计划。先比较，再规划。",
+        "AI 旅行决策系统：先比较目的地，给出一个最适合的选择与诚实取舍，再打开合作方搜索链接去订关键项。先比较，再规划。",
       canDo: "按日期、出发地、预算、同行人、风格、节奏和约束比较目的地，并提供可选的「帮我选 / Surprise me」模式。",
       bestFor: "还不确定去哪、希望先得到一个靠谱推荐再预订的旅行者。",
       clickTarget: "产品详情和在线决策 demo。",
@@ -1836,7 +1834,7 @@ const localizedAppCopy: Partial<
       tagline: "더 잘 여행하기",
       category: "여행 AI",
       description:
-        "AI 여행 의사결정 시스템입니다. 목적지를 비교해 가장 잘 맞는 선택과 솔직한 트레이드오프를 제시하고, 예약 가능한 플랜으로 이어 줍니다. 먼저 비교하고, 그다음 계획합니다.",
+        "AI 여행 의사결정 시스템입니다. 목적지를 비교해 가장 잘 맞는 선택과 솔직한 트레이드오프를 제시한 뒤, 핵심 항목은 파트너 검색 링크로 이어 줍니다. 먼저 비교하고, 그다음 계획합니다.",
       canDo: "날짜, 출발지, 예산, 여행자, 스타일, 속도, 제약을 기준으로 목적지를 비교하며, 선택적으로 \u201cSurprise me\u201d 인스파이어 모드를 제공합니다.",
       bestFor: "아직 어디로 갈지 확실하지 않고 예약 전에 실용적인 추천 하나가 필요한 여행자.",
       clickTarget: "제품 상세와 라이브 결정 데모.",
