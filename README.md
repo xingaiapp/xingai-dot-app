@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.27
+**Version:** 2026.09.28
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.28` Investment Assistant catalog: research console feature says free with sign-in (en / 中文 / 한국어); app detail `<title>` / Open Graph / Twitter titles share the same `| XingAI` suffix.
 
 `2026.09.27` adds the “How XingAI works” illustration to /story as a
 desktop-only hero (light/dark pair: `how-xingai-works-light.webp` /
