@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.30a
+**Version:** 2026.09.30b
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.30b` Travel AI catalog honesty: trip history is Free (this browser only), not a Pro upsell; local history roadmap → shipped; synced/account history → planned.
 
 `2026.09.30a` Team page: EN + KO relationship cartoons — section no longer zh-only; localized heading/alt + `/team/team-cartoon-{en,zh,ko}.webp`.
 
