@@ -24,6 +24,14 @@ How XingAI works: https://xingai.app/story
   separate demos and internal tools. Feeding their results back into the Vault
   is planned.
 
+Team: https://xingai.app/team
+- Co-founders: Xing and Allen (real people, AI architects).
+- Four AI agent roles describe how we work: Second Master (research and
+  evidence), Joker (challenge and counter-evidence), Lady Bull (verification,
+  "no citation, no claim"), Sweetie (user context and next action).
+- These roles are characters, not employees. A person makes the final
+  decision. Running the agents together as one system is planned, not built.
+
 Product catalog: https://xingai.app/apps
 
 Languages: English, Chinese, Korean.

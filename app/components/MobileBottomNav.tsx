@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "../i18n/LanguageContext";
-import { isNavActive, primaryNavLinks } from "../lib/nav-links";
+import { isNavActive, mobileNavLinks } from "../lib/nav-links";
 import NavIcon from "./NavIcon";
 
 export default function MobileBottomNav() {
   const pathname = usePathname();
   const { locale, t } = useTranslation();
-  const navLinks = primaryNavLinks(locale);
+  const navLinks = mobileNavLinks(locale);
 
   return (
     <nav

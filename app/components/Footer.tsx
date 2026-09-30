@@ -225,6 +225,10 @@ export default function Footer() {
               <FooterLinkIcon name="about" />
               <span>{t("navAbout")}</span>
             </Link>
+            <Link href={p("/team")} className="footer-icon-link">
+              <FooterLinkIcon name="about" />
+              <span>{t("navTeam")}</span>
+            </Link>
             <Link href={p("/services")} className="footer-icon-link">
               <FooterLinkIcon name="custom" />
               <span>{t("navServices")}</span>

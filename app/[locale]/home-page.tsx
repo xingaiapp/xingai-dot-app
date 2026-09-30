@@ -504,6 +504,9 @@ export default function Home() {
             <p className="cofounder-bio">{t("allenBio")}</p>
           </div>
         </div>
+        <p className="about-story-link">
+          <LocaleLink href="/team">{t("homeMeetTeam")} &rarr;</LocaleLink>
+        </p>
         <p className="cofounders-contact-note">
           {t("contactNote")}{" "}
           <a href="mailto:contact@xingai.app">contact@xingai.app</a>{" "}
