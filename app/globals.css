@@ -4185,3 +4185,60 @@ html[data-theme="dark"] .mobile-drawer {
 .team-outro a:hover {
   text-decoration: underline;
 }
+
+/* ── Home: agent team entry ── */
+.home-team {
+  margin-bottom: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.home-team__agents {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 1.1rem;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48rem) {
+  .home-team__agents {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.home-team__agent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  height: 100%;
+  padding: 1rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-bg);
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.home-team__agent:hover {
+  border-color: var(--blue);
+}
+
+.home-team__agent .team-avatar {
+  margin-bottom: 0.45rem;
+}
+
+.home-team__name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+}
+
+.home-team__role {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--muted);
+}

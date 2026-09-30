@@ -10,6 +10,7 @@ import AppIcon from "../components/AppIcon";
 import { APP_ICON_SIZE } from "../lib/app-icon";
 import AppDemoScreenshot from "../components/AppDemoScreenshot";
 import HomeSystemLoop from "../components/HomeSystemLoop";
+import { agentRoles, getTeamCopy } from "../data/team";
 
 function AnswerIcon({ index }: { index: number }) {
   const common = {
@@ -72,6 +73,7 @@ function AnswerIcon({ index }: { index: number }) {
 
 export default function Home() {
   const { locale, t } = useTranslation();
+  const teamCopy = getTeamCopy(locale);
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const apps = getLocalizedApps(locale);
   const homeShelfApps = getHomeShelfApps(locale);
@@ -414,6 +416,32 @@ export default function Home() {
 
       <HomeSystemLoop />
 
+      <section className="home-team" aria-labelledby="home-team-heading">
+        <h2 id="home-team-heading" className="section-title">
+          {t("homeTeamHeading")}
+        </h2>
+        <p className="section-lead">{t("homeTeamLead")}</p>
+        <ul className="home-team__agents">
+          {agentRoles.map((role) => {
+            const agent = teamCopy.agents[role.id];
+            return (
+              <li key={role.id}>
+                <LocaleLink href={`/team#${role.id}`} className="home-team__agent">
+                  <span className={`team-avatar team-avatar--${role.id}`}>
+                    <Image src={role.avatar} alt="" fill sizes="4.5rem" className="team-avatar__img" />
+                  </span>
+                  <span className="home-team__name">{agent.name}</span>
+                  <span className="home-team__role">{agent.title}</span>
+                </LocaleLink>
+              </li>
+            );
+          })}
+        </ul>
+        <p className="about-story-link">
+          <LocaleLink href="/team">{t("homeMeetTeam")} &rarr;</LocaleLink>
+        </p>
+      </section>
+
       <section className="home-answers" aria-labelledby="home-answers-heading">
         <h2 id="home-answers-heading" className="section-title">
           {t("answerHeading")}
@@ -504,9 +532,6 @@ export default function Home() {
             <p className="cofounder-bio">{t("allenBio")}</p>
           </div>
         </div>
-        <p className="about-story-link">
-          <LocaleLink href="/team">{t("homeMeetTeam")} &rarr;</LocaleLink>
-        </p>
         <p className="cofounders-contact-note">
           {t("contactNote")}{" "}
           <a href="mailto:contact@xingai.app">contact@xingai.app</a>{" "}
