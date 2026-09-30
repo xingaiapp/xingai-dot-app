@@ -18,8 +18,8 @@ const navPaths: { path: string; key: NavKey }[] = [
   { path: "/contact", key: "navContact" },
 ];
 
-/** Bottom tab bar holds five tabs; Contact stays reachable from the drawer and footer. */
-const mobileNavPaths = navPaths.filter(({ key }) => key !== "navContact");
+/** Bottom tab bar holds five tabs; Team stays reachable from the drawer and footer. */
+const mobileNavPaths = navPaths.filter(({ key }) => key !== "navTeam");
 
 export function primaryNavLinks(locale: Locale): { href: string; key: NavKey }[] {
   return navPaths.map(({ path, key }) => ({
