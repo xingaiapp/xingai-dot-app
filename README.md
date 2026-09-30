@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.28l
+**Version:** 2026.09.30a
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.09.30a` Team page: EN + KO relationship cartoons — section no longer zh-only; localized heading/alt + `/team/team-cartoon-{en,zh,ko}.webp`.
 
 `2026.09.28l` Eating Decision honesty (Eat This Much R2): Scan Plate feature = photo attach (vision not live); roadmap splits attach shipped vs plate OCR planned; product name stays XingAI Eating Decision.
 
