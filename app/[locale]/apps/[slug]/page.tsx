@@ -48,10 +48,10 @@ export default function AppDetailPage() {
   }
 
   const tiers = [
-    { key: "appFree" as const, price: "appFreePrice" as const, cta: "appGetStarted" as const },
-    { key: "appPro" as const, price: "appProPrice" as const, cta: "appUpgrade" as const },
-    { key: "appEnterprise" as const, price: "appEnterprisePrice" as const, cta: "appContactSales" as const },
-  ];
+    { id: "free", key: "appFree" as const, price: "appFreePrice" as const, cta: "appGetStarted" as const },
+    { id: "pro", key: "appPro" as const, price: "appProPrice" as const, cta: "appUpgrade" as const },
+    { id: "enterprise", key: "appEnterprise" as const, price: "appEnterprisePrice" as const, cta: "appContactSales" as const },
+  ].filter((tier) => !(tier.id === "pro" && app.hidePro));
 
   return (
     <main className="wrap">
@@ -200,18 +200,17 @@ export default function AppDetailPage() {
         <h2 id="versions-heading" className="detail-heading">
           {t("appVersions")}
         </h2>
-        <div className="pricing-grid">
-          {tiers.map(({ key, price, cta }, i) => (
+        <div className={`pricing-grid${tiers.length === 2 ? " pricing-grid--two" : ""}`}>
+          {tiers.map(({ id, key, price, cta }) => (
             <div
               key={key}
-              className={`pricing-card${i === 1 ? " pricing-card--featured" : ""}`}
+              className={`pricing-card${id === "pro" ? " pricing-card--featured" : ""}`}
             >
               <h3 className="pricing-tier">{t(key)}</h3>
               <p className="pricing-price">{t(price)}</p>
               <ul className="pricing-features">
                 {app.features.map((f, fi) => {
-                  const included =
-                    i === 0 ? f.free : i === 1 ? f.pro : f.enterprise;
+                  const included = id === "free" ? f.free : id === "pro" ? f.pro : f.enterprise;
                   return (
                     <li
                       key={fi}
@@ -227,22 +226,22 @@ export default function AppDetailPage() {
               </ul>
               <a
                 href={
-                  i === 0 && app.earlyAccess
+                  id === "free" && app.earlyAccess
                     ? "/contact"
-                    : i === 0 && app.demoUrl
+                    : id === "free" && app.demoUrl
                       ? app.demoUrl
-                      : i === 0
+                      : id === "free"
                         ? "mailto:contact@xingai.app"
                         : "/contact"
                 }
-                className={`cta${i === 1 ? "" : " cta--outline"}`}
-                {...(i === 0 && app.demoUrl && !app.earlyAccess
+                className={`cta${id === "pro" ? "" : " cta--outline"}`}
+                {...(id === "free" && app.demoUrl && !app.earlyAccess
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
               >
-                {i === 0 && app.earlyAccess
+                {id === "free" && app.earlyAccess
                   ? t("appEarlyAccessCta")
-                  : i === 0 && app.demoUrl
+                  : id === "free" && app.demoUrl
                     ? t("appDemo")
                     : t(cta)}
               </a>

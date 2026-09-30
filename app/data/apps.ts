@@ -46,6 +46,8 @@ export type AppData = {
    * Without it the repo is public to read only — the page must not invite forking or redeploying.
    */
   sourceLicense?: string;
+  /** Hide the Pro pricing column while Pro offers nothing beyond Free (no empty "Upgrade"). */
+  hidePro?: boolean;
   comingSoon?: boolean;
   /** Invite-only product: free to request access via contact. */
   earlyAccess?: boolean;
@@ -722,6 +724,8 @@ export const apps: AppData[] = [
     favicon: "/favicon-travel-ai.png",
     demoUrl: "https://travel.xingai.app/decide",
     sourceUrl: "https://github.com/xingaiapp/xingai-travel-ai",
+    // Every Pro feature is also Free today; show Pro again once it has something of its own.
+    hidePro: true,
     sourceKind: "github",
     description:
       "AI travel decision system\u2014compare destinations, pick one best-fit trip with honest trade-offs, then open partner search links for the key pieces. Compare first, plan second.",

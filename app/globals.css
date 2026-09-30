@@ -2612,6 +2612,10 @@ html[data-theme="dark"] .lang-menu {
   .pricing-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .pricing-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .pricing-card {
