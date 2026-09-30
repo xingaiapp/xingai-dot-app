@@ -145,26 +145,22 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {locale === "zh" && (
-        <section className="team-section team-easter-egg" aria-labelledby="team-egg-heading">
-          <h2 id="team-egg-heading" className="section-title">
-            幕后花絮：团队的真实关系 😂
-          </h2>
-          <p className="section-lead">
-            以上是官方分工。以下是他们私下的样子——仅供娱乐，不代表产品架构。
-          </p>
-          <div className="team-easter-egg__frame">
-            <Image
-              src="/team/team-cartoon-zh.webp"
-              alt="团队关系图：星哥（神秘大Boss）、至尊宝（嘴最硬）、小甜甜（最会哄人）、牛夫人（最会追责）、二当家（背锅侠 + 情报员）"
-              width={1689}
-              height={931}
-              sizes="(max-width: 48rem) 100vw, 48rem"
-              className="team-easter-egg__img"
-            />
-          </div>
-        </section>
-      )}
+      <section className="team-section team-easter-egg" aria-labelledby="team-egg-heading">
+        <h2 id="team-egg-heading" className="section-title">
+          {copy.easterEggHeading}
+        </h2>
+        <p className="section-lead">{copy.easterEggLead}</p>
+        <div className="team-easter-egg__frame">
+          <Image
+            src={copy.easterEggSrc}
+            alt={copy.easterEggAlt}
+            width={1689}
+            height={931}
+            sizes="(max-width: 48rem) 100vw, 48rem"
+            className="team-easter-egg__img"
+          />
+        </div>
+      </section>
 
       <p className="team-outro">
         <LocaleLink href="/story">{copy.outroStory} &rarr;</LocaleLink>

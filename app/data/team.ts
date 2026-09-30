@@ -93,6 +93,11 @@ export type TeamCopy = {
   flowLoop: string;
   banterHeading: string;
   banter: { who: AgentId; line: string }[];
+  /** Behind-the-scenes cartoon — entertainment only. */
+  easterEggHeading: string;
+  easterEggLead: string;
+  easterEggAlt: string;
+  easterEggSrc: string;
   outroStory: string;
   outroAbout: string;
 };
@@ -177,6 +182,12 @@ const en: TeamCopy = {
     { who: "lady-bull", line: "Evidence?" },
     { who: "second-master", line: "…I'll go check." },
   ],
+  easterEggHeading: "Behind the scenes: how they really get along 😂",
+  easterEggLead:
+    "That's the official job chart. This is the unofficial one — for fun, not product architecture.",
+  easterEggAlt:
+    "Team relationship cartoon: Xing Ge (Mysterious Big Boss), Joker (Sharpest tongue), Sweetie (Best at charming), Lady Bull (Best at chasing blame), Second Master (Scapegoat + Intel)",
+  easterEggSrc: "/team/team-cartoon-en.webp",
   outroStory: "What we're building",
   outroAbout: "About XingAI",
 };
@@ -261,6 +272,11 @@ const zh: TeamCopy = {
     { who: "lady-bull", line: "证据呢？" },
     { who: "second-master", line: "……我去查。" },
   ],
+  easterEggHeading: "幕后花絮：团队的真实关系 😂",
+  easterEggLead: "以上是官方分工。以下是他们私下的样子——仅供娱乐，不代表产品架构。",
+  easterEggAlt:
+    "团队关系图：星哥（神秘大Boss）、至尊宝（嘴最硬）、小甜甜（最会哄人）、牛夫人（最会追责）、二当家（背锅侠 + 情报员）",
+  easterEggSrc: "/team/team-cartoon-zh.webp",
   outroStory: "我们在造什么",
   outroAbout: "关于 XingAI",
 };
@@ -345,6 +361,12 @@ const ko: TeamCopy = {
     { who: "lady-bull", line: "근거는요?" },
     { who: "second-master", line: "…찾아볼게요." },
   ],
+  easterEggHeading: "비하인드: 그들이 진짜로 지내는 방식 😂",
+  easterEggLead:
+    "위는 공식 역할 표입니다. 아래는 비공식 — 재미용이며 제품 아키텍처가 아닙니다.",
+  easterEggAlt:
+    "팀 관계 만화: 싱게(신비한 빅보스), Joker(입이 제일 세다), Sweetie(달래기 달인), Lady Bull(추궁 달인), Second Master(총알받이 + 정보원)",
+  easterEggSrc: "/team/team-cartoon-ko.webp",
   outroStory: "우리가 만드는 것",
   outroAbout: "XingAI 소개",
 };
