@@ -11,7 +11,6 @@ type ResourceIconName = "github" | "linkedin" | "x" | "youtube";
 type FooterIconName =
   | ResourceIconName
   | "systems"
-  | "demo"
   | "custom"
   | "about"
   | "contact"
@@ -68,15 +67,6 @@ function FooterLinkIcon({ name }: { name: FooterIconName }) {
         <rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5" />
         <rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5" />
         <rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5" />
-      </svg>
-    );
-  }
-
-  if (name === "demo") {
-    return (
-      <svg {...common}>
-        <path d="m10 8 5 4-5 4V8Z" />
-        <circle cx="12" cy="12" r="8.5" />
       </svg>
     );
   }
@@ -203,10 +193,6 @@ export default function Footer() {
               <FooterLinkIcon name="systems" />
               <span>{t("drawerAiSystems")}</span>
             </Link>
-            <Link href={p("/apps")} className="footer-icon-link">
-              <FooterLinkIcon name="demo" />
-              <span>{t("drawerFreeDemo")}</span>
-            </Link>
             <Link href={p("/story")} className="footer-icon-link">
               <FooterLinkIcon name="systems" />
               <span>{t("navStory")}</span>
@@ -313,11 +299,6 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="footer-bottom__meta">
           <span>&copy; {new Date().getFullYear()} xingai.app</span>
-          <nav className="footer-legal-inline" aria-label={t("footerLegal")}>
-            <Link href={p("/legal/privacy")}>{t("footerPrivacy")}</Link>
-            <Link href={p("/legal/terms")}>{t("footerTerms")}</Link>
-            <Link href={p("/legal/disclaimer")}>{t("footerDisclaimer")}</Link>
-          </nav>
         </div>
       </div>
     </footer>

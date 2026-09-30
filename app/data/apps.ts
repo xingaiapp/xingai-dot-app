@@ -39,8 +39,13 @@ export type AppData = {
   roadmap: RoadmapItem[];
   demoUrl?: string;
   sourceUrl?: string;
-  /** `gumroad` = paid template CTA; `github` = open repo CTA (default gumroad when sourceUrl set). */
+  /** `gumroad` = paid template CTA; `github` = public repo CTA (default gumroad when sourceUrl set). */
   sourceKind?: "gumroad" | "github";
+  /**
+   * SPDX id when the GitHub repo is actually open-source licensed (e.g. "MIT").
+   * Without it the repo is public to read only — the page must not invite forking or redeploying.
+   */
+  sourceLicense?: string;
   comingSoon?: boolean;
   /** Invite-only product: free to request access via contact. */
   earlyAccess?: boolean;
@@ -486,6 +491,7 @@ export const apps: AppData[] = [
     iconDark: "/eval-registry-icon.svg",
     favicon: "/eval-registry-icon.svg",
     sourceUrl: "https://github.com/xingaiapp/xingai-eval-registry",
+    sourceLicense: "MIT",
     sourceKind: "github",
     description:
       "An Every-Eval-Ever-compatible evaluation registry—store, validate, and diff AI eval results with a fail-on-regression CI gate. Code open source; your evaluation data stays private.",
@@ -737,6 +743,7 @@ export const apps: AppData[] = [
       { name: "Honest trade-off notes", free: true, pro: true, enterprise: true },
       { name: "Style and pace matching", free: true, pro: true, enterprise: true },
       { name: "Book-first itinerary checklist", free: true, pro: true, enterprise: true },
+      { name: "First-time city guide (Hong Kong): sourced places, 3 routes, map", free: true, pro: true, enterprise: true },
       { name: "Light/dark theme and mobile UI", free: true, pro: true, enterprise: true },
       // Device-local /trips is Free today — do not sell it as Pro until accounts sync.
       { name: "Trip history (this browser only)", free: true, pro: true, enterprise: true },
@@ -746,6 +753,7 @@ export const apps: AppData[] = [
       { title: "Destination comparison system", status: "shipped" },
       { title: "Inspire / Surprise me mode", status: "shipped" },
       { title: "Book-first itinerary preview", status: "shipped" },
+      { title: "First-time city guide: Hong Kong", status: "shipped" },
       { title: "Local trip history (this browser)", status: "shipped" },
       { title: "Synced trip history (account)", status: "planned" },
       { title: "Deeper weather, entry-rule, and safety context", status: "planned" },
@@ -919,11 +927,11 @@ export const apps: AppData[] = [
     demoUrl: "https://t.xingai.app/",
     earlyAccess: true,
     description:
-      "Daily trading plan helper\u2014turn your holdings screenshot into structured rules + an AI plan for today. Early access is free: email us to join the allowlist.",
+      "Daily trading plan helper\u2014turn your holdings screenshot into structured rules + an AI plan for today. The basic view is free with no sign-in; AI analysis is invite-only for now \u2014 email us to join the allowlist.",
     category: "Finance AI",
     canDo: "Convert a holdings screenshot into a structured plan for the day.",
     bestFor: "Active traders who want a repeatable pre-market checklist and plan.",
-    clickTarget: "Request free early access, then sign in at t.xingai.app.",
+    clickTarget: "Basic features are open at t.xingai.app; request free early access for AI analysis.",
     launchStatus: "demo",
     screenshots: [
       {
@@ -1369,6 +1377,7 @@ const localizedAppCopy: Partial<
         "诚实取舍说明",
         "风格与节奏匹配",
         "优先预订行程清单",
+        "首次到访城市指南（香港）：附来源的地点、3 条路线、地图",
         "浅色/深色主题与移动端 UI",
         "本机旅行历史（仅此浏览器）",
         "团队或旅行社定制配置",
@@ -1378,6 +1387,7 @@ const localizedAppCopy: Partial<
         "目的地比较系统",
         "Inspire / \u5e2e\u6211\u9009 \u6a21\u5f0f",
         "优先预订行程预览",
+        "首次到访城市指南：香港",
         "本机旅行历史（仅此浏览器）",
         "云端同步旅行历史（需账号）",
         "更深入的天气、入境规则与安全语境",
@@ -1475,10 +1485,10 @@ const localizedAppCopy: Partial<
       tagline: "\u4eca\u65e5\u8ba1\u5212",
       category: "\u91d1\u878d AI",
       description:
-        "\u4ea4\u6613\u65e5\u8ba1\u5212\u52a9\u624b\uff1a\u628a\u6301\u4ed3\u622a\u56fe\u53d8\u6210\u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002\u5185\u6d4b\u514d\u8d39\u7533\u8bf7\uff0c\u8054\u7cfb\u6211\u4eec\u5373\u53ef\u52a0\u5165\u767d\u540d\u5355\u3002",
+        "\u4ea4\u6613\u65e5\u8ba1\u5212\u52a9\u624b\uff1a\u628a\u6301\u4ed3\u622a\u56fe\u53d8\u6210\u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002\u57fa\u7840\u529f\u80fd\u514d\u8d39\u3001\u65e0\u9700\u767b\u5f55\uff1bAI \u5206\u6790\u76ee\u524d\u4e3a\u767d\u540d\u5355\u9080\u8bf7\u5236\uff0c\u8054\u7cfb\u6211\u4eec\u5373\u53ef\u52a0\u5165\u3002",
       canDo: "\u4ece\u6301\u4ed3\u622a\u56fe\u751f\u6210\u7ed3\u6784\u5316\u7684\u5f53\u65e5\u8ba1\u5212\u3002",
       bestFor: "\u60f3\u8981\u53ef\u91cd\u590d\u7684\u5f00\u76d8\u524d\u68c0\u67e5\u6e05\u5355\u548c\u7b56\u7565\u8ba1\u5212\u7684\u6d3b\u8dc3\u4ea4\u6613\u8005\u3002",
-      clickTarget: "\u514d\u8d39\u7533\u8bf7\u5185\u6d4b\uff0c\u901a\u8fc7\u540e\u767b\u5f55 t.xingai.app\u3002",
+      clickTarget: "\u57fa\u7840\u529f\u80fd\u53ef\u76f4\u63a5\u5728 t.xingai.app \u4f7f\u7528\uff1bAI \u5206\u6790\u8bf7\u514d\u8d39\u7533\u8bf7\u5185\u6d4b\u3002",
     },
   },
   ko: {
@@ -1892,6 +1902,7 @@ const localizedAppCopy: Partial<
         "솔직한 트레이드오프 설명",
         "스타일과 여행 속도 매칭",
         "우선 예약 일정 체크리스트",
+        "첫 방문 도시 가이드(홍콩): 출처 있는 장소, 코스 3개, 지도",
         "라이트/다크 테마와 모바일 UI",
         "기기 내 여행 기록(이 브라우저만)",
         "팀 또는 여행사 맞춤 설정",
@@ -1901,6 +1912,7 @@ const localizedAppCopy: Partial<
         "목적지 비교 시스템",
         "Inspire / Surprise me 모드",
         "우선 예약 일정 미리보기",
+        "첫 방문 도시 가이드: 홍콩",
         "기기 내 여행 기록(이 브라우저만)",
         "계정 동기화 여행 기록",
         "날씨, 입국 규정, 안전 맥락 강화",
@@ -1998,10 +2010,10 @@ const localizedAppCopy: Partial<
       tagline: "\uc624\ub298 \uacc4\ud68d",
       category: "\uae08\uc735 AI",
       description:
-        "\ub9e4\uc77c \uac70\ub798 \uacc4\ud68d \ub3c4\uc6b0\ubbf8\u2014\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7\uc744 \uaddc\uce59 + AI \uc624\ub298 \uacc4\ud68d\uc73c\ub85c \ubc14\uafb8\uc5b4 \uc90d\ub2c8\ub2e4. \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5\ud569\ub2c8\ub2e4.",
+        "\ub9e4\uc77c \uac70\ub798 \uacc4\ud68d \ub3c4\uc6b0\ubbf8\u2014\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7\uc744 \uaddc\uce59 + AI \uc624\ub298 \uacc4\ud68d\uc73c\ub85c \ubc14\uafb8\uc5b4 \uc90d\ub2c8\ub2e4. \uae30\ubcf8 \uae30\ub2a5\uc740 \ub85c\uadf8\uc778 \uc5c6\uc774 \ubb34\ub8cc\uc774\uba70, AI \ubd84\uc11d\uc740 \ud604\uc7ac \ucd08\ub300\uc81c\uc785\ub2c8\ub2e4. \uc694\uccad\ud558\uc2dc\uba74 \ud5c8\uc6a9 \ubaa9\ub85d\uc5d0 \ucd94\uac00\ud574 \ub4dc\ub9bd\ub2c8\ub2e4.",
       canDo: "\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7\uc744 \uad6c\uc870\ud654\ud558\uc5ec \uc624\ub298 \uacc4\ud68d\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.",
       bestFor: "\uc7a5 \uc2dc\uc791 \uc804 \uccb4\ud06c\ub9ac\uc2a4\ud2b8\uc640 \uacc4\ud68d\uc744 \uc2b5\uad00\ud654\ud558\uace0 \uc2f6\uc740 \ud2b8\ub808\uc774\ub354\uc5d0\uac8c \uc801\ud569\ud569\ub2c8\ub2e4.",
-      clickTarget: "\ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \ud6c4 t.xingai.app\uc5d0 \ub85c\uadf8\uc778.",
+      clickTarget: "\uae30\ubcf8 \uae30\ub2a5\uc740 t.xingai.app\uc5d0\uc11c \ubc14\ub85c \uc0ac\uc6a9\ud560 \uc218 \uc788\uace0, AI \ubd84\uc11d\uc740 \ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4\ub97c \uc694\uccad\ud558\uc138\uc694.",
     },
   },
 };

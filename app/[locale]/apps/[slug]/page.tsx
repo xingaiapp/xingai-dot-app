@@ -255,11 +255,15 @@ export default function AppDetailPage() {
       {/* Source code */}
       {app.sourceUrl && (
         <section className="detail-section source-section">
-          <h2 className="detail-heading">{t("appSourceCode")}</h2>
+          <h2 className="detail-heading">
+            {t(app.sourceKind === "github" && !app.sourceLicense ? "appSourceCodePublic" : "appSourceCode")}
+          </h2>
           <p className="section-lead">
-            {app.sourceKind === "github"
-              ? t(app.slug === "cook-ai" ? "appSourceTextGithubCook" : "appSourceTextGithub")
-              : t("appSourceText")}
+            {app.sourceKind !== "github"
+              ? t("appSourceText")
+              : app.sourceLicense
+                ? t("appSourceTextGithub").replace("{license}", app.sourceLicense)
+                : t("appSourceTextPublic")}
           </p>
           <a
             href={app.sourceUrl}

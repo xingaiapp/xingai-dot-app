@@ -24,7 +24,6 @@ const translations = {
     drawerMain: "Main",
     drawerSettings: "Settings",
     drawerAiSystems: "AI Systems",
-    drawerFreeDemo: "Free Demo",
     drawerLanguage: "Language",
     drawerTheme: "Theme",
     themeLabel: "Theme",
@@ -76,7 +75,7 @@ const translations = {
       "Screenshot holdings \u2192 rules + AI plan for today. Free to request early access at t.xingai.app.",
     homeDemoRequestEarlyAccess: "Request early access",
     appTTodayEarlyAccessBanner:
-      "t.xingai.app is invite-only during early access. It\u2019s free to ask\u2014email us and we\u2019ll add you to the allowlist.",
+      "The basic view at t.xingai.app is free and needs no sign-in. AI analysis is invite-only during early access. It\u2019s free to ask\u2014email us and we\u2019ll add you to the allowlist.",
     homeDemoDisclaimer: "Paper structure only \u00b7 Not investment advice \u00b7 No broker integration.",
     viewAllApps: "Try free demo",
     heroInvestMapCta: "Explore the AI Industry Map",
@@ -238,8 +237,10 @@ const translations = {
     appSourceCode: "Want the full source code?",
     appSourceText: "Get the complete source code — Next.js, FastAPI, and OpenAI integration. Build, customize, and deploy your own version.",
     appGetSource: "Get source code on Gumroad",
-    appSourceTextGithub:
-      "Fork the open-source Next.js app. Deploy your own instance on Vercel.",
+    appSourceTextGithub: "Open source under the {license} license. Fork it and run your own copy.",
+    appSourceCodePublic: "See how it\u2019s built",
+    appSourceTextPublic:
+      "The source is public on GitHub so you can read how it works. It is not open source: no license is granted to copy, modify, or redeploy it.",
     appSourceTextGithubCook:
       "Fork the open-source Next.js app — inventory scan, meal recommendations, and cooking steps. Deploy your own instance on Vercel.",
     appGetSourceGithub: "View source on GitHub",
@@ -376,7 +377,6 @@ const translations = {
     drawerMain: "\u4e3b\u8981",
     drawerSettings: "\u8bbe\u7f6e",
     drawerAiSystems: "AI \u7cfb\u7edf",
-    drawerFreeDemo: "\u514d\u8d39 Demo",
     drawerLanguage: "\u8bed\u8a00",
     drawerTheme: "\u4e3b\u9898",
     themeLabel: "\u4e3b\u9898",
@@ -427,7 +427,7 @@ const translations = {
       "\u5f00\u76d8\u524d\u622a\u56fe\u6301\u4ed3 \u2192 \u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002t.xingai.app \u5185\u6d4b\u514d\u8d39\u7533\u8bf7\u3002",
     homeDemoRequestEarlyAccess: "\u7533\u8bf7\u5185\u6d4b",
     appTTodayEarlyAccessBanner:
-      "t.xingai.app \u76ee\u524d\u4e3a\u9080\u8bf7\u5236\u5185\u6d4b\u3002\u514d\u8d39\u7533\u8bf7\u5373\u53ef\uff0c\u8054\u7cfb\u6211\u4eec\u52a0\u5165\u767d\u540d\u5355\u540e\u767b\u5f55\u4f7f\u7528\u3002",
+      "t.xingai.app \u7684\u57fa\u7840\u529f\u80fd\u514d\u8d39\u5f00\u653e\uff0c\u65e0\u9700\u767b\u5f55\u3002AI \u5206\u6790\u76ee\u524d\u4e3a\u9080\u8bf7\u5236\u5185\u6d4b\uff0c\u514d\u8d39\u7533\u8bf7\u5373\u53ef\uff0c\u8054\u7cfb\u6211\u4eec\u52a0\u5165\u767d\u540d\u5355\u540e\u767b\u5f55\u4f7f\u7528\u3002",
     homeDemoDisclaimer: "\u4ec5\u7eb8\u9762\u7ed3\u6784 \u00b7 \u975e\u6295\u8d44\u5efa\u8bae \u00b7 \u975e\u5238\u5546 \u00b7 \u4e0d\u5bf9\u63a5\u4e0b\u5355\u3002",
     viewAllApps: "\u7acb\u5373\u4f53\u9a8c\u514d\u8d39 Demo",
     heroInvestMapCta: "\u67e5\u770b AI \u4ea7\u4e1a\u5730\u56fe",
@@ -582,8 +582,10 @@ const translations = {
     appSourceCode: "\u60f3\u8981\u5b8c\u6574\u6e90\u4ee3\u7801\uff1f",
     appSourceText: "\u83b7\u53d6\u5b8c\u6574\u6e90\u4ee3\u7801 \u2014 Next.js\u3001FastAPI \u548c OpenAI \u96c6\u6210\u3002\u6784\u5efa\u3001\u81ea\u5b9a\u4e49\u5e76\u90e8\u7f72\u4f60\u81ea\u5df1\u7684\u7248\u672c\u3002",
     appGetSource: "\u5728 Gumroad \u83b7\u53d6\u6e90\u4ee3\u7801",
-    appSourceTextGithub:
-      "\u57fa\u4e8e\u5f00\u6e90 Next.js \u5e94\u7528\u3002\u53ef\u5728 Vercel \u90e8\u7f72\u81ea\u5df1\u7684\u5b9e\u4f8b\u3002",
+    appSourceTextGithub: "\u4ee5 {license} \u8bb8\u53ef\u8bc1\u5f00\u6e90\u3002\u53ef\u4ee5 fork \u5e76\u8fd0\u884c\u4f60\u81ea\u5df1\u7684\u526f\u672c\u3002",
+    appSourceCodePublic: "\u770b\u770b\u5b83\u662f\u600e\u4e48\u505a\u7684",
+    appSourceTextPublic:
+      "\u6e90\u7801\u5728 GitHub \u4e0a\u516c\u5f00\uff0c\u65b9\u4fbf\u4f60\u4e86\u89e3\u5b83\u5982\u4f55\u8fd0\u4f5c\u3002\u5b83\u4e0d\u662f\u5f00\u6e90\u9879\u76ee\uff1a\u672a\u6388\u6743\u590d\u5236\u3001\u4fee\u6539\u6216\u518d\u90e8\u7f72\u3002",
     appSourceTextGithubCook:
       "\u57fa\u4e8e\u5f00\u6e90 Next.js \u5e94\u7528 \u2014 \u98df\u6750\u626b\u63cf\u3001\u9910\u98df\u63a8\u8350\u4e0e\u70f9\u996a\u6b65\u9aa4\u3002\u53ef\u5728 Vercel \u90e8\u7f72\u81ea\u5df1\u7684\u5b9e\u4f8b\u3002",
     appGetSourceGithub: "\u5728 GitHub \u67e5\u770b\u6e90\u4ee3\u7801",
@@ -715,7 +717,6 @@ const translations = {
     drawerMain: "\uba54\uc778",
     drawerSettings: "\uc124\uc815",
     drawerAiSystems: "AI \uc2dc\uc2a4\ud15c",
-    drawerFreeDemo: "\ubb34\ub8cc \ub370\ubaa8",
     drawerLanguage: "\uc5b8\uc5b4",
     drawerTheme: "\ud14c\ub9c8",
     themeLabel: "\ud14c\ub9c8",
@@ -766,7 +767,7 @@ const translations = {
       "\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7 \u2192 \uaddc\uce59 + AI \uc624\ub298 \uacc4\ud68d. t.xingai.app \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5.",
     homeDemoRequestEarlyAccess: "\uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad",
     appTTodayEarlyAccessBanner:
-      "t.xingai.app\uc740 \uc5bc\ub9ac \uc561\uc138\uc2a4 \uae30\uac04 \ucd08\uccad\uc81c\uc785\ub2c8\ub2e4. \ubb34\ub8cc\ub85c \uc694\uccad\ud558\uc2dc\uba74 \ud5c8\uc6a9 \ubaa9\ub85d\uc5d0 \ucd94\uac00\ud574 \ub4dc\ub9bd\ub2c8\ub2e4.",
+      "t.xingai.app\uc758 \uae30\ubcf8 \uae30\ub2a5\uc740 \ub85c\uadf8\uc778 \uc5c6\uc774 \ubb34\ub8cc\uc785\ub2c8\ub2e4. AI \ubd84\uc11d\uc740 \uc5bc\ub9ac \uc561\uc138\uc2a4 \uae30\uac04 \ucd08\ub300\uc81c\uc774\uba70, \ubb34\ub8cc\ub85c \uc694\uccad\ud558\uc2dc\uba74 \ud5c8\uc6a9 \ubaa9\ub85d\uc5d0 \ucd94\uac00\ud574 \ub4dc\ub9bd\ub2c8\ub2e4.",
     homeDemoDisclaimer: "\uc885\uc774 \uad6c\uc870\uc6a9 \u00b7 \ud22c\uc790 \uc870\uc5b8 \uc544\ub2d8 \u00b7 \ube0c\ub85c\ucee4 \uc5f0\ub3d9 \uc5c6\uc74c.",
     viewAllApps: "\ubb34\ub8cc \ub370\ubaa8 \uccb4\ud5d8",
     heroInvestMapCta: "AI \uc0b0\uc5c5 \uc9c0\ub3c4 \ubcf4\uae30",
@@ -921,8 +922,10 @@ const translations = {
     appSourceCode: "\uc804\uccb4 \uc18c\uc2a4 \ucf54\ub4dc\ub97c \uc6d0\ud558\uc2dc\ub098\uc694?",
     appSourceText: "\uc804\uccb4 \uc18c\uc2a4 \ucf54\ub4dc\ub97c \ubc1b\uc73c\uc138\uc694 \u2014 Next.js, FastAPI, OpenAI \ud1b5\ud569. \uc9c1\uc811 \uad6c\ucd95, \ucee4\uc2a4\ud130\ub9c8\uc774\uc988, \ubc30\ud3ec\ud558\uc138\uc694.",
     appGetSource: "Gumroad\uc5d0\uc11c \uc18c\uc2a4 \ucf54\ub4dc \ubc1b\uae30",
-    appSourceTextGithub:
-      "\uc624\ud508\uc18c\uc2a4 Next.js \uc571. Vercel\uc5d0 \uc9c1\uc811 \ubc30\ud3ec\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+    appSourceTextGithub: "{license} \ub77c\uc774\uc120\uc2a4 \uc624\ud508\uc18c\uc2a4\uc785\ub2c8\ub2e4. fork\ud574\uc11c \uc9c1\uc811 \uc2e4\ud589\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+    appSourceCodePublic: "\uc5b4\ub5bb\uac8c \ub9cc\ub4e4\uc5c8\ub294\uc9c0 \ubcf4\uae30",
+    appSourceTextPublic:
+      "GitHub\uc5d0 \uc18c\uc2a4\ub97c \uacf5\uac1c\ud574 \uc791\ub3d9 \ubc29\uc2dd\uc744 \ubcfc \uc218 \uc788\uac8c \ud588\uc2b5\ub2c8\ub2e4. \uc624\ud508\uc18c\uc2a4\ub294 \uc544\ub2c8\uba70, \ubcf5\uc81c\u00b7\uc218\uc815\u00b7\uc7ac\ubc30\ud3ec \uad8c\ud55c\uc740 \ubd80\uc5ec\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.",
     appSourceTextGithubCook:
       "\uc624\ud508\uc18c\uc2a4 Next.js \uc571 \u2014 \uc7ac\uace0 \uc2a4\uce94, \uc2dd\uc0ac \ucd94\ucc9c, \uc694\ub9ac \ub2e8\uacc4. Vercel\uc5d0 \uc9c1\uc811 \ubc30\ud3ec\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
     appGetSourceGithub: "GitHub\uc5d0\uc11c \uc18c\uc2a4 \ubcf4\uae30",

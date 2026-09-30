@@ -28,7 +28,6 @@ export default function MobileNavDrawer({
   const mainLinks: { href: string; label: string; icon: NavKey }[] = [
     { href: localePath("/"), label: t("navHome"), icon: "navHome" },
     { href: localePath("/apps"), label: t("drawerAiSystems"), icon: "navApps" },
-    { href: localePath("/apps"), label: t("drawerFreeDemo"), icon: "navApps" },
     { href: localePath("/story"), label: t("navStory"), icon: "navStory" },
     { href: localePath("/team"), label: t("navTeam"), icon: "navTeam" },
     { href: localePath("/about"), label: t("navAbout"), icon: "navAbout" },
@@ -97,8 +96,7 @@ export default function MobileNavDrawer({
           <span className="mobile-drawer__section-label">{t("drawerMain")}</span>
           <ul className="mobile-drawer__list">
             {mainLinks.map(({ href, label, icon }) => {
-              const active =
-                label === t("drawerFreeDemo") ? false : isNavActive(pathname, href);
+              const active = isNavActive(pathname, href);
               return (
                 <li key={`${href}-${label}`}>
                   <Link

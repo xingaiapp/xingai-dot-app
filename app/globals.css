@@ -3352,24 +3352,6 @@ html[data-theme="dark"] .roadmap-status--built {
   gap: 0.65rem;
 }
 
-.footer-legal-inline {
-  display: none;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.85rem;
-}
-
-.footer-legal-inline a {
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.footer-legal-inline a:hover {
-  color: var(--blue);
-  text-decoration: underline;
-}
-
 /* ── Legal pages ── */
 .legal-wrap {
   max-width: 48rem;
@@ -3497,11 +3479,6 @@ html[data-theme="dark"] .roadmap-status--built {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 1rem 1.5rem;
-  }
-
-  .footer-legal-inline {
-    display: flex;
-    justify-content: flex-start;
   }
 }
 
