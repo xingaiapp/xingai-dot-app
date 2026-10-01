@@ -633,6 +633,7 @@ html[data-theme="dark"] .lang-menu {
   letter-spacing: -0.025em;
   line-height: 1.22;
   color: var(--ink-strong);
+  word-break: keep-all;
 }
 
 .hero-card-heading .typewriter {
@@ -690,20 +691,6 @@ html[data-theme="dark"] .lang-menu {
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--muted);
-}
-
-.hero-value-pill {
-  display: inline-flex;
-  align-items: center;
-  margin: 0 0 1.75rem;
-  padding: 0.35rem 0.65rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--soft-bg);
-  color: var(--ink);
-  font-size: 0.75rem;
-  font-weight: 650;
-  line-height: 1.25;
 }
 
 .hero-sub {

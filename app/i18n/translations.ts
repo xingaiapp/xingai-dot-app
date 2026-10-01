@@ -51,12 +51,11 @@ const translations = {
 
     // Home
     heroBrand: "XingAI",
-    heroValuePill: "AI decision systems, not just chat",
     tagline: "AI Decision Systems",
-    taglineSub: "Ideas into continuously operating products",
-    heroCardHeading: "Capture once. Evolve forever.",
+    taglineSub: "Not just chat.",
+    heroCardHeading: "Real questions, checked reasoning — then you decide.",
     heroSub:
-      "These apps are what the XingAI system produces — each one answers a real decision, not a chat thread. The public flagship is the Invest AI Industry Map: walk the AI supply chain layer by layer, with claims tied to cited filings. It is research you can check, not a trading desk and not a buy list. More products cover everyday life, learning, and ops; open any card to try a demo. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
+      "The public flagship is the Invest AI Industry Map: walk the AI supply chain layer by layer, with claims tied to cited filings. It is research you can check, not a trading desk and not a buy list. Travel, Cook and more cover everyday decisions — open any card to try a demo.",
     heroStoryLink: "How XingAI turns ideas into products",
     heroPreviewLabel: "System preview",
     homeAppsHeading: "Start here",
@@ -415,12 +414,11 @@ const translations = {
     legalNotFound: "\u9875\u9762\u672a\u627e\u5230",
 
     heroBrand: "XingAI",
-    heroValuePill: "AI \u51b3\u7b56\u7cfb\u7edf\uff0c\u4e0d\u53ea\u662f\u804a\u5929",
     tagline: "AI \u51b3\u7b56\u7cfb\u7edf",
-    taglineSub: "\u628a\u60f3\u6cd5\u53d8\u6210\u6301\u7eed\u8fd0\u8f6c\u7684\u4ea7\u54c1",
-    heroCardHeading: "\u8bb0\u4e00\u6b21\uff0c\u6301\u7eed\u8fdb\u5316\u3002",
+    taglineSub: "不只是聊天。",
+    heroCardHeading: "真实的问题，经过检验的推理——最后由你决定。",
     heroSub:
-      "\u4f60\u4eca\u5929\u80fd\u7528\u7684\u5e94\u7528\uff0c\u5c31\u662f XingAI \u8fd9\u5957\u7cfb\u7edf\u7684\u4ea7\u51fa\u2014\u2014\u6bcf\u4e00\u4e2a\u90fd\u56de\u7b54\u4e00\u4e2a\u771f\u5b9e\u51b3\u7b56\uff0c\u4e0d\u662f\u804a\u5929\u7ebf\u7a0b\u3002\u516c\u5f00\u65d7\u8230\u662f Invest AI \u4ea7\u4e1a\u5730\u56fe\uff1a\u6309\u56fe\u5c42\u770b AI \u4ea7\u4e1a\u94fe\uff0c\u7ed3\u8bba\u90fd\u6302\u5f15\u7528\u5907\u6848\u3002\u8fd9\u662f\u53ef\u6838\u5bf9\u7684\u7814\u7a76\uff0c\u4e0d\u662f\u4ea4\u6613\u53f0\uff0c\u4e5f\u4e0d\u662f\u4e70\u5165\u6e05\u5355\u3002\u66f4\u591a\u4ea7\u54c1\u8986\u76d6\u65e5\u5e38\u3001\u5b66\u4e60\u4e0e\u8fd0\u7ef4\uff1b\u70b9\u5f00\u4efb\u4f55\u5361\u7247\u5373\u53ef\u8bd5\u7528 Demo\u3002English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4\u3002",
+      "公开旗舰是 Invest AI 产业地图：按图层看 AI 产业链，结论都挂引用备案。这是可核对的研究，不是交易台，也不是买入清单。旅行、做饭等产品覆盖日常决策——点开任何卡片即可试用 Demo。",
     heroStoryLink: "XingAI 如何把想法变成产品",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
     homeAppsHeading: "\u4ece\u8fd9\u91cc\u5f00\u59cb",
@@ -765,12 +763,11 @@ const translations = {
     legalNotFound: "\ud398\uc774\uc9c0\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4",
 
     heroBrand: "XingAI",
-    heroValuePill: "\ucc57\uc774 \uc544\ub2cc AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     tagline: "AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
-    taglineSub: "\uc544\uc774\ub514\uc5b4\ub97c \uacc4\uc18d \uc6b4\uc601\ub418\ub294 \uc81c\ud488\uc73c\ub85c",
-    heroCardHeading: "\ud55c \ubc88 \uae30\ub85d\ud558\uace0, \uacc4\uc18d \ubc1c\uc804\uc2dc\ud0a4\uc138\uc694.",
+    taglineSub: "단순한 채팅이 아닙니다.",
+    heroCardHeading: "진짜 질문, 검증된 추론 — 결정은 당신이 합니다.",
     heroSub:
-      "\uc624\ub298 \uc4f8 \uc218 \uc788\ub294 \uc571\ub4e4\uc740 XingAI \uc2dc\uc2a4\ud15c\uc774 \ub9cc\ub4e0 \uacb0\uacfc\ubb3c\uc785\ub2c8\ub2e4. \uac01 \uc571\uc740 \ucc57 \uc2a4\ub808\ub4dc\uac00 \uc544\ub2c8\ub77c \uc2e4\uc81c \uacb0\uc815 \ud558\ub098\ub97c \ub2f5\ud569\ub2c8\ub2e4. \uacf5\uac1c \ud50c\ub798\uadf8\uc2ed\uc740 Invest AI \uc0b0\uc5c5 \uc9c0\ub3c4\uc785\ub2c8\ub2e4. AI \uacf5\uae09\ub9dd\uc744 \ub808\uc774\uc5b4\ubcc4\ub85c \ubcf4\uace0, \uc8fc\uc7a5\uc740 \uc778\uc6a9\ub41c \uacf5\uc2dc\uc5d0 \ub9e1\ucd9c\ub2c8\ub2e4. \ud655\uc778 \uac00\ub2a5\ud55c \ub9ac\uc11c\uce58\uc774\uba70, \ub9e4\ub9e4 \ucc3d\uad6c\ub098 \ub9e4\uc218 \ubaa9\ub85d\uc774 \uc544\ub2d9\ub2c8\ub2e4. \uc77c\uc0c1\u00b7\ud559\uc2b5\u00b7\uc6b4\uc601 \uc81c\ud488\ub3c4 \uc788\uc73c\ub2c8, \uce74\ub4dc\ub97c \uc5f4\uc5b4 \ub370\ubaa8\ub97c \uc2dc\ud574 \ubcf4\uc138\uc694. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
+      "공개 플래그십은 Invest AI 산업 지도입니다. AI 공급망을 레이어별로 보고, 주장은 인용된 공시에 맞춥니다. 확인 가능한 리서치이며, 매매 창구나 매수 목록이 아닙니다. 여행·요리 등 제품이 일상의 결정을 돕습니다 — 카드를 열어 데모를 시험해 보세요.",
     heroStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
     homeAppsHeading: "\uc5ec\uae30\uc11c \uc2dc\uc791",
