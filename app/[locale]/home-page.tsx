@@ -84,6 +84,10 @@ export default function Home() {
   );
   const heroPrimaryApp =
     heroPreviewApps[activeHeroIndex] ?? heroPreviewApps[0] ?? apps[0];
+  const demoStatus = (slug: string): AppLaunchStatus =>
+    apps.find((app) => app.slug === slug)?.launchStatus ?? "demo";
+  const perfSimStatus = demoStatus("performance-sim");
+  const tTodayStatus = demoStatus("t-today");
   const appStatusLabels: Record<AppLaunchStatus, string> = {
     live: t("appStatusLive"),
     demo: t("appStatusDemo"),
@@ -238,8 +242,8 @@ export default function Home() {
                 <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
                 <div className="app-card-title-row">
                   <h3 className="app-card-name">{t("homeDemoPerfName")}</h3>
-                  <span className="app-status-badge app-status-badge--demo">
-                    {t("homeDemoBadgeDemo")}
+                  <span className={`app-status-badge app-status-badge--${perfSimStatus}`}>
+                    {appStatusLabels[perfSimStatus]}
                   </span>
                 </div>
                 <p className="app-card-tagline">{t("homeDemoPerfLead")}</p>
@@ -266,8 +270,8 @@ export default function Home() {
                 <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
                 <div className="app-card-title-row">
                   <h3 className="app-card-name">{t("homeDemoTTodayName")}</h3>
-                  <span className="app-status-badge app-status-badge--early-access">
-                    {t("homeDemoBadgeEarlyAccess")}
+                  <span className={`app-status-badge app-status-badge--${tTodayStatus}`}>
+                    {appStatusLabels[tTodayStatus]}
                   </span>
                 </div>
                 <p className="app-card-tagline">{t("homeDemoTTodayLead")}</p>
