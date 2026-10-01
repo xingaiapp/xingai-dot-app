@@ -846,59 +846,6 @@ html[data-theme="dark"] .lang-menu {
   color: var(--muted);
 }
 
-.hero-slide-controls {
-  display: flex;
-  justify-content: center;
-  gap: 0.45rem;
-  margin-top: -0.2rem;
-}
-
-.hero-slide-dot {
-  display: inline-flex;
-  width: 2.35rem;
-  height: 0.45rem;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--muted) 22%, transparent);
-  cursor: pointer;
-  transition: width 0.18s ease, background 0.18s ease;
-}
-
-.hero-slide-dot span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
-
-.hero-slide-dot--active {
-  width: 3.5rem;
-  background: var(--blue);
-}
-
-.hero-see-all {
-  margin: 0;
-  text-align: center;
-  font-size: 0.8125rem;
-  font-weight: 650;
-}
-
-.hero-see-all a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-  padding: 0 0.5rem;
-  color: var(--blue);
-  text-decoration: none;
-}
-
-.hero-see-all a:hover {
-  text-decoration: underline;
-}
-
 /* App logos — fixed frame; artwork scaled inside for optical consistency */
 .app-icon-frame {
   display: inline-flex;
