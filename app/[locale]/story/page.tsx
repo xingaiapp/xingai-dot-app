@@ -34,24 +34,74 @@ export default function StoryPage() {
   const layerText = (key: Parameters<typeof t>[0]) =>
     t(key).replace("{total}", String(apps.length)).replace("{live}", String(liveCount));
 
+  const whereLabel = (app: AppData) => {
+    if (app.demoUrl) {
+      try {
+        return new URL(app.demoUrl).hostname.replace(/^www\./, "");
+      } catch {
+        return app.demoUrl;
+      }
+    }
+    if (app.comingSoon) return t("storyFiveWWhereSoon");
+    return t("storyFiveWWhereCatalog");
+  };
+
   const productLink = (app: AppData) => (
-    <li key={app.slug}>
-      <LocaleLink href={`/apps/${app.slug}`} className="story-product-link">
-        <AppIcon
-          light={app.icon}
-          dark={app.iconDark}
-          alt=""
-          size={APP_ICON_SIZE}
-          className="story-product-link__icon"
-        />
-        <span className="story-product-link__text">
-          <span className="story-product-link__name">{app.name}</span>
-          <span className="story-product-link__tagline">{app.tagline}</span>
-        </span>
-        <span className={`app-status-badge app-status-badge--${app.launchStatus}`}>
-          {statusLabels[app.launchStatus]}
-        </span>
-      </LocaleLink>
+    <li key={app.slug} className="story-product">
+      <details className="story-product__details">
+        <summary className="story-product-link">
+          <AppIcon
+            light={app.icon}
+            dark={app.iconDark}
+            alt=""
+            size={APP_ICON_SIZE}
+            className="story-product-link__icon"
+          />
+          <span className="story-product-link__text">
+            <span className="story-product-link__name">{app.name}</span>
+            <span className="story-product-link__tagline">{app.tagline}</span>
+          </span>
+          <span className={`app-status-badge app-status-badge--${app.launchStatus}`}>
+            {statusLabels[app.launchStatus]}
+          </span>
+        </summary>
+        <div className="story-5w">
+          <p className="story-5w__hint">{t("storyFiveWHint")}</p>
+          <dl className="story-5w__list">
+            <div className="story-5w__row">
+              <dt>{t("storyFiveWWho")}</dt>
+              <dd>{app.bestFor}</dd>
+            </div>
+            <div className="story-5w__row">
+              <dt>{t("storyFiveWWhat")}</dt>
+              <dd>{app.canDo}</dd>
+            </div>
+            <div className="story-5w__row">
+              <dt>{t("storyFiveWWhere")}</dt>
+              <dd>
+                {app.demoUrl ? (
+                  <a href={app.demoUrl} target="_blank" rel="noopener noreferrer">
+                    {whereLabel(app)}
+                  </a>
+                ) : (
+                  whereLabel(app)
+                )}
+              </dd>
+            </div>
+            <div className="story-5w__row">
+              <dt>{t("storyFiveWWhen")}</dt>
+              <dd>{statusLabels[app.launchStatus]}</dd>
+            </div>
+            <div className="story-5w__row">
+              <dt>{t("storyFiveWWhy")}</dt>
+              <dd>{app.tagline}</dd>
+            </div>
+          </dl>
+          <LocaleLink href={`/apps/${app.slug}`} className="story-inline-link story-5w__more">
+            {t("appViewDetails")} &rarr;
+          </LocaleLink>
+        </div>
+      </details>
     </li>
   );
 
@@ -148,6 +198,7 @@ export default function StoryPage() {
           {t("storyProductsTitle")}
         </h2>
         <p className="section-lead">{t("storyProductsLead")}</p>
+        <p className="story-5w-lead">{t("storyFiveWLead")}</p>
         <div className="story-cluster-grid">{productDomains.map(domainCard)}</div>
       </section>
 

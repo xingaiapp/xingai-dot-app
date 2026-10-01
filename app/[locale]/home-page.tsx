@@ -116,12 +116,17 @@ export default function Home() {
 
   return (
     <main className="wrap">
-      <section className="hero-section hero-section--platform">
+      <section className="hero-section" aria-labelledby="hero-page-title">
+        <h1 id="hero-page-title" className="hero-page-title">
+          {t("tagline")}
+        </h1>
+        <p className="hero-page-sub">{t("taglineSub")}</p>
+        <div className="hero-section--platform">
         <div className="hero-layout">
           <div className="hero-copy">
+            <h2 className="hero-card-heading">{t("heroCardHeading")}</h2>
             <p className="hero-brand">{t("heroBrand")}</p>
             <p className="hero-value-pill">{t("heroValuePill")}</p>
-            <h1 className="tagline">{t("tagline")}</h1>
             <p className="hero-sub">{t("heroSub")}</p>
             <p className="hero-story-link">
               <LocaleLink href="/story">{t("heroStoryLink")} &rarr;</LocaleLink>
@@ -211,6 +216,7 @@ export default function Home() {
               </p>
             </div>
           ) : null}
+        </div>
         </div>
       </section>
 
