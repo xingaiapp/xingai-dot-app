@@ -79,6 +79,7 @@ export default function AppsPage() {
           </li>
         ))}
       </ul>
+      <p className="demo-disclaimer">{t("appsFinanceDisclaimer")}</p>
     </main>
   );
 }

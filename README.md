@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01q
+**Version:** 2026.10.01r
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01r` Homepage drops the Demos block (Performance Sim and T Today stay on `/apps`, which now carries the finance-demo disclaimer in en / 中文 / 한국어). Hero secondary button is “Try a live product / 试用已上线产品 / 라이브 제품 써 보기”, jumping to “Start here”; contact stays in the nav and the build section.
 
 `2026.10.01q` Korean pages wrap between words site-wide (`html[lang="ko"]` keep-all); the per-section rules from `01m`/`01o` are removed so Chinese still wraps between characters.
 

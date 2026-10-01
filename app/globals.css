@@ -1345,12 +1345,9 @@ html[data-theme="dark"] .lang-menu {
   display: block;
 }
 
-.home-demos {
-  margin-top: 1.25rem;
-}
-
-/* Header nav "Build with us" lands here; clear the sticky header. */
-.home-build {
+/* Header nav "Build with us" and the hero "Try a live product" button land here; clear the sticky header. */
+.home-build,
+.home-apps {
   scroll-margin-top: 5rem;
 }
 
@@ -1456,10 +1453,6 @@ html[data-theme="dark"] .lang-menu {
     width: 0.75rem;
     height: 1px;
   }
-}
-
-.demo-cards {
-  margin-top: 1rem;
 }
 
 .app-card-thumb--demo {
