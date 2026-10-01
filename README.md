@@ -2,11 +2,17 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01a
+**Version:** 2026.10.01d
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01d` Status badges: no emoji; every status (Live / Demo / Coming soon, en / 中文 / 한국어) uses the same CSS dot, only Live pulses (off under reduced motion). Homepage Demos cards read status from the catalog (T Today = Demo, matching /apps); “What can I use XingAI for today?” separates Live from public demos.
+
+`2026.10.01c` Theme follows the OS by default: no stored choice means “System” (tracks live OS changes); the theme menu adds System / 跟随系统 / 시스템 설정. Only explicit choices are stored, under `xingai.theme`; a legacy auto-written `theme=light` is treated as unset, a legacy `dark` is kept.
+
+`2026.10.01b` Investment product renamed to **XingAI Invest AI** in the catalog, JSON-LD and legal headings (en / 中文 / 한국어), matching invest.xingai.app. AI Industry Map stays the feature name; `/apps/investment-assistant` URL unchanged.
 
 `2026.10.01a` Homepage hero de-duplication: hero leads with Invest (then Travel, Cook, Eating Decision, SAT) and drops the “Jump into a free demo” list and the “Explore core systems” grid, which repeated the carousel. The carousel keeps its dots plus a “See all systems” link; the curated Start here shelf (Invest / Travel / Cook / ShopRadar) is unchanged. Invest preview image is now a current `/ai-map` capture.
 
