@@ -1,6 +1,6 @@
 "use client";
 
-import { createElement, useEffect, useState, type ElementType } from "react";
+import { createElement, useEffect, useRef, useState, type ElementType } from "react";
 
 type TypewriterTextProps = {
   text: string;
@@ -15,6 +15,8 @@ type TypewriterTextProps = {
   loop?: boolean;
   /** Pause with full text before clearing and typing again. */
   loopPauseMs?: number;
+  /** Called each time the full text has finished typing (every loop). */
+  onTyped?: () => void;
 };
 
 /**
@@ -31,7 +33,11 @@ export default function TypewriterText({
   maxDurationMs = 8000,
   loop = false,
   loopPauseMs = 2400,
+  onTyped,
 }: TypewriterTextProps) {
+  // Ref so a new callback each render doesn't restart the typing effect.
+  const onTypedRef = useRef(onTyped);
+  onTypedRef.current = onTyped;
   const [shown, setShown] = useState("");
   const [done, setDone] = useState(false);
   const [motionOk, setMotionOk] = useState(true);
@@ -67,6 +73,7 @@ export default function TypewriterText({
         setShown(chars.slice(0, count).join(""));
         if (count >= total) {
           setDone(true);
+          onTypedRef.current?.();
           if (loop) {
             pauseTimer = window.setTimeout(runCycle, loopPauseMs);
           }
