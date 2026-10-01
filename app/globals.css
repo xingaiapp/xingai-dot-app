@@ -666,6 +666,53 @@ html[data-theme="dark"] .lang-menu {
   text-wrap: balance;
 }
 
+.hero-sub .typewriter {
+  display: block;
+  position: relative;
+}
+
+.hero-sub .typewriter__ghost {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-sub .typewriter__live {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-sub .typewriter__caret {
+  display: inline-block;
+  width: 0.08em;
+  height: 1.05em;
+  margin-left: 0.08em;
+  vertical-align: -0.12em;
+  background: color-mix(in srgb, var(--blue) 75%, var(--ink-strong));
+  animation: typewriter-caret 0.9s steps(1, end) infinite;
+}
+
+.hero-sub .typewriter__caret--done {
+  animation: typewriter-caret 1.1s steps(1, end) 4;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typewriter-caret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-sub .typewriter__caret {
+    display: none;
+  }
+}
+
 @media (min-width: 48rem) {
   .hero-sub {
     font-size: 1.125rem;
@@ -2411,6 +2458,10 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .home-loop__board[data-layout="circle"] {
+  /* Height cap shrinks used width via aspect-ratio; center that box so
+     it doesn't hug the left edge of a wider card. */
+  width: min(100%, calc(32rem * 1.15));
+  margin-inline: auto;
   min-height: min(28rem, 72vw);
   aspect-ratio: 1.15 / 1;
   max-height: 32rem;

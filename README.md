@@ -2,11 +2,15 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01g
+**Version:** 2026.10.01i
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01i` Homepage hero lead (`heroSub`) types in on load (en / 中文 / 한국어); respects `prefers-reduced-motion`; caret fades after finish.
+
+`2026.10.01h` Homepage System Spine: center the desktop circle board when `max-height` shrinks its width (was hugging the left edge of a wider card).
 
 `2026.10.01g` Catalog honesty: Passive Income Idea → **live**; register **Tech Blog** as live at [blog.xingai.app](https://blog.xingai.app/) with demo shots + `/engineering` link. Replaces stale PR #7 / `feat/register-tech-blog` (coming-soon) work.
 

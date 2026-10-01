@@ -9,6 +9,7 @@ import { getHomeShelfApps, getLocalizedApps, type AppLaunchStatus } from "../dat
 import AppIcon from "../components/AppIcon";
 import AppDemoScreenshot from "../components/AppDemoScreenshot";
 import HomeSystemLoop from "../components/HomeSystemLoop";
+import TypewriterText from "../components/TypewriterText";
 import { agentRoles, getTeamCopy } from "../data/team";
 
 function AnswerIcon({ index }: { index: number }) {
@@ -127,7 +128,7 @@ export default function Home() {
             <h2 className="hero-card-heading">{t("heroCardHeading")}</h2>
             <p className="hero-brand">{t("heroBrand")}</p>
             <p className="hero-value-pill">{t("heroValuePill")}</p>
-            <p className="hero-sub">{t("heroSub")}</p>
+            <TypewriterText className="hero-sub" text={t("heroSub")} />
             <p className="hero-story-link">
               <LocaleLink href="/story">{t("heroStoryLink")} &rarr;</LocaleLink>
             </p>
