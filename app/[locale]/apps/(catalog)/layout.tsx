@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { apps } from "../../data/apps";
-import { buildAppsCatalogGraph } from "../../lib/seo-json-ld";
-import { parseRoutingLocale } from "../../lib/locale-routing";
+import { apps } from "../../../data/apps";
+import { buildAppsCatalogGraph } from "../../../lib/seo-json-ld";
+import { parseRoutingLocale } from "../../../lib/locale-routing";
 import {
   appsCatalogDescription,
   appsOg,
   localizedOpenGraph,
   pageAlternates,
-} from "../../lib/localized-seo";
-import { formatPageTitle } from "../../lib/site-seo";
+} from "../../../lib/localized-seo";
+import { formatPageTitle } from "../../../lib/site-seo";
 
 const APPS_PAGE_TITLE = "AI Products";
 const path = "/apps";
@@ -36,6 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Lives in the (catalog) route group so the catalog JSON-LD stays on /apps only.
+// Product pages under /apps/[slug] publish their own SoftwareApplication graph.
 export default async function AppsLayout({ children, params }: Props) {
   const { locale: raw } = await params;
   const locale = parseRoutingLocale(raw);

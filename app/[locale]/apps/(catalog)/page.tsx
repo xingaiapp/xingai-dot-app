@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import LocaleLink from "../../components/LocaleLink";
-import { useTranslation } from "../../i18n/LanguageContext";
-import { getLocalizedApps, type AppLaunchStatus } from "../../data/apps";
-import AppIcon from "../../components/AppIcon";
-import AppDemoScreenshot from "../../components/AppDemoScreenshot";
+import LocaleLink from "../../../components/LocaleLink";
+import { useTranslation } from "../../../i18n/LanguageContext";
+import { getLocalizedApps, type AppLaunchStatus } from "../../../data/apps";
+import AppIcon from "../../../components/AppIcon";
+import AppDemoScreenshot from "../../../components/AppDemoScreenshot";
 
 export default function AppsPage() {
   const { locale, t } = useTranslation();

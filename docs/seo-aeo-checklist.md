@@ -152,7 +152,7 @@ curl -sL "$BASE/sitemap.xml" | head -20
 | Audit says “no JSON-LD” | Tool only scans body; verify **view-source** `<head>`. |
 | All previews show logo | Route missing `openGraph.images`; or prod cache — bump OG filename. |
 | Chinese Google sees English URL | Missing `/zh` routes or hreflang; switcher only sets cookie. |
-| `/apps` title ≠ share title | `title` vs `openGraph.title` drift; use `apps/layout.tsx` pattern. |
+| `/apps` title ≠ share title | `title` vs `openGraph.title` drift; use `apps/(catalog)/layout.tsx` pattern. |
 | Product missing from description | New app not in `apps.ts` or descriptions not using `getLocalizedApps`. |
 | `useTranslation` crash on build | Header/Footer outside `LocaleProviders` — chrome must live under `app/[locale]/layout.tsx`. |
 
