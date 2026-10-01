@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01p
+**Version:** 2026.10.01q
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01q` Korean pages wrap between words site-wide (`html[lang="ko"]` keep-all); the per-section rules from `01m`/`01o` are removed so Chinese still wraps between characters.
 
 `2026.10.01p` Header nav adds “Build with us / 合作共建 / 함께 만들기”, linking to the homepage build section (`/#build`); shown from ~60rem and in the mobile drawer, not in the five-tab bottom bar. Nav labels no longer wrap mid-word.
 

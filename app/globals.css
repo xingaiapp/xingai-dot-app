@@ -158,6 +158,12 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Korean wraps between words (eojeol), not mid-word; long tokens still break. */
+html[lang="ko"] body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* ── Layout ── */
 .site-body {
   --mobile-bottom-nav-h: 0px;
@@ -641,7 +647,6 @@ html[data-theme="dark"] .lang-menu {
   letter-spacing: -0.025em;
   line-height: 1.22;
   color: var(--ink-strong);
-  word-break: keep-all;
 }
 
 .hero-card-heading .typewriter {
@@ -1354,8 +1359,6 @@ html[data-theme="dark"] .lang-menu {
   margin-bottom: 2.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
-  word-break: keep-all;
-  overflow-wrap: anywhere;
 }
 
 .home-path__steps {
