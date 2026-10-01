@@ -50,7 +50,8 @@ Live or demo products:
 - ShopRadar (waitlist): https://shopradar.xingai.app
 - Performance Sim: https://lab.xingai.app
 - Daily Assistant: https://daily.xingai.app
-- Passive Income Idea (demo): https://passive.xingai.app
+- Passive Income Idea: https://passive.xingai.app
+- Tech Blog: https://blog.xingai.app
 - T Today (invite-only early access): https://t.xingai.app
 
 Decision Agent:

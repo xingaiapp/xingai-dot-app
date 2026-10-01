@@ -579,8 +579,8 @@ export const apps: AppData[] = [
     category: "Wealth AI",
     canDo: "Review the latest fit Idea with capital, time, income band, risks, and a 30-minute next step.",
     bestFor: "Experienced builders seeking long-term passive or cash-flow income without tip spam.",
-    clickTarget: "Free public demo at passive.xingai.app — open board, PDF, and archive.",
-    launchStatus: "demo",
+    clickTarget: "Open the live product at passive.xingai.app.",
+    launchStatus: "live",
     comingSoon: false,
     screenshots: [
       {
@@ -713,6 +713,45 @@ export const apps: AppData[] = [
       { title: "engineering-coach.xingai.app deploy", status: "planned" },
       { title: "Persistent history + weekly report", status: "planned" },
       { title: "Email / push delivery", status: "planned" },
+    ],
+  },
+  {
+    slug: "tech-blog",
+    name: "XingAI Tech Blog",
+    tagline: "How We Ship",
+    icon: "/tech-blog-icon.svg",
+    iconDark: "/tech-blog-icon.svg",
+    favicon: "/tech-blog-icon.svg",
+    demoUrl: "https://blog.xingai.app/",
+    sourceUrl: "https://github.com/xingaiapp/xingai-tech-blog",
+    sourceKind: "github",
+    description:
+      "Public engineering archive for XingAI decision systems — architecture, cache boundaries, MCP gates, and production notes. English and 中文. Not an investing blog.",
+    category: "Engineering",
+    canDo: "Read bilingual posts on how XingAI products are built, filter by tag, and open the Markdown source on GitHub.",
+    bestFor: "Builders who want the architecture notes behind XingAI products, not a marketing funnel.",
+    clickTarget: "Open the live site at blog.xingai.app.",
+    launchStatus: "live",
+    comingSoon: false,
+    screenshots: [
+      {
+        src: "/tech-blog-demo-light.jpg",
+        srcDark: "/tech-blog-demo-dark.jpg",
+        alt: "XingAI Tech Blog",
+        caption: "Latest posts \u2192 bilingual article",
+      },
+    ],
+    features: [
+      { name: "English + 中文 posts", free: true, pro: true, enterprise: true },
+      { name: "EN / 中文 / 한국어 UI", free: true, pro: true, enterprise: true },
+      { name: "Tag archive + sitemap", free: true, pro: true, enterprise: true },
+      { name: "Public Markdown source", free: true, pro: true, enterprise: true },
+      { name: "Light / dark theme", free: true, pro: true, enterprise: true },
+    ],
+    roadmap: [
+      { title: "Static site from existing Markdown", status: "shipped" },
+      { title: "blog.xingai.app Vercel + DNS", status: "shipped" },
+      { title: "Korean article translations", status: "planned" },
     ],
   },
   {
@@ -978,7 +1017,7 @@ const localizedAppCopy: Partial<
         "面向特定画像的被动收入 Idea 研究——看板、邮件 Summary 与 A4 PDF（研究跑通时更新）。仅供参考，非投资建议。公开演示：passive.xingai.app。",
       canDo: "查看最新贴合技能与资金阶段的 Idea，含适合度、收入区间、风险与 30 分钟行动。",
       bestFor: "有工程与管理背景、想建立长期被动/现金流收入、讨厌点子清单的人。",
-      clickTarget: "免费公开演示：passive.xingai.app（看板、PDF、归档）。",
+      clickTarget: "打开线上产品：passive.xingai.app。",
       screenshots: ["今日 Idea 看板：适合度、收入区间与 30 分钟行动"],
       features: [
         "今日 Idea 看板与适合度",
@@ -1368,6 +1407,28 @@ const localizedAppCopy: Partial<
         "邮件 / 推送投递",
       ],
     },
+    "tech-blog": {
+      tagline: "我们怎么上线",
+      category: "工程",
+      description:
+        "XingAI 决策系统的公开工程归档——架构、缓存边界、MCP 闸门与生产笔记。中英双语。不是投资博客。",
+      canDo: "阅读产品怎么建的双语文章，按标签过滤，并打开 GitHub 上的 Markdown 源文件。",
+      bestFor: "想看 XingAI 产品背后架构笔记、而不是营销漏斗的 builder。",
+      clickTarget: "打开线上站点：blog.xingai.app。",
+      screenshots: ["最新文章 → 双语正文"],
+      features: [
+        "英文 + 中文文章",
+        "EN / 中文 / 한국어 界面",
+        "标签归档 + sitemap",
+        "公开 Markdown 源",
+        "浅色 / 深色主题",
+      ],
+      roadmap: [
+        "用现有 Markdown 生成静态站",
+        "blog.xingai.app 的 Vercel + DNS",
+        "韩文正文翻译",
+      ],
+    },
     "travel-ai": {
       tagline: "旅行更好选",
       category: "旅行 AI",
@@ -1503,7 +1564,7 @@ const localizedAppCopy: Partial<
         "정해진 운영자 프로필용 수동소득 Idea 리서치—보드, 메일 Summary, A4 PDF(리서치 실행 시). 정보용이며 투자 조언이 아닙니다. 공개 데모: passive.xingai.app.",
       canDo: "최신 Idea의 적합도·자본·시간·수입 구간·리스크·30분 행동을 검토합니다.",
       bestFor: "엔지니어링·관리 배경으로 장기 수동/현금흐름 소득을 원하며 팁 나열을 싫어하는 사람.",
-      clickTarget: "무료 공개 데모: passive.xingai.app (보드·PDF·아카이브).",
+      clickTarget: "라이브 제품: passive.xingai.app.",
       screenshots: ["오늘 Idea 보드: 적합도, 수입 구간, 30분 행동"],
       features: [
         "Today Idea 보드 + 적합도",
@@ -1891,6 +1952,28 @@ const localizedAppCopy: Partial<
         "engineering-coach.xingai.app 배포",
         "영구 기록과 주간 리포트",
         "이메일 / 푸시 전달",
+      ],
+    },
+    "tech-blog": {
+      tagline: "이렇게 출시합니다",
+      category: "엔지니어링",
+      description:
+        "XingAI 의사결정 시스템의 공개 엔지니어링 아카이브 — 아키텍처, 캐시 경계, MCP 게이트, 운영 노트. 영어와 중국어. 투자 블로그가 아닙니다.",
+      canDo: "제품이 어떻게 만들어졌는지 이중 언어 글을 읽고, 태그로 거르고, GitHub Markdown 소스를 엽니다.",
+      bestFor: "마케팅 퍼널이 아니라 XingAI 제품 뒤의 아키텍처 노트를 원하는 빌더.",
+      clickTarget: "라이브 사이트: blog.xingai.app.",
+      screenshots: ["최신 글 → 이중 언어 본문"],
+      features: [
+        "영어 + 중국어 글",
+        "EN / 中文 / 한국어 UI",
+        "태그 아카이브 + 사이트맵",
+        "공개 Markdown 소스",
+        "라이트 / 다크 테마",
+      ],
+      roadmap: [
+        "기존 Markdown으로 정적 사이트",
+        "blog.xingai.app Vercel + DNS",
+        "한국어 본문 번역",
       ],
     },
     "travel-ai": {
