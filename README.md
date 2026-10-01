@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01w
+**Version:** 2026.10.01x
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01x` Hero carousel auto-advances again (every 4.8s through Invest, Travel, Cook, Wear); pauses on hover or keyboard focus, restarts after a dot click, and stays still under `prefers-reduced-motion`.
 
 `2026.10.01w` Hero preview image loads eagerly with high priority and goes through the Next image optimizer (~30 KB instead of the ~300 KB original); it was lazy-loaded and unoptimized, so the first screen could sit on an empty frame.
 
