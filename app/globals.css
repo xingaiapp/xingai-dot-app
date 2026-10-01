@@ -658,8 +658,7 @@ html[data-theme="dark"] .lang-menu {
   transform: translateY(-1px);
 }
 
-.hero-preview-card:focus-visible,
-.hero-core-card:focus-visible {
+.hero-preview-card:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
@@ -792,63 +791,24 @@ html[data-theme="dark"] .lang-menu {
   background: var(--blue);
 }
 
-.hero-core {
-  display: grid;
-  gap: 0.55rem;
-}
-
-.hero-core-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
-.hero-core-head h2 {
+.hero-see-all {
   margin: 0;
-  font-size: 0.95rem;
-  color: var(--ink-strong);
-}
-
-.hero-core-head a {
-  color: var(--blue);
-  font-size: 0.78rem;
+  text-align: center;
+  font-size: 0.8125rem;
   font-weight: 650;
+}
+
+.hero-see-all a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.5rem;
+  color: var(--blue);
   text-decoration: none;
-  white-space: nowrap;
 }
 
-.hero-core-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.55rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.hero-core-card {
-  display: grid;
-  gap: 0.25rem;
-  min-height: 7.25rem;
-  padding: 0.65rem;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--panel-bg);
-  color: inherit;
-  text-decoration: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
-}
-
-.hero-core-card:hover {
-  border-color: var(--blue);
-  box-shadow: 0 4px 16px var(--cta-shadow);
-  transform: translateY(-1px);
-}
-
-.hero-core-card--active {
-  border-color: color-mix(in srgb, var(--blue) 70%, var(--line));
-  background: var(--badge-bg);
+.hero-see-all a:hover {
+  text-decoration: underline;
 }
 
 /* App logos — fixed frame; artwork scaled inside for optical consistency */
@@ -869,26 +829,6 @@ html[data-theme="dark"] .lang-menu {
   object-position: center;
 }
 
-.hero-core-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 8px;
-}
-
-.hero-core-card span {
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--ink-strong);
-}
-
-.hero-core-card small {
-  font-size: 0.7rem;
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--blue);
-}
-
 .hero-actions {
   display: flex;
   flex-direction: column;
@@ -902,82 +842,6 @@ html[data-theme="dark"] .lang-menu {
   font-size: 0.8125rem;
   line-height: 1.5;
   color: var(--muted);
-}
-
-.hero-quick-demos {
-  margin-top: 1.15rem;
-}
-
-.hero-quick-demos__label {
-  margin: 0 0 0.55rem;
-  font-size: 0.75rem;
-  font-weight: 650;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.hero-quick-demos__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0.5rem;
-}
-
-.hero-quick-demo-link {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  min-height: 2.75rem;
-  padding: 0.5rem 0.65rem;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--soft-bg);
-  color: inherit;
-  text-decoration: none;
-  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
-}
-
-.hero-quick-demo-link:hover {
-  border-color: var(--blue);
-  background: var(--badge-bg);
-  transform: translateY(-1px);
-}
-
-.hero-quick-demo-link:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 2px;
-}
-
-.hero-quick-demo-link__icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 8px;
-}
-
-.hero-quick-demo-link__text {
-  display: grid;
-  gap: 0.1rem;
-  min-width: 0;
-  flex: 1;
-}
-
-.hero-quick-demo-link__name {
-  font-size: 0.8125rem;
-  font-weight: 650;
-  line-height: 1.25;
-  color: var(--ink-strong);
-}
-
-.hero-quick-demo-link__hint {
-  font-size: 0.6875rem;
-  line-height: 1.25;
-  color: var(--muted);
-}
-
-.hero-quick-demo-link .app-status-badge {
-  margin-left: auto;
 }
 
 @media (min-width: 36rem) {
@@ -1003,13 +867,9 @@ html[data-theme="dark"] .lang-menu {
   .hero-copy {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     max-width: 28rem;
     padding-top: 0.35rem;
-  }
-
-  .hero-quick-demos {
-    margin-top: auto;
-    padding-top: 1.25rem;
   }
 
   .hero-preview-stage {
@@ -1082,19 +942,6 @@ html[data-theme="dark"] .lang-menu {
     gap: 0.2rem;
   }
 
-  .hero-core-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-core-card {
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
-    min-height: 0;
-  }
-
-  .hero-core-card small {
-    grid-column: 2;
-  }
 }
 
 @keyframes hero-slide-in {

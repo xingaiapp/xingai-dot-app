@@ -55,9 +55,7 @@ const translations = {
     heroSub:
       "Focused AI systems for everyday decisions. The public flagship is the Invest AI Industry Map: supply-chain layers and cited filings, not a trading desk. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
     heroStoryLink: "How XingAI turns ideas into products",
-    heroGridLabel: "Our AI decision systems",
     heroPreviewLabel: "System preview",
-    heroCoreSystems: "Explore core systems",
     homeAppsHeading: "Start here",
     homeAppsLead:
       "The Industry Map first. Cook and Travel if you want a live product. ShopRadar if you need a product score. Everything else is on the apps page.",
@@ -82,8 +80,6 @@ const translations = {
     homeBrowseAll: "See all apps",
     homeCta: "Get in touch",
     publicBetaNote: "All live tools are currently free to try during public beta.",
-    heroQuickDemosLabel: "Jump into a free demo",
-    heroQuickDemoHint: "Opens live tool",
     answerHeading: "Quick answers",
     answerLead:
       "Short answers for people and AI search systems trying to understand what XingAI does.",
@@ -407,9 +403,7 @@ const translations = {
     heroSub:
       "\u9762\u5411\u65e5\u5e38\u51b3\u7b56\u7684\u4e13\u6ce8 AI \u7cfb\u7edf\u3002\u516c\u5f00\u65d7\u8230\u662f Invest AI \u4ea7\u4e1a\u5730\u56fe\uff1a\u4ea7\u4e1a\u94fe\u56fe\u5c42\u548c\u5e26\u5f15\u7528\u7684\u5907\u6848\uff0c\u4e0d\u662f\u4ea4\u6613\u53f0\u3002English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4\u3002",
     heroStoryLink: "XingAI 如何把想法变成产品",
-    heroGridLabel: "\u6211\u4eec\u7684 AI \u51b3\u7b56\u7cfb\u7edf",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
-    heroCoreSystems: "\u63a2\u7d22\u6838\u5fc3\u7cfb\u7edf",
     homeAppsHeading: "\u4ece\u8fd9\u91cc\u5f00\u59cb",
     homeAppsLead:
       "\u5148\u770b\u4ea7\u4e1a\u5730\u56fe\u3002\u60f3\u8981\u5df2\u4e0a\u7ebf\u4ea7\u54c1\u5c31\u770b Cook \u548c Travel\u3002\u9009\u54c1\u770b ShopRadar\u3002\u5176\u4f59\u5728\u4ea7\u54c1\u76ee\u5f55\u91cc\u3002",
@@ -434,8 +428,6 @@ const translations = {
     homeBrowseAll: "\u67e5\u770b\u5168\u90e8\u4ea7\u54c1",
     homeCta: "\u8054\u7cfb\u6211\u4eec",
     publicBetaNote: "\u516c\u5f00 Beta \u671f\u95f4\uff0c\u6240\u6709\u5df2\u4e0a\u7ebf\u5de5\u5177\u76ee\u524d\u90fd\u53ef\u514d\u8d39\u8bd5\u7528\u3002",
-    heroQuickDemosLabel: "\u76f4\u63a5\u8fdb\u5165\u514d\u8d39 Demo",
-    heroQuickDemoHint: "\u6253\u5f00\u5df2\u4e0a\u7ebf\u5de5\u5177",
     answerHeading: "快速了解",
     answerLead: "给用户和 AI 搜索系统的简短答案，帮助快速理解 XingAI 是什么。",
     answerQ1: "XingAI 是什么？",
@@ -747,9 +739,7 @@ const translations = {
     heroSub:
       "\uc77c\uc0c1 \uacb0\uc815\uc744 \uc704\ud55c \uc9d1\uc911\ud615 AI \uc2dc\uc2a4\ud15c\uc785\ub2c8\ub2e4. \uacf5\uac1c \ud50c\ub798\uadf8\uc2ed\uc740 Invest AI \uc0b0\uc5c5 \uc9c0\ub3c4\uc785\ub2c8\ub2e4. \uacf5\uae09\ub9dd \ub808\uc774\uc5b4\uc640 \uc778\uc6a9\ub41c \uacf5\uc2dc\uc774\uba70, \ub9e4\ub9e4 \ucc3d\uad6c\uac00 \uc544\ub2d9\ub2c8\ub2e4. English \u00b7 \u4e2d\u6587 \u00b7 \ud55c\uad6d\uc5b4.",
     heroStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
-    heroGridLabel: "\uc6b0\ub9ac\uc758 AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
-    heroCoreSystems: "\ud575\uc2ec \uc2dc\uc2a4\ud15c \ub458\ub7ec\ubcf4\uae30",
     homeAppsHeading: "\uc5ec\uae30\uc11c \uc2dc\uc791",
     homeAppsLead:
       "\uba3c\uc800 \uc0b0\uc5c5 \uc9c0\ub3c4. \ub77c\uc774\ube0c \uc81c\ud488\uc740 Cook\uacfc Travel. \ubb58 \ud314\uc9c0 \uace0\ub974\ub824\uba74 ShopRadar. \ub098\uba38\uc9c0\ub294 \uc571 \ubaa9\ub85d\uc5d0 \uc788\uc2b5\ub2c8\ub2e4.",
@@ -774,8 +764,6 @@ const translations = {
     homeBrowseAll: "\uc804\uccb4 \uc571 \ubcf4\uae30",
     homeCta: "\uc5f0\ub77d\ud558\uae30",
     publicBetaNote: "\uacf5\uac1c Beta \uae30\uac04 \ub3d9\uc548 \ubaa8\ub4e0 \ub77c\uc774\ube0c \ub3c4\uad6c\ub97c \ubb34\ub8cc\ub85c \uccb4\ud5d8\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
-    heroQuickDemosLabel: "\ubb34\ub8cc \ub370\ubaa8\ub85c \ubc14\ub85c \uc774\ub3d9",
-    heroQuickDemoHint: "\ub77c\uc774\ube0c \ub3c4\uad6c \uc5f4\uae30",
     answerHeading: "빠른 답변",
     answerLead: "사용자와 AI 검색 시스템이 XingAI를 빠르게 이해할 수 있도록 정리한 짧은 답변입니다.",
     answerQ1: "XingAI는 무엇인가요?",

@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.09.30c
+**Version:** 2026.10.01a
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01a` Homepage hero de-duplication: hero leads with Invest (then Travel, Cook, Eating Decision, SAT) and drops the “Jump into a free demo” list and the “Explore core systems” grid, which repeated the carousel. The carousel keeps its dots plus a “See all systems” link; the curated Start here shelf (Invest / Travel / Cook / ShopRadar) is unchanged. Invest preview image is now a current `/ai-map` capture.
 
 `2026.09.30c` Home Demos: T Today lead says early access via Contact (matches `/contact` card link; no longer implies a direct open of t.xingai.app).
 
