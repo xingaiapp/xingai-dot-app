@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import LocaleLink from "../components/LocaleLink";
-import { useEffect, useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { getHomeShelfApps, getLocalizedApps, type AppLaunchStatus } from "../data/apps";
 import AppIcon from "../components/AppIcon";
@@ -75,26 +74,16 @@ function AnswerIcon({ index }: { index: number }) {
 export default function Home() {
   const { locale, t } = useTranslation();
   const teamCopy = getTeamCopy(locale);
-  const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const apps = getLocalizedApps(locale);
   const homeShelfApps = getHomeShelfApps(locale);
-  const heroPreviewApps = ["investment-assistant", "travel-ai", "cook-ai", "meal-coach", "sat-ai"].flatMap(
-    (slug) => {
-      const app = apps.find((item) => item.slug === slug);
-      return app ? [app] : [];
-    },
-  );
+  // Hero preview is the flagship only; other products appear once, in "Start here".
   const heroPrimaryApp =
-    heroPreviewApps[activeHeroIndex] ?? heroPreviewApps[0] ?? apps[0];
+    apps.find((app) => app.slug === "investment-assistant") ?? apps[0];
   const appStatusLabels: Record<AppLaunchStatus, string> = {
     live: t("appStatusLive"),
     demo: t("appStatusDemo"),
     "coming-soon": t("appStatusComingSoon"),
   };
-
-  useEffect(() => {
-    setActiveHeroIndex(0);
-  }, [locale]);
 
   const answerItems = [
     { question: t("answerQ1"), answer: t("answerA1") },
@@ -184,32 +173,6 @@ export default function Home() {
                 </div>
               </LocaleLink>
               </div>
-
-              {heroPreviewApps.length > 1 ? (
-                <div className="hero-slide-controls" aria-label={t("heroPreviewLabel")}>
-                  {heroPreviewApps.map((app, index) => (
-                    <button
-                      key={app.slug}
-                      type="button"
-                      className={`hero-slide-dot${
-                        app.slug === heroPrimaryApp.slug ? " hero-slide-dot--active" : ""
-                      }`}
-                      aria-label={app.name}
-                      aria-current={app.slug === heroPrimaryApp.slug ? "true" : undefined}
-                      onClick={() => setActiveHeroIndex(index)}
-                    >
-                      <span>{app.name}</span>
-                    </button>
-                  ))}
-                </div>
-              ) : null}
-
-              <p className="hero-see-all">
-                <LocaleLink href="/apps">
-                  {t("footerSeeSystems")}
-                  <span aria-hidden="true"> →</span>
-                </LocaleLink>
-              </p>
             </div>
           ) : null}
         </div>
