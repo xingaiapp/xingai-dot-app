@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01i
+**Version:** 2026.10.01j
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01j` Hero typewriter slowed (~28ms/char, up to ~14s for long EN lead).
 
 `2026.10.01i` Homepage hero lead (`heroSub`) types in on load (en / 中文 / 한국어); respects `prefers-reduced-motion`; caret fades after finish.
 

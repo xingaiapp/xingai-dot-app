@@ -18,7 +18,7 @@ type TypewriterTextProps = {
 export default function TypewriterText({
   text,
   className,
-  maxDurationMs = 7200,
+  maxDurationMs = 14000,
 }: TypewriterTextProps) {
   const [shown, setShown] = useState("");
   const [done, setDone] = useState(false);
@@ -39,7 +39,7 @@ export default function TypewriterText({
 
     const chars = Array.from(text);
     const total = chars.length;
-    const duration = Math.min(maxDurationMs, Math.max(2200, total * 11));
+    const duration = Math.min(maxDurationMs, Math.max(4000, total * 28));
     const started = performance.now();
     let frame = 0;
 
