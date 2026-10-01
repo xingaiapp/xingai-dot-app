@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01o
+**Version:** 2026.10.01p
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01p` Header nav adds “Build with us / 合作共建 / 함께 만들기”, linking to the homepage build section (`/#build`); shown from ~60rem and in the mobile drawer, not in the five-tab bottom bar. Nav labels no longer wrap mid-word.
 
 `2026.10.01o` Homepage “From question to your decision” band under the hero (`HomeDecisionPath`): Question → Research → Challenge → Evidence → You decide, worked through a Travel example (en / 中文 / 한국어), ending on “nothing is booked or bought for you”; links to Travel AI. Investing is deliberately not the example. Five cards in a row on desktop, stacked with connectors on phone.
 

@@ -32,6 +32,7 @@ export default function MobileNavDrawer({
     { href: localePath("/team"), label: t("navTeam"), icon: "navTeam" },
     { href: localePath("/about"), label: t("navAbout"), icon: "navAbout" },
     { href: localePath("/contact"), label: t("navContact"), icon: "navContact" },
+    { href: `${localePath("/")}#build`, label: t("navBuild"), icon: "navBuild" },
   ];
 
   const close = useCallback(() => onOpenChange(false), [onOpenChange]);

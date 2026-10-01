@@ -57,7 +57,7 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`header-nav-link${isNavActive(pathname, href) ? " header-nav-link--active" : ""}`}
+                className={`header-nav-link${isNavActive(pathname, href) ? " header-nav-link--active" : ""}${key === "navBuild" ? " header-nav-link--build" : ""}`}
               >
                 {t(key)}
               </Link>

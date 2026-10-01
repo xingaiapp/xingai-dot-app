@@ -284,11 +284,19 @@ html[data-theme="dark"] .site-header {
   min-height: 2.5rem;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .header-nav-link:hover {
   color: var(--ink-strong);
   background: var(--line);
+}
+
+/* Seven links only fit from ~60rem; below that Build stays in the homepage section. */
+@media (max-width: 59.99rem) {
+  .header-nav-link--build {
+    display: none;
+  }
 }
 
 .header-nav-link--active {
@@ -1334,6 +1342,11 @@ html[data-theme="dark"] .lang-menu {
 
 .home-demos {
   margin-top: 1.25rem;
+}
+
+/* Header nav "Build with us" lands here; clear the sticky header. */
+.home-build {
+  scroll-margin-top: 5rem;
 }
 
 /* ── Homepage decision path (question → you decide) ── */

@@ -410,7 +410,7 @@ export default function Home() {
         </dl>
       </section>
 
-      <section className="home-build" aria-labelledby="home-build-heading">
+      <section id="build" className="home-build" aria-labelledby="home-build-heading">
         <h2 id="home-build-heading" className="section-title">
           {t("buildHeading")}
         </h2>

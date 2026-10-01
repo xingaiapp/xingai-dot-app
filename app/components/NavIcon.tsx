@@ -69,6 +69,17 @@ export default function NavIcon({ name, className }: NavIconProps) {
           <path d="m4.8 7.2 7.2 5.4 7.2-5.4" />
         </svg>
       );
+    case "navBuild":
+      return (
+        <svg {...common}>
+          <path d="M12 3v4" />
+          <path d="M12 17v4" />
+          <path d="M3 12h4" />
+          <path d="M17 12h4" />
+          <path d="m9 9 3-3 3 3-3 3z" />
+          <path d="m9 15 3 3 3-3" />
+        </svg>
+      );
     default:
       return null;
   }
