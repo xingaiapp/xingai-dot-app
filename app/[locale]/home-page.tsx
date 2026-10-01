@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { getHomeShelfApps, getLocalizedApps, type AppLaunchStatus } from "../data/apps";
 import AppIcon from "../components/AppIcon";
-import { APP_ICON_SIZE } from "../lib/app-icon";
 import AppDemoScreenshot from "../components/AppDemoScreenshot";
 import HomeSystemLoop from "../components/HomeSystemLoop";
 import { agentRoles, getTeamCopy } from "../data/team";
@@ -85,9 +84,6 @@ export default function Home() {
   );
   const heroPrimaryApp =
     heroPreviewApps[activeHeroIndex] ?? heroPreviewApps[0] ?? apps[0];
-  const heroQuickDemos = heroPreviewApps.filter(
-    (app) => app.demoUrl && app.launchStatus !== "coming-soon",
-  );
   const appStatusLabels: Record<AppLaunchStatus, string> = {
     live: t("appStatusLive"),
     demo: t("appStatusDemo"),
@@ -135,42 +131,6 @@ export default function Home() {
               </LocaleLink>
             </div>
             <p className="hero-beta-note">{t("publicBetaNote")}</p>
-            {heroQuickDemos.length > 0 ? (
-              <div className="hero-quick-demos">
-                <p className="hero-quick-demos__label">{t("heroQuickDemosLabel")}</p>
-                <ul className="hero-quick-demos__list">
-                  {heroQuickDemos.map((app) => (
-                    <li key={app.slug}>
-                      <a
-                        href={app.demoUrl}
-                        className="hero-quick-demo-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <AppIcon
-                          light={app.icon}
-                          dark={app.iconDark}
-                          alt=""
-                          size={APP_ICON_SIZE}
-                          className="hero-quick-demo-link__icon"
-                        />
-                        <span className="hero-quick-demo-link__text">
-                          <span className="hero-quick-demo-link__name">{app.name}</span>
-                          <span className="hero-quick-demo-link__hint">
-                            {t("heroQuickDemoHint")}
-                          </span>
-                        </span>
-                        <span
-                          className={`app-status-badge app-status-badge--${app.launchStatus}`}
-                        >
-                          {appStatusLabels[app.launchStatus]}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
           </div>
 
           {heroPrimaryApp ? (
@@ -239,37 +199,12 @@ export default function Home() {
                 </div>
               ) : null}
 
-              <div className="hero-core">
-                <div className="hero-core-head">
-                  <h2>{t("heroCoreSystems")}</h2>
-                  <LocaleLink href="/apps">
-                    {t("footerSeeSystems")}
-                    <span aria-hidden="true"> →</span>
-                  </LocaleLink>
-                </div>
-                <ul className="hero-core-grid" aria-label={t("heroGridLabel")}>
-                  {heroPreviewApps.map((app) => (
-                    <li key={app.slug}>
-                      <LocaleLink
-                        href={`/apps/${app.slug}`}
-                        className={`hero-core-card${
-                          app.slug === heroPrimaryApp.slug ? " hero-core-card--active" : ""
-                        }`}
-                      >
-                        <AppIcon
-                          light={app.icon}
-                          dark={app.iconDark}
-                          alt=""
-                          size={APP_ICON_SIZE}
-                          className="hero-core-icon"
-                        />
-                        <span>{app.name}</span>
-                        <small>{app.tagline}</small>
-                      </LocaleLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <p className="hero-see-all">
+                <LocaleLink href="/apps">
+                  {t("footerSeeSystems")}
+                  <span aria-hidden="true"> →</span>
+                </LocaleLink>
+              </p>
             </div>
           ) : null}
         </div>
