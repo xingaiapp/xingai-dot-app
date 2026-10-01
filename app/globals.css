@@ -697,15 +697,6 @@ html[data-theme="dark"] .lang-menu {
   }
 }
 
-.hero-brand {
-  margin: 0 0 1.55rem;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
 .hero-sub {
   margin: 0 0 1.85rem;
   font-size: 1.0625rem;
@@ -1343,6 +1334,17 @@ html[data-theme="dark"] .lang-menu {
   text-decoration: none;
   color: inherit;
   display: block;
+}
+
+/* Phone: keep "Start here" cards short — wider crop, only the "can do" line. */
+@media (max-width: 35.99rem) {
+  .home-apps .app-card-thumb {
+    aspect-ratio: 16 / 9;
+  }
+
+  .home-apps .app-card-fit div:not(:first-child) {
+    display: none;
+  }
 }
 
 /* Header nav "Build with us" and the hero "Try a live product" button land here; clear the sticky header. */

@@ -51,12 +51,11 @@ const translations = {
     legalNotFound: "Page not found",
 
     // Home
-    heroBrand: "XingAI",
     tagline: "AI Decision Systems",
     taglineSub: "Not just chat.",
     heroCardHeading: "Real questions, checked reasoning — then you decide.",
     heroSub:
-      "The public flagship is the Invest AI Industry Map: walk the AI supply chain layer by layer, with claims tied to cited filings. It is research you can check, not a trading desk and not a buy list. Travel, Cook and more cover everyday decisions — open any card to try a demo.",
+      "Start with the Invest AI Industry Map: the AI supply chain layer by layer, with claims tied to cited filings — research you can check, not a buy list.",
     heroStoryLink: "How XingAI turns ideas into products",
     heroTryLiveCta: "Try a live product",
     appsFinanceDisclaimer: "Finance demos (Performance Sim, T Today): paper structure only · not investment advice · no broker integration.",
@@ -122,12 +121,12 @@ const translations = {
       "No. Outputs are informational. Verify before you book, cook, study, or invest. Privacy, Terms, and Disclaimer are at xingai.app/legal.",
 
     // Build With Us
-    buildHeading: "Have an idea? We\u2019ll build it with you.",
+    buildHeading: "Build your own AI decision system",
     buildLead:
-      "We don\u2019t just build our own AI products\u2014we help teams and founders bring their ideas to life. From concept to launch, we work as your AI team: architecture, design, engineering, and deployment.",
-    buildPoint1: "Share your idea \u2014 we\u2019ll map it into a focused AI product",
+      "The same approach behind Invest, Travel and Cook — research, push back, show the evidence, leave the call to a person — built around a decision your team makes.",
+    buildPoint1: "Bring one recurring decision — we map it into a focused system",
     buildPoint2: "We design, build, and ship \u2014 you stay in the driver\u2019s seat",
-    buildPoint3: "Custom AI solutions on the same platform we use ourselves",
+    buildPoint3: "Built on the same platform we run our own products on",
     buildCta: "Tell us your idea",
 
     // Co-founders (shared: home + about)
@@ -435,12 +434,11 @@ const translations = {
     legalRelated: "\u76f8\u5173\u653f\u7b56",
     legalNotFound: "\u9875\u9762\u672a\u627e\u5230",
 
-    heroBrand: "XingAI",
     tagline: "AI \u51b3\u7b56\u7cfb\u7edf",
     taglineSub: "不只是聊天。",
     heroCardHeading: "真实的问题，经过检验的推理——最后由你决定。",
     heroSub:
-      "公开旗舰是 Invest AI 产业地图：按图层看 AI 产业链，结论都挂引用备案。这是可核对的研究，不是交易台，也不是买入清单。旅行、做饭等产品覆盖日常决策——点开任何卡片即可试用 Demo。",
+      "从 Invest AI 产业地图开始：按图层看 AI 产业链，结论都挂引用备案——可核对的研究，不是买入清单。",
     heroStoryLink: "XingAI 如何把想法变成产品",
     heroTryLiveCta: "试用已上线产品",
     appsFinanceDisclaimer: "金融类演示（Performance Sim、T Today）：仅纸面结构 · 非投资建议 · 不对接券商下单。",
@@ -504,12 +502,12 @@ const translations = {
     answerA5:
       "不算。输出仅供参考。预订、做饭、学习或投资前请自行核实。隐私、条款与免责声明在 xingai.app/legal。",
 
-    buildHeading: "\u6709\u60f3\u6cd5\uff1f\u6211\u4eec\u5e2e\u4f60\u5b9e\u73b0",
+    buildHeading: "打造你自己的 AI 决策系统",
     buildLead:
-      "\u6211\u4eec\u4e0d\u4ec5\u5f00\u53d1\u81ea\u5df1\u7684 AI \u4ea7\u54c1\u2014\u2014\u6211\u4eec\u4e5f\u5e2e\u52a9\u56e2\u961f\u548c\u521b\u59cb\u4eba\u5c06\u60f3\u6cd5\u53d8\u4e3a\u73b0\u5b9e\u3002\u4ece\u6982\u5ff5\u5230\u53d1\u5e03\uff0c\u6211\u4eec\u4f5c\u4e3a\u4f60\u7684 AI \u56e2\u961f\uff1a\u67b6\u6784\u3001\u8bbe\u8ba1\u3001\u5f00\u53d1\u548c\u90e8\u7f72\u3002",
-    buildPoint1: "\u5206\u4eab\u4f60\u7684\u60f3\u6cd5 \u2014 \u6211\u4eec\u5c06\u5176\u8f6c\u5316\u4e3a\u4e13\u6ce8\u7684 AI \u4ea7\u54c1",
+      "Invest、Travel、Cook 背后的同一套做法——先研究、再质疑、摆出证据、最后由人拍板——围绕你团队要做的决定来搭建。",
+    buildPoint1: "带来一个反复要做的决定——我们把它梳理成一个专注的系统",
     buildPoint2: "\u6211\u4eec\u8bbe\u8ba1\u3001\u5f00\u53d1\u3001\u4ea4\u4ed8 \u2014 \u4f60\u638c\u63a7\u65b9\u5411",
-    buildPoint3: "\u5728\u6211\u4eec\u81ea\u5df1\u4f7f\u7528\u7684\u540c\u4e00\u5e73\u53f0\u4e0a\u5b9a\u5236 AI \u89e3\u51b3\u65b9\u6848",
+    buildPoint3: "跑在我们自己产品所用的同一平台上",
     buildCta: "\u544a\u8bc9\u6211\u4eec\u4f60\u7684\u60f3\u6cd5",
 
     cofounders: "\u8054\u5408\u521b\u59cb\u4eba",
@@ -805,12 +803,11 @@ const translations = {
     legalRelated: "\uad00\ub828 \uc815\ucc45",
     legalNotFound: "\ud398\uc774\uc9c0\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4",
 
-    heroBrand: "XingAI",
     tagline: "AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     taglineSub: "단순한 채팅이 아닙니다.",
     heroCardHeading: "진짜 질문, 검증된 추론 — 결정은 당신이 합니다.",
     heroSub:
-      "공개 플래그십은 Invest AI 산업 지도입니다. AI 공급망을 레이어별로 보고, 주장은 인용된 공시에 맞춥니다. 확인 가능한 리서치이며, 매매 창구나 매수 목록이 아닙니다. 여행, 요리 등 제품이 일상의 결정을 돕습니다 — 카드를 열어 데모를 시험해 보세요.",
+      "Invest AI 산업 지도부터 보세요. AI 공급망을 레이어별로 보고, 주장은 인용된 공시에 맞춥니다 — 확인 가능한 리서치이며 매수 목록이 아닙니다.",
     heroStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
     heroTryLiveCta: "라이브 제품 써 보기",
     appsFinanceDisclaimer: "금융 데모(Performance Sim, T Today): 종이 구조용 · 투자 조언 아님 · 브로커 연동 없음.",
@@ -874,12 +871,12 @@ const translations = {
     answerA5:
       "아닙니다. 정보는 참고용입니다. 예약, 요리, 공부, 투자 전에 직접 확인하세요. 개인정보, 약관, 면책 고지는 xingai.app/legal 에 있습니다.",
 
-    buildHeading: "\uc544\uc774\ub514\uc5b4\uac00 \uc788\uc73c\uc2e0\uac00\uc694? \ud568\uaed8 \ub9cc\ub4e4\uc5b4 \ub4dc\ub9bd\ub2c8\ub2e4.",
+    buildHeading: "당신만의 AI 의사결정 시스템을 만드세요",
     buildLead:
-      "\uc6b0\ub9ac\ub294 \uc790\uccb4 AI \uc81c\ud488\ub9cc \ub9cc\ub4dc\ub294 \uac83\uc774 \uc544\ub2c8\ub77c, \ud300\uacfc \ucc3d\uc5c5\uc790\uc758 \uc544\uc774\ub514\uc5b4\ub97c \ud604\uc2e4\ub85c \ub9cc\ub4dc\ub294 \uac83\ub3c4 \ub3d5\uc2b5\ub2c8\ub2e4. \ucee8\uc149\ud2b8\ubd80\ud130 \ucd9c\uc2dc\uae4c\uc9c0, \uc6b0\ub9ac\uac00 \ub2f9\uc2e0\uc758 AI \ud300\uc774 \ub429\ub2c8\ub2e4.",
-    buildPoint1: "\uc544\uc774\ub514\uc5b4\ub97c \uacf5\uc720\ud558\uc138\uc694 \u2014 \uc9d1\uc911\ub41c AI \uc81c\ud488\uc73c\ub85c \uc124\uacc4\ud574 \ub4dc\ub9bd\ub2c8\ub2e4",
+      "Invest, Travel, Cook에 쓰는 같은 방식 — 리서치하고, 반론을 제기하고, 근거를 보여 주고, 결정은 사람이 — 을 당신 팀의 결정에 맞춰 만듭니다.",
+    buildPoint1: "반복되는 결정 하나를 가져오세요 — 집중된 시스템으로 설계해 드립니다",
     buildPoint2: "\uc6b0\ub9ac\uac00 \uc124\uacc4, \uac1c\ubc1c, \ubc30\ud3ec \u2014 \ub2f9\uc2e0\uc774 \ubc29\ud5a5\uc744 \uc815\ud569\ub2c8\ub2e4",
-    buildPoint3: "\uc6b0\ub9ac\uac00 \uc9c1\uc811 \uc0ac\uc6a9\ud558\ub294 \ud50c\ub7ab\ud3fc\uc5d0\uc11c \ub9de\ucda4\ud615 AI \uc194\ub8e8\uc158",
+    buildPoint3: "우리 제품이 돌아가는 같은 플랫폼 위에서 만듭니다",
     buildCta: "\uc544\uc774\ub514\uc5b4\ub97c \uc54c\ub824\uc8fc\uc138\uc694",
 
     cofounders: "\uacf5\ub3d9 \ucc3d\ub9bd\uc790",

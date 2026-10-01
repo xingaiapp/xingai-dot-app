@@ -123,7 +123,6 @@ export default function Home() {
               loop
               loopPauseMs={2400}
             />
-            <p className="hero-brand">{t("heroBrand")}</p>
             <p className="hero-sub">{t("heroSub")}</p>
             <p className="hero-story-link">
               <LocaleLink href="/story">{t("heroStoryLink")} &rarr;</LocaleLink>
