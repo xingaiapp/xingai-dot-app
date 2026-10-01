@@ -806,7 +806,7 @@ const translations = {
     taglineSub: "단순한 채팅이 아닙니다.",
     heroCardHeading: "진짜 질문, 검증된 추론 — 결정은 당신이 합니다.",
     heroSub:
-      "공개 플래그십은 Invest AI 산업 지도입니다. AI 공급망을 레이어별로 보고, 주장은 인용된 공시에 맞춥니다. 확인 가능한 리서치이며, 매매 창구나 매수 목록이 아닙니다. 여행·요리 등 제품이 일상의 결정을 돕습니다 — 카드를 열어 데모를 시험해 보세요.",
+      "공개 플래그십은 Invest AI 산업 지도입니다. AI 공급망을 레이어별로 보고, 주장은 인용된 공시에 맞춥니다. 확인 가능한 리서치이며, 매매 창구나 매수 목록이 아닙니다. 여행, 요리 등 제품이 일상의 결정을 돕습니다 — 카드를 열어 데모를 시험해 보세요.",
     heroStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
     homePathHeading: "질문에서 당신의 결정까지",
