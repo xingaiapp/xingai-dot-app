@@ -148,8 +148,8 @@ export default function Home() {
                 {heroPrimaryApp.screenshots[0] ? (
                   <AppDemoScreenshot
                     shot={heroPrimaryApp.screenshots[0]}
-                    unoptimized
-                    sizes="(max-width: 36rem) 90vw, 30rem"
+                    priority
+                    sizes="(max-width: 47.99rem) 92vw, 36rem"
                     wrapClassName="hero-preview-media"
                     imageClassName="hero-preview-img app-demo-shot"
                   />

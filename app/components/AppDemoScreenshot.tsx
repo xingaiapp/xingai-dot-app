@@ -14,6 +14,8 @@ type Props = {
   wrapClassName?: string;
   imageClassName?: string;
   unoptimized?: boolean;
+  /** Above-the-fold shot: load eagerly with high fetch priority. */
+  priority?: boolean;
 };
 
 export default function AppDemoScreenshot({
@@ -22,6 +24,7 @@ export default function AppDemoScreenshot({
   wrapClassName = "",
   imageClassName = "app-demo-shot",
   unoptimized,
+  priority,
 }: Props) {
   const heroFocus = shot.framing === "hero-focus";
   const cardThumb = wrapClassName.includes("app-card-thumb");
@@ -45,6 +48,7 @@ export default function AppDemoScreenshot({
           : { width: DEMO_SCREENSHOT_WIDTH, height: DEMO_SCREENSHOT_HEIGHT })}
         sizes={sizes}
         unoptimized={skipOptimizer}
+        priority={priority}
         className={`${imageClassName}${heroFocus ? " app-demo-shot--hero-focus" : ""}`.trim()}
       />
     </div>

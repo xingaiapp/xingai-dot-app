@@ -13,6 +13,7 @@ type Props = {
   width?: number;
   height?: number;
   unoptimized?: boolean;
+  priority?: boolean;
 };
 
 export default function ThemedImage({ src, srcDark, alt, ...rest }: Props) {
