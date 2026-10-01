@@ -8,6 +8,7 @@ import { useTranslation } from "../i18n/LanguageContext";
 import { getHomeShelfApps, getLocalizedApps, type AppLaunchStatus } from "../data/apps";
 import AppIcon from "../components/AppIcon";
 import AppDemoScreenshot from "../components/AppDemoScreenshot";
+import HomeDecisionPath from "../components/HomeDecisionPath";
 import HomeSystemLoop from "../components/HomeSystemLoop";
 import TypewriterText from "../components/TypewriterText";
 import { agentRoles, getTeamCopy } from "../data/team";
@@ -219,6 +220,8 @@ export default function Home() {
         </div>
         </div>
       </section>
+
+      <HomeDecisionPath />
 
       <section className="home-apps" aria-labelledby="home-apps-heading">
         <h2 id="home-apps-heading" className="section-title">
