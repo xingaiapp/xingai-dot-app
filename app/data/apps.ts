@@ -2154,7 +2154,7 @@ export const INTERNAL_TOOL_SLUGS = new Set([
 export const HOME_SHELF_SLUGS = [
   "travel-ai",
   "cook-ai",
-  "shop-radar",
+  "outfit-ai",
 ] as const;
 
 export function isInternalTool(app: Pick<AppData, "slug">): boolean {

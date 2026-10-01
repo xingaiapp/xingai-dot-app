@@ -81,7 +81,7 @@ const translations = {
     homePathTryTravel: "Try it in Travel AI",
     homeAppsHeading: "Start here",
     homeAppsLead:
-      "Travel and Cook are live for everyday decisions. ShopRadar if you need a product score. Everything else is on the apps page.",
+      "Travel, Cook and Wear are live for everyday decisions: where to go, what to cook, what to wear. Everything else is on the apps page.",
     homeDemosHeading: "Demos",
     homeDemosLead:
       "Mobile product previews — open live demos in a new tab. T Today early access is free to request.",
@@ -465,7 +465,7 @@ const translations = {
     homePathTryTravel: "在 Travel AI 里试试",
     homeAppsHeading: "\u4ece\u8fd9\u91cc\u5f00\u59cb",
     homeAppsLead:
-      "日常决策先试已上线的 Travel 和 Cook。选品看 ShopRadar。其余在产品目录里。",
+      "日常决策先试已上线的 Travel、Cook 和 Wear：去哪儿、做什么、穿什么。其余在产品目录里。",
     homeDemosHeading: "\u5728\u7ebf\u6f14\u793a",
     homeDemosLead:
       "\u79fb\u52a8\u7aef\u4ea7\u54c1\u9884\u89c8\u2014\u516c\u5f00 Demo \u65b0\u6807\u7b7e\u6253\u5f00\u3002T Today \u5185\u6d4b\u514d\u8d39\u7533\u8bf7\u3002",
@@ -835,7 +835,7 @@ const translations = {
     homePathTryTravel: "Travel AI에서 해 보기",
     homeAppsHeading: "\uc5ec\uae30\uc11c \uc2dc\uc791",
     homeAppsLead:
-      "일상의 결정은 라이브 중인 Travel과 Cook부터. 뭘 팔지 고르려면 ShopRadar. 나머지는 앱 목록에 있습니다.",
+      "일상의 결정은 라이브 중인 Travel, Cook, Wear부터: 어디로 갈지, 뭘 요리할지, 뭘 입을지. 나머지는 앱 목록에 있습니다.",
     homeDemosHeading: "\ub370\ubaa8",
     homeDemosLead:
       "\ubaa8\ubc14\uc77c \uc81c\ud488 \ubbf8\ub9ac\ubcf4\uae30\u2014\uacf5\uac1c \ub370\ubaa8\ub294 \uc0c8 \ud0ed. T Today\ub294 \ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5.",

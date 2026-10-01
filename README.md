@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01r
+**Version:** 2026.10.01s
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01s` Homepage “Start here” shows the three live everyday products — Travel, Cook, Wear — so it matches the hero’s “Try a live product”; ShopRadar (demo) stays on `/apps`.
 
 `2026.10.01r` Homepage drops the Demos block (Performance Sim and T Today stay on `/apps`, which now carries the finance-demo disclaimer in en / 中文 / 한국어). Hero secondary button is “Try a live product / 试用已上线产品 / 라이브 제품 써 보기”, jumping to “Start here”; contact stays in the nav and the build section.
 
