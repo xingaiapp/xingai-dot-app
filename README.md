@@ -2,11 +2,15 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01t
+**Version:** 2026.10.01v
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01v` Hero carousel is back (dots + “See all systems”), now with the four live products — Invest, Travel, Cook, Wear — starting on Invest with no autoplay. Adds Vercel Web Analytics (production only, cookieless page views), same as Travel / Cook / Invest.
+
+`2026.10.01u` (reverted in `01v`) Hero preview showed only the Industry Map.
 
 `2026.10.01t` Homepage polish (en / 中文 / 한국어): hero drops the “XINGAI” label and the lead is one sentence about the Industry Map; on phone “Start here” cards show a 16:9 shot and only the “can do” line; build section reads as “Build your own AI decision system” on the same approach and platform.
 
