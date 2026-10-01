@@ -72,7 +72,7 @@ const translations = {
     homeDemoPerfLead: "Same signal. Different rules. See the paper ledger outcomes.",
     homeDemoTTodayName: "T Today",
     homeDemoTTodayLead:
-      "Screenshot holdings \u2192 rules + AI plan for today. Free to request early access at t.xingai.app.",
+      "Screenshot holdings \u2192 rules + AI plan for today. Request free early access via Contact.",
     homeDemoRequestEarlyAccess: "Request early access",
     appTTodayEarlyAccessBanner:
       "The basic view at t.xingai.app is free and needs no sign-in. AI analysis is invite-only during early access. It\u2019s free to ask\u2014email us and we\u2019ll add you to the allowlist.",
@@ -424,7 +424,7 @@ const translations = {
     homeDemoPerfLead: "\u540c\u4e00\u4fe1\u53f7\uff0c\u4e0d\u540c\u89c4\u5219\u3002\u770b\u7eb8\u9762\u8d26\u672c\u4f1a\u53d8\u6210\u4ec0\u4e48\u6837\u3002",
     homeDemoTTodayName: "\u4eca\u65e5\u505aT",
     homeDemoTTodayLead:
-      "\u5f00\u76d8\u524d\u622a\u56fe\u6301\u4ed3 \u2192 \u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002t.xingai.app \u5185\u6d4b\u514d\u8d39\u7533\u8bf7\u3002",
+      "\u5f00\u76d8\u524d\u622a\u56fe\u6301\u4ed3 \u2192 \u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002\u5185\u6d4b\u514d\u8d39\uff0c\u901a\u8fc7\u8054\u7cfb\u8868\u5355\u7533\u8bf7\u3002",
     homeDemoRequestEarlyAccess: "\u7533\u8bf7\u5185\u6d4b",
     appTTodayEarlyAccessBanner:
       "t.xingai.app \u7684\u57fa\u7840\u529f\u80fd\u514d\u8d39\u5f00\u653e\uff0c\u65e0\u9700\u767b\u5f55\u3002AI \u5206\u6790\u76ee\u524d\u4e3a\u9080\u8bf7\u5236\u5185\u6d4b\uff0c\u514d\u8d39\u7533\u8bf7\u5373\u53ef\uff0c\u8054\u7cfb\u6211\u4eec\u52a0\u5165\u767d\u540d\u5355\u540e\u767b\u5f55\u4f7f\u7528\u3002",
@@ -764,7 +764,7 @@ const translations = {
     homeDemoPerfLead: "\uac19\uc740 \uc2e0\ud638, \ub2e4\ub978 \uaddc\uce59. \uc885\uc774 \uc6d0\uc7a5 \uacb0\uacfc\ub97c \ube44\uad50\ud574\ubcf4\uc138\uc694.",
     homeDemoTTodayName: "T Today",
     homeDemoTTodayLead:
-      "\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7 \u2192 \uaddc\uce59 + AI \uc624\ub298 \uacc4\ud68d. t.xingai.app \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5.",
+      "\ubcf4\uc720 \uc2a4\ud06c\ub9b0\uc0f7 \u2192 \uaddc\uce59 + AI \uc624\ub298 \uacc4\ud68d. \uc5bc\ub9ac \uc561\uc138\uc2a4\ub294 Contact\uc5d0\uc11c \ubb34\ub8cc \uc694\uccad.",
     homeDemoRequestEarlyAccess: "\uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad",
     appTTodayEarlyAccessBanner:
       "t.xingai.app\uc758 \uae30\ubcf8 \uae30\ub2a5\uc740 \ub85c\uadf8\uc778 \uc5c6\uc774 \ubb34\ub8cc\uc785\ub2c8\ub2e4. AI \ubd84\uc11d\uc740 \uc5bc\ub9ac \uc561\uc138\uc2a4 \uae30\uac04 \ucd08\ub300\uc81c\uc774\uba70, \ubb34\ub8cc\ub85c \uc694\uccad\ud558\uc2dc\uba74 \ud5c8\uc6a9 \ubaa9\ub85d\uc5d0 \ucd94\uac00\ud574 \ub4dc\ub9bd\ub2c8\ub2e4.",
