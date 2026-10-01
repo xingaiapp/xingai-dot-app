@@ -58,6 +58,8 @@ const translations = {
     heroSub:
       "The public flagship is the Invest AI Industry Map: walk the AI supply chain layer by layer, with claims tied to cited filings. It is research you can check, not a trading desk and not a buy list. Travel, Cook and more cover everyday decisions — open any card to try a demo.",
     heroStoryLink: "How XingAI turns ideas into products",
+    heroTryLiveCta: "Try a live product",
+    appsFinanceDisclaimer: "Finance demos (Performance Sim, T Today): paper structure only · not investment advice · no broker integration.",
     heroPreviewLabel: "System preview",
     homePathHeading: "From question to your decision",
     homePathLead: "Not one chat reply — a short chain you can follow. Here it is for planning a trip.",
@@ -440,6 +442,8 @@ const translations = {
     heroSub:
       "公开旗舰是 Invest AI 产业地图：按图层看 AI 产业链，结论都挂引用备案。这是可核对的研究，不是交易台，也不是买入清单。旅行、做饭等产品覆盖日常决策——点开任何卡片即可试用 Demo。",
     heroStoryLink: "XingAI 如何把想法变成产品",
+    heroTryLiveCta: "试用已上线产品",
+    appsFinanceDisclaimer: "金融类演示（Performance Sim、T Today）：仅纸面结构 · 非投资建议 · 不对接券商下单。",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
     homePathHeading: "从问题到你的决定",
     homePathLead: "不是一条聊天回复，而是一条你能跟着看的链路。以规划一次旅行为例。",
@@ -808,6 +812,8 @@ const translations = {
     heroSub:
       "공개 플래그십은 Invest AI 산업 지도입니다. AI 공급망을 레이어별로 보고, 주장은 인용된 공시에 맞춥니다. 확인 가능한 리서치이며, 매매 창구나 매수 목록이 아닙니다. 여행, 요리 등 제품이 일상의 결정을 돕습니다 — 카드를 열어 데모를 시험해 보세요.",
     heroStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
+    heroTryLiveCta: "라이브 제품 써 보기",
+    appsFinanceDisclaimer: "금융 데모(Performance Sim, T Today): 종이 구조용 · 투자 조언 아님 · 브로커 연동 없음.",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
     homePathHeading: "질문에서 당신의 결정까지",
     homePathLead: "채팅 답변 한 줄이 아니라, 따라가며 확인할 수 있는 흐름입니다. 여행 계획을 예로 들어 볼게요.",

@@ -86,10 +86,6 @@ export default function Home() {
   );
   const heroPrimaryApp =
     heroPreviewApps[activeHeroIndex] ?? heroPreviewApps[0] ?? apps[0];
-  const demoStatus = (slug: string): AppLaunchStatus =>
-    apps.find((app) => app.slug === slug)?.launchStatus ?? "demo";
-  const perfSimStatus = demoStatus("performance-sim");
-  const tTodayStatus = demoStatus("t-today");
   const appStatusLabels: Record<AppLaunchStatus, string> = {
     live: t("appStatusLive"),
     demo: t("appStatusDemo"),
@@ -136,9 +132,9 @@ export default function Home() {
               <a href="https://invest.xingai.app/ai-map" className="cta">
                 {t("heroInvestMapCta")}
               </a>
-              <LocaleLink href="/contact" className="cta cta--outline">
-                {t("homeCta")}
-              </LocaleLink>
+              <a href="#start-here" className="cta cta--outline">
+                {t("heroTryLiveCta")}
+              </a>
             </div>
             <p className="hero-beta-note">{t("publicBetaNote")}</p>
           </div>
@@ -223,7 +219,7 @@ export default function Home() {
 
       <HomeDecisionPath />
 
-      <section className="home-apps" aria-labelledby="home-apps-heading">
+      <section id="start-here" className="home-apps" aria-labelledby="home-apps-heading">
         <h2 id="home-apps-heading" className="section-title">
           {t("homeAppsHeading")}
         </h2>
@@ -288,78 +284,6 @@ export default function Home() {
             {t("homeBrowseAll")} <span aria-hidden="true">→</span>
           </LocaleLink>
         </div>
-      </section>
-
-      <section className="home-demos" aria-labelledby="home-demos-heading">
-        <h2 id="home-demos-heading" className="section-title">
-          {t("homeDemosHeading")}
-        </h2>
-        <p className="section-lead">{t("homeDemosLead")}</p>
-
-        <ul className="app-cards demo-cards">
-          <li className="app-card">
-            <a
-              href="https://lab.xingai.app"
-              className="app-card-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AppDemoScreenshot
-                shot={{
-                  src: "/performance-sim-demo-light.jpg",
-                  srcDark: "/performance-sim-demo-dark.jpg",
-                  alt: "Performance Sim demo",
-                }}
-                sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
-                wrapClassName="app-card-thumb"
-                imageClassName="app-card-thumb-img app-demo-shot"
-              />
-              <div className="app-card-info">
-                <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
-                <div className="app-card-title-row">
-                  <h3 className="app-card-name">{t("homeDemoPerfName")}</h3>
-                  <span className={`app-status-badge app-status-badge--${perfSimStatus}`}>
-                    {appStatusLabels[perfSimStatus]}
-                  </span>
-                </div>
-                <p className="app-card-tagline">{t("homeDemoPerfLead")}</p>
-                <span className="app-card-action">
-                  {t("homeDemoOpen")} &rarr;
-                </span>
-              </div>
-            </a>
-          </li>
-
-          <li className="app-card">
-            <LocaleLink href="/contact" className="app-card-link">
-              <AppDemoScreenshot
-                shot={{
-                  src: "/t-today-demo-light.jpg",
-                  srcDark: "/t-today-demo-dark.jpg",
-                  alt: "T Today demo",
-                }}
-                sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
-                wrapClassName="app-card-thumb"
-                imageClassName="app-card-thumb-img app-demo-shot"
-              />
-              <div className="app-card-info">
-                <span className="app-card-category">{t("homeDemoCategoryInvest")}</span>
-                <div className="app-card-title-row">
-                  <h3 className="app-card-name">{t("homeDemoTTodayName")}</h3>
-                  <span className={`app-status-badge app-status-badge--${tTodayStatus}`}>
-                    {appStatusLabels[tTodayStatus]}
-                  </span>
-                </div>
-                <p className="app-card-tagline">{t("homeDemoTTodayLead")}</p>
-                <span className="app-card-action">
-                  {t("homeDemoRequestEarlyAccess")} &rarr;
-                </span>
-              </div>
-            </LocaleLink>
-          </li>
-        </ul>
-
-        <p className="demo-disclaimer">{t("homeDemoDisclaimer")}</p>
       </section>
 
       <section className="home-team" aria-labelledby="home-team-heading">
