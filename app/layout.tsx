@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteUrl } from "./lib/site-seo";
@@ -50,7 +51,10 @@ export default function RootLayout({
         <meta name="color-scheme" content="light dark" />
         <script dangerouslySetInnerHTML={{ __html: initScript }} />
       </head>
-      <body className={`${inter.className} site-body`}>{children}</body>
+      <body className={`${inter.className} site-body`}>
+        {children}
+        {process.env.NODE_ENV === "production" && <Analytics />}
+      </body>
     </html>
   );
 }
