@@ -190,7 +190,7 @@ const en: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "Investing (Investment Assistant)",
+        heading: "Investing (Invest AI)",
         paragraphs: [
           "XingAI is not a registered investment advisor, broker-dealer, or fiduciary. AI outputs are not investment advice or recommendations to buy or sell any security.",
           "You are solely responsible for investment decisions and any gains or losses. Past performance does not guarantee future results.",
@@ -374,7 +374,7 @@ const zh: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "投资（Investment Assistant）",
+        heading: "投资（Invest AI）",
         paragraphs: [
           "XingAI 非注册投资顾问、经纪商或受托人。AI 输出不构成投资建议或买卖任何证券的推荐。",
           "投资决策及盈亏由您自行承担。过往表现不保证未来结果。",
@@ -559,7 +559,7 @@ const ko: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "투자(Investment Assistant)",
+        heading: "투자(Invest AI)",
         paragraphs: [
           "XingAI는 등록 투자 자문사·브로커·수탁자가 아닙니다. AI 출력은 투자 자문이거나 증권 매매 권유가 아닙니다.",
           "투자 결정과 손익은 전적으로 이용자 책임입니다. 과거 성과가 미래 결과를 보장하지 않습니다.",

@@ -845,7 +845,7 @@ export const apps: AppData[] = [
   },
   {
     slug: "investment-assistant",
-    name: "XingAI Investment Assistant",
+    name: "XingAI Invest AI",
     tagline: "AI supply-chain research map",
     icon: "/investment-ai-icon.png",
     iconDark: "/investment-ai-icon-dark.png",
@@ -859,7 +859,7 @@ export const apps: AppData[] = [
     clickTarget: "Product details and the live AI Industry Map.",
     launchStatus: "live",
     screenshots: [
-      { src: "/invest-demo-light.jpg", srcDark: "/invest-demo-dark.jpg", alt: "XingAI Investment Assistant", caption: "AI Industry Map" },
+      { src: "/invest-demo-light.jpg", srcDark: "/invest-demo-dark.jpg", alt: "XingAI Invest AI", caption: "AI Industry Map" },
     ],
     features: [
       { name: "AI Industry Map", free: true, pro: true, enterprise: true },
