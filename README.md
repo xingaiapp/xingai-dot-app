@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01s
+**Version:** 2026.10.01t
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01t` Homepage polish (en / 中文 / 한국어): hero drops the “XINGAI” label and the lead is one sentence about the Industry Map; on phone “Start here” cards show a 16:9 shot and only the “can do” line; build section reads as “Build your own AI decision system” on the same approach and platform.
 
 `2026.10.01s` Homepage “Start here” shows the three live everyday products — Travel, Cook, Wear — so it matches the hero’s “Try a live product”; ShopRadar (demo) stays on `/apps`.
 
