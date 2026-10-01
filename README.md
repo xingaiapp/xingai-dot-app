@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01x
+**Version:** 2026.10.01y
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01y` Hero carousel advances when the heading “Real questions, checked reasoning — then you decide.” finishes typing (each loop), instead of on its own 4.8s timer; hover/focus still holds the slide, reduced motion keeps both still.
 
 `2026.10.01x` Hero carousel auto-advances again (every 4.8s through Invest, Travel, Cook, Wear); pauses on hover or keyboard focus, restarts after a dot click, and stays still under `prefers-reduced-motion`.
 

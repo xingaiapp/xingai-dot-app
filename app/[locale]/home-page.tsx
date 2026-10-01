@@ -97,16 +97,13 @@ export default function Home() {
     setActiveHeroIndex(0);
   }, [locale]);
 
-  // Auto-advance every 4.8s; pauses while hovered/focused, restarts after a dot click,
-  // and stays still for prefers-reduced-motion.
-  useEffect(() => {
-    if (heroPreviewApps.length < 2 || heroPaused) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = window.setTimeout(() => {
-      setActiveHeroIndex((index) => (index + 1) % heroPreviewApps.length);
-    }, 4800);
-    return () => window.clearTimeout(id);
-  }, [activeHeroIndex, heroPaused, heroPreviewApps.length]);
+  // The carousel advances each time the hero heading finishes typing, so the
+  // slide change lands with the end of the sentence. Hover/focus holds the slide;
+  // under reduced motion the heading is static, so the slide stays put too.
+  const advanceHero = () => {
+    if (heroPaused || heroPreviewApps.length < 2) return;
+    setActiveHeroIndex((index) => (index + 1) % heroPreviewApps.length);
+  };
 
   const answerItems = [
     { question: t("answerQ1"), answer: t("answerA1") },
@@ -134,6 +131,7 @@ export default function Home() {
               maxDurationMs={5000}
               loop
               loopPauseMs={2400}
+              onTyped={advanceHero}
             />
             <p className="hero-sub">{t("heroSub")}</p>
             <p className="hero-story-link">
