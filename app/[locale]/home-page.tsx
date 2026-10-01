@@ -99,14 +99,6 @@ export default function Home() {
     setActiveHeroIndex(0);
   }, [locale]);
 
-  useEffect(() => {
-    if (heroPreviewApps.length < 2) return;
-    const id = window.setInterval(() => {
-      setActiveHeroIndex((index) => (index + 1) % heroPreviewApps.length);
-    }, 4800);
-    return () => window.clearInterval(id);
-  }, [heroPreviewApps.length]);
-
   const answerItems = [
     { question: t("answerQ1"), answer: t("answerA1") },
     { question: t("answerQ2"), answer: t("answerA2") },
@@ -228,6 +220,73 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-apps" aria-labelledby="home-apps-heading">
+        <h2 id="home-apps-heading" className="section-title">
+          {t("homeAppsHeading")}
+        </h2>
+        <p className="section-lead">{t("homeAppsLead")}</p>
+
+        <ul className="app-cards">
+          {homeShelfApps.map((app) => (
+            <li key={app.slug} className="app-card">
+              <LocaleLink href={`/apps/${app.slug}`} className="app-card-link">
+                {app.screenshots[0] ? (
+                  <AppDemoScreenshot
+                    shot={app.screenshots[0]}
+                    sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
+                    wrapClassName="app-card-thumb"
+                    imageClassName="app-card-thumb-img app-demo-shot"
+                  />
+                ) : (
+                  <div className="app-card-thumb">
+                    <span className="app-card-thumb-placeholder">
+                      {t("appComingSoonBadge")}
+                    </span>
+                  </div>
+                )}
+                <div className="app-card-info">
+                  <AppIcon
+                    light={app.icon}
+                    dark={app.iconDark}
+                    alt=""
+                    className="app-card-icon"
+                  />
+                  <span className="app-card-category">{app.category}</span>
+                  <div className="app-card-title-row">
+                    <h3 className="app-card-name">{app.name}</h3>
+                    <span
+                      className={`app-status-badge app-status-badge--${app.launchStatus}`}
+                    >
+                      {appStatusLabels[app.launchStatus]}
+                    </span>
+                  </div>
+                  <p className="app-card-tagline">{app.tagline}</p>
+                  <dl className="app-card-fit">
+                    <div>
+                      <dt>{t("appCardCanDo")}</dt>
+                      <dd>{app.canDo}</dd>
+                    </div>
+                    <div>
+                      <dt>{t("appCardBestFor")}</dt>
+                      <dd>{app.bestFor}</dd>
+                    </div>
+                    <div>
+                      <dt>{t("appCardClickTarget")}</dt>
+                      <dd>{app.clickTarget}</dd>
+                    </div>
+                  </dl>
+                </div>
+              </LocaleLink>
+            </li>
+          ))}
+        </ul>
+        <div className="home-apps-more">
+          <LocaleLink href="/apps" className="cta cta--browse">
+            {t("homeBrowseAll")} <span aria-hidden="true">→</span>
+          </LocaleLink>
+        </div>
+      </section>
+
       <section className="home-demos" aria-labelledby="home-demos-heading">
         <h2 id="home-demos-heading" className="section-title">
           {t("homeDemosHeading")}
@@ -300,75 +359,6 @@ export default function Home() {
         <p className="demo-disclaimer">{t("homeDemoDisclaimer")}</p>
       </section>
 
-      <section className="home-apps" aria-labelledby="home-apps-heading">
-        <h2 id="home-apps-heading" className="section-title">
-          {t("homeAppsHeading")}
-        </h2>
-        <p className="section-lead">{t("homeAppsLead")}</p>
-
-        <ul className="app-cards">
-          {homeShelfApps.map((app) => (
-            <li key={app.slug} className="app-card">
-              <LocaleLink href={`/apps/${app.slug}`} className="app-card-link">
-                {app.screenshots[0] ? (
-                  <AppDemoScreenshot
-                    shot={app.screenshots[0]}
-                    sizes="(max-width: 36rem) 90vw, (max-width: 48rem) 45vw, 20rem"
-                    wrapClassName="app-card-thumb"
-                    imageClassName="app-card-thumb-img app-demo-shot"
-                  />
-                ) : (
-                  <div className="app-card-thumb">
-                    <span className="app-card-thumb-placeholder">
-                      {t("appComingSoonBadge")}
-                    </span>
-                  </div>
-                )}
-                <div className="app-card-info">
-                  <AppIcon
-                    light={app.icon}
-                    dark={app.iconDark}
-                    alt=""
-                    className="app-card-icon"
-                  />
-                  <span className="app-card-category">{app.category}</span>
-                  <div className="app-card-title-row">
-                    <h3 className="app-card-name">{app.name}</h3>
-                    <span
-                      className={`app-status-badge app-status-badge--${app.launchStatus}`}
-                    >
-                      {appStatusLabels[app.launchStatus]}
-                    </span>
-                  </div>
-                  <p className="app-card-tagline">{app.tagline}</p>
-                  <dl className="app-card-fit">
-                    <div>
-                      <dt>{t("appCardCanDo")}</dt>
-                      <dd>{app.canDo}</dd>
-                    </div>
-                    <div>
-                      <dt>{t("appCardBestFor")}</dt>
-                      <dd>{app.bestFor}</dd>
-                    </div>
-                    <div>
-                      <dt>{t("appCardClickTarget")}</dt>
-                      <dd>{app.clickTarget}</dd>
-                    </div>
-                  </dl>
-                </div>
-              </LocaleLink>
-            </li>
-          ))}
-        </ul>
-        <div className="home-apps-more">
-          <LocaleLink href="/apps" className="cta cta--browse">
-            {t("homeBrowseAll")} <span aria-hidden="true">→</span>
-          </LocaleLink>
-        </div>
-      </section>
-
-      <HomeSystemLoop />
-
       <section className="home-team" aria-labelledby="home-team-heading">
         <h2 id="home-team-heading" className="section-title">
           {t("homeTeamHeading")}
@@ -394,6 +384,8 @@ export default function Home() {
           <LocaleLink href="/team">{t("homeMeetTeam")} &rarr;</LocaleLink>
         </p>
       </section>
+
+      <HomeSystemLoop />
 
       <section className="home-answers" aria-labelledby="home-answers-heading">
         <h2 id="home-answers-heading" className="section-title">

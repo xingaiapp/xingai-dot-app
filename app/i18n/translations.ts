@@ -60,7 +60,7 @@ const translations = {
     heroPreviewLabel: "System preview",
     homeAppsHeading: "Start here",
     homeAppsLead:
-      "The Industry Map first. Cook and Travel if you want a live product. ShopRadar if you need a product score. Everything else is on the apps page.",
+      "Travel and Cook are live for everyday decisions. ShopRadar if you need a product score. Everything else is on the apps page.",
     homeDemosHeading: "Demos",
     homeDemosLead:
       "Mobile product previews — open live demos in a new tab. T Today early access is free to request.",
@@ -423,7 +423,7 @@ const translations = {
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
     homeAppsHeading: "\u4ece\u8fd9\u91cc\u5f00\u59cb",
     homeAppsLead:
-      "\u5148\u770b\u4ea7\u4e1a\u5730\u56fe\u3002\u60f3\u8981\u5df2\u4e0a\u7ebf\u4ea7\u54c1\u5c31\u770b Cook \u548c Travel\u3002\u9009\u54c1\u770b ShopRadar\u3002\u5176\u4f59\u5728\u4ea7\u54c1\u76ee\u5f55\u91cc\u3002",
+      "日常决策先试已上线的 Travel 和 Cook。选品看 ShopRadar。其余在产品目录里。",
     homeDemosHeading: "\u5728\u7ebf\u6f14\u793a",
     homeDemosLead:
       "\u79fb\u52a8\u7aef\u4ea7\u54c1\u9884\u89c8\u2014\u516c\u5f00 Demo \u65b0\u6807\u7b7e\u6253\u5f00\u3002T Today \u5185\u6d4b\u514d\u8d39\u7533\u8bf7\u3002",
@@ -772,7 +772,7 @@ const translations = {
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
     homeAppsHeading: "\uc5ec\uae30\uc11c \uc2dc\uc791",
     homeAppsLead:
-      "\uba3c\uc800 \uc0b0\uc5c5 \uc9c0\ub3c4. \ub77c\uc774\ube0c \uc81c\ud488\uc740 Cook\uacfc Travel. \ubb58 \ud314\uc9c0 \uace0\ub974\ub824\uba74 ShopRadar. \ub098\uba38\uc9c0\ub294 \uc571 \ubaa9\ub85d\uc5d0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "일상의 결정은 라이브 중인 Travel과 Cook부터. 뭘 팔지 고르려면 ShopRadar. 나머지는 앱 목록에 있습니다.",
     homeDemosHeading: "\ub370\ubaa8",
     homeDemosLead:
       "\ubaa8\ubc14\uc77c \uc81c\ud488 \ubbf8\ub9ac\ubcf4\uae30\u2014\uacf5\uac1c \ub370\ubaa8\ub294 \uc0c8 \ud0ed. T Today\ub294 \ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4 \uc694\uccad \uac00\ub2a5.",

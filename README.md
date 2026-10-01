@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01m
+**Version:** 2026.10.01n
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01n` Homepage reorder: hero preview stays on the Invest AI Industry Map (no autoplay; dots still switch products); on phone the copy and primary CTA come before the preview; “Start here” drops the duplicate Invest card (Travel / Cook / ShopRadar, one row on desktop) and sits above Demos; agents and System Spine move below the product sections.
 
 `2026.10.01m` Homepage hero copy (en / 中文 / 한국어): subtitle “Not just chat.”; card heading “Real questions, checked reasoning — then you decide.” replaces “Capture once. Evolve forever.” (kept on `/story`); duplicate value pill removed; shorter lead focused on the Industry Map as research, not a buy list. Primary CTA unchanged.
 

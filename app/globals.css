@@ -1012,15 +1012,11 @@ html[data-theme="dark"] .lang-menu {
 }
 
 @media (max-width: 47.99rem) {
-  /* Mobile/tablet: product carousel first, then copy. */
+  /* Mobile/tablet: copy and primary CTA first, then the product preview. */
   .hero-layout {
     display: flex;
     flex-direction: column;
     gap: 1.35rem;
-  }
-
-  .hero-preview {
-    order: -1;
   }
 }
 
@@ -1307,6 +1303,13 @@ html[data-theme="dark"] .lang-menu {
   .app-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.15rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  /* Homepage shelf holds three scenario cards: one row on desktop. */
+  .home-apps .app-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
