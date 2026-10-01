@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01f
+**Version:** 2026.10.01g
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01g` Catalog honesty: Passive Income Idea → **live**; register **Tech Blog** as live at [blog.xingai.app](https://blog.xingai.app/) with demo shots + `/engineering` link. Replaces stale PR #7 / `feat/register-tech-blog` (coming-soon) work.
 
 `2026.10.01f` Homepage hero hierarchy: page `h1` “AI Decision Systems” + story-aligned subtitle and card `h2` (“Capture once. Evolve forever.”); longer hero lead; more left-column spacing; mobile shows the product carousel above the copy. `HomeSystemLoop` is a desktop circle with per-node accents, heavier arrowed arcs, and a center ring (stack on phone). `/story` keeps the detailed spine + 5W product expanders. Design refs under `docs/ux/`.
 
@@ -138,6 +140,7 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **Research AI** | Learning AI | Decide What to Learn |
 | **Learn AI** | Learning AI | Learn With Structure |
 | **Engineering Communication Coach** | Learning AI | Speak Like a Senior |
+| **Tech Blog** | Engineering | How We Ship |
 | **Parent AI** | Parenting AI | Family Support |
 | **Travel AI** | Travel AI | Explore Better |
 | **Decision Agent** | Finance AI | Outcome In. Decision Out. |
@@ -150,7 +153,7 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **Evidence Engine** | Research AI | Verify Every Claim |
 | **Eval Registry** | Operations AI | Diff Your Evals |
 
-**Eating Decision** ([meal.xingai.app](https://meal.xingai.app/)), **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Wear AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Invest AI** ([invest.xingai.app](https://invest.xingai.app/ai-map)) are live. **Decision Agent** is a public demo at [decision.xingai.app](https://decision.xingai.app/). **ShopRadar** is a waitlist demo at [shopradar.xingai.app](https://shopradar.xingai.app/). **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Learn AI** is available as a demo at [learn.xingai.app](https://learn.xingai.app/). **Engineering Communication Coach** is coming soon ([GitHub](https://github.com/xingaiapp/xingai-engineering-coach-ai)). **Growth Monitor** is early access at [growth.xingai.app](https://growth.xingai.app/). **Ops Status** is a demo at [xingai-ops-status.vercel.app](https://xingai-ops-status.vercel.app/). **Evidence Engine** and **Eval Registry** are engineering demos on the site; Eval Registry is open source ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
+**Eating Decision** ([meal.xingai.app](https://meal.xingai.app/)), **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Wear AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Invest AI** ([invest.xingai.app](https://invest.xingai.app/ai-map)) are live. **Tech Blog** is live at [blog.xingai.app](https://blog.xingai.app/). **Passive Income Idea** is live at [passive.xingai.app](https://passive.xingai.app/). **Decision Agent** is a public demo at [decision.xingai.app](https://decision.xingai.app/). **ShopRadar** is a waitlist demo at [shopradar.xingai.app](https://shopradar.xingai.app/). **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Learn AI** is available as a demo at [learn.xingai.app](https://learn.xingai.app/). **Engineering Communication Coach** is coming soon ([GitHub](https://github.com/xingaiapp/xingai-engineering-coach-ai)). **Growth Monitor** is early access at [growth.xingai.app](https://growth.xingai.app/). **Ops Status** is a demo at [xingai-ops-status.vercel.app](https://xingai-ops-status.vercel.app/). **Evidence Engine** and **Eval Registry** are engineering demos on the site; Eval Registry is open source ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.
 
 ## Features
 
