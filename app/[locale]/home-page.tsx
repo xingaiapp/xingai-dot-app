@@ -76,6 +76,7 @@ export default function Home() {
   const { locale, t } = useTranslation();
   const teamCopy = getTeamCopy(locale);
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
+  const [heroPaused, setHeroPaused] = useState(false);
   const apps = getLocalizedApps(locale);
   const homeShelfApps = getHomeShelfApps(locale);
   const heroPreviewApps = ["investment-assistant", "travel-ai", "cook-ai", "outfit-ai"].flatMap(
@@ -95,6 +96,17 @@ export default function Home() {
   useEffect(() => {
     setActiveHeroIndex(0);
   }, [locale]);
+
+  // Auto-advance every 4.8s; pauses while hovered/focused, restarts after a dot click,
+  // and stays still for prefers-reduced-motion.
+  useEffect(() => {
+    if (heroPreviewApps.length < 2 || heroPaused) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = window.setTimeout(() => {
+      setActiveHeroIndex((index) => (index + 1) % heroPreviewApps.length);
+    }, 4800);
+    return () => window.clearTimeout(id);
+  }, [activeHeroIndex, heroPaused, heroPreviewApps.length]);
 
   const answerItems = [
     { question: t("answerQ1"), answer: t("answerA1") },
@@ -139,7 +151,14 @@ export default function Home() {
           </div>
 
           {heroPrimaryApp ? (
-            <div className="hero-preview" aria-label={t("heroPreviewLabel")}>
+            <div
+              className="hero-preview"
+              aria-label={t("heroPreviewLabel")}
+              onMouseEnter={() => setHeroPaused(true)}
+              onMouseLeave={() => setHeroPaused(false)}
+              onFocus={() => setHeroPaused(true)}
+              onBlur={() => setHeroPaused(false)}
+            >
               <div className="hero-preview-stage">
               <LocaleLink
                 href={`/apps/${heroPrimaryApp.slug}`}
