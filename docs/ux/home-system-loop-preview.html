@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home System Loop — circle preview</title>
+  <style>
+    :root {
+      --bg: #0a0c0a;
+      --fg: #f2f5f2;
+      --muted: #9aa89e;
+      --card: #121612;
+      --line: #2a332c;
+      --green: #3dff7a;
+      --green-dim: color-mix(in srgb, #3dff7a 45%, #2a332c);
+      font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    }
+    [data-theme="light"] {
+      --bg: #f4f7f4;
+      --fg: #142016;
+      --muted: #5a6b5e;
+      --card: #ffffff;
+      --line: #d5ddd7;
+      --green: #1a9a48;
+      --green-dim: color-mix(in srgb, #1a9a48 40%, #d5ddd7);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, color-mix(in srgb, var(--green) 8%, transparent), transparent),
+        var(--bg);
+      color: var(--fg);
+      line-height: 1.4;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+    .note {
+      font-size: 0.75rem; color: var(--muted); border: 1px dashed var(--line);
+      padding: 0.6rem 0.75rem; border-radius: 0.75rem; margin-bottom: 1.25rem;
+    }
+    header { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+    h1 { margin: 0; font-size: 1.35rem; letter-spacing: -0.03em; }
+    .sub { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem; max-width: 40rem; }
+    button.theme {
+      min-height: 40px; border: 1px solid var(--line); background: var(--card);
+      color: var(--fg); border-radius: 0.6rem; padding: 0.4rem 0.75rem; font: inherit; font-weight: 600; cursor: pointer;
+    }
+    .board {
+      position: relative;
+      aspect-ratio: 1.15 / 1;
+      min-height: 26rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--card) 88%, transparent);
+    }
+    .wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+    .wire {
+      fill: none; stroke: var(--green-dim); stroke-width: 1.75; stroke-dasharray: 5 7;
+      stroke-linecap: round; filter: drop-shadow(0 0 4px color-mix(in srgb, var(--green) 40%, transparent));
+    }
+    .wire--return { stroke-dasharray: 4 8; opacity: 0.75; }
+    .wire-flow {
+      fill: none; stroke: color-mix(in srgb, #fff 70%, var(--green)); stroke-width: 2.25;
+      stroke-linecap: round; stroke-dasharray: 12 28; animation: flow 1.4s linear infinite;
+      filter: drop-shadow(0 0 6px color-mix(in srgb, var(--green) 75%, transparent));
+    }
+    .wire-flow--return { animation-duration: 2.1s; }
+    @keyframes flow { to { stroke-dashoffset: -40; } }
+    @media (prefers-reduced-motion: reduce) {
+      .wire-flow { animation: none; opacity: 0.5; stroke-dasharray: none; }
+    }
+    .hub {
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      width: min(11rem, 34%); text-align: center; z-index: 1; pointer-events: none;
+    }
+    .hub-mark {
+      display: grid; place-items: center; width: 2.4rem; height: 2.4rem; margin: 0 auto 0.35rem;
+      border-radius: 999px; color: var(--green);
+      border: 1px solid color-mix(in srgb, var(--green) 40%, var(--line));
+      background: color-mix(in srgb, var(--green) 10%, var(--card));
+      box-shadow: 0 0 18px color-mix(in srgb, var(--green) 18%, transparent);
+    }
+    .hub-text { margin: 0; font-size: 0.6875rem; color: var(--muted); line-height: 1.35; }
+    .steps { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; z-index: 2; }
+    .step {
+      position: absolute; display: flex; flex-direction: column; align-items: center; text-align: center;
+      gap: 0.18rem; padding: 0.9rem 0.4rem 0.55rem; border: 1px solid color-mix(in srgb, var(--green) 35%, var(--line));
+      border-radius: 12px; background: var(--card);
+      box-shadow: 0 0 18px color-mix(in srgb, var(--green) 12%, transparent);
+    }
+    .step--planned { border-style: dashed; box-shadow: none; opacity: 0.92; }
+    .num {
+      position: absolute; top: 0.35rem; left: 0.4rem; width: 1.1rem; height: 1.1rem; border-radius: 999px;
+      display: grid; place-items: center; font-size: 0.5625rem; font-weight: 700; color: var(--green);
+      border: 1px solid color-mix(in srgb, var(--green) 40%, transparent);
+      background: color-mix(in srgb, var(--green) 12%, transparent);
+    }
+    .icon { width: 24px; height: 24px; color: var(--green); filter: drop-shadow(0 0 8px color-mix(in srgb, var(--green) 50%, transparent)); }
+    .name { font-size: 0.72rem; font-weight: 600; line-height: 1.25; }
+    .id { display: block; font-family: ui-monospace, Menlo, monospace; font-size: 0.55rem; color: var(--muted); }
+    .stage {
+      margin-top: 0.15rem; font-size: 0.5rem; font-weight: 600; padding: 0.04rem 0.35rem;
+      border-radius: 999px; color: var(--green); background: color-mix(in srgb, var(--green) 12%, transparent);
+    }
+    .stage--planned { color: var(--muted); background: transparent; border: 1px dashed var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="note">Circle layout preview for homepage <code>HomeSystemLoop</code>. Six nodes on a ring; dashed arcs flow clockwise. Live: <code>http://localhost:3456/</code></p>
+    <header>
+      <div>
+        <h1>Home System Loop</h1>
+        <p class="sub">Idea at 12 o’clock → clockwise → back to Idea.</p>
+      </div>
+      <button type="button" class="theme" id="themeBtn">Light</button>
+    </header>
+
+    <div class="board" id="board">
+      <svg class="wires" id="wires" aria-hidden="true"></svg>
+      <div class="hub">
+        <div class="hub-mark">↺</div>
+        <p class="hub-text">Results go back to the Vault (planned)</p>
+      </div>
+      <ol class="steps" id="steps">
+        <li class="step" data-step><span class="num">1</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5V15h8v-1.5A6 6 0 0 0 12 3z"/></svg><div class="name">Idea</div></li>
+        <li class="step" data-step><span class="num">2</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="16" height="14" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M12 14.5v2"/></svg><div class="name"><span class="id">#001</span>Idea Vault</div><span class="stage">Available today</span></li>
+        <li class="step step--planned" data-step><span class="num">3</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4c-3.5 1.5-5 4-5 7.5 0 2.5 1.2 4.2 2.5 5.5h5c1.3-1.3 2.5-3 2.5-5.5C17 8 15.5 5.5 12 4z"/><path d="M9.5 11.5h5M10 14h4"/></svg><div class="name"><span class="id">#002</span>Orchestrator</div><span class="stage stage--planned">Planned</span></li>
+        <li class="step step--planned" data-step><span class="num">4</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7" r="2"/><circle cx="6.5" cy="15" r="2"/><circle cx="17.5" cy="15" r="2"/><path d="M12 9v2.5M10.5 13.5 8 14.2M13.5 13.5 16 14.2"/></svg><div class="name">Specialized agents</div><span class="stage stage--planned">Planned</span></li>
+        <li class="step" data-step><span class="num">5</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="6.5" height="6.5" rx="1.2"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.2"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.2"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.2"/></svg><div class="name">XingAI apps</div><span class="stage">Available today</span></li>
+        <li class="step" data-step><span class="num">6</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16l4-4 3 3 5-6 4 4"/><circle cx="17.5" cy="17.5" r="3.2"/><path d="M16.4 17.5h2.2M17.5 16.4v2.2"/></svg><div class="name">Evidence · Growth · Ops</div><span class="stage">Available today</span></li>
+      </ol>
+    </div>
+  </div>
+  <script>
+    const html = document.documentElement;
+    const btn = document.getElementById("themeBtn");
+    btn.addEventListener("click", () => {
+      const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", next);
+      btn.textContent = next === "dark" ? "Light" : "Dark";
+      paint();
+    });
+
+    const board = document.getElementById("board");
+    const wires = document.getElementById("wires");
+
+    function paint() {
+      const steps = [...board.querySelectorAll("[data-step]")];
+      const n = steps.length;
+      const br = board.getBoundingClientRect();
+      const w = br.width, h = br.height;
+      wires.setAttribute("viewBox", `0 0 ${w} ${h}`);
+      wires.setAttribute("width", String(w));
+      wires.setAttribute("height", String(h));
+      const cx = w / 2, cy = h / 2;
+      const cardW = Math.min(118, Math.max(92, w * 0.168));
+      const cardH = 108;
+      const rx = Math.max(0, (w - cardW) / 2 - 8);
+      const ry = Math.max(0, (h - cardH) / 2 - 8);
+      const wireRx = rx * 0.72, wireRy = ry * 0.72;
+      const angles = steps.map((_, i) => -Math.PI / 2 + (i / n) * Math.PI * 2);
+
+      steps.forEach((el, i) => {
+        const a = angles[i];
+        el.style.width = cardW + "px";
+        el.style.left = (cx + rx * Math.cos(a) - cardW / 2) + "px";
+        el.style.top = (cy + ry * Math.sin(a) - cardH / 2) + "px";
+      });
+
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const frag = document.createDocumentFragment();
+      function add(d, ret) {
+        const base = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        base.setAttribute("d", d);
+        base.setAttribute("class", "wire" + (ret ? " wire--return" : ""));
+        frag.appendChild(base);
+        const flow = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        flow.setAttribute("d", d);
+        flow.setAttribute("class", "wire-flow" + (ret ? " wire-flow--return" : ""));
+        if (reduce) flow.style.animation = "none";
+        frag.appendChild(flow);
+      }
+      for (let i = 0; i < n; i++) {
+        const a0 = angles[i], a1 = angles[(i + 1) % n];
+        const span = ((a1 - a0) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2);
+        const inset = Math.min(0.22, span * 0.28);
+        const A0 = a0 + inset, A1 = a1 - inset;
+        const x0 = cx + wireRx * Math.cos(A0), y0 = cy + wireRy * Math.sin(A0);
+        const x1 = cx + wireRx * Math.cos(A1), y1 = cy + wireRy * Math.sin(A1);
+        const delta = ((A1 - A0) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2);
+        const large = delta > Math.PI ? 1 : 0;
+        add(`M ${x0} ${y0} A ${wireRx} ${wireRy} 0 ${large} 1 ${x1} ${y1}`, i === n - 1);
+      }
+      wires.replaceChildren(frag);
+    }
+    paint();
+    new ResizeObserver(paint).observe(board);
+    window.addEventListener("resize", paint);
+  </script>
+</body>
+</html>

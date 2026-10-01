@@ -2,11 +2,15 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01d
+**Version:** 2026.10.01f
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01f` Homepage hero hierarchy: page `h1` “AI Decision Systems” + story-aligned subtitle and card `h2` (“Capture once. Evolve forever.”); longer hero lead; more left-column spacing; mobile shows the product carousel above the copy. `HomeSystemLoop` is a desktop circle with per-node accents, heavier arrowed arcs, and a center ring (stack on phone). `/story` keeps the detailed spine + 5W product expanders. Design refs under `docs/ux/`.
+
+`2026.10.01e` Story + homepage system loop polish: clearer spine roles on `HomeSystemLoop`; `/story` product rows expand to Who / What / Where / When / Why (from catalog fields). Desktop loop connectors use a flowing light along SVG paths (`prefers-reduced-motion` stays static). No new family page — upgrades the existing story map.
 
 `2026.10.01d` Status badges: no emoji; every status (Live / Demo / Coming soon, en / 中文 / 한국어) uses the same CSS dot, only Live pulses (off under reduced motion). Homepage Demos cards read status from the catalog (T Today = Demo, matching /apps); “What can I use XingAI for today?” separates Live from public demos.
 

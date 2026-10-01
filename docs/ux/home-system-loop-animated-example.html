@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XingAI HomeSystemLoop — animated connector example</title>
+  <style>
+    :root {
+      --bg: #0c0e14;
+      --card: #161a22;
+      --line: #2a3140;
+      --fg: #f3f5f7;
+      --muted: #9aa3b2;
+      --green: #3d9a6a;
+      --green-soft: rgba(61, 154, 106, 0.18);
+      --flow: #e8fff4;
+      --flow-dim: rgba(61, 154, 106, 0.45);
+      font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+    }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      background: radial-gradient(1200px 500px at 50% -10%, #1a2430 0%, var(--bg) 55%);
+      color: var(--fg);
+      padding: 1.25rem;
+    }
+    .note {
+      max-width: 960px;
+      margin: 0 auto 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: 0.75rem;
+      padding: 0.65rem 0.85rem;
+    }
+    h1 { margin: 0 0 0.35rem; font-size: 1.35rem; }
+    .lead { margin: 0 0 1.25rem; color: var(--muted); font-size: 0.95rem; max-width: 40rem; }
+    .board {
+      max-width: 960px;
+      margin: 0 auto;
+      background: color-mix(in srgb, var(--card) 92%, black);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      padding: 1.25rem 1rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .track {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.55rem;
+      align-items: stretch;
+      z-index: 1;
+    }
+    .node {
+      background: #12161e;
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+      padding: 0.7rem 0.55rem;
+      min-height: 5.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .node--start { background: #182033; border-color: transparent; justify-content: center; }
+    .role { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+    .name { font-size: 0.82rem; font-weight: 650; line-height: 1.25; }
+    .id { color: var(--muted); font-family: ui-monospace, monospace; font-size: 0.72rem; margin-right: 0.25rem; }
+    .pill {
+      align-self: flex-start;
+      margin-top: auto;
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 0.12rem 0.45rem;
+      border-radius: 999px;
+    }
+    .pill--on { color: #d9ffe8; background: var(--green-soft); }
+    .pill--off { color: var(--muted); border: 1px dashed var(--muted); }
+    .wires {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .wire {
+      fill: none;
+      stroke: var(--flow-dim);
+      stroke-width: 2;
+    }
+    .wire-flow {
+      fill: none;
+      stroke: var(--flow);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-dasharray: 10 28;
+      animation: flow 1.35s linear infinite;
+      filter: drop-shadow(0 0 4px rgba(232, 255, 244, 0.65));
+    }
+    @keyframes flow {
+      to { stroke-dashoffset: -38; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wire-flow { animation: none; opacity: 0.55; }
+    }
+    .foot {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--muted);
+      position: relative;
+      z-index: 1;
+    }
+    .cta { color: #6ea8ff; font-weight: 650; text-decoration: none; }
+    @media (max-width: 800px) {
+      .track { grid-template-columns: 1fr; }
+      .wires { display: none; }
+      .node { min-height: 0; }
+    }
+  </style>
+</head>
+<body>
+  <p class="note">
+    Example only for homepage <code>HomeSystemLoop</code> — XingAI spine, not an Azure stack clone.
+    White dashes move along the green connectors (CSS). On phone the wires hide and cards stack.
+  </p>
+  <div class="board" id="board">
+    <h1>How XingAI works</h1>
+    <p class="lead">One spine turns ideas into products and keeps improving them.</p>
+
+    <svg class="wires" id="wires" aria-hidden="true"></svg>
+
+    <div class="track" id="track">
+      <article class="node node--start" data-node>
+        <span class="role">Start</span>
+        <span class="name">Idea</span>
+      </article>
+      <article class="node" data-node>
+        <span class="role">Memory</span>
+        <span class="name"><span class="id">#001</span>Idea Vault</span>
+        <span class="pill pill--on">Available today</span>
+      </article>
+      <article class="node" data-node>
+        <span class="role">Brain</span>
+        <span class="name"><span class="id">#002</span>Orchestrator</span>
+        <span class="pill pill--off">Planned</span>
+      </article>
+      <article class="node" data-node>
+        <span class="role">Workforce</span>
+        <span class="name">Specialized agents</span>
+        <span class="pill pill--off">Planned</span>
+      </article>
+      <article class="node" data-node>
+        <span class="role">Products</span>
+        <span class="name">XingAI apps</span>
+        <span class="pill pill--on">Available today</span>
+      </article>
+      <article class="node" data-node>
+        <span class="role">Trust</span>
+        <span class="name">Evidence · Growth · Ops</span>
+        <span class="pill pill--on">Available today</span>
+      </article>
+    </div>
+
+    <div class="foot">
+      <span>↺ Results go back to the Vault (planned)</span>
+      <a class="cta" href="#">See the whole loop →</a>
+    </div>
+  </div>
+
+  <script>
+    function paintWires() {
+      const board = document.getElementById("board");
+      const wires = document.getElementById("wires");
+      const nodes = [...document.querySelectorAll("[data-node]")];
+      if (window.matchMedia("(max-width: 800px)").matches) {
+        wires.innerHTML = "";
+        return;
+      }
+      const br = board.getBoundingClientRect();
+      wires.setAttribute("viewBox", `0 0 ${br.width} ${br.height}`);
+      wires.setAttribute("width", br.width);
+      wires.setAttribute("height", br.height);
+      let paths = "";
+      for (let i = 0; i < nodes.length - 1; i++) {
+        const a = nodes[i].getBoundingClientRect();
+        const b = nodes[i + 1].getBoundingClientRect();
+        const x1 = a.right - br.left;
+        const y1 = a.top + a.height / 2 - br.top;
+        const x2 = b.left - br.left;
+        const y2 = b.top + b.height / 2 - br.top;
+        const mx = (x1 + x2) / 2;
+        const d = `M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`;
+        paths += `<path class="wire" d="${d}" /><path class="wire-flow" d="${d}" />`;
+      }
+      wires.innerHTML = paths;
+    }
+    paintWires();
+    window.addEventListener("resize", paintWires);
+  </script>
+</body>
+</html>
