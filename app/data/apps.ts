@@ -2152,7 +2152,6 @@ export const INTERNAL_TOOL_SLUGS = new Set([
 ]);
 
 export const HOME_SHELF_SLUGS = [
-  "investment-assistant",
   "travel-ai",
   "cook-ai",
   "shop-radar",

@@ -284,11 +284,19 @@ html[data-theme="dark"] .site-header {
   min-height: 2.5rem;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .header-nav-link:hover {
   color: var(--ink-strong);
   background: var(--line);
+}
+
+/* Seven links only fit from ~60rem; below that Build stays in the homepage section. */
+@media (max-width: 59.99rem) {
+  .header-nav-link--build {
+    display: none;
+  }
 }
 
 .header-nav-link--active {
@@ -633,6 +641,7 @@ html[data-theme="dark"] .lang-menu {
   letter-spacing: -0.025em;
   line-height: 1.22;
   color: var(--ink-strong);
+  word-break: keep-all;
 }
 
 .hero-card-heading .typewriter {
@@ -690,20 +699,6 @@ html[data-theme="dark"] .lang-menu {
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--muted);
-}
-
-.hero-value-pill {
-  display: inline-flex;
-  align-items: center;
-  margin: 0 0 1.75rem;
-  padding: 0.35rem 0.65rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--soft-bg);
-  color: var(--ink);
-  font-size: 0.75rem;
-  font-weight: 650;
-  line-height: 1.25;
 }
 
 .hero-sub {
@@ -1025,15 +1020,11 @@ html[data-theme="dark"] .lang-menu {
 }
 
 @media (max-width: 47.99rem) {
-  /* Mobile/tablet: product carousel first, then copy. */
+  /* Mobile/tablet: copy and primary CTA first, then the product preview. */
   .hero-layout {
     display: flex;
     flex-direction: column;
     gap: 1.35rem;
-  }
-
-  .hero-preview {
-    order: -1;
   }
 }
 
@@ -1323,6 +1314,13 @@ html[data-theme="dark"] .lang-menu {
   }
 }
 
+@media (min-width: 64rem) {
+  /* Homepage shelf holds three scenario cards: one row on desktop. */
+  .home-apps .app-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .app-card {
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -1344,6 +1342,117 @@ html[data-theme="dark"] .lang-menu {
 
 .home-demos {
   margin-top: 1.25rem;
+}
+
+/* Header nav "Build with us" lands here; clear the sticky header. */
+.home-build {
+  scroll-margin-top: 5rem;
+}
+
+/* ── Homepage decision path (question → you decide) ── */
+.home-path {
+  margin-bottom: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.home-path__steps {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+.home-path__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  align-content: start;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-bg);
+}
+
+.home-path__step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 1.75rem;
+  bottom: -0.85rem;
+  width: 1px;
+  height: 0.85rem;
+  background: color-mix(in srgb, var(--muted) 45%, transparent);
+}
+
+.home-path__step--final {
+  border-color: color-mix(in srgb, var(--blue) 45%, transparent);
+  background: var(--soft-bg);
+}
+
+.home-path__num {
+  grid-row: span 3;
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-path__label {
+  margin: 0 0 0.25rem;
+  font-size: 0.975rem;
+  font-weight: 650;
+  color: var(--ink-strong);
+}
+
+.home-path__body {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.home-path__example {
+  margin: 0;
+  font-size: 0.825rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+@media (min-width: 64rem) {
+  .home-path__steps {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .home-path__step {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .home-path__num {
+    grid-row: auto;
+    margin-bottom: 0.6rem;
+  }
+
+  .home-path__step:not(:last-child)::after {
+    left: auto;
+    right: -0.75rem;
+    top: 1.65rem;
+    bottom: auto;
+    width: 0.75rem;
+    height: 1px;
+  }
 }
 
 .demo-cards {

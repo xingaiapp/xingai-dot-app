@@ -2,11 +2,19 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01l
+**Version:** 2026.10.01p
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01p` Header nav adds “Build with us / 合作共建 / 함께 만들기”, linking to the homepage build section (`/#build`); shown from ~60rem and in the mobile drawer, not in the five-tab bottom bar. Nav labels no longer wrap mid-word.
+
+`2026.10.01o` Homepage “From question to your decision” band under the hero (`HomeDecisionPath`): Question → Research → Challenge → Evidence → You decide, worked through a Travel example (en / 中文 / 한국어), ending on “nothing is booked or bought for you”; links to Travel AI. Investing is deliberately not the example. Five cards in a row on desktop, stacked with connectors on phone.
+
+`2026.10.01n` Homepage reorder: hero preview stays on the Invest AI Industry Map (no autoplay; dots still switch products); on phone the copy and primary CTA come before the preview; “Start here” drops the duplicate Invest card (Travel / Cook / ShopRadar, one row on desktop) and sits above Demos; agents and System Spine move below the product sections.
+
+`2026.10.01m` Homepage hero copy (en / 中文 / 한국어): subtitle “Not just chat.”; card heading “Real questions, checked reasoning — then you decide.” replaces “Capture once. Evolve forever.” (kept on `/story`); duplicate value pill removed; shorter lead focused on the Industry Map as research, not a buy list. Primary CTA unchanged.
 
 `2026.10.01l` System Spine light-theme contrast: stronger card borders/fills, dark green wires (no white glow), clearer stage pills; dark theme glow kept.
 
