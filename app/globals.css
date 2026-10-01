@@ -2496,12 +2496,13 @@ html[data-theme="dark"] .lang-menu {
 
 .home-loop__wire-flow {
   fill: none;
-  stroke: color-mix(in srgb, #ffffff 82%, var(--status-live-fg));
+  /* Avoid pure white — washes out on light theme. Dark overrides below. */
+  stroke: color-mix(in srgb, var(--status-live-fg) 25%, #22c55e);
   stroke-width: 3.5;
   stroke-linecap: round;
   stroke-dasharray: 14 30;
   animation: home-loop-flow 1.4s linear infinite;
-  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--status-live-fg) 75%, transparent));
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--status-live-fg) 45%, transparent));
 }
 
 .home-loop__wire-flow--return {
@@ -2518,7 +2519,7 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .home-loop__arrow-tip {
-  fill: color-mix(in srgb, var(--status-live-fg) 85%, #ffffff);
+  fill: color-mix(in srgb, var(--status-live-fg) 85%, var(--ink-strong));
   stroke: none;
 }
 
@@ -2532,18 +2533,32 @@ html[data-theme="dark"] .lang-menu {
 
 .home-loop__center-ring-flow {
   fill: none;
-  stroke: color-mix(in srgb, #ffffff 75%, var(--status-live-fg));
+  stroke: color-mix(in srgb, var(--status-live-fg) 30%, #22c55e);
   stroke-width: 3;
   stroke-dasharray: 12 22;
   stroke-linecap: round;
   animation: home-loop-flow 2s linear infinite;
-  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--status-live-fg) 60%, transparent));
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--status-live-fg) 40%, transparent));
 }
 
 .home-loop__center-ring-flow--static {
   animation: none;
   opacity: 0.5;
   stroke-dasharray: none;
+}
+
+html[data-theme="dark"] .home-loop__wire-flow {
+  stroke: color-mix(in srgb, #ffffff 82%, var(--status-live-fg));
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--status-live-fg) 75%, transparent));
+}
+
+html[data-theme="dark"] .home-loop__center-ring-flow {
+  stroke: color-mix(in srgb, #ffffff 75%, var(--status-live-fg));
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--status-live-fg) 60%, transparent));
+}
+
+html[data-theme="dark"] .home-loop__arrow-tip {
+  fill: color-mix(in srgb, var(--status-live-fg) 85%, #ffffff);
 }
 
 @keyframes home-loop-flow {
@@ -2795,6 +2810,86 @@ html[data-theme="dark"] .home-loop__step[data-tone="trust"] {
 .home-loop__stage--start {
   color: var(--loop-accent);
   background: color-mix(in srgb, var(--loop-accent) 14%, transparent);
+}
+
+/* Light theme: pastel cards + white wire glow were hard to read on white. */
+html:not([data-theme="dark"]) .home-loop__card {
+  border-color: rgba(10, 12, 27, 0.16);
+  background: #ffffff;
+}
+
+html:not([data-theme="dark"]) .home-loop__wire {
+  stroke: #166534;
+  stroke-width: 3.5;
+  opacity: 1;
+  filter: none;
+}
+
+html:not([data-theme="dark"]) .home-loop__wire-flow {
+  stroke: #22c55e;
+  filter: none;
+}
+
+html:not([data-theme="dark"]) .home-loop__arrow-tip {
+  fill: #166534;
+}
+
+html:not([data-theme="dark"]) .home-loop__center-ring {
+  fill: color-mix(in srgb, #166534 8%, transparent);
+  stroke: #166534;
+  opacity: 1;
+  filter: none;
+}
+
+html:not([data-theme="dark"]) .home-loop__center-ring-flow {
+  stroke: #22c55e;
+  filter: none;
+}
+
+html:not([data-theme="dark"]) .home-loop__hub-mark {
+  border-color: #166534;
+  color: #0a0c1b;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px color-mix(in srgb, #166534 16%, transparent);
+}
+
+html:not([data-theme="dark"]) .home-loop__hub-text {
+  color: rgba(10, 12, 27, 0.68);
+}
+
+html:not([data-theme="dark"]) .home-loop__step {
+  border-width: 1.5px;
+  border-color: color-mix(in srgb, var(--loop-accent) 58%, rgba(10, 12, 27, 0.22));
+  background: color-mix(in srgb, var(--loop-accent) 16%, #ffffff);
+  box-shadow: 0 1px 2px rgba(10, 12, 27, 0.06);
+}
+
+html:not([data-theme="dark"]) .home-loop__step--planned {
+  background: color-mix(in srgb, var(--loop-accent) 9%, #ffffff);
+  border-color: color-mix(in srgb, var(--loop-accent) 48%, rgba(10, 12, 27, 0.2));
+  opacity: 1;
+}
+
+html:not([data-theme="dark"]) .home-loop__num {
+  background: color-mix(in srgb, var(--loop-accent) 18%, #ffffff);
+  border-color: color-mix(in srgb, var(--loop-accent) 55%, transparent);
+}
+
+html:not([data-theme="dark"]) .home-loop__icon {
+  filter: none;
+}
+
+html:not([data-theme="dark"]) .home-loop__stage--available,
+html:not([data-theme="dark"]) .home-loop__stage--start {
+  color: color-mix(in srgb, var(--loop-accent) 82%, #000000);
+  background: color-mix(in srgb, var(--loop-accent) 18%, #ffffff);
+  border: 1px solid color-mix(in srgb, var(--loop-accent) 40%, transparent);
+}
+
+html:not([data-theme="dark"]) .home-loop__stage--planned {
+  color: rgba(10, 12, 27, 0.62);
+  border-color: color-mix(in srgb, var(--loop-accent) 45%, rgba(10, 12, 27, 0.28));
+  background: #ffffff;
 }
 
 .home-loop__back {

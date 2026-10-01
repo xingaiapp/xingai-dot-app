@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01k
+**Version:** 2026.10.01l
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01l` System Spine light-theme contrast: stronger card borders/fills, dark green wires (no white glow), clearer stage pills; dark theme glow kept.
 
 `2026.10.01k` Typewriter on hero card heading “Capture once. Evolve forever.” (letter-by-letter, loops with a short pause); long `heroSub` lead is static again.
 
