@@ -2,8 +2,9 @@
  * Capture invest marketing demos to match food/cook/invest-demo style:
  * mobile 390×585 viewport → 3:2 cover crop at 1536×1024 (full-bleed UI, no phone frame).
  *
- * Usage: npm run capture:demos
- * Needs: lab.xingai.app; invest-t-advisor on :3001 (T_AUTH_MODE=off)
+ * Usage: npm run capture:demos [-- performance-sim|t-today]
+ *        CAPTURE_CHANNEL=chrome npm run capture:demos  (use installed Chrome)
+ * Needs: lab.xingai.app; invest-t-advisor on :3001 (T_AUTH_MODE=off) for t-today
  */
 import { chromium } from "playwright";
 import sharp from "sharp";
@@ -69,7 +70,8 @@ async function prepareFrame(page, target) {
   if (target.name === "performance-sim") {
     const strategies = page.getByRole("button", { name: /strategies/i });
     if (await strategies.isVisible().catch(() => false)) {
-      await strategies.click();
+      // The fixed daily-summary bar overlaps the mobile tab bar, so a pointer click is intercepted
+      await strategies.dispatchEvent("click");
       await page.waitForTimeout(500);
     } else {
       await page.mouse.wheel(0, 420);
@@ -97,9 +99,16 @@ async function exportEcosystemJpeg(rawPng, outJpg) {
 
 async function main() {
   mkdirSync(path.join(publicDir, ".capture-tmp"), { recursive: true });
-  const browser = await chromium.launch();
+  // CAPTURE_CHANNEL=chrome uses the installed Chrome instead of Playwright's bundled browser
+  const browser = await chromium.launch(
+    process.env.CAPTURE_CHANNEL ? { channel: process.env.CAPTURE_CHANNEL } : {},
+  );
 
-  for (const target of targets) {
+  const only = process.argv.slice(2);
+  const selected = only.length ? targets.filter((t) => only.includes(t.name)) : targets;
+  if (!selected.length) throw new Error(`unknown target(s): ${only.join(", ")}`);
+
+  for (const target of selected) {
     for (const theme of ["light", "dark"]) {
       const context = await browser.newContext({
         viewport: VIEWPORT,
