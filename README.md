@@ -2,13 +2,11 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01u
+**Version:** 2026.10.01t
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
-
-`2026.10.01u` Homepage hero preview shows only the Invest AI Industry Map: the five product dots and “See all systems” link are gone, so products appear once, in “Start here” (which keeps “See all apps”).
 
 `2026.10.01t` Homepage polish (en / 中文 / 한국어): hero drops the “XINGAI” label and the lead is one sentence about the Industry Map; on phone “Start here” cards show a 16:9 shot and only the “can do” line; build section reads as “Build your own AI decision system” on the same approach and platform.
 
