@@ -125,10 +125,18 @@ export default function Home() {
         <div className="hero-section--platform">
         <div className="hero-layout">
           <div className="hero-copy">
-            <h2 className="hero-card-heading">{t("heroCardHeading")}</h2>
+            <TypewriterText
+              as="h2"
+              className="hero-card-heading"
+              text={t("heroCardHeading")}
+              msPerChar={125}
+              maxDurationMs={5000}
+              loop
+              loopPauseMs={2400}
+            />
             <p className="hero-brand">{t("heroBrand")}</p>
             <p className="hero-value-pill">{t("heroValuePill")}</p>
-            <TypewriterText className="hero-sub" text={t("heroSub")} />
+            <p className="hero-sub">{t("heroSub")}</p>
             <p className="hero-story-link">
               <LocaleLink href="/story">{t("heroStoryLink")} &rarr;</LocaleLink>
             </p>
