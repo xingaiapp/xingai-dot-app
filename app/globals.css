@@ -5067,3 +5067,87 @@ html[data-theme="dark"] .mobile-drawer {
     transform: scale(1.12);
   }
 }
+
+/* Home co-founders on phones: two compact columns instead of two full-width
+   photo cards, so the trust section stops costing more height than the
+   product shelf. /about and /team keep the large layout. */
+@media (max-width: 35.99rem) {
+  .home-cofounders .cofounders-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.85rem;
+  }
+
+  .home-cofounders .cofounder-photo {
+    max-width: none;
+    border-radius: 12px;
+  }
+
+  .home-cofounders .cofounder-bio {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+}
+
+/* ── /apps: status groups and jump links ── */
+.apps-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+}
+
+.apps-jump__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  text-decoration: none;
+}
+
+.apps-jump__link:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.apps-jump__count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.apps-group {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 5.5rem;
+}
+
+.apps-group__heading {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 650;
+  color: var(--ink-strong);
+}
+
+.apps-group--internal {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.apps-group--internal summary {
+  cursor: pointer;
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.apps-group__note {
+  margin: 0.25rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}

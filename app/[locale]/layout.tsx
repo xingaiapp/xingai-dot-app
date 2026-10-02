@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { buildSiteIdentityGraph } from "../lib/seo-json-ld";
-import { parseRoutingLocale, routingLocales } from "../lib/locale-routing";
+import { htmlLangTag, parseRoutingLocale, routingLocales } from "../lib/locale-routing";
 import {
   homeDescription,
   homeOg,
@@ -36,11 +36,6 @@ export const viewport: Viewport = {
 
 /** Applies the saved theme before paint and keeps the locale cookie in step with the URL. */
 const initScript = `(function(){try{var t=localStorage.getItem("xingai.theme");if(t!=="light"&&t!=="dark"){var d=localStorage.getItem("theme")==="dark"||localStorage.getItem("xingai-theme")==="dark";localStorage.removeItem("theme");localStorage.removeItem("xingai-theme");if(d){t="dark";localStorage.setItem("xingai.theme","dark")}else{t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}}var r=document.documentElement;r.setAttribute("data-theme",t);r.style.colorScheme=t;document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute("content",t==="dark"?"#0c0e14":"#ffffff")});var p=location.pathname,l="en";if(p.indexOf("/zh")===0)l="zh";else if(p.indexOf("/ko")===0)l="ko";r.lang=l==="zh"?"zh-CN":l;localStorage.setItem("xingai.locale",l);document.cookie="xingai.locale="+l+";path=/;max-age=31536000;SameSite=Lax"}catch(e){document.documentElement.setAttribute("data-theme","light");document.documentElement.style.colorScheme="light";document.documentElement.lang="en"}})()`;
-
-/** BCP 47 tag for <html lang>; matches the hreflang values in buildHreflangAlternates. */
-function htmlLang(locale: ReturnType<typeof parseRoutingLocale>) {
-  return locale === "zh" ? "zh-CN" : locale;
-}
 
 type Props = {
   children: React.ReactNode;
@@ -96,7 +91,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   // rewrites unprefixed English URLs to /en), so <html lang> is set per locale
   // on the server instead of being patched by script after load.
   return (
-    <html lang={htmlLang(locale)} suppressHydrationWarning>
+    <html lang={htmlLangTag(locale)} suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="light dark" />
         <script dangerouslySetInnerHTML={{ __html: initScript }} />

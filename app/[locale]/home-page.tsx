@@ -239,8 +239,6 @@ export default function Home() {
         </div>
       </section>
 
-      <HomeDecisionPath />
-
       <section id="start-here" className="home-apps" aria-labelledby="home-apps-heading">
         <h2 id="home-apps-heading" className="section-title">
           {t("homeAppsHeading")}
@@ -308,6 +306,8 @@ export default function Home() {
         </div>
       </section>
 
+      <HomeDecisionPath />
+
       <section className="home-team" aria-labelledby="home-team-heading">
         <h2 id="home-team-heading" className="section-title">
           {t("homeTeamHeading")}
@@ -331,50 +331,6 @@ export default function Home() {
         </ul>
         <p className="about-story-link">
           <LocaleLink href="/team">{t("homeMeetTeam")} &rarr;</LocaleLink>
-        </p>
-      </section>
-
-      <HomeSystemLoop />
-
-      <section className="home-answers" aria-labelledby="home-answers-heading">
-        <h2 id="home-answers-heading" className="section-title">
-          {t("answerHeading")}
-        </h2>
-        <p className="section-lead">{t("answerLead")}</p>
-        <dl className="answer-list">
-          {answerItems.map((item, index) => (
-            <div key={item.question} className="answer-item">
-              <dt>
-                <span className="answer-icon">
-                  <AnswerIcon index={index} />
-                </span>
-                <span>{item.question}</span>
-              </dt>
-              <dd>{item.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
-
-      <section id="build" className="home-build" aria-labelledby="home-build-heading">
-        <h2 id="home-build-heading" className="section-title">
-          {t("buildHeading")}
-        </h2>
-        <p className="section-lead">{t("buildLead")}</p>
-        <ul className="build-points">
-          <li>{t("buildPoint1")}</li>
-          <li>{t("buildPoint2")}</li>
-          <li>{t("buildPoint3")}</li>
-        </ul>
-        <LocaleLink
-          href="/contact"
-          className="cta"
-          onClick={() => trackCta("build", "home-build")}
-        >
-          {t("buildCta")}
-        </LocaleLink>
-        <p className="hero-story-link home-build__services-link">
-          <LocaleLink href="/services">{t("buildServicesLink")} &rarr;</LocaleLink>
         </p>
       </section>
 
@@ -437,6 +393,50 @@ export default function Home() {
           {t("contactNote")}{" "}
           <a href="mailto:contact@xingai.app">contact@xingai.app</a>{" "}
           {t("contactTail")}
+        </p>
+      </section>
+
+      <HomeSystemLoop />
+
+      <section className="home-answers" aria-labelledby="home-answers-heading">
+        <h2 id="home-answers-heading" className="section-title">
+          {t("answerHeading")}
+        </h2>
+        <p className="section-lead">{t("answerLead")}</p>
+        <dl className="answer-list">
+          {answerItems.map((item, index) => (
+            <div key={item.question} className="answer-item">
+              <dt>
+                <span className="answer-icon">
+                  <AnswerIcon index={index} />
+                </span>
+                <span>{item.question}</span>
+              </dt>
+              <dd>{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section id="build" className="home-build" aria-labelledby="home-build-heading">
+        <h2 id="home-build-heading" className="section-title">
+          {t("buildHeading")}
+        </h2>
+        <p className="section-lead">{t("buildLead")}</p>
+        <ul className="build-points">
+          <li>{t("buildPoint1")}</li>
+          <li>{t("buildPoint2")}</li>
+          <li>{t("buildPoint3")}</li>
+        </ul>
+        <LocaleLink
+          href="/contact"
+          className="cta"
+          onClick={() => trackCta("build", "home-build")}
+        >
+          {t("buildCta")}
+        </LocaleLink>
+        <p className="hero-story-link home-build__services-link">
+          <LocaleLink href="/services">{t("buildServicesLink")} &rarr;</LocaleLink>
         </p>
       </section>
     </main>

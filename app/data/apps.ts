@@ -2181,3 +2181,37 @@ export function getHomeShelfApps(locale: Locale): AppData[] {
     return app ? [app] : [];
   });
 }
+
+/** Live products shown first on /apps, flagship first; other live apps follow in data order. */
+export const CATALOG_LIVE_LEAD_SLUGS = [
+  "investment-assistant",
+  "travel-ai",
+  "cook-ai",
+  "outfit-ai",
+] as const;
+
+export type CatalogGroupKey = "live" | "demo" | "coming-soon" | "internal";
+
+/** /apps sections: Live (flagship first), Demo, Coming soon, then internal ops tools. */
+export function getCatalogGroups(
+  locale: Locale,
+): { key: CatalogGroupKey; apps: AppData[] }[] {
+  const all = getLocalizedApps(locale);
+  const publicApps = all.filter((app) => !isInternalTool(app));
+  const leadRank = (slug: string) => {
+    const i = (CATALOG_LIVE_LEAD_SLUGS as readonly string[]).indexOf(slug);
+    return i === -1 ? CATALOG_LIVE_LEAD_SLUGS.length : i;
+  };
+  const live = publicApps
+    .filter((app) => app.launchStatus === "live")
+    .map((app, index) => ({ app, index }))
+    .sort((a, b) => leadRank(a.app.slug) - leadRank(b.app.slug) || a.index - b.index)
+    .map(({ app }) => app);
+  const groups: { key: CatalogGroupKey; apps: AppData[] }[] = [
+    { key: "live", apps: live },
+    { key: "demo", apps: publicApps.filter((app) => app.launchStatus === "demo") },
+    { key: "coming-soon", apps: publicApps.filter((app) => app.launchStatus === "coming-soon") },
+    { key: "internal", apps: all.filter(isInternalTool) },
+  ];
+  return groups.filter((group) => group.apps.length > 0);
+}

@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01ae
+**Version:** 2026.10.01af
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01af` Multilingual SEO: About, Contact, Engineering, Services and Agent Security Assessment get zh/ko titles, descriptions, self-canonicals and hreflang (their /zh and /ko pages used to canonicalize to English); `/apps` title is localized; `<html lang>` is rendered per locale on the server (`en` / `zh-CN` / `ko`) because `[locale]/layout.tsx` is now the root layout. `/apps` is grouped Live → Demos → Coming soon → Internal tools (collapsed) with jump links, flagship Invest AI first. Home puts Start here right after the hero, keeps Team and Co-founders together, and shows co-founders as two compact columns on phones. The workshop CTA on Services goes to the contact page instead of `mailto:`.
 
 `2026.10.01ae` Hero: the How-it-works link above the Map CTA is removed (missed the 2026.10.01ad merge), and on desktop the copy column centers against the taller preview instead of leaving an empty band bottom-left.
 

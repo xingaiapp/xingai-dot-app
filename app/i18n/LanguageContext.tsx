@@ -11,6 +11,7 @@ import {
 import translations, { type Locale, type TranslationKey } from "./translations";
 
 import { LOCALE_COOKIE } from "../lib/locale-constants";
+import { htmlLangTag } from "../lib/locale-routing";
 
 const DEFAULT_LOCALE: Locale = "en";
 const LOCALE_STORAGE_KEY = LOCALE_COOKIE;
@@ -39,7 +40,7 @@ export function LanguageProvider({
 
   useEffect(() => {
     setLocaleState(initialLocale);
-    document.documentElement.setAttribute("lang", initialLocale);
+    document.documentElement.setAttribute("lang", htmlLangTag(initialLocale));
     persistLocaleCookie(initialLocale);
     localStorage.setItem(LOCALE_STORAGE_KEY, initialLocale);
   }, [initialLocale]);
@@ -51,7 +52,7 @@ export function LanguageProvider({
   const setLocale = useCallback((l: Locale) => {
     setLocaleState(l);
     localStorage.setItem(LOCALE_STORAGE_KEY, l);
-    document.documentElement.setAttribute("lang", l);
+    document.documentElement.setAttribute("lang", htmlLangTag(l));
     persistLocaleCookie(l);
   }, []);
 
