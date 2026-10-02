@@ -973,8 +973,9 @@ html[data-theme="dark"] .lang-menu {
   .hero-copy {
     display: flex;
     flex-direction: column;
-    /* Top-align with the preview card so the heading shares one baseline. */
-    justify-content: flex-start;
+    /* The preview column is much taller than the copy; center the copy so the
+       spare height splits above and below instead of pooling bottom-left. */
+    justify-content: center;
     gap: 0.35rem;
     max-width: 28rem;
     padding-top: 0;

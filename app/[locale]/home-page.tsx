@@ -135,9 +135,6 @@ export default function Home() {
               onTyped={advanceHero}
             />
             <p className="hero-goal">{t("heroGoal")}</p>
-            <p className="hero-story-link">
-              <LocaleLink href="/story">{t("heroStoryLink")} &rarr;</LocaleLink>
-            </p>
             <div className="hero-actions">
               <a
                 href="https://invest.xingai.app/ai-map"
