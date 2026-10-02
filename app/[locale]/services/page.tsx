@@ -16,9 +16,6 @@ export default function ServicesPage() {
 
   const topics = t("svcWorkshopTopics").split("|");
   const deliver = t("svcWorkshopDeliver").split("|");
-  const workshopMailto = `mailto:contact@xingai.app?subject=${encodeURIComponent(
-    "[xingai.app] Engineering practice workshop"
-  )}`;
 
   return (
     <main className="wrap">
@@ -72,9 +69,13 @@ export default function ServicesPage() {
           ))}
         </ul>
         <p>
-          <a className="cta" href={workshopMailto}>
+          <Link
+            className="cta"
+            href={p("/contact")}
+            onClick={() => trackCta("contact", "services")}
+          >
             {t("svcWorkshopCta")}
-          </a>
+          </Link>
         </p>
       </div>
 

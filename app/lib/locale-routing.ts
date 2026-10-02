@@ -41,6 +41,11 @@ export function switchLocalePath(pathname: string, nextLocale: Locale): string {
   return localizePath(nextLocale, base);
 }
 
+/** BCP 47 tag for <html lang>; matches the hreflang values in buildHreflangAlternates. */
+export function htmlLangTag(locale: Locale): string {
+  return locale === "zh" ? "zh-CN" : locale;
+}
+
 export function openGraphLocale(locale: Locale): string {
   if (locale === "zh") return "zh_CN";
   if (locale === "ko") return "ko_KR";

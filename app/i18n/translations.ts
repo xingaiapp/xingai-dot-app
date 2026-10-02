@@ -236,7 +236,13 @@ const translations = {
     storyAboutTeaser: "Team, mission, and stack:",
 
     // Apps listing
-    appsHeading: "Our AI systems",
+    appsHeading: "All apps",
+    appsGroupLive: "Live now",
+    appsGroupDemo: "Demos",
+    appsGroupComingSoon: "Coming soon",
+    appsGroupInternal: "Internal tools",
+    appsGroupInternalNote: "Dashboards we use to run XingAI. Public so you can see how we work, not products to sign up for.",
+    appsJumpLabel: "Jump to",
     appsLead:
       "Decision intelligence across food, style, habits, investing, and more\u2014one coherent platform, not a random tool list.",
     appViewDetails: "View details",
@@ -613,7 +619,13 @@ const translations = {
       "\u5728\u5e94\u7528\u76ee\u5f55\u6253\u5f00\u516c\u5f00 Demo\u3002T Today \u8d70\u8054\u7cfb\u9875\u7533\u8bf7\u5185\u6d4b\uff0c\u6211\u4eec\u514d\u8d39\u52a0\u5165\u767d\u540d\u5355\u3002",
     storyAboutTeaser: "\u56e2\u961f\u3001\u4f7f\u547d\u4e0e\u6280\u672f\u6808\u89c1",
 
-    appsHeading: "\u6211\u4eec\u7684 AI \u7cfb\u7edf",
+    appsHeading: "全部应用",
+    appsGroupLive: "已上线",
+    appsGroupDemo: "演示版",
+    appsGroupComingSoon: "即将推出",
+    appsGroupInternal: "内部工具",
+    appsGroupInternalNote: "我们自己运营 XingAI 用的看板。公开出来是为了让你看到我们怎么做事，不是可以注册使用的产品。",
+    appsJumpLabel: "跳到",
     appsLead:
       "\u996e\u98df\u3001\u7a7f\u642d\u3001\u4e60\u60ef\u3001\u6295\u8d44\u7b49\u9886\u57df\u7684\u51b3\u7b56\u667a\u80fd\u2014\u2014\u540c\u4e00\u5e73\u53f0\u4e0b\u7684\u8fde\u8d2f\u4ea7\u54c1\u77e9\u9635\uff0c\u800c\u975e\u96f6\u6563\u5de5\u5177\u5217\u8868\u3002",
     appViewDetails: "\u67e5\u770b\u8be6\u60c5",
@@ -983,7 +995,13 @@ const translations = {
       "Apps\uc5d0\uc11c \uacf5\uac1c \ub370\ubaa8\ub97c \uc5f4\uc5b4\ubcf4\uc138\uc694. T Today\ub294 Contact\ub85c \ubb34\ub8cc \uc5bc\ub9ac \uc561\uc138\uc2a4\ub97c \uc694\uccad\ud558\uba74 \ud5c8\uc6a9 \ubaa9\ub85d\uc5d0 \ucd94\uac00\ud569\ub2c8\ub2e4.",
     storyAboutTeaser: "\ud300, \ubbf8\uc158, \uc2a4\ud0dd:",
 
-    appsHeading: "\uc6b0\ub9ac\uc758 AI \uc2dc\uc2a4\ud15c",
+    appsHeading: "전체 앱",
+    appsGroupLive: "지금 사용 가능",
+    appsGroupDemo: "데모",
+    appsGroupComingSoon: "출시 예정",
+    appsGroupInternal: "내부 도구",
+    appsGroupInternalNote: "XingAI를 운영할 때 쓰는 대시보드입니다. 일하는 방식을 보여 드리려고 공개했으며, 가입해서 쓰는 제품은 아닙니다.",
+    appsJumpLabel: "바로 가기",
     appsLead:
       "\uc74c\uc2dd, \uc2a4\ud0c0\uc77c, \ub8e8\ud2f4, \ud22c\uc790 \ub4f1 \uc601\uc5ed\uc758 \uc758\uc0ac\uacb0\uc815 \uc778\ud154\ub9ac\uc804\uc2a4\u2014\ud754\uc5b4\uc9c4 \ub3c4\uad6c \ubaa9\ub85d\uc774 \uc544\ub2cc \ud558\ub098\uc758 \ud50c\ub7ab\ud3fc\uc785\ub2c8\ub2e4.",
     appViewDetails: "\uc790\uc138\ud788 \ubcf4\uae30",

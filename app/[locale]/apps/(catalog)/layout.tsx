@@ -10,7 +10,11 @@ import {
 } from "../../../lib/localized-seo";
 import { formatPageTitle } from "../../../lib/site-seo";
 
-const APPS_PAGE_TITLE = "AI Products";
+function appsPageTitle(locale: ReturnType<typeof parseRoutingLocale>) {
+  if (locale === "zh") return "AI 产品";
+  if (locale === "ko") return "AI 제품";
+  return "AI Products";
+}
 const path = "/apps";
 
 type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
@@ -19,14 +23,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = parseRoutingLocale(raw);
   const description = appsCatalogDescription(locale);
-  const title = formatPageTitle(APPS_PAGE_TITLE);
+  const pageTitle = appsPageTitle(locale);
+  const title = formatPageTitle(pageTitle);
   const og = appsOg(locale);
 
   return {
-    title: formatPageTitle(APPS_PAGE_TITLE),
+    title,
     description,
     alternates: pageAlternates(locale, path),
-    openGraph: localizedOpenGraph(locale, path, APPS_PAGE_TITLE, description, og),
+    openGraph: localizedOpenGraph(locale, path, pageTitle, description, og),
     twitter: {
       card: "summary_large_image",
       title,

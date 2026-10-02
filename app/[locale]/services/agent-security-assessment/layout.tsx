@@ -1,22 +1,33 @@
 import type { Metadata } from "next";
+import { parseRoutingLocale } from "../../../lib/locale-routing";
+import { localizedPageMetadata, type LocalizedPageCopy } from "../../../lib/localized-seo";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://xingai.app";
+const path = "/services/agent-security-assessment";
 
-export const metadata: Metadata = {
-  title: "Agent Security Assessment | XingAI",
-  description:
-    "Fixed-scope security assessment for AI agents, MCP servers, and tool permissions — prompt injection exposure, permission manifests, and audit readiness for .NET and Azure teams.",
-  alternates: { canonical: `${siteUrl}/services/agent-security-assessment` },
-  openGraph: {
-    title: "Agent Security Assessment | XingAI",
+const copy: LocalizedPageCopy = {
+  en: {
+    title: "Agent Security Assessment",
     description:
-      "Know what your AI agents can actually reach. Fixed-scope review of MCP servers, tool permissions, prompt injection exposure, and audit readiness.",
-    url: `${siteUrl}/services/agent-security-assessment`,
-    siteName: "XingAI",
-    type: "website",
+      "Fixed-scope security assessment for AI agents, MCP servers, and tool permissions — prompt injection exposure, permission manifests, and audit readiness for .NET and Azure teams.",
+  },
+  zh: {
+    title: "Agent 安全评估",
+    description:
+      "面向 AI Agent、MCP 服务器和工具权限的固定范围安全评估——提示注入暴露面、权限清单与审计就绪度，适合 .NET 和 Azure 团队。",
+  },
+  ko: {
+    title: "에이전트 보안 평가",
+    description:
+      "AI 에이전트, MCP 서버, 도구 권한에 대한 고정 범위 보안 평가 — 프롬프트 인젝션 노출, 권한 목록, 감사 대비 상태를 점검합니다. .NET·Azure 팀을 위한 서비스입니다.",
   },
 };
+
+type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return localizedPageMetadata(parseRoutingLocale(locale), path, copy);
+}
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -65,11 +76,7 @@ const faqJsonLd = {
   ],
 };
 
-export default function AgentSecurityAssessmentLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function AgentSecurityAssessmentLayout({ children }: Props) {
   return (
     <>
       <script
