@@ -10,22 +10,37 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const subjectOptions = t("contactFormSubjectOptions").split(",");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (status === "sending") return;
+
     setStatus("sending");
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`
-    );
-    const subjectLine = encodeURIComponent(`[xingai.app] ${subject || subjectOptions[0]}`);
-    // Open mailto — no backend needed
-    const mailto = `mailto:contact@xingai.app?subject=${subjectLine}&body=${body}`;
-    window.location.href = mailto;
-    // After a short delay show success (mailto opened in client)
-    setTimeout(() => setStatus("success"), 600);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          subject: subject || subjectOptions[0],
+          message,
+          website,
+        }),
+      });
+      const data = (await res.json().catch(() => null)) as { ok?: boolean } | null;
+      if (!res.ok || !data?.ok) {
+        setStatus("error");
+        return;
+      }
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -36,7 +51,6 @@ export default function ContactPage() {
       </section>
 
       <div className="contact-grid">
-        {/* Contact form */}
         <div className="panel contact-card contact-card--form">
           <h2 className="panel-heading">{t("contactFormLabel")}</h2>
           <p>{t("contactFormDesc")}</p>
@@ -54,6 +68,7 @@ export default function ContactPage() {
                   onChange={(e) => setName(e.target.value)}
                   required
                   autoComplete="name"
+                  maxLength={120}
                 />
               </label>
 
@@ -66,6 +81,7 @@ export default function ContactPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   autoComplete="email"
+                  maxLength={254}
                 />
               </label>
 
@@ -92,8 +108,28 @@ export default function ContactPage() {
                   onChange={(e) => setMessage(e.target.value)}
                   required
                   rows={5}
+                  maxLength={5000}
                 />
               </label>
+
+              {/* Honeypot — hidden from people, filled by many bots. */}
+              <label className="contact-form__honeypot" aria-hidden="true">
+                Website
+                <input
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                />
+              </label>
+
+              {status === "error" ? (
+                <p className="contact-form-error" role="alert">
+                  {t("contactFormError")}
+                </p>
+              ) : null}
 
               <button
                 type="submit"

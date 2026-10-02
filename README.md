@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01af
+**Version:** 2026.10.01ag
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01ag` Contact form posts to `POST /api/contact` and delivers via Resend (no more fake `mailto` success). Needs `RESEND_API_KEY` + `CONTACT_TO_EMAIL` / `CONTACT_FROM_EMAIL` on Vercel; see Contact section below.
 
 `2026.10.01af` Multilingual SEO: About, Contact, Engineering, Services and Agent Security Assessment get zh/ko titles, descriptions, self-canonicals and hreflang (their /zh and /ko pages used to canonicalize to English); `/apps` title is localized; `<html lang>` is rendered per locale on the server (`en` / `zh-CN` / `ko`) because `[locale]/layout.tsx` is now the root layout. `/apps` is grouped Live → Demos → Coming soon → Internal tools (collapsed) with jump links, flagship Invest AI first. Home puts Start here right after the hero, keeps Team and Co-founders together, and shows co-founders as two compact columns on phones. The workshop CTA on Services goes to the contact page instead of `mailto:`.
 
@@ -302,6 +304,20 @@ public/             # Logos, icons, favicons, demo screenshots
 - **Web:** [xingai.app](https://xingai.app/)
 - **LinkedIn:** [xingaiapp](https://www.linkedin.com/in/xingaiapp/)
 - **X/Twitter:** [@XingAIApp](https://x.com/XingAIApp)
+
+### Contact form delivery
+
+The `/contact` form posts to `POST /api/contact`, which sends mail through [Resend](https://resend.com) (same provider as Invest AI / Founder). It never opens `mailto:` and never shows success unless Resend accepts the message.
+
+Set these on the Vercel project (see `.env.example`):
+
+| Env | Required | Notes |
+|---|---|---|
+| `RESEND_API_KEY` | Yes | Without it the form returns an honest error |
+| `CONTACT_TO_EMAIL` | No | Defaults to `contact@xingai.app` |
+| `CONTACT_FROM_EMAIL` | Recommended | Verified Resend sender, e.g. `XingAI Contact <noreply@xingai.app>`. Falls back to Resend’s onboarding sender for smoke tests only |
+
+`reply_to` is the visitor’s email so you can answer from the inbox.
 
 ## Have an idea?
 
