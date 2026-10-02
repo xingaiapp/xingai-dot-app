@@ -706,21 +706,6 @@ html[data-theme="dark"] .lang-menu {
   }
 }
 
-.hero-sub {
-  margin: 0 0 0.85rem;
-  font-size: 0.96rem;
-  line-height: 1.78;
-  color: var(--muted);
-  text-wrap: balance;
-}
-
-@media (min-width: 48rem) {
-  .hero-sub {
-    font-size: 1rem;
-    line-height: 1.82;
-  }
-}
-
 .hero-preview {
   display: grid;
   gap: 0.8rem;
