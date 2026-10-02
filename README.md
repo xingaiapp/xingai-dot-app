@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01y
+**Version:** 2026.10.01z
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01z` Homepage hero adds SEO-aligned `heroGoal` copy (en / 中文 / 한국어) under the typewriter heading — decision systems vs chatbot, Travel/Cook/Wear + Industry Map, informational outputs; left column top-aligns with the preview, shared body type, tighter CTA spacing. Decision-path cards lift and pick up a blue edge on hover (respects `prefers-reduced-motion`).
 
 `2026.10.01y` Hero carousel advances when the heading “Real questions, checked reasoning — then you decide.” finishes typing (each loop), instead of on its own 4.8s timer; hover/focus still holds the slide, reduced motion keeps both still.
 

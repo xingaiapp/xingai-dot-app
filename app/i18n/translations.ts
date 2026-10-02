@@ -58,6 +58,8 @@ const translations = {
     heroSub:
       "Start with the Invest AI Industry Map: the AI supply chain layer by layer, with claims tied to cited filings — research you can check, not a buy list.",
     heroStoryLink: "How XingAI turns ideas into products",
+    heroGoal:
+      "Unlike a chatbot that ends in one chat thread, XingAI ships focused AI decision systems: one real question, research and challenge, evidence you can check, then you decide. Try Travel AI, Cook AI, or Wear AI for everyday choices—or open the Invest AI Industry Map for AI supply-chain research with cited public filings. Outputs are informational; a person makes the call.",
     heroTryLiveCta: "Try a live product",
     appsFinanceDisclaimer: "Finance demos (Performance Sim, T Today): paper structure only · not investment advice · no broker integration.",
     heroPreviewLabel: "System preview",
@@ -442,6 +444,8 @@ const translations = {
     heroSub:
       "从 Invest AI 产业地图开始：按图层看 AI 产业链，结论都挂引用备案——可核对的研究，不是买入清单。",
     heroStoryLink: "XingAI 如何把想法变成产品",
+    heroGoal:
+      "和止于一段聊天的 chatbot 不同，XingAI 做的是聚焦的 AI 决策系统：一个真实问题，研究与质疑，可核对的依据，最后由你决定。日常可用 Travel AI、Cook AI、Wear AI；要做 AI 产业链研究，就打开带引用公开备案的 Invest AI 产业地图。输出仅供参考，拍板的是人。",
     heroTryLiveCta: "试用已上线产品",
     appsFinanceDisclaimer: "金融类演示（Performance Sim、T Today）：仅纸面结构 · 非投资建议 · 不对接券商下单。",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
@@ -812,6 +816,8 @@ const translations = {
     heroSub:
       "Invest AI 산업 지도부터 보세요. AI 공급망을 레이어별로 보고, 주장은 인용된 공시에 맞춥니다 — 확인 가능한 리서치이며 매수 목록이 아닙니다.",
     heroStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
+    heroGoal:
+      "채팅 한 줄로 끝나는 챗봇과 달리, XingAI는 집중된 AI 의사결정 시스템을 만듭니다. 실제 질문 하나, 리서치와 반론, 확인할 수 있는 근거, 그리고 결정은 당신이. 일상 선택은 Travel AI, Cook AI, Wear AI로 — AI 공급망 리서치가 필요하면 인용된 공개 공시가 있는 Invest AI Industry Map을 여세요. 결과는 참고용이며, 최종 판단은 사람이 합니다.",
     heroTryLiveCta: "라이브 제품 써 보기",
     appsFinanceDisclaimer: "금융 데모(Performance Sim, T Today): 종이 구조용 · 투자 조언 아님 · 브로커 연동 없음.",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
