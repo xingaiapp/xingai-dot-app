@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useTranslation } from "../../i18n/LanguageContext";
 import { useLocalePath } from "../../lib/use-locale-path";
+import { trackCta } from "../../lib/track-cta";
 
 /**
- * Services index. Two fixed-scope offers; no prices on the page by design —
- * fees are quoted after a scoping call, same as the assessment page.
+ * Services index: the custom decision-system build (the "Build with us" nav
+ * target, so it comes first) plus two fixed-scope offers. No prices on the
+ * page by design — fees are quoted after a scoping call.
  */
 export default function ServicesPage() {
   const { t } = useTranslation();
@@ -24,6 +26,25 @@ export default function ServicesPage() {
         <h1 className="page-heading">{t("svcHeading")}</h1>
         <p className="page-lead">{t("svcLead")}</p>
       </section>
+
+      <div id="build" className="panel">
+        <h2 className="panel-heading">{t("buildHeading")}</h2>
+        <p>{t("buildLead")}</p>
+        <ul>
+          <li>{t("buildPoint1")}</li>
+          <li>{t("buildPoint2")}</li>
+          <li>{t("buildPoint3")}</li>
+        </ul>
+        <p>
+          <Link
+            className="cta"
+            href={p("/contact")}
+            onClick={() => trackCta("build", "services")}
+          >
+            {t("buildCta")}
+          </Link>
+        </p>
+      </div>
 
       <div className="panel">
         <h2 className="panel-heading">{t("svcAssessTitle")}</h2>

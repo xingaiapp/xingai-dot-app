@@ -131,6 +131,7 @@ const translations = {
     buildPoint2: "We design, build, and ship \u2014 you stay in the driver\u2019s seat",
     buildPoint3: "Built on the same platform we run our own products on",
     buildCta: "Tell us your idea",
+    buildServicesLink: "See all services",
 
     // Co-founders (shared: home + about)
     cofounders: "Co-founders",
@@ -360,7 +361,7 @@ const translations = {
     // Services — Agent Security Assessment
     navServices: "Services",
     svcHeading: "Services",
-    svcLead: "Two fixed-scope engagements for teams putting AI agents and LLM features into production. We assess and teach; we don't sell you a platform.",
+    svcLead: "Three ways to work with us, for teams putting AI into real decisions: we build a decision system with you, review the agents you already run, or teach the practices behind our products.",
     svcAssessTitle: "Agent Security Assessment",
     svcAssessBody: "A 1–2 week, read-only review of your AI agents, MCP servers and tool permissions. You get a findings report ranked by risk, a permission manifest for every agent, and a remediation walkthrough.",
     svcAssessLink: "See scope and process",
@@ -371,7 +372,7 @@ const translations = {
     svcWorkshopDeliverHeading: "What you get",
     svcWorkshopDeliver: "An agenda written for your team after a 30-minute call|The session itself, using your own systems as the examples|Written notes and a checklist your team can keep using",
     svcWorkshopCta: "Ask about a workshop",
-    svcFeeNote: "Both are fixed scope and fixed fee, quoted after a short call. No retainer.",
+    svcFeeNote: "The assessment and the workshop are fixed scope and fixed fee, quoted after a short call. A custom system is scoped with you first. No retainer.",
     svcOtherHeading: "Something else?",
     svcOtherBody: "If you have a specific agent, MCP surface or decision path in mind, describe it and we'll tell you honestly whether we can help.",
     svcOtherCta: "Start a conversation",
@@ -515,6 +516,7 @@ const translations = {
     buildPoint2: "\u6211\u4eec\u8bbe\u8ba1\u3001\u5f00\u53d1\u3001\u4ea4\u4ed8 \u2014 \u4f60\u638c\u63a7\u65b9\u5411",
     buildPoint3: "跑在我们自己产品所用的同一平台上",
     buildCta: "\u544a\u8bc9\u6211\u4eec\u4f60\u7684\u60f3\u6cd5",
+    buildServicesLink: "查看全部服务",
 
     cofounders: "\u8054\u5408\u521b\u59cb\u4eba",
     cofounder: "\u8054\u5408\u521b\u59cb\u4eba",
@@ -732,7 +734,7 @@ const translations = {
     // Services — Agent Security Assessment
     navServices: "服务",
     svcHeading: "服务",
-    svcLead: "面向正在把 AI Agent 和大模型功能推上生产的团队，提供两项固定范围的服务。我们做评估、做传授，不向你推销平台。",
+    svcLead: "和团队合作的三种方式：和你们一起做一个决策系统，审查你们已经在跑的 Agent，或者传授我们产品背后的工程做法。",
     svcAssessTitle: "Agent 安全评估",
     svcAssessBody: "用 1–2 周时间、只读权限，审查你的 AI Agent、MCP 服务器和工具权限。交付按风险排序的问题报告、每个 Agent 的权限清单，以及一次整改讲解。",
     svcAssessLink: "查看范围和流程",
@@ -743,7 +745,7 @@ const translations = {
     svcWorkshopDeliverHeading: "交付内容",
     svcWorkshopDeliver: "30 分钟沟通后，为你们团队写的议程|工作坊本身，用你们自己的系统做例子|团队之后还能继续用的书面笔记和检查清单",
     svcWorkshopCta: "咨询工作坊",
-    svcFeeNote: "两项都是固定范围、固定费用，简短沟通后报价，不需要长期合约。",
+    svcFeeNote: "安全评估和工作坊都是固定范围、固定费用，简短沟通后报价；定制系统先和你们一起确定范围。都不需要长期合约。",
     svcOtherHeading: "有别的需求？",
     svcOtherBody: "如果你手上有具体的 Agent、MCP 接入或决策流程，把情况讲给我们，我们会如实告诉你能不能帮上忙。",
     svcOtherCta: "开始沟通",
@@ -887,6 +889,7 @@ const translations = {
     buildPoint2: "\uc6b0\ub9ac\uac00 \uc124\uacc4, \uac1c\ubc1c, \ubc30\ud3ec \u2014 \ub2f9\uc2e0\uc774 \ubc29\ud5a5\uc744 \uc815\ud569\ub2c8\ub2e4",
     buildPoint3: "우리 제품이 돌아가는 같은 플랫폼 위에서 만듭니다",
     buildCta: "\uc544\uc774\ub514\uc5b4\ub97c \uc54c\ub824\uc8fc\uc138\uc694",
+    buildServicesLink: "전체 서비스 보기",
 
     cofounders: "\uacf5\ub3d9 \ucc3d\ub9bd\uc790",
     cofounder: "\uacf5\ub3d9 \ucc3d\ub9bd\uc790",
@@ -1104,7 +1107,7 @@ const translations = {
     // Services — Agent Security Assessment
     navServices: "서비스",
     svcHeading: "서비스",
-    svcLead: "AI 에이전트와 LLM 기능을 프로덕션에 올리는 팀을 위한 두 가지 고정 범위 서비스입니다. 평가하고 가르칠 뿐, 플랫폼을 팔지 않습니다.",
+    svcLead: "팀과 함께 일하는 세 가지 방식: 의사결정 시스템을 함께 만들고, 이미 운영 중인 에이전트를 검토하거나, 우리 제품 뒤의 엔지니어링 방식을 가르칩니다.",
     svcAssessTitle: "에이전트 보안 평가",
     svcAssessBody: "1–2주 동안 읽기 전용 권한으로 AI 에이전트, MCP 서버, 도구 권한을 검토합니다. 위험도순 결과 보고서, 에이전트별 권한 목록, 개선 우선순위 설명 세션을 제공합니다.",
     svcAssessLink: "범위와 절차 보기",
@@ -1115,7 +1118,7 @@ const translations = {
     svcWorkshopDeliverHeading: "제공 내용",
     svcWorkshopDeliver: "30분 통화 후 팀에 맞춰 작성한 아젠다|여러분의 시스템을 예시로 쓰는 워크숍|팀이 계속 쓸 수 있는 정리 노트와 체크리스트",
     svcWorkshopCta: "워크숍 문의",
-    svcFeeNote: "두 서비스 모두 고정 범위, 고정 비용이며 짧은 통화 후 견적을 드립니다. 장기 계약은 없습니다.",
+    svcFeeNote: "보안 평가와 워크숍은 고정 범위, 고정 비용이며 짧은 통화 후 견적을 드립니다. 맞춤 시스템은 먼저 함께 범위를 정합니다. 장기 계약은 없습니다.",
     svcOtherHeading: "다른 요청이 있나요?",
     svcOtherBody: "특정 에이전트, MCP 연동, 의사결정 경로가 있다면 설명해 주세요. 도울 수 있는지 솔직하게 말씀드리겠습니다.",
     svcOtherCta: "대화 시작하기",

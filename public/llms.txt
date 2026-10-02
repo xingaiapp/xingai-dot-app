@@ -32,6 +32,14 @@ Team: https://xingai.app/team
 - These roles are characters, not employees. A person makes the final
   decision. Running the agents together as one system is planned, not built.
 
+Services (work with XingAI): https://xingai.app/services
+- Custom AI decision system: we map one recurring decision your team makes
+  into a focused system, built on the same platform as our own products.
+- Agent Security Assessment: a 1-2 week, read-only review of AI agents, MCP
+  servers and tool permissions.
+  https://xingai.app/services/agent-security-assessment
+- Engineering practice workshop: ADRs, LLM evaluation, MCP in production.
+
 Product catalog: https://xingai.app/apps
 
 Languages: English, Chinese, Korean.

@@ -18,7 +18,7 @@ const navPaths: { path: string; key: NavKey; hash?: string }[] = [
   { path: "/apps", key: "navApps" },
   { path: "/story", key: "navStory" },
   { path: "/contact", key: "navContact" },
-  { path: "/", key: "navBuild", hash: "build" },
+  { path: "/services", key: "navBuild" },
 ];
 
 /**
