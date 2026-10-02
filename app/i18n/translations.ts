@@ -55,7 +55,6 @@ const translations = {
     tagline: "AI Decision Systems",
     taglineSub: "Not just chat.",
     heroCardHeading: "Real questions, checked reasoning — then you decide.",
-    heroStoryLink: "How XingAI turns ideas into products",
     heroGoal:
       "Focused AI decision systems, not a chatbot: research, challenge, evidence you can check — then you decide. Start with the Invest AI Industry Map (cited research, not a buy list), or try Travel, Cook or Wear AI.",
     heroTryLiveCta: "Try a live product",
@@ -440,7 +439,6 @@ const translations = {
     tagline: "AI \u51b3\u7b56\u7cfb\u7edf",
     taglineSub: "不只是聊天。",
     heroCardHeading: "真实的问题，经过检验的推理——最后由你决定。",
-    heroStoryLink: "XingAI 如何把想法变成产品",
     heroGoal:
       "不是聊天机器人，而是聚焦的 AI 决策系统：研究、质疑、给出可核对的依据，最后由你决定。从 Invest AI 产业地图开始（有引用的研究，不是买入清单），或者试试 Travel、Cook、Wear AI。",
     heroTryLiveCta: "试用已上线产品",
@@ -811,7 +809,6 @@ const translations = {
     tagline: "AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     taglineSub: "단순한 채팅이 아닙니다.",
     heroCardHeading: "진짜 질문, 검증된 추론 — 결정은 당신이 합니다.",
-    heroStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
     heroGoal:
       "챗봇이 아니라 집중된 AI 의사결정 시스템입니다. 리서치하고, 반론을 제기하고, 확인 가능한 근거를 보여 준 뒤 결정은 당신이 합니다. Invest AI 산업 지도(인용된 리서치, 매수 목록 아님)부터 보거나 Travel, Cook, Wear AI를 써 보세요.",
     heroTryLiveCta: "라이브 제품 써 보기",
