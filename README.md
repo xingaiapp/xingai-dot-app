@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01ab
+**Version:** 2026.10.01ac
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01ac` Contact form inputs use real border/background tokens again (dark theme was nearly invisible because `--hairline` / `--surface` were undefined).
 
 `2026.10.01ab` Co-founder photos on the homepage a bit larger (still rounded square, not circle).
 

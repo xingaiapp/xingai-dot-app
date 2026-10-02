@@ -3909,9 +3909,9 @@ html[data-theme="dark"] .roadmap-status--built {
 
 .contact-form__input {
   padding: 0.55rem 0.75rem;
-  border: 1px solid var(--hairline);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--surface);
+  background: var(--panel-bg);
   color: var(--ink);
   font-size: 0.9375rem;
   font-family: inherit;
@@ -3919,9 +3919,26 @@ html[data-theme="dark"] .roadmap-status--built {
   outline: none;
 }
 
+html[data-theme="dark"] .contact-form__input {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-form__input:hover {
+  border-color: color-mix(in srgb, var(--blue) 40%, var(--line));
+}
+
+html[data-theme="dark"] .contact-form__input:hover {
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
 .contact-form__input:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 15%, transparent);
+}
+
+html[data-theme="dark"] .contact-form__input:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 28%, transparent);
 }
 
 .contact-form__select {
