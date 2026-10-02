@@ -86,3 +86,30 @@ export function localizedOpenGraph(
     images: [image],
   };
 }
+
+export type LocalizedPageCopy = Record<Locale, { title: string; description: string }>;
+
+/**
+ * Metadata for a page under /[locale]: localized title and description, a
+ * self-referencing canonical, and hreflang alternates for every locale.
+ */
+export function localizedPageMetadata(
+  locale: Locale,
+  path: string,
+  copy: LocalizedPageCopy,
+): Metadata {
+  const { title, description } = copy[locale];
+  const og = ogImageMeta(defaultOgImage, title);
+  return {
+    title: formatPageTitle(title),
+    description,
+    alternates: pageAlternates(locale, path),
+    openGraph: { ...localizedOpenGraph(locale, path, title, description, og), type: "website" },
+    twitter: {
+      card: "summary_large_image",
+      title: formatPageTitle(title),
+      description,
+      images: [og.url],
+    },
+  };
+}
