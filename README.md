@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01ac
+**Version:** 2026.10.01ad
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01ad` Hero intro is one paragraph (en / 中文 / 한국어): `heroGoal` now carries the decision-system pitch, the Industry Map (cited research, not a buy list) and Travel/Cook/Wear; the duplicate `heroSub` paragraph is gone so the Map CTA sits higher above the fold.
 
 `2026.10.01ac` Contact form inputs use real border/background tokens again (dark theme was nearly invisible because `--hairline` / `--surface` were undefined).
 
