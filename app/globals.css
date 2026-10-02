@@ -1951,7 +1951,7 @@ html[data-theme="dark"] .lang-menu {
 .cofounder-photo {
   position: relative;
   width: 100%;
-  max-width: min(17.5rem, 86vw);
+  max-width: min(20rem, 90vw);
   aspect-ratio: 1 / 1;
   border-radius: 14px;
   overflow: hidden;
@@ -1961,7 +1961,7 @@ html[data-theme="dark"] .lang-menu {
 
 @media (min-width: 36rem) {
   .cofounder-photo {
-    max-width: 11rem;
+    max-width: 15rem;
     margin: 0 auto;
   }
 }

@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01aa
+**Version:** 2026.10.01ab
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01ab` Co-founder photos on the homepage a bit larger (still rounded square, not circle).
 
 `2026.10.01aa` Homepage hover polish: FAQ / Start here / System Spine step cards lift with accent glow; Spine icons enlarge and spin 360°; agent avatars on the team strip enlarge and spin (all respect `prefers-reduced-motion`).
 
