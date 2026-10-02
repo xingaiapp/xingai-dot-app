@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01z
+**Version:** 2026.10.01aa
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.01aa` Homepage hover polish: FAQ / Start here / System Spine step cards lift with accent glow; Spine icons enlarge and spin 360°; agent avatars on the team strip enlarge and spin (all respect `prefers-reduced-motion`).
 
 `2026.10.01z` Homepage hero adds SEO-aligned `heroGoal` copy (en / 中文 / 한국어) under the typewriter heading — decision systems vs chatbot, Travel/Cook/Wear + Industry Map, informational outputs; left column top-aligns with the preview, shared body type, tighter CTA spacing. Decision-path cards lift and pick up a blue edge on hover (respects `prefers-reduced-motion`).
 
