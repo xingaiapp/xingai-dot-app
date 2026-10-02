@@ -3,9 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
 import { useTranslation } from "../i18n/LanguageContext";
 import { isNavActive, type NavKey } from "../lib/nav-links";
+import { ctaForNavKey, trackCta } from "../lib/track-cta";
 import { useLocalePath } from "../lib/use-locale-path";
 import { useTheme } from "./ThemeContext";
 import NavIcon from "./NavIcon";
@@ -27,7 +36,7 @@ export default function MobileNavDrawer({
     mounted && theme === "dark" ? "/xingai-logo-dark.png" : "/xingai-logo.png";
   const mainLinks: { href: string; label: string; icon: NavKey }[] = [
     { href: localePath("/"), label: t("navHome"), icon: "navHome" },
-    { href: localePath("/apps"), label: t("drawerAiSystems"), icon: "navApps" },
+    { href: localePath("/apps"), label: t("navApps"), icon: "navApps" },
     { href: localePath("/story"), label: t("navStory"), icon: "navStory" },
     { href: localePath("/team"), label: t("navTeam"), icon: "navTeam" },
     { href: localePath("/about"), label: t("navAbout"), icon: "navAbout" },
@@ -104,7 +113,11 @@ export default function MobileNavDrawer({
                     href={href}
                     className={`mobile-drawer__link${active ? " mobile-drawer__link--active" : ""}`}
                     aria-current={active ? "page" : undefined}
-                    onClick={close}
+                    onClick={() => {
+                      const cta = ctaForNavKey(icon);
+                      if (cta) trackCta(cta, "drawer");
+                      close();
+                    }}
                   >
                     <span className="mobile-drawer__link-icon">
                       <NavIcon name={icon} />
@@ -121,7 +134,28 @@ export default function MobileNavDrawer({
   );
 }
 
-export function useMobileNavDrawer() {
+type MobileNavDrawerState = {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  toggle: () => void;
+};
+
+const MobileNavDrawerContext = createContext<MobileNavDrawerState | null>(null);
+
+/** Shares drawer state between the header menu button and the bottom tab bar's More tab. */
+export function MobileNavDrawerProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
-  return { open, setOpen, toggle: () => setOpen((v) => !v) };
+  const toggle = useCallback(() => setOpen((v) => !v), []);
+  const value = useMemo(() => ({ open, setOpen, toggle }), [open, toggle]);
+  return (
+    <MobileNavDrawerContext.Provider value={value}>
+      {children}
+    </MobileNavDrawerContext.Provider>
+  );
+}
+
+export function useMobileNavDrawer() {
+  const ctx = useContext(MobileNavDrawerContext);
+  if (!ctx) throw new Error("useMobileNavDrawer must be used inside MobileNavDrawerProvider");
+  return ctx;
 }

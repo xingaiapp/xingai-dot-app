@@ -8,20 +8,30 @@ export type NavKey =
   | "navTeam"
   | "navAbout"
   | "navContact"
-  | "navBuild";
+  | "navBuild"
+  | "navTry"
+  | "navMore";
 
+/** Desktop header: acquisition paths only. Team and About live in the drawer and footer. */
 const navPaths: { path: string; key: NavKey; hash?: string }[] = [
   { path: "/", key: "navHome" },
   { path: "/apps", key: "navApps" },
   { path: "/story", key: "navStory" },
-  { path: "/team", key: "navTeam" },
-  { path: "/about", key: "navAbout" },
   { path: "/contact", key: "navContact" },
   { path: "/", key: "navBuild", hash: "build" },
 ];
 
-/** Bottom tab bar holds five tabs; Team and Build stay reachable from the drawer and footer. */
-const mobileNavPaths = navPaths.filter(({ key }) => key !== "navTeam" && key !== "navBuild");
+/**
+ * Bottom tab bar is ordered by acquisition priority: Home, Apps, Try (live
+ * products on the home page), Contact, then a More tab that opens the drawer.
+ * Story, Team, About and Build stay reachable from the drawer and footer.
+ */
+const mobileNavPaths: { path: string; key: NavKey; hash?: string }[] = [
+  { path: "/", key: "navHome" },
+  { path: "/apps", key: "navApps" },
+  { path: "/", key: "navTry", hash: "start-here" },
+  { path: "/contact", key: "navContact" },
+];
 
 export function primaryNavLinks(locale: Locale): { href: string; key: NavKey }[] {
   return navPaths.map(({ path, key, hash }) => ({
@@ -31,8 +41,8 @@ export function primaryNavLinks(locale: Locale): { href: string; key: NavKey }[]
 }
 
 export function mobileNavLinks(locale: Locale): { href: string; key: NavKey }[] {
-  return mobileNavPaths.map(({ path, key }) => ({
-    href: localizePath(locale, path),
+  return mobileNavPaths.map(({ path, key, hash }) => ({
+    href: `${localizePath(locale, path)}${hash ? `#${hash}` : ""}`,
     key,
   }));
 }

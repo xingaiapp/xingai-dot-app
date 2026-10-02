@@ -191,7 +191,7 @@ export default function Footer() {
           <div className="footer-column__links">
             <Link href={p("/apps")} className="footer-icon-link">
               <FooterLinkIcon name="systems" />
-              <span>{t("drawerAiSystems")}</span>
+              <span>{t("navApps")}</span>
             </Link>
             <Link href={p("/story")} className="footer-icon-link">
               <FooterLinkIcon name="systems" />
