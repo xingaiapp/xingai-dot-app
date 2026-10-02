@@ -376,6 +376,9 @@ export default function Home() {
         >
           {t("buildCta")}
         </LocaleLink>
+        <p className="hero-story-link home-build__services-link">
+          <LocaleLink href="/services">{t("buildServicesLink")} &rarr;</LocaleLink>
+        </p>
       </section>
 
       <section className="home-cofounders" aria-labelledby="home-cofounders-heading">
