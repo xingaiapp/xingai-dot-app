@@ -11,6 +11,7 @@ import AppDemoScreenshot from "../components/AppDemoScreenshot";
 import HomeDecisionPath from "../components/HomeDecisionPath";
 import HomeSystemLoop from "../components/HomeSystemLoop";
 import TypewriterText from "../components/TypewriterText";
+import { trackCta } from "../lib/track-cta";
 import { agentRoles, getTeamCopy } from "../data/team";
 
 function AnswerIcon({ index }: { index: number }) {
@@ -138,11 +139,19 @@ export default function Home() {
               <LocaleLink href="/story">{t("heroStoryLink")} &rarr;</LocaleLink>
             </p>
             <div className="hero-actions">
-              <a href="https://invest.xingai.app/ai-map" className="cta">
+              <a
+                href="https://invest.xingai.app/ai-map"
+                className="cta"
+                onClick={() => trackCta("map", "hero")}
+              >
                 {t("heroInvestMapCta")}
               </a>
-              <a href="#start-here" className="cta cta--outline">
-                {t("heroTryLiveCta")}
+              <a
+                href="#start-here"
+                className="hero-secondary-link"
+                onClick={() => trackCta("try", "hero")}
+              >
+                {t("heroTryLiveCta")} &darr;
               </a>
             </div>
             <p className="hero-beta-note">{t("publicBetaNote")}</p>
@@ -360,7 +369,11 @@ export default function Home() {
           <li>{t("buildPoint2")}</li>
           <li>{t("buildPoint3")}</li>
         </ul>
-        <LocaleLink href="/contact" className="cta">
+        <LocaleLink
+          href="/contact"
+          className="cta"
+          onClick={() => trackCta("build", "home-build")}
+        >
           {t("buildCta")}
         </LocaleLink>
       </section>

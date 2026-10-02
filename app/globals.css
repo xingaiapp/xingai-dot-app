@@ -298,11 +298,20 @@ html[data-theme="dark"] .site-header {
   background: var(--line);
 }
 
-/* Seven links only fit from ~60rem; below that Build stays in the homepage section. */
-@media (max-width: 59.99rem) {
-  .header-nav-link--build {
-    display: none;
-  }
+/* Build with us sits at the right edge as the one button-styled nav item. */
+.header-nav-link--build {
+  margin-left: 0.35rem;
+  padding-inline: 0.85rem;
+  color: var(--ink-strong);
+  font-weight: 600;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.header-nav-link--build:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: transparent;
 }
 
 .header-nav-link--active {
@@ -926,6 +935,29 @@ html[data-theme="dark"] .lang-menu {
   margin-bottom: 0.25rem;
 }
 
+/* One primary CTA per hero; the live-product jump is a quieter text link. */
+.hero-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  text-decoration: none;
+}
+
+.hero-secondary-link:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.hero-secondary-link:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 .hero-beta-note {
   margin: 1.55rem 0 0;
   font-size: 0.8125rem;
@@ -936,9 +968,9 @@ html[data-theme="dark"] .lang-menu {
 @media (min-width: 36rem) {
   .hero-actions {
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     justify-content: flex-start;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 }
 
@@ -4397,6 +4429,14 @@ html[data-theme="dark"] .mobile-drawer {
     font-weight: 600;
     letter-spacing: 0.01em;
     transition: color 0.15s ease, background 0.15s ease;
+  }
+
+  .mobile-bottom-nav__link--button {
+    width: 100%;
+    border: 0;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
   }
 
   .mobile-bottom-nav__link:hover {

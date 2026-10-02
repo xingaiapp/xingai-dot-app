@@ -12,6 +12,7 @@ import { defaultKeywords } from "../lib/site-seo";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MobileBottomNav from "../components/MobileBottomNav";
+import { MobileNavDrawerProvider } from "../components/MobileNavDrawer";
 import LocaleProviders from "../components/LocaleProviders";
 
 type Props = {
@@ -58,10 +59,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <LocaleProviders locale={locale}>
-        <Header />
-        <div className="page-wrap">{children}</div>
-        <Footer />
-        <MobileBottomNav />
+        <MobileNavDrawerProvider>
+          <Header />
+          <div className="page-wrap">{children}</div>
+          <Footer />
+          <MobileBottomNav />
+        </MobileNavDrawerProvider>
       </LocaleProviders>
     </>
   );

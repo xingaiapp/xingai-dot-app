@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "../i18n/LanguageContext";
 import { isNavActive, primaryNavLinks } from "../lib/nav-links";
+import { ctaForNavKey, trackCta } from "../lib/track-cta";
 import { useLocalePath } from "../lib/use-locale-path";
 import { useTheme } from "./ThemeContext";
 import ThemeToggle from "./ThemeToggle";
@@ -53,15 +54,19 @@ export default function Header() {
             className="header-nav header-nav--desktop"
             aria-label="Main navigation"
           >
-            {navLinks.map(({ href, key }) => (
+            {navLinks.map(({ href, key }) => {
+              const cta = ctaForNavKey(key);
+              return (
               <Link
                 key={href}
                 href={href}
+                onClick={cta ? () => trackCta(cta, "header") : undefined}
                 className={`header-nav-link${isNavActive(pathname, href) ? " header-nav-link--active" : ""}${key === "navBuild" ? " header-nav-link--build" : ""}`}
               >
                 {t(key)}
               </Link>
-            ))}
+              );
+            })}
           </nav>
 
           <div className="header-controls">
