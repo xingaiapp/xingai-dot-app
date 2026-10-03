@@ -21,10 +21,17 @@ export default function TeamPage() {
         <h1 className="page-heading">{copy.heading}</h1>
         <ul className="team-hero__avatars" aria-hidden="true">
           {agentRoles.map((role) => (
-            <li key={role.id} className={`team-avatar team-avatar--${role.id}`}>
+            <li
+              key={role.id}
+              className={`team-avatar team-avatar--${role.id}`}
+              data-label={copy.agents[role.id].name}
+            >
               <Image src={role.avatar} alt="" fill priority sizes="5.5rem" className="team-avatar__img" />
             </li>
           ))}
+          <li className="team-avatar team-avatar--more" data-label={copy.moreAgents} title={copy.moreAgents}>
+            <span className="team-avatar__more-mark">?</span>
+          </li>
         </ul>
         {copy.lead.map((line) => (
           <p key={line} className="page-lead">
@@ -52,7 +59,7 @@ export default function TeamPage() {
             const agent = copy.agents[role.id];
             const app = appsBySlug.get(role.seenInSlug);
             return (
-              <article key={role.id} className="panel team-agent" id={role.id}>
+              <article key={role.id} className={`panel team-agent team-agent--${role.id}`} id={role.id}>
                 <header className="team-agent__head">
                   <div className={`team-avatar team-avatar--${role.id}`}>
                     <Image

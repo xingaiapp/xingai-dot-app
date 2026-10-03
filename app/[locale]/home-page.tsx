@@ -8,7 +8,7 @@ import { useTranslation } from "../i18n/LanguageContext";
 import { getHomeShelfApps, getLocalizedApps, type AppLaunchStatus } from "../data/apps";
 import AppIcon from "../components/AppIcon";
 import AppDemoScreenshot from "../components/AppDemoScreenshot";
-import HomeDecisionPath from "../components/HomeDecisionPath";
+import HomeDecisionPath, { StepIcon, type StepId } from "../components/HomeDecisionPath";
 import HomeSystemLoop from "../components/HomeSystemLoop";
 import TypewriterText from "../components/TypewriterText";
 import { trackCta } from "../lib/track-cta";
@@ -73,6 +73,16 @@ function AnswerIcon({ index }: { index: number }) {
   );
 }
 
+const HERO_SLIDE_MS = 6000;
+
+/** Mini decision chain above the hero heading — same steps and icons as the path band below. */
+const heroChain = [
+  { id: "research", label: "homePathResearch" },
+  { id: "challenge", label: "homePathChallenge" },
+  { id: "evidence", label: "homePathEvidence" },
+  { id: "decide", label: "homePathDecide" },
+] as const satisfies readonly { id: StepId; label: string }[];
+
 export default function Home() {
   const { locale, t } = useTranslation();
   const teamCopy = getTeamCopy(locale);
@@ -98,13 +108,17 @@ export default function Home() {
     setActiveHeroIndex(0);
   }, [locale]);
 
-  // The carousel advances each time the hero heading finishes typing, so the
-  // slide change lands with the end of the sentence. Hover/focus holds the slide;
-  // under reduced motion the heading is static, so the slide stays put too.
-  const advanceHero = () => {
-    if (heroPaused || heroPreviewApps.length < 2) return;
-    setActiveHeroIndex((index) => (index + 1) % heroPreviewApps.length);
-  };
+  // The hero heading types once and then stays put, so the carousel keeps its
+  // own clock. Hover/focus holds the slide; under reduced motion it stays put.
+  const slideCount = heroPreviewApps.length;
+  useEffect(() => {
+    if (heroPaused || slideCount < 2) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setInterval(() => {
+      setActiveHeroIndex((index) => (index + 1) % slideCount);
+    }, HERO_SLIDE_MS);
+    return () => window.clearInterval(timer);
+  }, [heroPaused, slideCount]);
 
   const answerItems = [
     { question: t("answerQ1"), answer: t("answerA1") },
@@ -130,10 +144,21 @@ export default function Home() {
               text={t("heroCardHeading")}
               msPerChar={125}
               maxDurationMs={5000}
-              loop
-              loopPauseMs={2400}
-              onTyped={advanceHero}
             />
+            <ol className="hero-chain" aria-label={t("homePathHeading")}>
+              {heroChain.map((step) => (
+                <li
+                  key={step.id}
+                  data-tone={step.id}
+                  className={`hero-chain__step${step.id === "decide" ? " hero-chain__step--final" : ""}`}
+                >
+                  <span className="hero-chain__pill">
+                    <StepIcon id={step.id} size={15} />
+                    {t(step.label)}
+                  </span>
+                </li>
+              ))}
+            </ol>
             <p className="hero-goal">{t("heroGoal")}</p>
             <div className="hero-actions">
               <a
@@ -308,6 +333,8 @@ export default function Home() {
 
       <HomeDecisionPath />
 
+      <HomeSystemLoop />
+
       <section className="home-team" aria-labelledby="home-team-heading">
         <h2 id="home-team-heading" className="section-title">
           {t("homeTeamHeading")}
@@ -395,8 +422,6 @@ export default function Home() {
           {t("contactTail")}
         </p>
       </section>
-
-      <HomeSystemLoop />
 
       <section className="home-answers" aria-labelledby="home-answers-heading">
         <h2 id="home-answers-heading" className="section-title">

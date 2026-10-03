@@ -56,7 +56,7 @@ const translations = {
     taglineSub: "Not just chat.",
     heroCardHeading: "Real questions, checked reasoning — then you decide.",
     heroGoal:
-      "Focused AI decision systems, not a chatbot: research, challenge, evidence you can check — then you decide. Start with the Invest AI Industry Map (cited research, not a buy list), or try Travel, Cook or Wear AI.",
+      "XingAI builds AI decision systems for everyday choices and research. Instead of a single chat reply, each system researches your options, challenges weak assumptions and shows the evidence behind its recommendation — then you make the call. Start with the AI Industry Map for cited research on the AI supply chain (not a buy list), or plan a trip, cook with what is in your fridge, or pick today's outfit.",
     heroTryLiveCta: "Try a live product",
     appsFinanceDisclaimer: "Finance demos (Performance Sim, T Today): paper structure only · not investment advice · no broker integration.",
     heroPreviewLabel: "System preview",
@@ -446,7 +446,7 @@ const translations = {
     taglineSub: "不只是聊天。",
     heroCardHeading: "真实的问题，经过检验的推理——最后由你决定。",
     heroGoal:
-      "不是聊天机器人，而是聚焦的 AI 决策系统：研究、质疑、给出可核对的依据，最后由你决定。从 Invest AI 产业地图开始（有引用的研究，不是买入清单），或者试试 Travel、Cook、Wear AI。",
+      "XingAI 打造面向日常选择和研究的 AI 决策系统。不是一句聊天回复，而是先研究你的选项、质疑站不住脚的假设、摆出每条建议背后的依据——最后由你拍板。从 AI 产业地图开始，看有引用来源的 AI 供应链研究（不是买入清单）；或者规划一次旅行、用冰箱里现有的食材做顿饭、挑今天穿什么。",
     heroTryLiveCta: "试用已上线产品",
     appsFinanceDisclaimer: "金融类演示（Performance Sim、T Today）：仅纸面结构 · 非投资建议 · 不对接券商下单。",
     heroPreviewLabel: "\u7cfb\u7edf\u9884\u89c8",
@@ -822,7 +822,7 @@ const translations = {
     taglineSub: "단순한 채팅이 아닙니다.",
     heroCardHeading: "진짜 질문, 검증된 추론 — 결정은 당신이 합니다.",
     heroGoal:
-      "챗봇이 아니라 집중된 AI 의사결정 시스템입니다. 리서치하고, 반론을 제기하고, 확인 가능한 근거를 보여 준 뒤 결정은 당신이 합니다. Invest AI 산업 지도(인용된 리서치, 매수 목록 아님)부터 보거나 Travel, Cook, Wear AI를 써 보세요.",
+      "XingAI는 일상의 선택과 리서치를 위한 AI 의사결정 시스템을 만듭니다. 챗봇 답변 하나가 아니라, 선택지를 조사하고 약한 가정에 반론을 제기하며 추천 뒤의 근거를 보여 줍니다 — 결정은 당신이 합니다. 출처가 있는 AI 공급망 리서치(매수 목록 아님)를 담은 AI 산업 지도부터 시작하거나, 여행을 계획하고, 냉장고 속 재료로 요리하고, 오늘의 옷차림을 골라 보세요.",
     heroTryLiveCta: "라이브 제품 써 보기",
     appsFinanceDisclaimer: "금융 데모(Performance Sim, T Today): 종이 구조용 · 투자 조언 아님 · 브로커 연동 없음.",
     heroPreviewLabel: "\uc2dc\uc2a4\ud15c \ubbf8\ub9ac\ubcf4\uae30",
