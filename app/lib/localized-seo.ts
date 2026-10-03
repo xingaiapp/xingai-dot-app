@@ -5,12 +5,12 @@ import { formatPageTitle, ogImageMeta, defaultOgImage, appsOgImage, storyOgImage
 
 export function homeDescription(locale: Locale): string {
   if (locale === "zh") {
-    return "XingAI 做面向日常的 AI 决策系统。旗舰是 Invest AI 产业地图：公开研究，不是交易台。";
+    return "XingAI 打造 AI 决策系统：先研究、再质疑、摆出依据，最后由你决定。免费试用 AI 产业地图，以及旅行、做饭、穿搭 AI。";
   }
   if (locale === "ko") {
-    return "XingAI는 일상을 위한 AI 의사결정 시스템입니다. 플래그십은 Invest AI 산업 지도 — 공개 리서치이며 매매 창구가 아닙니다.";
+    return "XingAI는 리서치하고, 반론하고, 근거를 보여 준 뒤 결정은 당신에게 맡기는 AI 의사결정 시스템입니다. AI 산업 지도와 여행·요리·옷차림 AI를 무료로 써 보세요.";
   }
-  return "XingAI builds AI decision systems for everyday life. Flagship: the Invest AI Industry Map — public research, not a trading desk.";
+  return "XingAI builds AI decision systems that research, challenge and show the evidence — then you decide. Try the AI Industry Map, Travel, Cook and Wear AI free.";
 }
 
 export function appsCatalogDescription(locale: Locale): string {

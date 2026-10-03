@@ -649,6 +649,82 @@ html[data-theme="dark"] .lang-menu {
   min-width: 0;
 }
 
+/* Mini decision chain above the hero heading: gives the text column color
+   and weight to balance the product preview on the right. */
+.hero-chain {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-chain__step {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.hero-chain__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.28rem 0.55rem 0.28rem 0.42rem;
+  border: 1px solid color-mix(in srgb, var(--path-accent) 40%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--path-accent) 10%, transparent);
+  color: var(--path-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.hero-chain__step:not(:last-child)::after {
+  content: "→";
+  margin-left: 0.25rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 35.99rem) {
+  .hero-chain {
+    gap: 0.4rem 0.15rem;
+  }
+
+  .hero-chain__pill {
+    gap: 0.22rem;
+    padding: 0.25rem 0.38rem 0.25rem 0.3rem;
+    font-size: 0.6875rem;
+  }
+
+  .hero-chain__pill svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Phones: no arrows, so all four pills still fit on one line. */
+  .hero-chain__step:not(:last-child)::after {
+    content: none;
+  }
+}
+
+/* Very narrow phones: drop the icons too; the colors still carry the steps. */
+@media (max-width: 23.4rem) {
+  .hero-chain__pill svg {
+    display: none;
+  }
+}
+
+.hero-chain__step--final .hero-chain__pill {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  color: #fff;
+  box-shadow: 0 4px 14px var(--cta-shadow);
+}
+
 .hero-card-heading {
   margin: 0 0 1.75rem;
   font-size: clamp(1.3rem, 1.65vw + 0.92rem, 1.72rem);
@@ -1454,7 +1530,9 @@ html[data-theme="dark"] .lang-menu {
   scroll-margin-top: 5rem;
 }
 
-/* ── Homepage decision path (question → you decide) ── */
+/* ── Homepage decision path (question → you decide) ──
+   Timeline stepper: one colored node per step, joined by a gradient rail.
+   Accents follow the home system loop palette. */
 .home-path {
   margin-bottom: 2.5rem;
   padding-top: 1.5rem;
@@ -1462,88 +1540,139 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .home-path__steps {
+  --path-node: 3.25rem;
   list-style: none;
-  margin: 1rem 0 0;
+  margin: 1.5rem 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.85rem;
 }
 
+.home-path__step[data-tone="question"],
+.hero-chain__step[data-tone="question"] {
+  --path-accent: #b45309;
+}
+.home-path__step[data-tone="research"],
+.hero-chain__step[data-tone="research"] {
+  --path-accent: #0891b2;
+}
+.home-path__step[data-tone="challenge"],
+.hero-chain__step[data-tone="challenge"] {
+  --path-accent: #e11d48;
+}
+.home-path__step[data-tone="evidence"],
+.hero-chain__step[data-tone="evidence"] {
+  --path-accent: #059669;
+}
+.home-path__step[data-tone="decide"],
+.hero-chain__step[data-tone="decide"] {
+  --path-accent: #2563eb;
+}
+
+html[data-theme="dark"] .home-path__step[data-tone="question"],
+html[data-theme="dark"] .hero-chain__step[data-tone="question"] {
+  --path-accent: #f0b429;
+}
+html[data-theme="dark"] .home-path__step[data-tone="research"],
+html[data-theme="dark"] .hero-chain__step[data-tone="research"] {
+  --path-accent: #22d3ee;
+}
+html[data-theme="dark"] .home-path__step[data-tone="challenge"],
+html[data-theme="dark"] .hero-chain__step[data-tone="challenge"] {
+  --path-accent: #fb7185;
+}
+html[data-theme="dark"] .home-path__step[data-tone="evidence"],
+html[data-theme="dark"] .hero-chain__step[data-tone="evidence"] {
+  --path-accent: #34d399;
+}
+html[data-theme="dark"] .home-path__step[data-tone="decide"],
+html[data-theme="dark"] .hero-chain__step[data-tone="decide"] {
+  --path-accent: #60a5fa;
+}
+
+/* Phones: vertical timeline, node on the left, rail runs down to the next node. */
 .home-path__step {
   position: relative;
   display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.75rem;
+  grid-template-columns: var(--path-node) 1fr;
+  column-gap: 1rem;
   align-content: start;
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--panel-bg);
-  transition:
-    border-color 0.18s ease,
-    box-shadow 0.18s ease,
-    transform 0.18s ease,
-    background 0.18s ease;
+  padding-bottom: 1.5rem;
 }
 
-.home-path__step:hover {
-  z-index: 1;
-  border-color: color-mix(in srgb, var(--blue) 50%, transparent);
-  background: var(--soft-bg);
-  box-shadow: 0 8px 22px var(--photo-shadow);
-  transform: translateY(-3px);
+.home-path__step:last-child {
+  padding-bottom: 0;
 }
 
 .home-path__step:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: 1.75rem;
-  bottom: -0.85rem;
-  width: 1px;
-  height: 0.85rem;
-  background: color-mix(in srgb, var(--muted) 45%, transparent);
+  left: calc(var(--path-node) / 2 - 1px);
+  top: calc(var(--path-node) + 0.35rem);
+  bottom: 0.35rem;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--path-accent) 55%, transparent),
+    color-mix(in srgb, var(--path-accent) 10%, transparent)
+  );
 }
 
-.home-path__step--final {
-  border-color: color-mix(in srgb, var(--blue) 45%, transparent);
-  background: var(--soft-bg);
+.home-path__node {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--path-node);
+  height: var(--path-node);
+  border-radius: 50%;
+  color: var(--path-accent);
+  background: color-mix(in srgb, var(--path-accent) 12%, var(--page-bg));
+  border: 1.5px solid color-mix(in srgb, var(--path-accent) 45%, transparent);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--path-accent) 6%, transparent),
+    0 6px 18px color-mix(in srgb, var(--path-accent) 22%, transparent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.home-path__step--final:hover {
-  border-color: color-mix(in srgb, var(--blue) 70%, transparent);
-  box-shadow: 0 10px 26px var(--cta-shadow);
+.home-path__step:hover .home-path__node {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--path-accent) 12%, transparent),
+    0 10px 24px color-mix(in srgb, var(--path-accent) 32%, transparent);
+}
+
+.home-path__step--final .home-path__node {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--blue) 14%, transparent),
+    0 8px 24px var(--cta-shadow);
+}
+
+.home-path__content {
+  min-width: 0;
+  padding-top: 0.15rem;
 }
 
 .home-path__num {
-  grid-row: span 3;
-  display: inline-grid;
-  place-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 999px;
-  background: var(--badge-bg);
-  color: var(--blue);
-  font-size: 0.75rem;
-  font-weight: 650;
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--path-accent);
   font-variant-numeric: tabular-nums;
-  transition: transform 0.18s ease, background 0.18s ease;
-}
-
-.home-path__step:hover .home-path__num {
-  transform: scale(1.08);
-  background: color-mix(in srgb, var(--blue) 16%, var(--badge-bg));
 }
 
 .home-path__label {
-  margin: 0 0 0.25rem;
-  font-size: 0.975rem;
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
   font-weight: 650;
   color: var(--ink-strong);
 }
 
 .home-path__body {
-  margin: 0 0 0.45rem;
+  margin: 0 0 0.6rem;
   font-size: 0.9rem;
   line-height: 1.55;
   color: var(--ink);
@@ -1551,49 +1680,84 @@ html[data-theme="dark"] .lang-menu {
 
 .home-path__example {
   margin: 0;
+  padding: 0.5rem 0.7rem;
+  border-left: 2px solid color-mix(in srgb, var(--path-accent) 60%, transparent);
+  border-radius: 0 8px 8px 0;
+  background: color-mix(in srgb, var(--path-accent) 7%, transparent);
   font-size: 0.825rem;
   line-height: 1.5;
   color: var(--muted);
 }
 
+.home-path__step--final .home-path__label {
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .home-path__step,
-  .home-path__num {
+  .home-path__node {
     transition: none;
   }
 
-  .home-path__step:hover {
-    transform: none;
-  }
-
-  .home-path__step:hover .home-path__num {
+  .home-path__step:hover .home-path__node {
     transform: none;
   }
 }
 
+/* Wide screens: horizontal stepper, nodes centered over each column. */
 @media (min-width: 64rem) {
+  /* Subgrid rows (node, number, title, body, example) keep every column's
+     example box starting on the same line, however long the body text is. */
   .home-path__steps {
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 0.75rem;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 1rem;
   }
 
   .home-path__step {
+    grid-row: span 5;
     grid-template-columns: 1fr;
+    grid-template-rows: subgrid;
+    justify-items: center;
     row-gap: 0;
+    padding-bottom: 0;
+    text-align: center;
   }
 
-  .home-path__num {
-    grid-row: auto;
-    margin-bottom: 0.6rem;
+  .home-path__content {
+    display: contents;
+  }
+
+  .home-path__node {
+    margin-bottom: 0.9rem;
+  }
+
+  .home-path__example {
+    align-self: stretch;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .home-path__step:not(:last-child)::after {
-    left: auto;
-    right: -0.75rem;
-    top: 1.65rem;
+    left: calc(50% + var(--path-node) / 2 + 0.5rem);
+    right: calc(-50% + var(--path-node) / 2 + 0.5rem - 1rem);
+    top: calc(var(--path-node) / 2 - 1px);
     bottom: auto;
-    width: 0.75rem;
-    height: 1px;
+    width: auto;
+    height: 2px;
+    background: linear-gradient(
+      to right,
+      color-mix(in srgb, var(--path-accent) 60%, transparent),
+      color-mix(in srgb, var(--path-accent) 12%, transparent)
+    );
+  }
+
+  .home-path__example {
+    border-left: none;
+    border-top: 2px solid color-mix(in srgb, var(--path-accent) 60%, transparent);
+    border-radius: 0 0 8px 8px;
   }
 }
 
@@ -2685,6 +2849,7 @@ html[data-theme="dark"] .lang-menu {
 /* Home: compact system loop, links to /story */
 .home-loop {
   margin-top: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .home-loop__intro {
@@ -4711,7 +4876,7 @@ html[data-theme="dark"] .mobile-drawer {
 .team-hero__avatars {
   display: flex;
   gap: 0.6rem;
-  margin: 0.25rem 0 1.1rem;
+  margin: 1.5rem 0 2.25rem;
   padding: 0;
   list-style: none;
 }
@@ -4729,8 +4894,131 @@ html[data-theme="dark"] .mobile-drawer {
 }
 
 .team-hero__avatars .team-avatar {
-  width: min(4.75rem, 20vw);
-  height: min(4.75rem, 20vw);
+  flex: 1 1 0;
+  max-width: 4.75rem;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+/* Fifth seat: an empty, dashed slot that says the team is still growing. */
+.team-avatar--more {
+  --agent-ring: color-mix(in srgb, var(--muted) 55%, transparent);
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  border-style: dashed;
+  background: color-mix(in srgb, var(--ink-strong) 4%, var(--page-bg));
+  cursor: default;
+}
+
+.team-avatar__more-mark {
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--muted);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.team-avatar--more::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 3px dashed transparent;
+  transition: border-color 0.25s ease;
+}
+
+/* Hero row: every seat shows its name on hover. The tooltip is centered
+   under middle seats and pinned to the edge for the first and last, so it
+   never runs off a phone screen. */
+.team-hero__avatars .team-avatar {
+  overflow: visible;
+  cursor: default;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-hero__avatars .team-avatar__img {
+  border-radius: 50%;
+}
+
+.team-hero__avatars .team-avatar:not(.team-avatar--more):hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--agent-ring) 30%, transparent);
+}
+
+.team-hero__avatars .team-avatar[data-label]::after {
+  content: attr(data-label);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  z-index: 2;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--page-bg);
+  box-shadow: 0 6px 18px var(--photo-shadow);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, -4px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.team-hero__avatars .team-avatar[data-label]:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.team-hero__avatars .team-avatar[data-label]:first-child::after,
+.team-hero__avatars .team-avatar[data-label]:first-child:hover::after {
+  left: 0;
+  transform: none;
+}
+
+.team-hero__avatars .team-avatar[data-label]:last-child::after,
+.team-hero__avatars .team-avatar[data-label]:last-child:hover::after {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.team-avatar--more:hover {
+  border-color: transparent;
+}
+
+.team-avatar--more:hover::before {
+  border-color: color-mix(in srgb, var(--blue) 60%, transparent);
+  animation: team-more-spin 6s linear infinite;
+}
+
+.team-avatar--more:hover .team-avatar__more-mark {
+  color: var(--blue);
+  transform: scale(1.12);
+}
+
+@keyframes team-more-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-avatar--more:hover::before {
+    animation: none;
+  }
+
+  .team-hero__avatars .team-avatar,
+  .team-hero__avatars .team-avatar[data-label]::after {
+    transition: none;
+  }
+
+  .team-hero__avatars .team-avatar:not(.team-avatar--more):hover {
+    transform: none;
+  }
 }
 
 .team-avatar--sm {
@@ -4772,10 +5060,114 @@ html[data-theme="dark"] .mobile-drawer {
 }
 
 .team-agent {
+  --agent-ring: var(--blue);
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
   scroll-margin-top: 5rem;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.team-agent--second-master { --agent-ring: #4caf7a; }
+.team-agent--joker { --agent-ring: #5b8def; }
+.team-agent--lady-bull { --agent-ring: #9b6be0; }
+.team-agent--sweetie { --agent-ring: #e86a9a; }
+
+/* Hover: card lifts in the agent's color, a soft glow sweeps in from the
+   avatar, the avatar spins once (same move as the home agent cards), and the
+   quote mark and skill chips pick up the accent. */
+.team-agent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    60% 50% at 12% 0%,
+    color-mix(in srgb, var(--agent-ring) 16%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.team-agent > * {
+  position: relative;
+  z-index: 1;
+}
+
+.team-agent .team-avatar {
+  transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease;
+}
+
+.team-agent__quote {
+  transition: color 0.25s ease;
+}
+
+.team-agent__chips li {
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.team-agent:hover,
+.team-agent:focus-within,
+.team-agent:target {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--agent-ring) 55%, transparent);
+  box-shadow:
+    0 14px 34px color-mix(in srgb, var(--agent-ring) 20%, transparent),
+    0 2px 8px var(--photo-shadow);
+}
+
+.team-agent:hover::before,
+.team-agent:focus-within::before,
+.team-agent:target::before {
+  opacity: 1;
+}
+
+.team-agent:hover .team-avatar {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--agent-ring) 25%, transparent);
+}
+
+.team-agent:hover .team-agent__quote {
+  color: color-mix(in srgb, var(--agent-ring) 55%, var(--ink-strong));
+}
+
+.team-agent:hover .team-agent__chips li {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--agent-ring) 50%, transparent);
+  background: color-mix(in srgb, var(--agent-ring) 10%, transparent);
+}
+
+.team-agent:hover .team-agent__chips li:nth-child(2) { transition-delay: 0.04s; }
+.team-agent:hover .team-agent__chips li:nth-child(3) { transition-delay: 0.08s; }
+.team-agent:hover .team-agent__chips li:nth-child(4) { transition-delay: 0.12s; }
+.team-agent:hover .team-agent__chips li:nth-child(5) { transition-delay: 0.16s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .team-agent,
+  .team-agent .team-avatar,
+  .team-agent__chips li {
+    transition: none;
+  }
+
+  .team-agent:hover,
+  .team-agent:focus-within,
+  .team-agent:target,
+  .team-agent:hover .team-avatar,
+  .team-agent:hover .team-agent__chips li {
+    transform: none;
+  }
 }
 
 .team-agent__head {

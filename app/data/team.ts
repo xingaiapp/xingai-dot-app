@@ -84,6 +84,7 @@ export type TeamCopy = {
   agentsHeading: string;
   agentsLead: string;
   asksLabel: string;
+  moreAgents: string;
   seenInLabel: string;
   stageLabels: Record<AgentStage, string>;
   agents: Record<AgentId, AgentCopy>;
@@ -116,6 +117,7 @@ const en: TeamCopy = {
   agentsHeading: "The agents inside XingAI",
   agentsLead: "One job each. Where you can see that job today is listed on every card.",
   asksLabel: "Usually asks",
+  moreAgents: "More agents coming",
   seenInLabel: "See it in",
   stageLabels: { live: "Live", demo: "Demo", planned: "Planned" },
   agents: {
@@ -206,6 +208,7 @@ const zh: TeamCopy = {
   agentsHeading: "XingAI 里的 Agent",
   agentsLead: "每人一份工作。每张卡片都写着：今天在哪能看到它。",
   asksLabel: "常问",
+  moreAgents: "更多 agent 即将加入",
   seenInLabel: "在哪能看到",
   stageLabels: { live: "已上线", demo: "演示版", planned: "规划中" },
   agents: {
@@ -295,6 +298,7 @@ const ko: TeamCopy = {
   agentsHeading: "XingAI 안의 에이전트",
   agentsLead: "각자 한 가지 일. 오늘 어디서 볼 수 있는지 카드마다 적어 두었습니다.",
   asksLabel: "자주 묻는 말",
+  moreAgents: "더 많은 에이전트가 합류합니다",
   seenInLabel: "볼 수 있는 곳",
   stageLabels: { live: "라이브", demo: "데모", planned: "계획됨" },
   agents: {
