@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.04i
+**Version:** 2026.10.04j
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.04j` `/team` HTML cast: Xing (星哥) above five centered leaders with nicknames; decision flow is an avatar timeline; Character Bible poster stays for download/share.
 
 `2026.10.04i` Team is in the desktop top nav and mobile bottom tab bar (was drawer/footer only); drawer lists Team higher.
 

@@ -6,7 +6,14 @@ import LocaleLink from "../../components/LocaleLink";
 import TeamBanterChat from "../../components/TeamBanterChat";
 import { useTranslation } from "../../i18n/LanguageContext";
 import { getLocalizedApps } from "../../data/apps";
-import { agentRoles, getTeamCopy, type AgentId } from "../../data/team";
+import {
+  agentRoles,
+  castLeaderOrder,
+  getTeamCopy,
+  visionAvatar,
+  type AgentId,
+  type FlowFace,
+} from "../../data/team";
 
 export default function TeamPage() {
   const { locale } = useTranslation();
@@ -14,23 +21,80 @@ export default function TeamPage() {
   const appsBySlug = new Map(getLocalizedApps(locale).map((app) => [app.slug, app]));
   const rolesById = new Map(agentRoles.map((role) => [role.id, role]));
   const avatarOf = (id: AgentId) => rolesById.get(id)?.avatar ?? "";
+  const faceSrc = (face: FlowFace) => {
+    if (face === "vision") return visionAvatar;
+    if (face === "result") return "";
+    return avatarOf(face);
+  };
+  const faceRing = (face: FlowFace) => {
+    if (face === "vision") return "xing-ge";
+    if (face === "result") return "result";
+    return face;
+  };
+  const castLeaders = castLeaderOrder
+    .map((id) => rolesById.get(id))
+    .filter((role): role is NonNullable<typeof role> => Boolean(role));
 
   return (
     <main className="wrap team-page">
       <section className="page-header team-hero">
         <p className="section-eyebrow">{copy.eyebrow}</p>
         <h1 className="page-heading">{copy.heading}</h1>
-        <ul className="team-hero__avatars" aria-hidden="true">
-          {agentRoles.map((role) => (
-            <li
-              key={role.id}
-              className={`team-avatar team-avatar--${role.id}`}
-              data-label={copy.agents[role.id].name}
-            >
-              <Image src={role.avatar} alt="" fill priority sizes="5.5rem" className="team-avatar__img" />
-            </li>
-          ))}
-        </ul>
+        <div className="team-cast" aria-label={copy.castFooter}>
+          <div className="team-cast__vision">
+            <div className="team-avatar team-avatar--xing-ge team-cast__vision-avatar">
+              <Image
+                src={visionAvatar}
+                alt={copy.visionName}
+                fill
+                priority
+                sizes="7rem"
+                className="team-avatar__img"
+              />
+            </div>
+            <p className="team-cast__vision-name">
+              {copy.visionName}
+              {locale !== "zh" && (
+                <span className="team-cast__zh" lang="zh-CN">
+                  {copy.visionZhName}
+                </span>
+              )}
+            </p>
+            <p className="team-cast__vision-title">{copy.visionTitle}</p>
+          </div>
+          <p className="team-cast__mission">{copy.castMission}</p>
+          <ul className="team-cast__leaders">
+            {castLeaders.map((role) => {
+              const agent = copy.agents[role.id];
+              return (
+                <li key={role.id} className="team-cast__leader">
+                  <a href={`#${role.id}`} className="team-cast__leader-link">
+                    <span className={`team-avatar team-avatar--${role.id} team-cast__leader-avatar`}>
+                      <Image
+                        src={role.avatar}
+                        alt=""
+                        fill
+                        priority
+                        sizes="5.5rem"
+                        className="team-avatar__img"
+                      />
+                    </span>
+                    <span className="team-cast__leader-name">
+                      {agent.name}
+                      {locale !== "zh" && (
+                        <span className="team-cast__zh" lang="zh-CN">
+                          {role.zhName}
+                        </span>
+                      )}
+                    </span>
+                    <span className="team-cast__leader-nick">{agent.nickname}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+          <p className="team-cast__footer">{copy.castFooter}</p>
+        </div>
         {copy.lead.map((line) => (
           <p key={line} className="page-lead">
             {line}
@@ -126,9 +190,37 @@ export default function TeamPage() {
         <ol className="team-flow">
           {copy.flow.map((step, index) => (
             <li key={`${step.who}-${index}`} className={`team-flow__step team-flow__step--${step.kind}`}>
-              <span className="team-flow__who">{step.who}</span>
-              <span className="team-flow__what">{step.what}</span>
-              {step.note && <span className="team-flow__note">↺ {step.note}</span>}
+              <div className="team-flow__rail" aria-hidden="true">
+                <span className="team-flow__index">{index + 1}</span>
+                <div className="team-flow__faces">
+                  {(step.faces ?? []).map((face) => {
+                    const src = faceSrc(face);
+                    if (!src) {
+                      return (
+                        <span
+                          key={face}
+                          className={`team-flow__face team-flow__face--mark team-avatar--${faceRing(face)}`}
+                        >
+                          ✓
+                        </span>
+                      );
+                    }
+                    return (
+                      <span
+                        key={face}
+                        className={`team-avatar team-avatar--${faceRing(face)} team-flow__face`}
+                      >
+                        <Image src={src} alt="" fill sizes="2.75rem" className="team-avatar__img" />
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="team-flow__body">
+                <span className="team-flow__who">{step.who}</span>
+                <span className="team-flow__what">{step.what}</span>
+                {step.note && <span className="team-flow__note">↺ {step.note}</span>}
+              </div>
             </li>
           ))}
         </ol>
@@ -160,6 +252,11 @@ export default function TeamPage() {
             priority={false}
           />
         </div>
+        <p className="team-easter-egg__actions">
+          <a className="team-easter-egg__download" href={copy.easterEggSrc} download>
+            {copy.easterEggDownload}
+          </a>
+        </p>
       </section>
 
       <p className="team-outro">
