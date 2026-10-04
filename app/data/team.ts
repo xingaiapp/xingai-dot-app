@@ -66,6 +66,17 @@ export const agentRoles: AgentRole[] = [
   },
 ];
 
+/** Character Bible row order (left → right under Xing Ge). */
+export const castLeaderOrder: AgentId[] = [
+  "joker",
+  "sweetie",
+  "lady-bull",
+  "second-master",
+  "hua-an",
+];
+
+export const visionAvatar = "/team/xing-ge.webp";
+
 export type AgentCopy = {
   name: string;
   title: string;
@@ -79,12 +90,16 @@ export type AgentCopy = {
   seenIn: string;
 };
 
+export type FlowFace = AgentId | "vision" | "result";
+
 export type FlowStep = {
   who: string;
   what: string;
   kind: "human" | "agent" | "result";
   /** Optional side note, e.g. the loop back to research. */
   note?: string;
+  /** Avatars for this step (HTML cast faces, not poster). */
+  faces?: FlowFace[];
 };
 
 export type TeamCopy = {
@@ -109,11 +124,18 @@ export type TeamCopy = {
   /** Xing Ge watching the argument from the side. */
   banterWatcherName: string;
   banterWatcherCaption: string;
-  /** Behind-the-scenes cartoon — entertainment only. */
+  /** HTML cast lineup under the hero (not the poster). */
+  castMission: string;
+  castFooter: string;
+  visionName: string;
+  visionTitle: string;
+  visionZhName: string;
+  /** Behind-the-scenes Character Bible poster — share / download. */
   easterEggHeading: string;
   easterEggLead: string;
   easterEggAlt: string;
   easterEggSrc: string;
+  easterEggDownload: string;
   outroStory: string;
   outroAbout: string;
 };
@@ -196,18 +218,29 @@ const en: TeamCopy = {
   flowHeading: "They don't always agree. That's the point.",
   flowLead: "A decision goes through every role once, and back to research as often as it needs.",
   flow: [
-    { who: "Human", what: "Defines the question", kind: "human" },
-    { who: "Second Master", what: "Researches and brings evidence", kind: "agent" },
+    { who: "Xing", what: "Defines the question", kind: "human", faces: ["vision"] },
+    {
+      who: "Second Master",
+      what: "Researches and brings evidence",
+      kind: "agent",
+      faces: ["second-master"],
+    },
     {
       who: "Joker + Lady Bull",
       what: "Challenge it and check it",
       kind: "agent",
       note: "Not good enough? Back to research.",
+      faces: ["joker", "lady-bull"],
     },
-    { who: "Sweetie", what: "Turns it into one next step", kind: "agent" },
-    { who: "Hua An", what: "Builds tools and automates the path", kind: "agent" },
-    { who: "Human", what: "Makes the decision", kind: "human" },
-    { who: "Result", what: "What actually happened", kind: "result" },
+    { who: "Sweetie", what: "Turns it into one next step", kind: "agent", faces: ["sweetie"] },
+    {
+      who: "Hua An",
+      what: "Builds tools and automates the path",
+      kind: "agent",
+      faces: ["hua-an"],
+    },
+    { who: "Xing", what: "Makes the decision", kind: "human", faces: ["vision"] },
+    { who: "Result", what: "What actually happened", kind: "result", faces: ["result"] },
   ],
   flowLoop: "Learn from the result, then ask a better question.",
   banterHeading: "A typical meeting",
@@ -218,14 +251,20 @@ const en: TeamCopy = {
     { who: "second-master", line: "…I'll go check." },
     { who: "hua-an", line: "I can wire a check for that." },
   ],
-  banterWatcherName: "Xing Ge",
+  banterWatcherName: "Xing",
   banterWatcherCaption: "Smiling. Watching them argue.",
+  castMission: "Five personalities. One mission.",
+  castFooter: "Five Leaders · One Team · One Mission",
+  visionName: "Xing",
+  visionTitle: "Vision",
+  visionZhName: "星哥",
   easterEggHeading: "Five personalities. One mission.",
   easterEggLead:
-    "Official jobs are above. This is the XingAI Character Bible — five leaders under Xing Ge, including Hua An (华安 / 唐伯虎) for Tech & Tools.",
+    "The cast above is live HTML. This poster is the shareable Character Bible — same six characters, for download and social.",
   easterEggAlt:
     "XingAI Character Bible: Xing Ge, Zhi Zun Bao, Xiao Tian Tian, Madam Niu, Second Master, and Hua An (Tang Bohu) for Tech & Tools",
   easterEggSrc: "/team/team-character-bible-en.webp",
+  easterEggDownload: "Download poster",
   outroStory: "What we're building",
   outroAbout: "About XingAI",
 };
@@ -306,18 +345,19 @@ const zh: TeamCopy = {
   flowHeading: "他们不总是意见一致。这正是重点。",
   flowLead: "一个决定会经过每个角色一次；需要的话，可以反复打回去重查。",
   flow: [
-    { who: "人", what: "定义问题", kind: "human" },
-    { who: "二当家", what: "研究，带回证据", kind: "agent" },
+    { who: "星哥", what: "定义问题", kind: "human", faces: ["vision"] },
+    { who: "二当家", what: "研究，带回证据", kind: "agent", faces: ["second-master"] },
     {
       who: "至尊宝 + 牛夫人",
       what: "质疑它，验收它",
       kind: "agent",
       note: "不够？打回二当家重查。",
+      faces: ["joker", "lady-bull"],
     },
-    { who: "小甜甜", what: "综合成一个下一步", kind: "agent" },
-    { who: "华安", what: "把路径做成工具与自动化", kind: "agent" },
-    { who: "人", what: "做决定", kind: "human" },
-    { who: "结果", what: "实际发生了什么", kind: "result" },
+    { who: "小甜甜", what: "综合成一个下一步", kind: "agent", faces: ["sweetie"] },
+    { who: "华安", what: "把路径做成工具与自动化", kind: "agent", faces: ["hua-an"] },
+    { who: "星哥", what: "做决定", kind: "human", faces: ["vision"] },
+    { who: "结果", what: "实际发生了什么", kind: "result", faces: ["result"] },
   ],
   flowLoop: "从结果里复盘，再问一个更好的问题。",
   banterHeading: "日常开会现场",
@@ -330,11 +370,17 @@ const zh: TeamCopy = {
   ],
   banterWatcherName: "星哥",
   banterWatcherCaption: "笑着看他们吵。",
+  castMission: "五种性格 · 一个使命",
+  castFooter: "五位负责人 · 一个团队 · 一个使命",
+  visionName: "星哥",
+  visionTitle: "愿景",
+  visionZhName: "星哥",
   easterEggHeading: "五种性格 · 一个使命",
-  easterEggLead: "上面是正式分工。下面是 XingAI Character Bible——星哥之下五位负责人，含华安（唐伯虎）负责技术与工具。",
+  easterEggLead: "上面是网页班底。这张海报是可下载、可分享的 Character Bible——同一套六人。",
   easterEggAlt:
     "XingAI Character Bible：星哥、至尊宝、小甜甜、牛夫人、二当家、华安（唐伯虎 · 技术与工具）",
   easterEggSrc: "/team/team-character-bible-zh.webp",
+  easterEggDownload: "下载海报",
   outroStory: "我们在造什么",
   outroAbout: "关于 XingAI",
 };
@@ -415,18 +461,24 @@ const ko: TeamCopy = {
   flowHeading: "늘 의견이 같지는 않습니다. 그게 핵심입니다.",
   flowLead: "결정은 모든 역할을 한 번씩 거치고, 필요하면 몇 번이든 리서치로 돌아갑니다.",
   flow: [
-    { who: "사람", what: "질문을 정의합니다", kind: "human" },
-    { who: "Second Master", what: "조사하고 근거를 가져옵니다", kind: "agent" },
+    { who: "싱게", what: "질문을 정의합니다", kind: "human", faces: ["vision"] },
+    {
+      who: "Second Master",
+      what: "조사하고 근거를 가져옵니다",
+      kind: "agent",
+      faces: ["second-master"],
+    },
     {
       who: "Joker + Lady Bull",
       what: "반박하고 검증합니다",
       kind: "agent",
       note: "부족하면? 다시 리서치로.",
+      faces: ["joker", "lady-bull"],
     },
-    { who: "Sweetie", what: "다음 한 걸음으로 정리합니다", kind: "agent" },
-    { who: "Hua An", what: "도구를 만들고 자동화합니다", kind: "agent" },
-    { who: "사람", what: "결정합니다", kind: "human" },
-    { who: "결과", what: "실제로 일어난 일", kind: "result" },
+    { who: "Sweetie", what: "다음 한 걸음으로 정리합니다", kind: "agent", faces: ["sweetie"] },
+    { who: "Hua An", what: "도구를 만들고 자동화합니다", kind: "agent", faces: ["hua-an"] },
+    { who: "싱게", what: "결정합니다", kind: "human", faces: ["vision"] },
+    { who: "결과", what: "실제로 일어난 일", kind: "result", faces: ["result"] },
   ],
   flowLoop: "결과에서 배우고, 더 나은 질문을 합니다.",
   banterHeading: "평소 회의 풍경",
@@ -439,12 +491,18 @@ const ko: TeamCopy = {
   ],
   banterWatcherName: "싱게",
   banterWatcherCaption: "웃으며 구경 중.",
+  castMission: "다섯 성격. 하나의 미션.",
+  castFooter: "다섯 리더 · 한 팀 · 한 미션",
+  visionName: "싱게",
+  visionTitle: "Vision",
+  visionZhName: "星哥",
   easterEggHeading: "다섯 성격. 하나의 미션.",
   easterEggLead:
-    "위는 공식 역할입니다. 아래는 XingAI Character Bible — 싱게 아래 다섯 책임자, 화안(华安 / 唐伯虎)이 Tech & Tools.",
+    "위는 웹 캐스트입니다. 이 포스터는 같은 여섯 캐릭터의 Character Bible — 다운로드·공유용.",
   easterEggAlt:
     "XingAI Character Bible: Xing Ge, Zhi Zun Bao, Xiao Tian Tian, Madam Niu, Second Master, Hua An(Tang Bohu · Tech & Tools)",
   easterEggSrc: "/team/team-character-bible-ko.webp",
+  easterEggDownload: "포스터 다운로드",
   outroStory: "우리가 만드는 것",
   outroAbout: "XingAI 소개",
 };
