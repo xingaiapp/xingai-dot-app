@@ -11,10 +11,10 @@ type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 function teamOg(locale: ReturnType<typeof parseRoutingLocale>) {
   const alt =
     locale === "zh"
-      ? "XingAI 团队：二当家、至尊宝、牛夫人、小甜甜"
+      ? "XingAI 团队：星哥、至尊宝、小甜甜、牛夫人、二当家、华安"
       : locale === "ko"
-        ? "XingAI 팀: Second Master, Joker, Lady Bull, Sweetie"
-        : "The XingAI team: Second Master, Joker, Lady Bull and Sweetie";
+        ? "XingAI 팀: Xing Ge, Joker, Sweetie, Lady Bull, Second Master, Hua An"
+        : "XingAI team: Xing Ge, Joker, Sweetie, Lady Bull, Second Master and Hua An";
   return ogImageMeta("/team-og.jpg", alt);
 }
 

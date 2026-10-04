@@ -3,6 +3,7 @@
 import Image from "next/image";
 import CofoundersGrid from "../../components/CofoundersGrid";
 import LocaleLink from "../../components/LocaleLink";
+import TeamBanterChat from "../../components/TeamBanterChat";
 import { useTranslation } from "../../i18n/LanguageContext";
 import { getLocalizedApps } from "../../data/apps";
 import { agentRoles, getTeamCopy, type AgentId } from "../../data/team";
@@ -29,9 +30,6 @@ export default function TeamPage() {
               <Image src={role.avatar} alt="" fill priority sizes="5.5rem" className="team-avatar__img" />
             </li>
           ))}
-          <li className="team-avatar team-avatar--more" data-label={copy.moreAgents} title={copy.moreAgents}>
-            <span className="team-avatar__more-mark">?</span>
-          </li>
         </ul>
         {copy.lead.map((line) => (
           <p key={line} className="page-lead">
@@ -80,6 +78,7 @@ export default function TeamPage() {
                       )}
                     </h3>
                     <p className="team-agent__title">{agent.title}</p>
+                    <p className="team-agent__nickname">{agent.nickname}</p>
                     <p className="team-agent__tag">{agent.tag}</p>
                   </div>
                 </header>
@@ -135,21 +134,14 @@ export default function TeamPage() {
         </ol>
         <p className="team-flow__loop">↺ {copy.flowLoop}</p>
 
-        <div className="panel team-banter">
-          <p className="team-agent__label">{copy.banterHeading}</p>
-          <ul>
-            {copy.banter.map(({ who, line }) => (
-              <li key={who} className="team-banter__line">
-                <span className={`team-avatar team-avatar--sm team-avatar--${who}`}>
-                  <Image src={avatarOf(who)} alt="" fill sizes="2.25rem" className="team-avatar__img" />
-                </span>
-                <span>
-                  <strong>{copy.agents[who].name}</strong> {line}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <TeamBanterChat
+          heading={copy.banterHeading}
+          lines={copy.banter}
+          agents={copy.agents}
+          avatarOf={avatarOf}
+          watcherName={copy.banterWatcherName}
+          watcherCaption={copy.banterWatcherCaption}
+        />
       </section>
 
       <section className="team-section team-easter-egg" aria-labelledby="team-egg-heading">
@@ -161,10 +153,11 @@ export default function TeamPage() {
           <Image
             src={copy.easterEggSrc}
             alt={copy.easterEggAlt}
-            width={1689}
-            height={931}
+            width={1280}
+            height={720}
             sizes="(max-width: 48rem) 100vw, 48rem"
             className="team-easter-egg__img"
+            priority={false}
           />
         </div>
       </section>
