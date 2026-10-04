@@ -2,11 +2,29 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.01ag
+**Version:** 2026.10.04i
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.04i` Team is in the desktop top nav and mobile bottom tab bar (was drawer/footer only); drawer lists Team higher.
+
+`2026.10.04h` Banter chat: Xing Ge sits on the right, smiling while the agents argue (`xing-ge.webp`).
+
+`2026.10.04g` Character Bible “Five personalities. One mission.” has locale images: `team-character-bible-{en,zh,ko}.webp` on `/team`.
+
+`2026.10.04f` `/team` banter (“日常开会现场”) plays as a looping chat: typing dots → typewriter line → next speaker; respects `prefers-reduced-motion`.
+
+`2026.10.04e` `/team`: hide full org-chart poster for now (assets kept under `public/team/team-org-poster-*.webp` for later); Character Bible stays.
+
+`2026.10.04d` Character Bible poster now includes Hua An / 华安（唐伯虎） as Tech & Tools (was missing from the five-leader picture).
+
+`2026.10.04c` Team group image: full 55-person org posters in en/zh/ko (`team-org-poster-{en,zh,ko}.webp`) — Five leaders · One team · One mission; Hua An on Tech & Tools; refresh `team-og.jpg`.
+
+`2026.10.04b` Team + home: add Hua An / 华安（唐伯虎） as fifth agent (Tech & Tools); homepage grid is five agents; `/team` shows org poster with code lead; avatar `hua-an.webp`.
+
+`2026.10.04a` Team: Character Bible poster on `/team` (五人格 · 一使命); agent nicknames (嘴最硬 / 最会哄人 / …); Xing Ge called out as Vision; homepage team lead names the four agents + 星哥; refresh `team-og.jpg` + `llms.txt`. Product roles stay research / challenge / verify / advocate — org-chart poster is brand asset only.
 
 `2026.10.01ag` Contact form posts to `POST /api/contact` and delivers via Resend (no more fake `mailto` success). Needs `RESEND_API_KEY` + `CONTACT_TO_EMAIL` / `CONTACT_FROM_EMAIL` on Vercel; see Contact section below.
 

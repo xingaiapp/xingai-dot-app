@@ -26,9 +26,13 @@ How XingAI works: https://xingai.app/story
 
 Team: https://xingai.app/team
 - Co-founders: Xing and Allen (real people, AI architects).
-- Four AI agent roles describe how we work: Second Master (research and
-  evidence), Joker (challenge and counter-evidence), Lady Bull (verification,
-  "no citation, no claim"), Sweetie (user context and next action).
+- Five AI agent roles describe how we work: Second Master / 二当家 (research and
+  evidence), Joker / 至尊宝 (challenge and counter-evidence), Lady Bull / 牛夫人
+  (verification, "no citation, no claim"), Sweetie / 小甜甜 (user context and
+  next action), Hua An / 华安 (唐伯虎) (tech, code, AI tools, automation).
+  Xing Ge / 星哥 is Vision — the human who sets direction.
+- /team shows the Character Bible poster (five leaders under Xing Ge, including
+  Hua An on Tech & Tools). Full org-chart posters are reserved for later.
 - These roles are characters, not employees. A person makes the final
   decision. Running the agents together as one system is planned, not built.
 

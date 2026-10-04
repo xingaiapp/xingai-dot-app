@@ -12,24 +12,24 @@ export type NavKey =
   | "navTry"
   | "navMore";
 
-/** Desktop header: acquisition paths only. Team and About live in the drawer and footer. */
+/** Desktop header primary destinations (About stays in drawer + footer). */
 const navPaths: { path: string; key: NavKey; hash?: string }[] = [
   { path: "/", key: "navHome" },
   { path: "/apps", key: "navApps" },
   { path: "/story", key: "navStory" },
+  { path: "/team", key: "navTeam" },
   { path: "/contact", key: "navContact" },
   { path: "/services", key: "navBuild" },
 ];
 
 /**
- * Bottom tab bar is ordered by acquisition priority: Home, Apps, Try (live
- * products on the home page), Contact, then a More tab that opens the drawer.
- * Story, Team, About and Build stay reachable from the drawer and footer.
+ * Bottom tab bar: Home, Apps, Team, Contact, then More (drawer).
+ * Try / Story / About / Build stay in the drawer and on the home page.
  */
 const mobileNavPaths: { path: string; key: NavKey; hash?: string }[] = [
   { path: "/", key: "navHome" },
   { path: "/apps", key: "navApps" },
-  { path: "/", key: "navTry", hash: "start-here" },
+  { path: "/team", key: "navTeam" },
   { path: "/contact", key: "navContact" },
 ];
 
