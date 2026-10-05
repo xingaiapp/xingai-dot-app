@@ -245,8 +245,8 @@ export default function TeamPage() {
           <Image
             src={copy.easterEggSrc}
             alt={copy.easterEggAlt}
-            width={1280}
-            height={720}
+            width={1920}
+            height={1080}
             sizes="(max-width: 48rem) 100vw, 48rem"
             className="team-easter-egg__img"
             priority={false}
