@@ -150,6 +150,8 @@ const translations = {
     aboutBuilding: "Building in public",
     aboutBuildingText: "Experiments, refinements, and releases\u2014we share the process on GitHub, LinkedIn, and X. We favor shipping and iterating over perfecting in silence.",
     aboutStoryLink: "How XingAI turns ideas into products",
+    aboutTeamPosterAlt:
+      "XingAI team poster: Xing above five leaders with their nicknames \u2014 Joker (sharpest tongue), Sweetie (best at charming), Lady Bull (best at chasing blame), Second Master (scapegoat + intel) and Hua An (code brush).",
 
     // Story / ecosystem
     homeLoopHeading: "How XingAI works",
@@ -536,6 +538,8 @@ const translations = {
     aboutBuilding: "\u516c\u5f00\u6784\u5efa",
     aboutBuildingText: "\u5b9e\u9a8c\u3001\u4f18\u5316\u548c\u53d1\u5e03\u2014\u2014\u6211\u4eec\u5728 GitHub\u3001LinkedIn \u548c X \u4e0a\u5206\u4eab\u8fc7\u7a0b\u3002\u6211\u4eec\u504f\u597d\u53d1\u5e03\u548c\u8fed\u4ee3\uff0c\u800c\u975e\u65e0\u58f0\u5b8c\u5584\u3002",
     aboutStoryLink: "XingAI 如何把想法变成产品",
+    aboutTeamPosterAlt:
+      "XingAI 团队海报：星哥（神秘大Boss）在上，下面是五位负责人——至尊宝（嘴最硬）、小甜甜（最会哄人）、牛夫人（最会追责）、二当家（背锅侠 + 情报员）和华安（最会写码）。",
 
     homeLoopHeading: "XingAI 如何运转",
     homeLoopLead: "一条脊梁把想法变成产品。在故事页点开产品，可看 Who / What / Where / When / Why。",
@@ -912,6 +916,8 @@ const translations = {
     aboutBuilding: "\uacf5\uac1c \uac1c\ubc1c",
     aboutBuildingText: "\uc2e4\ud5d8, \uac1c\uc120, \ubc30\ud3ec\u2014GitHub, LinkedIn, X\uc5d0\uc11c \uacfc\uc815\uc744 \uacf5\uc720\ud569\ub2c8\ub2e4. \uc870\uc6a9\ud788 \uc644\ubcbd\ud558\uac8c \ub9cc\ub4dc\ub294 \uac83\ubcf4\ub2e4 \ubc30\ud3ec\ud558\uace0 \ubc18\ubcf5\ud558\ub294 \uac83\uc744 \uc120\ud638\ud569\ub2c8\ub2e4.",
     aboutStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
+    aboutTeamPosterAlt:
+      "XingAI 팀 포스터: 싱게 아래 다섯 리더와 별명 \u2014 Joker(입이 제일 세다), Sweetie(달래기 달인), Lady Bull(추궁 달인), Second Master(총알받이 + 정보원), Hua An(코드 붓).",
 
     homeLoopHeading: "XingAI의 작동 방식",
     homeLoopLead: "하나의 척추로 아이디어가 제품이 됩니다. 스토리에서 제품을 열면 Who / What / Where / When / Why를 볼 수 있습니다.",
