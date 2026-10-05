@@ -8,7 +8,7 @@
 
 ### Current version notes
 
-`2026.10.05a` `/about` shows the team poster in each locale (`team-persona-poster-{en,zh,ko}.webp`): Xing above the five leaders with their nicknames, matching `/team` copy; links to `/team`.
+`2026.10.05a` `/about` shows the team poster in each locale (`team-persona-poster-{en,zh,ko}.webp`): Xing above the five leaders in `/team` order with their nicknames, tagline “AI Decision Systems”, matching `/team` copy; links to `/team`.
 
 `2026.10.04j` `/team` HTML cast: Xing (星哥) above five centered leaders with nicknames; decision flow is an avatar timeline; Character Bible poster stays for download/share.
 
