@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import CofoundersGrid from "../../components/CofoundersGrid";
 import LocaleLink from "../../components/LocaleLink";
 import { useTranslation } from "../../i18n/LanguageContext";
 
 export default function AboutPage() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <main className="wrap">
@@ -22,6 +23,25 @@ export default function AboutPage() {
           {t("cofounders")}
         </h2>
         <CofoundersGrid />
+      </section>
+
+      <section className="about-team-poster" aria-labelledby="about-team-poster-heading">
+        <h2 id="about-team-poster-heading" className="section-eyebrow">
+          {t("navTeam")}
+        </h2>
+        <figure className="about-team-poster__figure">
+          <Image
+            src={`/team/team-persona-poster-${locale}.webp`}
+            alt={t("aboutTeamPosterAlt")}
+            width={1920}
+            height={1080}
+            sizes="(max-width: 72rem) 100vw, 72rem"
+            className="about-team-poster__img"
+          />
+        </figure>
+        <p className="about-story-link">
+          <LocaleLink href="/team">{t("homeMeetTeam")} &rarr;</LocaleLink>
+        </p>
       </section>
 
       <div className="about-grid">

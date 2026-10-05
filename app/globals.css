@@ -1353,7 +1353,8 @@ html[data-theme="dark"] .lang-menu {
 .home-answers,
 .home-build,
 .home-cofounders,
-.about-cofounders {
+.about-cofounders,
+.about-team-poster {
   margin-bottom: 2.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
@@ -2313,6 +2314,21 @@ html[data-theme="dark"] .hero-chain__step[data-tone="decide"] {
 .hero-story-link a:hover,
 .about-story-link a:hover {
   text-decoration: underline;
+}
+
+/* About: team poster (bitmap keeps its own paper background in both themes) */
+.about-team-poster__figure {
+  margin: 1rem 0 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fbf6ec;
+}
+
+.about-team-poster__img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* ── Story / ecosystem page ── */
