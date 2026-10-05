@@ -7,8 +7,8 @@
  * `ecosystem.ts`). Each agent points at the shipped product where its job is
  * visible today, or says "planned" when nothing ships yet.
  *
- * Character Bible (relationship poster): 星哥 Vision + five leaders including
- * 华安 (唐伯虎) for Tech & Tools. Full org-chart posters live in public/team/
+ * Character Bible poster: `team-persona-poster-{en,zh,ko}.webp` — 星哥 + five
+ * leaders in castLeaderOrder with their nicknames; same image as /about. Full org-chart posters live in public/team/
  * but are not shown on /team yet.
  */
 
@@ -262,8 +262,8 @@ const en: TeamCopy = {
   easterEggLead:
     "The cast above is live HTML. This poster is the shareable Character Bible — same six characters, for download and social.",
   easterEggAlt:
-    "XingAI Character Bible: Xing Ge, Zhi Zun Bao, Xiao Tian Tian, Madam Niu, Second Master, and Hua An (Tang Bohu) for Tech & Tools",
-  easterEggSrc: "/team/team-character-bible-en.webp",
+    "XingAI team poster: Xing above five leaders with their nicknames \u2014 Joker (sharpest tongue), Sweetie (best at charming), Lady Bull (best at chasing blame), Second Master (scapegoat + intel) and Hua An (code brush).",
+  easterEggSrc: "/team/team-persona-poster-en.webp",
   easterEggDownload: "Download poster",
   outroStory: "What we're building",
   outroAbout: "About XingAI",
@@ -378,8 +378,8 @@ const zh: TeamCopy = {
   easterEggHeading: "五种性格 · 一个使命",
   easterEggLead: "上面是网页班底。这张海报是可下载、可分享的 Character Bible——同一套六人。",
   easterEggAlt:
-    "XingAI Character Bible：星哥、至尊宝、小甜甜、牛夫人、二当家、华安（唐伯虎 · 技术与工具）",
-  easterEggSrc: "/team/team-character-bible-zh.webp",
+    "XingAI 团队海报：星哥（神秘大Boss）在上，下面是五位负责人——至尊宝（嘴最硬）、小甜甜（最会哄人）、牛夫人（最会追责）、二当家（背锅侠 + 情报员）和华安（最会写码）。",
+  easterEggSrc: "/team/team-persona-poster-zh.webp",
   easterEggDownload: "下载海报",
   outroStory: "我们在造什么",
   outroAbout: "关于 XingAI",
@@ -500,8 +500,8 @@ const ko: TeamCopy = {
   easterEggLead:
     "위는 웹 캐스트입니다. 이 포스터는 같은 여섯 캐릭터의 Character Bible — 다운로드·공유용.",
   easterEggAlt:
-    "XingAI Character Bible: Xing Ge, Zhi Zun Bao, Xiao Tian Tian, Madam Niu, Second Master, Hua An(Tang Bohu · Tech & Tools)",
-  easterEggSrc: "/team/team-character-bible-ko.webp",
+    "XingAI 팀 포스터: 싱게 아래 다섯 리더와 별명 \u2014 Joker(입이 제일 세다), Sweetie(달래기 달인), Lady Bull(추궁 달인), Second Master(총알받이 + 정보원), Hua An(코드 붓).",
+  easterEggSrc: "/team/team-persona-poster-ko.webp",
   easterEggDownload: "포스터 다운로드",
   outroStory: "우리가 만드는 것",
   outroAbout: "XingAI 소개",

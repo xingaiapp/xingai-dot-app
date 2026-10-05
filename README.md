@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.05a
+**Version:** 2026.10.05b
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.05b` `/team` share/download poster now uses the same `team-persona-poster-{en,zh,ko}.webp` as `/about` (site order, site tagline); the HTML cast above is unchanged.
 
 `2026.10.05a` `/about` shows the team poster in each locale (`team-persona-poster-{en,zh,ko}.webp`): Xing above the five leaders in `/team` order with their nicknames, tagline “AI Decision Systems”, matching `/team` copy; links to `/team`.
 
