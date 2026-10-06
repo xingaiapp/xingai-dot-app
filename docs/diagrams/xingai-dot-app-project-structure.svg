@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      text { font-family: Inter, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", "Apple SD Gothic Neo", "Helvetica Neue", Arial, sans-serif; }
+      .title { font-size: 52px; font-weight: 700; fill: #0F172A; }
+      .subtitle { font-size: 26px; fill: #334155; }
+      .group { font-size: 18px; font-weight: 700; letter-spacing: 2px; }
+      .ctitle { font-size: 24px; font-weight: 600; fill: #0F172A; }
+      .bullet { font-size: 20px; fill: #334155; }
+      .kt-label { font-size: 18px; font-weight: 700; letter-spacing: 2px; fill: #D97706; }
+      .kt { font-size: 24px; fill: #0F172A; }
+      .card { stroke-width: 2; }
+      .flow { stroke: #94A3B8; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+
+  <text class="title" x="80" y="108">xingai.app — Project Structure</text>
+  <text class="subtitle" x="80" y="150">Next.js marketing + product registry · en / zh / ko · Vercel</text>
+
+  <!-- Layer 1: Public surfaces — blue -->
+  <rect x="80" y="190" width="1760" height="175" rx="24" fill="#EFF6FF" stroke="#2563EB" class="card"/>
+  <text class="group" x="112" y="228" fill="#2563EB">PUBLIC SURFACES · app/[locale]</text>
+
+  <rect x="112" y="248" width="320" height="96" rx="16" fill="#FFFFFF" stroke="#BFDBFE" class="card"/>
+  <text class="ctitle" x="132" y="286">Home</text>
+  <text class="bullet" x="132" y="318">· Hero · Start here · Spine</text>
+
+  <rect x="452" y="248" width="320" height="96" rx="16" fill="#FFFFFF" stroke="#BFDBFE" class="card"/>
+  <text class="ctitle" x="472" y="286">Catalog</text>
+  <text class="bullet" x="472" y="318">· /apps · /apps/[slug]</text>
+
+  <rect x="792" y="248" width="320" height="96" rx="16" fill="#FFFFFF" stroke="#BFDBFE" class="card"/>
+  <text class="ctitle" x="812" y="286">Story &amp; Team</text>
+  <text class="bullet" x="812" y="318">· /story · /team · /about</text>
+
+  <rect x="1132" y="248" width="320" height="96" rx="16" fill="#FFFFFF" stroke="#BFDBFE" class="card"/>
+  <text class="ctitle" x="1152" y="286">Services</text>
+  <text class="bullet" x="1152" y="318">· /services · security</text>
+
+  <rect x="1472" y="248" width="340" height="96" rx="16" fill="#FFFFFF" stroke="#BFDBFE" class="card"/>
+  <text class="ctitle" x="1492" y="286">Legal &amp; Contact</text>
+  <text class="bullet" x="1492" y="318">· privacy · terms · /contact</text>
+
+  <path class="flow" d="M960 365 L960 400"/>
+
+  <!-- Layer 2: Shared app — green -->
+  <rect x="80" y="405" width="1760" height="175" rx="24" fill="#ECFDF5" stroke="#059669" class="card"/>
+  <text class="group" x="112" y="443" fill="#059669">SHARED APP LAYER</text>
+
+  <rect x="112" y="463" width="400" height="96" rx="16" fill="#FFFFFF" stroke="#A7F3D0" class="card"/>
+  <text class="ctitle" x="132" y="501">components/</text>
+  <text class="bullet" x="132" y="533">· Chrome · Theme · LocaleLink</text>
+
+  <rect x="532" y="463" width="400" height="96" rx="16" fill="#FFFFFF" stroke="#A7F3D0" class="card"/>
+  <text class="ctitle" x="552" y="501">i18n/</text>
+  <text class="bullet" x="552" y="533">· translations · LanguageContext</text>
+
+  <rect x="952" y="463" width="400" height="96" rx="16" fill="#FFFFFF" stroke="#A7F3D0" class="card"/>
+  <text class="ctitle" x="972" y="501">data/</text>
+  <text class="bullet" x="972" y="533">· apps.ts · team · ecosystem</text>
+
+  <rect x="1372" y="463" width="440" height="96" rx="16" fill="#FFFFFF" stroke="#A7F3D0" class="card"/>
+  <text class="ctitle" x="1392" y="501">lib/ + globals.css</text>
+  <text class="bullet" x="1392" y="533">· Helpers · design tokens</text>
+
+  <path class="flow" d="M960 580 L960 615"/>
+
+  <!-- Layer 3: API — purple -->
+  <rect x="80" y="620" width="860" height="175" rx="24" fill="#F5F3FF" stroke="#7C3AED" class="card"/>
+  <text class="group" x="112" y="658" fill="#7C3AED">API · INTEGRATIONS</text>
+
+  <rect x="112" y="678" width="380" height="96" rx="16" fill="#FFFFFF" stroke="#DDD6FE" class="card"/>
+  <text class="ctitle" x="132" y="716">api/contact</text>
+  <text class="bullet" x="132" y="748">· POST · Resend email</text>
+
+  <rect x="512" y="678" width="400" height="96" rx="16" fill="#FFFFFF" stroke="#DDD6FE" class="card"/>
+  <text class="ctitle" x="532" y="716">SEO routes</text>
+  <text class="bullet" x="532" y="748">· sitemap · robots · llms</text>
+
+  <!-- Layer 3b: Platform — gray -->
+  <rect x="980" y="620" width="860" height="175" rx="24" fill="#F8FAFC" stroke="#64748B" class="card"/>
+  <text class="group" x="1012" y="658" fill="#64748B">PLATFORM &amp; ASSETS</text>
+
+  <rect x="1012" y="678" width="380" height="96" rx="16" fill="#FFFFFF" stroke="#E2E8F0" class="card"/>
+  <text class="ctitle" x="1032" y="716">public/ + scripts/</text>
+  <text class="bullet" x="1032" y="748">· Icons · OG · captures</text>
+
+  <rect x="1412" y="678" width="400" height="96" rx="16" fill="#FFFFFF" stroke="#E2E8F0" class="card"/>
+  <text class="ctitle" x="1432" y="716">Deploy</text>
+  <text class="bullet" x="1432" y="748">· Vercel · middleware</text>
+
+  <!-- Takeaway -->
+  <rect x="80" y="840" width="1760" height="120" rx="16" fill="#FFFBEB" stroke="#D97706" class="card"/>
+  <text class="kt-label" x="112" y="886">KEY TAKEAWAY</text>
+  <text class="kt" x="112" y="930">Locale routes sit on a shared i18n + catalog core; contact mail is the only server write path.</text>
+
+  <text class="bullet" x="80" y="1020" fill="#64748B">Repo: xingai-dot-app · Pattern A — Layered Architecture · Live: xingai.app</text>
+</svg>

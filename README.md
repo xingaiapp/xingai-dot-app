@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.05b
+**Version:** 2026.10.06a
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.06a` Internal docs: project-structure diagram (`docs/diagrams/`) and Perplexity / Google Labs vs xingai.app research note (`docs/research/`). No public page change.
 
 `2026.10.05b` `/team` share/download poster now uses the same `team-persona-poster-{en,zh,ko}.webp` as `/about` (site order, site tagline); the HTML cast above is unchanged.
 
@@ -247,6 +249,8 @@ See [docs/marketing-site-standards.md](./docs/marketing-site-standards.md).
 ## Internal Product Wiki
 
 - Repo document: [docs/product-wiki.md](./docs/product-wiki.md)
+- Project structure diagram: [docs/diagrams/xingai-dot-app-project-structure.svg](./docs/diagrams/xingai-dot-app-project-structure.svg)
+- Competitive research (2026-10): [docs/research/2026-10-perplexity-labs-vs-xingai-dot-app.md](./docs/research/2026-10-perplexity-labs-vs-xingai-dot-app.md)
 - Global upgrade rule: `不是重做新产品，而是在前一版上升级。`
 
 Use the internal wiki as the central product/project map for all XingAI apps. It is repo documentation for team and agent use, not a public website route. Individual product repos keep implementation details, while this repo owns portfolio-level rules.
