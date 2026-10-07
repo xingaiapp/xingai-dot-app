@@ -44,7 +44,7 @@ V4 = visual alignment with V1 + functional inheritance from V3 + V4 additions
 | Product | App | Repo | Product base | Next additions |
 |---|---|---|---|---|
 | Eating Decision | `meal.xingai.app` | `xingai-meal-coach-ai` | Eating Decision | Quick Decide + optional Health Mode |
-| Cook AI | `cook.xingai.app` | `xingai-cook-ai` | Cooking decision flow | Pantry memory + saved recipes |
+| Cook AI | `cook.xingai.app` | `xingai-cook-ai` | Decide-first: scan/confirm inventory → one meal → cook | Local Pantry / My Meals after Decision Completion + 7-day return |
 | Invest AI | `invest.xingai.app` | `xingai-invest-ai` | AI Industry Map + cached research | Alerts you define; Pro sells capability |
 | Wear AI | `wear.xingai.app` | `xingai-outfit-ai` | Outfit decision flow | Wardrobe-aware recommendations |
 | Routine AI | `routine.xingai.app` | `xingai-routine-ai` | Weekly rhythm decision flow | Saved routines + accountability |

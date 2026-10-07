@@ -50,7 +50,7 @@ Languages: English, Chinese, Korean.
 
 Live or demo products:
 - Invest AI (Industry Map): https://invest.xingai.app/ai-map
-- Cook AI: https://cook.xingai.app
+- Cook AI: https://cook.xingai.app — scan or type what you have, confirm the list, Decide for me: one meal, buy list, steps (suggestions only; not a recipe browse).
 - Travel AI: https://travel.xingai.app
 - Eating Decision: https://meal.xingai.app
 - Wear AI: https://wear.xingai.app

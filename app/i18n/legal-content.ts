@@ -180,7 +180,7 @@ const en: Record<LegalDocId, LegalDoc> = {
       {
         heading: "Cooking (Cook AI)",
         paragraphs: [
-          "Recipes and steps do not replace food-safety judgment. Check ingredients, allergens, and safe cooking temperatures yourself.",
+          "Cook AI offers one-meal cooking suggestions from ingredients you provide (including fridge photos). Outputs are not nutrition, allergen, or food-safety advice. Check ingredients, labels, and safe cooking temperatures yourself before you cook or serve.",
         ],
       },
       {
@@ -364,7 +364,7 @@ const zh: Record<LegalDocId, LegalDoc> = {
       {
         heading: "烹饪（Cook AI）",
         paragraphs: [
-          "食谱与步骤不能替代食品安全判断。请自行确认食材、过敏原与安全烹饪温度。",
+          "Cook AI 根据你提供的食材（含冰箱照片）给出单餐烹饪建议，不是营养、过敏原或食品安全专业意见。烹饪或上桌前请自行核对食材、标签与安全温度。",
         ],
       },
       {
@@ -549,7 +549,7 @@ const ko: Record<LegalDocId, LegalDoc> = {
       {
         heading: "요리(Cook AI)",
         paragraphs: [
-          "레시피·조리 단계는 식품 안전 판단을 대체하지 않습니다. 재료·알레르기·안전 조리 온도를 직접 확인하세요.",
+          "Cook AI는 제공한 재료(냉장고 사진 포함)로 한 끼 요리 제안을 합니다. 영양·알레르기·식품 안전 전문 조언이 아닙니다. 조리·제공 전 재료·라벨·안전 온도를 직접 확인하세요.",
         ],
       },
       {

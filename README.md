@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.06a
+**Version:** 2026.10.07a
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.07a` Cook AI catalog sync: Decide-first copy (scan → confirm → one meal), features/roadmap match cook.xingai.app (Pantry/My Meals planned after completion), `llms.txt` + disclaimer + product-wiki updated (en/zh/ko).
 
 `2026.10.06a` Internal docs: project-structure diagram (`docs/diagrams/`) and Perplexity / Google Labs vs xingai.app research note (`docs/research/`). No public page change.
 
