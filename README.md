@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.07a
+**Version:** 2026.10.07b
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.07b` Retention-stage marketing: agent **roles** vs platform **Workforce roles** naming (no more agents collision); Start here focuses Invest/Travel/Cook/Wear (6 live catalog, growth story on 4); Free tier / Pro-next copy replaces forever-public-beta tone (en/zh/ko).
 
 `2026.10.07a` Cook AI catalog sync: Decide-first copy (scan → confirm → one meal), features/roadmap match cook.xingai.app (Pantry/My Meals planned after completion), `llms.txt` + disclaimer + product-wiki updated (en/zh/ko).
 

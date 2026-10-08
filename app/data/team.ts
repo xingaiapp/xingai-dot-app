@@ -144,13 +144,13 @@ export type TeamCopy = {
 
 const en: TeamCopy = {
   eyebrow: "Meet the XingAI team",
-  heading: "Five AI agents. One human decision.",
+  heading: "Five agent roles. One human decision.",
   lead: [
     "We don't want one AI to be the researcher, the critic, the checker, the builder and the decider at the same time.",
-    "So each agent gets one job. They research, push back, verify, care about the user, and ship the tools. A person makes the call.",
+    "So each agent role gets one job. They research, push back, verify, care about the user, and ship the tools. A person makes the call.",
   ],
   honesty:
-    "The five agents are characters for how we work, not employees. Xing Ge (星哥) sits above them as Vision — the human who sets direction. Hua An (华安) is Tech & Tools — code, AI tooling, automation. Some jobs already run inside our products; the orchestrator that would run the agents together is still planned.",
+    "These five are character roles for how we work, not employees and not the planned platform Workforce roles on How it works. Xing Ge (星哥) sits above them as Vision — the human who sets direction. Hua An (华安) is Tech & Tools — code, AI tooling, automation. Some jobs already run inside our products; the orchestrator that would run workforce roles together is still planned.",
   peopleHeading: "The people behind XingAI",
   peopleLead: "Two co-founders build every product and answer for it.",
   agentsHeading: "The agents inside XingAI",
@@ -271,7 +271,7 @@ const en: TeamCopy = {
 
 const zh: TeamCopy = {
   eyebrow: "认识 XingAI 团队",
-  heading: "五个 AI Agent，一个人来决定",
+  heading: "五个 Agent 角色，一个人来决定",
   lead: [
     "我们不希望一个 AI 同时扮演研究员、挑战者、验证者、工程师和决策者。",
     "所以每个 Agent 只做一件事。他们会研究、质疑、验收、站在用户这边，并把工具做出来。最后，由人做决定。",
@@ -387,7 +387,7 @@ const zh: TeamCopy = {
 
 const ko: TeamCopy = {
   eyebrow: "XingAI 팀 소개",
-  heading: "AI 에이전트 다섯, 결정은 사람이",
+  heading: "에이전트 역할 다섯, 결정은 사람이",
   lead: [
     "AI 하나가 연구자, 비판자, 검증자, 엔지니어, 결정자를 동시에 맡는 걸 원하지 않습니다.",
     "그래서 에이전트마다 일을 하나씩 줍니다. 조사하고, 반박하고, 검증하고, 사용자를 챙기고, 도구를 만듭니다. 결정은 사람이 합니다.",
@@ -514,9 +514,9 @@ export function getTeamCopy(locale: Locale): TeamCopy {
 }
 
 export function teamTitle(locale: Locale): string {
-  if (locale === "zh") return "团队：五个 AI Agent，一个人来决定";
-  if (locale === "ko") return "팀: AI 에이전트 다섯, 결정은 사람이";
-  return "Team: Five AI agents, one human decision";
+  if (locale === "zh") return "团队：五个 Agent 角色，一个人来决定";
+  if (locale === "ko") return "팀: 에이전트 역할 다섯, 결정은 사람이";
+  return "Team: Five agent roles, one human decision";
 }
 
 export function teamDescription(locale: Locale): string {
