@@ -2190,7 +2190,35 @@ export const CATALOG_LIVE_LEAD_SLUGS = [
   "outfit-ai",
 ] as const;
 
+/** Live weight bands so /apps does not treat every Live card as equal. */
+export const CATALOG_LIVE_FLAGSHIP_SLUGS = ["investment-assistant"] as const;
+export const CATALOG_LIVE_DAILY_SLUGS = [
+  "travel-ai",
+  "cook-ai",
+  "outfit-ai",
+] as const;
+
 export type CatalogGroupKey = "live" | "demo" | "coming-soon" | "internal";
+export type LiveWeightKey = "flagship" | "daily" | "research";
+
+export function splitLiveByWeight(
+  liveApps: AppData[],
+): { key: LiveWeightKey; apps: AppData[] }[] {
+  const flagshipSet = new Set<string>(CATALOG_LIVE_FLAGSHIP_SLUGS);
+  const dailySet = new Set<string>(CATALOG_LIVE_DAILY_SLUGS);
+  const flagship = liveApps.filter((app) => flagshipSet.has(app.slug));
+  const daily = liveApps.filter((app) => dailySet.has(app.slug));
+  const research = liveApps.filter(
+    (app) => !flagshipSet.has(app.slug) && !dailySet.has(app.slug),
+  );
+  return (
+    [
+      { key: "flagship" as const, apps: flagship },
+      { key: "daily" as const, apps: daily },
+      { key: "research" as const, apps: research },
+    ] as const
+  ).filter((band) => band.apps.length > 0);
+}
 
 /** /apps sections: Live (flagship first), Demo, Coming soon, then internal ops tools. */
 export function getCatalogGroups(

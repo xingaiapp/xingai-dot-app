@@ -4,16 +4,18 @@ import LocaleLink from "../../../components/LocaleLink";
 import { useTranslation } from "../../../i18n/LanguageContext";
 import {
   getCatalogGroups,
+  splitLiveByWeight,
   type AppData,
   type AppLaunchStatus,
   type CatalogGroupKey,
+  type LiveWeightKey,
 } from "../../../data/apps";
 import AppIcon from "../../../components/AppIcon";
 import AppDemoScreenshot from "../../../components/AppDemoScreenshot";
 
 /**
- * Catalog grouped by status: Live (flagship first), Demo, Coming soon, then
- * internal ops tools collapsed at the end, with jump links at the top.
+ * Catalog grouped by status: Live (flagship / daily / research bands), Demo,
+ * Coming soon, then internal ops tools collapsed at the end, with jump links.
  */
 export default function AppsPage() {
   const { locale, t } = useTranslation();
@@ -28,6 +30,11 @@ export default function AppsPage() {
     demo: t("appsGroupDemo"),
     "coming-soon": t("appsGroupComingSoon"),
     internal: t("appsGroupInternal"),
+  };
+  const liveWeightLabels: Record<LiveWeightKey, string> = {
+    flagship: t("appsLiveFlagship"),
+    daily: t("appsLiveDaily"),
+    research: t("appsLiveResearch"),
   };
 
   const renderCards = (apps: AppData[]) => (
@@ -89,6 +96,17 @@ export default function AppsPage() {
     </ul>
   );
 
+  const renderLiveWeighted = (apps: AppData[]) => (
+    <div className="apps-live-weights">
+      {splitLiveByWeight(apps).map(({ key, apps: bandApps }) => (
+        <div key={key} className="apps-live-weight" id={`apps-live-${key}`}>
+          <h3 className="apps-live-weight__heading">{liveWeightLabels[key]}</h3>
+          {renderCards(bandApps)}
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <main className="wrap">
       <section className="page-header">
@@ -123,7 +141,7 @@ export default function AppsPage() {
             <h2 id={`apps-${key}-heading`} className="apps-group__heading">
               {groupLabels[key]} <span className="apps-jump__count">{apps.length}</span>
             </h2>
-            {renderCards(apps)}
+            {key === "live" ? renderLiveWeighted(apps) : renderCards(apps)}
           </section>
         ),
       )}

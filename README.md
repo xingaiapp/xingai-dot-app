@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.07d
+**Version:** 2026.10.07e
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.07e` Growth-stage copy: `/apps` Live splits Flagship / Daily / Research; home Start here names the same bands; team heading drops “agent” vs Planned spine conflict; Specialized roles (planned) wording; Build/Decision Workshop CTA; Services workshop renamed.
 
 `2026.10.07d` Soft-404 fix (`dynamicParams=false` + invalid locale `notFound`); `/pricing` Free/Pro/Unlimited waitlist; FAQ/`llms.txt`/hero align 6 live + 4 focus; Privacy/Terms (Resend + cookieless Analytics, Free tier); About XingAI copy; ShopRadar/demo JSON-LD `PreOrder`; logo `sizes`; Contact form `trackCta`; YouTube `@xingaiapp`; square favicon.
 
