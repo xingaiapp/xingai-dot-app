@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.07e
+**Version:** 2026.10.07f
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.07f` Body type uses the system UI stack (`system-ui` / `-apple-system` / `BlinkMacSystemFont`) instead of Inter — SF-like on Apple devices without embedding SF Pro.
 
 `2026.10.07e` Growth-stage copy: `/apps` Live splits Flagship / Daily / Research; home Start here names the same bands; team heading drops “agent” vs Planned spine conflict; Specialized roles (planned) wording; Build/Decision Workshop CTA; Services workshop renamed.
 

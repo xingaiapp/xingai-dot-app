@@ -139,6 +139,17 @@ body {
   margin: 0;
   min-height: 100vh;
   min-height: 100dvh;
+  /* System UI stack ≈ SF on Apple, Segoe on Windows — no Inter / SF Pro files. */
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
   color: var(--ink);
   background-color: var(--page-bg);
   overflow-x: hidden;

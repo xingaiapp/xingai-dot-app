@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
-import { Inter } from "next/font/google";
 import "../globals.css";
 import { buildSiteIdentityGraph } from "../lib/seo-json-ld";
 import { isLocale } from "../lib/locale-constants";
@@ -19,12 +18,6 @@ import Footer from "../components/Footer";
 import MobileBottomNav from "../components/MobileBottomNav";
 import { MobileNavDrawerProvider } from "../components/MobileNavDrawer";
 import LocaleProviders from "../components/LocaleProviders";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -108,7 +101,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <meta name="color-scheme" content="light dark" />
         <script dangerouslySetInnerHTML={{ __html: initScript }} />
       </head>
-      <body className={`${inter.className} site-body`}>
+      <body className="site-body">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
