@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslation } from "../../i18n/LanguageContext";
+import { trackCta } from "../../lib/track-cta";
 
 export default function ContactPage() {
   const { t } = useTranslation();
@@ -37,6 +38,7 @@ export default function ContactPage() {
         setStatus("error");
         return;
       }
+      trackCta("contact", "contact-form");
       setStatus("success");
     } catch {
       setStatus("error");

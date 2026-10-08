@@ -150,7 +150,7 @@ const en: TeamCopy = {
     "So each agent role gets one job. They research, push back, verify, care about the user, and ship the tools. A person makes the call.",
   ],
   honesty:
-    "These five are character roles for how we work, not employees and not the planned platform Workforce roles on How it works. Xing Ge (星哥) sits above them as Vision — the human who sets direction. Hua An (华安) is Tech & Tools — code, AI tooling, automation. Some jobs already run inside our products; the orchestrator that would run workforce roles together is still planned.",
+    "These five are character roles for how we work, not employees. Xing Ge (星哥) sits above them as Vision — the human who sets direction. Hua An (华安) is Tech & Tools — code, AI tooling, automation. Some jobs already run inside our products. The planned platform workforce on How it works is a separate layer.",
   peopleHeading: "The people behind XingAI",
   peopleLead: "Two co-founders build every product and answer for it.",
   agentsHeading: "The agents inside XingAI",

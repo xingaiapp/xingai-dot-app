@@ -48,22 +48,27 @@ Product catalog: https://xingai.app/apps
 
 Languages: English, Chinese, Korean.
 
-Live or demo products:
+Live products (6 on the catalog):
 - Invest AI (Industry Map): https://invest.xingai.app/ai-map
-- Cook AI: https://cook.xingai.app — scan or type what you have, confirm the list, Decide for me: one meal, buy list, steps (suggestions only; not a recipe browse).
 - Travel AI: https://travel.xingai.app
-- Eating Decision: https://meal.xingai.app
+- Cook AI: https://cook.xingai.app — scan or type what you have, confirm the list, Decide for me: one meal, buy list, steps (suggestions only; not a recipe browse).
 - Wear AI: https://wear.xingai.app
+- Passive Income Idea: https://passive.xingai.app
+- Tech Blog: https://blog.xingai.app
+
+Four decision apps to come back to: Invest, Travel, Cook, Wear.
+Pricing: Free tier today; Pro next — https://xingai.app/pricing
+
+Public demos (not counted in the six live):
+- Eating Decision: https://meal.xingai.app
 - SAT AI: https://sat.xingai.app
 - Research AI: https://research.xingai.app
 - Learn AI: https://learn.xingai.app
 - Routine AI: https://routine.xingai.app
 - Decision Agent: https://decision.xingai.app
-- ShopRadar (waitlist): https://shopradar.xingai.app
+- ShopRadar (waitlist; live scoring not running yet): https://shopradar.xingai.app
 - Performance Sim: https://lab.xingai.app
 - Daily Assistant: https://daily.xingai.app
-- Passive Income Idea: https://passive.xingai.app
-- Tech Blog: https://blog.xingai.app
 - T Today (invite-only early access): https://t.xingai.app
 
 Decision Agent:

@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
+import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { buildSiteIdentityGraph } from "../lib/seo-json-ld";
+import { isLocale } from "../lib/locale-constants";
 import { htmlLangTag, parseRoutingLocale, routingLocales } from "../lib/locale-routing";
 import {
   homeDescription,
@@ -46,8 +48,12 @@ export function generateStaticParams() {
   return routingLocales.map((locale) => ({ locale }));
 }
 
+/** Block soft-404s like `/foo.txt` matching `[locale]=foo.txt` and rendering English home. */
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
   const locale = parseRoutingLocale(raw);
   const title = homeTitle(locale);
   const description = homeDescription(locale);
@@ -61,8 +67,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     creator: "XingAI",
     publisher: "XingAI",
     icons: {
-      icon: "/xingai-logo.png",
-      apple: "/xingai-logo.png",
+      // Wordmark is 1373×368 — useless as a tab icon. Use the square X mark.
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
+        { url: "/xingai-mark.png", type: "image/png", sizes: "512x512" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     },
     robots: {
       index: true,
@@ -84,6 +95,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
   const locale = parseRoutingLocale(raw);
   const jsonLd = buildSiteIdentityGraph();
 

@@ -45,6 +45,7 @@ export default function Header() {
               alt="xingai.app"
               width={1373}
               height={368}
+              sizes="(max-width: 48rem) 7.5rem, 8.75rem"
               priority
               className="header-logo-img"
             />

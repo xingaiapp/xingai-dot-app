@@ -2,11 +2,15 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.07b
+**Version:** 2026.10.07d
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.07d` Soft-404 fix (`dynamicParams=false` + invalid locale `notFound`); `/pricing` Free/Pro/Unlimited waitlist; FAQ/`llms.txt`/hero align 6 live + 4 focus; Privacy/Terms (Resend + cookieless Analytics, Free tier); About XingAI copy; ShopRadar/demo JSON-LD `PreOrder`; logo `sizes`; Contact form `trackCta`; YouTube `@xingaiapp`; square favicon.
+
+`2026.10.07c` Favicon fix: tab/apple icons use the square X mark (`favicon.ico`, `xingai-mark.png`) instead of the wide `xingai-logo.png` wordmark.
 
 `2026.10.07b` Retention-stage marketing: agent **roles** vs platform **Workforce roles** naming (no more agents collision); Start here focuses Invest/Travel/Cook/Wear (6 live catalog, growth story on 4); Free tier / Pro-next copy replaces forever-public-beta tone (en/zh/ko).
 

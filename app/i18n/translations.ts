@@ -15,7 +15,8 @@ const translations = {
     navTeam: "Team",
     homeMeetTeam: "Meet the team",
     homeTeamHeading: "Five agent roles. One human decision.",
-    homeTeamLead: "Character roles for how we work — not the platform workforce. Second Master researches, Joker pushes back, Lady Bull checks, Sweetie keeps it useful, Hua An builds the tools. Xing Ge sets direction — a person makes the call.",
+    homeTeamLead:
+      "Second Master researches, Joker pushes back, Lady Bull checks, Sweetie keeps it useful, Hua An builds the tools. Xing Ge sets direction — a person makes the call.",
     navAbout: "About",
     navContact: "Contact",
     navBuild: "Build with us",
@@ -35,7 +36,8 @@ const translations = {
     footerNav: "Site",
     footerCustomAi: "Custom AI",
     footerCtaHeading: "Ready to try a clearer AI decision system?",
-    footerCtaLead: "Live tools are free on the Free tier today. Pro is next.",
+    footerCtaLead: "Live tools are free on the Free tier today. See pricing for what comes next.",
+    navPricing: "Pricing",
     footerCtaLeadSoon: "This product is on the roadmap — request early access.",
     footerTryDemo: "Try free demo",
     footerSeeSystems: "See all systems",
@@ -101,7 +103,23 @@ const translations = {
     homeBrowseAll: "See all apps",
     homeCta: "Get in touch",
     publicBetaNote:
-      "Live tools are free on the Free tier today (daily limits may apply). Pro and Unlimited tiers are defined next — not a forever public beta.",
+      "Six products are live on the catalog; four decision apps to come back to — Invest, Travel, Cook, Wear — plus Passive Income and the Tech Blog. Free tier today (soft daily limits).",
+    pricingHeading: "Pricing",
+    pricingLead:
+      "Live tools start on Free. Pro and Unlimited are next — join the waitlist if you want higher limits when they open.",
+    pricingFreeTitle: "Free",
+    pricingFreeBody:
+      "Use live decision tools today with soft daily limits per network. No account required for most public surfaces. Decisions and history stay in your browser where the product says so.",
+    pricingProTitle: "Pro",
+    pricingProBadge: "Coming soon",
+    pricingProBody:
+      "Higher daily limits, preferences that stick, and richer history. Not for sale yet — request early access and we will email you when it opens.",
+    pricingUnlimitedTitle: "Unlimited",
+    pricingUnlimitedBadge: "Later",
+    pricingUnlimitedBody:
+      "No soft daily decision guide and priority when capacity is tight. Planned after Pro.",
+    pricingCta: "Request Pro early access",
+    pricingNote: "Informational tools only — not professional advice. Limits may change as we scale.",
     answerHeading: "Quick answers",
     answerLead:
       "Short answers for people and AI search systems trying to understand what XingAI does.",
@@ -113,7 +131,7 @@ const translations = {
       "Each product is built around one decision and a clear next action, not open-ended chat.",
     answerQ3: "What can I use XingAI for today?",
     answerA3:
-      "Live today: the Invest AI Industry Map, Travel AI, Cook AI and Wear AI. Public demos include Eating Decision, SAT AI, Research AI, Learn AI, Decision Agent, ShopRadar and Performance Sim. Every product and its status is listed at xingai.app/apps.",
+      "Six live products on the catalog: Invest AI (Industry Map), Travel AI, Cook AI, Wear AI, Passive Income Idea, and the Tech Blog. The four to come back to for everyday decisions are Invest, Travel, Cook, and Wear. Public demos include Eating Decision, SAT AI, Research AI, Learn AI, Decision Agent, ShopRadar and Performance Sim. Full list: xingai.app/apps.",
     answerQ4: "What is the AI Industry Map?",
     answerA4:
       "A public, cache-rendered map of AI supply-chain layers and cited SEC filings. It is research structure, not a broker, allocation board, or trade signal.",
@@ -141,15 +159,17 @@ const translations = {
     contactTail: "\u2014 we both read this inbox.",
 
     // About
-    aboutHeading: "About xingai.app",
+    aboutHeading: "About XingAI",
     aboutLead:
       "XingAI builds AI decision systems for everyday life. We are founders and AI architects shipping focused products\u2014not wrappers or generic chat.",
     aboutMission: "Mission",
     aboutMissionText: "Ship AI tools that help people make better everyday decisions\u2014food, health, finance, productivity\u2014without complexity or hype. Every product we launch prioritizes reliability and clarity over feature count.",
     aboutStack: "Tech stack",
-    aboutStackText: "Next.js for the frontend. FastAPI for the backend. Local AI models where privacy matters. Vercel for deployment. Everything open where possible.",
+    aboutStackText:
+      "Next.js for the frontend. FastAPI for the backend. Local AI models where privacy matters. Vercel for deployment. Selected repos and docs are public when they help others learn; most product code stays private.",
     aboutBuilding: "Building in public",
-    aboutBuildingText: "Experiments, refinements, and releases\u2014we share the process on GitHub, LinkedIn, and X. We favor shipping and iterating over perfecting in silence.",
+    aboutBuildingText:
+      "Experiments, refinements, and releases — we share selected process notes on GitHub, LinkedIn, and X. We favor shipping and iterating over perfecting in silence.",
     aboutStoryLink: "How XingAI turns ideas into products",
     aboutTeamPosterAlt:
       "XingAI team poster: Xing above five leaders with their nicknames \u2014 Joker (sharpest tongue), Sweetie (best at charming), Lady Bull (best at chasing blame), Second Master (scapegoat + intel) and Hua An (code brush).",
@@ -411,7 +431,7 @@ const translations = {
     homeMeetTeam: "\u8ba4\u8bc6\u6574\u4e2a\u56e2\u961f",
     homeTeamHeading: "五个 Agent 角色，一个人来决定",
     homeTeamLead:
-      "这是我们怎么分工的角色设定——不是平台里的专职工作角色。二当家查证据，至尊宝唱反调，牛夫人管验收，小甜甜管有没有用，华安搞工具。星哥定方向，最后由人拍板。",
+      "二当家查证据，至尊宝唱反调，牛夫人管验收，小甜甜管有没有用，华安搞工具。星哥定方向，最后由人拍板。",
     navAbout: "\u5173\u4e8e",
     navContact: "\u8054\u7cfb",
     navBuild: "合作共建",
@@ -431,7 +451,8 @@ const translations = {
     footerNav: "\u7f51\u7ad9\u5bfc\u822a",
     footerCustomAi: "\u5b9a\u5236 AI",
     footerCtaHeading: "\u51c6\u5907\u4f53\u9a8c\u66f4\u6e05\u6670\u7684 AI \u51b3\u7b56\u7cfb\u7edf\uff1f",
-    footerCtaLead: "已上线工具目前在 Free 档免费可用。下一步是 Pro。",
+    footerCtaLead: "已上线工具目前在 Free 档免费可用。下一步见定价页。",
+    navPricing: "定价",
     footerCtaLeadSoon: "\u8be5\u4ea7\u54c1\u5c1a\u5728\u516c\u5f00\u8def\u7ebf\u56fe\u4e0a\u2014\u53ef\u7533\u8bf7\u62a2\u5148\u4f53\u9a8c\u3002",
     footerTryDemo: "\u4f53\u9a8c\u514d\u8d39 Demo",
     footerSeeSystems: "\u67e5\u770b\u6240\u6709\u7cfb\u7edf",
@@ -496,7 +517,20 @@ const translations = {
     homeBrowseAll: "\u67e5\u770b\u5168\u90e8\u4ea7\u54c1",
     homeCta: "\u8054\u7cfb\u6211\u4eec",
     publicBetaNote:
-      "已上线工具目前在 Free 档免费可用（可能有每日限额）。Pro / Unlimited 边界已在定义——不再只停留在「永久 public beta」。",
+      "产品目录上有 6 个已上线产品；日常决策优先回来用 Invest、Travel、Cook、Wear，另外 Passive Income 与 Tech Blog 也已上线。目前 Free 档（可能有每日软限额）。",
+    pricingHeading: "定价",
+    pricingLead: "已上线工具先从 Free 开始。Pro 与 Unlimited 即将推出——想要更高限额可先加入候补。",
+    pricingFreeTitle: "Free",
+    pricingFreeBody:
+      "今天就能用已上线决策工具，按网络有每日软限额。多数公开页面无需账号。产品写明时，决策与历史只保存在本机浏览器。",
+    pricingProTitle: "Pro",
+    pricingProBadge: "即将推出",
+    pricingProBody: "更高每日限额、可记住的偏好、更丰富的历史。暂未开放售卖——申请抢先体验，开放时我们会发邮件。",
+    pricingUnlimitedTitle: "Unlimited",
+    pricingUnlimitedBadge: "更后",
+    pricingUnlimitedBody: "无每日软上限，高峰时优先生成。排在 Pro 之后。",
+    pricingCta: "申请 Pro 抢先体验",
+    pricingNote: "仅供参考，不构成专业建议。限额可能随规模调整。",
     answerHeading: "快速了解",
     answerLead: "给用户和 AI 搜索系统的简短答案，帮助快速理解 XingAI 是什么。",
     answerQ1: "XingAI 是什么？",
@@ -507,7 +541,7 @@ const translations = {
       "每个产品围绕一个决策和明确的下一步，而不是开放式闲聊。",
     answerQ3: "现在可以用 XingAI 做什么？",
     answerA3:
-      "\u5df2\u4e0a\u7ebf\uff1aInvest AI \u4ea7\u4e1a\u5730\u56fe\u3001Travel AI\u3001Cook AI \u548c Wear AI\u3002\u53ef\u516c\u5f00\u8bd5\u7528\u7684\u6f14\u793a\u7248\u6709 Eating Decision\u3001SAT AI\u3001Research AI\u3001Learn AI\u3001Decision Agent\u3001ShopRadar \u548c Performance Sim\u3002\u6240\u6709\u4ea7\u54c1\u53ca\u5176\u72b6\u6001\u89c1 xingai.app/apps\u3002",
+      "产品目录上 6 个已上线：Invest AI（产业地图）、Travel AI、Cook AI、Wear AI、Passive Income Idea、Tech Blog。日常决策优先回来用的四个是 Invest、Travel、Cook、Wear。公开演示还有 Eating Decision、SAT AI、Research AI、Learn AI、Decision Agent、ShopRadar、Performance Sim。完整列表见 xingai.app/apps。",
     answerQ4: "什么是 AI 产业地图？",
     answerA4:
       "一张由 worker 缓存渲染的公开地图，展示 AI 产业链图层和带引用的监管备案。这是研究结构，不是券商、配仓面板或买卖信号。",
@@ -532,15 +566,17 @@ const translations = {
     contactNote: "\u6709\u4efb\u4f55\u95ee\u9898\uff1f",
     contactTail: "\u2014\u2014 \u6211\u4eec\u90fd\u4f1a\u67e5\u770b\u8fd9\u4e2a\u90ae\u7bb1\u3002",
 
-    aboutHeading: "\u5173\u4e8e xingai.app",
+    aboutHeading: "关于 XingAI",
     aboutLead:
       "XingAI \u6253\u9020\u9762\u5411\u65e5\u5e38\u751f\u6d3b\u7684 AI \u51b3\u7b56\u7cfb\u7edf\u3002\u6211\u4eec\u662f\u521b\u59cb\u4eba\u4e0e AI \u67b6\u6784\u5e08\uff0c\u4ea4\u4ed8\u7126\u70b9\u4ea7\u54c1\u2014\u2014\u4e0d\u662f\u5957\u58f3\u6216\u6cdb\u7528\u804a\u5929\u3002",
     aboutMission: "\u4f7f\u547d",
     aboutMissionText: "\u6253\u9020 AI \u5de5\u5177\uff0c\u5e2e\u52a9\u4eba\u4eec\u505a\u51fa\u66f4\u597d\u7684\u65e5\u5e38\u51b3\u7b56\u2014\u2014\u7f8e\u98df\u3001\u5065\u5eb7\u3001\u8d22\u52a1\u3001\u751f\u4ea7\u529b\u2014\u2014\u65e0\u9700\u590d\u6742\u6027\u6216\u70ed\u5ea6\u3002\u6bcf\u4e2a\u4ea7\u54c1\u90fd\u4f18\u5148\u8003\u8651\u53ef\u9760\u6027\u548c\u6e05\u6670\u5ea6\u3002",
     aboutStack: "\u6280\u672f\u6808",
-    aboutStackText: "\u524d\u7aef Next.js\u3002\u540e\u7aef FastAPI\u3002\u9690\u79c1\u4f18\u5148\u65f6\u4f7f\u7528\u672c\u5730 AI \u6a21\u578b\u3002Vercel \u90e8\u7f72\u3002\u5c3d\u53ef\u80fd\u5f00\u6e90\u3002",
+    aboutStackText:
+      "前端 Next.js。后端 FastAPI。隐私优先时使用本地 AI 模型。Vercel 部署。部分仓库与文档会公开以便学习；多数产品代码仍保持私有。",
     aboutBuilding: "\u516c\u5f00\u6784\u5efa",
-    aboutBuildingText: "\u5b9e\u9a8c\u3001\u4f18\u5316\u548c\u53d1\u5e03\u2014\u2014\u6211\u4eec\u5728 GitHub\u3001LinkedIn \u548c X \u4e0a\u5206\u4eab\u8fc7\u7a0b\u3002\u6211\u4eec\u504f\u597d\u53d1\u5e03\u548c\u8fed\u4ee3\uff0c\u800c\u975e\u65e0\u58f0\u5b8c\u5584\u3002",
+    aboutBuildingText:
+      "实验、优化和发布——我们在 GitHub、LinkedIn 和 X 上分享部分过程。我们偏好发布和迭代，而非无声完善。",
     aboutStoryLink: "XingAI 如何把想法变成产品",
     aboutTeamPosterAlt:
       "XingAI 团队海报：星哥（神秘大Boss）在上，下面是五位负责人——至尊宝（嘴最硬）、小甜甜（最会哄人）、牛夫人（最会追责）、二当家（背锅侠 + 情报员）和华安（最会写码）。",
@@ -791,7 +827,7 @@ const translations = {
     homeMeetTeam: "\ud300 \uc18c\uac1c",
     homeTeamHeading: "에이전트 역할 다섯, 결정은 사람이",
     homeTeamLead:
-      "우리가 일하는 캐릭터 역할이지, 플랫폼 워크포스와는 다릅니다. Second Master가 조사하고, Joker가 반박하고, Lady Bull이 검증하고, Sweetie가 쓸모를 챙기고, Hua An이 툴을 만듭니다. 싱게(星哥)가 방향을 잡고, 결정은 사람이 합니다.",
+      "Second Master가 조사하고, Joker가 반박하고, Lady Bull이 검증하고, Sweetie가 쓸모를 챙기고, Hua An이 툴을 만듭니다. 싱게(星哥)가 방향을 잡고, 결정은 사람이 합니다.",
     navAbout: "\uc18c\uac1c",
     navContact: "\uc5f0\ub77d",
     navBuild: "함께 만들기",
@@ -811,7 +847,8 @@ const translations = {
     footerNav: "\uc0ac\uc774\ud2b8",
     footerCustomAi: "\ub9de\ucda4 AI",
     footerCtaHeading: "\ub354 \uba85\ud655\ud55c AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c\uc744 \uccb4\ud5d8\ud574 \ubcf4\uc138\uc694.",
-    footerCtaLead: "라이브 도구는 지금 Free 티어에서 무료입니다. 다음은 Pro.",
+    footerCtaLead: "라이브 도구는 지금 Free 티어에서 무료입니다. 다음 단계는 요금 페이지에서.",
+    navPricing: "요금",
     footerCtaLeadSoon: "\uc774 \uc81c\ud488\uc740 \ub85c\ub4dc\ub9f5\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 \u2014 \uc5bc\ub9ac \uc561\uc138\uc2a4\ub97c \uc694\uccad\ud558\uc138\uc694.",
     footerTryDemo: "\ubb34\ub8cc \ub370\ubaa8 \uccb4\ud5d8",
     footerSeeSystems: "\ubaa8\ub4e0 \uc2dc\uc2a4\ud15c \ubcf4\uae30",
@@ -876,7 +913,22 @@ const translations = {
     homeBrowseAll: "\uc804\uccb4 \uc571 \ubcf4\uae30",
     homeCta: "\uc5f0\ub77d\ud558\uae30",
     publicBetaNote:
-      "라이브 도구는 지금 Free 티어에서 무료입니다(일일 한도 가능). Pro / Unlimited 경계를 정의 중이며, 영원한 public beta에만 머물지 않습니다.",
+      "카탈로그에 라이브 제품 6개. 다시 돌아올 네 가지 결정 앱은 Invest, Travel, Cook, Wear이고 Passive Income과 Tech Blog도 라이브입니다. 지금은 Free 티어(소프트 일일 한도).",
+    pricingHeading: "요금",
+    pricingLead:
+      "라이브 도구는 Free로 시작합니다. Pro와 Unlimited가 다음입니다 — 한도가 열리면 알림을 받도록 대기열에 등록하세요.",
+    pricingFreeTitle: "Free",
+    pricingFreeBody:
+      "오늘 라이브 결정 도구를 쓰며 네트워크별 소프트 일일 한도가 있습니다. 대부분 공개 화면은 계정이 필요 없습니다. 제품이 명시하면 결정과 기록은 이 브라우저에만 남습니다.",
+    pricingProTitle: "Pro",
+    pricingProBadge: "곧 출시",
+    pricingProBody:
+      "더 높은 일일 한도, 유지되는 선호, 더 풍부한 기록. 아직 판매하지 않습니다 — 얼리 액세스를 요청하면 열릴 때 메일로 알려 드립니다.",
+    pricingUnlimitedTitle: "Unlimited",
+    pricingUnlimitedBadge: "이후",
+    pricingUnlimitedBody: "소프트 일일 한도 없음, 용량이 빠듯할 때 우선. Pro 다음에 계획됩니다.",
+    pricingCta: "Pro 얼리 액세스 요청",
+    pricingNote: "정보 제공용이며 전문 조언이 아닙니다. 한도는 규모에 따라 바뀔 수 있습니다.",
     answerHeading: "빠른 답변",
     answerLead: "사용자와 AI 검색 시스템이 XingAI를 빠르게 이해할 수 있도록 정리한 짧은 답변입니다.",
     answerQ1: "XingAI는 무엇인가요?",
@@ -887,7 +939,7 @@ const translations = {
       "각 제품은 열린 대화가 아니라 하나의 결정과 분명한 다음 행동을 중심으로 만들어집니다.",
     answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
     answerA3:
-      "\ucd9c\uc2dc\ub41c \uc81c\ud488: Invest AI \uc0b0\uc5c5 \uc9c0\ub3c4, Travel AI, Cook AI, Wear AI. \uacf5\uac1c \ub370\ubaa8: Eating Decision, SAT AI, Research AI, Learn AI, Decision Agent, ShopRadar, Performance Sim. \uc804\uccb4 \uc81c\ud488\uacfc \uc0c1\ud0dc\ub294 xingai.app/apps \uc5d0\uc11c \ubcfc \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+      "카탈로그 라이브 6개: Invest AI(산업 지도), Travel AI, Cook AI, Wear AI, Passive Income Idea, Tech Blog. 일상 결정으로 다시 올 네 가지는 Invest, Travel, Cook, Wear입니다. 공개 데모에는 Eating Decision, SAT AI, Research AI, Learn AI, Decision Agent, ShopRadar, Performance Sim이 있습니다. 전체 목록: xingai.app/apps.",
     answerQ4: "AI 산업 지도는 무엇인가요?",
     answerA4:
       "워커 캐시로 렌더되는 공개 지도로, AI 공급망 레이어와 인용된 공시를 보여 줍니다. 리서치 구조이며 증권사, 배분 보드, 매매 신호가 아닙니다.",
@@ -912,15 +964,17 @@ const translations = {
     contactNote: "\ubb38\uc758\uc0ac\ud56d\uc774 \uc788\uc73c\uc2e0\uac00\uc694?",
     contactTail: "\u2014 \uc774 \uba54\uc77c\uc744 \ud568\uaed8 \ud655\uc778\ud569\ub2c8\ub2e4.",
 
-    aboutHeading: "xingai.app \uc18c\uac1c",
+    aboutHeading: "XingAI 소개",
     aboutLead:
       "XingAI\ub294 \uc77c\uc0c1\uc744 \uc704\ud55c AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c\uc744 \ub9cc\ub4ed\ub2c8\ub2e4. \uc6b0\ub9ac\ub294 \ucc3d\uc5c5\uc790\uc774\uc790 AI \uc544\ud0a4\ud14d\ud2b8\ub85c, \ub7a8\ud37c\ub098 \ubc94\uc6a9 \ucc57\uc774 \uc544\ub2cc \ucd08\uc810 \ub9de\ucda4 \uc81c\ud488\uc744 \ucd9c\uc2dc\ud569\ub2c8\ub2e4.",
     aboutMission: "\ubbf8\uc158",
     aboutMissionText: "\uc0ac\ub78c\ub4e4\uc774 \ub354 \ub098\uc740 \uc77c\uc0c1 \uacb0\uc815\uc744 \ub0b4\ub9b4 \uc218 \uc788\ub3c4\ub85d AI \ub3c4\uad6c\ub97c \ub9cc\ub4ed\ub2c8\ub2e4\u2014\uc74c\uc2dd, \uac74\uac15, \uc7ac\uc815, \uc0dd\uc0b0\uc131\u2014\ubcf5\uc7a1\uc131\uc774\ub098 \ud654\uc81c\uc131 \uc5c6\uc774. \ubaa8\ub4e0 \uc81c\ud488\uc740 \uae30\ub2a5 \uc218\ubcf4\ub2e4 \uc2e0\ub8b0\uc131\uacfc \uba85\ud655\uc131\uc744 \uc6b0\uc120\ud569\ub2c8\ub2e4.",
     aboutStack: "\uae30\uc220 \uc2a4\ud0dd",
-    aboutStackText: "\ud504\ub860\ud2b8\uc5d4\ub4dc Next.js. \ubc31\uc5d4\ub4dc FastAPI. \uac1c\uc778\uc815\ubcf4 \ubcf4\ud638\uac00 \uc911\uc694\ud55c \uacf3\uc5d0\ub294 \ub85c\uceec AI. Vercel \ubc30\ud3ec. \uac00\ub2a5\ud55c \ud55c \uc624\ud508\uc18c\uc2a4.",
+    aboutStackText:
+      "프론트엔드 Next.js. 백엔드 FastAPI. 개인정보 보호가 중요할 때는 로컬 AI. Vercel 배포. 학습에 도움이 되는 일부 저장소와 문서는 공개하고, 대부분 제품 코드는 비공개로 둡니다.",
     aboutBuilding: "\uacf5\uac1c \uac1c\ubc1c",
-    aboutBuildingText: "\uc2e4\ud5d8, \uac1c\uc120, \ubc30\ud3ec\u2014GitHub, LinkedIn, X\uc5d0\uc11c \uacfc\uc815\uc744 \uacf5\uc720\ud569\ub2c8\ub2e4. \uc870\uc6a9\ud788 \uc644\ubcbd\ud558\uac8c \ub9cc\ub4dc\ub294 \uac83\ubcf4\ub2e4 \ubc30\ud3ec\ud558\uace0 \ubc18\ubcf5\ud558\ub294 \uac83\uc744 \uc120\ud638\ud569\ub2c8\ub2e4.",
+    aboutBuildingText:
+      "실험, 개선, 배포 — GitHub, LinkedIn, X에서 일부 과정을 공유합니다. 조용히 완벽히 만들기보다 배포하고 반복하는 쪽을 선호합니다.",
     aboutStoryLink: "XingAI가 아이디어를 제품으로 만드는 방식",
     aboutTeamPosterAlt:
       "XingAI 팀 포스터: 싱게 아래 다섯 리더와 별명 \u2014 Joker(입이 제일 세다), Sweetie(달래기 달인), Lady Bull(추궁 달인), Second Master(총알받이 + 정보원), Hua An(코드 붓).",

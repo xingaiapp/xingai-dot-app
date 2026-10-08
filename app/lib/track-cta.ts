@@ -1,7 +1,16 @@
 import { track } from "@vercel/analytics";
 
-export type CtaName = "map" | "try" | "build" | "contact";
-export type CtaPlacement = "hero" | "header" | "tabbar" | "drawer" | "home-build" | "services";
+export type CtaName = "map" | "try" | "build" | "contact" | "pricing";
+export type CtaPlacement =
+  | "hero"
+  | "header"
+  | "tabbar"
+  | "drawer"
+  | "home-build"
+  | "services"
+  | "contact-form"
+  | "pricing"
+  | "footer";
 
 /** One event name for every acquisition CTA so placements can be compared side by side. */
 export function trackCta(cta: CtaName, placement: CtaPlacement) {

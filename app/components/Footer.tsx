@@ -182,6 +182,7 @@ export default function Footer() {
             alt=""
             width={1373}
             height={368}
+            sizes="(max-width: 48rem) 7.5rem, 9rem"
           />
           <p className="footer-build">{t("footerBuild")}</p>
         </div>
@@ -192,6 +193,10 @@ export default function Footer() {
             <Link href={p("/apps")} className="footer-icon-link">
               <FooterLinkIcon name="systems" />
               <span>{t("navApps")}</span>
+            </Link>
+            <Link href={p("/pricing")} className="footer-icon-link">
+              <FooterLinkIcon name="systems" />
+              <span>{t("navPricing")}</span>
             </Link>
             <Link href={p("/story")} className="footer-icon-link">
               <FooterLinkIcon name="systems" />
@@ -284,7 +289,7 @@ export default function Footer() {
               <span>X</span>
             </a>
             <a
-              href="https://www.youtube.com/@xingai_app"
+              href="https://www.youtube.com/@xingaiapp"
               className="footer-resource-link"
               rel="noopener noreferrer"
               target="_blank"

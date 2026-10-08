@@ -176,7 +176,12 @@ export default function Home() {
                 {t("heroTryLiveCta")} &darr;
               </a>
             </div>
-            <p className="hero-beta-note">{t("publicBetaNote")}</p>
+            <p className="hero-beta-note">
+              {t("publicBetaNote")}{" "}
+              <LocaleLink href="/pricing" onClick={() => trackCta("pricing", "hero")}>
+                {t("navPricing")} →
+              </LocaleLink>
+            </p>
           </div>
 
           {heroPrimaryApp ? (

@@ -15,7 +15,7 @@ export type LegalDoc = {
   sections: LegalSection[];
 };
 
-const updated = "May 21, 2026";
+const updated = "October 7, 2026";
 
 const en: Record<LegalDocId, LegalDoc> = {
   privacy: {
@@ -29,8 +29,8 @@ const en: Record<LegalDocId, LegalDoc> = {
       {
         heading: "Information we collect",
         paragraphs: [
-          "On this site we may collect information you send us directly, such as your email address and message contents when you contact us.",
-          "We automatically receive basic technical data from your browser and device, including IP address, browser type, pages visited, and approximate region. This comes from standard hosting and analytics logs.",
+          "On this site we may collect information you send us directly, such as your email address and message contents when you contact us through the contact form or email.",
+          "We automatically receive basic technical data from your browser and device, including IP address, browser type, pages visited, and approximate region. This comes from standard hosting logs and cookieless Vercel Web Analytics (page views and optional CTA events we attach in the product UI).",
           "When you open a linked demo (for example cook.xingai.app or invest.xingai.app), that product’s site may collect additional data under its own policy.",
         ],
       },
@@ -38,7 +38,7 @@ const en: Record<LegalDocId, LegalDoc> = {
         heading: "How we use information",
         paragraphs: [
           "We use contact messages to respond to you and improve our products.",
-          "We use technical logs to keep the site secure, fix errors, and understand aggregate traffic patterns.",
+          "We use technical logs and aggregate analytics to keep the site secure, fix errors, and understand traffic patterns.",
           "We do not sell your personal information.",
         ],
       },
@@ -46,13 +46,13 @@ const en: Record<LegalDocId, LegalDoc> = {
         heading: "Cookies and similar technologies",
         paragraphs: [
           "We may use cookies or local storage for theme preference (light/dark), language selection, and basic site functionality.",
-          "Third-party services embedded on demos or checkout flows may set their own cookies. Review those products before signing in or paying.",
+          "Vercel Web Analytics on xingai.app is cookieless for page views. Third-party services embedded on demos or checkout flows may set their own cookies. Review those products before signing in or paying.",
         ],
       },
       {
         heading: "Sharing with service providers",
         paragraphs: [
-          "We use infrastructure providers (for example Vercel for hosting) that process data on our behalf to deliver the site.",
+          "We use infrastructure providers that process data on our behalf to deliver the site — including Vercel for hosting and analytics, and Resend to deliver messages submitted through the contact form.",
           "We may disclose information if required by law or to protect the rights, safety, and security of users and the public.",
         ],
       },
@@ -88,7 +88,7 @@ const en: Record<LegalDocId, LegalDoc> = {
   terms: {
     title: "Terms of Service",
     metaDescription:
-      "Terms for using xingai.app, browsing AI system listings, and accessing free demos during public beta.",
+      "Terms for using xingai.app, browsing AI system listings, and accessing Free-tier live tools and demos.",
     updated,
     intro:
       "By using xingai.app you agree to these Terms. If you do not agree, do not use the site.",
@@ -101,10 +101,10 @@ const en: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "Public beta and free tools",
+        heading: "Free tier and paid plans",
         paragraphs: [
-          "Many tools are offered free during public beta. Features, availability, and pricing may change without notice.",
-          "We may limit, suspend, or end access to any demo to protect the platform or users.",
+          "Many live tools are offered on a Free tier today, often with soft daily limits. Features, availability, and pricing may change. Pro and Unlimited tiers, when offered, will be described on the Pricing page.",
+          "We may limit, suspend, or end access to any demo or Free-tier surface to protect the platform or users.",
         ],
       },
       {
@@ -222,7 +222,7 @@ const zh: Record<LegalDocId, LegalDoc> = {
         heading: "我们收集的信息",
         paragraphs: [
           "您通过联系表单或邮件主动提供的信息（例如邮箱地址、消息内容）。",
-          "浏览器与设备的基础技术数据（如 IP、浏览器类型、访问页面、大致地区），来自常规托管与访问日志。",
+          "浏览器与设备的基础技术数据（如 IP、浏览器类型、访问页面、大致地区），来自常规托管日志，以及无 Cookie 的 Vercel Web Analytics（页面浏览与我们在产品界面附加的 CTA 事件）。",
           "当您打开关联 Demo（如 cook.xingai.app）时，该产品站点可能按其政策收集额外数据。",
         ],
       },
@@ -238,13 +238,13 @@ const zh: Record<LegalDocId, LegalDoc> = {
         heading: "Cookie 与类似技术",
         paragraphs: [
           "我们可能使用 Cookie 或本地存储保存主题（浅色/深色）、语言偏好及基础功能。",
-          "嵌入的第三方 Demo 或支付流程可能设置其自有 Cookie，请在登录或付款前查阅相关产品说明。",
+          "xingai.app 上的 Vercel Web Analytics 对页面浏览不使用 Cookie。嵌入的第三方 Demo 或支付流程可能设置其自有 Cookie，请在登录或付款前查阅相关产品说明。",
         ],
       },
       {
         heading: "与服务提供商共享",
         paragraphs: [
-          "我们使用托管等基础设施服务商（例如 Vercel）代表我们处理数据以提供网站服务。",
+          "我们使用基础设施服务商代表我们处理数据以提供网站——包括 Vercel（托管与分析）以及 Resend（投递联系表单消息）。",
           "在法律要求或为保护用户与公众安全所必需时，我们可能披露信息。",
         ],
       },
@@ -277,7 +277,7 @@ const zh: Record<LegalDocId, LegalDoc> = {
   },
   terms: {
     title: "服务条款",
-    metaDescription: "使用 xingai.app、浏览 AI 系统列表及公开 Beta Demo 的条款。",
+    metaDescription: "使用 xingai.app、浏览 AI 系统列表及 Free 档工具与 Demo 的条款。",
     updated,
     intro: "使用 xingai.app 即表示您同意本条款；若不同意，请勿使用本网站。",
     sections: [
@@ -289,10 +289,10 @@ const zh: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "公开 Beta 与免费工具",
+        heading: "Free 档与付费计划",
         paragraphs: [
-          "许多工具在公开 Beta 期间免费提供，功能、可用性与价格可能变更且恕不另行通知。",
-          "我们可限制、暂停或终止任何 Demo 访问以保护平台或用户。",
+          "许多已上线工具目前在 Free 档提供，通常带有每日软限额。功能、可用性与价格可能变更。Pro 与 Unlimited 开放时，将在定价页说明。",
+          "我们可限制、暂停或终止任何 Demo 或 Free 档访问以保护平台或用户。",
         ],
       },
       {
@@ -405,8 +405,8 @@ const ko: Record<LegalDocId, LegalDoc> = {
       {
         heading: "수집하는 정보",
         paragraphs: [
-          "문의 시 직접 제공하신 정보(이메일, 메시지 내용 등).",
-          "브라우저·기기의 기본 기술 데이터(IP, 브라우저 유형, 방문 페이지, 대략적 지역) — 호스팅·접속 로그를 통해 수집됩니다.",
+          "문의 양식이나 이메일로 직접 제공하신 정보(이메일, 메시지 내용 등).",
+          "브라우저·기기의 기본 기술 데이터(IP, 브라우저 유형, 방문 페이지, 대략적 지역) — 호스팅 로그와 쿠키 없는 Vercel Web Analytics(페이지뷰 및 UI에 붙인 CTA 이벤트)를 통해 수집됩니다.",
           "연결된 데모(예: cook.xingai.app) 이용 시 해당 사이트가 자체 정책에 따라 추가 정보를 수집할 수 있습니다.",
         ],
       },
@@ -422,13 +422,13 @@ const ko: Record<LegalDocId, LegalDoc> = {
         heading: "쿠키 및 유사 기술",
         paragraphs: [
           "테마(라이트/다크), 언어 설정 등 기본 기능을 위해 쿠키 또는 로컬 스토리지를 사용할 수 있습니다.",
-          "데모·결제에 포함된 제3자 서비스는 자체 쿠키를 설정할 수 있으니 로그인·결제 전 해당 제품을 확인하세요.",
+          "xingai.app의 Vercel Web Analytics는 페이지뷰에 쿠키를 쓰지 않습니다. 데모·결제에 포함된 제3자 서비스는 자체 쿠키를 설정할 수 있으니 로그인·결제 전 해당 제품을 확인하세요.",
         ],
       },
       {
         heading: "서비스 제공업체와 공유",
         paragraphs: [
-          "사이트 제공을 위해 호스팅 등 인프라 업체(Vercel 등)가 당사를 대신해 데이터를 처리할 수 있습니다.",
+          "사이트 제공을 위해 인프라 업체가 당사를 대신해 데이터를 처리합니다 — Vercel(호스팅·분석)과 Resend(문의 양식 메일 전달)를 포함합니다.",
           "법률에 따르거나 이용자·공공의 안전을 보호하기 위해 필요한 경우 정보를 공개할 수 있습니다.",
         ],
       },
@@ -461,7 +461,7 @@ const ko: Record<LegalDocId, LegalDoc> = {
   },
   terms: {
     title: "이용약관",
-    metaDescription: "xingai.app 이용, AI 시스템 목록 열람, 공개 베타 데모 이용에 관한 약관.",
+    metaDescription: "xingai.app 이용, AI 시스템 목록 열람, Free 티어 도구·데모 이용에 관한 약관.",
     updated,
     intro: "xingai.app을 이용하면 본 약관에 동의한 것으로 봅니다. 동의하지 않으면 사이트를 이용하지 마세요.",
     sections: [
@@ -473,10 +473,10 @@ const ko: Record<LegalDocId, LegalDoc> = {
         ],
       },
       {
-        heading: "공개 베타 및 무료 도구",
+        heading: "Free 티어 및 유료 플랜",
         paragraphs: [
-          "많은 도구가 공개 베타 기간 무료로 제공되며, 기능·가용성·가격은 예고 없이 변경될 수 있습니다.",
-          "플랫폼·이용자 보호를 위해 데모 접근을 제한·중단·종료할 수 있습니다.",
+          "많은 라이브 도구가 지금 Free 티어로 제공되며, 보통 소프트 일일 한도가 있습니다. 기능·가용성·가격은 바뀔 수 있습니다. Pro와 Unlimited가 열리면 요금 페이지에 설명합니다.",
+          "플랫폼·이용자 보호를 위해 데모 또는 Free 티어 접근을 제한·중단·종료할 수 있습니다.",
         ],
       },
       {

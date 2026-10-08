@@ -37,14 +37,18 @@ export function buildSoftwareApplicationNode(app: AppData, locale: Locale) {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
-      availability: app.comingSoon
-        ? "https://schema.org/PreOrder"
-        : app.earlyAccess
-          ? "https://schema.org/LimitedAvailability"
-          : "https://schema.org/InStock",
-      url: app.comingSoon || app.earlyAccess
-        ? publicUrl(locale, "/contact")
-        : (app.demoUrl ?? appUrl),
+      // Only fully live products are InStock. Demos / waitlists / coming-soon stay PreOrder
+      // (e.g. ShopRadar waitlist must not claim InStock while live scoring is off).
+      availability:
+        app.launchStatus === "live"
+          ? "https://schema.org/InStock"
+          : app.earlyAccess
+            ? "https://schema.org/LimitedAvailability"
+            : "https://schema.org/PreOrder",
+      url:
+        app.launchStatus === "live"
+          ? (app.demoUrl ?? appUrl)
+          : publicUrl(locale, "/contact"),
     },
     ...(app.demoUrl
       ? {
