@@ -19,13 +19,14 @@ function storyTitle(locale: ReturnType<typeof parseRoutingLocale>) {
 }
 
 function storyDescription(locale: ReturnType<typeof parseRoutingLocale>) {
+  // Keep under ~155–160 chars for SERP; title stays short via storyTitle + formatPageTitle.
   if (locale === "zh") {
-    return "XingAI 是把想法变成持续运转的 AI 产品的系统：点子库保存记忆，编排器与智能体（规划中）推进工作，日常、学习、投资和调研应用是产出，证据、增长和运维工具负责信任与反馈。";
+    return "XingAI 如何把想法变成持续运转的 AI 产品：点子库、应用与证据工具，以及投资研究地图。";
   }
   if (locale === "ko") {
-    return "XingAI는 아이디어를 계속 운영되는 AI 제품으로 바꾸는 시스템입니다. 아이디어 볼트가 기억을, 오케스트레이터와 에이전트(계획됨)가 실행을 맡고, 일상·학습·투자·리서치 앱이 결과물이며, 근거·성장·운영 도구가 신뢰와 피드백을 담당합니다.";
+    return "XingAI가 아이디어를 계속 운영되는 AI 제품으로 바꾸는 방식 — 아이디어 볼트, 앱, 근거 도구, 투자 리서치 맵.";
   }
-  return "XingAI is a system that turns ideas into continuously operating AI products: an Idea Vault for memory, a planned Orchestrator and agents for execution, apps for everyday life, learning, investing and research, and evidence, growth and ops tools for trust and feedback.";
+  return "How XingAI turns ideas into running AI products — memory, apps, evidence tools, and the Invest research map.";
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.07f
+**Version:** 2026.10.12a
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.12a` GSC work-order pass: Story meta description shortened (en/zh/ko); Contact drops hard “24 hours” SLA for honest reply copy. See growth-monitor `docs/gsc-work-orders-2026-10.md`.
 
 `2026.10.07f` Body type uses the system UI stack (`system-ui` / `-apple-system` / `BlinkMacSystemFont`) instead of Inter — SF-like on Apple devices without embedding SF Pro.
 
