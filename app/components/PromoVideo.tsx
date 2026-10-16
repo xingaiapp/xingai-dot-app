@@ -8,7 +8,7 @@ type DeviceKind = "desktop" | "mobile";
 type Quality = "4k" | "1080p";
 
 /** Languages whose promo files are live under /promo. Others fall back to English. */
-const AVAILABLE_LANGS = new Set(["en"]);
+const AVAILABLE_LANGS = new Set(["en", "zh", "ko"]);
 
 function detectMobile(): boolean {
   if (typeof window === "undefined") return false;
