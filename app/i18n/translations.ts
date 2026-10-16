@@ -56,6 +56,9 @@ const translations = {
     // Home
     tagline: "AI Decision Systems",
     taglineSub: "Not just chat.",
+    promoVideoTitle: "Watch: XingAI in 150 seconds",
+    promoVideoCaption:
+      "One family of focused AI decision systems — see how XingAI turns a question into one clear next step.",
     heroCardHeading: "Real questions, checked reasoning — then you decide.",
     heroGoal:
       "XingAI builds AI decision systems for everyday choices and research. Instead of a single chat reply, each system researches your options, challenges weak assumptions and shows the evidence behind its recommendation — then you make the call. Start with the AI Industry Map for cited research on the AI supply chain (not a buy list), or plan a trip, cook with what is in your fridge, or pick today's outfit.",
@@ -473,6 +476,9 @@ const translations = {
 
     tagline: "AI \u51b3\u7b56\u7cfb\u7edf",
     taglineSub: "不只是聊天。",
+    promoVideoTitle: "影片介紹：150 秒認識 XingAI",
+    promoVideoCaption:
+      "一整套專注的 AI 決策系統——看 XingAI 如何把一個問題，變成一個清晰的下一步。",
     heroCardHeading: "真实的问题，经过检验的推理——最后由你决定。",
     heroGoal:
       "XingAI 打造面向日常选择和研究的 AI 决策系统。不是一句聊天回复，而是先研究你的选项、质疑站不住脚的假设、摆出每条建议背后的依据——最后由你拍板。从 AI 产业地图开始，看有引用来源的 AI 供应链研究（不是买入清单）；或者规划一次旅行、用冰箱里现有的食材做顿饭、挑今天穿什么。",
@@ -872,6 +878,9 @@ const translations = {
 
     tagline: "AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
     taglineSub: "단순한 채팅이 아닙니다.",
+    promoVideoTitle: "영상으로 보기: 150초 만에 만나는 XingAI",
+    promoVideoCaption:
+      "집중형 AI 의사결정 시스템 한 가족 — XingAI가 질문을 하나의 명확한 다음 단계로 바꾸는 과정을 확인하세요.",
     heroCardHeading: "진짜 질문, 검증된 추론 — 결정은 당신이 합니다.",
     heroGoal:
       "XingAI는 일상의 선택과 리서치를 위한 AI 의사결정 시스템을 만듭니다. 챗봇 답변 하나가 아니라, 선택지를 조사하고 약한 가정에 반론을 제기하며 추천 뒤의 근거를 보여 줍니다 — 결정은 당신이 합니다. 출처가 있는 AI 공급망 리서치(매수 목록 아님)를 담은 AI 산업 지도부터 시작하거나, 여행을 계획하고, 냉장고 속 재료로 요리하고, 오늘의 옷차림을 골라 보세요.",
