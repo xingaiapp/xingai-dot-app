@@ -29,6 +29,6 @@ ADR 系統（ADR-0001～0016）原本只存放在 workspace 本地文件（~/wor
 
 ## 關聯
 
-- Commit：（發布 commit，見 INDEX 同步紀錄／git log "feat(adr): publish architecture decision records at /adr"）
+- Commit：08030fe（feat(adr): publish architecture decision records at /adr；基底 4cfa96a）
 - 文件：~/workspace/architecture/adr/（源）；repo content/adr/（發布源副本）
 - 相關 ADR：ADR-0012（主站保持乾淨——本筆為其邊界註腳）、ADR-0016（四站 cache 架構約定）
