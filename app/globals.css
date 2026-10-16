@@ -6309,3 +6309,90 @@ html[data-theme="dark"] .mobile-drawer {
   border-color: var(--blue);
   background: var(--blue);
 }
+
+/* ADR records (/adr, internal file cabinet — ADR-0017) */
+.adr-back {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+}
+.adr-back a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.adr-back a:hover {
+  text-decoration: underline;
+}
+.adr-doc {
+  max-width: 56rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--ink);
+}
+.adr-doc h1 {
+  margin: 0 0 1rem;
+  font-size: 1.55rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--ink-strong);
+}
+.adr-doc h2 {
+  margin: 1.8rem 0 0.6rem;
+  font-size: 1.12rem;
+  font-weight: 650;
+  color: var(--ink-strong);
+}
+.adr-doc h3 {
+  margin: 1.4rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--ink-strong);
+}
+.adr-doc p {
+  margin: 0 0 0.85rem;
+}
+.adr-doc ul,
+.adr-doc ol {
+  margin: 0 0 0.85rem;
+  padding-left: 1.5rem;
+}
+.adr-doc li {
+  margin-bottom: 0.3rem;
+}
+.adr-doc li > ul,
+.adr-doc li > ol {
+  margin: 0.3rem 0 0.2rem;
+}
+.adr-doc a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.adr-doc a:hover {
+  text-decoration: underline;
+}
+.adr-doc strong {
+  color: var(--ink-strong);
+}
+.adr-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.2rem;
+}
+.adr-doc table {
+  border-collapse: collapse;
+  min-width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.adr-doc th,
+.adr-doc td {
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.adr-doc th {
+  background: var(--panel-bg);
+  color: var(--ink-strong);
+  font-weight: 650;
+}
