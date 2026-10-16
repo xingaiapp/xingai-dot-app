@@ -22,7 +22,6 @@ const translations = {
     navBuild: "Build with us",
     navTry: "Try",
     navMore: "More",
-    navChannels: "Channels",
     navMenu: "Menu",
     menuOpen: "Open menu",
     menuClose: "Close menu",
@@ -60,23 +59,6 @@ const translations = {
     promoVideoTitle: "Watch: XingAI in 150 seconds",
     promoVideoCaption:
       "One family of focused AI decision systems — see how XingAI turns a question into one clear next step.",
-    channelsEyebrow: "YouTube",
-    channelsHeading: "Watch XingAI on YouTube",
-    channelsLead:
-      "Five channels, one family. The latest video from each channel updates here automatically — pick a channel and start watching.",
-    channelsSubscribe: "Subscribe",
-    channelsWatchOn: "Watch on YouTube",
-    channelsAllVideos: "All videos",
-    channelsTaglineApp:
-      "The official channel — product stories and the 150-second tour of the XingAI family.",
-    channelsTaglineAxingstocks:
-      "A daily US-stock diary in Chinese — holdings scans, after-market recaps and the Wall Street Views Weekly.",
-    channelsTaglineInvest:
-      "US markets in English — the Wall Street Views Weekly and daily holdings scans.",
-    channelsTaglineTravel:
-      "Real places, real journeys — travel stories and Faith Through Travel prayers.",
-    channelsTaglineCook:
-      "Never wonder what's for dinner — home cooking, Mom's Love Bento and kitchen unboxings.",
     heroCardHeading: "Real questions, checked reasoning — then you decide.",
     heroGoal:
       "XingAI builds AI decision systems for everyday choices and research. Instead of a single chat reply, each system researches your options, challenges weak assumptions and shows the evidence behind its recommendation — then you make the call. Start with the AI Industry Map for cited research on the AI supply chain (not a buy list), or plan a trip, cook with what is in your fridge, or pick today's outfit.",
@@ -461,7 +443,6 @@ const translations = {
     navBuild: "合作共建",
     navTry: "试用",
     navMore: "更多",
-    navChannels: "\u983b\u9053",
     navMenu: "\u83dc\u5355",
     menuOpen: "\u6253\u5f00\u83dc\u5355",
     menuClose: "\u5173\u95ed\u83dc\u5355",
@@ -498,23 +479,6 @@ const translations = {
     promoVideoTitle: "影片介紹：150 秒認識 XingAI",
     promoVideoCaption:
       "一整套專注的 AI 決策系統——看 XingAI 如何把一個問題，變成一個清晰的下一步。",
-    channelsEyebrow: "YouTube",
-    channelsHeading: "\u5728 YouTube \u770b XingAI",
-    channelsLead:
-      "\u4e94\u500b\u983b\u9053\uff0c\u4e00\u500b\u5bb6\u65cf\u3002\u6bcf\u500b\u983b\u9053\u7684\u6700\u65b0\u5f71\u7247\u6703\u81ea\u52d5\u66f4\u65b0\u5230\u9019\u88e1\u2014\u2014\u9078\u4e00\u500b\u983b\u9053\uff0c\u958b\u59cb\u770b\u5427\u3002",
-    channelsSubscribe: "\u8a02\u95b1",
-    channelsWatchOn: "\u5728 YouTube \u89c0\u770b",
-    channelsAllVideos: "\u5168\u90e8\u5f71\u7247",
-    channelsTaglineApp:
-      "\u5b98\u65b9\u983b\u9053\u2014\u2014\u7522\u54c1\u6545\u4e8b\u8207 150 \u79d2\u8a8d\u8b58 XingAI \u5168\u5bb6\u6876\u3002",
-    channelsTaglineAxingstocks:
-      "\u4e2d\u6587\u7f8e\u80a1\u65e5\u8a18\u2014\u2014\u6bcf\u65e5\u6301\u5009\u6383\u63cf\u3001\u76e4\u5f8c\u5fa9\u76e4\u8207\u300a\u83ef\u723e\u8857\u89c0\u9ede\u9031\u5831\u300b\u3002",
-    channelsTaglineInvest:
-      "\u82f1\u6587\u7f8e\u80a1\u983b\u9053\u2014\u2014\u300a\u83ef\u723e\u8857\u89c0\u9ede\u9031\u5831\u300b\u82f1\u6587\u7248\u8207\u6bcf\u65e5\u6301\u5009\u6383\u63cf\u3002",
-    channelsTaglineTravel:
-      "\u771f\u5be6\u5730\u9ede\u3001\u771f\u5be6\u65c5\u7a0b\u2014\u2014\u65c5\u884c\u6545\u4e8b\u8207 Faith Through Travel \u79b1\u544a\u7247\u3002",
-    channelsTaglineCook:
-      "\u4e0d\u518d\u7cfe\u7d50\u5403\u4ec0\u9ebc\u2014\u2014\u5bb6\u5e38\u83dc\u3001\u5abd\u5abd\u7684\u611b\u5fc3\u4fbf\u7576\u8207\u5eda\u623f\u958b\u7bb1\u3002",
     heroCardHeading: "真实的问题，经过检验的推理——最后由你决定。",
     heroGoal:
       "XingAI 打造面向日常选择和研究的 AI 决策系统。不是一句聊天回复，而是先研究你的选项、质疑站不住脚的假设、摆出每条建议背后的依据——最后由你拍板。从 AI 产业地图开始，看有引用来源的 AI 供应链研究（不是买入清单）；或者规划一次旅行、用冰箱里现有的食材做顿饭、挑今天穿什么。",
@@ -881,7 +845,6 @@ const translations = {
     navBuild: "함께 만들기",
     navTry: "체험",
     navMore: "더보기",
-    navChannels: "\ucc44\ub110",
     navMenu: "\uba54\ub274",
     menuOpen: "\uba54\ub274 \uc5f4\uae30",
     menuClose: "\uba54\ub274 \ub2eb\uae30",
@@ -918,23 +881,6 @@ const translations = {
     promoVideoTitle: "영상으로 보기: 150초 만에 만나는 XingAI",
     promoVideoCaption:
       "집중형 AI 의사결정 시스템 한 가족 — XingAI가 질문을 하나의 명확한 다음 단계로 바꾸는 과정을 확인하세요.",
-    channelsEyebrow: "YouTube",
-    channelsHeading: "YouTube\uc5d0\uc11c XingAI \ubcf4\uae30",
-    channelsLead:
-      "\ub2e4\uc12f \uac1c \ucc44\ub110, \ud558\ub098\uc758 \uac00\uc871. \uac01 \ucc44\ub110\uc758 \ucd5c\uc2e0 \uc601\uc0c1\uc774 \uc5ec\uae30\uc5d0 \uc790\ub3d9\uc73c\ub85c \uc5c5\ub370\uc774\ud2b8\ub429\ub2c8\ub2e4 \u2014 \ucc44\ub110\uc744 \uace0\ub974\uace0 \uc2dc\uccad\uc744 \uc2dc\uc791\ud558\uc138\uc694.",
-    channelsSubscribe: "\uad6c\ub3c5",
-    channelsWatchOn: "YouTube\uc5d0\uc11c \ubcf4\uae30",
-    channelsAllVideos: "\uc804\uccb4 \uc601\uc0c1",
-    channelsTaglineApp:
-      "\uacf5\uc2dd \ucc44\ub110 \u2014 \uc81c\ud488 \uc774\uc57c\uae30\uc640 150\ucd08 XingAI \uac00\uc871 \uc18c\uac1c \uc601\uc0c1.",
-    channelsTaglineAxingstocks:
-      "\uc911\uad6d\uc5b4 \ubbf8\uc8fc \uc8fc\uc2dd \uc77c\uae30 \u2014 \ub9e4\uc77c \ubcf4\uc720 \uc885\ubaa9 \uc2a4\uce94, \uc7a5 \ub9c8\uac10 \ubcf5\uae30\uc640 \u300a\uc6d4\uc2a4\ud2b8\ub9ac\ud2b8 \ubdf0 \uc704\ud074\ub9ac\u300b.",
-    channelsTaglineInvest:
-      "\uc601\uc5b4 \ubbf8\uc8fc \uc2dc\uc7a5 \ucc44\ub110 \u2014 \u300a\uc6d4\uc2a4\ud2b8\ub9ac\ud2b8 \ubdf0 \uc704\ud074\ub9ac\u300b \uc601\uc5b4\ud310\uacfc \ub9e4\uc77c \ubcf4\uc720 \uc885\ubaa9 \uc2a4\uce94.",
-    channelsTaglineTravel:
-      "\uc2e4\uc81c \uc7a5\uc18c, \uc2e4\uc81c \uc5ec\uc589 \u2014 \uc5ec\ud589 \uc774\uc57c\uae30\uc640 Faith Through Travel \uae30\ub3c4 \uc601\uc0c1.",
-    channelsTaglineCook:
-      "\uc624\ub298 \uc800\ub141 \uba54\ub274 \uace0\ubbfc \ub05d \u2014 \uc9d1\ubc25, \uc5c4\ub9c8\uc758 \uc0ac\ub791 \ub3c4\uc2dc\ub77d\uacfc \uc8fc\ubc29 \uc5b8\ubc15\uc2f1.",
     heroCardHeading: "진짜 질문, 검증된 추론 — 결정은 당신이 합니다.",
     heroGoal:
       "XingAI는 일상의 선택과 리서치를 위한 AI 의사결정 시스템을 만듭니다. 챗봇 답변 하나가 아니라, 선택지를 조사하고 약한 가정에 반론을 제기하며 추천 뒤의 근거를 보여 줍니다 — 결정은 당신이 합니다. 출처가 있는 AI 공급망 리서치(매수 목록 아님)를 담은 AI 산업 지도부터 시작하거나, 여행을 계획하고, 냉장고 속 재료로 요리하고, 오늘의 옷차림을 골라 보세요.",

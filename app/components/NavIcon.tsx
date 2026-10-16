@@ -55,13 +55,6 @@ export default function NavIcon({ name, className }: NavIconProps) {
           <path d="M14.6 14.6c.6-.2 1.2-.3 1.9-.3 2.2 0 3.9 1.8 3.9 4" />
         </svg>
       );
-    case "navChannels":
-      return (
-        <svg {...common}>
-          <rect x="3.5" y="5" width="17" height="14" rx="2" />
-          <path d="M10.2 9.3v5.4l4.8-2.7z" />
-        </svg>
-      );
     case "navAbout":
       return (
         <svg {...common}>

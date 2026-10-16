@@ -38,7 +38,6 @@ export default function MobileNavDrawer({
     { href: localePath("/"), label: t("navHome"), icon: "navHome" },
     { href: localePath("/apps"), label: t("navApps"), icon: "navApps" },
     { href: localePath("/team"), label: t("navTeam"), icon: "navTeam" },
-    { href: localePath("/channels"), label: t("navChannels"), icon: "navChannels" },
     { href: localePath("/story"), label: t("navStory"), icon: "navStory" },
     { href: localePath("/about"), label: t("navAbout"), icon: "navAbout" },
     { href: localePath("/contact"), label: t("navContact"), icon: "navContact" },
