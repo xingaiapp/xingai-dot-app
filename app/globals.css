@@ -6309,3 +6309,246 @@ html[data-theme="dark"] .mobile-drawer {
   border-color: var(--blue);
   background: var(--blue);
 }
+
+/* ── Channels page (/channels) ───────────────────────────── */
+.channels-section {
+  border-top: 1px solid var(--line);
+  padding: 2rem 0 2.5rem;
+}
+
+.channels-section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 36rem) {
+  .channels-section__head {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .channels-subscribe {
+    flex-shrink: 0;
+  }
+}
+
+.channels-section__handle {
+  font-size: 0.55em;
+  font-weight: 500;
+  color: var(--blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.channels-section__handle:hover {
+  text-decoration: underline;
+}
+
+.channels-grid {
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (min-width: 64rem) {
+  .channels-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  }
+}
+
+.channels-main {
+  margin: 0;
+}
+
+.channels-main__caption {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.channels-main__caption a {
+  color: var(--ink-strong);
+  text-decoration: none;
+}
+
+.channels-main__caption a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.channels-facade {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 30px var(--photo-shadow);
+}
+
+.channels-facade__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.channels-facade__button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.channels-facade__button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.channels-facade__thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channels-facade__shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background 0.15s ease;
+}
+
+.channels-facade__button:hover .channels-facade__shade {
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.channels-facade__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.channels-facade__play svg {
+  width: 64px;
+  height: 64px;
+  padding: 17px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  box-shadow: 0 10px 30px rgba(10, 12, 27, 0.35);
+  transition: transform 0.15s ease;
+}
+
+.channels-facade__button:hover .channels-facade__play svg {
+  transform: scale(1.06);
+}
+
+.channels-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.channels-card {
+  display: grid;
+  grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr);
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-bg);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.channels-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px var(--photo-shadow);
+}
+
+.channels-card__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #000;
+}
+
+.channels-card__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channels-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.channels-card__play svg {
+  width: 34px;
+  height: 34px;
+  padding: 9px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.channels-card__body {
+  min-width: 0;
+}
+
+.channels-card__title {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink-strong);
+}
+
+.channels-card__watch {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.channels-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 1.1rem;
+  min-height: 2.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.channels-all-link:hover {
+  text-decoration: underline;
+}
