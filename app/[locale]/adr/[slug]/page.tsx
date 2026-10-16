@@ -8,12 +8,10 @@ import { getAdrBySlug, listAdrs } from "../../../lib/adr";
  * ADR-0017. English only, no nav/footer/sitemap links, noindex.
  */
 
-export function generateStaticParams({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  if (params.locale !== "en") return [];
+export function generateStaticParams() {
+  // Do not gate on the parent locale param here (it is not reliably passed to
+  // nested generateStaticParams); the page component guards non-en locales to
+  // a 404, so only the en variants ever render content.
   return listAdrs().map((entry) => ({ slug: entry.slug }));
 }
 
