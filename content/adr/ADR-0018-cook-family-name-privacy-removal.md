@@ -31,6 +31,10 @@
 - 已公開的舊 EN 片（ZGu2qNpqXBo）第一句仍含本名——待主代理以重渲版替換發布後，再同步食譜頁 videoId；韓文舊版未發布，直接以重渲版為準（舊檔作廢）。此換片屬發布側待辦，不在本筆範圍。
 - 日後所有新內容（含便當系列文案）照本口徑出稿，寫稿時就不寫本名，免再返工。
 
+## 後續註記（2026-10-16 同日晚）
+
+- 換片已完成：舊 EN 片 ZGu2qNpqXBo 已刪除，重渲版新 EN 片 **_GyTUgK8iPc** 已發布；食譜頁 `cook_v1/lib/recipe-pages.ts` 的 kimchi-sundubu 頁 videoId 已同步為新 ID（只改該一值），commit **b9a0c59** 推 main 部署。線上抽驗：en/zh/ko 三頁均 200，facade 縮圖與 embed 均指向新 ID，舊 ID 零殘留。本筆「影響與後果」所列的發布側待辦就此結清。
+
 ## 關聯
 
 - Commit：cook repo f94576c（Remove family member's name from kimchi sundubu recipe page (privacy)；基底 ec1dced）；主站 ADR 同步 commit 477d7b1（docs(adr): add ADR-0018；本行 hash 由回填 commit 補入，照 ADR-0017 例）
