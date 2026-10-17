@@ -1,6 +1,6 @@
 # ADR-0016：四站 cache 架構約定（前端只讀 cache、後端全包）
 
-- **編號**：ADR-0016
+- **編號**：ADR-0016（僅此倉庫 `content/adr/` 的四站序列。Invest `stock-ai-back-end/doc/adr/0016-fastapi-backend-framework.md` 是 FastAPI 框架，Travel `docs/adr/0016-traffic-404-faq-stories.md` 是 404／FAQ，編號碰巧相同，不要混用。編號不改：發出後不改派，且 ADR-0017 已引用本筆。）
 - **日期**：2026-10-16
 - **網站**：四站
 - **狀態**：Accepted
@@ -34,5 +34,5 @@
 
 - Commit：無（架構約定，適用於四站後續全部改動）
 - 文件：~/workspace/your_files/xingai-sites-cache-architecture-20261016.md（約定全文）
-- 文件：~/workspace/your_files/xingai-cache-backend-dev-plan-20261016.md（後端開發計劃 v1.0，2026-10-16 按星哥指示撰寫並電郵存檔——後端複雜邏輯寫成計劃交後端開發，前端只假設讀 cache）
+- 文件：`docs/xingai-cache-backend-dev-plan-20261016.md`（後端開發計劃 v1.0。第 0 節已改為 FastAPI + SQLite + Auth.js；不是 Prisma / Postgres / iron-session）
 - 相關 ADR：ADR-0002（本約定的首個具體實現，互引）、ADR-0006、ADR-0014（符合精神的既有實現）
