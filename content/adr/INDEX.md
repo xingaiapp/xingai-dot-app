@@ -25,6 +25,7 @@
 | ADR-0017 | 2026-10-16 | xingai.app | ADR 決策紀錄發布到主站 /adr（noindex 內部文件櫃） | Accepted |
 | ADR-0018 | 2026-10-16 | cook | 家人本名自公開內容移除（食譜頁＋嫩豆腐鍋英韓片） | Accepted |
 | ADR-0019 | 2026-10-16 | invest | 持倉研究報告文章線 /portfolio-daily 上線（首篇 2026-10-16） | Accepted |
+| ADR-0020 | 2026-10-16 | invest | 站頭語言切換改整頁跳轉（修軟導航下文章不換語言） | Accepted |
 
 ## xingai.app（主站）
 
@@ -44,6 +45,7 @@
 | ADR-0005 | 首頁 Watch 格＋/etf 頁嵌片 | Accepted |
 | ADR-0009 | 周報文章版 /wall-street-views/ep01 上線並定為每期模板 | Accepted |
 | ADR-0019 | 持倉研究報告文章線 /portfolio-daily 上線（首篇 2026-10-16） | Accepted |
+| ADR-0020 | 站頭語言切換改整頁跳轉（修軟導航下文章不換語言） | Accepted |
 
 ## travel.xingai.app
 
