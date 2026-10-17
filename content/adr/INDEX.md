@@ -24,6 +24,7 @@
 | ADR-0016 | 2026-10-16 | 四站 | cache 架構約定（前端只讀 cache、後端全包） | Accepted |
 | ADR-0017 | 2026-10-16 | xingai.app | ADR 決策紀錄發布到主站 /adr（noindex 內部文件櫃） | Accepted |
 | ADR-0018 | 2026-10-16 | cook | 家人本名自公開內容移除（食譜頁＋嫩豆腐鍋英韓片） | Accepted |
+| ADR-0019 | 2026-10-16 | invest | 持倉研究報告文章線 /portfolio-daily 上線（首篇 2026-10-16） | Accepted |
 
 ## xingai.app（主站）
 
@@ -42,6 +43,7 @@
 | ADR-0003 | /disclaimer 審計補強＋/etf 結構風險提示行 | Accepted |
 | ADR-0005 | 首頁 Watch 格＋/etf 頁嵌片 | Accepted |
 | ADR-0009 | 周報文章版 /wall-street-views/ep01 上線並定為每期模板 | Accepted |
+| ADR-0019 | 持倉研究報告文章線 /portfolio-daily 上線（首篇 2026-10-16） | Accepted |
 
 ## travel.xingai.app
 
