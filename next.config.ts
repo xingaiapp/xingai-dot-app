@@ -12,9 +12,35 @@ const securityHeaders = [
   },
 ];
 
+// Report-only until the console is clean on every page type: next/font, Vercel Analytics and
+// the inline theme/JSON-LD scripts need 'unsafe-inline' on a statically rendered site, so this
+// policy blocks third-party scripts and framing, not inline injection.
+const contentSecurityPolicyReportOnly = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com",
+  "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com",
+  "media-src 'self'",
+  "frame-ancestors 'self'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "object-src 'none'",
+].join("; ");
+
 const nextConfig: NextConfig = {
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          ...securityHeaders,
+          { key: "Content-Security-Policy-Report-Only", value: contentSecurityPolicyReportOnly },
+        ],
+      },
+    ];
   },
   async redirects() {
     // Auditors and old links often drop the hyphen (shopradar vs shop-radar).

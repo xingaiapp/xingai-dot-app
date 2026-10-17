@@ -14,7 +14,8 @@
     "capture:learn": "node scripts/capture-learn-demo.mjs",
     "generate:icons": "node scripts/generate-invest-product-icons.mjs && node scripts/generate-story-og.mjs",
     "generate:seo-og": "node scripts/generate-seo-og.mjs",
-    "generate:assets": "npm run generate:icons && npm run generate:seo-og"
+    "generate:assets": "npm run generate:icons && npm run generate:seo-og",
+    "test": "vitest run"
   },
   "dependencies": {
     "@vercel/analytics": "1.6.1",
@@ -30,6 +31,7 @@
     "eslint-config-next": "^15.3.2",
     "playwright": "^1.49.1",
     "sharp": "^0.34.2",
-    "typescript": "^5.8.0"
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.7"
   }
 }

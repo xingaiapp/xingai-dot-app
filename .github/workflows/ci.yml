@@ -20,6 +20,7 @@ jobs:
       - run: npm ci
       - run: npx tsc --noEmit
       - run: npm run lint
+      - run: npm test
       - run: npm run build
       - run: npm audit --audit-level=high --omit=dev
         continue-on-error: true
