@@ -108,8 +108,13 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <LocaleProviders locale={locale}>
           <MobileNavDrawerProvider>
+            <a className="skip-link" href="#main-content">
+              Skip to content
+            </a>
             <Header />
-            <div className="page-wrap">{children}</div>
+            <div className="page-wrap" id="main-content" tabIndex={-1}>
+              {children}
+            </div>
             <Footer />
             <MobileBottomNav />
           </MobileNavDrawerProvider>

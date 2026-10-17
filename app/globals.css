@@ -6396,3 +6396,18 @@ html[data-theme="dark"] .mobile-drawer {
   color: var(--ink-strong);
   font-weight: 650;
 }
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 1000;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background: #0c0e14;
+  color: #fff;
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 0.75rem;
+}
