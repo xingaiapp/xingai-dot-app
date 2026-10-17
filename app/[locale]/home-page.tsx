@@ -143,8 +143,8 @@ export default function Home() {
               as="h2"
               className="hero-card-heading"
               text={t("heroCardHeading")}
-              msPerChar={125}
-              maxDurationMs={5000}
+              msPerChar={32}
+              maxDurationMs={1400}
             />
             <ol className="hero-chain" aria-label={t("homePathHeading")}>
               {heroChain.map((step) => (

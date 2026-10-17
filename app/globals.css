@@ -6411,3 +6411,74 @@ html[data-theme="dark"] .mobile-drawer {
 .skip-link:focus {
   top: 0.75rem;
 }
+
+/* Mobile: tap targets >= 44px, body copy >= 14px, labels >= 11-12px (WCAG 2.5.8 / readability). */
+@media (max-width: 47.99rem) {
+  .footer-column a,
+  .footer-icon-link,
+  .footer-resource-link {
+    min-height: 2.75rem;
+  }
+  .header-logo-link {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+  }
+  .hero-slide-dot {
+    position: relative;
+  }
+  .hero-slide-dot::after {
+    content: "";
+    position: absolute;
+    inset: -1.1rem -0.25rem;
+  }
+  .promo-quality-btn {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    font-size: 0.875rem;
+  }
+  .cofounder-name-link,
+  .about-story-link a,
+  .hero-story-link a,
+  .cofounders-contact-note a {
+    display: inline-block;
+    padding-block: 0.85rem;
+  }
+  .skip-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+  }
+
+  .app-card-tagline,
+  .home-path__example,
+  .home-team__role,
+  .hero-beta-note,
+  .cofounder .role,
+  .role-sub,
+  .app-card-fit dd,
+  .hero-preview-fit dd,
+  .footer-icon-link span,
+  .footer-resource-link span,
+  .footer-bottom__meta span,
+  .hero-see-all,
+  .home-loop__back {
+    font-size: 0.875rem;
+  }
+  .app-card-fit dt,
+  .hero-preview-fit dt,
+  .footer-column__label,
+  .app-card-category,
+  .app-status-badge {
+    font-size: 0.75rem;
+  }
+  .home-loop__stage,
+  .mobile-bottom-nav__label {
+    font-size: 0.6875rem;
+  }
+  .home-loop__num {
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 0.75rem;
+  }
+}
