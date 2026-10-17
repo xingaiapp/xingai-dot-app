@@ -23,6 +23,7 @@
 | ADR-0015 | 2026-10-16 | cook | 食譜頁系統 /recipes 上線＋便當 Short 描述回鏈 | Accepted |
 | ADR-0016 | 2026-10-16 | 四站 | cache 架構約定（前端只讀 cache、後端全包） | Accepted |
 | ADR-0017 | 2026-10-16 | xingai.app | ADR 決策紀錄發布到主站 /adr（noindex 內部文件櫃） | Accepted |
+| ADR-0018 | 2026-10-16 | cook | 家人本名自公開內容移除（食譜頁＋嫩豆腐鍋英韓片） | Accepted |
 
 ## xingai.app（主站）
 
@@ -58,6 +59,7 @@
 |---|---|---|
 | ADR-0007 | 首頁「Watch XingAI Cook」一節 | Accepted |
 | ADR-0015 | 食譜頁系統 /recipes 上線＋便當 Short 描述回鏈 | Accepted |
+| ADR-0018 | 家人本名自公開內容移除（食譜頁＋嫩豆腐鍋英韓片） | Accepted |
 
 ## 四站通用
 
