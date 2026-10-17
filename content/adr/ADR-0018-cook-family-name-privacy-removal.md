@@ -33,6 +33,6 @@
 
 ## 關聯
 
-- Commit：cook repo f94576c（Remove family member's name from kimchi sundubu recipe page (privacy)；基底 ec1dced）；主站 ADR 同步 commit 見 repo content/adr/ 版（ADR-0017 同例：發布後回填）
+- Commit：cook repo f94576c（Remove family member's name from kimchi sundubu recipe page (privacy)；基底 ec1dced）；主站 ADR 同步 commit 477d7b1（docs(adr): add ADR-0018；本行 hash 由回填 commit 補入，照 ADR-0017 例）
 - 文件：~/workspace/productions/2026-10-16/publish_pack_sundubu_chicken_en.md（發布包，已掃清並註記重渲版）
 - 相關 ADR：ADR-0015（食譜頁系統——本筆改其 kimchi-sundubu 頁文案）、ADR-0017（ADR 發布到主站——本筆照其步驟同步）
