@@ -26,6 +26,8 @@
 | ADR-0018 | 2026-10-16 | cook | 家人本名自公開內容移除（食譜頁＋嫩豆腐鍋英韓片） | Accepted |
 | ADR-0019 | 2026-10-16 | invest | 持倉研究報告文章線 /portfolio-daily 上線（首篇 2026-10-16） | Accepted |
 | ADR-0020 | 2026-10-16 | invest | 站頭語言切換改整頁跳轉（修軟導航下文章不換語言） | Accepted |
+| ADR-0021 | 2026-10-16 | travel | 禱告處境頁補入「需要平安」格（海港 Part 1） | Accepted |
+| ADR-0022 | 2026-10-17 | invest | 周報文章版 EP02 上線（照 ADR-0009 模板） | Accepted |
 
 ## xingai.app（主站）
 
@@ -46,6 +48,7 @@
 | ADR-0009 | 周報文章版 /wall-street-views/ep01 上線並定為每期模板 | Accepted |
 | ADR-0019 | 持倉研究報告文章線 /portfolio-daily 上線（首篇 2026-10-16） | Accepted |
 | ADR-0020 | 站頭語言切換改整頁跳轉（修軟導航下文章不換語言） | Accepted |
+| ADR-0022 | 周報文章版 EP02 上線（照 ADR-0009 模板） | Accepted |
 
 ## travel.xingai.app
 
@@ -56,6 +59,7 @@
 | ADR-0010 | 禱告處境頁 /prayer/for-you 上線 | Accepted |
 | ADR-0013 | 禱告處境頁擴充（為明天擔心獨立格＋喪親格） | Accepted |
 | ADR-0014 | 禱告處境頁改數據驅動自動化（發片即上頁） | Accepted |
+| ADR-0021 | 禱告處境頁補入「需要平安」格（海港 Part 1） | Accepted |
 
 ## cook.xingai.app
 
