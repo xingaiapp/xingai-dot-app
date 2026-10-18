@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: [...defaultKeywords],
     alternates: pageAlternates(locale, path),
-    openGraph: localizedOpenGraph(locale, path, title, description, og),
+    openGraph: { ...localizedOpenGraph(locale, path, title, description, og), type: "website" },
     twitter: {
       card: "summary_large_image",
       title,
