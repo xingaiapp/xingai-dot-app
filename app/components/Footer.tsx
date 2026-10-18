@@ -209,6 +209,48 @@ export default function Footer() {
           </div>
         </nav>
 
+        <nav className="footer-column" aria-label={t("footerSites")}>
+          <span className="footer-column__label">{t("footerSites")}</span>
+          <div className="footer-column__links">
+            <a
+              href="https://invest.xingai.app"
+              className="footer-resource-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FooterLinkIcon name="systems" />
+              <span>XingAI Invest</span>
+            </a>
+            <a
+              href="https://travel.xingai.app"
+              className="footer-resource-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FooterLinkIcon name="systems" />
+              <span>XingAI Travel</span>
+            </a>
+            <a
+              href="https://cook.xingai.app"
+              className="footer-resource-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FooterLinkIcon name="systems" />
+              <span>XingAI Cook</span>
+            </a>
+            <a
+              href="https://wear.xingai.app"
+              className="footer-resource-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FooterLinkIcon name="systems" />
+              <span>XingAI Wear</span>
+            </a>
+          </div>
+        </nav>
+
         <nav className="footer-column" aria-label={t("footerCompany")}>
           <span className="footer-column__label">{t("footerCompany")}</span>
           <div className="footer-column__links">
@@ -304,6 +346,10 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="footer-bottom__meta">
           <span>&copy; {new Date().getFullYear()} xingai.app</span>
+          <span className="footer-bottom__company">
+            XingAI ·{" "}
+            <a href="mailto:contact@xingai.app">contact@xingai.app</a>
+          </span>
         </div>
       </div>
     </footer>

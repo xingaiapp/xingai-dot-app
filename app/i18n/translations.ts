@@ -11,6 +11,7 @@ const translations = {
     // Nav
     navHome: "Home",
     navApps: "Apps",
+    navProducts: "Products",
     navStory: "How it works",
     navTeam: "Team",
     homeMeetTeam: "Meet the team",
@@ -42,6 +43,7 @@ const translations = {
     footerTryDemo: "Try free demo",
     footerSeeSystems: "See all systems",
     footerProduct: "Product",
+    footerSites: "Our sites",
     footerCompany: "Company",
     footerResources: "Resources",
     footerBlog: "Blog",
@@ -83,6 +85,14 @@ const translations = {
     homePathDecideBody: "You make the call. Nothing is booked or bought for you.",
     homePathDecideExample: "One recommendation, one next step — your choice.",
     homePathTryTravel: "Try it in Travel AI",
+    // Products (standalone XingAI sites)
+    productsHeading: "Our products",
+    productsLead: "Investing, travel, food and style — four standalone XingAI products, each one open in your browser.",
+    productInvestLine: "AI stock research: daily briefings, watchlists and earnings context. Research, not advice.",
+    productTravelLine: "Trips planned around places we have actually been — with a short prayer to open and close the day.",
+    productCookLine: "Tell it what is in your fridge. It decides tonight's dinner and walks you through cooking it.",
+    productWearLine: "Upload one photo and get outfits matched to your day, the weather and your style.",
+    productVisit: "Visit site",
     homeAppsHeading: "Start here",
     homeAppsLead:
       "Flagship: Invest AI. Daily decisions: Travel, Cook, Wear. Also live: Passive Income and the Tech Blog. Everything else is a demo or coming soon.",
@@ -432,6 +442,7 @@ const translations = {
   zh: {
     navHome: "\u9996\u9875",
     navApps: "\u5e94\u7528",
+    navProducts: "\u4ea7\u54c1",
     navStory: "运作方式",
     navTeam: "\u56e2\u961f",
     homeMeetTeam: "\u8ba4\u8bc6\u6574\u4e2a\u56e2\u961f",
@@ -463,6 +474,7 @@ const translations = {
     footerTryDemo: "\u4f53\u9a8c\u514d\u8d39 Demo",
     footerSeeSystems: "\u67e5\u770b\u6240\u6709\u7cfb\u7edf",
     footerProduct: "\u4ea7\u54c1",
+    footerSites: "\u65d7\u4e0b\u7f51\u7ad9",
     footerCompany: "\u516c\u53f8",
     footerResources: "\u8d44\u6e90",
     footerBlog: "\u535a\u5ba2",
@@ -503,6 +515,14 @@ const translations = {
     homePathDecideBody: "最后拍板的是你，不会替你预订或购买。",
     homePathDecideExample: "一个推荐、一个下一步，选不选由你。",
     homePathTryTravel: "在 Travel AI 里试试",
+    // Products (standalone XingAI sites)
+    productsHeading: "\u6211\u4eec\u7684\u4ea7\u54c1",
+    productsLead: "\u6295\u8d44\u3001\u65c5\u884c\u3001\u996e\u98df\u4e0e\u7a7f\u642d\u2014\u2014\u56db\u4e2a\u72ec\u7acb\u7684 XingAI \u4ea7\u54c1\u7ad9\uff0c\u5168\u90e8\u53ef\u4ee5\u76f4\u63a5\u5728\u6d4f\u89c8\u5668\u6253\u5f00\u3002",
+    productInvestLine: "AI \u7f8e\u80a1\u7814\u7a76\uff1a\u6bcf\u65e5\u7b80\u62a5\u3001\u81ea\u9009\u80a1\u4e0e\u8d22\u62a5\u8109\u7edc\u3002\u53ea\u505a\u7814\u7a76\uff0c\u4e0d\u662f\u6295\u8d44\u5efa\u8bae\u3002",
+    productTravelLine: "\u7528\u6211\u4eec\u4eb2\u8eab\u53bb\u8fc7\u7684\u5730\u65b9\u89c4\u5212\u65c5\u884c\u2014\u2014\u6bcf\u5929\u65e9\u665a\uff0c\u6709\u4e00\u652f\u77ed\u7977\u544a\u966a\u4f60\u5f00\u59cb\u548c\u7ed3\u675f\u4e00\u5929\u3002",
+    productCookLine: "\u628a\u51b0\u7bb1\u91cc\u6709\u7684\u544a\u8bc9\u5b83\uff1a\u4eca\u665a\u5403\u4ec0\u4e48\uff0c\u5b83\u66ff\u4f60\u51b3\u5b9a\uff0c\u8fd8\u4e00\u6b65\u6b65\u6559\u4f60\u505a\u3002",
+    productWearLine: "\u4e0a\u4f20\u4e00\u5f20\u7167\u7247\uff1a\u6309\u4f60\u7684\u884c\u7a0b\u3001\u5929\u6c14\u548c\u98ce\u683c\uff0c\u914d\u597d\u4eca\u5929\u7a7f\u4ec0\u4e48\u3002",
+    productVisit: "\u524d\u5f80\u7f51\u7ad9",
     homeAppsHeading: "\u4ece\u8fd9\u91cc\u5f00\u59cb",
     homeAppsLead:
       "旗舰：Invest AI。日常决策：Travel、Cook、Wear。另已上线：Passive Income 与 Tech Blog。其余多为演示或即将推出。",
@@ -834,6 +854,7 @@ const translations = {
   ko: {
     navHome: "\ud648",
     navApps: "\uc571",
+    navProducts: "\uc81c\ud488",
     navStory: "작동 방식",
     navTeam: "\ud300",
     homeMeetTeam: "\ud300 \uc18c\uac1c",
@@ -865,6 +886,7 @@ const translations = {
     footerTryDemo: "\ubb34\ub8cc \ub370\ubaa8 \uccb4\ud5d8",
     footerSeeSystems: "\ubaa8\ub4e0 \uc2dc\uc2a4\ud15c \ubcf4\uae30",
     footerProduct: "\uc81c\ud488",
+    footerSites: "\ud328\ubc00\ub9ac \uc0ac\uc774\ud2b8",
     footerCompany: "\ud68c\uc0ac",
     footerResources: "\ub9ac\uc18c\uc2a4",
     footerBlog: "\ube14\ub85c\uadf8",
@@ -905,6 +927,14 @@ const translations = {
     homePathDecideBody: "최종 판단은 당신 몫. 대신 예약하거나 구매하지 않습니다.",
     homePathDecideExample: "추천 하나, 다음 단계 하나 — 선택은 당신이.",
     homePathTryTravel: "Travel AI에서 해 보기",
+    // Products (standalone XingAI sites)
+    productsHeading: "\uc81c\ud488 \uc18c\uac1c",
+    productsLead: "\ud22c\uc790, \uc5ec\ud589, \uc74c\uc2dd, \uc2a4\ud0c0\uc77c \u2014 \ube0c\ub77c\uc6b0\uc800\uc5d0\uc11c \ubc14\ub85c \uc5f4\ub9ac\ub294 \ub124 \uac00\uc9c0 XingAI \uc81c\ud488\uc785\ub2c8\ub2e4.",
+    productInvestLine: "AI \uc8fc\uc2dd \ub9ac\uc11c\uce58: \ub9e4\uc77c \ube0c\ub9ac\ud551, \uad00\uc2ec \uc885\ubaa9, \uc2e4\uc801 \ub9e5\ub77d\uc744 \uc815\ub9ac\ud569\ub2c8\ub2e4. \ud22c\uc790 \uc870\uc5b8\uc774 \uc544\ub2cc \ub9ac\uc11c\uce58\uc785\ub2c8\ub2e4.",
+    productTravelLine: "\uc9c1\uc811 \uac00 \ubcf8 \uacf3\uc73c\ub85c \uc9dc\ub294 \uc5ec\ud589 \uacc4\ud68d \u2014 \ud558\ub8e8\uc758 \uc2dc\uc791\uacfc \ub05d\uc5d0 \uc9e7\uc740 \uae30\ub3c4\ub97c \uacc1\ub4e4\uc785\ub2c8\ub2e4.",
+    productCookLine: "\ub0c9\uc7a5\uace0\uc5d0 \uc788\ub294 \uc7ac\ub8cc\ub97c \uc54c\ub824\uc8fc\uc138\uc694. \uc624\ub298 \uc800\ub141 \uba54\ub274\ub97c \uc815\ud558\uace0, \ub9cc\ub4dc\ub294 \ubc95\uae4c\uc9c0 \uc548\ub0b4\ud569\ub2c8\ub2e4.",
+    productWearLine: "\uc0ac\uc9c4 \ud55c \uc7a5\uc744 \uc62c\ub9ac\uba74 \uc77c\uc815\uacfc \ub0a0\uc528, \uc2a4\ud0c0\uc77c\uc5d0 \ub9de\ub294 \ucf54\ub514\ub97c \ucd94\ucc9c\ud569\ub2c8\ub2e4.",
+    productVisit: "\uc0ac\uc774\ud2b8 \ubc29\ubb38",
     homeAppsHeading: "\uc5ec\uae30\uc11c \uc2dc\uc791",
     homeAppsLead:
       "플래그십: Invest AI. 일상 결정: Travel, Cook, Wear. 추가로 라이브: Passive Income, Tech Blog. 나머지는 데모이거나 곧 출시입니다.",

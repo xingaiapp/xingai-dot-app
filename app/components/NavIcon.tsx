@@ -35,6 +35,14 @@ export default function NavIcon({ name, className }: NavIconProps) {
           <rect x="13" y="13" width="7" height="7" rx="1.6" />
         </svg>
       );
+    case "navProducts":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="12" r="8.5" />
+          <path d="M3.5 12h17" />
+          <path d="M12 3.5c2.5 2.3 3.8 5.2 3.8 8.5s-1.3 6.2-3.8 8.5c-2.5-2.3-3.8-5.2-3.8-8.5S9.5 5.8 12 3.5Z" />
+        </svg>
+      );
     case "navStory":
       return (
         <svg {...common}>

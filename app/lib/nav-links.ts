@@ -4,6 +4,7 @@ import { localizePath, stripLocaleFromPathname } from "./locale-routing";
 export type NavKey =
   | "navHome"
   | "navApps"
+  | "navProducts"
   | "navStory"
   | "navTeam"
   | "navAbout"
@@ -16,6 +17,7 @@ export type NavKey =
 const navPaths: { path: string; key: NavKey; hash?: string }[] = [
   { path: "/", key: "navHome" },
   { path: "/apps", key: "navApps" },
+  { path: "/", key: "navProducts", hash: "products" },
   { path: "/story", key: "navStory" },
   { path: "/team", key: "navTeam" },
   { path: "/contact", key: "navContact" },

@@ -37,6 +37,7 @@ export default function MobileNavDrawer({
   const mainLinks: { href: string; label: string; icon: NavKey }[] = [
     { href: localePath("/"), label: t("navHome"), icon: "navHome" },
     { href: localePath("/apps"), label: t("navApps"), icon: "navApps" },
+    { href: `${localePath("/")}#products`, label: t("navProducts"), icon: "navProducts" },
     { href: localePath("/team"), label: t("navTeam"), icon: "navTeam" },
     { href: localePath("/story"), label: t("navStory"), icon: "navStory" },
     { href: localePath("/about"), label: t("navAbout"), icon: "navAbout" },

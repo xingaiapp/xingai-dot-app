@@ -9,6 +9,7 @@ import { getHomeShelfApps, getLocalizedApps, type AppLaunchStatus } from "../dat
 import AppIcon from "../components/AppIcon";
 import AppDemoScreenshot from "../components/AppDemoScreenshot";
 import HomeDecisionPath, { StepIcon, type StepId } from "../components/HomeDecisionPath";
+import HomeProducts from "../components/HomeProducts";
 import HomeSystemLoop from "../components/HomeSystemLoop";
 import PromoVideo from "../components/PromoVideo";
 import TypewriterText from "../components/TypewriterText";
@@ -271,6 +272,8 @@ export default function Home() {
       </section>
 
       <PromoVideo />
+
+      <HomeProducts />
 
       <section id="start-here" className="home-apps" aria-labelledby="home-apps-heading">
         <h2 id="home-apps-heading" className="section-title">
