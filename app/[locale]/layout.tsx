@@ -100,6 +100,8 @@ export default async function LocaleLayout({ children, params }: Props) {
       <head>
         <meta name="color-scheme" content="light dark" />
         <script dangerouslySetInnerHTML={{ __html: initScript }} />
+        {/* Ahrefs Web Analytics (ADR-0049) */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="gSgBozfCvRGLgSRaEMTZWg" async />
       </head>
       <body className="site-body">
         <script
