@@ -6620,3 +6620,147 @@ html[data-theme="dark"] .mobile-drawer {
     font-size: 0.75rem;
   }
 }
+
+/* ── Business-card landing (/card, ADR-0070) ─────────────────────────
+   QR landing page: mobile-first, big tap targets, static. The hero
+   mirrors the printed card face — fixed deep navy in both themes. */
+.bizcard {
+  max-width: 44rem;
+}
+.bizcard-hero {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% -20%, rgba(77, 148, 255, 0.25), transparent),
+    radial-gradient(ellipse 70% 60% at 85% 110%, rgba(168, 85, 247, 0.18), transparent),
+    #0a0c1b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem 1.75rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+.bizcard-logo {
+  width: min(240px, 68%);
+  margin: 0 auto 1.1rem;
+}
+.bizcard-name {
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 0 0 0.35rem;
+  color: #ffffff;
+}
+.bizcard-role {
+  margin: 0 0 1.4rem;
+  color: rgba(232, 234, 240, 0.82);
+  font-size: 1.05rem;
+}
+.bizcard-linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 3.25rem;
+  padding: 0.8rem 1.25rem;
+  border-radius: 0.9rem;
+  background: #0a66c2;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+.bizcard-linkedin:hover,
+.bizcard-linkedin:focus-visible {
+  background: #0958a6;
+}
+.bizcard-products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.bizcard-product,
+.bizcard-brand,
+.bizcard-contact {
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
+.bizcard-product-head {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.bizcard-product-name {
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem;
+  color: var(--ink-strong);
+}
+.bizcard-product-line {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.bizcard-actions {
+  display: grid;
+  gap: 0.6rem;
+}
+.bizcard-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 3.25rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+.bizcard-btn--site {
+  background: var(--blue);
+  color: #ffffff;
+}
+.bizcard-btn--yt {
+  background: var(--soft-bg);
+  color: var(--ink-strong);
+  border: 1px solid var(--line);
+}
+.bizcard-brand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+.bizcard-brandmark {
+  width: 52px;
+  height: 52px;
+  border-radius: 0.8rem;
+}
+.bizcard-brand-text {
+  flex: 1 1 12rem;
+}
+.bizcard-brand-btn {
+  flex: 1 1 100%;
+}
+.bizcard-contact {
+  margin-top: 1rem;
+  text-align: center;
+}
+.bizcard-contact .bizcard-btn {
+  margin-top: 0.8rem;
+}
+@media (min-width: 36rem) {
+  .bizcard-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bizcard-product:first-child .bizcard-actions {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .bizcard-brand-btn {
+    flex: 0 1 auto;
+  }
+}
