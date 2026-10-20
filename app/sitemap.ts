@@ -28,9 +28,11 @@ function entry(
   changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"],
 ): MetadataRoute.Sitemap[0] {
   const languages = buildHreflangAlternates(path);
+  // No lastModified: there is no per-page editorial date source for these
+  // routes, and stamping `new Date()` made every URL look freshly changed
+  // on every sitemap fetch (same fix as invest PR #20, 2026-10-20).
   return {
     url: publicUrl("en", path),
-    lastModified: new Date(),
     changeFrequency,
     priority,
     alternates: { languages },
@@ -50,7 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter(() => locale !== "en")
       .map((path) => ({
         url: publicUrl(locale, path),
-        lastModified: new Date(),
         changeFrequency: path.startsWith("/legal") ? ("yearly" as const) : ("weekly" as const),
         priority: path === "/" ? 0.95 : 0.75,
         alternates: { languages: buildHreflangAlternates(path) },
@@ -61,7 +62,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const path = `/apps/${app.slug}`;
     return locales.map((locale) => ({
       url: publicUrl(locale, path),
-      lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.8,
       alternates: { languages: buildHreflangAlternates(path) },
