@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { apps, isIndexableApp } from "./data/apps";
+import { APP_CATALOG_CONTENT_DATE, STATIC_CONTENT_DATES } from "./lib/content-dates";
 import { buildHreflangAlternates, publicUrl } from "./lib/locale-routing";
 import type { Locale } from "./i18n/translations";
 
@@ -28,11 +29,12 @@ function entry(
   changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"],
 ): MetadataRoute.Sitemap[0] {
   const languages = buildHreflangAlternates(path);
-  // No lastModified: there is no per-page editorial date source for these
-  // routes, and stamping `new Date()` made every URL look freshly changed
-  // on every sitemap fetch (same fix as invest PR #20, 2026-10-20).
+  // lastmod = the route's real editorial date from lib/content-dates.ts
+  // (travel's discipline). Never stamp `new Date()` here: it made every
+  // URL look freshly changed on every fetch (removed in PR #39).
   return {
     url: publicUrl("en", path),
+    ...(STATIC_CONTENT_DATES[path] ? { lastModified: STATIC_CONTENT_DATES[path] } : {}),
     changeFrequency,
     priority,
     alternates: { languages },
@@ -52,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter(() => locale !== "en")
       .map((path) => ({
         url: publicUrl(locale, path),
+        ...(STATIC_CONTENT_DATES[path] ? { lastModified: STATIC_CONTENT_DATES[path] } : {}),
         changeFrequency: path.startsWith("/legal") ? ("yearly" as const) : ("weekly" as const),
         priority: path === "/" ? 0.95 : 0.75,
         alternates: { languages: buildHreflangAlternates(path) },
@@ -62,6 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const path = `/apps/${app.slug}`;
     return locales.map((locale) => ({
       url: publicUrl(locale, path),
+      lastModified: APP_CATALOG_CONTENT_DATE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
       alternates: { languages: buildHreflangAlternates(path) },
