@@ -11,7 +11,7 @@
 export const STATIC_CONTENT_DATES: Record<string, Date> = {
   "/": new Date("2026-09-28T22:03:30Z"),
   "/apps": new Date("2026-10-08T01:32:22Z"),
-  "/story": new Date("2026-10-01T19:05:13Z"),
+  "/story": new Date("2026-10-22T02:13:42Z"), // PR #41 (2026-10-21): /story SERP title/desc rewritten
   "/team": new Date("2026-10-05T14:45:53Z"),
   "/about": new Date("2026-10-05T14:14:43Z"),
   "/contact": new Date("2026-10-08T01:25:47Z"),
