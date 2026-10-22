@@ -11,9 +11,9 @@ import {
 import { formatPageTitle } from "../../../lib/site-seo";
 
 function appsPageTitle(locale: ReturnType<typeof parseRoutingLocale>) {
-  if (locale === "zh") return "AI 产品";
-  if (locale === "ko") return "AI 제품";
-  return "AI Products";
+  if (locale === "zh") return "AI 产品 — 投资、旅行、烹饪等决策工具";
+  if (locale === "ko") return "AI 제품 — 투자·여행·요리 의사결정 도구";
+  return "AI Products — Invest, Travel, Cook & More Decision Tools";
 }
 const path = "/apps";
 

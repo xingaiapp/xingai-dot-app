@@ -157,6 +157,7 @@ export default async function AppSlugLayout({
 
   const appUrl = publicUrl(locale, `/apps/${app.slug}`);
   const image = ogImageForApp(app);
+  const faqNode = buildAppFaq(app, appUrl);
   const graph: Record<string, unknown>[] = [
     { "@id": `${siteUrl}/#org` },
     { "@id": `${siteUrl}/#website` },
@@ -181,7 +182,7 @@ export default async function AppSlugLayout({
         { "@type": "ListItem", position: 3, name: app.name, item: appUrl },
       ],
     },
-    buildAppFaq(app, appUrl),
+    faqNode,
   ];
 
   const jsonLd = {
@@ -189,6 +190,8 @@ export default async function AppSlugLayout({
     "@graph": graph,
   };
 
+  const faqHeading =
+    locale === "zh" ? "常见问题" : locale === "ko" ? "자주 묻는 질문" : "Frequently asked questions";
   return (
     <>
       <script
@@ -196,6 +199,17 @@ export default async function AppSlugLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {children}
+      <section className="detail-section" aria-labelledby="app-faq-heading">
+        <h2 id="app-faq-heading" className="detail-heading">
+          {faqHeading}
+        </h2>
+        {faqNode.mainEntity.map((q) => (
+          <div key={q.name}>
+            <h3>{q.name}</h3>
+            <p className="section-lead">{q.acceptedAnswer.text}</p>
+          </div>
+        ))}
+      </section>
     </>
   );
 }
