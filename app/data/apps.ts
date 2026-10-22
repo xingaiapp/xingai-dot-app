@@ -374,7 +374,7 @@ export const apps: AppData[] = [
     favicon: "/growth-monitor-icon.svg",
     demoUrl: "https://growth.xingai.app/",
     description:
-      "Internal SEO/AEO action center — Google Search Console + page crawl + AI recommendations ranked into daily page fixes with Cursor-ready prompts.",
+      "Growth Monitor turns Search Console data and page crawls into a ranked daily fix list — which page to fix first, and why. Built by XingAI to run SEO/AEO across its own product family.",
     category: "Operations AI",
     canDo: "Rank which XingAI pages to fix first from GSC, crawl signals, and AI issue summaries.",
     bestFor: "XingAI operators managing portfolio SEO/AEO across *.xingai.app properties.",
@@ -1223,7 +1223,7 @@ const localizedAppCopy: Partial<
       tagline: "先修页面",
       category: "运营 AI",
       description:
-        "内部 SEO/AEO 行动中心 — Search Console + 页面抓取 + AI 建议，按优先级排序每日页面修复项，并提供 Cursor 提示词。",
+        "Growth Monitor 把 Search Console 数据与页面抓取变成一份按优先级排序的每日修复清单——先修哪一页、为什么。由 XingAI 为自家产品矩阵的 SEO/AEO 而建。",
       canDo: "结合 GSC、抓取信号与 AI 问题摘要，排序 XingAI 站点应先修复的页面。",
       bestFor: "管理 *.xingai.app  portfolio SEO/AEO 的 XingAI 运营同学。",
       clickTarget: "内部仪表盘（早期访问）。",
@@ -1770,7 +1770,7 @@ const localizedAppCopy: Partial<
       tagline: "페이지 먼저 수정",
       category: "운영 AI",
       description:
-        "내부 SEO/AEO 실행 센터 — Search Console + 크롤 + AI 권장을 일일 페이지 수정 우선순위와 Cursor 프롬프트로 정리합니다.",
+        "Growth Monitor는 Search Console 데이터와 페이지 크롤을 우선순위가 매겨진 일일 수정 목록으로 바꿉니다 — 어떤 페이지를 먼저 고칠지, 그리고 왜인지. XingAI가 자사 제품군의 SEO/AEO를 위해 만들었습니다.",
       canDo: "GSC, 크롤 신호, AI 이슈 요약으로 *.xingai.app 페이지 수정 순서를 정합니다.",
       bestFor: "XingAI 포트폴리오 SEO/AEO를 운영하는 팀.",
       clickTarget: "내부 대시보드(얼리 액세스).",
