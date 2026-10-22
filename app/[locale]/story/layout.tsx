@@ -13,20 +13,20 @@ const path = "/story";
 type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 
 function storyTitle(locale: ReturnType<typeof parseRoutingLocale>) {
-  if (locale === "zh") return "XingAI 如何运转";
-  if (locale === "ko") return "XingAI의 작동 방식";
-  return "How XingAI works";
+  if (locale === "zh") return "XingAI 如何运转：一个系统，长出所有 XingAI 应用";
+  if (locale === "ko") return "XingAI의 작동 방식: 하나의 시스템, 모든 XingAI 앱의 뒤에서";
+  return "How XingAI Works: One System Behind Every AI App We Ship";
 }
 
 function storyDescription(locale: ReturnType<typeof parseRoutingLocale>) {
   // Keep under ~155–160 chars for SERP; title stays short via storyTitle + formatPageTitle.
   if (locale === "zh") {
-    return "XingAI 如何把想法变成持续运转的 AI 产品：点子库、应用与证据工具，以及投资研究地图。";
+    return "看 XingAI 如何把一个想法变成持续运转的 AI 决策产品：Invest、Travel、Cook 等应用怎样长出来，又如何被证据与搜索数据持续改进。";
   }
   if (locale === "ko") {
-    return "XingAI가 아이디어를 계속 운영되는 AI 제품으로 바꾸는 방식 — 아이디어 볼트, 앱, 근거 도구, 투자 리서치 맵.";
+    return "XingAI가 포착한 아이디어 하나를 Invest, Travel, Cook 같은 실제 AI 의사결정 제품으로 바꾸고, 근거와 검색 데이터로 계속 개선하는 방식을 보세요.";
   }
-  return "How XingAI turns ideas into running AI products — memory, apps, evidence tools, and the Invest research map.";
+  return "See how XingAI turns one captured idea into live AI decision products — Invest, Travel, Cook and more — and how evidence and search data keep improving them.";
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
