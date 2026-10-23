@@ -6,20 +6,29 @@ import { defaultOgImage, ogImageMeta } from "../../lib/site-seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
-const TITLE = "Legal · XingAI";
-const DESCRIPTION =
-  "Privacy Policy, Terms of Service, and Disclaimer for XingAI products.";
+const TITLE: Record<string, string> = {
+  en: "Legal · XingAI",
+  zh: "法律与合规 · XingAI",
+  ko: "법률 고지 · XingAI",
+};
+const DESCRIPTION: Record<string, string> = {
+  en: "Privacy Policy, Terms of Service, and Disclaimer for XingAI products.",
+  zh: "XingAI 产品相关的隐私、条款与免责声明。输出仅供参考，请自行核实后行动。",
+  ko: "XingAI 제품의 개인정보, 약관, 면책 고지입니다. 출력은 참고용이며 직접 확인 후 행동하세요.",
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = parseRoutingLocale(raw);
   const path = "/legal";
   const og = ogImageMeta(defaultOgImage, "XingAI legal pages");
+  const title = TITLE[locale] ?? TITLE.en;
+  const description = DESCRIPTION[locale] ?? DESCRIPTION.en;
   return {
-    title: TITLE,
-    description: DESCRIPTION,
+    title,
+    description,
     alternates: pageAlternates(locale, path),
-    openGraph: localizedOpenGraph(locale, path, TITLE, DESCRIPTION, og),
+    openGraph: localizedOpenGraph(locale, path, title, description, og),
   };
 }
 
