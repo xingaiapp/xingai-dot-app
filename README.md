@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.16a
+**Version:** 2026.10.25a
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.25a` Catalog: XingAI Home is listed as coming soon (`/apps/home-ai`). The product shell is in the home repo. `home.xingai.app` is not live.
 
 `2026.10.16a` Internal ADR cabinet: ADR-0016 stays number 0016 and now says it is not Invest's or Travel's ADR-0016. Cache plan section 0 names the real Invest stack (FastAPI + SQLite + Auth.js). See `docs/xingai-cache-backend-dev-plan-20261016.md`.
 

@@ -82,6 +82,7 @@ Decision Agent:
 Coming-soon products (catalog pages; not live domains yet):
 - Founder AI: https://xingai.app/apps/founder-ai (target founder.xingai.app — Planned)
 - Parent AI: https://xingai.app/apps/parent-ai (target parent.xingai.app — Planned)
+- Home: https://xingai.app/apps/home-ai (target home.xingai.app — preview shell, not deployed)
 - Engineering Communication Coach: https://xingai.app/apps/engineering-coach (target engineering-coach.xingai.app — Planned; source https://github.com/xingaiapp/xingai-engineering-coach-ai)
 - Other roadmap apps: https://xingai.app/apps
 

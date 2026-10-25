@@ -87,6 +87,7 @@ export const productDomains: ProductDomain[] = [
       "cook-ai",
       "travel-ai",
       "outfit-ai",
+      "home-ai",
       "meal-coach",
       "routine-ai",
       "daily-assistant",
