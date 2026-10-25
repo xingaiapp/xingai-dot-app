@@ -118,7 +118,7 @@ export const apps: AppData[] = [
     favicon: "/favicon-cook-ai.png",
     demoUrl: "https://cook.xingai.app/",
     description:
-      "Tell us what you have\u2014scan the fridge (confirm the list) or type ingredients, then Decide for me: one meal, what you may still need to buy, and steps. Live at cook.xingai.app (en / \u4e2d\u6587 / \ud55c\uad6d\uc5b4).",
+      "Tell us what you have — scan the fridge or type ingredients, then Decide for me: one meal, what you may still need to buy, and steps. Live at cook.xingai.app.",
     category: "Cooking AI",
     canDo: "Turn what you already have into one practical cooking decision\u2014not a recipe browse.",
     bestFor: "Busy home cooks who need tonight\u2019s dish, not a feed of options.",
@@ -198,7 +198,7 @@ export const apps: AppData[] = [
     favicon: "/favicon-routine-ai.png",
     demoUrl: "https://routine.xingai.app/",
     description:
-      "Decide a weekly rhythm that sticks\u2014describe your habit context, pick focus and cadence, get one realistic plan with next actions and a gentle nudge. Demo works offline; OpenAI when a key is configured.",
+      "Decide a weekly rhythm that sticks — describe your habit context, pick focus and cadence, get one realistic plan with next actions and a gentle nudge.",
     category: "Routine AI",
     canDo: "Create a realistic habit rhythm with next actions and gentle nudges.",
     bestFor: "People rebuilding routines without rigid productivity systems.",
@@ -242,7 +242,7 @@ export const apps: AppData[] = [
     favicon: "/sat-ai-icon.svg",
     demoUrl: "https://sat.xingai.app/",
     description:
-      "SAT mistake review for students\u2014take a photo, upload a screenshot, or type a missed question, then get structured AI feedback that explains the error and turns it into a study plan.",
+      "SAT mistake review for students — photo, screenshot, or a missed question in, and structured AI feedback explains the error and turns it into a study plan.",
     category: "Education AI",
     canDo: "Analyze SAT Math and Reading & Writing mistakes with OCR, explanations, and next steps.",
     bestFor: "Students who want to stop repeating missed SAT question patterns.",
@@ -286,7 +286,7 @@ export const apps: AppData[] = [
     favicon: "/research-ai-icon.svg",
     demoUrl: "https://research.xingai.app/",
     description:
-      "Learning Decision System\u2014enter a topic and optional background, get a verdict (Learn Now / Later / Skip / Delegate), a 30-minute route, takeaways, and ranked sources. Decide if it is worth your time before you commit hours.",
+      "Learning Decision System — enter a topic and background, get a verdict (Learn Now / Later / Skip / Delegate), a 30-minute route, takeaways, and ranked sources.",
     category: "Learning AI",
     canDo: "Score learning ROI for your background and return a clear next-step route.",
     bestFor: "Engineers, PMs, and learners who need a go/no-go call before diving into a new topic.",
@@ -453,7 +453,7 @@ export const apps: AppData[] = [
     iconDark: "/evidence-engine-icon.svg",
     favicon: "/evidence-engine-icon.svg",
     description:
-      "Claim → evidence → citation verification. Turns research docs into checked claims with per-source verdicts—supported, partial, blocked-by-paywall, or uncited. One engine behind Research AI and claims verification.",
+      "Claim → evidence → citation verification. Turns research docs into checked claims with per-source verdicts — supported, partial, blocked-by-paywall, or uncited.",
     category: "Research AI",
     canDo: "Extract claims from a document, bind each to its cited source, check reachability, and grade support with coverage metrics.",
     bestFor: "Researchers and analysts who need to know which statements in a document actually hold up against their citations.",
@@ -575,7 +575,7 @@ export const apps: AppData[] = [
     sourceUrl: "https://github.com/xingaiapp/xingai-passive-income-ideas",
     sourceKind: "github",
     description:
-      "One-Idea passive income research for a defined operator profile\u2014web board, email Summary, and A4 PDF when research runs. Informational only; not financial advice. Public demo at passive.xingai.app.",
+      "One-Idea passive income research for an operator profile — web board, email Summary, and A4 PDF when research runs. Informational only; not financial advice.",
     category: "Wealth AI",
     canDo: "Review the latest fit Idea with capital, time, income band, risks, and a 30-minute next step.",
     bestFor: "Experienced builders seeking long-term passive or cash-flow income without tip spam.",
@@ -767,7 +767,7 @@ export const apps: AppData[] = [
     hidePro: true,
     sourceKind: "github",
     description:
-      "AI travel decision system\u2014compare destinations, pick one best-fit trip with honest trade-offs, then open partner search links for the key pieces. Compare first, plan second.",
+      "AI travel decision system — compare destinations, pick one best-fit trip with honest trade-offs, then open partner search links. Compare first, plan second.",
     category: "Travel AI",
     canDo: "Compare destinations by dates, origin, budget, travelers, style, pace, and constraints. Includes an optional \u201cSurprise me\u201d inspire mode.",
     bestFor: "Travelers who are not sure where to go yet and want one practical recommendation before booking.",
@@ -811,7 +811,7 @@ export const apps: AppData[] = [
     favicon: "/shop-radar-icon.svg",
     demoUrl: "https://shopradar.xingai.app/",
     description:
-      "AI product radar for dropshippers. Scores ideas on trend, competition, margin, video potential, and risk, then aims to return a daily Top 3. Public site is a waitlist plus a labeled sample — live scoring is not running yet.",
+      "AI product radar — scores ideas and aims to return a daily Top 3. Public site is a waitlist plus a labeled sample; live scoring is not running yet.",
     category: "Commerce AI",
     canDo: "Read the scoring model, inspect a sample Top 3, and join the waitlist at shopradar.xingai.app.",
     bestFor: "Dropshippers who want a weighted product score instead of guessing the next SKU.",
@@ -851,7 +851,7 @@ export const apps: AppData[] = [
     favicon: "/decision-agent-icon.svg",
     demoUrl: "https://decision.xingai.app/",
     description:
-      "State an investment outcome, then review a structured brief projected from Invest AI’s public AI-map cache. The site only renders worker-written fields. It does not invent allocations or place trades.",
+      "State an investment outcome, then review a structured brief projected from Invest AI’s public AI-map cache. It does not invent allocations or place trades.",
     category: "Finance AI",
     canDo: "Turn an investment goal into an inspectable public-research brief from worker cache.",
     bestFor: "People who want a decision-first research workflow without automated trading.",
@@ -970,7 +970,7 @@ export const apps: AppData[] = [
     demoUrl: "https://t.xingai.app/",
     earlyAccess: true,
     description:
-      "Daily trading plan helper\u2014turn your holdings screenshot into structured rules + an AI plan for today. The basic view is free with no sign-in; AI analysis is invite-only for now \u2014 email us to join the allowlist.",
+      "Trading plan helper — turn your holdings screenshot into rules + an AI plan. The basic view is free with no sign-in; AI analysis is invite-only for now.",
     category: "Finance AI",
     canDo: "Convert a holdings screenshot into a structured plan for the day.",
     bestFor: "Active traders who want a repeatable pre-market checklist and plan.",

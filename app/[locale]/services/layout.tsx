@@ -8,7 +8,7 @@ const copy: LocalizedPageCopy = {
   en: {
     title: "Services",
     description:
-      "Work with XingAI: build a custom AI decision system around one recurring decision, get an Agent Security Assessment for MCP servers and tool permissions, or book an engineering practice workshop on ADRs, LLM evaluation and MCP in production.",
+      "Work with XingAI: build a custom AI decision system around one decision, get an Agent Security Assessment, or book a workshop on ADRs, LLM evaluation and MCP.",
   },
   zh: {
     title: "服务",

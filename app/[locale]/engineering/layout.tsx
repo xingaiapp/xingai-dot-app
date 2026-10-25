@@ -8,7 +8,7 @@ const copy: LocalizedPageCopy = {
   en: {
     title: "Engineering practice",
     description:
-      "337 bilingual architecture decision records across 25 repositories. Three verbatim excerpts showing how decisions get made — and what they state they do not cover.",
+      "337 bilingual architecture decision records across 25 repositories. Three verbatim excerpts showing how decisions get made — and what they do not cover.",
   },
   zh: {
     title: "工程实践",

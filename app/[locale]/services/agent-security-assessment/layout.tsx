@@ -8,7 +8,7 @@ const copy: LocalizedPageCopy = {
   en: {
     title: "Agent Security Assessment",
     description:
-      "Fixed-scope security assessment for AI agents, MCP servers, and tool permissions — prompt injection exposure, permission manifests, and audit readiness for .NET and Azure teams.",
+      "Fixed-scope security assessment for AI agents, MCP servers, and tool permissions — prompt injection exposure, permission manifests, and audit readiness.",
   },
   zh: {
     title: "Agent 安全评估",
