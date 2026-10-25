@@ -526,5 +526,5 @@ export function teamDescription(locale: Locale): string {
   if (locale === "ko") {
     return "XingAI는 Xing과 Allen이 공동 창립했습니다. 리서치·반론·검증·사용자·테크 다섯 에이전트와 Vision(星哥)이 일하는 방식이며, 최종 결정은 사람이 합니다.";
   }
-  return "XingAI is co-founded by Xing and Allen. Five AI agent roles — research, challenge, verify, user context and tech & tools — plus Xing Ge for Vision describe how we work. A person makes the final decision.";
+  return "XingAI is co-founded by Xing and Allen. Five agents — research, challenge, verify, user context and tech & tools — plus Xing Ge for Vision. A person decides.";
 }

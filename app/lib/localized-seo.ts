@@ -10,7 +10,7 @@ export function homeDescription(locale: Locale): string {
   if (locale === "ko") {
     return "결정이 어려울 땐, XingAI에게 물어보세요. XingAI는 리서치하고, 반론하고, 근거를 보여 준 뒤 결정은 당신에게 맡기는 AI 의사결정 시스템입니다. AI 산업 지도와 여행·요리·옷차림 AI를 무료로 써 보세요.";
   }
-  return "When in doubt, ask XingAI. XingAI builds AI decision systems that research, challenge and show the evidence — then you decide. Try the AI Industry Map, Travel, Cook and Wear AI free.";
+  return "When in doubt, ask XingAI. AI decision systems that research, challenge and show the evidence — you decide. Try the AI Industry Map, Travel, Cook and Wear AI.";
 }
 
 export function appsCatalogDescription(locale: Locale): string {
