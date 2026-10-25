@@ -56,8 +56,8 @@ const translations = {
     legalNotFound: "Page not found",
 
     // Home
-    tagline: "AI Decision Systems",
-    taglineSub: "Not just chat.",
+    tagline: "When in doubt, ask XingAI.",
+    taglineSub: "Too much information? We filter it. A hard decision? We help you make it.",
     promoVideoTitle: "Watch: XingAI in 150 seconds",
     promoVideoCaption:
       "One family of focused AI decision systems — see how XingAI turns a question into one clear next step.",
@@ -486,8 +486,8 @@ const translations = {
     legalRelated: "\u76f8\u5173\u653f\u7b56",
     legalNotFound: "\u9875\u9762\u672a\u627e\u5230",
 
-    tagline: "AI \u51b3\u7b56\u7cfb\u7edf",
-    taglineSub: "不只是聊天。",
+    tagline: "遇事不決，先問 XingAI",
+    taglineSub: "信息太多，我們替你篩；決定太難，我們幫你下。",
     promoVideoTitle: "影片介紹：150 秒認識 XingAI",
     promoVideoCaption:
       "一整套專注的 AI 決策系統——看 XingAI 如何把一個問題，變成一個清晰的下一步。",
@@ -898,8 +898,8 @@ const translations = {
     legalRelated: "\uad00\ub828 \uc815\ucc45",
     legalNotFound: "\ud398\uc774\uc9c0\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4",
 
-    tagline: "AI \uc758\uc0ac\uacb0\uc815 \uc2dc\uc2a4\ud15c",
-    taglineSub: "단순한 채팅이 아닙니다.",
+    tagline: "결정이 어려울 땐, XingAI에게 물어보세요.",
+    taglineSub: "정보가 너무 많다면 저희가 걸러 드리고, 결정이 어렵다면 함께 내려 드립니다.",
     promoVideoTitle: "영상으로 보기: 150초 만에 만나는 XingAI",
     promoVideoCaption:
       "집중형 AI 의사결정 시스템 한 가족 — XingAI가 질문을 하나의 명확한 다음 단계로 바꾸는 과정을 확인하세요.",

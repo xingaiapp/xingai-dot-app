@@ -4447,6 +4447,13 @@ html[data-theme="dark"] .contact-form__input:focus {
   color: var(--muted);
 }
 
+.footer-slogan {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 .footer-logo {
   display: block;
   height: 2.125rem;

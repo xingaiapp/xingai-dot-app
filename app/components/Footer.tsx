@@ -185,6 +185,7 @@ export default function Footer() {
             sizes="(max-width: 48rem) 7.5rem, 9rem"
           />
           <p className="footer-build">{t("footerBuild")}</p>
+          <p className="footer-slogan">{t("tagline")}</p>
         </div>
 
         <nav className="footer-column" aria-label={t("footerProduct")}>

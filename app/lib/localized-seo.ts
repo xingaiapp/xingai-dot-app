@@ -5,12 +5,12 @@ import { formatPageTitle, ogImageMeta, defaultOgImage, appsOgImage, storyOgImage
 
 export function homeDescription(locale: Locale): string {
   if (locale === "zh") {
-    return "XingAI 打造 AI 决策系统：先研究、再质疑、摆出依据，最后由你决定。免费试用 AI 产业地图，以及旅行、做饭、穿搭 AI。";
+    return "遇事不決，先問 XingAI。XingAI 打造 AI 决策系统：先研究、再质疑、摆出依据，最后由你决定。免费试用 AI 产业地图，以及旅行、做饭、穿搭 AI。";
   }
   if (locale === "ko") {
-    return "XingAI는 리서치하고, 반론하고, 근거를 보여 준 뒤 결정은 당신에게 맡기는 AI 의사결정 시스템입니다. AI 산업 지도와 여행·요리·옷차림 AI를 무료로 써 보세요.";
+    return "결정이 어려울 땐, XingAI에게 물어보세요. XingAI는 리서치하고, 반론하고, 근거를 보여 준 뒤 결정은 당신에게 맡기는 AI 의사결정 시스템입니다. AI 산업 지도와 여행·요리·옷차림 AI를 무료로 써 보세요.";
   }
-  return "XingAI builds AI decision systems that research, challenge and show the evidence — then you decide. Try the AI Industry Map, Travel, Cook and Wear AI free.";
+  return "When in doubt, ask XingAI. XingAI builds AI decision systems that research, challenge and show the evidence — then you decide. Try the AI Industry Map, Travel, Cook and Wear AI free.";
 }
 
 export function appsCatalogDescription(locale: Locale): string {
