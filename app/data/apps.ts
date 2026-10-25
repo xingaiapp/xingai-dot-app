@@ -652,13 +652,14 @@ export const apps: AppData[] = [
     sourceUrl: "https://github.com/xingaiapp/xingai-home-ai",
     sourceKind: "github",
     description:
-      "Preview for a home-repair decision: a sample photo leads to DIY steps or the trade to call. Safety answers can replace the repair steps. Not deployed. Photos are not uploaded.",
+      "Preview for a home-repair decision: a sample photo leads to DIY steps or the trade to call. Safety answers can replace the repair steps. Photos are not uploaded.",
     category: "Home AI",
     canDo: "Walk a sample leak to one next step, with tools, a sample budget, or a plumber path.",
     bestFor: "People who want a clear DIY-or-pro answer before they buy parts or book someone.",
-    clickTarget: "Product page on xingai.app. home.xingai.app is not live yet.",
-    launchStatus: "coming-soon",
-    comingSoon: true,
+    clickTarget: "Open the live preview at home.xingai.app.",
+    launchStatus: "demo",
+    comingSoon: false,
+    demoUrl: "https://home.xingai.app/",
     screenshots: [
       {
         src: "/home-demo-light.jpg",
@@ -676,7 +677,7 @@ export const apps: AppData[] = [
     roadmap: [
       { title: "project-init shell + legal/SEO/AEO", status: "shipped" },
       { title: "Sample sink-leak flow", status: "shipped" },
-      { title: "home.xingai.app deploy", status: "planned" },
+      { title: "home.xingai.app preview", status: "shipped" },
       { title: "Real photo diagnosis", status: "planned" },
     ],
   },
@@ -1410,13 +1411,13 @@ const localizedAppCopy: Partial<
       tagline: "看见问题。知道下一步。",
       category: "家居 AI",
       description:
-        "家居维修决定的预览：示例照片走到自己修的步骤，或该找的工种。安全回答可以换掉维修步骤。尚未部署。不会上传照片。",
+        "家居维修决定的预览：示例照片走到自己修的步骤，或该找的工种。安全回答可以换掉维修步骤。不会上传照片。线上 home.xingai.app。",
       canDo: "把一次示例漏水走到一个下一步：工具、示例预算，或水管工路径。",
       bestFor: "想在买零件或预约之前，先得到「自己修还是找师傅」的人。",
-      clickTarget: "xingai.app 上的产品页。home.xingai.app 还没上线。",
+      clickTarget: "打开 home.xingai.app 上的预览。",
       screenshots: ["从拍照到自己修或找师傅"],
       features: ["示例照片到 DIY 或师傅路径", "维修步骤前的安全页", "EN / 中文 / 한국어 + 浅色/深色", "真实照片诊断"],
-      roadmap: ["project-init 壳 + 法律/SEO/AEO", "示例水槽漏水流程", "部署 home.xingai.app", "真实照片诊断"],
+      roadmap: ["project-init 壳 + 法律/SEO/AEO", "示例水槽漏水流程", "home.xingai.app 预览", "真实照片诊断"],
     },
     "parent-ai": {
       tagline: "家庭支持",
@@ -1969,13 +1970,13 @@ const localizedAppCopy: Partial<
       tagline: "보고, 판단하고, 고친다.",
       category: "홈 AI",
       description:
-        "집수리 결정 미리보기. 예시 사진이 DIY 단계 또는 부를 업종으로 이어집니다. 안전 답은 수리 단계를 대체할 수 있습니다. 아직 배포되지 않았고, 사진은 올라가지 않습니다.",
+        "집수리 결정 미리보기. 예시 사진이 DIY 단계 또는 부를 업종으로 이어집니다. 안전 답은 수리 단계를 대체할 수 있습니다. 사진은 올라가지 않습니다. home.xingai.app 에서 볼 수 있습니다.",
       canDo: "예시 누수를 다음 행동 하나로 연결합니다. 도구, 예시 예산, 또는 배관공 경로.",
       bestFor: "부품을 사거나 예약하기 전에 DIY인지 전문가인지 정하고 싶은 사람.",
-      clickTarget: "xingai.app 제품 페이지. home.xingai.app 은 아직 라이브가 아닙니다.",
+      clickTarget: "home.xingai.app 미리보기를 엽니다.",
       screenshots: ["사진에서 DIY 또는 전문가 결정까지"],
       features: ["예시 사진에서 DIY/전문가 경로", "수리 단계 전 안전 화면", "EN / 中文 / 한국어 + 라이트/다크", "실제 사진 진단"],
-      roadmap: ["project-init 셸 + 법률/SEO/AEO", "싱크대 누수 예시 흐름", "home.xingai.app 배포", "실제 사진 진단"],
+      roadmap: ["project-init 셸 + 법률/SEO/AEO", "싱크대 누수 예시 흐름", "home.xingai.app 미리보기", "실제 사진 진단"],
     },
     "parent-ai": {
       tagline: "가족 지원",

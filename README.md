@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.25a
+**Version:** 2026.10.25b
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.25b` XingAI Home preview is live at [home.xingai.app](https://home.xingai.app/). The catalog card links there.
 
 `2026.10.25a` Catalog: XingAI Home is listed as coming soon (`/apps/home-ai`). The product shell is in the home repo. `home.xingai.app` is not live.
 
