@@ -15,7 +15,7 @@ type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 function storyTitle(locale: ReturnType<typeof parseRoutingLocale>) {
   if (locale === "zh") return "XingAI 如何运转：一个系统，长出所有 XingAI 应用";
   if (locale === "ko") return "XingAI의 작동 방식: 하나의 시스템, 모든 XingAI 앱의 뒤에서";
-  return "How XingAI Works: One System Behind Every AI App We Ship";
+  return "How XingAI Works: One System Behind Every AI App";
 }
 
 function storyDescription(locale: ReturnType<typeof parseRoutingLocale>) {
