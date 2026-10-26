@@ -652,7 +652,7 @@ export const apps: AppData[] = [
     sourceUrl: "https://github.com/xingaiapp/xingai-home-ai",
     sourceKind: "github",
     description:
-      "Preview for a home-repair decision: a sample photo leads to DIY steps or the trade to call. Safety answers can replace the repair steps. Photos are not uploaded.",
+      "Preview for a home-repair decision: a sample photo leads to DIY steps or the trade to call. Safety answers can replace repair steps. Photos are not uploaded.",
     category: "Home AI",
     canDo: "Walk a sample leak to one next step, with tools, a sample budget, or a plumber path.",
     bestFor: "People who want a clear DIY-or-pro answer before they buy parts or book someone.",

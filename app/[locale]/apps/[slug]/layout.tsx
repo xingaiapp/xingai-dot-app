@@ -113,8 +113,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const appUrl = publicUrl(locale, appPath);
   const image = ogImageForApp(app);
 
+  // Keep the rendered <title> within the ~60-char SERP budget: drop the brand
+  // suffix when name + tagline already fill it (tagline stays on the page).
+  const fullTitle = `${app.name} — ${app.tagline} | XingAI`;
+  const title = fullTitle.length > 60 ? `${app.name} — ${app.tagline}` : fullTitle;
   return {
-    title: `${app.name} — ${app.tagline} | XingAI`,
+    title,
     description: app.description,
     keywords: [app.name, app.category, app.tagline, "XingAI", "AI decision systems"],
     robots: isIndexableApp(app) ? undefined : { index: false, follow: false },
