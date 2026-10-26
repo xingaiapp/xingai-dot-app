@@ -3,6 +3,7 @@ import { teamDescription, teamTitle } from "../../data/team";
 import { parseRoutingLocale, publicUrl } from "../../lib/locale-routing";
 import { localizedOpenGraph, pageAlternates } from "../../lib/localized-seo";
 import { formatPageTitle, ogImageMeta, siteUrl } from "../../lib/site-seo";
+import { buildTeamFaq } from "../../lib/static-faq-schema";
 
 const path = "/team";
 
@@ -72,6 +73,12 @@ export default async function TeamLayout({ children, params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(teamJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildTeamFaq(locale, pageUrl, teamDescription(locale))),
+        }}
       />
       {children}
     </>

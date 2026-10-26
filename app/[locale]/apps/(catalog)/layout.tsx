@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { apps } from "../../../data/apps";
+import { apps, getPublicCatalogApps } from "../../../data/apps";
 import { buildAppsCatalogGraph } from "../../../lib/seo-json-ld";
-import { parseRoutingLocale } from "../../../lib/locale-routing";
+import { parseRoutingLocale, publicUrl } from "../../../lib/locale-routing";
 import {
   appsCatalogDescription,
   appsOg,
@@ -9,6 +9,7 @@ import {
   pageAlternates,
 } from "../../../lib/localized-seo";
 import { formatPageTitle } from "../../../lib/site-seo";
+import { buildAppsCatalogFaq } from "../../../lib/static-faq-schema";
 
 function appsPageTitle(locale: ReturnType<typeof parseRoutingLocale>) {
   if (locale === "zh") return "AI 产品";
@@ -47,12 +48,23 @@ export default async function AppsLayout({ children, params }: Props) {
   const { locale: raw } = await params;
   const locale = parseRoutingLocale(raw);
   const jsonLd = buildAppsCatalogGraph(apps, locale);
+  const publicApps = getPublicCatalogApps(locale);
+  const faqJsonLd = buildAppsCatalogFaq(
+    locale,
+    publicUrl(locale, path),
+    publicApps.map((app) => app.name),
+    publicApps.filter((app) => app.launchStatus === "live").map((app) => app.name),
+  );
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {children}
     </>

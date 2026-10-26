@@ -6,6 +6,7 @@ import {
   pageAlternates,
   storyOg,
 } from "../../lib/localized-seo";
+import { buildStoryFaq } from "../../lib/static-faq-schema";
 import { formatPageTitle, siteUrl } from "../../lib/site-seo";
 
 const path = "/story";
@@ -85,6 +86,19 @@ export default async function StoryLayout({ children, params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(storyJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildStoryFaq(
+              locale,
+              pageUrl,
+              description,
+              localizedApps.map((app) => app.name),
+            ),
+          ),
+        }}
       />
       {children}
     </>
