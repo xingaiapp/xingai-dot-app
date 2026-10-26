@@ -16,7 +16,7 @@ function ogImageForApp(app: AppData): { url: string; alt: string } {
   };
 }
 
-function buildAppFaq(app: AppData, appUrl: string) {
+function buildAppFaq(app: AppData, appUrl: string, locale: "en" | "zh" | "ko") {
   if (app.comingSoon) {
     return {
       "@type": "FAQPage",
@@ -80,23 +80,34 @@ function buildAppFaq(app: AppData, appUrl: string) {
     };
   }
 
+  // Generic branch only: questions localized, because the answers
+  // (description / bestFor / canDo) are localized app data. The comingSoon
+  // and travel-ai branches keep English Q&A: their answers are hardcoded
+  // English strings, and a localized question over an English answer would
+  // be a mixed-language pair.
+  const genericQuestions: Record<"en" | "zh" | "ko", [string, string, string]> = {
+    en: [`What is ${app.name}?`, `Who is ${app.name} best for?`, `What can ${app.name} do?`],
+    zh: [`${app.name}是什么？`, `${app.name}最适合谁？`, `${app.name}能做什么？`],
+    ko: [`${app.name}은(는) 무엇인가요?`, `${app.name}은(는) 누구에게 가장 적합한가요?`, `${app.name}은(는) 무엇을 할 수 있나요?`],
+  };
+  const [qWhat, qWho, qDo] = genericQuestions[locale];
   return {
     "@type": "FAQPage",
     "@id": `${appUrl}#faq`,
     mainEntity: [
       {
         "@type": "Question",
-        name: `What is ${app.name}?`,
+        name: qWhat,
         acceptedAnswer: { "@type": "Answer", text: app.description },
       },
       {
         "@type": "Question",
-        name: `Who is ${app.name} best for?`,
+        name: qWho,
         acceptedAnswer: { "@type": "Answer", text: app.bestFor },
       },
       {
         "@type": "Question",
-        name: `What can ${app.name} do?`,
+        name: qDo,
         acceptedAnswer: { "@type": "Answer", text: app.canDo },
       },
     ],
@@ -185,7 +196,7 @@ export default async function AppSlugLayout({
         { "@type": "ListItem", position: 3, name: app.name, item: appUrl },
       ],
     },
-    buildAppFaq(app, appUrl),
+    buildAppFaq(app, appUrl, locale),
   ];
 
   const jsonLd = {

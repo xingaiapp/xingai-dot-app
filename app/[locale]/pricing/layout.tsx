@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { parseRoutingLocale } from "../../lib/locale-routing";
+import { parseRoutingLocale, publicUrl } from "../../lib/locale-routing";
 import { localizedPageMetadata, type LocalizedPageCopy } from "../../lib/localized-seo";
+import { buildPricingFaq } from "../../lib/static-faq-schema";
 
 const path = "/pricing";
 
@@ -28,6 +29,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return localizedPageMetadata(parseRoutingLocale(locale), path, copy);
 }
 
-export default function PricingLayout({ children }: Props) {
-  return <>{children}</>;
+export default async function PricingLayout({ children, params }: Props) {
+  const { locale: raw } = await params;
+  const locale = parseRoutingLocale(raw);
+  const pageUrl = publicUrl(locale, path);
+  const faqJsonLd = buildPricingFaq(locale, pageUrl, copy[locale].description);
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      {children}
+    </>
+  );
 }
