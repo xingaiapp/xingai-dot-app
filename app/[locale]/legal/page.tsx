@@ -43,19 +43,49 @@ export default async function LegalIndexPage({ params }: Props) {
   const locale = parseRoutingLocale(raw);
   const label = (row: (typeof LINKS)[number]) =>
     locale === "zh" ? row.zh : locale === "ko" ? row.ko : row.en;
+  const lead =
+    locale === "zh"
+      ? "XingAI 产品相关的隐私、条款与免责声明。输出仅供参考，请自行核实后行动。"
+      : locale === "ko"
+        ? "XingAI 제품의 개인정보, 약관, 면책 고지입니다. 출력은 참고용이며 직접 확인 후 행동하세요."
+        : "Privacy, terms, and disclaimer for XingAI products. Outputs are informational — verify before you act.";
+  const sep = locale === "zh" ? "、" : ", ";
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: locale === "zh" ? "zh-CN" : locale,
+    mainEntity: [
+      {
+        "@type": "Question",
+        name:
+          locale === "zh" ? "这一页有什么？" : locale === "ko" ? "이 페이지에는 무엇이 있나요?" : "What is on this page?",
+        acceptedAnswer: { "@type": "Answer", text: lead },
+      },
+      {
+        "@type": "Question",
+        name:
+          locale === "zh"
+            ? "列出了哪些法律文件？"
+            : locale === "ko"
+              ? "어떤 법률 문서가 있나요?"
+              : "Which legal documents are listed?",
+        acceptedAnswer: { "@type": "Answer", text: LINKS.map((row) => label(row)).join(sep) },
+      },
+    ],
+  };
 
   return (
     <main className="wrap">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="page-header">
         <h1 className="page-heading">
           {locale === "zh" ? "法律与合规" : locale === "ko" ? "법률 고지" : "Legal"}
         </h1>
         <p className="page-lead">
-          {locale === "zh"
-            ? "XingAI 产品相关的隐私、条款与免责声明。输出仅供参考，请自行核实后行动。"
-            : locale === "ko"
-              ? "XingAI 제품의 개인정보, 약관, 면책 고지입니다. 출력은 참고용이며 직접 확인 후 행동하세요."
-              : "Privacy, terms, and disclaimer for XingAI products. Outputs are informational — verify before you act."}
+          {lead}
         </p>
       </section>
       <section className="detail-section">
