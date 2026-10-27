@@ -1,6 +1,7 @@
 # XingAI
 
 Primary URL: https://xingai.app
+Last updated: 2026-10-26
 
 XingAI builds focused AI decision systems for everyday life and research.
 It is not a generic chatbot. Each product is built around one decision
