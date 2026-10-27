@@ -77,6 +77,7 @@ export function buildSiteIdentityGraph() {
           "https://github.com/xingaiapp",
           "https://www.linkedin.com/in/xingaiapp/",
           "https://x.com/XingAIApp",
+          "https://www.youtube.com/@xingaiapp",
         ],
         founder: [
           { "@type": "Person", name: "Xing", jobTitle: "Co-founder & AI Architect" },
