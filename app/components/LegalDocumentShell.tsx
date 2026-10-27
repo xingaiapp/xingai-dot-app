@@ -27,6 +27,35 @@ export default async function LegalDocumentShell({ docId }: Props) {
 
   return (
     <main className="wrap legal-wrap">
+      {/* FAQPage from visible copy only: the first paragraph of the first
+          section, and the second section under its own heading. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            inLanguage: locale === "zh" ? "zh-CN" : locale,
+            mainEntity: [
+              {
+                "@type": "Question",
+                name:
+                  locale === "zh"
+                    ? "这一页说明了什么？"
+                    : locale === "ko"
+                      ? "이 페이지는 무엇을 설명하나요?"
+                      : "What does this page explain?",
+                acceptedAnswer: { "@type": "Answer", text: doc.sections[0].paragraphs[0] },
+              },
+              {
+                "@type": "Question",
+                name: doc.sections[1].heading,
+                acceptedAnswer: { "@type": "Answer", text: doc.sections[1].paragraphs[0] },
+              },
+            ],
+          }),
+        }}
+      />
       <section className="page-header">
         <Link href={path("/")} className="breadcrumb">
           &larr; {labels.navHome}
