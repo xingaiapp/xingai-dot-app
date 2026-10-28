@@ -6771,3 +6771,77 @@ html[data-theme="dark"] .mobile-drawer {
     flex: 0 1 auto;
   }
 }
+
+/* ── /go social bio funnel (ADR-0117) ─────────────────────────────── */
+.go-main {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.go-logo {
+  width: min(15rem, 70vw);
+  height: auto;
+}
+.go-logo--dark {
+  display: none;
+}
+html[data-theme="dark"] .go-logo--light {
+  display: none;
+}
+html[data-theme="dark"] .go-logo--dark {
+  display: block;
+}
+.go-slogan {
+  margin: 1rem 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.go-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+.go-card {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  min-height: 4.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: left;
+}
+.go-card:active {
+  background: var(--soft-bg);
+}
+.go-card-emoji {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+.go-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.go-card-name {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: var(--ink-strong);
+}
+.go-card-tag {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.go-card-arrow {
+  margin-left: auto;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
