@@ -107,12 +107,13 @@ export function buildSiteGraph(apps: AppData[], locale: Locale, pageUrl: string)
   const localizedApps = getPublicCatalogApps(locale);
   const description = homeDescription(locale);
   const title = homeTitle(locale);
-  const identity = buildSiteIdentityGraph();
+  // NOTE: sitewide identity (Organization/WebSite) is injected once by
+  // app/[locale]/layout.tsx via buildSiteIdentityGraph() — do NOT re-attach
+  // it here, otherwise the homepage emits duplicate @id nodes.
 
   return {
     "@context": "https://schema.org",
     "@graph": [
-      ...(identity["@graph"] as Record<string, unknown>[]),
       {
         "@type": "WebPage",
         "@id": `${pageUrl}#webpage`,
