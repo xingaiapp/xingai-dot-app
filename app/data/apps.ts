@@ -1312,9 +1312,9 @@ const localizedAppCopy: Partial<
       tagline: "讓每個結論有據可查",
       category: "研究 AI",
       description:
-        "Claim → 證據 → 引用驗證。把研究文件拆成可核查的 claim，逐條給出判定——支援、部分支援、付費牆攔截或無引用。Research AI 與理賠驗證共用同一引擎。",
-      canDo: "從文件抽取 claim，繫結引用信源，檢查可達性，並給出支援度判定與覆蓋率指標。",
-      bestFor: "需要知道文件裡哪些結論真的站得住的研究者與分析師。",
+        "Claim → 證據 → 引用驗證。把研究檔案拆成可核查的 claim，逐條給出判定——支援、部分支援、付費牆攔截或無引用。Research AI 與理賠驗證共用同一引擎。",
+      canDo: "從檔案抽取 claim，繫結引用信源，檢查可達性，並給出支援度判定與覆蓋率指標。",
+      bestFor: "需要知道檔案裡哪些結論真的站得住的研究者與分析師。",
       clickTarget: "產品詳情與驗證看板演示。",
       screenshots: ["引用驗證看板"],
       features: [
@@ -1436,7 +1436,7 @@ const localizedAppCopy: Partial<
       description:
         "面向非母語工程師的 14 天溝通與魅力訓練——信任、衝突、反饋與領導力英語，場景偏 Azure/.NET，而不只是語法。",
       canDo: "按 14 天課程練習真實工程場景，獲得 Level 1/2/3 改寫，並沉澱可複用的資深表達。",
-      bestFor: "需要更清楚地寫 PR、事故同步、設計評審與干係人更新的工程師。",
+      bestFor: "需要更清楚地寫 PR、事故同步、設計評審與利害關係人更新的工程師。",
       clickTarget: "產品詳情與 GitHub 原始碼。",
       screenshots: ["每日技能與逐句溝通評審"],
       features: [
@@ -1501,7 +1501,7 @@ const localizedAppCopy: Partial<
       screenshots: ["決定 \u2192 比較 \u2192 先訂計劃"],
       roadmap: [
         "目的地比較系統",
-        "Inspire / \u5e2e\u6211\u9009 \u6a21\u5f0f",
+        "Inspire / \u5e6b\u6211\u9078 \u6a21\u5f0f",
         "優先預訂行程預覽",
         "首次到訪城市指南：香港",
         "本機旅行歷史（僅此瀏覽器）",
@@ -1589,22 +1589,22 @@ const localizedAppCopy: Partial<
       ],
     },
     "performance-sim": {
-      tagline: "\u6a21\u62df\u7b56\u7565",
+      tagline: "\u6a21\u64ec\u7b56\u7565",
       category: "\u91d1\u878d AI",
       description:
-        "\u7ee9\u6548\u6a21\u62df\u5b9e\u9a8c\u5ba4\uff1a\u5bf9\u6bd4\u4e0d\u540c\u4ea4\u6613\u89c4\u5219\uff0c\u4f7f\u7528\u7eb8\u9762\u8d26\u672c\u67e5\u770b\u7ed3\u679c\uff0c\u4e0d\u6d89\u53ca\u5b9e\u9645\u5238\u5546\u4e0b\u5355\u3002",
-      canDo: "\u7528\u4e0d\u540c\u89c4\u5219\u8dd1\u4e00\u6b21\u7eb8\u9762\u7ee9\u6548\u6a21\u62df\u3002",
-      bestFor: "\u60f3\u5148\u9a8c\u8bc1\u89c4\u5219\uff0c\u518d\u51b3\u5b9a\u8981\u4e0d\u8981\u5f53\u6210\u771f\u7684\u8def\u7ebf\u7684\u4eba\u3002",
-      clickTarget: "\u6253\u5f00 lab.xingai.app \u7684\u5728\u7ebf Demo\u3002",
+        "\u7e3e\u6548\u6a21\u64ec\u5be6\u9a57\u5ba4\uff1a\u5c0d\u6bd4\u4e0d\u540c\u4ea4\u6613\u898f\u5247\uff0c\u4f7f\u7528\u7d19\u9762\u8cec\u672c\u6aa2\u8996\u7d50\u679c\uff0c\u4e0d\u6d89\u53ca\u5be6\u969b\u5238\u5546\u4e0b\u55ae\u3002",
+      canDo: "\u7528\u4e0d\u540c\u898f\u5247\u8dd1\u4e00\u6b21\u7d19\u9762\u7e3e\u6548\u6a21\u64ec\u3002",
+      bestFor: "\u60f3\u5148\u9a57\u8b49\u898f\u5247\uff0c\u518d\u6c7a\u5b9a\u8981\u4e0d\u8981\u7576\u6210\u771f\u7684\u8def\u7dda\u7684\u4eba\u3002",
+      clickTarget: "\u958b\u555f lab.xingai.app \u7684\u7dda\u4e0a Demo\u3002",
     },
     "t-today": {
-      tagline: "\u4eca\u65e5\u8ba1\u5212",
+      tagline: "\u4eca\u65e5\u8a08\u5283",
       category: "\u91d1\u878d AI",
       description:
-        "\u4ea4\u6613\u65e5\u8ba1\u5212\u52a9\u624b\uff1a\u628a\u6301\u4ed3\u622a\u56fe\u53d8\u6210\u89c4\u5219 + AI \u4eca\u65e5\u8ba1\u5212\u3002\u57fa\u7840\u529f\u80fd\u514d\u8d39\u3001\u65e0\u9700\u767b\u5f55\uff1bAI \u5206\u6790\u76ee\u524d\u4e3a\u767d\u540d\u5355\u9080\u8bf7\u5236\uff0c\u8054\u7cfb\u6211\u4eec\u5373\u53ef\u52a0\u5165\u3002",
-      canDo: "\u4ece\u6301\u4ed3\u622a\u56fe\u751f\u6210\u7ed3\u6784\u5316\u7684\u5f53\u65e5\u8ba1\u5212\u3002",
-      bestFor: "\u60f3\u8981\u53ef\u91cd\u590d\u7684\u5f00\u76d8\u524d\u68c0\u67e5\u6e05\u5355\u548c\u7b56\u7565\u8ba1\u5212\u7684\u6d3b\u8dc3\u4ea4\u6613\u8005\u3002",
-      clickTarget: "\u57fa\u7840\u529f\u80fd\u53ef\u76f4\u63a5\u5728 t.xingai.app \u4f7f\u7528\uff1bAI \u5206\u6790\u8bf7\u514d\u8d39\u7533\u8bf7\u5185\u6d4b\u3002",
+        "\u4ea4\u6613\u65e5\u8a08\u5283\u52a9\u624b\uff1a\u628a\u6301\u5009\u622a\u5716\u8b8a\u6210\u898f\u5247 + AI \u4eca\u65e5\u8a08\u5283\u3002\u57fa\u790e\u529f\u80fd\u514d\u8cbb\u3001\u7121\u9700\u767b\u5165\uff1bAI \u5206\u6790\u76ee\u524d\u70ba\u767d\u540d\u55ae\u9080\u8acb\u5236\uff0c\u806f\u7d61\u6211\u5011\u5373\u53ef\u52a0\u5165\u3002",
+      canDo: "\u5f9e\u6301\u5009\u622a\u5716\u751f\u6210\u7d50\u69cb\u5316\u7684\u7576\u65e5\u8a08\u5283\u3002",
+      bestFor: "\u60f3\u8981\u53ef\u91cd\u8907\u7684\u958b\u76e4\u524d\u6aa2\u67e5\u6e05\u55ae\u548c\u7b56\u7565\u8a08\u5283\u7684\u6d3b\u8e8d\u4ea4\u6613\u8005\u3002",
+      clickTarget: "\u57fa\u790e\u529f\u80fd\u53ef\u76f4\u63a5\u5728 t.xingai.app \u4f7f\u7528\uff1bAI \u5206\u6790\u8acb\u514d\u8cbb\u7533\u8acb\u5167\u6e2c\u3002",
     },
   },
   ko: {

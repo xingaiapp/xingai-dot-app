@@ -602,7 +602,7 @@ const translations = {
     aboutMissionText: "打造 AI 工具\uff0c幫助人們做出更好的日常決策\u2014\u2014美食\u3001健康\u3001財務\u3001生產力\u2014\u2014無需複雜性或熱度\u3002每個產品都優先考慮可靠性和清晰度\u3002",
     aboutStack: "技術棧",
     aboutStackText:
-      "前端 Next.js。後端 FastAPI。隱私優先時使用本地 AI 模型。Vercel 部署。部分倉庫與文件會公開以便學習；多數產品程式碼仍保持私有。",
+      "前端 Next.js。後端 FastAPI。隱私優先時使用本地 AI 模型。Vercel 部署。部分倉庫與檔案會公開以便學習；多數產品程式碼仍保持私有。",
     aboutBuilding: "公開構建",
     aboutBuildingText:
       "實驗、最佳化和釋出——我們在 GitHub、LinkedIn 和 X 上分享部分過程。我們偏好釋出和迭代，而非無聲完善。",
@@ -794,7 +794,7 @@ const translations = {
       "Agent 防火牆的上限就是它的攔截點。如果 agent 不經過策略層就能碰到 shell、檔案系統或網路，那這道防火牆只是裝飾。",
     engEx2Cite: "ADR-001《攔截點》— Agent Firewall，2026-07-05",
     engEx2Body:
-      "三種架構對著真實約束比過，選定一種，並把缺口寫進文件而不是留給客戶去撞：v1 防的是被騙的 agent，不是惡意的本地使用者。這句話寫在 README 裡，不只在 ADR 裡。",
+      "三種架構對著真實約束比過，選定一種，並把缺口寫進檔案而不是留給客戶去撞：v1 防的是被騙的 agent，不是惡意的本地使用者。這句話寫在 README 裡，不只在 ADR 裡。",
     engEx3Heading: "說清楚一個綠燈不代表什麼",
     engEx3Quote:
       "它無法判斷這個指標是否合適、資料集是否有代表性、樣本量是否足以讓差異成立。",
@@ -810,7 +810,7 @@ const translations = {
     engOpenBlog: "XingAI Tech Blog — 決策系統怎麼上線的雙語工程文章（已上線）",
     engTalkHeading: "如果你需要的是這個層面",
     engTalkBody:
-      "有價值的對話通常很具體：一個即將放到客戶面前的 agent、一片沒人審過的 MCP 暴露面、一條在不同頁面給出不同答案的決策鏈路。帶這個來，不用帶需求文件。",
+      "有價值的對話通常很具體：一個即將放到客戶面前的 agent、一片沒人審過的 MCP 暴露面、一條在不同頁面給出不同答案的決策鏈路。帶這個來，不用帶需求檔案。",
     engTalkCta: "開始一次技術對話",
 
     // Services — Agent Security Assessment
