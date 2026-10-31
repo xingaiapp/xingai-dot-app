@@ -6845,3 +6845,317 @@ html[data-theme="dark"] .go-logo--dark {
   font-size: 1.25rem;
   color: var(--muted);
 }
+/* ── Agent Team page ── */
+.at-lead {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+}
+
+.at-diagram {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1rem 1rem;
+}
+
+.at-diagram__scroll {
+  overflow-x: auto;
+}
+
+.at-diagram__scroll svg {
+  min-width: 680px;
+  width: 100%;
+}
+
+.at-diagram__caption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
+
+.at-section {
+  margin: 2.5rem 0;
+}
+
+.at-groups {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 36rem) {
+  .at-groups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .at-groups {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.at-group {
+  margin-bottom: 0;
+}
+
+.at-group__head {
+  margin-bottom: 0.75rem;
+}
+
+.at-group__name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+}
+
+.at-group__meta {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.at-group__tagline {
+  margin: 0.4rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.at-members {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.at-member {
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.at-member__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.at-member__name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+}
+
+.at-badge {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+}
+
+.at-badge--read-only {
+  color: var(--muted);
+  background: var(--soft-bg);
+}
+
+.at-badge--can-edit {
+  color: #b45309;
+  background: rgba(226, 113, 29, 0.12);
+}
+
+.at-badge--gated {
+  color: var(--purple);
+  background: rgba(138, 43, 226, 0.1);
+}
+
+.at-member__duty {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.at-stats {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 36rem) {
+  .at-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.at-stat {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.at-stat__value {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--blue);
+}
+
+.at-stat__label {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.at-rules {
+  list-style: none;
+  margin: 0;
+}
+
+.at-rule {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.55rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.at-rule + .at-rule {
+  border-top: 1px solid var(--line);
+}
+
+.at-rule__mark {
+  color: #0e9f6e;
+  font-weight: 700;
+}
+
+.at-cross__body {
+  max-width: 46rem;
+}
+
+.at-systems-note {
+  margin: 1.25rem 0 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.at-systems {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.at-system {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-strong);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  background: var(--panel-bg);
+}
+
+.at-closing {
+  margin: 3rem 0 1rem;
+  text-align: center;
+}
+
+.at-closing__slogan {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-strong);
+}
+
+.at-closing__line {
+  margin: 0.6rem 0 0;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* ── Agent Team diagram (SVG) ── */
+.atd-svg text {
+  font-family: inherit;
+}
+
+.atd-box {
+  fill: var(--panel-bg);
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+
+.atd-box--chief {
+  stroke: var(--blue);
+  stroke-width: 2;
+}
+
+.atd-wire {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  opacity: 0.55;
+}
+
+.atd-divider {
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+
+.atd-divider--faint {
+  stroke-width: 1;
+  opacity: 0.6;
+}
+
+.atd-kicker {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  fill: var(--muted);
+}
+
+.atd-chief-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 26px;
+  font-weight: 700;
+  fill: var(--ink-strong);
+}
+
+.atd-group-name {
+  font-size: 17px;
+  font-weight: 700;
+  fill: var(--ink-strong);
+}
+
+.atd-member-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 15px;
+  font-weight: 600;
+  fill: var(--ink-strong);
+}
+
+.atd-duty {
+  font-size: 12.5px;
+  fill: var(--muted);
+}
+
+.atd-keyline {
+  font-size: 11.5px;
+  font-style: italic;
+  fill: var(--muted);
+}

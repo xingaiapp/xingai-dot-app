@@ -13,6 +13,7 @@ export const STATIC_CONTENT_DATES: Record<string, Date> = {
   "/apps": new Date("2026-10-08T01:32:22Z"),
   "/story": new Date("2026-10-22T02:13:42Z"), // PR #41 (2026-10-21): /story SERP title/desc rewritten
   "/team": new Date("2026-10-05T14:45:53Z"),
+  "/agent-team": new Date("2026-10-31T14:10:00Z"), // ADR-0140: page launched
   "/about": new Date("2026-10-05T14:14:43Z"),
   "/contact": new Date("2026-10-08T01:25:47Z"),
   "/engineering": new Date("2026-10-01T19:20:14Z"),
