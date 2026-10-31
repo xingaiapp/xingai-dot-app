@@ -12,9 +12,9 @@ const copy: LocalizedPageCopy = {
       "Get in touch with XingAI — inquiries, custom AI projects, partnerships, and early access requests. Email contact@xingai.app.",
   },
   zh: {
-    title: "联系我们",
+    title: "聯絡我們",
     description:
-      "联系 XingAI：咨询、定制 AI 项目、合作与抢先体验申请。邮箱 contact@xingai.app。",
+      "聯絡 XingAI：諮詢、定製 AI 專案、合作與搶先體驗申請。郵箱 contact@xingai.app。",
   },
   ko: {
     title: "문의하기",

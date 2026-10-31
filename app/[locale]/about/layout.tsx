@@ -12,9 +12,9 @@ const copy: LocalizedPageCopy = {
       "Meet Xing and Allen — co-founders and AI architects building focused AI decision systems for everyday life at XingAI.",
   },
   zh: {
-    title: "关于我们",
+    title: "關於我們",
     description:
-      "认识 Xing 和 Allen——XingAI 的联合创始人、AI 架构师，专注打造面向日常生活的 AI 决策系统。",
+      "認識 Xing 和 Allen——XingAI 的聯合創始人、AI 架構師，專注打造面向日常生活的 AI 決策系統。",
   },
   ko: {
     title: "회사 소개",

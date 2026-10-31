@@ -11,9 +11,9 @@ const copy: LocalizedPageCopy = {
       "Fixed-scope security assessment for AI agents, MCP servers, and tool permissions — prompt injection exposure, permission manifests, and audit readiness.",
   },
   zh: {
-    title: "Agent 安全评估",
+    title: "Agent 安全評估",
     description:
-      "面向 AI Agent、MCP 服务器和工具权限的固定范围安全评估——提示注入暴露面、权限清单与审计就绪度，适合 .NET 和 Azure 团队。",
+      "面向 AI Agent、MCP 伺服器和工具許可權的固定範圍安全評估——提示注入暴露面、許可權清單與審計就緒度，適合 .NET 和 Azure 團隊。",
   },
   ko: {
     title: "에이전트 보안 평가",

@@ -14,7 +14,7 @@ const path = "/story";
 type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 
 function storyTitle(locale: ReturnType<typeof parseRoutingLocale>) {
-  if (locale === "zh") return "XingAI 如何运转：一个系统，长出所有 XingAI 应用";
+  if (locale === "zh") return "XingAI 如何運轉：一個系統，長出所有 XingAI 應用";
   if (locale === "ko") return "XingAI의 작동 방식: 하나의 시스템, 모든 XingAI 앱의 뒤에서";
   return "How XingAI Works: One System Behind Every AI App";
 }
@@ -22,7 +22,7 @@ function storyTitle(locale: ReturnType<typeof parseRoutingLocale>) {
 function storyDescription(locale: ReturnType<typeof parseRoutingLocale>) {
   // Keep under ~155–160 chars for SERP; title stays short via storyTitle + formatPageTitle.
   if (locale === "zh") {
-    return "看 XingAI 如何把一个想法变成持续运转的 AI 决策产品：Invest、Travel、Cook 等应用怎样长出来，又如何被证据与搜索数据持续改进。";
+    return "看 XingAI 如何把一個想法變成持續運轉的 AI 決策產品：Invest、Travel、Cook 等應用怎樣長出來，又如何被證據與搜尋資料持續改進。";
   }
   if (locale === "ko") {
     return "XingAI가 포착한 아이디어 하나를 Invest, Travel, Cook 같은 실제 AI 의사결정 제품으로 바꾸고, 근거와 검색 데이터로 계속 개선하는 방식을 보세요.";
@@ -78,7 +78,7 @@ export default async function StoryLayout({ children, params }: Props) {
         url: publicUrl(locale, `/apps/${app.slug}`),
       })),
     },
-    inLanguage: locale === "zh" ? "zh-CN" : locale === "ko" ? "ko" : "en",
+    inLanguage: locale === "zh" ? "zh-TW" : locale === "ko" ? "ko" : "en",
   };
 
   return (

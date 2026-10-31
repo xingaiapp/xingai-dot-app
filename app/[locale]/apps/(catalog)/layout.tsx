@@ -12,7 +12,7 @@ import { formatPageTitle } from "../../../lib/site-seo";
 import { buildAppsCatalogFaq } from "../../../lib/static-faq-schema";
 
 function appsPageTitle(locale: ReturnType<typeof parseRoutingLocale>) {
-  if (locale === "zh") return "AI 产品";
+  if (locale === "zh") return "AI 產品";
   if (locale === "ko") return "AI 제품";
   return "AI Products";
 }

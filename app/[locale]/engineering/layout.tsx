@@ -12,9 +12,9 @@ const copy: LocalizedPageCopy = {
       "337 bilingual architecture decision records across 25 repositories. Three verbatim excerpts showing how decisions get made — and what they do not cover.",
   },
   zh: {
-    title: "工程实践",
+    title: "工程實踐",
     description:
-      "25 个代码仓库中的 337 份双语架构决策记录（ADR）。三段原文摘录，展示决策是怎么做出的——以及每份记录写明不覆盖的范围。",
+      "25 個程式碼倉庫中的 337 份雙語架構決策記錄（ADR）。三段原文摘錄，展示決策是怎麼做出的——以及每份記錄寫明不覆蓋的範圍。",
   },
   ko: {
     title: "엔지니어링 실무",

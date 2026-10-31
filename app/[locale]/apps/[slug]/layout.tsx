@@ -87,7 +87,7 @@ function buildAppFaq(app: AppData, appUrl: string, locale: "en" | "zh" | "ko") {
   // be a mixed-language pair.
   const genericQuestions: Record<"en" | "zh" | "ko", [string, string, string]> = {
     en: [`What is ${app.name}?`, `Who is ${app.name} best for?`, `What can ${app.name} do?`],
-    zh: [`${app.name}是什么？`, `${app.name}最适合谁？`, `${app.name}能做什么？`],
+    zh: [`${app.name}是什麼？`, `${app.name}最適合誰？`, `${app.name}能做什麼？`],
     ko: [`${app.name}은(는) 무엇인가요?`, `${app.name}은(는) 누구에게 가장 적합한가요?`, `${app.name}은(는) 무엇을 할 수 있나요?`],
   };
   const [qWhat, qWho, qDo] = genericQuestions[locale];
@@ -184,7 +184,7 @@ export default async function AppSlugLayout({
       isPartOf: { "@id": `${siteUrl}/#website` },
       about: { "@id": `${appUrl}#software` },
       primaryImageOfPage: image.url,
-      inLanguage: locale === "zh" ? "zh-CN" : locale === "ko" ? "ko" : "en",
+      inLanguage: locale === "zh" ? "zh-TW" : locale === "ko" ? "ko" : "en",
     },
     buildSoftwareApplicationNode(app, locale),
     {

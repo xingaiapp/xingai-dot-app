@@ -8,12 +8,12 @@ type Props = { params: Promise<{ locale: string }> };
 
 const TITLE: Record<string, string> = {
   en: "Legal · XingAI",
-  zh: "法律与合规 · XingAI",
+  zh: "法律與合規 · XingAI",
   ko: "법률 고지 · XingAI",
 };
 const DESCRIPTION: Record<string, string> = {
   en: "Privacy Policy, Terms of Service, and Disclaimer for XingAI products.",
-  zh: "XingAI 产品相关的隐私、条款与免责声明。输出仅供参考，请自行核实后行动。",
+  zh: "XingAI 產品相關的隱私、條款與免責宣告。輸出僅供參考，請自行核實後行動。",
   ko: "XingAI 제품의 개인정보, 약관, 면책 고지입니다. 출력은 참고용이며 직접 확인 후 행동하세요.",
 };
 
@@ -33,9 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const LINKS = [
-  { href: "/legal/privacy", en: "Privacy Policy", zh: "隐私政策", ko: "개인정보 처리방침" },
-  { href: "/legal/terms", en: "Terms of Service", zh: "服务条款", ko: "이용약관" },
-  { href: "/legal/disclaimer", en: "Disclaimer", zh: "免责声明", ko: "면책 고지" },
+  { href: "/legal/privacy", en: "Privacy Policy", zh: "隱私政策", ko: "개인정보 처리방침" },
+  { href: "/legal/terms", en: "Terms of Service", zh: "服務條款", ko: "이용약관" },
+  { href: "/legal/disclaimer", en: "Disclaimer", zh: "免責宣告", ko: "면책 고지" },
 ] as const;
 
 export default async function LegalIndexPage({ params }: Props) {
@@ -45,7 +45,7 @@ export default async function LegalIndexPage({ params }: Props) {
     locale === "zh" ? row.zh : locale === "ko" ? row.ko : row.en;
   const lead =
     locale === "zh"
-      ? "XingAI 产品相关的隐私、条款与免责声明。输出仅供参考，请自行核实后行动。"
+      ? "XingAI 產品相關的隱私、條款與免責宣告。輸出僅供參考，請自行核實後行動。"
       : locale === "ko"
         ? "XingAI 제품의 개인정보, 약관, 면책 고지입니다. 출력은 참고용이며 직접 확인 후 행동하세요."
         : "Privacy, terms, and disclaimer for XingAI products. Outputs are informational — verify before you act.";
@@ -53,19 +53,19 @@ export default async function LegalIndexPage({ params }: Props) {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    inLanguage: locale === "zh" ? "zh-CN" : locale,
+    inLanguage: locale === "zh" ? "zh-TW" : locale,
     mainEntity: [
       {
         "@type": "Question",
         name:
-          locale === "zh" ? "这一页有什么？" : locale === "ko" ? "이 페이지에는 무엇이 있나요?" : "What is on this page?",
+          locale === "zh" ? "這一頁有什麼？" : locale === "ko" ? "이 페이지에는 무엇이 있나요?" : "What is on this page?",
         acceptedAnswer: { "@type": "Answer", text: lead },
       },
       {
         "@type": "Question",
         name:
           locale === "zh"
-            ? "列出了哪些法律文件？"
+            ? "列出了哪些法律檔案？"
             : locale === "ko"
               ? "어떤 법률 문서가 있나요?"
               : "Which legal documents are listed?",
@@ -82,7 +82,7 @@ export default async function LegalIndexPage({ params }: Props) {
       />
       <section className="page-header">
         <h1 className="page-heading">
-          {locale === "zh" ? "法律与合规" : locale === "ko" ? "법률 고지" : "Legal"}
+          {locale === "zh" ? "法律與合規" : locale === "ko" ? "법률 고지" : "Legal"}
         </h1>
         <p className="page-lead">
           {lead}
