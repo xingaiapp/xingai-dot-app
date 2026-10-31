@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server";
+import { clientKey, createRateLimiter } from "../../lib/rate-limit";
 
 export const runtime = "nodejs";
+
+// Every accepted request sends an email, so cap both one visitor and the whole instance.
+const perVisitor = createRateLimiter([
+  { windowMs: 60_000, max: 3 },
+  { windowMs: 3_600_000, max: 10 },
+]);
+const wholeInstance = createRateLimiter([{ windowMs: 3_600_000, max: 60 }]);
 
 const MAX_NAME = 120;
 const MAX_SUBJECT = 160;
@@ -48,6 +56,17 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY?.trim();
   if (!apiKey) {
     return NextResponse.json({ ok: false, error: "not_configured" }, { status: 503 });
+  }
+
+  // Only well-formed submissions reach this point, so malformed junk never uses up a visitor's allowance.
+  // Check the visitor first so a rejected visitor does not use up the instance-wide allowance.
+  const visitor = perVisitor(clientKey(request));
+  const limited = visitor.ok ? wholeInstance("all") : visitor;
+  if (!limited.ok) {
+    return NextResponse.json(
+      { ok: false, error: "rate_limited" },
+      { status: 429, headers: { "Retry-After": String(limited.retryAfterSec) } },
+    );
   }
 
   const to = process.env.CONTACT_TO_EMAIL?.trim() || "contact@xingai.app";
