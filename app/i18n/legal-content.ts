@@ -30,7 +30,7 @@ const en: Record<LegalDocId, LegalDoc> = {
         heading: "Information we collect",
         paragraphs: [
           "On this site we may collect information you send us directly, such as your email address and message contents when you contact us through the contact form or email.",
-          "We automatically receive basic technical data from your browser and device, including IP address, browser type, pages visited, and approximate region. This comes from standard hosting logs and cookieless Vercel Web Analytics (page views and optional CTA events we attach in the product UI).",
+          "We automatically receive basic technical data from your browser and device, including IP address, browser type, pages visited, and approximate region. This comes from standard hosting logs and cookieless Vercel Web Analytics (page views and optional CTA events we attach in the product UI). The site also loads Ahrefs Web Analytics, which counts visits.",
           "When you open a linked demo (for example cook.xingai.app or invest.xingai.app), that product’s site may collect additional data under its own policy.",
         ],
       },
@@ -52,7 +52,7 @@ const en: Record<LegalDocId, LegalDoc> = {
       {
         heading: "Sharing with service providers",
         paragraphs: [
-          "We use infrastructure providers that process data on our behalf to deliver the site — including Vercel for hosting and analytics, and Resend to deliver messages submitted through the contact form.",
+          "We use infrastructure providers that process data on our behalf to deliver the site — including Vercel for hosting and analytics, Ahrefs for visit analytics, and Resend to deliver messages submitted through the contact form.",
           "We may disclose information if required by law or to protect the rights, safety, and security of users and the public.",
         ],
       },
@@ -222,7 +222,7 @@ const zh: Record<LegalDocId, LegalDoc> = {
         heading: "我们收集的信息",
         paragraphs: [
           "您通过联系表单或邮件主动提供的信息（例如邮箱地址、消息内容）。",
-          "浏览器与设备的基础技术数据（如 IP、浏览器类型、访问页面、大致地区），来自常规托管日志，以及无 Cookie 的 Vercel Web Analytics（页面浏览与我们在产品界面附加的 CTA 事件）。",
+          "浏览器与设备的基础技术数据（如 IP、浏览器类型、访问页面、大致地区），来自常规托管日志，以及无 Cookie 的 Vercel Web Analytics（页面浏览与我们在产品界面附加的 CTA 事件）。本站还加载 Ahrefs Web Analytics，用于统计访问量。",
           "当您打开关联 Demo（如 cook.xingai.app）时，该产品站点可能按其政策收集额外数据。",
         ],
       },
@@ -244,7 +244,7 @@ const zh: Record<LegalDocId, LegalDoc> = {
       {
         heading: "与服务提供商共享",
         paragraphs: [
-          "我们使用基础设施服务商代表我们处理数据以提供网站——包括 Vercel（托管与分析）以及 Resend（投递联系表单消息）。",
+          "我们使用基础设施服务商代表我们处理数据以提供网站——包括 Vercel（托管与分析）、Ahrefs（访问统计）以及 Resend（投递联系表单消息）。",
           "在法律要求或为保护用户与公众安全所必需时，我们可能披露信息。",
         ],
       },
@@ -406,7 +406,7 @@ const ko: Record<LegalDocId, LegalDoc> = {
         heading: "수집하는 정보",
         paragraphs: [
           "문의 양식이나 이메일로 직접 제공하신 정보(이메일, 메시지 내용 등).",
-          "브라우저·기기의 기본 기술 데이터(IP, 브라우저 유형, 방문 페이지, 대략적 지역) — 호스팅 로그와 쿠키 없는 Vercel Web Analytics(페이지뷰 및 UI에 붙인 CTA 이벤트)를 통해 수집됩니다.",
+          "브라우저·기기의 기본 기술 데이터(IP, 브라우저 유형, 방문 페이지, 대략적 지역) — 호스팅 로그와 쿠키 없는 Vercel Web Analytics(페이지뷰 및 UI에 붙인 CTA 이벤트)를 통해 수집됩니다. 또한 방문 수를 세는 Ahrefs Web Analytics가 로드됩니다.",
           "연결된 데모(예: cook.xingai.app) 이용 시 해당 사이트가 자체 정책에 따라 추가 정보를 수집할 수 있습니다.",
         ],
       },
@@ -428,7 +428,7 @@ const ko: Record<LegalDocId, LegalDoc> = {
       {
         heading: "서비스 제공업체와 공유",
         paragraphs: [
-          "사이트 제공을 위해 인프라 업체가 당사를 대신해 데이터를 처리합니다 — Vercel(호스팅·분석)과 Resend(문의 양식 메일 전달)를 포함합니다.",
+          "사이트 제공을 위해 인프라 업체가 당사를 대신해 데이터를 처리합니다 — Vercel(호스팅·분석), Ahrefs(방문 분석), Resend(문의 양식 메일 전달)를 포함합니다.",
           "법률에 따르거나 이용자·공공의 안전을 보호하기 위해 필요한 경우 정보를 공개할 수 있습니다.",
         ],
       },

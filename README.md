@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.25b
+**Version:** 2026.10.31a
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.31a` Privacy policy: the analytics and service-provider sections now list all visit-analytics services in en, zh and ko.
 
 `2026.10.25b` XingAI Home preview is live at [home.xingai.app](https://home.xingai.app/). The catalog card links there.
 
