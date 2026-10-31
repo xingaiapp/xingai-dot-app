@@ -55,7 +55,7 @@ export default function TeamPage() {
             <p className="team-cast__vision-name">
               {copy.visionName}
               {locale !== "zh" && (
-                <span className="team-cast__zh" lang="zh-CN">
+                <span className="team-cast__zh" lang="zh-TW">
                   {copy.visionZhName}
                 </span>
               )}
@@ -82,7 +82,7 @@ export default function TeamPage() {
                     <span className="team-cast__leader-name">
                       {agent.name}
                       {locale !== "zh" && (
-                        <span className="team-cast__zh" lang="zh-CN">
+                        <span className="team-cast__zh" lang="zh-TW">
                           {role.zhName}
                         </span>
                       )}
@@ -136,7 +136,7 @@ export default function TeamPage() {
                     <h3 className="team-agent__name">
                       {agent.name}
                       {locale !== "zh" && (
-                        <span className="team-agent__zh" lang="zh-CN">
+                        <span className="team-agent__zh" lang="zh-TW">
                           {role.zhName}
                         </span>
                       )}

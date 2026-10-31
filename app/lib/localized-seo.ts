@@ -5,7 +5,7 @@ import { formatPageTitle, ogImageMeta, defaultOgImage, appsOgImage, storyOgImage
 
 export function homeDescription(locale: Locale): string {
   if (locale === "zh") {
-    return "遇事不決，先問 XingAI。XingAI 打造 AI 决策系统：先研究、再质疑、摆出依据，最后由你决定。免费试用 AI 产业地图，以及旅行、做饭、穿搭 AI。";
+    return "遇事不決，先問 XingAI。XingAI 打造 AI 決策系統：先研究、再質疑、擺出依據，最後由你決定。免費試用 AI 產業地圖，以及旅行、做飯、穿搭 AI。";
   }
   if (locale === "ko") {
     return "결정이 어려울 땐, XingAI에게 물어보세요. XingAI는 리서치하고, 반론하고, 근거를 보여 준 뒤 결정은 당신에게 맡기는 AI 의사결정 시스템입니다. AI 산업 지도와 여행·요리·옷차림 AI를 무료로 써 보세요.";
@@ -15,7 +15,7 @@ export function homeDescription(locale: Locale): string {
 
 export function appsCatalogDescription(locale: Locale): string {
   if (locale === "zh") {
-    return "浏览 XingAI 已上线与 Demo 工具。旗舰是 Invest AI 产业地图。完整目录含饮食、旅行、SAT 等。";
+    return "瀏覽 XingAI 已上線與 Demo 工具。旗艦是 Invest AI 產業地圖。完整目錄含飲食、旅行、SAT 等。";
   }
   if (locale === "ko") {
     return "XingAI 라이브·데모 도구를 둘러보세요. 플래그십은 Invest AI 산업 지도입니다. 식단, 여행, SAT 등이 카탈로그에 있습니다.";
@@ -24,7 +24,7 @@ export function appsCatalogDescription(locale: Locale): string {
 }
 
 export function homeTitle(locale: Locale): string {
-  if (locale === "zh") return "XingAI — 面向日常生活的 AI 决策系统";
+  if (locale === "zh") return "XingAI — 面向日常生活的 AI 決策系統";
   if (locale === "ko") return "XingAI — 일상을 위한 AI 의사결정 시스템";
   return "XingAI — AI Decision Systems for Everyday Life";
 }
@@ -39,7 +39,7 @@ export function pageAlternates(locale: Locale, path: string): Metadata["alternat
 export function homeOg(locale: Locale) {
   const alt =
     locale === "zh"
-      ? "XingAI — AI 决策系统，旗舰为 Invest AI 产业地图"
+      ? "XingAI — AI 決策系統，旗艦為 Invest AI 產業地圖"
       : locale === "ko"
         ? "XingAI — AI 의사결정 시스템, 플래그십은 Invest AI 산업 지도"
         : "XingAI — AI decision systems; flagship Invest AI Industry Map";
@@ -49,7 +49,7 @@ export function homeOg(locale: Locale) {
 export function appsOg(locale: Locale) {
   const alt =
     locale === "zh"
-      ? "XingAI 产品目录 — 饮食、旅行、Invest AI 地图等"
+      ? "XingAI 產品目錄 — 飲食、旅行、Invest AI 地圖等"
       : locale === "ko"
         ? "XingAI 제품 목록 — 식단, 여행, Invest AI 지도 등"
         : "XingAI catalog — meal, travel, Invest AI map, and more";
@@ -59,7 +59,7 @@ export function appsOg(locale: Locale) {
 export function storyOg(locale: Locale) {
   const alt =
     locale === "zh"
-      ? "XingAI 如何运转 — 一个系统，长出所有 XingAI 应用"
+      ? "XingAI 如何運轉 — 一個系統，長出所有 XingAI 應用"
       : locale === "ko"
         ? "XingAI의 작동 방식 — 모든 XingAI 앱 뒤에 있는 하나의 시스템"
         : "How XingAI works — one system behind every AI app we ship";

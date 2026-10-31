@@ -12,8 +12,8 @@ const copy: LocalizedPageCopy = {
       "XingAI Free tier for live decision tools today. Pro and Unlimited are next — request early access for higher limits.",
   },
   zh: {
-    title: "定价",
-    description: "XingAI 已上线决策工具目前在 Free 档。Pro 与 Unlimited 即将推出——可申请更高限额的抢先体验。",
+    title: "定價",
+    description: "XingAI 已上線決策工具目前在 Free 檔。Pro 與 Unlimited 即將推出——可申請更高限額的搶先體驗。",
   },
   ko: {
     title: "요금",

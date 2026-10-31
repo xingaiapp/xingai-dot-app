@@ -12,7 +12,7 @@ type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 function teamOg(locale: ReturnType<typeof parseRoutingLocale>) {
   const alt =
     locale === "zh"
-      ? "XingAI 团队：星哥、至尊宝、小甜甜、牛夫人、二当家、华安"
+      ? "XingAI 團隊：星哥、至尊寶、小甜甜、牛夫人、二當家、華安"
       : locale === "ko"
         ? "XingAI 팀: Xing Ge, Joker, Sweetie, Lady Bull, Second Master, Hua An"
         : "XingAI team: Xing Ge, Joker, Sweetie, Lady Bull, Second Master and Hua An";
@@ -65,7 +65,7 @@ export default async function TeamLayout({ children, params }: Props) {
         { "@type": "Person", name: "Allen", sameAs: "https://www.linkedin.com/in/uwspstar/" },
       ],
     },
-    inLanguage: locale === "zh" ? "zh-CN" : locale === "ko" ? "ko" : "en",
+    inLanguage: locale === "zh" ? "zh-TW" : locale === "ko" ? "ko" : "en",
   };
 
   return (

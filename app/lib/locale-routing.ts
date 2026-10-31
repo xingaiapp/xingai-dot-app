@@ -30,7 +30,7 @@ export function publicUrl(locale: Locale, path: string): string {
 export function buildHreflangAlternates(path: string): Record<string, string> {
   return {
     en: publicUrl("en", path),
-    "zh-CN": publicUrl("zh", path),
+    "zh-TW": publicUrl("zh", path),
     ko: publicUrl("ko", path),
     "x-default": publicUrl("en", path),
   };
@@ -43,11 +43,11 @@ export function switchLocalePath(pathname: string, nextLocale: Locale): string {
 
 /** BCP 47 tag for <html lang>; matches the hreflang values in buildHreflangAlternates. */
 export function htmlLangTag(locale: Locale): string {
-  return locale === "zh" ? "zh-CN" : locale;
+  return locale === "zh" ? "zh-TW" : locale;
 }
 
 export function openGraphLocale(locale: Locale): string {
-  if (locale === "zh") return "zh_CN";
+  if (locale === "zh") return "zh_TW";
   if (locale === "ko") return "ko_KR";
   return "en_US";
 }

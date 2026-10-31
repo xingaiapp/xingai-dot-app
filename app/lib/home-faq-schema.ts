@@ -10,7 +10,7 @@ const FAQ_KEYS: { q: keyof (typeof translations)["en"]; a: keyof (typeof transla
   ];
 
 function faqLanguageTag(locale: Locale): string {
-  if (locale === "zh") return "zh-CN";
+  if (locale === "zh") return "zh-TW";
   if (locale === "ko") return "ko";
   return "en";
 }

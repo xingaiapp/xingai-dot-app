@@ -12,9 +12,9 @@ const copy: LocalizedPageCopy = {
       "Work with XingAI: build a custom AI decision system around one decision, get an Agent Security Assessment, or book a workshop on ADRs, LLM evaluation and MCP.",
   },
   zh: {
-    title: "服务",
+    title: "服務",
     description:
-      "与 XingAI 合作：围绕一个反复出现的决定定制 AI 决策系统；为 MCP 服务器和工具权限做 Agent 安全评估；或预约关于 ADR、大模型评测和 MCP 生产实践的工程工作坊。",
+      "與 XingAI 合作：圍繞一個反覆出現的決定定製 AI 決策系統；為 MCP 伺服器和工具許可權做 Agent 安全評估；或預約關於 ADR、大模型評測和 MCP 生產實踐的工程工作坊。",
   },
   ko: {
     title: "서비스",

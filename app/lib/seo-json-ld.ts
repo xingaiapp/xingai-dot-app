@@ -31,7 +31,7 @@ export function buildSoftwareApplicationNode(app: AppData, locale: Locale) {
     url: appUrl,
     description: app.description,
     image: imageUrl,
-    inLanguage: locale === "zh" ? "zh-CN" : locale === "ko" ? "ko" : "en",
+    inLanguage: locale === "zh" ? "zh-TW" : locale === "ko" ? "ko" : "en",
     publisher: { "@id": `${siteUrl}/#org` },
     offers: {
       "@type": "Offer",
@@ -96,7 +96,7 @@ export function buildSiteIdentityGraph() {
         name: "XingAI",
         alternateName: "xingai.app",
         publisher: { "@id": `${siteUrl}/#org` },
-        inLanguage: ["en", "zh-CN", "ko"],
+        inLanguage: ["en", "zh-TW", "ko"],
       },
     ],
   };
@@ -156,10 +156,10 @@ export function buildAppsCatalogGraph(apps: AppData[], locale: Locale) {
         "@type": "CollectionPage",
         "@id": `${appsUrl}#webpage`,
         url: appsUrl,
-        name: locale === "zh" ? "XingAI 全部产品" : locale === "ko" ? "XingAI 전체 제품" : "XingAI AI Products",
+        name: locale === "zh" ? "XingAI 全部產品" : locale === "ko" ? "XingAI 전체 제품" : "XingAI AI Products",
         isPartOf: { "@id": `${siteUrl}/#website` },
         primaryImageOfPage: absoluteAsset("/apps-og.jpg"),
-        inLanguage: locale === "zh" ? "zh-CN" : locale === "ko" ? "ko" : "en",
+        inLanguage: locale === "zh" ? "zh-TW" : locale === "ko" ? "ko" : "en",
       },
       {
         "@type": "ItemList",

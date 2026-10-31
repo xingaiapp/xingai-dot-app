@@ -35,13 +35,13 @@ export default async function LegalDocumentShell({ docId }: Props) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            inLanguage: locale === "zh" ? "zh-CN" : locale,
+            inLanguage: locale === "zh" ? "zh-TW" : locale,
             mainEntity: [
               {
                 "@type": "Question",
                 name:
                   locale === "zh"
-                    ? "这一页说明了什么？"
+                    ? "這一頁說明了什麼？"
                     : locale === "ko"
                       ? "이 페이지는 무엇을 설명하나요?"
                       : "What does this page explain?",
