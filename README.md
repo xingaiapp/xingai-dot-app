@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.31b
+**Version:** 2026.10.31c
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.10.31c` The Invest product line on the homepage describes the industry map, not a watchlist.
 
 `2026.10.31b` Contact form: the number of messages one visitor can send per minute and per hour is now limited. A visitor over the limit sees the usual "email us directly" message.
 

@@ -88,7 +88,7 @@ const translations = {
     // Products (standalone XingAI sites)
     productsHeading: "Our products",
     productsLead: "Investing, travel, food and style — four standalone XingAI products, each one open in your browser.",
-    productInvestLine: "AI stock research: daily briefings, watchlists and earnings context. Research, not advice.",
+    productInvestLine: "AI industry-map research: layers, companies, and earnings context. Research, not advice.",
     productTravelLine: "Trips planned around places we have actually been — with a short prayer to open and close the day.",
     productCookLine: "Tell it what is in your fridge. It decides tonight's dinner and walks you through cooking it.",
     productWearLine: "Upload one photo and get outfits matched to your day, the weather and your style.",
@@ -518,7 +518,7 @@ const translations = {
     // Products (standalone XingAI sites)
     productsHeading: "我們的產品",
     productsLead: "投資\u3001旅行\u3001飲食與穿搭\u2014\u2014四個獨立的 XingAI 產品站\uff0c全部可以直接在瀏覽器開啟\u3002",
-    productInvestLine: "AI 美股研究\uff1a每日簡報\u3001自選股與財報脈絡\u3002只做研究\uff0c不是投資建議\u3002",
+    productInvestLine: "AI 產業鏈研究：層級、公司與財報脈絡。只做研究，不是投資建議。",
     productTravelLine: "用我們親身去過的地方規劃旅行\u2014\u2014每天早晚\uff0c有一支短禱告陪你開始和結束一天\u3002",
     productCookLine: "把冰箱裡有的告訴它\uff1a今晚吃什麼\uff0c它替你決定\uff0c還一步步教你做\u3002",
     productWearLine: "上傳一張照片\uff1a按你的行程\u3001天氣和風格\uff0c配好今天穿什麼\u3002",
@@ -930,7 +930,7 @@ const translations = {
     // Products (standalone XingAI sites)
     productsHeading: "\uc81c\ud488 \uc18c\uac1c",
     productsLead: "\ud22c\uc790, \uc5ec\ud589, \uc74c\uc2dd, \uc2a4\ud0c0\uc77c \u2014 \ube0c\ub77c\uc6b0\uc800\uc5d0\uc11c \ubc14\ub85c \uc5f4\ub9ac\ub294 \ub124 \uac00\uc9c0 XingAI \uc81c\ud488\uc785\ub2c8\ub2e4.",
-    productInvestLine: "AI \uc8fc\uc2dd \ub9ac\uc11c\uce58: \ub9e4\uc77c \ube0c\ub9ac\ud551, \uad00\uc2ec \uc885\ubaa9, \uc2e4\uc801 \ub9e5\ub77d\uc744 \uc815\ub9ac\ud569\ub2c8\ub2e4. \ud22c\uc790 \uc870\uc5b8\uc774 \uc544\ub2cc \ub9ac\uc11c\uce58\uc785\ub2c8\ub2e4.",
+    productInvestLine: "AI \uc0b0\uc5c5 \uc9c0\ub3c4 \ub9ac\uc11c\uce58: \uce35, \ud68c\uc0ac, \uc2e4\uc801 \ub9e5\ub77d. \ud22c\uc790 \uc870\uc5b8\uc774 \uc544\ub2cc \ub9ac\uc11c\uce58\uc785\ub2c8\ub2e4.",
     productTravelLine: "\uc9c1\uc811 \uac00 \ubcf8 \uacf3\uc73c\ub85c \uc9dc\ub294 \uc5ec\ud589 \uacc4\ud68d \u2014 \ud558\ub8e8\uc758 \uc2dc\uc791\uacfc \ub05d\uc5d0 \uc9e7\uc740 \uae30\ub3c4\ub97c \uacc1\ub4e4\uc785\ub2c8\ub2e4.",
     productCookLine: "\ub0c9\uc7a5\uace0\uc5d0 \uc788\ub294 \uc7ac\ub8cc\ub97c \uc54c\ub824\uc8fc\uc138\uc694. \uc624\ub298 \uc800\ub141 \uba54\ub274\ub97c \uc815\ud558\uace0, \ub9cc\ub4dc\ub294 \ubc95\uae4c\uc9c0 \uc548\ub0b4\ud569\ub2c8\ub2e4.",
     productWearLine: "\uc0ac\uc9c4 \ud55c \uc7a5\uc744 \uc62c\ub9ac\uba74 \uc77c\uc815\uacfc \ub0a0\uc528, \uc2a4\ud0c0\uc77c\uc5d0 \ub9de\ub294 \ucf54\ub514\ub97c \ucd94\ucc9c\ud569\ub2c8\ub2e4.",
