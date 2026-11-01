@@ -150,15 +150,25 @@ export function buildPricingFaq(locale: Locale, pageUrl: string, description: st
   ]);
 }
 
-export function buildAppsCatalogFaq(locale: Locale, pageUrl: string, appNames: string[], liveNames: string[]) {
+export function appsCatalogFaqHeading(locale: Locale): string {
+  if (locale === "zh") return "常見問題";
+  if (locale === "ko") return "자주 묻는 질문";
+  return "FAQ";
+}
+
+export function appsCatalogFaqItems(locale: Locale, appNames: string[], liveNames: string[]): QA[] {
   const q: Record<Locale, [string, string]> = {
     en: ["What apps does XingAI offer?", "Which XingAI apps are live now?"],
     zh: ["XingAI 提供哪些應用？", "XingAI 現在有哪些已上線應用？"],
     ko: ["XingAI는 어떤 앱을 제공하나요?", "지금 라이브 상태인 XingAI 앱은 무엇인가요?"],
   };
   const [q1, q2] = q[locale];
-  return buildFaqPage(locale, pageUrl, [
+  return [
     { q: q1, a: appNames.join(listSep(locale)) },
     { q: q2, a: liveNames.join(listSep(locale)) },
-  ]);
+  ];
+}
+
+export function buildAppsCatalogFaq(locale: Locale, pageUrl: string, appNames: string[], liveNames: string[]) {
+  return buildFaqPage(locale, pageUrl, appsCatalogFaqItems(locale, appNames, liveNames));
 }

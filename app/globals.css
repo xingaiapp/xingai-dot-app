@@ -351,6 +351,7 @@ html[data-theme="dark"] .site-header {
 @media (max-width: 35.99rem) {
   .header-inner {
     flex-wrap: nowrap;
+    min-width: 0;
     padding-top: max(0.6rem, env(safe-area-inset-top, 0));
   }
 
@@ -363,6 +364,7 @@ html[data-theme="dark"] .site-header {
     order: 1;
     flex: 1;
     min-width: 0;
+    overflow: hidden;
   }
 
   .header-controls {
@@ -606,10 +608,9 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .hero-page-title {
-  width: min(64rem, calc(100vw - 2rem));
+  width: 100%;
+  max-width: 100%;
   margin: 0 0 0.45rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
   font-size: clamp(2.15rem, 6.5vw + 0.55rem, 4.25rem);
   font-weight: 700;
   letter-spacing: -0.045em;
@@ -619,10 +620,9 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .hero-page-sub {
-  width: min(64rem, calc(100vw - 2rem));
+  width: 100%;
+  max-width: 100%;
   margin: 0 0 1.35rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
   font-size: clamp(1rem, 1.2vw + 0.75rem, 1.35rem);
   font-weight: 500;
   letter-spacing: -0.015em;
@@ -646,15 +646,14 @@ html[data-theme="dark"] .lang-menu {
 }
 
 .hero-section--platform {
-  width: min(64rem, calc(100vw - 2rem));
-  margin-left: 50%;
+  width: 100%;
+  max-width: 100%;
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: color-mix(in srgb, var(--panel-bg) 82%, transparent);
   box-shadow: 0 10px 32px var(--photo-shadow);
   overflow: hidden;
-  transform: translateX(-50%);
 }
 
 .hero-layout {
@@ -670,7 +669,7 @@ html[data-theme="dark"] .lang-menu {
    and weight to balance the product preview on the right. */
 .hero-chain {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.25rem;
   margin: 0 0 1.5rem;
@@ -6352,6 +6351,27 @@ html[data-theme="dark"] .mobile-drawer {
   font-size: 1.25rem;
   font-weight: 650;
   color: var(--ink-strong);
+}
+
+.apps-faq {
+  margin-top: 2rem;
+}
+
+.apps-faq__list {
+  display: grid;
+  gap: 1rem;
+  margin: 0.85rem 0 0;
+}
+
+.apps-faq__list dt {
+  font-weight: 650;
+  color: var(--ink-strong);
+}
+
+.apps-faq__list dd {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .apps-group--internal {

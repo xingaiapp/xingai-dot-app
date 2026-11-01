@@ -4,6 +4,7 @@ import LocaleLink from "../../../components/LocaleLink";
 import { useTranslation } from "../../../i18n/LanguageContext";
 import {
   getCatalogGroups,
+  getPublicCatalogApps,
   splitLiveByWeight,
   type AppData,
   type AppLaunchStatus,
@@ -12,6 +13,7 @@ import {
 } from "../../../data/apps";
 import AppIcon from "../../../components/AppIcon";
 import AppDemoScreenshot from "../../../components/AppDemoScreenshot";
+import { appsCatalogFaqHeading, appsCatalogFaqItems } from "../../../lib/static-faq-schema";
 
 /**
  * Catalog grouped by status: Live (flagship / daily / research bands), Demo,
@@ -20,6 +22,12 @@ import AppDemoScreenshot from "../../../components/AppDemoScreenshot";
 export default function AppsPage() {
   const { locale, t } = useTranslation();
   const groups = getCatalogGroups(locale);
+  const publicApps = getPublicCatalogApps(locale);
+  const catalogFaq = appsCatalogFaqItems(
+    locale,
+    publicApps.map((app) => app.name),
+    publicApps.filter((app) => app.launchStatus === "live").map((app) => app.name),
+  );
   const appStatusLabels: Record<AppLaunchStatus, string> = {
     live: t("appStatusLive"),
     demo: t("appStatusDemo"),
@@ -145,6 +153,20 @@ export default function AppsPage() {
           </section>
         ),
       )}
+
+      <section className="apps-faq" aria-labelledby="apps-faq-heading">
+        <h2 id="apps-faq-heading" className="apps-group__heading">
+          {appsCatalogFaqHeading(locale)}
+        </h2>
+        <dl className="apps-faq__list">
+          {catalogFaq.map((item) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
 
       <p className="demo-disclaimer">{t("appsFinanceDisclaimer")}</p>
     </main>
