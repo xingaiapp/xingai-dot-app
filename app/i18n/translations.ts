@@ -120,7 +120,7 @@ const translations = {
     homeBrowseAll: "See all apps",
     homeCta: "Get in touch",
     publicBetaNote:
-      "Six products are live on the catalog; four decision apps to come back to — Invest, Travel, Cook, Wear — plus Passive Income and the Tech Blog. Free tier today (soft daily limits).",
+      "Six products are live on the catalog; Invest AI is a research tool, and three decision apps are the ones to come back to — Travel, Cook, Wear — plus Passive Income and the Tech Blog. Free tier today (soft daily limits).",
     pricingHeading: "Pricing",
     pricingLead:
       "Live tools start on Free. Pro and Unlimited are next — join the waitlist if you want higher limits when they open.",
@@ -148,7 +148,7 @@ const translations = {
       "Each product is built around one decision and a clear next action, not open-ended chat.",
     answerQ3: "What can I use XingAI for today?",
     answerA3:
-      "Six live products on the catalog: Invest AI (Industry Map), Travel AI, Cook AI, Wear AI, Passive Income Idea, and the Tech Blog. The four to come back to for everyday decisions are Invest, Travel, Cook, and Wear. Public demos include Eating Decision, SAT AI, Research AI, Learn AI, Decision Agent, ShopRadar and Performance Sim. Full list: xingai.app/apps.",
+      "Six live products on the catalog: Invest AI (Industry Map), Travel AI, Cook AI, Wear AI, Passive Income Idea, and the Tech Blog. Invest AI is a research tool, not an everyday-decision app; the three to come back to for everyday decisions are Travel, Cook, and Wear. Public demos include Eating Decision, SAT AI, Research AI, Learn AI, Decision Agent, ShopRadar and Performance Sim. Full list: xingai.app/apps.",
     answerQ4: "What is the AI Industry Map?",
     answerA4:
       "A public, cache-rendered map of AI supply-chain layers and cited SEC filings. It is research structure, not a broker, allocation board, or trade signal.",
@@ -554,7 +554,7 @@ const translations = {
     homeBrowseAll: "檢視全部產品",
     homeCta: "聯絡我們",
     publicBetaNote:
-      "產品目錄上有 6 個已上線產品；日常決策優先回來用 Invest、Travel、Cook、Wear，另外 Passive Income 與 Tech Blog 也已上線。目前 Free 檔（可能有每日軟限額）。",
+      "產品目錄上有 6 個已上線產品；Invest AI 是研究工具；日常決策優先回來用 Travel、Cook、Wear，另外 Passive Income 與 Tech Blog 也已上線。目前 Free 檔（可能有每日軟限額）。",
     pricingHeading: "定價",
     pricingLead: "已上線工具先從 Free 開始。Pro 與 Unlimited 即將推出——想要更高限額可先加入候補。",
     pricingFreeTitle: "Free",
@@ -578,7 +578,7 @@ const translations = {
       "每個產品圍繞一個決策和明確的下一步，而不是開放式閒聊。",
     answerQ3: "現在可以用 XingAI 做什麼？",
     answerA3:
-      "產品目錄上 6 個已上線：Invest AI（產業地圖）、Travel AI、Cook AI、Wear AI、Passive Income Idea、Tech Blog。日常決策優先回來用的四個是 Invest、Travel、Cook、Wear。公開演示還有 Eating Decision、SAT AI、Research AI、Learn AI、Decision Agent、ShopRadar、Performance Sim。完整列表見 xingai.app/apps。",
+      "產品目錄上 6 個已上線：Invest AI（產業地圖）、Travel AI、Cook AI、Wear AI、Passive Income Idea、Tech Blog。Invest AI 是研究工具，不屬於日常決策；日常決策優先回來用的三個是 Travel、Cook、Wear。公開演示還有 Eating Decision、SAT AI、Research AI、Learn AI、Decision Agent、ShopRadar、Performance Sim。完整列表見 xingai.app/apps。",
     answerQ4: "什麼是 AI 產業地圖？",
     answerA4:
       "一張由 worker 快取渲染的公開地圖，展示 AI 產業鏈圖層和帶引用的監管備案。這是研究結構，不是券商、配倉面板或買賣訊號。",
@@ -970,7 +970,7 @@ const translations = {
     homeBrowseAll: "\uc804\uccb4 \uc571 \ubcf4\uae30",
     homeCta: "\uc5f0\ub77d\ud558\uae30",
     publicBetaNote:
-      "카탈로그에 라이브 제품 6개. 다시 돌아올 네 가지 결정 앱은 Invest, Travel, Cook, Wear이고 Passive Income과 Tech Blog도 라이브입니다. 지금은 Free 티어(소프트 일일 한도).",
+      "카탈로그에 라이브 제품 6개. Invest AI는 리서치 도구이고, 다시 돌아올 세 가지 결정 앱은 Travel, Cook, Wear이며 Passive Income과 Tech Blog도 라이브입니다. 지금은 Free 티어(소프트 일일 한도).",
     pricingHeading: "요금",
     pricingLead:
       "라이브 도구는 Free로 시작합니다. Pro와 Unlimited가 다음입니다 — 한도가 열리면 알림을 받도록 대기열에 등록하세요.",
@@ -996,7 +996,7 @@ const translations = {
       "각 제품은 열린 대화가 아니라 하나의 결정과 분명한 다음 행동을 중심으로 만들어집니다.",
     answerQ3: "지금 XingAI로 무엇을 할 수 있나요?",
     answerA3:
-      "카탈로그 라이브 6개: Invest AI(산업 지도), Travel AI, Cook AI, Wear AI, Passive Income Idea, Tech Blog. 일상 결정으로 다시 올 네 가지는 Invest, Travel, Cook, Wear입니다. 공개 데모에는 Eating Decision, SAT AI, Research AI, Learn AI, Decision Agent, ShopRadar, Performance Sim이 있습니다. 전체 목록: xingai.app/apps.",
+      "카탈로그 라이브 6개: Invest AI(산업 지도), Travel AI, Cook AI, Wear AI, Passive Income Idea, Tech Blog. Invest AI는 리서치 도구이며 일상 결정용이 아닙니다. 일상 결정으로 다시 올 세 가지는 Travel, Cook, Wear입니다. 공개 데모에는 Eating Decision, SAT AI, Research AI, Learn AI, Decision Agent, ShopRadar, Performance Sim이 있습니다. 전체 목록: xingai.app/apps.",
     answerQ4: "AI 산업 지도는 무엇인가요?",
     answerA4:
       "워커 캐시로 렌더되는 공개 지도로, AI 공급망 레이어와 인용된 공시를 보여 줍니다. 리서치 구조이며 증권사, 배분 보드, 매매 신호가 아닙니다.",

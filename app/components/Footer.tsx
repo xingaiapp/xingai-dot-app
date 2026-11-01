@@ -249,6 +249,15 @@ export default function Footer() {
               <FooterLinkIcon name="systems" />
               <span>XingAI Wear</span>
             </a>
+            <a
+              href="https://home.xingai.app"
+              className="footer-resource-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FooterLinkIcon name="systems" />
+              <span>XingAI Home</span>
+            </a>
           </div>
         </nav>
 

@@ -2,11 +2,13 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.10.31c
+**Version:** 2026.11.01a
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
+
+`2026.11.01a` The footer site list now includes XingAI Home. The FAQ and catalog text describe Invest AI as a research tool and name Travel, Cook, and Wear as the everyday-decision apps, in English, Chinese, and Korean.
 
 `2026.10.31c` The Invest product line on the homepage describes the industry map, not a watchlist.
 
