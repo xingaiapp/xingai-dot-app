@@ -14,6 +14,8 @@ const translations = {
     navProducts: "Products",
     navStory: "How it works",
     navTeam: "Team",
+    navAgentTeam: "Agent Team",
+    homeAgentTeam: "Meet the agent team",
     homeMeetTeam: "Meet the team",
     homeTeamHeading: "Five roles. One human decision.",
     homeTeamLead:
@@ -445,6 +447,8 @@ const translations = {
     navProducts: "產品",
     navStory: "運作方式",
     navTeam: "團隊",
+    navAgentTeam: "Agent 團隊",
+    homeAgentTeam: "認識 Agent 團隊",
     homeMeetTeam: "認識整個團隊",
     homeTeamHeading: "五個角色，一個人來決定",
     homeTeamLead:
@@ -857,6 +861,8 @@ const translations = {
     navProducts: "\uc81c\ud488",
     navStory: "작동 방식",
     navTeam: "\ud300",
+    navAgentTeam: "\uc5d0\uc774\uc804\ud2b8 \ud300",
+    homeAgentTeam: "\uc5d0\uc774\uc804\ud2b8 \ud300 \uc18c\uac1c",
     homeMeetTeam: "\ud300 \uc18c\uac1c",
     homeTeamHeading: "역할 다섯, 결정은 사람이",
     homeTeamLead:

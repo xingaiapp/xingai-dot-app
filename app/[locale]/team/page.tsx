@@ -261,6 +261,7 @@ export default function TeamPage() {
 
       <p className="team-outro">
         <LocaleLink href="/story">{copy.outroStory} &rarr;</LocaleLink>
+        <LocaleLink href="/agent-team">{copy.outroAgentTeam} &rarr;</LocaleLink>
         <LocaleLink href="/about">{copy.outroAbout} &rarr;</LocaleLink>
       </p>
     </main>

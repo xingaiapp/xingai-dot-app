@@ -138,6 +138,7 @@ export type TeamCopy = {
   easterEggDownload: string;
   outroStory: string;
   outroAbout: string;
+  outroAgentTeam: string;
 };
 
 /** Full org posters (en/zh/ko) kept under public/team/ for a future org-chart section. */
@@ -267,6 +268,7 @@ const en: TeamCopy = {
   easterEggDownload: "Download poster",
   outroStory: "What we're building",
   outroAbout: "About XingAI",
+  outroAgentTeam: "The 15-agent build team",
 };
 
 const zh: TeamCopy = {
@@ -383,6 +385,7 @@ const zh: TeamCopy = {
   easterEggDownload: "下載海報",
   outroStory: "我們在造什麼",
   outroAbout: "關於 XingAI",
+  outroAgentTeam: "15 個 agent 的工程團隊",
 };
 
 const ko: TeamCopy = {
@@ -505,6 +508,7 @@ const ko: TeamCopy = {
   easterEggDownload: "포스터 다운로드",
   outroStory: "우리가 만드는 것",
   outroAbout: "XingAI 소개",
+  outroAgentTeam: "에이전트 15명의 구축 팀",
 };
 
 const copy: Record<Locale, TeamCopy> = { en, zh, ko };

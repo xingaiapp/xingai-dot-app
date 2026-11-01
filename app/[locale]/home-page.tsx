@@ -370,6 +370,9 @@ export default function Home() {
         <p className="about-story-link">
           <LocaleLink href="/team">{t("homeMeetTeam")} &rarr;</LocaleLink>
         </p>
+        <p className="about-story-link">
+          <LocaleLink href="/agent-team">{t("homeAgentTeam")} &rarr;</LocaleLink>
+        </p>
       </section>
 
       <section className="home-cofounders" aria-labelledby="home-cofounders-heading">

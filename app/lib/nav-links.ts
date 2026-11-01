@@ -7,6 +7,7 @@ export type NavKey =
   | "navProducts"
   | "navStory"
   | "navTeam"
+  | "navAgentTeam"
   | "navAbout"
   | "navContact"
   | "navBuild"
