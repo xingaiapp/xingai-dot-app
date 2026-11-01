@@ -267,6 +267,10 @@ export default function Footer() {
               <FooterLinkIcon name="about" />
               <span>{t("navAgentTeam")}</span>
             </Link>
+            <Link href={p("/engineering")} className="footer-icon-link">
+              <FooterLinkIcon name="custom" />
+              <span>{t("navEngineering")}</span>
+            </Link>
             <Link href={p("/services")} className="footer-icon-link">
               <FooterLinkIcon name="custom" />
               <span>{t("navServices")}</span>
@@ -281,6 +285,10 @@ export default function Footer() {
         <nav className="footer-column" aria-label={t("footerLegal")}>
           <span className="footer-column__label">{t("footerLegal")}</span>
           <div className="footer-column__links">
+            <Link href={p("/legal")} className="footer-icon-link">
+              <FooterLinkIcon name="legal" />
+              <span>{t("footerLegalOverview")}</span>
+            </Link>
             <Link href={p("/legal/privacy")} className="footer-icon-link">
               <FooterLinkIcon name="legal" />
               <span>{t("footerPrivacy")}</span>
