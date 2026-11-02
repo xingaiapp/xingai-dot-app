@@ -2,13 +2,15 @@
 
 > Not a chatbot. Not a wrapper. Focused AI products that help you decide.
 
-**Version:** 2026.11.01b
+**Version:** 2026.11.01c
 
 **Live at [xingai.app](https://xingai.app/)** — flagship: [AI Industry Map](https://invest.xingai.app/ai-map)
 
 ### Current version notes
 
 `2026.11.01a` The footer site list now includes XingAI Home. The FAQ and catalog text describe Invest AI as a research tool and name Travel, Cook, and Wear as the everyday-decision apps, in English, Chinese, and Korean.
+
+`2026.11.01c` `/story` and the legal pages show the same FAQ questions that are in their schema, in English, Chinese, and Korean.
 
 `2026.11.01b` The homepage title and hero card stay inside the page column at 375px, so “When in doubt, ask XingAI.” can wrap instead of being cut off on the right. `/apps` shows the same two questions that are in the FAQ schema.
 

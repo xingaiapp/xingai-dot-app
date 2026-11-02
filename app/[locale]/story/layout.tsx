@@ -6,7 +6,7 @@ import {
   pageAlternates,
   storyOg,
 } from "../../lib/localized-seo";
-import { buildStoryFaq } from "../../lib/static-faq-schema";
+import { buildStoryFaq, storyFaqItems } from "../../lib/static-faq-schema";
 import { formatPageTitle, siteUrl } from "../../lib/site-seo";
 
 const path = "/story";
@@ -59,6 +59,12 @@ export default async function StoryLayout({ children, params }: Props) {
   const description = storyDescription(locale);
   const og = storyOg(locale);
 
+  const faqItems = storyFaqItems(
+    locale,
+    description,
+    localizedApps.map((app) => app.name),
+  );
+
   const storyJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -91,16 +97,24 @@ export default async function StoryLayout({ children, params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            buildStoryFaq(
-              locale,
-              pageUrl,
-              description,
-              localizedApps.map((app) => app.name),
-            ),
+            buildStoryFaq(locale, pageUrl, description, localizedApps.map((app) => app.name)),
           ),
         }}
       />
       {children}
+      <section className="wrap apps-faq" aria-labelledby="story-faq-heading">
+        <h2 id="story-faq-heading" className="section-title">
+          {locale === "zh" ? "常見問題" : locale === "ko" ? "자주 묻는 질문" : "FAQ"}
+        </h2>
+        <dl className="apps-faq__list">
+          {faqItems.map((item) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
     </>
   );
 }

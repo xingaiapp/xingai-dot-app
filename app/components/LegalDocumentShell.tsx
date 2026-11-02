@@ -25,10 +25,20 @@ export default async function LegalDocumentShell({ docId }: Props) {
     disclaimer: "footerDisclaimer",
   };
 
+  const faqQuestion =
+    locale === "zh"
+      ? "這一頁說明了什麼？"
+      : locale === "ko"
+        ? "이 페이지는 무엇을 설명하나요?"
+        : "What does this page explain?";
+  const faqItems = [
+    { q: faqQuestion, a: doc.sections[0].paragraphs[0] },
+    { q: doc.sections[1].heading, a: doc.sections[1].paragraphs[0] },
+  ];
+
   return (
     <main className="wrap legal-wrap">
-      {/* FAQPage from visible copy only: the first paragraph of the first
-          section, and the second section under its own heading. */}
+      {/* FAQPage from the same two questions rendered below. */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -36,23 +46,11 @@ export default async function LegalDocumentShell({ docId }: Props) {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             inLanguage: locale === "zh" ? "zh-TW" : locale,
-            mainEntity: [
-              {
-                "@type": "Question",
-                name:
-                  locale === "zh"
-                    ? "這一頁說明了什麼？"
-                    : locale === "ko"
-                      ? "이 페이지는 무엇을 설명하나요?"
-                      : "What does this page explain?",
-                acceptedAnswer: { "@type": "Answer", text: doc.sections[0].paragraphs[0] },
-              },
-              {
-                "@type": "Question",
-                name: doc.sections[1].heading,
-                acceptedAnswer: { "@type": "Answer", text: doc.sections[1].paragraphs[0] },
-              },
-            ],
+            mainEntity: faqItems.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
           }),
         }}
       />
@@ -64,6 +62,20 @@ export default async function LegalDocumentShell({ docId }: Props) {
         <p className="legal-updated">
           {labels.legalUpdated}: {doc.updated}
         </p>
+      </section>
+
+      <section className="apps-faq" aria-labelledby="legal-faq-heading">
+        <h2 id="legal-faq-heading" className="section-title">
+          {locale === "zh" ? "常見問題" : locale === "ko" ? "자주 묻는 질문" : "FAQ"}
+        </h2>
+        <dl className="apps-faq__list">
+          {faqItems.map((item) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <article className="legal-doc">

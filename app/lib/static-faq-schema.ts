@@ -57,17 +57,21 @@ export function buildAboutFaq(locale: Locale, pageUrl: string, description: stri
   ]);
 }
 
-export function buildStoryFaq(locale: Locale, pageUrl: string, description: string, appNames: string[]) {
+export function storyFaqItems(locale: Locale, description: string, appNames: string[]): QA[] {
   const q: Record<Locale, [string, string]> = {
     en: ["How does XingAI work?", "Which apps has XingAI built?"],
     zh: ["XingAI 是如何運轉的？", "XingAI 已經做了哪些應用？"],
     ko: ["XingAI는 어떻게 작동하나요?", "XingAI가 만든 앱은 무엇인가요?"],
   };
   const [q1, q2] = q[locale];
-  return buildFaqPage(locale, pageUrl, [
+  return [
     { q: q1, a: description },
     { q: q2, a: appNames.join(listSep(locale)) },
-  ]);
+  ];
+}
+
+export function buildStoryFaq(locale: Locale, pageUrl: string, description: string, appNames: string[]) {
+  return buildFaqPage(locale, pageUrl, storyFaqItems(locale, description, appNames));
 }
 
 export function buildTeamFaq(locale: Locale, pageUrl: string, description: string) {
