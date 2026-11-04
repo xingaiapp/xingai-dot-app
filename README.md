@@ -228,7 +228,7 @@ worker cache (ADR-053). Custom-domain DNS is in place.
 
 `2026.09.06` adds **Passive Income Idea** (`passive-income`) — one-Idea research shell at [passive.xingai.app](https://passive.xingai.app/); see `2026.09.28c` for demo status alignment.
 
-`2026.07.26` adds two new demo products to the catalog: **Evidence Engine** (`evidence-engine`) — claim → evidence → citation verification with a light/dark dashboard — and **Eval Registry** (`eval-registry`) — an Every-Eval-Ever-compatible evaluation registry with a fail-on-regression CI gate ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)).
+`2026.07.26` adds two new demo products to the catalog: **Evidence Engine** (`evidence-engine`) — statement → evidence → citation verification with a light/dark dashboard — and **Eval Registry** (`eval-registry`) — an Every-Eval-Ever-compatible evaluation registry with a fail-on-regression CI gate ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)).
 
 `2026.07.16` adds **Ops Status** to the product catalog as a demo (`ops-status`) — lightweight HTTP uptime board at [xingai-ops-status.vercel.app](https://xingai-ops-status.vercel.app/), with light/dark screenshots.
 
@@ -262,7 +262,7 @@ XingAI builds focused AI decision systems for everyday life. Each product solves
 | **T Today** | Finance AI | Plan Today |
 | **Growth Monitor** | Operations AI | Fix Pages First |
 | **Ops Status** | Operations AI | Uptime at a Glance |
-| **Evidence Engine** | Research AI | Verify Every Claim |
+| **Evidence Engine** | Research AI | Verify Every Statement |
 | **Eval Registry** | Operations AI | Diff Your Evals |
 
 **Eating Decision** ([meal.xingai.app](https://meal.xingai.app/)), **Cook AI** ([cook.xingai.app](https://cook.xingai.app/)), **Wear AI**, **Travel AI** ([travel.xingai.app](https://travel.xingai.app/)), and **Invest AI** ([invest.xingai.app](https://invest.xingai.app/ai-map)) are live. **Tech Blog** is live at [blog.xingai.app](https://blog.xingai.app/). **Passive Income Idea** is live at [passive.xingai.app](https://passive.xingai.app/). **Decision Agent** is a public demo at [decision.xingai.app](https://decision.xingai.app/). **ShopRadar** is a waitlist demo at [shopradar.xingai.app](https://shopradar.xingai.app/). **SAT AI** is available as a demo at [sat.xingai.app](https://sat.xingai.app/). **Research AI** is available as a demo at [research.xingai.app](https://research.xingai.app/). **Learn AI** is available as a demo at [learn.xingai.app](https://learn.xingai.app/). **Engineering Communication Coach** is coming soon ([GitHub](https://github.com/xingaiapp/xingai-engineering-coach-ai)). **Growth Monitor** is early access at [growth.xingai.app](https://growth.xingai.app/). **Ops Status** is a demo at [xingai-ops-status.vercel.app](https://xingai-ops-status.vercel.app/). **Evidence Engine** and **Eval Registry** are engineering demos on the site; Eval Registry is open source ([GitHub](https://github.com/xingaiapp/xingai-eval-registry)). **Performance Sim** is available at [lab.xingai.app](https://lab.xingai.app/). **T Today** at [t.xingai.app](https://t.xingai.app/) is early access—free to request via [contact@xingai.app](mailto:contact@xingai.app). Parent AI is in development with a UX demo on the site.

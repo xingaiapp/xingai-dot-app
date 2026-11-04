@@ -188,10 +188,10 @@ const en: TeamCopy = {
       nickname: "Best at chasing blame",
       tag: "Agent · Verify",
       quote: "Looks done ≠ actually done.",
-      body: "She doesn't ask how much got done. She asks whether it passed. No citation, no claim.",
+      body: "She doesn't ask how much got done. She asks whether it passed. No citation, no statement.",
       specialties: ["Verification", "Acceptance criteria", "Evidence validation", "Freshness"],
       asks: ["Was it checked?", "Which source backs this sentence?"],
-      seenIn: "Evidence Engine: claim → evidence → citation checks.",
+      seenIn: "Evidence Engine: statement → evidence → citation checks.",
     },
     sweetie: {
       name: "Sweetie",

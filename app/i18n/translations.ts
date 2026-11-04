@@ -226,7 +226,7 @@ const translations = {
     storyLayerAppsText: "{total} apps across everyday life, learning, investing and research. {live} are live; the rest are demos or coming soon.",
     storyLayerTrustRole: "Trust & feedback",
     storyLayerTrustName: "Evidence · Growth · Ops",
-    storyLayerTrustText: "Check claims against sources, find what to improve from search data, and watch site and API health.",
+    storyLayerTrustText: "Check what we publish against its sources, find what to improve from search data, and watch site and API health.",
     storyLoopReturn: "Findings, metrics and decisions go back to the Vault, so each idea keeps what was learned.",
     storyAgentResearch: "Research",
     storyAgentEvidence: "Evidence",
@@ -255,7 +255,7 @@ const translations = {
     storyDomainResearchTitle: "Research & ventures",
     storyDomainResearchLead: "Find products and ideas worth building or selling.",
     storyDomainOperationsTitle: "Trust & feedback tools",
-    storyDomainOperationsLead: "Verify claims, measure search growth, watch uptime, compare eval results.",
+    storyDomainOperationsLead: "Verify what we publish, measure search growth, watch uptime, compare eval results.",
     storyTrustTitle: "The trust and feedback layer",
     storyTrustLead: "These tools already run today as separate demos and internal tools. Sending their results back into the Vault is the next step, not something that happens yet.",
     storyClosingTitle: "The loop",
@@ -395,7 +395,7 @@ const translations = {
     engOpenEvalRegistry:
       "the evaluation registry and its regression gate, including the limits quoted above",
     engOpenPocs:
-      "enterprise proof-of-concepts \u2014 MCP gateways, guardrail monitoring, claims workflow redesign",
+      "enterprise proof-of-concepts \u2014 MCP gateways, guardrail monitoring, statement workflow redesign",
     engOpenDesign:
       "longer design essays on agent governance, MCP in production, and loop engineering",
     engOpenBlog:
@@ -813,7 +813,7 @@ const translations = {
     engOpenBody:
       "產品倉庫是私有的，但真正用於評估我們的那部分工程面是公開的：",
     engOpenEvalRegistry: "評測登記與迴歸門禁，包含上面引用的那段邊界宣告",
-    engOpenPocs: "企業級 PoC——MCP 閘道器、護欄監控、理賠流程重設計",
+    engOpenPocs: "企業級 PoC——MCP 閘道器、護欄監控、陳述核查流程重設計",
     engOpenDesign: "更長的設計文章，覆蓋 agent 治理、MCP 上生產、loop engineering",
     engOpenBlog: "XingAI Tech Blog — 決策系統怎麼上線的雙語工程文章（已上線）",
     engTalkHeading: "如果你需要的是這個層面",
@@ -1231,7 +1231,7 @@ const translations = {
     engOpenBody:
       "제품 저장소는 비공개지만, 우리를 평가하는 데 중요한 엔지니어링 표면은 공개되어 있습니다:",
     engOpenEvalRegistry: "평가 레지스트리와 회귀 게이트, 위에 인용한 한계 설명 포함",
-    engOpenPocs: "엔터프라이즈 PoC — MCP 게이트웨이, 가드레일 모니터링, 클레임 워크플로 재설계",
+    engOpenPocs: "엔터프라이즈 PoC — MCP 게이트웨이, 가드레일 모니터링, 진술 검증 워크플로 재설계",
     engOpenDesign: "에이전트 거버넌스, 프로덕션 MCP, 루프 엔지니어링에 대한 긴 디자인 에세이",
     engOpenBlog: "XingAI Tech Blog — 의사결정 시스템을 출시하는 방법에 대한 이중 언어 엔지니어링 글 (라이브)",
     engTalkHeading: "이 수준이 필요하다면",
