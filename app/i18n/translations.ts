@@ -287,6 +287,10 @@ const translations = {
     appsLiveDaily: "Daily decisions",
     appsLiveResearch: "Research & engineering",
     appsJumpLabel: "Jump to",
+    appsWatchHeading: "Watch It Decide",
+    appsWatchLead:
+      "One homepage, three real decisions — watch the apps decide, live on screen.",
+    appsWatchPlay: "Play video",
     appsLead:
       "Start with flagship Invest AI, then daily decisions (Travel, Cook, Wear). Passive Income and the Tech Blog are also live — demos and coming-soon sit below.",
     appViewDetails: "View details",
@@ -710,6 +714,9 @@ const translations = {
     appsLiveDaily: "日常決策",
     appsLiveResearch: "研究與工程",
     appsJumpLabel: "跳到",
+    appsWatchHeading: "Watch It Decide",
+    appsWatchLead: "一個首頁、三個真實決定——看這些 App 在畫面上當場做決定。",
+    appsWatchPlay: "播放影片",
     appsLead:
       "先看旗艦 Invest AI，再看日常決策（Travel、Cook、Wear）。Passive Income 與 Tech Blog 也已上線——演示與即將推出在下方。",
     appViewDetails: "檢視詳情",
@@ -1128,6 +1135,10 @@ const translations = {
     appsLiveDaily: "일상 결정",
     appsLiveResearch: "리서치 & 엔지니어링",
     appsJumpLabel: "바로 가기",
+    appsWatchHeading: "Watch It Decide",
+    appsWatchLead:
+      "하나의 홈페이지, 세 가지 실제 결정 — 앱이 화면에서 직접 결정하는 모습을 보세요.",
+    appsWatchPlay: "동영상 재생",
     appsLead:
       "플래그십 Invest AI부터, 그다음 일상 결정(Travel, Cook, Wear). Passive Income과 Tech Blog도 라이브 — 데모와 출시 예정은 아래에 있습니다.",
     appViewDetails: "\uc790\uc138\ud788 \ubcf4\uae30",

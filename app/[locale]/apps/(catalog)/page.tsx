@@ -12,6 +12,7 @@ import {
   type LiveWeightKey,
 } from "../../../data/apps";
 import AppIcon from "../../../components/AppIcon";
+import WatchItDecideVideo from "../../../components/WatchItDecideVideo";
 import AppDemoScreenshot from "../../../components/AppDemoScreenshot";
 import { appsCatalogFaqHeading, appsCatalogFaqItems } from "../../../lib/static-faq-schema";
 
@@ -120,6 +121,18 @@ export default function AppsPage() {
       <section className="page-header">
         <h1 className="page-heading">{t("appsHeading")}</h1>
         <p className="page-lead">{t("appsLead")}</p>
+      </section>
+
+      <section className="apps-watch" aria-labelledby="apps-watch-heading">
+        <h2 id="apps-watch-heading" className="apps-group__heading">
+          {t("appsWatchHeading")}
+        </h2>
+        <p className="apps-watch__lead">{t("appsWatchLead")}</p>
+        <WatchItDecideVideo
+          videoId="DIAYAAdVMUo"
+          title="One Homepage, Three Decisions — It Reordered My Burger, Banned My Hoodie, Sent Me Under the Sink"
+          playLabel={t("appsWatchPlay")}
+        />
       </section>
 
       <nav className="apps-jump" aria-label={t("appsJumpLabel")}>
