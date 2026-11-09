@@ -402,7 +402,7 @@ export function getAgentTeamCopy(locale: Locale): AgentTeamCopy {
 export function agentTeamTitle(locale: Locale): string {
   if (locale === "zh") return "Agent 團隊：15 個 AI agent 如何建 XingAI 的網站";
   if (locale === "ko") return "에이전트 팀: AI 에이전트 15명이 XingAI 사이트를 만드는 방식";
-  return "The Agent Team: How 15 AI Agents Build XingAI's Websites";
+  return "The Agent Team: How 15 AI Agents Build XingAI";
 }
 
 export function agentTeamDescription(locale: Locale): string {
@@ -412,5 +412,5 @@ export function agentTeamDescription(locale: Locale): string {
   if (locale === "ko") {
     return "XingAI의 웹사이트는 작은 인간 팀과 AI 에이전트 15명이 만듭니다. 디스패처 1명, 그룹 5개, 기본은 읽기 전용, 코드 접근은 4명, 출시 전 사람 승인 필수.";
   }
-  return "XingAI's websites are built by a small human team and 15 AI agents under one dispatcher: five groups, read-only by default, four with code access, and a human OK before anything ships.";
+  return "A small human team and 15 AI agents build XingAI's websites under one dispatcher: 5 groups, read-only by default, 4 with code access, human OK before shipping.";
 }

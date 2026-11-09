@@ -453,7 +453,7 @@ export const apps: AppData[] = [
     iconDark: "/evidence-engine-icon.svg",
     favicon: "/evidence-engine-icon.svg",
     description:
-      "Statement → evidence → citation verification. Turns research docs into checked statements with per-source verdicts — supported, partial, blocked-by-paywall, or uncited.",
+      "Statement → evidence → citation check. Research docs become checked statements with per-source verdicts — supported, partial, blocked-by-paywall, or uncited.",
     category: "Research AI",
     canDo: "Pull every statement that needs backing out of a document, tie each to its cited source, check reachability, and grade support with coverage metrics.",
     bestFor: "Researchers and analysts who need to know which statements in a document actually hold up against their citations.",
