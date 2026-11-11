@@ -18,7 +18,7 @@ export const STATIC_CONTENT_DATES: Record<string, Date> = {
   "/contact": new Date("2026-10-08T01:25:47Z"),
   "/engineering": new Date("2026-11-04T18:49:55Z"), // 000981b (2026-11-04): engOpenPocs copy 'claims' -> 'statement' (ADR-0204)
   "/services": new Date("2026-10-02T01:30:53Z"),
-  "/services/agent-security-assessment": new Date("2026-07-26T06:16:30Z"),
+  "/services/agent-security-assessment": new Date("2026-11-11T22:05:00Z"), // FAQ #7 (2026-11-11): schema-only FAQ rendered visibly, localized en/zh/ko
   "/pricing": new Date("2026-10-08T01:25:47Z"),
   "/legal": new Date("2026-09-28T19:21:19Z"),
   "/legal/privacy": new Date("2026-11-02T00:14:32Z"), // e822af9 (2026-11-01): visible FAQ section added
