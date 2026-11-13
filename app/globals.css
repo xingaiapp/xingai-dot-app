@@ -7259,3 +7259,104 @@ html[data-theme="dark"] .go-logo--dark {
   height: 100%;
   border: 0;
 }
+
+/* Series overview (/series) — ADR-0288 */
+.series-group {
+  margin-top: 2.75rem;
+}
+
+.series-group__head {
+  margin-bottom: 1.1rem;
+}
+
+.series-group__handles {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.65;
+}
+
+.series-group__pitch {
+  margin: 0.35rem 0 0;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.series-group__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+.series-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  height: 100%;
+  padding: 1.1rem 1.15rem 1.2rem;
+}
+
+.series-card__pitch {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.series-card__cadence {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.series-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: auto 0 0;
+  padding-top: 0.5rem;
+}
+
+.series-card__btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.series-card__btn:hover {
+  border-color: color-mix(in srgb, var(--blue) 55%, transparent);
+  background: var(--soft-bg);
+}
+
+.series-status--ongoing {
+  color: var(--green, #1a7f37);
+}
+
+.series-status--paused {
+  color: var(--amber, #b25e09);
+}
+
+.series-faq {
+  margin-top: 3rem;
+}
+
+.series-faq__list {
+  display: grid;
+  gap: 1.4rem;
+  margin: 1rem 0 0;
+}
+
+.series-faq__item dt {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.series-faq__item dd {
+  margin: 0.35rem 0 0;
+  line-height: 1.65;
+}

@@ -7,6 +7,7 @@ export type NavKey =
   | "navProducts"
   | "navStory"
   | "navTeam"
+  | "navSeries"
   | "navAgentTeam"
   | "navAbout"
   | "navContact"
@@ -21,6 +22,7 @@ const navPaths: { path: string; key: NavKey; hash?: string }[] = [
   { path: "/", key: "navProducts", hash: "products" },
   { path: "/story", key: "navStory" },
   { path: "/team", key: "navTeam" },
+  { path: "/series", key: "navSeries" },
   { path: "/contact", key: "navContact" },
   { path: "/services", key: "navBuild" },
 ];

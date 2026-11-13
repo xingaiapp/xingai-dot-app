@@ -14,6 +14,7 @@ const translations = {
     navProducts: "Products",
     navStory: "How it works",
     navTeam: "Team",
+    navSeries: "Series",
     navAgentTeam: "Agent Team",
     navEngineering: "Engineering",
     homeAgentTeam: "Meet the agent team",
@@ -294,6 +295,27 @@ const translations = {
     appsLead:
       "Start with flagship Invest AI, then daily decisions (Travel, Cook, Wear). Passive Income and the Tech Blog are also live — demos and coming-soon sit below.",
     appViewDetails: "View details",
+    seriesHeading: "Every series we make",
+    seriesLead:
+      "When in doubt, ask XingAI. This is the whole shelf: every series running on our channels, grouped by channel — what each one is, how often it lands, and where to watch it.",
+    seriesJumpLabel: "Jump to a channel",
+    seriesChannelBtn: "YouTube channel",
+    seriesPageBtn: "Series page",
+    seriesPlaylistBtn: "YouTube playlist",
+    seriesStatusOngoing: "Ongoing",
+    seriesStatusUpcoming: "Coming soon",
+    seriesStatusPaused: "Paused",
+    seriesStatusCompleted: "Completed",
+    seriesFaqHeading: "Questions, answered",
+    seriesFaqQ1: "How many channels — and how many series?",
+    seriesFaqA1:
+      "Five channels, one family. Travel, Cook and the XingAI brand channel live on YouTube; US stocks run in Chinese on @axingstocks and in English on @xingaiinvest. This page lists 22 series — every one we make.",
+    seriesFaqQ2: "Which series is for me?",
+    seriesFaqA2:
+      "Start the morning with 100 Days of Morning Prayer on Travel. Come hungry and Cook has three numbered food series every day, plus a ramen scoreboard on weekday evenings. For stocks, Why I Own It and Wall Street Views publish in both Chinese and English.",
+    seriesFaqQ3: "How do I keep up with a series?",
+    seriesFaqA3:
+      "Subscribe on YouTube. Each card above links straight to the series page on its own site and, where one exists, to its YouTube playlist — new series appear here as soon as their own page is live.",
     appComingSoonBadge: "Coming soon",
     appStatusLive: "Live",
     appStatusDemo: "Demo",
@@ -453,6 +475,7 @@ const translations = {
     navProducts: "產品",
     navStory: "運作方式",
     navTeam: "團隊",
+    navSeries: "系列",
     navAgentTeam: "Agent 團隊",
     navEngineering: "工程",
     homeAgentTeam: "認識 Agent 團隊",
@@ -720,6 +743,27 @@ const translations = {
     appsLead:
       "先看旗艦 Invest AI，再看日常決策（Travel、Cook、Wear）。Passive Income 與 Tech Blog 也已上線——演示與即將推出在下方。",
     appViewDetails: "檢視詳情",
+    seriesHeading: "我們做的全部系列",
+    seriesLead:
+      "遇事不決，先問 XingAI。這一頁是整個架子：我們各頻道正在做的全部系列，按頻道分組——每個系列是什麼、多久更新一次、去哪裡看，一頁看完。",
+    seriesJumpLabel: "跳到頻道",
+    seriesChannelBtn: "YouTube 頻道",
+    seriesPageBtn: "系列頁",
+    seriesPlaylistBtn: "YouTube 播放清單",
+    seriesStatusOngoing: "連載中",
+    seriesStatusUpcoming: "即將開始",
+    seriesStatusPaused: "暫停中",
+    seriesStatusCompleted: "已完結",
+    seriesFaqHeading: "常見問題",
+    seriesFaqQ1: "一共有幾個頻道、幾個系列？",
+    seriesFaqA1:
+      "五個頻道，一個家族。Travel、Cook 和 XingAI 品牌號在 YouTube 上；美股分中文（@axingstocks）和英文（@xingaiinvest）兩個頻道。本頁共收 22 個系列，全是我們在做的。",
+    seriesFaqQ2: "哪個系列適合我？",
+    seriesFaqA2:
+      "想從早晨開始，就看 Travel 的《一百天晨禱》。想吃點好的，Cook 每天有三個編號美食系列，週一到五傍晚還有拉麵大戰打分。看股票，《我為什麼持有》和《華爾街觀點周報》中英雙版都有。",
+    seriesFaqQ3: "怎麼追一個系列？",
+    seriesFaqA3:
+      "在 YouTube 訂閱就行。上面每張卡都直達該系列在自家站的系列頁，有播放清單的也一併附上；新系列自己的頁面一上線，就會出現在這裡。",
     appComingSoonBadge: "即將推出",
     appStatusLive: "已上線",
     appStatusDemo: "演示版",
@@ -872,6 +916,7 @@ const translations = {
     navProducts: "\uc81c\ud488",
     navStory: "작동 방식",
     navTeam: "\ud300",
+    navSeries: "\uc2dc\ub9ac\uc988",
     navAgentTeam: "\uc5d0\uc774\uc804\ud2b8 \ud300",
     navEngineering: "\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1",
     homeAgentTeam: "\uc5d0\uc774\uc804\ud2b8 \ud300 \uc18c\uac1c",
@@ -1142,6 +1187,27 @@ const translations = {
     appsLead:
       "플래그십 Invest AI부터, 그다음 일상 결정(Travel, Cook, Wear). Passive Income과 Tech Blog도 라이브 — 데모와 출시 예정은 아래에 있습니다.",
     appViewDetails: "\uc790\uc138\ud788 \ubcf4\uae30",
+    seriesHeading: "\uc6b0\ub9ac\uac00 \ub9cc\ub4dc\ub294 \ubaa8\ub4e0 \uc2dc\ub9ac\uc988",
+    seriesLead:
+      "\uace0\ubbfc\ub420 \ub550, XingAI\uc5d0\uac8c \ubb3c\uc5b4\ubcf4\uc138\uc694. \uc6b0\ub9ac \ucc44\ub110\ub4e4\uc5d0\uc11c \uc9c4\ud589 \uc911\uc778 \ubaa8\ub4e0 \uc2dc\ub9ac\uc988\ub97c \ucc44\ub110\ubcc4\ub85c \ubaa8\uc558\uc2b5\ub2c8\ub2e4 \u2014 \uac01 \uc2dc\ub9ac\uc988\uac00 \ubb34\uc5c7\uc778\uc9c0, \uc5bc\ub9c8\ub098 \uc790\uc8fc \uc62c\ub77c\uc624\ub294\uc9c0, \uc5b4\ub514\uc11c \ubcfc \uc218 \uc788\ub294\uc9c0 \ud55c \ud398\uc774\uc9c0\uc5d0 \ub2f4\uc558\uc2b5\ub2c8\ub2e4.",
+    seriesJumpLabel: "\ucc44\ub110\ub85c \uc774\ub3d9",
+    seriesChannelBtn: "YouTube \ucc44\ub110",
+    seriesPageBtn: "\uc2dc\ub9ac\uc988 \ud398\uc774\uc9c0",
+    seriesPlaylistBtn: "YouTube \uc7ac\uc0dd\ubaa9\ub85d",
+    seriesStatusOngoing: "\uc5f0\uc7ac \uc911",
+    seriesStatusUpcoming: "\uace7 \uc2dc\uc791",
+    seriesStatusPaused: "\uc77c\uc2dc \uc911\ub2e8",
+    seriesStatusCompleted: "\uc644\uacb0",
+    seriesFaqHeading: "\uc790\uc8fc \ubb3b\ub294 \uc9c8\ubb38",
+    seriesFaqQ1: "\ucc44\ub110\uc740 \uba87 \uac1c, \uc2dc\ub9ac\uc988\ub294 \uba87 \uac1c\uc778\uac00\uc694?",
+    seriesFaqA1:
+      "\ub2e4\uc12f \uac1c \ucc44\ub110, \ud558\ub098\uc758 \uac00\uc871\uc785\ub2c8\ub2e4. Travel, Cook, XingAI \ube0c\ub79c\ub4dc \ucc44\ub110\uc740 YouTube\uc5d0 \uc788\uace0, \ubbf8\uad6d \uc8fc\uc2dd\uc740 \uc911\uad6d\uc5b4(@axingstocks)\uc640 \uc601\uc5b4(@xingaiinvest) \ub450 \ucc44\ub110\ub85c \ub098\uac11\ub2c8\ub2e4. \uc774 \ud398\uc774\uc9c0\uc5d0\ub294 \uc6b0\ub9ac\uac00 \ub9cc\ub4dc\ub294 \uc2dc\ub9ac\uc988 22\uac1c\uac00 \uc804\ubd80 \ub4e4\uc5b4 \uc788\uc2b5\ub2c8\ub2e4.",
+    seriesFaqQ2: "\uc800\uc5d0\uac8c \ub9de\ub294 \uc2dc\ub9ac\uc988\ub294 \ubb34\uc5c7\uc778\uac00\uc694?",
+    seriesFaqA2:
+      "\uc544\uce68\uc740 Travel\uc758 \u300a100 Days of Morning Prayer\u300b\ub85c \uc2dc\uc791\ud574 \ubcf4\uc138\uc694. \uba39\uac70\ub9ac\uac00 \ub5a1\uae34\ub2e4\uba74 Cook\uc5d0 \ub9e4\uc77c \ub098\uac00\ub294 \ubc88\ud638 \uc2dc\ub9ac\uc988 \uc138 \uac1c\uc640 \ud3c9\uc77c \uc800\ub141\uc758 \ub77c\uba74 \ucc44\uc810\ud310\uc774 \uc788\uc2b5\ub2c8\ub2e4. \uc8fc\uc2dd\uc740 \u300a\ub0b4\uac00 \uc774 \uc885\ubaa9\uc744 \ubcf4\uc720\ud558\ub294 \uc774\uc720\u300b\uc640 \u300a\uc6d4\uc2a4\ud2b8\ub9ac\ud2b8 \ubdf0\u300b\uac00 \uc911\uad6d\uc5b4\uc640 \uc601\uc5b4\ub85c \ubaa8\ub450 \ub098\uac11\ub2c8\ub2e4.",
+    seriesFaqQ3: "\uc2dc\ub9ac\uc988\ub97c \uacc4\uc18d \ubcf4\ub824\uba74 \uc5b4\ub5bb\uac8c \ud558\ub098\uc694?",
+    seriesFaqA3:
+      "YouTube\uc5d0\uc11c \uad6c\ub3c5\ud558\uc138\uc694. \uc704\uc758 \uac01 \uce74\ub4dc\ub294 \uadf8 \uc2dc\ub9ac\uc988\uc758 \uc804\uc6a9 \ud398\uc774\uc9c0\ub85c, \uc7ac\uc0dd\ubaa9\ub85d\uc774 \uc788\ub294 \uacbd\uc6b0 \uadf8 \uc7ac\uc0dd\ubaa9\ub85d\uc73c\ub85c \ubc14\ub85c \uc5f0\uacb0\ub429\ub2c8\ub2e4. \uc0c8 \uc2dc\ub9ac\uc988\ub294 \uc804\uc6a9 \ud398\uc774\uc9c0\uac00 \uc5f4\ub9ac\ub294 \ub300\ub85c \uc5ec\uae30\uc5d0 \ucd94\uac00\ub429\ub2c8\ub2e4.",
     appComingSoonBadge: "\ucd9c\uc2dc \uc608\uc815",
     appStatusLive: "\ucd9c\uc2dc\ub428",
     appStatusDemo: "\ub370\ubaa8",

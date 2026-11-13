@@ -203,6 +203,10 @@ export default function Footer() {
               <FooterLinkIcon name="systems" />
               <span>{t("navStory")}</span>
             </Link>
+            <Link href={p("/series")} className="footer-icon-link">
+              <FooterLinkIcon name="systems" />
+              <span>{t("navSeries")}</span>
+            </Link>
             <Link href={p("/contact")} className="footer-icon-link">
               <FooterLinkIcon name="custom" />
               <span>{t("footerCustomAi")}</span>

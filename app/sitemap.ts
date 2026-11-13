@@ -9,6 +9,7 @@ const locales: Locale[] = ["en", "zh", "ko"];
 const staticPaths = [
   "/",
   "/apps",
+  "/series",
   "/story",
   "/team",
   "/agent-team",
