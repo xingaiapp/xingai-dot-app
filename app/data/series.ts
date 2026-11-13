@@ -4,7 +4,7 @@ import type { Locale } from "../i18n/translations";
  * Series overview data (ADR-0288). Static, hand-maintained — the same
  * directory-page approach as app/data/apps.ts. Every outbound link below
  * was verified live on 2026-11-13 (series page returned 200; playlist
- * resolved to the named playlist). Series whose page or playlist could
+ * resolved to the named playlist). Eight playlists verified in total. Series whose page or playlist could
  * not be verified simply carry no button — never guess a URL.
  */
 export type SeriesStatus = "ongoing" | "upcoming" | "paused" | "completed";
@@ -63,6 +63,7 @@ export const seriesGroups: SeriesGroup[] = [
         },
         status: "ongoing",
         pageUrl: "https://travel.xingai.app/stories/100-days-of-morning-prayer",
+        playlistUrl: "https://www.youtube.com/playlist?list=PLOyM_lBsqAjY",
       },
       {
         id: "30-nights-of-prayer",
@@ -181,6 +182,7 @@ export const seriesGroups: SeriesGroup[] = [
           ko: "3일에 한 번 · 오후 7:00 (CT)",
         },
         status: "ongoing",
+        playlistUrl: "https://www.youtube.com/playlist?list=PLRK5GPc8E8b4",
       },
       {
         id: "top-views-niagara",
@@ -221,6 +223,7 @@ export const seriesGroups: SeriesGroup[] = [
         },
         status: "completed",
         pageUrl: "https://travel.xingai.app/stories/my-lord-holy",
+        playlistUrl: "https://www.youtube.com/playlist?list=PLWOzZDBAqYuY",
       },
       {
         id: "my-hong-kong",
@@ -335,6 +338,7 @@ export const seriesGroups: SeriesGroup[] = [
         },
         status: "ongoing",
         pageUrl: "https://cook.xingai.app/recipes/popeyes-fried-chicken",
+        playlistUrl: "https://www.youtube.com/playlist?list=PLeqpLjscrlW8",
       },
       {
         id: "korean-barbecue",
@@ -355,6 +359,7 @@ export const seriesGroups: SeriesGroup[] = [
         },
         status: "ongoing",
         pageUrl: "https://cook.xingai.app/recipes/korean-barbecue",
+        playlistUrl: "https://www.youtube.com/playlist?list=PLI4ukKCE7Mjg",
       },
       {
         id: "moms-love-bento",
