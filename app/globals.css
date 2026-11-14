@@ -7192,6 +7192,10 @@ html[data-theme="dark"] .go-logo--dark {
   margin: 0.5rem 0 1rem;
 }
 
+.apps-watch__lead--second {
+  margin-top: 2rem;
+}
+
 .watch-facade {
   position: relative;
   display: block;

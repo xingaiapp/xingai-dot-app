@@ -133,6 +133,14 @@ export default function AppsPage() {
           title="One Homepage, Three Decisions — It Reordered My Burger, Banned My Hoodie, Sent Me Under the Sink"
           playLabel={t("appsWatchPlay")}
         />
+        <p className="apps-watch__lead apps-watch__lead--second">
+          {t("appsWatchLead2")}
+        </p>
+        <WatchItDecideVideo
+          videoId="Z6UyXsnom3A"
+          title="I Gave One Homepage Three Jobs — One Failed Live, One Banned My Mornings"
+          playLabel={t("appsWatchPlay")}
+        />
       </section>
 
       <nav className="apps-jump" aria-label={t("appsJumpLabel")}>
