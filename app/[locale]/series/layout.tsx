@@ -20,7 +20,7 @@ function seriesDescription(locale: ReturnType<typeof parseRoutingLocale>) {
   if (locale === "ko") {
     return "XingAI 다섯 채널의 모든 시리즈를 한 페이지에 — 매일 아침의 기도, 매일의 치킨과 바비큐, 평일 저녁의 라면 대전, 중국어와 영어로 나가는 미국 주식 장편까지.";
   }
-  return "Every series running on XingAI's five channels, on one page: morning prayer, daily chicken and barbecue, the weekday ramen battle, and US-stock long videos in Chinese and English.";
+  return "All series on XingAI's five channels, on one page: morning prayer, daily chicken and barbecue, weekday ramen battles, and bilingual US-stock long videos.";
 }
 
 const path = "/series";
