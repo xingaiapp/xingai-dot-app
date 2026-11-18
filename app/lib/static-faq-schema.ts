@@ -1,4 +1,6 @@
 import type { Locale } from "../i18n/translations";
+import { getTranslations } from "../i18n/translations";
+import { getAgentTeamCopy } from "../data/agent-team";
 
 /**
  * FAQPage builders for the main site's static pages (about, story, team,
@@ -175,4 +177,35 @@ export function appsCatalogFaqItems(locale: Locale, appNames: string[], liveName
 
 export function buildAppsCatalogFaq(locale: Locale, pageUrl: string, appNames: string[], liveNames: string[]) {
   return buildFaqPage(locale, pageUrl, appsCatalogFaqItems(locale, appNames, liveNames));
+}
+
+/**
+ * Series FAQ — same source as the visible FAQ on /series.
+ * The page renders seriesFaqQ1–Q3/A1–A3 from the translation dict; the
+ * schema reads the identical strings, so visible text and JSON-LD can
+ * never drift apart. Answers come from the page's own data (22 series
+ * across the channel groups listed on the page).
+ */
+export function seriesFaqItems(locale: Locale): QA[] {
+  const t = getTranslations(locale);
+  return [
+    { q: t.seriesFaqQ1, a: t.seriesFaqA1 },
+    { q: t.seriesFaqQ2, a: t.seriesFaqA2 },
+    { q: t.seriesFaqQ3, a: t.seriesFaqA3 },
+  ];
+}
+
+export function buildSeriesFaq(locale: Locale, pageUrl: string) {
+  return buildFaqPage(locale, pageUrl, seriesFaqItems(locale));
+}
+
+/**
+ * Agent-team FAQ — same source as the visible FAQ on /agent-team.
+ * The page renders copy.faq from app/data/agent-team.ts; the schema
+ * reads the identical array. Every answer is a restatement of copy
+ * already visible on the page (structure, permissions stats, human-OK
+ * release rule, three-system cross-checking) — no new facts.
+ */
+export function buildAgentTeamFaq(locale: Locale, pageUrl: string) {
+  return buildFaqPage(locale, pageUrl, getAgentTeamCopy(locale).faq);
 }

@@ -3,6 +3,7 @@ import { agentTeamDescription, agentTeamTitle } from "../../data/agent-team";
 import { parseRoutingLocale, publicUrl } from "../../lib/locale-routing";
 import { localizedOpenGraph, pageAlternates } from "../../lib/localized-seo";
 import { formatPageTitle, ogImageMeta, siteUrl } from "../../lib/site-seo";
+import { buildAgentTeamFaq } from "../../lib/static-faq-schema";
 
 const path = "/agent-team";
 
@@ -62,6 +63,12 @@ export default async function AgentTeamLayout({ children, params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildAgentTeamFaq(locale, pageUrl)),
+        }}
       />
       {children}
     </>

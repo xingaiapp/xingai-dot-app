@@ -254,6 +254,11 @@ export type AgentTeamCopy = {
   crossHeading: string;
   crossBody: string[];
   systemsNote: string;
+  faqHeading: string;
+  /** Visible FAQ + FAQPage schema share this array — answers restate
+   *  copy already visible on the page (structure, permission stats,
+   *  human-OK release rule, three-system cross-checking). */
+  faq: { q: string; a: string }[];
   closingSlogan: string;
   closingLine: string;
   outroTeam: string;
@@ -299,6 +304,25 @@ const en: AgentTeamCopy = {
     "On ordinary days the duplication is itself the test: the same task runs in more than one system and the results are compared. We pick tools by measured results, not by loyalty. The same rule runs underneath everything at XingAI — every key role has a second source, and every important number is checked against two.",
   ],
   systemsNote: "One team, three systems — Claude · Cursor · Codex",
+  faqHeading: "Questions, answered",
+  faq: [
+    {
+      q: "How many AI agents build XingAI's websites, and how are they organized?",
+      a: "15 agents under one dispatcher, in five groups: Research, Product, Growth, Build and Release.",
+    },
+    {
+      q: "Which agents can change code?",
+      a: "Four of the 15 may touch the code repos. Ten of the 15 are read-only, and only one — xing-devops — can run git, and only after the founder says OK.",
+    },
+    {
+      q: "Who makes the final call before anything ships?",
+      a: "Humans set direction and make the final calls. Releases go through xing-devops — git only — and only after a human OK.",
+    },
+    {
+      q: "What happens if one coding system goes down?",
+      a: "The same 15-agent team runs in Claude, Cursor and Codex. If one system runs out of quota or goes down, another picks the work up and nothing stops.",
+    },
+  ],
   closingSlogan: "When in doubt, ask XingAI.",
   closingLine: "A small human team. A standing agent team. Every step checked twice.",
   outroTeam: "Meet the people",
@@ -342,6 +366,25 @@ const zh: AgentTeamCopy = {
     "平常日子裡，這份重複本身就是測試：同一個任務在不止一個系統裡各跑一遍，結果拿來對照。我們用實測結果選工具，不靠偏好站隊。這條規矩貫穿 XingAI 的一切——每個關鍵崗位都有第二來源，每個重要數字都要雙源核對。",
   ],
   systemsNote: "一套團隊，三個系統——Claude · Cursor · Codex",
+  faqHeading: "常見問題",
+  faq: [
+    {
+      q: "XingAI 的網站由幾個 AI agent 建設？怎麼分工？",
+      a: "15 個 agent，一個調度員，分成五個組：Research 研究、Product 產品、Growth 增長、Build 建設、Release 發布。",
+    },
+    {
+      q: "哪些 agent 能改程式碼？",
+      a: "15 個裡面只有 4 個能碰程式碼倉庫；10 個只有只讀權限，只有一位（xing-devops）能跑 git，而且要創始人先點頭。",
+    },
+    {
+      q: "上線之前，誰做最後決定？",
+      a: "真人定方向、做最終決定。上線只走 xing-devops（只做 git）這一條路，且必須先有人點頭。",
+    },
+    {
+      q: "其中一個開發系統掛了怎麼辦？",
+      a: "同一套 15 個 agent 團隊，在 Claude、Cursor、Codex 三個獨立系統裡各跑一份。一個系統額度用完或掛掉，另一個立刻接上，工作不斷線。",
+    },
+  ],
   closingSlogan: "遇事不決，先問 XingAI",
   closingLine: "一支很小的真人團隊，一支常設的 agent 團隊，每一步都核對兩遍。",
   outroTeam: "認識團隊的人",
@@ -387,6 +430,25 @@ const ko: AgentTeamCopy = {
     "평소에는 이 중복 자체가 테스트입니다. 같은 작업을 여러 시스템에서 돌려 결과를 비교합니다. 도구는 취향이 아니라 측정 결과로 고릅니다. 이 원칙은 XingAI의 모든 일에 흐릅니다. 핵심 역할마다 두 번째 출처가 있고, 중요한 숫자는 두 곳과 대조합니다.",
   ],
   systemsNote: "한 팀, 세 시스템 — Claude · Cursor · Codex",
+  faqHeading: "자주 묻는 질문",
+  faq: [
+    {
+      q: "XingAI 웹사이트는 몇 명의 AI 에이전트가 만들고, 어떻게 나뉘나요?",
+      a: "에이전트 15명, 디스패처 1명, 다섯 그룹: Research 리서치, Product 제품, Growth 성장, Build 구축, Release 출시.",
+    },
+    {
+      q: "어떤 에이전트가 코드를 바꿀 수 있나요?",
+      a: "15명 중 4명만 코드 저장소에 닿을 수 있고, 10명은 읽기 전용이며, git을 실행할 수 있는 사람은 xing-devops 단 한 명, 창업자 승인이 먼저입니다.",
+    },
+    {
+      q: "출시 전에 최종 결정은 누가 하나요?",
+      a: "방향과 최종 결정은 사람이 합니다. 배포는 xing-devops(git만) 한 길로만, 사람의 승인이 먼저입니다.",
+    },
+    {
+      q: "코딩 시스템 하나가 멈추면 어떻게 되나요?",
+      a: "같은 15명의 팀이 Claude, Cursor, Codex 세 개의 독립 시스템에서 각각 돌아갑니다. 한 시스템의 한도가 다하거나 멈추면 다른 시스템이 바로 이어받아 일이 끊기지 않습니다.",
+    },
+  ],
   closingSlogan: "When in doubt, ask XingAI.",
   closingLine: "작은 인간 팀, 상시 에이전트 팀. 모든 단계를 두 번 확인합니다.",
   outroTeam: "사람들 만나기",
