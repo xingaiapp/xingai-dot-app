@@ -7364,3 +7364,19 @@ html[data-theme="dark"] .go-logo--dark {
   margin: 0.35rem 0 0;
   line-height: 1.65;
 }
+
+.at-faq__list {
+  display: grid;
+  gap: 1.4rem;
+  margin: 1rem 0 0;
+}
+
+.at-faq__item dt {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.at-faq__item dd {
+  margin: 0.35rem 0 0;
+  line-height: 1.65;
+}

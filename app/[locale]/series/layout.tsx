@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { parseRoutingLocale } from "../../lib/locale-routing";
+import { parseRoutingLocale, publicUrl } from "../../lib/locale-routing";
 import {
   homeOg,
   localizedOpenGraph,
   pageAlternates,
 } from "../../lib/localized-seo";
 import { formatPageTitle } from "../../lib/site-seo";
+import { buildSeriesFaq } from "../../lib/static-faq-schema";
 
 function seriesPageTitle(locale: ReturnType<typeof parseRoutingLocale>) {
   if (locale === "zh") return "全部系列";
@@ -49,6 +50,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function SeriesLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default async function SeriesLayout({ children, params }: Props) {
+  const { locale: raw } = await params;
+  const locale = parseRoutingLocale(raw);
+  const pageUrl = publicUrl(locale, path);
+  // FAQPage mirrors the visible FAQ the page renders from the same
+  // translation strings (seriesFaqQ1–Q3/A1–A3) — schema and visible
+  // text share one source by construction.
+  const faqJsonLd = buildSeriesFaq(locale, pageUrl);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

@@ -112,6 +112,20 @@ export default function AgentTeamPage() {
         </ul>
       </section>
 
+      <section className="at-section at-faq" aria-labelledby="at-faq-heading">
+        <h2 id="at-faq-heading" className="section-title">
+          {copy.faqHeading}
+        </h2>
+        <dl className="at-faq__list">
+          {copy.faq.map((f) => (
+            <div key={f.q} className="at-faq__item">
+              <dt>{f.q}</dt>
+              <dd>{f.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
       <section className="at-closing">
         <p className="at-closing__slogan">{copy.closingSlogan}</p>
         <p className="at-closing__line">{copy.closingLine}</p>
