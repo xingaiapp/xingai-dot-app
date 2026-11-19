@@ -293,6 +293,8 @@ const translations = {
       "One homepage, three real decisions — watch the apps decide, live on screen.",
     appsWatchLead2:
       "Same homepage, three new jobs — one app failed live on camera, one banned my mornings, and the last call still stayed with me.",
+    appsWatchLead3:
+      "Three goals, one agent: a $500 weekly allocation, growth without concentration, and a defensive income plan — two cached research briefs came back, and one answer arrived twice, word for word. Filmed from real runs (Nov 17 & 19, 2026); the demo does not compute allocations or execute trades. Research, not advice.",
     appsWatchPlay: "Play video",
     appsLead:
       "Start with flagship Invest AI, then daily decisions (Travel, Cook, Wear). Passive Income and the Tech Blog are also live — demos and coming-soon sit below.",
@@ -743,6 +745,8 @@ const translations = {
     appsWatchLead: "一個首頁、三個真實決定——看這些 App 在畫面上當場做決定。",
     appsWatchLead2:
       "同一個首頁，三個新任務——一個當場實跑失敗，一個直接封了我的早上，最後一步還是留給我自己決定。",
+    appsWatchLead3:
+      "三個目標、一個代理：每週五百美元的分配、不要太集中的成長曝險、能產生收入的防禦型分配——回來的是兩份快取研究簡報，其中一份答案一字不差地出現兩次。2026 年 11 月 17 日與 19 日真實實跑拍攝；此演示不計算分配、不執行交易。這是研究，不是建議。",
     appsWatchPlay: "播放影片",
     appsLead:
       "先看旗艦 Invest AI，再看日常決策（Travel、Cook、Wear）。Passive Income 與 Tech Blog 也已上線——演示與即將推出在下方。",
@@ -1189,6 +1193,8 @@ const translations = {
       "하나의 홈페이지, 세 가지 실제 결정 — 앱이 화면에서 직접 결정하는 모습을 보세요.",
     appsWatchLead2:
       "같은 홈페이지, 세 가지 새 임무 — 하나는 라이브로 실패했고, 하나는 내 아침을 금지했으며, 마지막 결정은 여전히 내 몫으로 남았습니다.",
+    appsWatchLead3:
+      "세 가지 목표, 하나의 에이전트: 매주 500달러 배분, 집중되지 않는 성장 노출, 소득을 만드는 방어적 배분 — 돌아온 것은 캐시된 리서치 브리프 두 개였고, 그중 하나는 한 글자도 다르지 않게 두 번 도착했습니다. 2026년 11월 17일과 19일의 실제 실행을 촬영했습니다. 이 데모는 배분을 계산하지 않고 거래를 체결하지 않습니다. 조언이 아닌 리서치입니다.",
     appsWatchPlay: "동영상 재생",
     appsLead:
       "플래그십 Invest AI부터, 그다음 일상 결정(Travel, Cook, Wear). Passive Income과 Tech Blog도 라이브 — 데모와 출시 예정은 아래에 있습니다.",

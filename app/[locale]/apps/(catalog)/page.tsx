@@ -141,6 +141,14 @@ export default function AppsPage() {
           title="I Gave One Homepage Three Jobs — One Failed Live, One Banned My Mornings"
           playLabel={t("appsWatchPlay")}
         />
+        <p className="apps-watch__lead apps-watch__lead--third">
+          {t("appsWatchLead3")}
+        </p>
+        <WatchItDecideVideo
+          videoId="NuxLP51Vr-8"
+          title="I Gave One Decision Agent Three Goals — It Handed One Answer Back Twice"
+          playLabel={t("appsWatchPlay")}
+        />
       </section>
 
       <nav className="apps-jump" aria-label={t("appsJumpLabel")}>
