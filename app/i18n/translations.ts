@@ -295,6 +295,8 @@ const translations = {
       "Same homepage, three new jobs — one app failed live on camera, one banned my mornings, and the last call still stayed with me.",
     appsWatchLead3:
       "Three goals, one agent: a $500 weekly allocation, growth without concentration, and a defensive income plan — two cached research briefs came back, and one answer arrived twice, word for word. Filmed from real runs (Nov 17 & 19, 2026); the demo does not compute allocations or execute trades. Research, not advice.",
+    appsWatchLead4:
+      "Three more jobs for the same homepage: it fixed a bowl of ramen, picked a date-night outfit, then ran a paper ledger — and halted it at -47.12%. Filmed from real runs; the paper account is research only, not real money and not advice.",
     appsWatchPlay: "Play video",
     appsLead:
       "Start with flagship Invest AI, then daily decisions (Travel, Cook, Wear). Passive Income and the Tech Blog are also live — demos and coming-soon sit below.",
@@ -747,6 +749,8 @@ const translations = {
       "同一個首頁，三個新任務——一個當場實跑失敗，一個直接封了我的早上，最後一步還是留給我自己決定。",
     appsWatchLead3:
       "三個目標、一個代理：每週五百美元的分配、不要太集中的成長曝險、能產生收入的防禦型分配——回來的是兩份快取研究簡報，其中一份答案一字不差地出現兩次。2026 年 11 月 17 日與 19 日真實實跑拍攝；此演示不計算分配、不執行交易。這是研究，不是建議。",
+    appsWatchLead4:
+      "同一個首頁再接三個任務：修好一碗拉麵、挑好約會夜穿搭，再跑一份紙上帳本——最後在 -47.12% 把它停了下來。全程真實實跑拍攝；紙上帳戶只作研究，不是真錢、也不是建議。",
     appsWatchPlay: "播放影片",
     appsLead:
       "先看旗艦 Invest AI，再看日常決策（Travel、Cook、Wear）。Passive Income 與 Tech Blog 也已上線——演示與即將推出在下方。",
@@ -1195,6 +1199,8 @@ const translations = {
       "같은 홈페이지, 세 가지 새 임무 — 하나는 라이브로 실패했고, 하나는 내 아침을 금지했으며, 마지막 결정은 여전히 내 몫으로 남았습니다.",
     appsWatchLead3:
       "세 가지 목표, 하나의 에이전트: 매주 500달러 배분, 집중되지 않는 성장 노출, 소득을 만드는 방어적 배분 — 돌아온 것은 캐시된 리서치 브리프 두 개였고, 그중 하나는 한 글자도 다르지 않게 두 번 도착했습니다. 2026년 11월 17일과 19일의 실제 실행을 촬영했습니다. 이 데모는 배분을 계산하지 않고 거래를 체결하지 않습니다. 조언이 아닌 리서치입니다.",
+    appsWatchLead4:
+      "같은 홈페이지에 세 가지 일을 더 맡겼습니다. 라멘 한 그릇을 고치고, 데이트 나이트 옷차림을 고른 뒤, 페이퍼 원장을 돌렸습니다 — 그리고 -47.12%에서 멈췄습니다. 실제 실행을 촬영했습니다. 페이퍼 계정은 리서치용일 뿐, 실제 돈이 아니고 조언도 아닙니다.",
     appsWatchPlay: "동영상 재생",
     appsLead:
       "플래그십 Invest AI부터, 그다음 일상 결정(Travel, Cook, Wear). Passive Income과 Tech Blog도 라이브 — 데모와 출시 예정은 아래에 있습니다.",

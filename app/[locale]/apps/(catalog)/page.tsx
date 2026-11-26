@@ -149,6 +149,14 @@ export default function AppsPage() {
           title="I Gave One Decision Agent Three Goals — It Handed One Answer Back Twice"
           playLabel={t("appsWatchPlay")}
         />
+        <p className="apps-watch__lead apps-watch__lead--fourth">
+          {t("appsWatchLead4")}
+        </p>
+        <WatchItDecideVideo
+          videoId="BqiTQF1k7Zs"
+          title="I Gave One Homepage Three Jobs — Its Paper Account Was Halted at -47%"
+          playLabel={t("appsWatchPlay")}
+        />
       </section>
 
       <nav className="apps-jump" aria-label={t("appsJumpLabel")}>

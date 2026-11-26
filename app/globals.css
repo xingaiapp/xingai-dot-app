@@ -7200,6 +7200,10 @@ html[data-theme="dark"] .go-logo--dark {
   margin-top: 2rem;
 }
 
+.apps-watch__lead--fourth {
+  margin-top: 2rem;
+}
+
 .watch-facade {
   position: relative;
   display: block;
